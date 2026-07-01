@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse - The Mindfulness Ring</title>
+  <meta name="description" content="Gentle vibrations on your finger remind you to pause, breathe, and reset — all day long." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Pulse home">pulse<span class="nav__logo-dot">·</span></a>
+    <div class="nav__right">
+      <a href="#shop" class="btn btn--pill">SHOP NOW</a>
+      <button class="nav__burger" id="burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- slide-out menu -->
+  <nav class="menu" id="menu" aria-hidden="true">
+    <button class="menu__close" id="menuClose" aria-label="Close menu">&times;</button>
+    <ul class="menu__list">
+      <li><a href="#top">Home</a></li>
+      <li><a href="#science">Science</a></li>
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#moments">Pulse Moments</a></li>
+      <li><a href="#app">App Features</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- floating "first batch" tab -->
+  <a href="#shop" class="batch-tab">First Batch Almost Sold Out!</a>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <video class="hero__media" autoplay muted loop playsinline
+      poster="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/6a1065eb021e206f6cf3719f_pulse-homenew-tab.avif">
+      <source src="https://cdn.shopify.com/videos/c/o/v/2c43b81cc5e744529f9c73539ac25f6d.mp4" type="video/mp4" />
+    </video>
+    <div class="hero__overlay"></div>
+    <div class="hero__inner">
+      <h1 class="hero__title">Pause on Purpose<br /><span>the wearable for presence.</span></h1>
+      <p class="hero__sub">Gentle vibrations on your finger remind you to pause, breathe, and reset — all day long.</p>
+      <a href="#shop" class="btn btn--pill btn--lg">SHOP</a>
+    </div>
+    <p class="hero__foot">Become Calm, Focused &amp; Present</p>
+  </section>
+
+  <!-- ================= EXPERT SLIDER ================= -->
+  <section class="experts" id="moments">
+    <p class="label experts__hint">Drag Slider To Explore &nbsp;→</p>
+    <div class="experts__track" id="expertTrack">
+      <!-- cards injected + static -->
+      <article class="ecard">
+        <img class="ecard__img" src="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/67d3f9f478a65b2bff448c9c_Alex%20Elle.avif" alt="Alex Elle" />
+        <div class="ecard__body">
+          <h3>Alex Elle</h3>
+          <p>&ldquo;Pulse has transformed the way I experience presence&rdquo;</p>
+          <span class="label">NYT Bestselling Author &amp;<br />Restorative Writing Teacher</span>
+        </div>
+      </article>
+      <article class="ecard">
+        <img class="ecard__img" src="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/680a5b783ed235b642d78a65_Vex-King.avif" alt="Vex King" />
+        <div class="ecard__body">
+          <h3>Vex King</h3>
+          <p>&ldquo;Each calming Pulse Ring vibration gently helps you connect with yourself&rdquo;</p>
+          <span class="label">Number 1 Sunday Times Bestselling<br />Author of Good Life, Good Vibes</span>
+        </div>
+      </article>
+      <article class="ecard">
+        <img class="ecard__img" src="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/67d3f9f408a8f174709adce7_Cory%20Allen.avif" alt="Cory Allen" />
+        <div class="ecard__body">
+          <h3>Cory Allen</h3>
+          <p>&ldquo;Pulse is a must-own for anyone who wants to live more connected&rdquo;</p>
+          <span class="label">Acclaimed Mindfulness<br />Author &amp; Podcaster</span>
+        </div>
+      </article>
+      <article class="ecard">
+        <img class="ecard__img" src="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/680a5b790f248987d94ef417_Jon%20Prince.avif" alt="Jon Prince" />
+        <div class="ecard__body">
+          <h3>Jon Prince</h3>
+          <p>&ldquo;Pulse reminds me to return back home to my authentic self&rdquo;</p>
+          <span class="label">Acclaimed Self-Awareness<br />Coach &amp; Motivational Speaker</span>
+        </div>
+      </article>
+      <article class="ecard">
+        <img class="ecard__img" src="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/680a5b79e1a34ac734e09c2e_Katharina%20Minwegen.avif" alt="Katharina Minwegen" />
+        <div class="ecard__body">
+          <h3>Katharina Minwegen</h3>
+          <p>&ldquo;It doesn't only calm my mind, it literary lowers my Pulse, every time it vibrates&rdquo;</p>
+          <span class="label">Mindfulness Expert<br />&amp; Life Coach</span>
+        </div>
+      </article>
+      <article class="ecard">
+        <img class="ecard__img" src="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/67d3f9f411f234140a204095_Kelly%20Smith.avif" alt="Kelly Smith" />
+        <div class="ecard__body">
+          <h3>Kelly Smith</h3>
+          <p>&ldquo;I love to take the Pulse Ring moments to repeat a mantra&rdquo;</p>
+          <span class="label">Celebrated yoga and<br />meditation teacher</span>
+        </div>
+      </article>
+    </div>
+    <div class="experts__nav">
+      <button class="dot is-active" data-i="0"></button>
+      <button class="dot" data-i="1"></button>
+      <button class="dot" data-i="2"></button>
+    </div>
+  </section>
+
+  <!-- ================= MICRO-PAUSE ================= -->
+  <section class="micropause" id="science">
+    <video class="micropause__bg" autoplay muted loop playsinline>
+      <source src="https://cdn.jsdelivr.net/gh/JosephBerry1988/jb_studio@main/Shaddow.mp4" type="video/mp4" />
+    </video>
+    <h2 class="micropause__title">To become calm and present, all<br />you need is a 10-second<br />micro-pause.</h2>
+  </section>
+
+  <!-- ================= 3 STEPS ================= -->
+  <section class="steps">
+    <div class="step">
+      <img src="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/6740fd38ae5ada222c54325e_Vibration.svg" alt="" />
+      <h3>Vibration</h3>
+      <p>Snaps you out of<br />autopilot.</p>
+    </div>
+    <div class="step">
+      <img src="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/6740fd38ae5ada222c543260_Practice.svg" alt="" />
+      <h3>Practice</h3>
+      <p>Gratitude exercise<br />or deep breathing</p>
+    </div>
+    <div class="step">
+      <img src="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/6740fd38ae5ada222c54325f_Benefit.svg" alt="" />
+      <h3>Benefit</h3>
+      <p>Scientifically proven:<br />feel calm, feel present.</p>
+    </div>
+  </section>
+
+  <!-- ================= APP ================= -->
+  <section class="app" id="app">
+    <div class="app__head">
+      <span class="label tag">No unnecessary screen time</span>
+      <h2 class="app__title" id="appTitle">The Pulse <span>App</span></h2>
+    </div>
+    <div class="app__grid">
+      <ul class="app__menu" id="appMenu">
+        <li class="is-active" data-img="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/69ef5980fc728efd30a7fac0_Pulse%20App.avif"
+            data-title="The Pulse App"
+            data-body="Set your vibration patterns in the Pulse App, choose your intention, and let Pulse&rsquo;s gentle vibrations guide you throughout your day. No more interruptions from stressful on-screen push notifications or alerts.">Pulse App</li>
+        <li data-img="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/69ef59802502b127f6eecd0b_Mindfulness%20Mode.avif"
+            data-title="Mindfulness Mode"
+            data-body="Mindfulness works, but we often forget to practice it. Pulse is here to change that forever. It softly vibrates a few times a day to remind you to pause, breathe, relax, reflect, observe your thoughts, and reconnect with yourself.">Mindfulness Mode</li>
+        <li data-img="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/69ef597ec1f186a703c7e5e4_Focus%20Mode.avif"
+            data-title="Focus Mode"
+            data-body="Activate and Focus. Pulse discreetly starts vibrating every 30 seconds, every minute or every 5th minute, depending on your settings. Use it to practice eating more slowly, speaking more calmly during your presentation, straightening your back, stopping nail-biting, avoiding endless scrolling, and much more.">Focus Session</li>
+        <li data-img="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/69ef597fa8dbf4b88120d81d_Meditation%20Mode.avif"
+            data-title="Meditation Mode"
+            data-body="For the first time ever, Pulse lets you enjoy a guided meditation without headphones. Simply close your eyes wherever you are and follow the gentle, pulsating micro-vibrations that guide the way.">Meditation Session</li>
+        <li data-img="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/69ef59802700d4ea417abe17_Practice.avif"
+            data-title="Pulse Journeys&trade;"
+            data-body="We believe in learning from the best, which is why we&rsquo;ve included exclusive courses from top experts across various fields of self-development. These week-long programs teach you how to respond to and use intentions when the ring vibrates. They also automatically set unique vibration patterns and schedules tailored to your needs.">Pulse Journeys&trade;</li>
+        <li data-img="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/69ef5980fc728efd30a7fac0_Pulse%20App.avif"
+            data-title="Pulse Plus"
+            data-body="Pulse+ is an optional subscription, where you get access to all the Pulse Journey video courses and content, also the ability to be double tapping the ring, social media addiction mode, family mode, couples mode, and so much more. You can read more about them in the app.">Pulse Plus</li>
+      </ul>
+      <div class="app__phone">
+        <img id="appImg" src="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/69ef5980fc728efd30a7fac0_Pulse%20App.avif" alt="Pulse App" />
+      </div>
+      <div class="app__copy">
+        <h3 id="appModeTitle">The Pulse App</h3>
+        <p id="appBody">Set your vibration patterns in the Pulse App, choose your intention, and let Pulse&rsquo;s gentle vibrations guide you throughout your day. No more interruptions from stressful on-screen push notifications or alerts.</p>
+      </div>
+    </div>
+    <p class="app__tagline">Pulse just might change your life.</p>
+  </section>
+
+  <!-- ================= BENEFITS ================= -->
+  <section class="benefits" id="benefits">
+    <h2 class="benefits__sticky">Benefits</h2>
+    <div class="benefits__list">
+      <div class="benefit">
+        <div class="benefit__text">
+          <span class="label">01</span>
+          <h2>Reduces <em>stress</em><br />and <em>anxiety</em></h2>
+          <p class="benefit__by">by helping you snap out of<br />autopilot and overthinking.</p>
+        </div>
+        <div class="benefit__media">
+          <video autoplay muted loop playsinline>
+            <source src="https://cdn.jsdelivr.net/gh/JosephBerry1988/jb_studio@main/Benefit-Video-01.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit__text">
+          <span class="label">02</span>
+          <h2>Improves<br /><em>focus</em></h2>
+          <p class="benefit__by">by helping you form new<br />habits and stopping you<br />from getting sidetracked.</p>
+        </div>
+        <div class="benefit__media">
+          <img src="https://cdn.prod.website-files.com/68d3a8604b90bd8f867198dd/68d3a8604b90bd8f86719931_Image-2.avif" alt="" />
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit__text">
+          <span class="label">03</span>
+          <h2>Lets <em>you</em> be<br /><em>present</em></h2>
+          <p class="benefit__by">by keeping you in the<br />moment without getting lost<br />in thought.</p>
+        </div>
+        <div class="benefit__media">
+          <img src="https://cdn.prod.website-files.com/68d3a8604b90bd8f867198dd/68d3a8604b90bd8f86719933_Img-1.avif" alt="" />
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit__text">
+          <span class="label">04</span>
+          <h2>Calms <em>you</em><br /><em>effortlessly</em></h2>
+          <p class="benefit__by">by making mindfulness and<br />meditation a regular part of<br />your life.</p>
+        </div>
+        <div class="benefit__media">
+          <img src="https://cdn.prod.website-files.com/68d3a8604b90bd8f867198dd/68d3a8604b90bd8f8671993a_Img-3.avif" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMMUNITY ================= -->
+  <section class="community" id="how">
+    <h2 class="community__title">Join a Community of <span>Presence</span></h2>
+    <div class="community__row" id="reviewRow">
+      <!-- review cards injected by JS -->
+    </div>
+  </section>
+
+  <!-- ================= RING / DATA ================= -->
+  <section class="ring">
+    <video class="ring__video" autoplay muted loop playsinline>
+      <source src="https://cdn.jsdelivr.net/gh/JosephBerry1988/jb_studio@main/Pulse-Product-Render-Video.mp4" type="video/mp4" />
+    </video>
+    <h2 class="ring__title">The first smart wearable<br />that doesn&rsquo;t stress you<br />with data and information.</h2>
+    <div class="ring__points">
+      <div class="rpoint"><span class="label">01</span><h3>Mindfulness and wellbeing only</h3><p>Pulse vibrations are completely separate from smartphone or other notifications, reserved only for your personal self-development.</p></div>
+      <div class="rpoint"><span class="label">02</span><h3>Unintrusive and discreet</h3><p>It&rsquo;s simply the most subtle smart wearable ever&mdash;effortlessly improving your wellbeing without tracking you.</p></div>
+      <div class="rpoint"><span class="label">03</span><h3>Smart without phone</h3><p>Unlike regular meditation apps, it is made for digital detox. No screen time needed &ndash; Pulse works wherever you are.</p></div>
+      <div class="rpoint"><span class="label">04</span><h3>Guiding and encouraging</h3><p>Set your personal intention, learn how to practice from experts in the Pulse App, and let the ring remind you to do the work, long after you&rsquo;ve put your phone away.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= CLOSING BANNER ================= -->
+  <section class="closing">
+    <img class="closing__bg" src="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/6740fd38ae5ada222c543263_Quote-Image-1.avif" alt="" />
+    <h2 class="closing__text">Be in your moment <span>Not in your thoughts</span></h2>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="contact">
+    <div class="footer__top">
+      <div class="footer__news">
+        <h3>Be in your moment<br />Not in your thoughts</h3>
+        <p>Stay in touch by subscribing to our newsletter!</p>
+        <form class="footer__form" onsubmit="return false;">
+          <input type="email" placeholder="Enter your email" aria-label="Email" />
+          <button type="submit" class="btn btn--pill">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer__links">
+        <p class="footer__links-title">Quick Links</p>
+        <ul>
+          <li><a href="#shop">Shop Pulse Ring</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#science">Science</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__logo">pulse<span>·</span></span>
+      <p class="footer__copy">&copy; 2026 Pulse Mindfulness Inc. All rights reserved</p>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram"><img src="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/6740fd38ae5ada222c54325b_Insta-Icon.svg" alt="Instagram" /></a>
+        <a href="#" aria-label="Website"><img src="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/680a5e0d1c767f467b383849_website-icon.svg" alt="Website" /></a>
+        <a href="#" aria-label="LinkedIn"><img src="https://cdn.prod.website-files.com/6740fd38ae5ada222c543231/684304fe25065bb2ea6ce8ad_linkedin.svg" alt="LinkedIn" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
