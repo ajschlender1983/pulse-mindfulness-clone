@@ -87,7 +87,7 @@
     /* -------------------------------------------------- media placeholders */
     function frag(html) { return document.createRange().createContextualFragment(html); }
 
-    function card(kind, title, placeholder, scene) {
+    function card(kind, title, placeholder, scene, dims) {
       var wrap = document.createElement('article');
       wrap.className = 'rp-card' + (kind === 'VIDEO' ? ' rp-card--wide' : '');
 
@@ -96,12 +96,14 @@
       var badge = document.createElement('span');
       badge.className = 'rp-card__type' + (kind === 'VIDEO' ? ' is-video' : '');
       badge.textContent = kind;
+      var dchip = document.createElement('span');
+      dchip.className = 'rp-card__dims'; dchip.textContent = dims;
       var ph = document.createElement('div');
       ph.className = 'rp-card__ph';
       var phb = document.createElement('b'); phb.textContent = title;
       ph.appendChild(phb);
       ph.appendChild(document.createTextNode(placeholder));
-      frame.appendChild(badge); frame.appendChild(ph);
+      frame.appendChild(badge); frame.appendChild(dchip); frame.appendChild(ph);
 
       var body = document.createElement('div');
       body.className = 'rp-card__body';
@@ -111,14 +113,23 @@
       why._rpReason = IMG_WHY; why._rpTag = 'Imagery';
       trow.appendChild(tl); trow.appendChild(why);
 
-      var full = prompt(scene, kind);
-      var pre = document.createElement('div'); pre.className = 'rp-card__prompt'; pre.textContent = full;
+      // include the dimensions in the copyable prompt itself
+      var fmt = dims.replace(/ · /g, ', ').replace(/×/g, 'x');
+      var full = prompt(scene, kind) + '\n\nFormat: ' + fmt + '.';
+
+      // real, selectable field so the prompt can always be copied (button or manual select)
+      var ta = document.createElement('textarea');
+      ta.className = 'rp-card__prompt'; ta.readOnly = true; ta.rows = 6;
+      ta.setAttribute('spellcheck', 'false'); ta.value = full;
+      ta.addEventListener('focus', function () { ta.select(); });
+      ta.addEventListener('click', function () { ta.select(); });
 
       var btn = document.createElement('button'); btn.className = 'rp-copy'; btn.type = 'button';
       btn.textContent = 'Copy ' + (kind === 'VIDEO' ? 'video' : 'photo') + ' prompt';
-      btn.addEventListener('click', function () { copy(full, btn); });
+      btn._label = btn.textContent;
+      btn.addEventListener('click', function () { copyFromField(ta, btn); });
 
-      body.appendChild(trow); body.appendChild(pre); body.appendChild(btn);
+      body.appendChild(trow); body.appendChild(ta); body.appendChild(btn);
       wrap.appendChild(frame); wrap.appendChild(body);
       return wrap;
     }
@@ -156,11 +167,14 @@
       sub: 'Small, ordinary, recoverable. One gentle pause brings you back.',
       cards: [
         card('PHOTO', 'The drawing', 'Child shows a crayon drawing; a parent looks up and truly sees it.',
-          'A young child holds up a crayon drawing toward a parent who has just looked up from a task and is truly seeing it, warm kitchen window light, the child proud, the parent softening.'),
+          'A young child holds up a crayon drawing toward a parent who has just looked up from a task and is truly seeing it, warm kitchen window light, the child proud, the parent softening.',
+          'Portrait · 4:5 · 1600 × 2000px'),
         card('PHOTO', 'The small hand', 'A toddler’s hand closing around one finger.',
-          'Extreme close macro of a toddler’s small hand closing around one adult finger, warm skin tones, soft window light, tender and quiet.'),
+          'Extreme close macro of a toddler’s small hand closing around one adult finger, warm skin tones, soft window light, tender and quiet.',
+          'Portrait · 4:5 · 1600 × 2000px'),
         card('PHOTO', 'Mid-story', 'A partner mid-story; the listener meets their eyes.',
-          'A partner mid-story at a sunlit dinner table, the listener leaning in and meeting their eyes, two coffee cups, relaxed and intimate.')
+          'A partner mid-story at a sunlit dinner table, the listener leaning in and meeting their eyes, two coffee cups, relaxed and intimate.',
+          'Portrait · 4:5 · 1600 × 2000px')
       ]
     }));
 
@@ -171,7 +185,8 @@
       head: 'Present with your kids', eyebrow: 'Relational moment',
       cards: [
         card('VIDEO', 'Golden-hour swing', 'A father watches his child’s face swing toward him.',
-          'A father pushing his young child on a swing at golden hour, watching the child’s laughing face swing toward the camera, warm backlight and floating dust, both fully present.')
+          'A father pushing his young child on a swing at golden hour, watching the child’s laughing face swing toward the camera, warm backlight and floating dust, both fully present.',
+          'Landscape · 16:9 · 1920 × 1080px · 6–10s loop')
       ]
     }));
 
@@ -182,7 +197,8 @@
       head: 'Present with your partner', eyebrow: 'Relational moment',
       cards: [
         card('PHOTO', 'Morning close', 'Two partners close in soft morning light.',
-          'Two partners close together on a sofa in soft morning light, foreheads nearly touching, one hand resting over the other, calm and unhurried.')
+          'Two partners close together on a sofa in soft morning light, foreheads nearly touching, one hand resting over the other, calm and unhurried.',
+          'Portrait · 4:5 · 1600 × 2000px')
       ]
     }), true);
 
@@ -235,6 +251,21 @@
     });
 
     /* -------------------------------------------------- copy helper */
+    function copyFromField(ta, btn) {
+      var done = function () {
+        btn.classList.add('rp-copied'); btn.textContent = 'Copied to clipboard';
+        setTimeout(function () { btn.textContent = btn._label; btn.classList.remove('rp-copied'); }, 1600);
+      };
+      // select the visible field first: gives feedback and a manual-copy fallback
+      ta.focus(); ta.select();
+      try { ta.setSelectionRange(0, ta.value.length); } catch (e) {}
+      var okExec = false;
+      try { okExec = document.execCommand('copy'); } catch (e) {}
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(ta.value).then(done, function () { done(); });
+      } else { done(); }
+      if (okExec) done();
+    }
     function copy(text, btn) {
       function done() {
         var o = btn.textContent; btn.classList.add('rp-copied'); btn.textContent = 'Copied to clipboard';

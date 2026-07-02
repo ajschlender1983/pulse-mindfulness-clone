@@ -164,8 +164,17 @@ section.rp-band.rp-band--cream{ background: var(--rp-cream); }
   font-family: var(--rp-mono); font-size: 12px; line-height: 1.5;
   color: #55503f; background: rgba(26,28,34,.04);
   border: 1px solid rgba(0,0,0,.07); border-radius: 10px;
-  padding: 12px; max-height: 150px; overflow: auto;
-  white-space: pre-wrap; letter-spacing: 0;
+  padding: 12px; letter-spacing: 0;
+  display: block; width: 100%; box-sizing: border-box;
+  min-height: 118px; max-height: 220px; resize: vertical;
+  -webkit-user-select: text; user-select: text; cursor: text;
+}
+.rp-card__prompt:focus{ outline: 2px solid rgba(227,244,125,.9); outline-offset: 1px; }
+.rp-card__dims{
+  position: absolute; top: 14px; right: 14px;
+  font-family: var(--rp-mono); font-size: 10px; letter-spacing: .03em;
+  color: var(--rp-ink); background: rgba(255,255,255,.8);
+  padding: 5px 10px; border-radius: 100px; border: 1px solid rgba(0,0,0,.06);
 }
 .rp-copy{
   appearance: none; border: none; cursor: pointer; align-self: flex-start;
