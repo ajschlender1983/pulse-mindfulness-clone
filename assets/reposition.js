@@ -43,24 +43,24 @@
     }
 
     add(document.querySelector('h1.hero-title'),
-      'A million moments.<br>None of them missed.',
-      'A million moments. None of them missed.',
-      'Leads with a loss-framed relational hook instead of the abstract attribute “presence.” Anticipated regret is the strongest driver in identity purchases and opens the funnel well beyond the mindfulness core.');
+      'A million moments.<br>Don’t miss this one.',
+      'A million moments. Don’t miss this one.',
+      'Leads with a loss-framed relational hook instead of the abstract attribute “presence.” “A million moments” becomes the ownable signature; the turn to “this one” makes the stakes concrete.');
 
     add(document.querySelector('p.paragraph-medium.intro'),
-      'A gentle pulse on your finger brings you back to the present, right when the moment is happening. No screens, no scores, no noise.',
-      'A gentle pulse on your finger brings you back to the present, right when the moment is happening. No screens, no scores, no noise.',
-      'Reframes the mechanism as the payoff (being brought back when it matters) and promotes the anti-data, anti-noise wedge into the first impression.');
+      'A gentle pulse brings you back to the present. No screens, no scores, no noise.',
+      'A gentle pulse brings you back to the present. No screens, no scores, no noise.',
+      'Tightened: drops the redundant time-stamp, keeps the mechanism and the anti-noise wedge in one clean line.');
 
     add(byText('p', 'Become Calm, Focused'),
-      'Be here for the moment you are in.',
-      'Be here for the moment you are in.',
-      'Trades a flat three-attribute line for a single relational close that points to the outcome rather than the state.');
+      'Be here for it.',
+      'Be here for it.',
+      'Cut to the shortest possible relational tag, and it frees “be here for the moment you are in” so it is not echoed at the close.');
 
     add(byText('h2', 'micro-pause'),
-      'A million moments pass while we are somewhere else. One gentle pause brings you back.',
-      'A million moments pass while we are somewhere else. One gentle pause brings you back.',
-      'Applies the loss to agency sequence: open on the miss, resolve on the return. Never end on the wound.');
+      'So much passes while we’re somewhere else. One pulse brings you back.',
+      'So much passes while we’re somewhere else. One pulse brings you back.',
+      'Loss to agency sequence, de-duplicated: “a million moments” now lives only in the hero so it stays an ownable signature.');
 
     var benefits = document.querySelectorAll('h2.heading-medium.text-grad-blue');
     if (benefits.length >= 4) {
@@ -70,19 +70,19 @@
         'Reframes focus as presence, not hustle. “All of you” carries a double meaning — your full attention and your whole self in the room — tying the focus benefit back to the ring. This exact line was refined through 5 dedicated EBI passes.');
       add(benefits[2], 'Be there for<br>the people you love', 'Be there for the people you love',
         'Territory A: the relational payoff, the deepest pull and the highest-intent buyer.');
-      add(benefits[3], 'Feel the joy<br>already here', 'Feel the joy already here',
-        'Gain frame to close the ladder warm, after the loss hook up top.');
+      add(benefits[3], 'The joy is<br>already here', 'The joy is already here',
+        'Gain frame to close the benefit ladder warm. It sets up the closing line, where “here” blossoms into more than joy.');
     }
 
     add(document.querySelector('h2.text-grad-green'),
-      'Every other device buzzes to pull you out. Pulse buzzes to bring you back.',
-      'Every other device buzzes to pull you out. Pulse buzzes to bring you back.',
-      'Sharpens the anti-notification wedge with enemy-framing: the attention economy is the villain, Pulse is the antidote.');
+      'Other devices pull you away. Pulse brings you back.',
+      'Other devices pull you away. Pulse brings you back.',
+      'The anti-notification wedge, tightened to its cleanest contrast: the attention economy pulls you away, Pulse pulls you back.');
 
     add(byText('h2.heading-large', 'Be in your moment'),
-      'Be here for the moment you are in. <span style="opacity:.55">Love is right here.</span>',
-      'Be here for the moment you are in. Love is right here.',
-      'Replaces the “Not in your thoughts” negation, which reads as cliché, with a positive relational close and a warm gain line.');
+      '<span class="rp-cycle"><span class="rp-cycle__w">joy</span></span><br>is right here',
+      'Joy is right here.',
+      'The closing gain line. The first word cycles slowly and softly through joy, love, family, purpose, and pleasure, so the brand quietly claims all of them as things that are already here.');
 
     /* -------------------------------------------------- media placeholders */
     function frag(html) { return document.createRange().createContextualFragment(html); }
@@ -252,6 +252,34 @@
       ta.remove(); done();
     }
 
+    /* -------------------------------------------------- cycling closing word
+       Only the first word changes. Slow, soft, easy: a long dwell with a slow
+       blur/fade cross-transition. Edit CYCLE_WORDS or the timings to taste. */
+    var CYCLE_WORDS = ['joy', 'love', 'family', 'purpose', 'pleasure'];
+    var CYCLE_HOLD = 4600;   // ms a word stays before it begins fading out
+    var CYCLE_GAP = 1600;    // ms of empty space between fade-out and next fade-in
+    var cycleTimers = [];
+    function stopCycle() { cycleTimers.forEach(clearTimeout); cycleTimers = []; }
+    function startCycle() {
+      stopCycle();
+      var w = document.querySelector('.rp-cycle__w');
+      if (!w) return;
+      var i = 0;
+      w.classList.remove('rp-vis');
+      function step() {
+        w.textContent = CYCLE_WORDS[i];
+        requestAnimationFrame(function () { requestAnimationFrame(function () { w.classList.add('rp-vis'); }); });
+        cycleTimers.push(setTimeout(function () {
+          w.classList.remove('rp-vis');
+          cycleTimers.push(setTimeout(function () {
+            i = (i + 1) % CYCLE_WORDS.length;
+            step();
+          }, CYCLE_GAP));
+        }, CYCLE_HOLD));
+      }
+      step();
+    }
+
     /* -------------------------------------------------- apply mode */
     function apply(mode) {
       var updated = mode === 'updated';
@@ -265,6 +293,7 @@
       btnNew.classList.toggle('rp-on', updated);
       toggle.classList.toggle('rp-updated', updated);
       try { localStorage.setItem('rp-mode', mode); } catch (e) {}
+      if (updated) startCycle(); else stopCycle();
       if (window.ScrollTrigger) { try { window.ScrollTrigger.refresh(); } catch (e) {} }
     }
 
