@@ -66,8 +66,8 @@
     if (benefits.length >= 4) {
       add(benefits[0], 'Carry less,<br>notice more', 'Carry less, notice more',
         'Moves the benefit heading from a clinical attribute to a felt outcome. The mechanism stays in the line beneath as proof.');
-      add(benefits[1], 'Do the best<br>work of your life', 'Do the best work of your life',
-        'Territory C: the guilt-free “peak work” lane for the non-parent, professional audience.');
+      add(benefits[1], 'Your best work<br>needs all of you', 'Your best work needs all of you',
+        'Reframes focus as presence, not hustle. “All of you” carries a double meaning — your full attention and your whole self in the room — tying the focus benefit back to the ring. This exact line was refined through 5 dedicated EBI passes.');
       add(benefits[2], 'Be there for<br>the people you love', 'Be there for the people you love',
         'Territory A: the relational payoff, the deepest pull and the highest-intent buyer.');
       add(benefits[3], 'Feel the joy<br>already here', 'Feel the joy already here',
