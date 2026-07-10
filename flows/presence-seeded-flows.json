@@ -1,0 +1,1945 @@
+[
+  {
+    "id": "awakening",
+    "name": "Awakening Flow",
+    "description": "Pre-purchase nurture from presence-quiz completion to first order. Hope always leads; the gap stays grey subtext. Never sells during Seen.",
+    "color": "#A3A493",
+    "status": "approved",
+    "dayOrigin": "quiz-day",
+    "cadenceType": "linear",
+    "cadenceAnchor": null,
+    "audiences": [
+      "quiz-lead",
+      "browser"
+    ],
+    "phases": [
+      "numb",
+      "seen",
+      "hopeful",
+      "convinced"
+    ],
+    "createdAt": "2026-07-09",
+    "touchpoints": [
+      {
+        "id": "awk-tp-01",
+        "num": 1,
+        "dayNum": 0,
+        "dayLabel": "Instant",
+        "sequence": 1,
+        "channel": "Email + Page",
+        "title": "Your presence score",
+        "phase": "Seen",
+        "phaseColor": "#A3A493",
+        "personas": [
+          "quiz-lead"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "Deliver quiz results instantly \u2014 the first proof someone noticed. An archetype and a reclaimable number, never a grade.",
+        "contentBrief": "Tone: calm, second person, present tense. Hope leads; the gap is grey subtext. One written 10-second pause. No product pitch \u2014 this is Seen, and we never sell during Seen.",
+        "successCriteria": "Open > 55%; results-page time > 90s",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-quiz-results.html"
+          },
+          {
+            "role": "secondary",
+            "url": "presence-quiz.html",
+            "label": "Presence Quiz"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "awk-tp-02",
+        "num": 2,
+        "dayNum": 1,
+        "dayLabel": "Day 1",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "The moment you noticed",
+        "phase": "Seen",
+        "phaseColor": "#A3A493",
+        "personas": [
+          "quiz-lead"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Mirror the reader's autopilot day \u2014 Maya's Tuesday \u2014 so they feel named, not sold to.",
+        "contentBrief": "Concrete over cosmic: kitchen counters, cold toast, the school run. Invite, never instruct. One written 10-second pause in the body. No product mention, no urgency.",
+        "successCriteria": "Read time > 60s; CTR to presence-experience > 12%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-the-moment.html"
+          },
+          {
+            "role": "secondary",
+            "url": "presence-experience.html",
+            "label": "The Presence Experience"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "awk-tp-03",
+        "num": 3,
+        "dayNum": 3,
+        "dayLabel": "Day 3",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "What autopilot costs",
+        "phase": "Seen",
+        "phaseColor": "#A3A493",
+        "personas": [
+          "quiz-lead"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Problem education: attention residue and days that blur. Builds the cost of the gap without naming the product.",
+        "contentBrief": "Present tense, one breath per sentence. No product mention, no statistics theater, no urgency. Close on the written 10-second pause.",
+        "successCriteria": "Open > 45%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-autopilot-cost.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "awk-tp-04",
+        "num": 4,
+        "dayNum": 5,
+        "dayLabel": "Day 5",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "A pulse instead of a ping",
+        "phase": "Hopeful",
+        "phaseColor": "#B3A379",
+        "personas": [
+          "quiz-lead"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Explain the mechanism: a gentle physical pulse a few times an hour \u2014 no screen, no notification, nothing to check.",
+        "contentBrief": "Quiet mechanism reveal. Never reference tracking, data, or scores \u2014 the ring reports nothing, and that is the point. 'You may notice', never 'you will feel'. One pause, one soft link.",
+        "successCriteria": "CTR > 10%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-pulse-not-ping.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "awk-tp-05",
+        "num": 5,
+        "dayNum": 7,
+        "dayLabel": "Day 7",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "One reader's Tuesday, after",
+        "phase": "Hopeful",
+        "phaseColor": "#B3A379",
+        "personas": [
+          "quiz-lead"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Social proof story matched to the reader's quiz archetype \u2014 one ordinary Tuesday, quietly changed.",
+        "contentBrief": "One concrete story, no superlatives, no exclamation points. Ban journey/transform/unlock/elevate. Include the written 10-second pause.",
+        "successCriteria": "CTR > 8%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-readers-tuesday.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "awk-tp-06",
+        "num": 6,
+        "dayNum": 10,
+        "dayLabel": "Day 10",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Try this before you buy anything",
+        "phase": "Hopeful",
+        "phaseColor": "#B3A379",
+        "personas": [
+          "quiz-lead"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Give a free 60-second presence practice \u2014 generosity before commerce.",
+        "contentBrief": "The practice is the whole email; the written 10-second pause is the product here. Invite, never instruct. Single soft link to the Presence Experience, no buy CTA.",
+        "successCriteria": "Practice completion > 25%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-try-this-first.html"
+          },
+          {
+            "role": "secondary",
+            "url": "presence-experience.html",
+            "label": "The Presence Experience"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "awk-tp-07",
+        "num": 7,
+        "dayNum": 14,
+        "dayLabel": "Day 14",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Your questions, answered",
+        "phase": "Convinced",
+        "phaseColor": "#C0A45D",
+        "personas": [
+          "quiz-lead"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "Answer the practical objections plainly: sizing, battery, 'another device?', returns, water.",
+        "contentBrief": "Plain answers, one per breath. Reinforce: no tracking, no data, nothing to check. Invite replies to care@ \u2014 never no-reply. One written pause before the sign-off.",
+        "successCriteria": "Open > 40%; reply rate > 3%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-questions-answered.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "awk-tp-08",
+        "num": 8,
+        "dayNum": 18,
+        "dayLabel": "Day 18",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "The Presence Experience",
+        "phase": "Convinced",
+        "phaseColor": "#C0A45D",
+        "personas": [
+          "quiz-lead"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Invite the reader into the longform immersion page \u2014 feel the practice before owning the object.",
+        "contentBrief": "Short letter, one lime CTA to the Presence Experience page. Present tense, second person. Written 10-second pause before the CTA so the click is a choice, not a reflex.",
+        "successCriteria": "Experience page scroll depth > 60%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-presence-experience.html"
+          },
+          {
+            "role": "secondary",
+            "url": "presence-experience.html",
+            "label": "The Presence Experience"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "awk-tp-09",
+        "num": 9,
+        "dayNum": 21,
+        "dayLabel": "Day 21",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "When you're ready",
+        "phase": "Convinced",
+        "phaseColor": "#C0A45D",
+        "personas": [
+          "quiz-lead",
+          "browser"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Soft close: guarantee, free size exchange, a single calm CTA to the product page. Buy CTAs are allowed \u2014 this is Convinced.",
+        "contentBrief": "No scarcity, no countdown, no urgency. One lime CTA to index.html. State the guarantee and free size exchange in one breath each. Written 10-second pause before the CTA.",
+        "successCriteria": "Conversion > 3%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-when-youre-ready.html"
+          },
+          {
+            "role": "secondary",
+            "url": "index.html",
+            "label": "Pulse Home"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "awk-tp-10",
+        "num": 10,
+        "dayNum": 30,
+        "dayLabel": "Day 30",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "We'll be here",
+        "phase": "Convinced",
+        "phaseColor": "#C0A45D",
+        "personas": [
+          "quiz-lead",
+          "browser"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Downshift to a monthly rhythm with an explicit opt-down. Respecting attention IS the brand.",
+        "contentBrief": "Offer fewer emails as a gift, not a loss. No win-back tricks, no urgency. One written pause; a single quiet link at most.",
+        "successCriteria": "Unsubscribe < 1%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-well-be-here.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "awk-tp-11",
+        "num": 11,
+        "dayNum": 31,
+        "dayLabel": "Trigger",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Still thinking it over",
+        "phase": "Convinced",
+        "phaseColor": "#C0A45D",
+        "personas": [
+          "browser"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "Cart-abandon recovery: restate the guarantee and the sizing safety net with one calm CTA.",
+        "contentBrief": "No urgency, no discount pressure, no countdown. Name the two real hesitations (fit, commitment) and answer both. One lime CTA to index.html; one written 10-second pause.",
+        "successCriteria": "Recovery > 8%",
+        "triggerCondition": "Cart abandoned on index.html; no purchase within 24h",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-still-thinking.html"
+          },
+          {
+            "role": "secondary",
+            "url": "index.html",
+            "label": "Pulse Home"
+          }
+        ],
+        "assetType": "email"
+      }
+    ]
+  },
+  {
+    "id": "true-fit",
+    "name": "True Fit Flow",
+    "description": "Order confirmation through the sizing fork to confirmed fit, with a free-exchange safety net. Sizing is the #1 DTC ring failure mode.",
+    "color": "#C0A45D",
+    "status": "approved",
+    "dayOrigin": "order-day",
+    "cadenceType": "linear",
+    "cadenceAnchor": null,
+    "audiences": [
+      "new-owner",
+      "gift-giver"
+    ],
+    "phases": [
+      "convinced",
+      "relieved",
+      "generous"
+    ],
+    "createdAt": "2026-07-09",
+    "touchpoints": [
+      {
+        "id": "tf-tp-01",
+        "num": 1,
+        "dayNum": 0,
+        "dayLabel": "Day 0",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Your ring is coming",
+        "phase": "Convinced",
+        "phaseColor": "#C0A45D",
+        "personas": [
+          "new-owner"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "Order confirmation that lands as a beginning: the decision itself was the first act of presence.",
+        "contentBrief": "Transactional sender ('Pulse' hello@, Reply-To care@). Dark luxe world \u2014 the ring is the hero. Calm facts first (order, timing), then one written 10-second pause. No upsells.",
+        "successCriteria": "Open > 60%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-order-confirmed.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "tf-tp-02",
+        "num": 2,
+        "dayNum": 0,
+        "dayLabel": "Day 0",
+        "sequence": 2,
+        "channel": "Email",
+        "title": "First, the right fit",
+        "phase": "Convinced",
+        "phaseColor": "#C0A45D",
+        "personas": [
+          "new-owner"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "The sizing fork: confirmed size ships now; unsure gets a sizing kit. One question, nothing else.",
+        "contentBrief": "One question, two buttons \u2014 'I know my size' / 'Send me a sizer'. Make choosing effortless; no other content, no cross-sell. Calm, second person, present tense.",
+        "successCriteria": "Fork response > 85% within 48h",
+        "triggerCondition": "Ring size not confirmed at checkout",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-right-fit.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "tf-tp-03",
+        "num": 3,
+        "dayNum": 3,
+        "dayLabel": "Day 3",
+        "sequence": 1,
+        "channel": "Email + SMS",
+        "title": "Your sizing kit is here",
+        "phase": "Convinced",
+        "phaseColor": "#C0A45D",
+        "personas": [
+          "new-owner"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "Teach the measure: wear the sizer overnight, check the knuckle, size the dominant hand.",
+        "contentBrief": "Three short steps, one per breath. Invite, never drill-sergeant. No deadline pressure \u2014 but confirming is one tap.",
+        "successCriteria": "Kit-to-size conversion > 75%",
+        "knownRisks": "If the sizer is not worn overnight, sizes run small and exchange volume rises.",
+        "triggerCondition": "Chose 'send me a sizer' at the fork",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-sizing-kit.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "tf-tp-04",
+        "num": 4,
+        "dayNum": 5,
+        "dayLabel": "Day 5",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Confirm your size",
+        "phase": "Convinced",
+        "phaseColor": "#C0A45D",
+        "personas": [
+          "new-owner"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "One-tap size confirmation; one record per customer.",
+        "contentBrief": "Single lime CTA \u2014 the confirmation tap. Restate the free-exchange safety net in one line so the tap feels low-stakes. No urgency.",
+        "successCriteria": "Size confirmation > 90%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-confirm-size.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "tf-tp-05",
+        "num": 5,
+        "dayNum": 0,
+        "dayLabel": "Day 0",
+        "sequence": 3,
+        "channel": "Email",
+        "title": "A gift of presence",
+        "phase": "Generous",
+        "phaseColor": "#E0B036",
+        "personas": [
+          "gift-giver"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "Gift-giver confirmation: capture the gift note and offer a discreet recipient sizing link.",
+        "contentBrief": "Speak to the giver's intention \u2014 presence, given away. The gift note is the one ask. Dark luxe world. The recipient path never reveals pricing.",
+        "successCriteria": "Gift-note completion > 60%",
+        "triggerCondition": "Order marked as a gift",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-gift-of-presence.html"
+          },
+          {
+            "role": "secondary",
+            "url": "index.html",
+            "label": "Pulse Home"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "tf-tp-06",
+        "num": 6,
+        "dayNum": 7,
+        "dayLabel": "Trigger",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Exchange, made simple",
+        "phase": "Relieved",
+        "phaseColor": "#CCA94C",
+        "personas": [
+          "new-owner"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "Free size exchange executed without friction \u2014 kills the #1 return reason.",
+        "contentBrief": "Zero apology theater, zero blame. Three calm steps and a prepaid label. One breath per sentence; one written pause while the new size ships.",
+        "successCriteria": "Exchange rate < 8%; post-exchange NPS >= 8",
+        "triggerCondition": "Size exchange requested",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-exchange-simple.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "tf-tp-07",
+        "num": 7,
+        "dayNum": 0,
+        "dayLabel": "Day 0 \u00b7 Checkout",
+        "sequence": 1,
+        "channel": "Website",
+        "title": "Delivery updates, by text",
+        "phase": "Convinced",
+        "phaseColor": "#C0A45D",
+        "personas": [
+          "new-owner",
+          "gift-giver"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "Clear, explicit SMS opt-in at checkout \u2014 the one place we ask for a phone number. Consent is the product behaving like itself.",
+        "contentBrief": "Phone field + two separate checkboxes (delivery updates / weekly pause texts). Full consent language: message frequency, msg&data rates, STOP to opt out, HELP for help, privacy link. Never pre-checked.",
+        "successCriteria": "Delivery-updates opt-in > 40%; zero pre-checked boxes",
+        "knownRisks": "Implied consent is not consent. Without explicit opt-in language we cannot text at all.",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/landing-text-optin.html"
+          }
+        ],
+        "assetType": "landing"
+      },
+      {
+        "id": "tf-tp-08",
+        "num": 8,
+        "dayNum": 0,
+        "dayLabel": "Instant",
+        "sequence": 2,
+        "channel": "SMS",
+        "title": "Confirmed \u2014 you're on the list",
+        "phase": "Convinced",
+        "phaseColor": "#C0A45D",
+        "personas": [
+          "new-owner",
+          "gift-giver"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "Double opt-in confirmation: restate what they signed up for, how often, and how to leave.",
+        "contentBrief": "One message: what we'll text, a-few-a-month frequency, STOP/HELP line. Nothing else.",
+        "successCriteria": "Opt-out at confirm < 2%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/sms-optin-confirm.html"
+          }
+        ],
+        "assetType": "sms",
+        "triggerCondition": "Phone number submitted with opt-in checked"
+      }
+    ]
+  },
+  {
+    "id": "arrival",
+    "name": "Arrival Flow",
+    "description": "Ship notice through unboxing, charging, app pairing, and the first pulse. The ceremonial handoff between the product world and the human world.",
+    "color": "#CCA94C",
+    "status": "approved",
+    "dayOrigin": "ship-day",
+    "cadenceType": "linear",
+    "cadenceAnchor": null,
+    "audiences": [
+      "new-owner",
+      "gift-recipient"
+    ],
+    "phases": [
+      "seen",
+      "relieved"
+    ],
+    "createdAt": "2026-07-09",
+    "touchpoints": [
+      {
+        "id": "arr-tp-01",
+        "num": 1,
+        "dayNum": 0,
+        "dayLabel": "Shipped",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "It's on its way",
+        "phase": "Relieved",
+        "phaseColor": "#CCA94C",
+        "personas": [
+          "new-owner"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "Ceremonial ship notice plus permission to slow down while it travels.",
+        "contentBrief": "Dark luxe world \u2014 the ring nested in its box. Tracking link once, no delivery anxiety. One written 10-second pause: the practice starts before the ring does.",
+        "successCriteria": "Open > 65%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-on-its-way.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "arr-tp-02",
+        "num": 2,
+        "dayNum": 1,
+        "dayLabel": "In Transit",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Before it arrives",
+        "phase": "Relieved",
+        "phaseColor": "#CCA94C",
+        "personas": [
+          "new-owner"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "Prepare the arrival: download the app, choose a charging spot you will see nightly.",
+        "contentBrief": "Two small tasks, invited not assigned. Frame the charging spot as a place in the home, not a device chore. Cream world; one written pause.",
+        "successCriteria": "Pre-arrival app install > 40%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-before-it-arrives.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "arr-tp-03",
+        "num": 3,
+        "dayNum": 3,
+        "dayLabel": "Delivery Day",
+        "sequence": 1,
+        "channel": "SMS + Email",
+        "title": "It's here",
+        "phase": "Relieved",
+        "phaseColor": "#CCA94C",
+        "personas": [
+          "new-owner"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "Delivery confirmation with one instruction: open it when you have five quiet minutes.",
+        "contentBrief": "One or two lines. No setup pressure on delivery day. The pause here is literal \u2014 wait for five quiet minutes before opening.",
+        "successCriteria": "Delivery confirmation > 95%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-its-here.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "arr-tp-04",
+        "num": 4,
+        "dayNum": 3,
+        "dayLabel": "Day 0",
+        "sequence": 2,
+        "channel": "Email",
+        "title": "Charge, pair, breathe",
+        "phase": "Relieved",
+        "phaseColor": "#CCA94C",
+        "personas": [
+          "new-owner"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "The unbox ritual: full charge, app pairing, one breath before first wear.",
+        "contentBrief": "The deliberate crossover email: cream letter template with a product-in-life hero \u2014 the temperature change between worlds. Three steps; the third is a breath. Pairing sets pulse windows \u2014 setup, never tracking.",
+        "successCriteria": "Pairing within 24h > 80%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-charge-pair-breathe.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "arr-tp-05",
+        "num": 5,
+        "dayNum": 3,
+        "dayLabel": "Day 0",
+        "sequence": 3,
+        "channel": "Website",
+        "title": "Your first pulse",
+        "phase": "Relieved",
+        "phaseColor": "#CCA94C",
+        "personas": [
+          "new-owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "A guided 90-second first-pulse arrival ritual \u2014 the threshold into practice.",
+        "contentBrief": "One screen, one voice, 90 seconds. Second person, present tense. No account creation, no data capture \u2014 arrive, feel one pulse, done.",
+        "successCriteria": "Ritual completion > 85%",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/landing-first-pulse.html"
+          }
+        ],
+        "assetType": "landing"
+      },
+      {
+        "id": "arr-tp-06",
+        "num": 6,
+        "dayNum": 4,
+        "dayLabel": "Trigger",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Someone thought of you",
+        "phase": "Seen",
+        "phaseColor": "#A3A493",
+        "personas": [
+          "gift-recipient"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Gift-recipient welcome: who sent it and why (opt-in note), with their own setup path. They start at Seen, not Relieved.",
+        "contentBrief": "Lead with the giver's note if opted in. Assume nothing \u2014 earn the wrist. A gentle setup path at their own pace; one written 10-second pause.",
+        "successCriteria": "Gift activation > 70%",
+        "triggerCondition": "Gifted ring activated",
+        "status": "approved",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-someone-thought-of-you.html"
+          }
+        ],
+        "assetType": "email"
+      }
+    ]
+  },
+  {
+    "id": "first-25",
+    "name": "First 25 Days Flow",
+    "description": "New owner builds the wear-charge-notice habit over 25 days, ending with a felt presence shift measured only by the re-taken quiz.",
+    "color": "#D6AC3E",
+    "status": "in_review",
+    "dayOrigin": "pairing-day",
+    "cadenceType": "linear",
+    "cadenceAnchor": null,
+    "audiences": [
+      "new-owner",
+      "gift-recipient"
+    ],
+    "phases": [
+      "seen",
+      "relieved",
+      "grateful"
+    ],
+    "createdAt": "2026-07-09",
+    "touchpoints": [
+      {
+        "id": "ff-tp-01",
+        "num": 1,
+        "dayNum": 1,
+        "dayLabel": "Day 1",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Day one: just wear it",
+        "phase": "Relieved",
+        "phaseColor": "#CCA94C",
+        "personas": [
+          "new-owner",
+          "gift-recipient"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Zero-goal start: the only job today is the ring on your finger.",
+        "contentBrief": "One idea only. Explicitly no goals, no setup homework. Success is the email open \u2014 never wear detection; the ring reports nothing. One written 10-second pause.",
+        "successCriteria": "Open > 60%",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-day-one.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "ff-tp-02",
+        "num": 2,
+        "dayNum": 2,
+        "dayLabel": "Day 2",
+        "sequence": 1,
+        "channel": "Website",
+        "title": "Your pulse windows",
+        "phase": "Relieved",
+        "phaseColor": "#CCA94C",
+        "personas": [
+          "new-owner",
+          "gift-recipient"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "Set three daily pulse windows anchored to real moments \u2014 commute, lunch, bedtime. Setup, not tracking.",
+        "contentBrief": "Frame windows as appointments with yourself, anchored to moments that already exist. App push is fine here \u2014 it is a setup task, not tracking. Nothing is measured, nothing is reported.",
+        "successCriteria": "Pulse windows set > 75%",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/landing-pulse-windows.html"
+          }
+        ],
+        "assetType": "landing"
+      },
+      {
+        "id": "ff-tp-03",
+        "num": 3,
+        "dayNum": 3,
+        "dayLabel": "Day 3",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "What did you notice?",
+        "phase": "Relieved",
+        "phaseColor": "#CCA94C",
+        "personas": [
+          "new-owner",
+          "gift-recipient"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "First reflection: one word for before the pulse, one word for after.",
+        "contentBrief": "The ask is two words in a reply. Prompt box with the honey left-border. No right answers \u2014 'nothing yet' is a fine answer. Written pause before the prompt.",
+        "successCriteria": "Reply rate > 40%",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-what-did-you-notice.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "ff-tp-04",
+        "num": 4,
+        "dayNum": 4,
+        "dayLabel": "Day 4",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "No rush",
+        "phase": "Seen",
+        "phaseColor": "#A3A493",
+        "personas": [
+          "new-owner",
+          "gift-recipient"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Not-yet-paired variant: an unhurried founder note that removes all pressure to begin.",
+        "contentBrief": "Founder voice, three short paragraphs. No guilt, no 'we noticed you haven't' \u2014 the trigger is engagement-based, never telemetry. The ring will keep.",
+        "successCriteria": "Reply > 10%",
+        "triggerCondition": "No app pairing by Day 4",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-no-rush.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "ff-tp-05",
+        "num": 5,
+        "dayNum": 4,
+        "dayLabel": "Day 4",
+        "sequence": 2,
+        "channel": "Email",
+        "title": "How is it going with your ring?",
+        "phase": "Relieved",
+        "phaseColor": "#CCA94C",
+        "personas": [
+          "new-owner",
+          "gift-recipient"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Active variant: one 1-10 feeling rating plus an open comment ask.",
+        "contentBrief": "One tap plus one optional sentence. The rating is how it feels \u2014 never usage data. Thank them either way in the confirmation.",
+        "successCriteria": "Rating response > 30%",
+        "triggerCondition": "Paired and active by Day 4",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-how-is-it-going.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "ff-tp-06",
+        "num": 6,
+        "dayNum": 5,
+        "dayLabel": "Day 5",
+        "sequence": 1,
+        "channel": "SMS",
+        "title": "Charge while you shower",
+        "phase": "Relieved",
+        "phaseColor": "#CCA94C",
+        "personas": [
+          "new-owner",
+          "gift-recipient"
+        ],
+        "ownerRole": "care-lead",
+        "strategicIntent": "Anchor charging to an existing daily ritual \u2014 a dead ring is a dead practice.",
+        "contentBrief": "One line, one anchor habit. No streak framing, no nagging cadence. Calm, second person, present tense.",
+        "successCriteria": "Not measured directly \u2014 supports the charge habit and Day-25 completion",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/sms-charge.html"
+          }
+        ],
+        "assetType": "sms"
+      },
+      {
+        "id": "ff-tp-07",
+        "num": 7,
+        "dayNum": 7,
+        "dayLabel": "Day 7",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Week one: what to notice",
+        "phase": "Relieved",
+        "phaseColor": "#CCA94C",
+        "personas": [
+          "new-owner",
+          "gift-recipient"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Somatic education: the pulse works before you consciously register it.",
+        "contentBrief": "'You may notice', never 'you will feel'. Concrete bodily anchors \u2014 shoulders, jaw, breath. One written 10-second pause mid-email.",
+        "successCriteria": "Open > 45%",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-week-one-noticing.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "ff-tp-08",
+        "num": 8,
+        "dayNum": 10,
+        "dayLabel": "Day 10",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "The pause is working",
+        "phase": "Grateful",
+        "phaseColor": "#D6AC3E",
+        "personas": [
+          "new-owner",
+          "gift-recipient"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Reflection without measurement: count nothing; recall one moment this week you returned.",
+        "contentBrief": "NO app-data playback of any kind \u2014 no counts, no charts, no 'you paused N times'. The evidence is a remembered moment; ask for it in a reply. One written pause.",
+        "successCriteria": "Reply rate (primary signal)",
+        "knownRisks": "Any hint of usage playback here breaks the anti-data promise at its most tempting moment.",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-pause-is-working.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "ff-tp-09",
+        "num": 9,
+        "dayNum": 14,
+        "dayLabel": "Day 14",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Two weeks of returning",
+        "phase": "Grateful",
+        "phaseColor": "#D6AC3E",
+        "personas": [
+          "new-owner",
+          "gift-recipient"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Time-based recognition \u2014 two weeks since pairing \u2014 plus a pulse-window tune-up prompt.",
+        "contentBrief": "Recognition is calendar-based, never a streak count. Invite one adjustment to pulse windows now that real life has weighed in. One breath per sentence.",
+        "successCriteria": "Window adjustment > 20%",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-two-weeks-returning.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "ff-tp-10",
+        "num": 10,
+        "dayNum": 21,
+        "dayLabel": "Day 21",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "The 21-day threshold",
+        "phase": "Grateful",
+        "phaseColor": "#D6AC3E",
+        "personas": [
+          "new-owner",
+          "gift-recipient"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Habit science: what repetition does in the nervous system at three weeks.",
+        "contentBrief": "One research-grounded idea in plain language \u2014 no citation theater. Present tense, second person, concrete. End on the written 10-second pause.",
+        "successCriteria": "Open > 45%",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-21-day-threshold.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "ff-tp-11",
+        "num": 11,
+        "dayNum": 25,
+        "dayLabel": "Day 25",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Twenty-five days present",
+        "phase": "Grateful",
+        "phaseColor": "#D6AC3E",
+        "personas": [
+          "new-owner",
+          "gift-recipient"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Milestone plus quiz re-take invite: measure the shift they can already feel.",
+        "contentBrief": "The re-take is the only measurement this brand does \u2014 self-reported, re-takeable, theirs. One lime CTA to the quiz. Never a grade, never telemetry.",
+        "successCriteria": "Quiz re-take > 35%",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-25-days-present.html"
+          },
+          {
+            "role": "secondary",
+            "url": "presence-quiz.html",
+            "label": "Presence Quiz"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "ff-tp-12",
+        "num": 12,
+        "dayNum": 25,
+        "dayLabel": "Day 25",
+        "sequence": 2,
+        "channel": "Website",
+        "title": "Your presence report",
+        "phase": "Grateful",
+        "phaseColor": "#D6AC3E",
+        "personas": [
+          "new-owner",
+          "gift-recipient"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Before/after quiz delta rendered as an archetype shift and reclaimed-life framing. Graduates the reader to owner.",
+        "contentBrief": "Self-reported delta only \u2014 never telemetry, never a grade. Hope leads; the remaining gap is grey subtext. The shareable card is opt-in.",
+        "successCriteria": "Report view > 60%; share > 10%",
+        "knownRisks": "If the delta reads as a score or grade, it betrays the anti-data promise on the most-viewed page of the arc.",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/landing-presence-report.html"
+          }
+        ],
+        "assetType": "landing"
+      }
+    ]
+  },
+  {
+    "id": "sunday-pause",
+    "name": "The Sunday Pause",
+    "description": "Recurring Sunday-evening theme release plus dormancy win-back. The weekly ritual that keeps the ring out of the drawer.",
+    "color": "#C9A227",
+    "status": "in_review",
+    "dayOrigin": "sunday",
+    "cadenceType": "weekly",
+    "cadenceAnchor": "sunday",
+    "audiences": [
+      "owner",
+      "new-owner",
+      "lapsed"
+    ],
+    "phases": [
+      "numb",
+      "seen",
+      "grateful"
+    ],
+    "createdAt": "2026-07-09",
+    "touchpoints": [
+      {
+        "id": "wp-tp-01",
+        "num": 1,
+        "dayNum": 0,
+        "dayLabel": "Sunday",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "The Sunday Pause \u2014 Arrive",
+        "phase": "Grateful",
+        "phaseColor": "#D6AC3E",
+        "personas": [
+          "owner",
+          "new-owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Weekly Sunday-evening theme release with a matching pulse pattern in the app.",
+        "contentBrief": "Subject pattern 'The Sunday Pause \u2014 [theme]'. One theme, one paragraph, one pattern to activate. The written 10-second pause is the theme's first practice.",
+        "successCriteria": "Pattern activation > 30%",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-sunday-pause.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "wp-tp-02",
+        "num": 2,
+        "dayNum": 3,
+        "dayLabel": "Wednesday",
+        "sequence": 1,
+        "channel": "SMS",
+        "title": "Midweek return",
+        "phase": "Grateful",
+        "phaseColor": "#D6AC3E",
+        "personas": [
+          "owner",
+          "new-owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "One line midweek: the theme lives in the body, not the inbox.",
+        "contentBrief": "A single sentence tied to this week's theme. No link required. No streaks, no check-ins, no urgency.",
+        "successCriteria": "Not measured directly \u2014 sustains the weekly theme between Sundays",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/sms-midweek.html"
+          }
+        ],
+        "assetType": "sms"
+      },
+      {
+        "id": "wp-tp-03",
+        "num": 3,
+        "dayNum": 5,
+        "dayLabel": "Friday",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "What others noticed this week",
+        "phase": "Grateful",
+        "phaseColor": "#D6AC3E",
+        "personas": [
+          "owner",
+          "new-owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Community reflections as quiet social proof \u2014 no leaderboard, no rankings.",
+        "contentBrief": "Three short reader reflections, first names only, always opt-in. No metrics, no 'top' anything. One written pause before the sign-off.",
+        "successCriteria": "Open > 35%",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-what-others-noticed.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "wp-tp-04",
+        "num": 4,
+        "dayNum": 21,
+        "dayLabel": "Trigger",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Come back to now",
+        "phase": "Numb",
+        "phaseColor": "#93A5B1",
+        "personas": [
+          "lapsed"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Win-back without guilt: one small step \u2014 charge it tonight, wear it tomorrow.",
+        "contentBrief": "Trigger is engagement-based (21 days of zero email/app engagement) \u2014 never wear data. No guilt, no 'we miss you' theater. Two small steps, and the quiz re-take as a re-entry door.",
+        "successCriteria": "Re-engagement within 7 days > 20%",
+        "knownRisks": "Any guilt tone confirms the drawer decision instead of reversing it.",
+        "triggerCondition": "21 days of zero email/app engagement",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-come-back-to-now.html"
+          },
+          {
+            "role": "secondary",
+            "url": "presence-quiz.html",
+            "label": "Presence Quiz"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "wp-tp-05",
+        "num": 5,
+        "dayNum": 28,
+        "dayLabel": "Trigger +7d",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "One minute, no ring required",
+        "phase": "Seen",
+        "phaseColor": "#A3A493",
+        "personas": [
+          "lapsed"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Re-enter through practice, not product: a ringless 60-second presence practice, then 30 days of quiet.",
+        "contentBrief": "The practice asks nothing of the ring or the app. State the coming quiet explicitly \u2014 'we'll write once a month unless you say otherwise'. Generosity is the last word.",
+        "successCriteria": "Practice completion > 15%",
+        "triggerCondition": "Still silent 7 days after win-back",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-one-minute-no-ring.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "wp-tp-06",
+        "num": 6,
+        "dayNum": 14,
+        "dayLabel": "Trigger \u00b7 Week 2 owner",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "The Pause, by text",
+        "phase": "Grateful",
+        "phaseColor": "#D6AC3E",
+        "personas": [
+          "owner",
+          "new-owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Invite owners who never gave a number to opt in to the midweek text \u2014 the quietest channel for the quietest nudge.",
+        "contentBrief": "One idea: a single line on Wednesdays, no links most weeks. Opt-in page linked; consent language on the page, not implied here.",
+        "successCriteria": "Opt-in > 15% of invited",
+        "status": "in_review",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-pause-by-text.html"
+          },
+          {
+            "role": "secondary",
+            "url": "emails/landing-text-optin.html",
+            "label": "Text opt-in page"
+          }
+        ],
+        "assetType": "email"
+      }
+    ]
+  },
+  {
+    "id": "ripple",
+    "name": "Ripple Flow",
+    "description": "Reviews, referrals, gifting, and shareable presence stories \u2014 love becomes the referral, starting from the Day-25 glow.",
+    "color": "#E0B036",
+    "status": "draft",
+    "dayOrigin": "graduation-day",
+    "cadenceType": "linear",
+    "cadenceAnchor": null,
+    "audiences": [
+      "owner"
+    ],
+    "phases": [
+      "grateful",
+      "generous"
+    ],
+    "createdAt": "2026-07-09",
+    "touchpoints": [
+      {
+        "id": "rip-tp-01",
+        "num": 1,
+        "dayNum": 0,
+        "dayLabel": "Day 0",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Your first impression, in your words",
+        "phase": "Grateful",
+        "phaseColor": "#D6AC3E",
+        "personas": [
+          "owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Review ask while the Day-25 glow is fresh.",
+        "contentBrief": "Ask for words, not stars \u2014 the rating is the afterthought. One lime CTA. No incentives; the story is the gift. One written pause before the ask.",
+        "successCriteria": "Review rate > 12%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-first-impression.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "rip-tp-02",
+        "num": 2,
+        "dayNum": 7,
+        "dayLabel": "Day 7",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Your story matters",
+        "phase": "Grateful",
+        "phaseColor": "#D6AC3E",
+        "personas": [
+          "owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Testimonial ask that feeds the Friday community email and on-site proof.",
+        "contentBrief": "Explain exactly where their words go \u2014 Friday email, site \u2014 first names only, consent explicit. One reply prompt, no urgency.",
+        "successCriteria": "Testimonial rate > 5%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-your-story.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "rip-tp-03",
+        "num": 3,
+        "dayNum": 14,
+        "dayLabel": "Day 14",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Give a month of presence",
+        "phase": "Generous",
+        "phaseColor": "#E0B036",
+        "personas": [
+          "owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Referral link framed as a gift rather than a commission.",
+        "contentBrief": "Gift framing only \u2014 no 'earn $20' language. One lime CTA. Written 10-second pause before the ask: who came to mind just now?",
+        "successCriteria": "Share rate > 15%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-give-a-month.html"
+          },
+          {
+            "role": "secondary",
+            "url": "index.html",
+            "label": "Pulse Home"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "rip-tp-04",
+        "num": 4,
+        "dayNum": 21,
+        "dayLabel": "Day 21",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Someone you love is on autopilot too",
+        "phase": "Generous",
+        "phaseColor": "#E0B036",
+        "personas": [
+          "owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Direct gift prompt \u2014 gift the exact person they named in the quiz, so love becomes the referral.",
+        "contentBrief": "Name the quiz moment back to them: 'you told us who you think of'. One CTA to gift. No pressure; the written pause is for picturing that person's Tuesday.",
+        "successCriteria": "Gift conversion > 2%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-someone-you-love.html"
+          },
+          {
+            "role": "secondary",
+            "url": "presence-experience.html",
+            "label": "The Presence Experience"
+          },
+          {
+            "role": "secondary",
+            "url": "index.html",
+            "label": "Pulse Home"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "rip-tp-05",
+        "num": 5,
+        "dayNum": 30,
+        "dayLabel": "Day 30",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "What you've given yourself",
+        "phase": "Generous",
+        "phaseColor": "#E0B036",
+        "personas": [
+          "owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "A shareable presence story card built from their own self-reported shift.",
+        "contentBrief": "The card is built from quiz self-reports only \u2014 never telemetry. Sharing is one tap, entirely optional, and beautiful enough to want to.",
+        "successCriteria": "Share rate > 10%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-what-youve-given.html"
+          },
+          {
+            "role": "secondary",
+            "url": "presence-quiz.html",
+            "label": "Presence Quiz"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "rip-tp-06",
+        "num": 6,
+        "dayNum": 45,
+        "dayLabel": "Day 45",
+        "sequence": 1,
+        "channel": "Email + Social",
+        "title": "Join the Presence Circle",
+        "phase": "Generous",
+        "phaseColor": "#E0B036",
+        "personas": [
+          "owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Community invite, earned at six weeks.",
+        "contentBrief": "Frame the Circle as people, not a channel. What happens there, one breath each. One lime CTA to join; no FOMO framing.",
+        "successCriteria": "Join rate > 20%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-presence-circle.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "rip-tp-07",
+        "num": 7,
+        "dayNum": 60,
+        "dayLabel": "Day 60",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Your story kit",
+        "phase": "Generous",
+        "phaseColor": "#E0B036",
+        "personas": [
+          "owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Assets and language so they can tell their story their own way.",
+        "contentBrief": "Equip, don't script: prompts, images, and starting lines they can freely discard. Copy bans hold: no journey/transform/unlock/elevate.",
+        "successCriteria": "Kit engagement > 25%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-story-kit.html"
+          }
+        ],
+        "assetType": "email"
+      }
+    ]
+  },
+  {
+    "id": "inner-circle",
+    "name": "Inner Circle Flow",
+    "description": "Manually enrolled advocates: recognition, story capture, and co-creation. The First Hundred.",
+    "color": "#E0B036",
+    "status": "draft",
+    "dayOrigin": "enrollment-day",
+    "cadenceType": "linear",
+    "cadenceAnchor": null,
+    "audiences": [
+      "owner"
+    ],
+    "phases": [
+      "generous"
+    ],
+    "createdAt": "2026-07-09",
+    "touchpoints": [
+      {
+        "id": "ic-tp-01",
+        "num": 1,
+        "dayNum": 0,
+        "dayLabel": "Day 0",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "We noticed your practice",
+        "phase": "Generous",
+        "phaseColor": "#E0B036",
+        "personas": [
+          "owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Founder recognition of their practice and generosity \u2014 never their purchase volume.",
+        "contentBrief": "Personally written, personally signed (Elias). Reference something true and specific they shared. 'We noticed' means their words and replies \u2014 never usage data.",
+        "successCriteria": "Reply rate > 30%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-we-noticed.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "ic-tp-02",
+        "num": 2,
+        "dayNum": 3,
+        "dayLabel": "Day 3",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Here's what you can share",
+        "phase": "Generous",
+        "phaseColor": "#E0B036",
+        "personas": [
+          "owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Share kit: language, prompts, and assets. Equip, don't script.",
+        "contentBrief": "Everything optional, everything editable. No talking points, no hashtag mandates. One written pause: what would you actually say to a friend?",
+        "successCriteria": "Kit usage > 40%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-share-kit.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "ic-tp-03",
+        "num": 3,
+        "dayNum": 7,
+        "dayLabel": "Day 7",
+        "sequence": 1,
+        "channel": "Email + Phone",
+        "title": "Can we tell your story?",
+        "phase": "Generous",
+        "phaseColor": "#E0B036",
+        "personas": [
+          "owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Personal founder ask for a filmed or longform story.",
+        "contentBrief": "The ask is personal and revocable at any point. The email opens the door; the call (script attached) does the asking. Meaning over money \u2014 no compensation framing.",
+        "successCriteria": "Yes rate > 50% of those asked",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-tell-your-story.html"
+          },
+          {
+            "role": "secondary",
+            "url": "emails/call-script-story.html",
+            "label": "Story Call Script"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "ic-tp-04",
+        "num": 4,
+        "dayNum": 14,
+        "dayLabel": "Day 14",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "You're showing others the way",
+        "phase": "Generous",
+        "phaseColor": "#E0B036",
+        "personas": [
+          "owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Amplify what they shared \u2014 celebration, not extraction.",
+        "contentBrief": "Show exactly where their words landed and what a reader said back. Gratitude with no follow-up ask attached.",
+        "successCriteria": "Repeat sharing > 30%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-showing-the-way.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "ic-tp-05",
+        "num": 5,
+        "dayNum": 30,
+        "dayLabel": "Day 30",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "The First Hundred",
+        "phase": "Generous",
+        "phaseColor": "#E0B036",
+        "personas": [
+          "owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Name the early-advocate circle: early pattern access and a direct founder line.",
+        "contentBrief": "Named, small, and real: The First Hundred. Two privileges only \u2014 early pulse patterns, a direct line to Elias. Accepting is one reply.",
+        "successCriteria": "Acceptance > 80%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-first-hundred.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "ic-tp-06",
+        "num": 6,
+        "dayNum": 60,
+        "dayLabel": "Day 60",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Help shape what's next",
+        "phase": "Generous",
+        "phaseColor": "#E0B036",
+        "personas": [
+          "owner"
+        ],
+        "ownerRole": "founder",
+        "strategicIntent": "Co-creation: beta pulse patterns, app input, named in release notes.",
+        "contentBrief": "Specific asks with real influence \u2014 a pattern to test, one question to answer. Credit by name in release notes, always with permission.",
+        "successCriteria": "Participation > 50%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-shape-whats-next.html"
+          }
+        ],
+        "assetType": "email"
+      }
+    ]
+  },
+  {
+    "id": "spaces",
+    "name": "Spaces Flow",
+    "description": "Studios, spas, and corporate wellness \u2014 from inquiry to launch to an aggregate team presence report built only on self-reported quiz deltas.",
+    "color": "#7FA0B4",
+    "status": "draft",
+    "dayOrigin": "inquiry-day",
+    "cadenceType": "linear",
+    "cadenceAnchor": null,
+    "audiences": [
+      "partner"
+    ],
+    "phases": [
+      "seen",
+      "hopeful",
+      "convinced",
+      "relieved",
+      "grateful"
+    ],
+    "createdAt": "2026-07-09",
+    "touchpoints": [
+      {
+        "id": "spc-tp-01",
+        "num": 1,
+        "dayNum": 0,
+        "dayLabel": "Day 0",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "We received your inquiry",
+        "phase": "Seen",
+        "phaseColor": "#A3A493",
+        "personas": [
+          "partner"
+        ],
+        "ownerRole": "partnerships-lead",
+        "strategicIntent": "Warm acknowledgment that routes studio/spa vs corporate from the first touch.",
+        "contentBrief": "Reply within the business day, signed by a person. One routing question, plainly asked. Calm B2B register \u2014 still no urgency, still no exclamation points.",
+        "successCriteria": "Response rate > 60%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-spaces-inquiry.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "spc-tp-02",
+        "num": 2,
+        "dayNum": 1,
+        "dayLabel": "Day 1",
+        "sequence": 1,
+        "channel": "Email + Phone",
+        "title": "Your space assessment",
+        "phase": "Seen",
+        "phaseColor": "#A3A493",
+        "personas": [
+          "partner"
+        ],
+        "ownerRole": "partnerships-lead",
+        "strategicIntent": "An 8-minute assessment that routes the proposal; offers an optional team presence-quiz baseline.",
+        "contentBrief": "Position the team quiz as optional and self-reported \u2014 aggregate only, never individual reporting. The attached call script carries the assessment.",
+        "successCriteria": "Assessment completion > 50%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-space-assessment.html"
+          },
+          {
+            "role": "secondary",
+            "url": "emails/call-script-spaces.html",
+            "label": "Assessment Call Script"
+          },
+          {
+            "role": "secondary",
+            "url": "presence-quiz.html",
+            "label": "Presence Quiz"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "spc-tp-03",
+        "num": 3,
+        "dayNum": 3,
+        "dayLabel": "Day 3",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Your proposal",
+        "phase": "Hopeful",
+        "phaseColor": "#B3A379",
+        "personas": [
+          "partner"
+        ],
+        "ownerRole": "partnerships-lead",
+        "strategicIntent": "Studio bundle or team program proposal with sizing-day logistics.",
+        "contentBrief": "Price once, plainly, anchored to what a team reclaims. Sizing day is the logistics spine. One CTA to review the proposal; no expiry pressure.",
+        "successCriteria": "Proposal open > 80%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-spaces-proposal.html"
+          },
+          {
+            "role": "secondary",
+            "url": "presence-experience.html",
+            "label": "The Presence Experience"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "spc-tp-04",
+        "num": 4,
+        "dayNum": 7,
+        "dayLabel": "Day 7",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Questions answered",
+        "phase": "Hopeful",
+        "phaseColor": "#B3A379",
+        "personas": [
+          "partner"
+        ],
+        "ownerRole": "partnerships-lead",
+        "strategicIntent": "Handle the B2B objections: pricing, hygiene, sizing at scale, ROI.",
+        "contentBrief": "One answer per breath. ROI framing uses self-reported presence deltas \u2014 never wear data, never surveillance of staff.",
+        "successCriteria": "Re-engagement > 25%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-spaces-questions.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "spc-tp-05",
+        "num": 5,
+        "dayNum": 14,
+        "dayLabel": "Day 14",
+        "sequence": 1,
+        "channel": "Phone / Zoom",
+        "title": "Decision call",
+        "phase": "Convinced",
+        "phaseColor": "#C0A45D",
+        "personas": [
+          "partner"
+        ],
+        "ownerRole": "partnerships-lead",
+        "strategicIntent": "The human decision call.",
+        "contentBrief": "Script: confirm fit, name the price once, offer a start date. No closing tricks; the 10-second pause belongs in the call too.",
+        "successCriteria": "Close rate > 30%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/call-script-spaces.html"
+          },
+          {
+            "role": "secondary",
+            "url": "index.html",
+            "label": "Pulse Home"
+          }
+        ],
+        "assetType": "call"
+      },
+      {
+        "id": "spc-tp-06",
+        "num": 6,
+        "dayNum": 21,
+        "dayLabel": "Day 21",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Your launch kit",
+        "phase": "Relieved",
+        "phaseColor": "#CCA94C",
+        "personas": [
+          "partner"
+        ],
+        "ownerRole": "partnerships-lead",
+        "strategicIntent": "Sizing-day plan, team pairing guide, and an intro session script for launch.",
+        "contentBrief": "Checklist tone, one step per line. The intro script includes the 10-second pause \u2014 the team's first shared practice.",
+        "successCriteria": "Launch within 30 days > 90%",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-launch-kit.html"
+          }
+        ],
+        "assetType": "email"
+      },
+      {
+        "id": "spc-tp-07",
+        "num": 7,
+        "dayNum": 30,
+        "dayLabel": "Day 30",
+        "sequence": 1,
+        "channel": "Email",
+        "title": "Month one: your team's presence report",
+        "phase": "Grateful",
+        "phaseColor": "#D6AC3E",
+        "personas": [
+          "partner"
+        ],
+        "ownerRole": "partnerships-lead",
+        "strategicIntent": "Aggregate, anonymized, self-reported quiz deltas plus a founder check-in.",
+        "contentBrief": "Aggregate self-reported quiz deltas only \u2014 anonymized, opt-in, never individual, never telemetry. Book the month-two review in one tap.",
+        "successCriteria": "Review booked > 70%",
+        "knownRisks": "Any individually identifiable data would turn a mindfulness benefit into workplace surveillance.",
+        "status": "draft",
+        "assetRefs": [
+          {
+            "role": "primary",
+            "url": "emails/email-team-report.html"
+          }
+        ],
+        "assetType": "email"
+      }
+    ]
+  }
+]

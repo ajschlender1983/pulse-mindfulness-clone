@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse — Call Script — Can We Tell Your Story?</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap');
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-family: 'DM Sans', -apple-system, sans-serif; font-size: 15px; -webkit-font-smoothing: antialiased; color: #423D32; }
+  body { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #EBE7D4; padding: 40px 20px; }
+  .preview-banner { position: fixed; top: 0; left: 0; right: 0; background: rgba(249,246,229,0.94); backdrop-filter: blur(24px); border-bottom: 1px solid rgba(66,61,50,0.14); padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; z-index: 10; }
+  .preview-banner .label { font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8a8578; }
+  .preview-banner .meta { font-family: 'DM Mono', ui-monospace, monospace; font-size: 12px; color: rgba(66,61,50,0.45); }
+  .script-frame { max-width: 600px; margin: 80px auto 60px; padding: 0 24px; }
+  .script-header { text-align: center; margin-bottom: 40px; }
+  .script-eyebrow { font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8578; margin-bottom: 16px; }
+  .script-title { font-size: 28px; font-weight: 400; letter-spacing: -0.04em; color: #423D32; margin-bottom: 8px; }
+  .script-duration { font-family: 'DM Mono', ui-monospace, monospace; font-size: 13px; color: rgba(66,61,50,0.45); }
+  .cream-card { background: #F9F6E5; border: 1px solid rgba(66,61,50,0.10); border-radius: 16px; padding: 24px 28px; margin-bottom: 20px; box-shadow: 0 12px 30px rgba(66,61,50,0.08); }
+  .section-label { font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8578; margin-bottom: 12px; }
+  .section-body { font-size: 15px; color: #575344; line-height: 1.7; }
+  .section-body strong { color: #1A1C22; font-weight: 500; }
+  .beat-list, .avoid-list { padding-left: 20px; }
+  .beat-list li, .avoid-list li { font-size: 15px; color: #575344; line-height: 1.8; margin-bottom: 10px; }
+  .beat-list li::marker { color: #C9A227; font-family: 'DM Mono', ui-monospace, monospace; }
+  .avoid-list { list-style: none; padding-left: 0; }
+  .avoid-list li { padding-left: 16px; border-left: 2px solid #B0764F; }
+  .quote-line { border-left: 2px solid #C9A227; padding: 8px 0 8px 16px; margin: 12px 0; color: #423D32; font-size: 15px; line-height: 1.7; }
+  /* Placeholder system (merge tags) */
+  .cm-placeholder { display: inline-block; background: rgba(201,162,39,0.08); border: 1.5px dashed rgba(201,162,39,0.55); border-radius: 4px; padding: 1px 7px; color: #8A6D14; font-weight: 500; font-size: 13px; font-style: normal; letter-spacing: 0.02em; }
+  .cm-placeholder-banner { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 9998; background: rgba(249,246,229,0.95); border-top: 2px solid rgba(201,162,39,0.55); color: #8A6D14; text-align: center; padding: 11px 16px; font-family: 'DM Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; backdrop-filter: blur(12px); }
+  .cm-placeholder-banner .ph-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #C9A227; margin-right: 8px; vertical-align: middle; }
+</style>
+</head>
+<body>
+<div class="preview-banner">
+  <span class="label">Preview Mode — Call Script</span>
+  <span class="meta">adv-tp-03 · Phone · Day 7 · Internal</span>
+</div>
+<div class="script-frame">
+  <div class="script-header">
+    <div class="script-eyebrow">Inner Circle · Story Call</div>
+    <h1 class="script-title">Can we tell your story?</h1>
+    <p class="script-duration">10&ndash;15 minutes · Phone · Follows the story email by 1&ndash;2 days</p>
+  </div>
+
+  <div class="cream-card">
+    <div class="section-label">Goal</div>
+    <p class="section-body">One clear answer — yes, no, or maybe — <strong>freely given</strong>. A comfortable no is a success. The relationship is worth more than the footage. Never persuade past the first hesitation.</p>
+  </div>
+
+  <div class="cream-card">
+    <div class="section-label">Opening line</div>
+    <div class="quote-line">"Hi <span class="cm-placeholder">{{first_name}}</span>, it's Elias from Pulse. Is now still an okay time? I have one question, and it comes with a built-in no."</div>
+    <p class="section-body">Then stop talking. Let them settle. If the timing is bad, offer to call back and actually call back.</p>
+  </div>
+
+  <div class="cream-card">
+    <div class="section-label">Three beats</div>
+    <ol class="beat-list">
+      <li><strong>Their moment.</strong> Start with what they already told us: <span class="cm-placeholder">{{their_moment}}</span>. Ask them to tell it again in their own voice. Listen. Don't paraphrase it back at them.</li>
+      <li><strong>What changed for others when they shared.</strong> One concrete example: a stranger read a story like theirs and wrote back saying it was the first time they'd felt understood. Their words reach people ours can't.</li>
+      <li><strong>Logistics.</strong> Forty-five minutes. Their kitchen, or wherever the practice lives. One person with a camera — no makeup crew, no script. They see and approve everything before it goes anywhere.</li>
+    </ol>
+  </div>
+
+  <div class="cream-card">
+    <div class="section-label">What NOT to say</div>
+    <ul class="avoid-list">
+      <li>Never say <strong>"content."</strong> It's their story, not our material.</li>
+      <li>Never say <strong>"leverage."</strong> Or "asset," "exposure," or "opportunity."</li>
+      <li>Never promise how it will feel. "You may find it enjoyable," not "you'll love it."</li>
+      <li>Never fill their silence. The pause is where the real answer lives.</li>
+    </ul>
+  </div>
+
+  <div class="cream-card">
+    <div class="section-label">Close</div>
+    <p class="section-body">Thank them the same way for any answer. Confirm the next step out loud: a filming date, a think-it-over window, or a clean no. <strong>"Either way, you'll get a short email from me by <span class="cm-placeholder">{{follow_up_day}}</span>. Nothing changes between us."</strong></p>
+  </div>
+</div>
+<div class="cm-placeholder-banner" id="placeholderBanner"><span class="ph-dot"></span><span>This asset has <strong id="phCount">0</strong> unresolved placeholder(s)</span></div>
+<script>
+(function(){var c=0;document.querySelectorAll('a[href]').forEach(function(a){if(/\[.+\]/.test(a.getAttribute('href')))c++});document.querySelectorAll('.cm-placeholder').forEach(function(){c++});if(c>0){var b=document.getElementById('placeholderBanner');document.getElementById('phCount').textContent=c;if(b)b.style.display='block'}})();
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse — SMS Preview — Midweek Return</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap');
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-family: 'DM Sans', -apple-system, sans-serif; font-size: 15px; -webkit-font-smoothing: antialiased; color: #1A1C22; }
+  body { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #EBE7D4; padding: 40px 20px; }
+  .preview-banner { position: fixed; top: 0; left: 0; right: 0; background: #1A1C22; border-bottom: 1px solid rgba(249,246,229,0.08); padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; z-index: 10; }
+  .preview-banner .label { font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #E3F47D; }
+  .preview-banner .meta { font-family: 'DM Mono', ui-monospace, monospace; font-size: 12px; color: rgba(249,246,229,0.45); }
+  .phone-frame { width: 320px; background: #F9F6E5; border: 1px solid rgba(66,61,50,0.14); border-radius: 32px; padding: 48px 16px 32px; position: relative; box-shadow: 0 30px 80px rgba(66,61,50,0.10); }
+  .phone-notch { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 80px; height: 6px; border-radius: 3px; background: #ddd7c3; }
+  .phone-header { text-align: center; margin-bottom: 24px; }
+  .phone-header .sender { font-size: 14px; font-weight: 500; color: #1A1C22; }
+  .phone-header .channel { font-family: 'DM Mono', ui-monospace, monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #C9A227; margin-top: 4px; }
+  .bubble { background: #EBE7D4; border: 1px solid rgba(66,61,50,0.10); border-radius: 18px 18px 4px 18px; padding: 14px 18px; margin-bottom: 8px; max-width: 85%; margin-left: auto; }
+  .bubble p { font-size: 15px; line-height: 1.6; color: #423D32; }
+  .bubble-time { text-align: right; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; color: #8a8578; margin-top: 6px; margin-right: 8px; }
+  .sms-compliance { text-align: center; font-family: 'DM Mono', ui-monospace, monospace; font-size: 10px; color: rgba(66,61,50,0.30); margin-top: 20px; }
+  /* Placeholder system */
+  .cm-placeholder { display: inline-block; background: rgba(201,162,39,0.08); border: 1.5px dashed rgba(201,162,39,0.55); border-radius: 4px; padding: 1px 7px; color: #8A6D14; font-weight: 500; font-size: 13px; font-style: normal; letter-spacing: 0.02em; }
+  .cm-placeholder-banner { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 9998; background: #F9F6E5; border-top: 2px solid rgba(201,162,39,0.55); color: #8A6D14; text-align: center; padding: 11px 16px; font-family: 'DM Mono', ui-monospace, monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; }
+  .cm-placeholder-banner .ph-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #C9A227; margin-right: 8px; vertical-align: middle; }
+</style>
+</head>
+<body>
+<div class="preview-banner">
+  <span class="label">Preview Mode &mdash; SMS</span>
+  <span class="meta">wp-02 &middot; SMS &middot; Wednesday</span>
+</div>
+<div class="phone-frame">
+  <div class="phone-notch"></div>
+  <div class="phone-header">
+    <div class="sender">Pulse</div>
+    <div class="channel">SMS</div>
+  </div>
+  <div class="bubble">
+    <p>Wednesday. The theme was Arrive. Wherever you're reading this &mdash; that's the room.</p>
+  </div>
+  <div class="bubble-time">Delivered &middot; 12:07 PM</div>
+  <div class="sms-compliance">Reply STOP to opt out &middot; HELP for help</div>
+</div>
+<div class="cm-placeholder-banner" id="placeholderBanner"><span class="ph-dot"></span><span>This asset has <strong id="phCount">0</strong> unresolved placeholder(s)</span></div>
+<script>
+(function(){var c=0;document.querySelectorAll('a[href]').forEach(function(a){if(/\[.+\]/.test(a.getAttribute('href')))c++});document.querySelectorAll('.cm-placeholder').forEach(function(){c++});if(c>0){var b=document.getElementById('placeholderBanner');document.getElementById('phCount').textContent=c;if(b)b.style.display='block'}})();
+</script>
+</body>
+</html>

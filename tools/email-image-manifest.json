@@ -1,0 +1,524 @@
+[
+  {
+    "slug": "email-quiz-results",
+    "file": "hero-quiz-results.png",
+    "world": "cream",
+    "stage": 2,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya in her parked car, engine off, for once not reaching for her phone, first honey light through the windshield finding one cheek."
+  },
+  {
+    "slug": "email-the-moment",
+    "file": "hero-the-moment.png",
+    "world": "cream",
+    "stage": 2,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya at the kitchen counter at 6:50am, toast going cold beside her, eyes fixed on the middle distance while the morning happens around her \u2014 the autopilot Tuesday, seen."
+  },
+  {
+    "slug": "email-autopilot-cost",
+    "file": "hero-autopilot-cost.png",
+    "world": "cream",
+    "stage": 2,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya's blurred evening scroll \u2014 her face lit only by phone glow on a dark sofa, the room and its one warm lamp soft and unnoticed behind her, the evening passing without her."
+  },
+  {
+    "slug": "email-pulse-not-ping",
+    "file": "hero-pulse-not-ping.png",
+    "world": "dark",
+    "stage": null,
+    "aspect": "16:9",
+    "use_ref": false,
+    "prompt": "The wide polished gold Pulse band resting on near-black honed stone, a single warm rim light tracing its edge out of deep shadow, macro jewelry photography, medium-format, faint gold reflection pooling beneath, everything else void. One soft concentric ripple of light suggested in the reflection beneath the band \u2014 a pulse, not a ping; nothing on it to read, nothing on it to check."
+  },
+  {
+    "slug": "email-readers-tuesday",
+    "file": "hero-readers-tuesday.png",
+    "world": "cream",
+    "stage": 3,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "A cooling cup of coffee by a sunlit kitchen window, steam still rising, a resting hand beside it wearing the wide gold band \u2014 someone's ordinary Tuesday, quietly changed."
+  },
+  {
+    "slug": "email-try-this-first",
+    "file": "hero-noticing-breath.png",
+    "world": "cream",
+    "stage": 3,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "Breath fogging a cold windowpane at dawn, a fingertip drawing one short upward line through the bloom."
+  },
+  {
+    "slug": "email-questions-answered",
+    "file": "hero-questions-answered.png",
+    "world": "cream",
+    "stage": 4,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "The gold ring beside a folded tape measure and a glass of water on cream linen, clear even daylight \u2014 every practical question laid out calmly on the table."
+  },
+  {
+    "slug": "email-presence-experience",
+    "file": "hero-presence-experience.png",
+    "world": "cream",
+    "stage": 4,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya paused in a doorway in late-afternoon light, hand resting on the frame, actually looking at her own living room as if seeing it for the first time."
+  },
+  {
+    "slug": "email-when-youre-ready",
+    "file": "hero-when-ready.png",
+    "world": "cream",
+    "stage": 4,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "An empty chair by a bright window, a folded blanket over its arm, late-afternoon light moving slowly across the floor \u2014 nothing here is in a hurry."
+  },
+  {
+    "slug": "email-well-be-here",
+    "file": "hero-when-ready.png",
+    "world": "cream",
+    "stage": 4,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "An empty chair by a bright window, a folded blanket over its arm, late-afternoon light moving slowly across the floor \u2014 nothing here is in a hurry."
+  },
+  {
+    "slug": "email-still-thinking",
+    "file": "hero-when-ready.png",
+    "world": "cream",
+    "stage": 4,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "An empty chair by a bright window, a folded blanket over its arm, late-afternoon light moving slowly across the floor \u2014 nothing here is in a hurry."
+  },
+  {
+    "slug": "email-order-confirmed",
+    "file": "hero-order-confirmed.png",
+    "world": "dark",
+    "stage": null,
+    "aspect": "16:9",
+    "use_ref": false,
+    "prompt": "The wide polished gold Pulse band resting on near-black honed stone, a single warm rim light tracing its edge out of deep shadow, macro jewelry photography, medium-format, faint gold reflection pooling beneath, everything else void. The ring casting one long warm reflection across the stone, a held promise in the dark."
+  },
+  {
+    "slug": "email-right-fit",
+    "file": "hero-sizing-set.png",
+    "world": "dark",
+    "stage": null,
+    "aspect": "16:9",
+    "use_ref": false,
+    "prompt": "The wide polished gold Pulse band resting on near-black honed stone, a single warm rim light tracing its edge out of deep shadow, macro jewelry photography, medium-format, faint gold reflection pooling beneath, everything else void. Beside the band, a plastic sizer set fanned open like a key ring, matte and quiet against the polish, the rim light finding only the true ring."
+  },
+  {
+    "slug": "email-sizing-kit",
+    "file": "hero-sizing-set.png",
+    "world": "dark",
+    "stage": null,
+    "aspect": "16:9",
+    "use_ref": false,
+    "prompt": "The wide polished gold Pulse band resting on near-black honed stone, a single warm rim light tracing its edge out of deep shadow, macro jewelry photography, medium-format, faint gold reflection pooling beneath, everything else void. Beside the band, a plastic sizer set fanned open like a key ring, matte and quiet against the polish, the rim light finding only the true ring."
+  },
+  {
+    "slug": "email-confirm-size",
+    "file": "hero-sizing-set.png",
+    "world": "dark",
+    "stage": null,
+    "aspect": "16:9",
+    "use_ref": false,
+    "prompt": "The wide polished gold Pulse band resting on near-black honed stone, a single warm rim light tracing its edge out of deep shadow, macro jewelry photography, medium-format, faint gold reflection pooling beneath, everything else void. Beside the band, a plastic sizer set fanned open like a key ring, matte and quiet against the polish, the rim light finding only the true ring."
+  },
+  {
+    "slug": "email-gift-of-presence",
+    "file": "hero-gift-of-presence.png",
+    "world": "dark",
+    "stage": null,
+    "aspect": "16:9",
+    "use_ref": false,
+    "prompt": "The wide polished gold Pulse band resting on near-black honed stone, a single warm rim light tracing its edge out of deep shadow, macro jewelry photography, medium-format, faint gold reflection pooling beneath, everything else void. The ring sitting in an open gift box, ribbon undone, one gold rim light \u2014 an intention about to leave your hands."
+  },
+  {
+    "slug": "email-exchange-simple",
+    "file": "hero-exchange-simple.png",
+    "world": "dark",
+    "stage": null,
+    "aspect": "16:9",
+    "use_ref": false,
+    "prompt": "The wide polished gold Pulse band resting on near-black honed stone, a single warm rim light tracing its edge out of deep shadow, macro jewelry photography, medium-format, faint gold reflection pooling beneath, everything else void. Two bands side by side, one a size wider, both traced by the same rim light \u2014 an easy swap, no drama."
+  },
+  {
+    "slug": "email-on-its-way",
+    "file": "hero-on-its-way.png",
+    "world": "dark",
+    "stage": null,
+    "aspect": "16:9",
+    "use_ref": false,
+    "prompt": "The wide polished gold Pulse band resting on near-black honed stone, a single warm rim light tracing its edge out of deep shadow, macro jewelry photography, medium-format, faint gold reflection pooling beneath, everything else void. The band lifted into a kraft shipping box lined with undyed linen, lid half-shadowing, that same single blade of gold light following it in."
+  },
+  {
+    "slug": "email-before-it-arrives",
+    "file": "hero-before-arrival.png",
+    "world": "cream",
+    "stage": 3,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "A cleared bedside table in soft morning light: a small empty ceramic dish waiting beside the lamp, a place made ready before the thing itself arrives."
+  },
+  {
+    "slug": "email-its-here",
+    "file": "hero-arrival-day.png",
+    "world": "cream",
+    "stage": 3,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "Opened box on a windowsill in early-morning light, tissue folded back, ring catching its first real sun, lime-lit leaf edge on the sill plant. No hands \u2014 the moment before."
+  },
+  {
+    "slug": "email-charge-pair-breathe",
+    "file": "hero-arrival-day.png",
+    "world": "cream",
+    "stage": 3,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "Opened box on a windowsill in early-morning light, tissue folded back, ring catching its first real sun, lime-lit leaf edge on the sill plant. No hands \u2014 the moment before."
+  },
+  {
+    "slug": "email-someone-thought-of-you",
+    "file": "hero-someone-thought-of-you.png",
+    "world": "cream",
+    "stage": 2,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "An unopened box on a hallway table in cool morning light, one warm sidelight just arriving across it from a doorway. Someone thought of you."
+  },
+  {
+    "slug": "email-day-one",
+    "file": "hero-day-one.png",
+    "world": "cream",
+    "stage": 4,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya by the bathroom window in first light, sliding the gold band onto her finger \u2014 no ceremony, just the ring going on with the rest of the day."
+  },
+  {
+    "slug": "email-what-did-you-notice",
+    "file": "hero-first-noticing.png",
+    "world": "cream",
+    "stage": 4,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya stopped mid-task at the lamp-lit sink, one wet hand still on a bowl, small surprised stillness, thumb finding the ring without looking. Clearest, sharpest light of the set."
+  },
+  {
+    "slug": "email-no-rush",
+    "file": "hero-no-rush.png",
+    "world": "cream",
+    "stage": 3,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "The gold ring resting on its small ceramic dish beside a neatly made bed, soft mid-morning light, everything unhurried \u2014 it will keep."
+  },
+  {
+    "slug": "email-how-is-it-going",
+    "file": "hero-first-noticing.png",
+    "world": "cream",
+    "stage": 4,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya stopped mid-task at the lamp-lit sink, one wet hand still on a bowl, small surprised stillness, thumb finding the ring without looking. Clearest, sharpest light of the set."
+  },
+  {
+    "slug": "email-week-one-noticing",
+    "file": "hero-noticing-breath.png",
+    "world": "cream",
+    "stage": 3,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "Breath fogging a cold windowpane at dawn, a fingertip drawing one short upward line through the bloom."
+  },
+  {
+    "slug": "email-pause-is-working",
+    "file": "hero-pause-working.png",
+    "world": "cream",
+    "stage": 5,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya slumped in a sunlit corner chair, eyes closed, jaw unclenched, one open hand on her chest. The exhale she didn't know she was holding."
+  },
+  {
+    "slug": "email-two-weeks-returning",
+    "file": "hero-two-weeks.png",
+    "world": "cream",
+    "stage": 4,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya kneeling at a child's eye level at the front door, backpack still on her shoulder, actually listening. Clean confident daylight."
+  },
+  {
+    "slug": "email-21-day-threshold",
+    "file": "hero-21-days.png",
+    "world": "cream",
+    "stage": 6,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Warm practical-lit dinner, Maya and her daughter close in a two-shot, real food and a little mess, Maya leaning in and present."
+  },
+  {
+    "slug": "email-25-days-present",
+    "file": "hero-milestone-heart.png",
+    "world": "cream",
+    "stage": 6,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "Macro: hand flat over the heart on bare skin, low sun raking, the pulse at the wrist catching light, the warm gold ring on the same hand."
+  },
+  {
+    "slug": "email-sunday-pause",
+    "file": "hero-sunday-pause.png",
+    "world": "cream",
+    "stage": 6,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya settled into the sofa on a Sunday evening, lamp just switched on, tea steaming on the side table, the week set down \u2014 dusk blue in the window, gold in the room."
+  },
+  {
+    "slug": "email-what-others-noticed",
+    "file": "hero-others-noticed.png",
+    "world": "cream",
+    "stage": 6,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "Three handwritten notes fanned on cream linen in window light, different inks and different hands, a pen resting nearby \u2014 small true things people noticed this week."
+  },
+  {
+    "slug": "email-come-back-to-now",
+    "file": "hero-come-back.png",
+    "world": "cream",
+    "stage": 1,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "The ring unworn on a bedside dish in cool grey-blue morning light, near-monochrome \u2014 one thin blade of warm amber entering from the frame edge, just reaching the band."
+  },
+  {
+    "slug": "email-one-minute-no-ring",
+    "file": "hero-one-minute.png",
+    "world": "cream",
+    "stage": 2,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "Bare hands cupped around a warm mug in cool early light, no ring anywhere, one modest band of gold sun crossing the table toward them \u2014 practice first, product later."
+  },
+  {
+    "slug": "email-first-impression",
+    "file": "hero-story-ask.png",
+    "world": "cream",
+    "stage": 6,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya at the table watching her daughter laugh, her own eyes wet, hand pressed to her mouth \u2014 caught by how much she almost missed."
+  },
+  {
+    "slug": "email-your-story",
+    "file": "hero-story-ask.png",
+    "world": "cream",
+    "stage": 6,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya at the table watching her daughter laugh, her own eyes wet, hand pressed to her mouth \u2014 caught by how much she almost missed."
+  },
+  {
+    "slug": "email-give-a-month",
+    "file": "hero-give-a-month.png",
+    "world": "cream",
+    "stage": 7,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "Macro: warm water poured from one cupped palm into another, the ring on the giving hand catching full golden sun mid-pour. Presence given away."
+  },
+  {
+    "slug": "email-someone-you-love",
+    "file": "hero-someone-you-love.png",
+    "world": "cream",
+    "stage": 7,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya at the kitchen table at night wrapping a small box, ribbon between her fingers, warm lamplight, the gold band catching it \u2014 a gift chosen for one exact person."
+  },
+  {
+    "slug": "email-what-youve-given",
+    "file": "hero-milestone-heart.png",
+    "world": "cream",
+    "stage": 6,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "Macro: hand flat over the heart on bare skin, low sun raking, the pulse at the wrist catching light, the warm gold ring on the same hand."
+  },
+  {
+    "slug": "email-presence-circle",
+    "file": "hero-presence-circle.png",
+    "world": "cream",
+    "stage": 7,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "A loose circle of mismatched chairs in a sunlit front room, morning light across wooden floorboards, one cushion still holding the shape of someone \u2014 a circle that actually meets."
+  },
+  {
+    "slug": "email-story-kit",
+    "file": "hero-share-kit.png",
+    "world": "cream",
+    "stage": 7,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "Flat-lay on cream linen: a few printed story cards, a fountain pen, a small stack of envelopes, the gold ring resting at the edge of the frame in warm side light."
+  },
+  {
+    "slug": "email-we-noticed",
+    "file": "hero-we-noticed.png",
+    "world": "cream",
+    "stage": 7,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "A fountain pen mid-word on thick cream paper in warm lamplight, real ink, the wide gold band on the writing hand \u2014 a letter, not a campaign."
+  },
+  {
+    "slug": "email-share-kit",
+    "file": "hero-share-kit.png",
+    "world": "cream",
+    "stage": 7,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "Flat-lay on cream linen: a few printed story cards, a fountain pen, a small stack of envelopes, the gold ring resting at the edge of the frame in warm side light."
+  },
+  {
+    "slug": "email-tell-your-story",
+    "file": "hero-story-ask.png",
+    "world": "cream",
+    "stage": 6,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya at the table watching her daughter laugh, her own eyes wet, hand pressed to her mouth \u2014 caught by how much she almost missed."
+  },
+  {
+    "slug": "email-showing-the-way",
+    "file": "hero-showing-the-way.png",
+    "world": "cream",
+    "stage": 7,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "Two coffee cups on a small caf\u00e9 table in morning light, one hand wearing the gold band open mid-story, the listener's side of the table leaning in, faces out of frame."
+  },
+  {
+    "slug": "email-first-hundred",
+    "file": "hero-first-hundred.png",
+    "world": "cream",
+    "stage": 7,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "A single letterpress card, gold-edged, resting on cream linen in low warm side light, the number one hundred debossed into the paper and catching the light."
+  },
+  {
+    "slug": "email-shape-whats-next",
+    "file": "hero-shape-whats-next.png",
+    "world": "cream",
+    "stage": 7,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "Pencil sketches of small wave patterns spread across a morning desk, a pencil mid-line in a hand wearing the gold band \u2014 the next patterns being drawn together."
+  },
+  {
+    "slug": "email-spaces-inquiry",
+    "file": "hero-spaces-rings.png",
+    "world": "dark",
+    "stage": null,
+    "aspect": "16:9",
+    "use_ref": false,
+    "prompt": "The wide polished gold Pulse band resting on near-black honed stone, a single warm rim light tracing its edge out of deep shadow, macro jewelry photography, medium-format, faint gold reflection pooling beneath, everything else void. Widened to five identical bands in a precise row across the stone, one shared raking gold light, architectural shadow \u2014 practice, at scale."
+  },
+  {
+    "slug": "email-space-assessment",
+    "file": "hero-spaces-rings.png",
+    "world": "dark",
+    "stage": null,
+    "aspect": "16:9",
+    "use_ref": false,
+    "prompt": "The wide polished gold Pulse band resting on near-black honed stone, a single warm rim light tracing its edge out of deep shadow, macro jewelry photography, medium-format, faint gold reflection pooling beneath, everything else void. Widened to five identical bands in a precise row across the stone, one shared raking gold light, architectural shadow \u2014 practice, at scale."
+  },
+  {
+    "slug": "email-spaces-proposal",
+    "file": "hero-spaces-proposal.png",
+    "world": "dark",
+    "stage": null,
+    "aspect": "16:9",
+    "use_ref": false,
+    "prompt": "The wide polished gold Pulse band resting on near-black honed stone, a single warm rim light tracing its edge out of deep shadow, macro jewelry photography, medium-format, faint gold reflection pooling beneath, everything else void. One band sharp in the foreground, a soft out-of-focus row of others receding behind it on the same stone \u2014 a proposal taking shape."
+  },
+  {
+    "slug": "email-spaces-questions",
+    "file": "hero-spaces-proposal.png",
+    "world": "dark",
+    "stage": null,
+    "aspect": "16:9",
+    "use_ref": false,
+    "prompt": "The wide polished gold Pulse band resting on near-black honed stone, a single warm rim light tracing its edge out of deep shadow, macro jewelry photography, medium-format, faint gold reflection pooling beneath, everything else void. One band sharp in the foreground, a soft out-of-focus row of others receding behind it on the same stone \u2014 a proposal taking shape."
+  },
+  {
+    "slug": "email-launch-kit",
+    "file": "hero-launch-kit.png",
+    "world": "dark",
+    "stage": null,
+    "aspect": "16:9",
+    "use_ref": false,
+    "prompt": "The wide polished gold Pulse band resting on near-black honed stone, a single warm rim light tracing its edge out of deep shadow, macro jewelry photography, medium-format, faint gold reflection pooling beneath, everything else void. Five bands arranged in a loose circle on the stone, the rim light shared evenly around the ring of rings \u2014 a team about to begin."
+  },
+  {
+    "slug": "email-team-report",
+    "file": "hero-team-report.png",
+    "world": "dark",
+    "stage": null,
+    "aspect": "16:9",
+    "use_ref": false,
+    "prompt": "The wide polished gold Pulse band resting on near-black honed stone, a single warm rim light tracing its edge out of deep shadow, macro jewelry photography, medium-format, faint gold reflection pooling beneath, everything else void. Five bands in a row, the warm light now grown fuller and pooling beneath all five instead of one \u2014 a month of practice, visible."
+  },
+  {
+    "slug": "landing-first-pulse",
+    "file": "hero-landing-first-pulse.png",
+    "world": "cream",
+    "stage": 4,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "An open hand resting palm-up on a knee in clear morning window light, completely still, the wide polished gold band on the ring finger catching one clean glint, the quiet second before a gentle tap arrives."
+  },
+  {
+    "slug": "landing-pulse-windows",
+    "file": "hero-landing-pulse-windows.png",
+    "world": "cream",
+    "stage": 5,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "A bedside table at dusk: a small ceramic dish holding the wide polished gold band, warm lamp light pooling around it, a phone lying face-down and dark at the soft edge of frame. The evening window, kept."
+  },
+  {
+    "slug": "landing-presence-report",
+    "file": "hero-landing-presence-report.png",
+    "world": "cream",
+    "stage": 6,
+    "aspect": "3:2",
+    "use_ref": true,
+    "prompt": "Maya standing at a bright window in full golden-hour light, shoulders down, a small settled smile, looking out at the street like someone with nowhere else she needs to be. Changed and at home in it."
+  },
+  {
+    "slug": "email-pause-by-text",
+    "file": "hero-email-pause-by-text.png",
+    "world": "cream",
+    "stage": 5,
+    "aspect": "3:2",
+    "use_ref": false,
+    "prompt": "A phone resting face-up on a warm wooden kitchen table in soft golden afternoon light, showing one short quiet message on an otherwise empty screen, a mug beside it, the wide polished gold band on a hand at rest at the frame edge."
+  }
+]

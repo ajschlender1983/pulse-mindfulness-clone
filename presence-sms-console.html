@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse — Messages</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  --cream:        #EBE7D4;
+  --cream-warm:   #F9F6E5;
+  --ink:          #1A1C22;
+  --brown:        #423D32;
+  --accent:       #E3F47D;
+  --accent-text:  #101828;
+  --honey:        #C9A227;
+  --muted:        #8a8578;
+  --body-text:    #575344;
+  --line:         rgba(66,61,50,0.14);
+  --stop:         #96442A;
+  --shadow: 0 12px 30px rgba(66,61,50,0.08);
+  --font: "DM Sans", sans-serif;
+  --mono: "DM Mono", monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { height: 100%; }
+body {
+  font-family: var(--font);
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+button { font-family: var(--font); }
+a { color: inherit; text-decoration: none; }
+
+/* ============ top bar — the one dark surface ============ */
+.topbar {
+  flex: 0 0 auto;
+  background: var(--ink);
+  color: var(--cream-warm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  height: 56px;
+}
+.topbar__brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.topbar__logo {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+.topbar__logo .dot { color: var(--accent); }
+.topbar__app {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: rgba(249,246,229,0.55);
+}
+.topbar__right { display: flex; align-items: center; gap: 20px; }
+.topbar__link {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: rgba(249,246,229,0.65);
+  transition: color .2s;
+}
+.topbar__link:hover { color: var(--accent); }
+.btn-compose {
+  background: var(--accent);
+  color: var(--accent-text);
+  border: none;
+  border-radius: 100px;
+  padding: 8px 22px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: filter .2s, transform .2s;
+}
+.btn-compose:hover { filter: brightness(1.05); transform: translateY(-1px); }
+
+/* ============ shell ============ */
+.shell {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: 312px 1fr 300px;
+  min-height: 0;
+}
+@media (max-width: 1100px) {
+  .shell { grid-template-columns: 280px 1fr; }
+  .rail-right { display: none; }
+}
+
+/* ============ left rail — conversations ============ */
+.rail-left {
+  border-right: 1px solid var(--line);
+  background: var(--cream);
+  overflow-y: auto;
+  min-height: 0;
+}
+.rail-left__head {
+  padding: 20px 20px 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.convo {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: background .15s;
+}
+.convo:hover { background: rgba(249,246,229,0.7); }
+.convo.is-active { background: var(--cream-warm); box-shadow: inset 3px 0 0 var(--honey); }
+.convo__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+.convo__name { font-size: 15px; font-weight: 500; color: var(--ink); }
+.convo__time { font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap; }
+.convo__phone { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 2px; }
+.convo__pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.pill {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  border-radius: 100px;
+  padding: 3px 9px;
+  white-space: nowrap;
+}
+.pill--new-owner      { color: #7A5B18; background: rgba(201,162,39,0.14); }
+.pill--owner          { color: #55611E; background: rgba(151,169,59,0.16); }
+.pill--gift-recipient { color: #6E8494; background: rgba(127,160,180,0.18); }
+.pill--lapsed         { color: #6E6857; background: rgba(138,133,120,0.16); }
+.pill--optin          { color: #8A6D14; background: rgba(201,162,39,0.10); }
+.pill--stop           { color: var(--stop); background: rgba(150,68,42,0.12); }
+.convo__preview {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--body-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============ main pane — thread ============ */
+.thread {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--cream);
+}
+.thread__head {
+  flex: 0 0 auto;
+  padding: 18px 32px 14px;
+  border-bottom: 1px solid var(--line);
+  background: var(--cream);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.thread__title { font-size: 18px; font-weight: 500; color: var(--brown); letter-spacing: -0.03em; }
+.thread__sub { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.thread__scroll {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 28px 32px 40px;
+  min-height: 0;
+}
+.thread__inner { max-width: 620px; margin: 0 auto; }
+
+.msg { margin-bottom: 18px; display: flex; flex-direction: column; }
+.msg__bubble {
+  max-width: 78%;
+  border-radius: 18px;
+  padding: 13px 17px;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+}
+.msg--out { align-items: flex-end; }
+.msg--out .msg__bubble {
+  background: var(--cream-warm);
+  border: 1px solid rgba(201,162,39,0.28);
+  border-bottom-right-radius: 4px;
+  color: var(--brown);
+  box-shadow: var(--shadow);
+}
+.msg--in { align-items: flex-start; }
+.msg--in .msg__bubble {
+  background: var(--ink);
+  color: var(--cream-warm);
+  border-bottom-left-radius: 4px;
+}
+.msg--sys { align-items: flex-end; }
+.msg--sys .msg__bubble {
+  background: rgba(249,246,229,0.65);
+  border: 1px dashed rgba(66,61,50,0.30);
+  border-bottom-right-radius: 4px;
+  color: var(--body-text);
+  font-size: 14px;
+}
+.msg__meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 5px;
+  padding: 0 6px;
+}
+.msg__who {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--honey);
+  margin-bottom: 4px;
+  padding: 0 6px;
+}
+.msg--sys .msg__who { color: var(--muted); }
+
+.sysnote {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  margin: 22px 0;
+}
+.sysnote::before, .sysnote::after { content: "\00A0\00B7\00A0"; color: #ddd7c3; }
+
+.daymark {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(66,61,50,0.35);
+  margin: 26px 0 18px;
+}
+
+/* ============ right rail — contact card ============ */
+.rail-right {
+  border-left: 1px solid var(--line);
+  background: var(--cream-warm);
+  overflow-y: auto;
+  min-height: 0;
+  padding: 24px 22px 32px;
+}
+.card-name { font-size: 20px; font-weight: 500; color: var(--brown); letter-spacing: -0.03em; }
+.card-phone { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 4px; }
+.card-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+
+.card-section { margin-top: 26px; }
+.card-section__label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.card-kv { display: flex; justify-content: space-between; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--line); }
+.card-kv:last-child { border-bottom: none; }
+.card-kv .k { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.card-kv .v { font-size: 13px; color: var(--brown); text-align: right; }
+
+.consent-entry {
+  border-left: 2px solid var(--honey);
+  padding: 4px 0 4px 12px;
+  margin-bottom: 10px;
+}
+.consent-entry.is-out { border-left-color: var(--stop); }
+.consent-entry .what { font-size: 13px; color: var(--brown); line-height: 1.5; }
+.consent-entry .when { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+.windows-list { list-style: none; }
+.windows-list li {
+  font-size: 13px;
+  color: var(--brown);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line);
+}
+.windows-list li:last-child { border-bottom: none; }
+.windows-list li::before { content: "\00B7\00A0\00A0"; color: var(--honey); }
+
+.card-notes {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--body-text);
+  min-height: 72px;
+}
+
+.rail-principle {
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  line-height: 1.8;
+  color: rgba(66,61,50,0.45);
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__brand">
+    <div class="topbar__logo">pulse<span class="dot">.</span></div>
+    <div class="topbar__app">&middot; Messages</div>
+  </div>
+  <div class="topbar__right">
+    <a class="topbar__link" href="presence-flow-map.html">Cadence &rarr;</a>
+    <button class="btn-compose" type="button">Compose</button>
+  </div>
+</header>
+
+<div class="shell">
+
+  <aside class="rail-left" id="convoList" aria-label="Conversations">
+    <div class="rail-left__head">Conversations</div>
+  </aside>
+
+  <main class="thread">
+    <div class="thread__head">
+      <div class="thread__title" id="threadTitle"></div>
+      <div class="thread__sub" id="threadSub"></div>
+    </div>
+    <div class="thread__scroll">
+      <div class="thread__inner" id="threadInner"></div>
+    </div>
+  </main>
+
+  <aside class="rail-right" id="contactCard" aria-label="Contact"></aside>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var AUD = {
+    'new-owner':      { label: 'New Owner',      cls: 'pill--new-owner' },
+    'owner':          { label: 'Owner',          cls: 'pill--owner' },
+    'gift-recipient': { label: 'Gift Recipient', cls: 'pill--gift-recipient' },
+    'lapsed':         { label: 'Lapsed',         cls: 'pill--lapsed' }
+  };
+
+  var CONTACTS = [
+    {
+      id: 'maya',
+      name: 'Maya Verhoeven',
+      phone: '+31 6 •• •• 412',
+      audience: 'new-owner',
+      optins: ['✓ Delivery', '✓ Pause'],
+      optedOut: false,
+      time: '2h',
+      ringSize: '7',
+      windows: ['The commute', 'The desk lunch', 'The hour before sleep'],
+      consentLog: [
+        { what: 'Opted in · delivery + pause · checkout', when: 'Jul 2 · 2:13 PM' },
+        { what: 'Confirmed double opt-in', when: 'Jul 2 · 2:14 PM' }
+      ],
+      notes: 'Charge nurse, early shifts — nothing before 8am. Replied warmly after her first midweek pause.',
+      thread: [
+        { day: 'Wed Jul 2' },
+        { dir: 'out', text: 'Pulse: you’re in. Delivery updates and the occasional midweek pause — a few texts a month, never more. Reply STOP to opt out, HELP for help.', meta: 'Delivered · 2:14 PM' },
+        { day: 'Fri Jul 4' },
+        { dir: 'out', text: 'Your ring is out for delivery today. No signature needed — it will wait by the door until you’re ready.', meta: 'Delivered · 9:05 AM' },
+        { dir: 'out', text: 'Tonight, when you shower — that’s the charging window. A dead ring can’t tap you back.', meta: 'Delivered · 7:40 PM' },
+        { day: 'Wed Jul 8' },
+        { dir: 'out', text: 'Wednesday. The theme was Arrive. Wherever you’re reading this — that’s the room.', meta: 'Delivered · 12:07 PM' },
+        { dir: 'in', text: 'It caught me in the hospital car park. I sat for a whole minute before my shift. Thank you.', meta: '12:31 PM' },
+        { dir: 'out', who: 'Noor · Pulse care', text: 'That minute was yours, Maya. It was there all along — the ring just knocked.', meta: 'Delivered · 1:02 PM' }
+      ]
+    },
+    {
+      id: 'daan',
+      name: 'Daan Bakker',
+      phone: '+31 6 •• •• 203',
+      audience: 'owner',
+      optins: ['✓ Pause'],
+      optedOut: false,
+      time: '5h',
+      ringSize: '10',
+      windows: ['The school run', 'The inbox hour', 'After dinner'],
+      consentLog: [
+        { what: 'Opted in · pause · owner invite', when: 'Jun 18 · 8:41 AM' },
+        { what: 'Confirmed double opt-in', when: 'Jun 18 · 8:42 AM' }
+      ],
+      notes: 'Owner since spring. Email-quiet, text-responsive — the Wednesday line is his channel.',
+      thread: [
+        { day: 'Wed Jul 8' },
+        { dir: 'out', text: 'Wednesday. The theme was Arrive. Wherever you’re reading this — that’s the room.', meta: 'Delivered · 12:07 PM' },
+        { dir: 'in', text: 'Needed that today.', meta: '12:19 PM' },
+        { dir: 'out', who: 'Noor · Pulse care', text: 'Then it did its one job. Enjoy the afternoon, Daan.', meta: 'Delivered · 12:44 PM' }
+      ]
+    },
+    {
+      id: 'sofie',
+      name: 'Sofie Jansen',
+      phone: '+31 6 •• •• 054',
+      audience: 'gift-recipient',
+      optins: ['✓ Delivery'],
+      optedOut: false,
+      time: '1d',
+      ringSize: '6',
+      windows: ['Not set yet'],
+      consentLog: [
+        { what: 'Opted in · delivery · gift claim page', when: 'Jul 6 · 6:22 PM' },
+        { what: 'Confirmed double opt-in', when: 'Jul 6 · 6:23 PM' }
+      ],
+      notes: 'Gift arriving Thursday. Sender asked to stay unnamed until the card is opened — honor that.',
+      thread: [
+        { day: 'Sun Jul 6' },
+        { dir: 'out', text: 'Pulse: you’re in. Delivery updates and the occasional midweek pause — a few texts a month, never more. Reply STOP to opt out, HELP for help.', meta: 'Delivered · 6:23 PM' },
+        { day: 'Tue Jul 8' },
+        { dir: 'out', text: 'A gift is on its way to you — a Pulse ring, size 6. It arrives Thursday. Nothing to do yet.', meta: 'Delivered · 10:12 AM' },
+        { dir: 'in', text: 'Who is this from?', meta: '10:26 AM' },
+        { dir: 'out', who: 'Mees · Pulse care', text: 'Someone who wrote your name down with care. The card inside the box says the rest.', meta: 'Delivered · 10:41 AM' }
+      ]
+    },
+    {
+      id: 'ruth',
+      name: 'Ruth de Boer',
+      phone: '+31 6 •• •• 887',
+      audience: 'lapsed',
+      optins: ['STOP'],
+      optedOut: true,
+      time: '2w',
+      ringSize: '8',
+      windows: ['Morning coffee', 'The commute home'],
+      consentLog: [
+        { what: 'Opted in · pause · owner invite', when: 'May 14 · 7:58 PM' },
+        { what: 'Confirmed double opt-in', when: 'May 14 · 7:59 PM' },
+        { what: 'Opted out · replied STOP', when: 'Jun 25 · 12:06 PM', out: true }
+      ],
+      notes: 'Left by text. If she comes back, she comes back — no win-back by SMS, ever.',
+      thread: [
+        { day: 'Wed Jun 25' },
+        { dir: 'out', text: 'Wednesday. The theme was Return. Whatever pulled you away — it can wait ten seconds.', meta: 'Delivered · 12:04 PM' },
+        { dir: 'in', text: 'STOP', meta: '12:06 PM' },
+        { dir: 'sys', who: 'Automated', text: 'You’re unsubscribed from Pulse texts. No more messages. Reply START to rejoin.', meta: 'Sent · 12:06 PM' },
+        { note: 'All sends suppressed for this contact.' }
+      ]
+    },
+    {
+      id: 'tomas',
+      name: 'Tomas Lindqvist',
+      phone: '+31 6 •• •• 771',
+      audience: 'owner',
+      optins: ['✓ Delivery', '✓ Pause'],
+      optedOut: false,
+      time: '1d',
+      ringSize: '11',
+      windows: ['The standing desk', 'The gym bag moment', 'Lights out'],
+      consentLog: [
+        { what: 'Opted in · delivery + pause · checkout', when: 'Apr 30 · 11:03 AM' },
+        { what: 'Confirmed double opt-in', when: 'Apr 30 · 11:04 AM' }
+      ],
+      notes: 'Asked HELP once — wanted to check the frequency, stayed opted in. Likes that most weeks carry no link.',
+      thread: [
+        { day: 'Wed Jul 8' },
+        { dir: 'out', text: 'Wednesday. The theme was Arrive. Wherever you’re reading this — that’s the room.', meta: 'Delivered · 12:07 PM' },
+        { dir: 'in', text: 'HELP', meta: '12:10 PM' },
+        { dir: 'sys', who: 'Automated', text: 'Pulse: delivery updates and one midweek line, 2–6 texts a month. Reply STOP to opt out any time. Questions: care@pulsemindfulness.com.', meta: 'Sent · 12:10 PM' }
+      ]
+    },
+    {
+      id: 'els',
+      name: 'Els Visser',
+      phone: '+31 6 •• •• 138',
+      audience: 'new-owner',
+      optins: ['✓ Delivery'],
+      optedOut: false,
+      time: '3d',
+      ringSize: '5',
+      windows: ['Not set yet'],
+      consentLog: [
+        { what: 'Opted in · delivery · checkout', when: 'Jul 5 · 9:47 PM' },
+        { what: 'Confirmed double opt-in', when: 'Jul 5 · 9:48 PM' }
+      ],
+      notes: 'Delivery updates only — did not take the pause texts. Keep her off the Wednesday sends.',
+      thread: [
+        { day: 'Sat Jul 5' },
+        { dir: 'out', text: 'Pulse: you’re in. Delivery updates and the occasional midweek pause — a few texts a month, never more. Reply STOP to opt out, HELP for help.', meta: 'Delivered · 9:48 PM' },
+        { day: 'Sun Jul 6' },
+        { dir: 'out', text: 'Your ring shipped today from Amsterdam. We’ll text once more when it’s out for delivery.', meta: 'Delivered · 4:15 PM' }
+      ]
+    }
+  ];
+
+  var listEl = document.getElementById('convoList');
+  var threadEl = document.getElementById('threadInner');
+  var titleEl = document.getElementById('threadTitle');
+  var subEl = document.getElementById('threadSub');
+  var cardEl = document.getElementById('contactCard');
+  var activeId = CONTACTS[0].id;
+
+  /* DOM helper — builds elements with textContent only (no HTML injection) */
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined && text !== null) n.textContent = text;
+    return n;
+  }
+
+  function clear(node) {
+    while (node.firstChild) node.removeChild(node.firstChild);
+  }
+
+  function pillNodes(c) {
+    var nodes = [];
+    var aud = AUD[c.audience];
+    nodes.push(el('span', 'pill ' + aud.cls, aud.label));
+    c.optins.forEach(function (o) {
+      nodes.push(el('span', 'pill ' + (o === 'STOP' ? 'pill--stop' : 'pill--optin'), o));
+    });
+    return nodes;
+  }
+
+  function lastPreview(c) {
+    for (var i = c.thread.length - 1; i >= 0; i--) {
+      var m = c.thread[i];
+      if (m.text) return m.text;
+      if (m.note) return m.note;
+    }
+    return '';
+  }
+
+  function renderList() {
+    clear(listEl);
+    listEl.appendChild(el('div', 'rail-left__head', 'Conversations'));
+    CONTACTS.forEach(function (c) {
+      var btn = el('button', 'convo' + (c.id === activeId ? ' is-active' : ''));
+      btn.type = 'button';
+      btn.setAttribute('data-id', c.id);
+
+      var top = el('div', 'convo__top');
+      top.appendChild(el('span', 'convo__name', c.name));
+      top.appendChild(el('span', 'convo__time', c.time));
+      btn.appendChild(top);
+
+      btn.appendChild(el('div', 'convo__phone', c.phone));
+
+      var pills = el('div', 'convo__pills');
+      pillNodes(c).forEach(function (p) { pills.appendChild(p); });
+      btn.appendChild(pills);
+
+      btn.appendChild(el('div', 'convo__preview', lastPreview(c)));
+      listEl.appendChild(btn);
+    });
+  }
+
+  function renderThread(c) {
+    titleEl.textContent = c.name;
+    subEl.textContent = c.phone + (c.optedOut ? '  ·  opted out' : '  ·  SMS');
+    clear(threadEl);
+    c.thread.forEach(function (m) {
+      if (m.day) { threadEl.appendChild(el('div', 'daymark', m.day)); return; }
+      if (m.note) { threadEl.appendChild(el('div', 'sysnote', m.note)); return; }
+      var cls = m.dir === 'in' ? 'msg--in' : (m.dir === 'sys' ? 'msg--sys' : 'msg--out');
+      var wrap = el('div', 'msg ' + cls);
+      if (m.who) wrap.appendChild(el('div', 'msg__who', m.who));
+      wrap.appendChild(el('div', 'msg__bubble', m.text));
+      if (m.meta) wrap.appendChild(el('div', 'msg__meta', m.meta));
+      threadEl.appendChild(wrap);
+    });
+  }
+
+  function renderCard(c) {
+    clear(cardEl);
+    var aud = AUD[c.audience];
+
+    cardEl.appendChild(el('div', 'card-name', c.name));
+    cardEl.appendChild(el('div', 'card-phone', c.phone));
+
+    var pills = el('div', 'card-pills');
+    pillNodes(c).forEach(function (p) { pills.appendChild(p); });
+    cardEl.appendChild(pills);
+
+    var order = el('div', 'card-section');
+    order.appendChild(el('div', 'card-section__label', 'Order'));
+    var kv1 = el('div', 'card-kv');
+    kv1.appendChild(el('span', 'k', 'Ring size'));
+    kv1.appendChild(el('span', 'v', c.ringSize));
+    order.appendChild(kv1);
+    var kv2 = el('div', 'card-kv');
+    kv2.appendChild(el('span', 'k', 'Audience'));
+    kv2.appendChild(el('span', 'v', aud.label));
+    order.appendChild(kv2);
+    cardEl.appendChild(order);
+
+    var consent = el('div', 'card-section');
+    consent.appendChild(el('div', 'card-section__label', 'Consent log'));
+    c.consentLog.forEach(function (e) {
+      var entry = el('div', 'consent-entry' + (e.out ? ' is-out' : ''));
+      entry.appendChild(el('div', 'what', e.what));
+      entry.appendChild(el('div', 'when', e.when));
+      consent.appendChild(entry);
+    });
+    cardEl.appendChild(consent);
+
+    var win = el('div', 'card-section');
+    win.appendChild(el('div', 'card-section__label', 'Pulse windows'));
+    var ul = el('ul', 'windows-list');
+    c.windows.forEach(function (w) { ul.appendChild(el('li', null, w)); });
+    win.appendChild(ul);
+    cardEl.appendChild(win);
+
+    var notes = el('div', 'card-section');
+    notes.appendChild(el('div', 'card-section__label', 'Notes'));
+    notes.appendChild(el('div', 'card-notes', c.notes));
+    cardEl.appendChild(notes);
+
+    cardEl.appendChild(el('div', 'rail-principle', 'Pulse keeps no usage data. What you see here is consent, orders, and words.'));
+  }
+
+  function select(id) {
+    activeId = id;
+    var c = CONTACTS.filter(function (x) { return x.id === id; })[0];
+    renderList();
+    renderThread(c);
+    renderCard(c);
+  }
+
+  listEl.addEventListener('click', function (e) {
+    var btn = e.target.closest('.convo');
+    if (btn) select(btn.getAttribute('data-id'));
+  });
+
+  select(activeId);
+})();
+</script>
+
+</body>
+</html>
