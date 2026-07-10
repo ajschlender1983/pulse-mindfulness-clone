@@ -255,7 +255,7 @@
         "dayLabel": "Day 21",
         "sequence": 1,
         "channel": "Email",
-        "title": "When you're ready",
+        "title": "When would now be a good time?",
         "phase": "Convinced",
         "phaseColor": "#C0A45D",
         "personas": [
@@ -764,9 +764,9 @@
     ]
   },
   {
-    "id": "first-25",
-    "name": "First 25 Days Flow",
-    "description": "New owner builds the wear-charge-notice habit over 25 days, ending with a felt presence shift measured only by the re-taken quiz.",
+    "id": "first-30",
+    "name": "First 30 Days Flow",
+    "description": "New owner builds the wear-charge-notice habit over 30 days, ending with a felt presence shift measured only by the re-taken quiz.",
     "color": "#D6AC3E",
     "status": "in_review",
     "dayOrigin": "pairing-day",
@@ -937,7 +937,7 @@
         "ownerRole": "care-lead",
         "strategicIntent": "Anchor charging to an existing daily ritual \u2014 a dead ring is a dead practice.",
         "contentBrief": "One line, one anchor habit. No streak framing, no nagging cadence. Calm, second person, present tense.",
-        "successCriteria": "Not measured directly \u2014 supports the charge habit and Day-25 completion",
+        "successCriteria": "Not measured directly \u2014 supports the charge habit and Day-30 completion",
         "status": "in_review",
         "assetRefs": [
           {
@@ -1059,11 +1059,11 @@
       {
         "id": "ff-tp-11",
         "num": 11,
-        "dayNum": 25,
-        "dayLabel": "Day 25",
+        "dayNum": 30,
+        "dayLabel": "Day 30",
         "sequence": 1,
         "channel": "Email",
-        "title": "Twenty-five days present",
+        "title": "Thirty days present",
         "phase": "Grateful",
         "phaseColor": "#D6AC3E",
         "personas": [
@@ -1078,7 +1078,7 @@
         "assetRefs": [
           {
             "role": "primary",
-            "url": "emails/email-25-days-present.html"
+            "url": "emails/email-30-days-present.html"
           },
           {
             "role": "secondary",
@@ -1091,8 +1091,8 @@
       {
         "id": "ff-tp-12",
         "num": 12,
-        "dayNum": 25,
-        "dayLabel": "Day 25",
+        "dayNum": 30,
+        "dayLabel": "Day 30",
         "sequence": 2,
         "channel": "Website",
         "title": "Your presence report",
@@ -1317,7 +1317,7 @@
   {
     "id": "ripple",
     "name": "Ripple Flow",
-    "description": "Reviews, referrals, gifting, and shareable presence stories \u2014 love becomes the referral, starting from the Day-25 glow.",
+    "description": "Reviews, referrals, gifting, and shareable presence stories \u2014 love becomes the referral, starting from the Day-30 glow.",
     "color": "#E0B036",
     "status": "draft",
     "dayOrigin": "graduation-day",
@@ -1339,14 +1339,14 @@
         "dayLabel": "Day 0",
         "sequence": 1,
         "channel": "Email",
-        "title": "Your first impression, in your words",
+        "title": "Be Here WOW",
         "phase": "Grateful",
         "phaseColor": "#D6AC3E",
         "personas": [
           "owner"
         ],
         "ownerRole": "founder",
-        "strategicIntent": "Review ask while the Day-25 glow is fresh.",
+        "strategicIntent": "Review ask while the Day-30 glow is fresh.",
         "contentBrief": "Ask for words, not stars \u2014 the rating is the afterthought. One lime CTA. No incentives; the story is the gift. One written pause before the ask.",
         "successCriteria": "Review rate > 12%",
         "status": "draft",
@@ -1568,7 +1568,7 @@
         ],
         "ownerRole": "founder",
         "strategicIntent": "Founder recognition of their practice and generosity \u2014 never their purchase volume.",
-        "contentBrief": "Personally written, personally signed (Elias). Reference something true and specific they shared. 'We noticed' means their words and replies \u2014 never usage data.",
+        "contentBrief": "Personally written, personally signed (Johan). Reference something true and specific they shared. 'We noticed' means their words and replies \u2014 never usage data.",
         "successCriteria": "Reply rate > 30%",
         "status": "draft",
         "assetRefs": [
@@ -1677,7 +1677,7 @@
         ],
         "ownerRole": "founder",
         "strategicIntent": "Name the early-advocate circle: early pattern access and a direct founder line.",
-        "contentBrief": "Named, small, and real: The First Hundred. Two privileges only \u2014 early pulse patterns, a direct line to Elias. Accepting is one reply.",
+        "contentBrief": "Named, small, and real: The First Hundred. Two privileges only \u2014 early pulse patterns, a direct line to Johan. Accepting is one reply.",
         "successCriteria": "Acceptance > 80%",
         "status": "draft",
         "assetRefs": [

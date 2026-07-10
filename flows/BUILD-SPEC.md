@@ -36,7 +36,7 @@ Target repo: this repo (`PulseMindfulness-Clone`), branch `agent/presence-voice-
 - Weekly release: **The Sunday Pause** (flow id `sunday-pause`). Subject pattern
   "The Sunday Pause — [theme]".
 - Advocate circle: **The First Hundred**. Community: **the Presence Circle**.
-- Senders: personal = "Elias from Pulse" <elias@pulsemindfulness.com>;
+- Senders: personal = "Johan from Pulse" <johan@pulsemindfulness.com>;
   transactional = "Pulse" <hello@pulsemindfulness.com>, Reply-To
   care@pulsemindfulness.com. Never no-reply.
 
@@ -122,13 +122,13 @@ flows/consult-sage.md. Flow list:
 1. `awakening` — Awakening Flow (quiz→purchase nurture; 11 tp; Numb→Convinced)
 2. `true-fit` — True Fit Flow (order→confirmed fit, sizing fork + gift-giver; 6 tp)
 3. `arrival` — Arrival Flow (ship→unbox→charge/pair→first pulse; 6 tp)
-4. `first-25` — First 25 Days Flow (habit building, Day-4 fork; 12 tp)
+4. `first-30` — First 30 Days Flow (habit building, Day-4 fork; 12 tp)
 5. `sunday-pause` — The Sunday Pause (weekly theme + lapse win-back; 5 tp)
 6. `ripple` — Ripple Flow (review→referral→gift; 7 tp)
 7. `inner-circle` — Inner Circle Flow (advocates, The First Hundred; 6 tp)
 8. `spaces` — Spaces Flow (studios/corporate; 7 tp)
 
-LINEAR_FLOWS = ['awakening','true-fit','arrival','first-25','ripple','inner-circle'];
+LINEAR_FLOWS = ['awakening','true-fit','arrival','first-30','ripple','inner-circle'];
 SEPARATE_FLOWS = ['sunday-pause','spaces'];
 
 ### Anti-data corrections applied to SAGE's tables (binding)
@@ -145,7 +145,7 @@ SEPARATE_FLOWS = ['sunday-pause','spaces'];
 
 ### Funnel link placement (binding)
 
-- presence-quiz.html: awakening tp1 (results), first-25 tp11 (re-take), spaces
+- presence-quiz.html: awakening tp1 (results), first-30 tp11 (re-take), spaces
   tp2 (team baseline); CTA in sunday-pause tp4 (win-back), ripple tp5.
 - presence-experience.html: awakening tp8 primary; CTA in awakening tp2/tp6,
   ripple tp4, spaces tp3.

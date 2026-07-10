@@ -111,7 +111,7 @@ approved:  bg #E3F47D, text #101828;
    OPUS: "It's designed to deepen what your first session started." → Pulse: "Wear it while you make the coffee tomorrow. That's the whole practice."
 5. **Every email contains one real pause.** A written 10-second micro-pause somewhere in the body ("Here, actually: ten seconds. Feel your feet. We'll wait."). No email ships without it.
 
-**Senders.** Personal/journey: "Elias from Pulse" <elias@pulsemindfulness.com>, sig "Elias — Founder, Pulse". Transactional: "Pulse" <hello@pulsemindfulness.com>, Reply-To care@pulsemindfulness.com. Never no-reply.
+**Senders.** Personal/journey: "Johan from Pulse" <johan@pulsemindfulness.com>, sig "Johan — CEO, Pulse". Transactional: "Pulse" <hello@pulsemindfulness.com>, Reply-To care@pulsemindfulness.com. Never no-reply.
 
 ## 4. Image Direction
 

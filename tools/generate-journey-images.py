@@ -121,6 +121,17 @@ REF_PROMPT = ("Editorial character portrait. " + CHARACTER + " Neutral warm expr
 
 KEEP = "Keep the exact same woman as the reference image: identical face, hair, and features. "
 
+# the two children (kept consistent across all family frames via a family reference)
+KIDS = ("Priya, her daughter, about six, warm light-brown skin like her mother, dark wavy shoulder-length "
+        "hair and bright dark eyes; and a younger sibling, a toddler about two and a half, chubby cheeks, "
+        "soft dark curls, the same warm skin.")
+FAMILY = {"1a", "1b", "4b", "6a", "6b", "7b"}   # frames that show the children
+FAMILY_REF = ("Editorial family reference photograph, a mother and her two children together, all three faces "
+              "clear for later reference. " + CHARACTER + " With her two children: " + KIDS +
+              " The three of them together in soft even window light, warm, calm and real. " + STYLE)
+KEEP_FAMILY = ("Keep the exact same three people as the reference image: the same mother and her same two "
+               "children, identical faces, hair, and features. ")
+
 # color note per stage (from the color director)
 COLOR = {
  1: "Cool grey-blue cast, near-monochrome low saturation, flat sourceless screen-like light, ashen skin, stale hazy air, no figure-ground separation.",
@@ -132,12 +143,23 @@ COLOR = {
  7: "Honey gold at its fullest with cream highlights blooming, luminous golden-hour flare, lime alive as sunlight through leaves onto two people, warmth spilling past her toward the person she is giving to.",
 }
 
+# aliveness of her eyes and face, blooming as she becomes present (dull early, warm late)
+PRESENCE = {
+ 1: "Her eyes are distant and unlit, no warmth reaching her face, present in body but gone behind the eyes.",
+ 2: "The faintest warmth just returning to her face, her eyes beginning to soften.",
+ 3: "A small light waking in her eyes, the first real warmth touching her face.",
+ 4: "A clear, quiet brightness in her eyes and gentle warmth on her face, present and softly alert.",
+ 5: "Her face soft, warm and glowing, the released ease of a long-held breath let go.",
+ 6: "Her eyes bright and shining with feeling, her face warm and fully alive, deeply present and moved.",
+ 7: "Her eyes luminous and warm, her whole face glowing with presence, open, radiant and giving.",
+}
+
 # 21 frames: (id, stage, lens, aspect, use_ref, concept)
 FRAMES = [
  ("1a", 1, "STATE", "4:5", True,
-  "Maya at the kitchen counter at 6:50am in yesterday's cardigan, buttering toast she will not remember making, nodding on a half-second delay while her young daughter talks, her eyes fixed on the middle distance past the child's head. Present in body, gone behind the eyes."),
+  "Maya at the kitchen counter at 6:50am in yesterday's cardigan, distracted, her attention caught by the phone in her hand, while her two children reach for her, unmet: her daughter Priya at her side holding up a crayon drawing and reaching up to be seen, and her toddler tugging at her leg. Maya's eyes stay on the phone, not on the children. Present in body, gone behind the eyes, their small hopes going unmet."),
  ("1b", 1, "TIME & PLACE", "3:2", True,
-  "Wide dawn kitchen, cold north-window light. Her daughter Priya, about six, sits small at the table mid-sentence. Maya stands small in a lot of dead negative space with glass and reflection between them. Two people in one room, unreached."),
+  "Wide dawn kitchen, cold north-window light. Maya stands distracted at the counter, half-looking at the phone in her hand, while her two young children reach up toward her and call for her attention, small and unmet: Priya at the table and the toddler at her feet. A lot of dead negative space and glass between them. Two children wanting their mother, and the mother somewhere else."),
  ("1c", 1, "TEXTURE", "1:1", False,
   "Extreme macro. Cold blue phone-glow flattening the side of an open hand and palm, skin drained grey, no warmth reaching it, the dull unlit gold ring at the soft frame edge."),
 
@@ -158,7 +180,7 @@ FRAMES = [
  ("4a", 4, "STATE", "4:5", True,
   "Maya mid-task at the lamp-lit kitchen sink, sleeves pushed up, stopped with one wet hand still on a bowl because she just caught herself actually hearing the rain and her daughter's voice from the next room. A small surprised stillness, her thumb finding the ring without looking. The clearest, sharpest light of the set."),
  ("4b", 4, "TIME & PLACE", "3:2", True,
-  "Maya kneeling at her daughter Priya's eye level at the front door, backpack still on her own shoulder, actually listening to a small urgent story. The packed bag is now lifted, a chair being pulled out. The same props from before, now in motion. Clean confident daylight."),
+  "Maya kneeling down to her two children's eye level at the front door, backpack still on her own shoulder, actually listening to a small urgent story from Priya while the toddler leans into her. The packed bag is now lifted. The same props from before, now in motion. Clean confident daylight, and she is fully with them."),
  ("4c", 4, "TEXTURE", "1:1", False,
   "Macro. A single water drop falling toward a perfectly still surface, caught the instant before contact, its ring not yet formed. The held breath before the shift lands. Everything crisp and clarifying."),
 
@@ -170,24 +192,26 @@ FRAMES = [
   "Macro. A shoulder and jaw sinking into sun-warmed rumpled linen, muscle visibly letting go, honey shadow deep in every fold."),
 
  ("6a", 6, "STATE", "4:5", True,
-  "Maya at the dinner table watching her daughter Priya laugh, Maya's own eyes wet, a hand pressed to her mouth, caught by how much she almost missed. Eyes open, turned fully toward her child. Warm backlight, skin glowing alive."),
+  "Maya at the dinner table watching her two children, Priya laughing and the toddler beside her, Maya's own eyes wet, a hand pressed to her mouth, caught by how much she almost missed. Eyes open, turned fully toward her children. Warm backlight, skin glowing alive."),
  ("6b", 6, "TIME & PLACE", "3:2", True,
-  "A warm practical-lit dinner, a lamp and low sun through curtains, Maya and Priya close together in a two-shot, real food and a little mess on the table, Maya leaning in and present."),
+  "A warm practical-lit dinner, a lamp and low sun through curtains, Maya and her two children close together, Priya and the toddler, real food and a little mess on the table, Maya leaning in and fully present with them."),
  ("6c", 6, "TEXTURE", "1:1", True,
   "Macro. A hand laid flat over the heart on bare skin, low sun raking across, the pulse at the wrist catching light, the warm gold ring on the same hand."),
 
  ("7a", 7, "STATE", "4:5", True,
   "Maya on a porch at golden hour, no phone, both hands cupped warmly around a friend's hands across a small table, leaning in, giving the exact quality of attention she was once starved for. The ring catches light as she gives her attention away. She has become the warm light for someone else."),
  ("7b", 7, "TIME & PLACE", "3:2", True,
-  "Golden-hour porch or shared green space, sunlight streaming through leaves, Maya fully turned toward a friend she is comforting while her daughter Priya plays nearby. Warmth spilling outward past Maya toward the person receiving her presence."),
+  "Golden-hour porch or shared green space, sunlight streaming through leaves, Maya fully turned toward a friend she is comforting while her two children, Priya and the toddler, play nearby. Warmth spilling outward past Maya toward the person receiving her presence."),
  ("7c", 7, "TEXTURE", "1:1", True,
   "Macro. Two hands, warm water poured from one cupped palm into another, the gold ring on the giving hand catching full golden sun mid-pour. Presence given away."),
 ]
 
-def build_prompt(f):
+def build_prompt(f, family=False):
     _id, stage, lens, aspect, use_ref, concept = f
-    lead = KEEP if use_ref else ""
-    return f"{lead}{concept} {CHARACTER if not use_ref and lens=='STATE' else ''} Colour and light: {COLOR[stage]} {STYLE} Aspect ratio {aspect}."
+    lead = ((KEEP_FAMILY if family else KEEP) if use_ref else "")
+    face = lens in ("STATE", "TIME & PLACE")
+    pres = (" " + PRESENCE[stage]) if face else ""
+    return f"{lead}{concept} {CHARACTER if not use_ref and lens=='STATE' else ''} Colour and light: {COLOR[stage]}{pres} {STYLE} Aspect ratio {aspect}."
 
 # ------------------------------------------------------------- main
 def main():
@@ -229,15 +253,37 @@ def main():
     if only == "ref":
         return
 
+    # family reference (mother + two children), locked so the kids stay consistent
+    fam_path = OUT / "00b-family-reference.png"
+    fam_b64 = None
+    need_family = (only in FAMILY) or (only == "famref") or (not only)
+    if need_family:
+        if fam_path.exists() and only != "famref":
+            fam_b64 = base64.b64encode(fam_path.read_bytes()).decode()
+            if not only:
+                print("Reusing existing family reference.")
+        else:
+            print("Generating family reference (mother + two children) ...")
+            fimg = generate(model, key, KEEP + FAMILY_REF, aspect="3:2", ref_b64=ref_b64)
+            if fimg:
+                fam_path.write_bytes(fimg); fam_b64 = base64.b64encode(fimg).decode()
+                print(f"  -> {fam_path.name}")
+            else:
+                print("  family reference failed; family frames will use the solo reference.")
+    if only == "famref":
+        return
+
     # 2) frames
     for f in FRAMES:
         _id = f[0]
         if only and only != _id:
             continue
         stage, lens, aspect, use_ref = f[1], f[2], f[3], f[4]
+        is_family = _id in FAMILY
+        rb = ((fam_b64 or ref_b64) if is_family else ref_b64) if use_ref else None
         out = OUT / f"{_id}-stage{stage}-{lens.split()[0].lower()}.png"
         print(f"[{_id}] stage {stage} · {lens} ...")
-        img = generate(model, key, build_prompt(f), aspect=aspect, ref_b64=(ref_b64 if use_ref else None))
+        img = generate(model, key, build_prompt(f, family=is_family), aspect=aspect, ref_b64=rb)
         if img:
             out.write_bytes(img); print(f"  -> {out.name}")
         time.sleep(1)

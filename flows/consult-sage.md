@@ -9,7 +9,7 @@
 | 1 | resolution | `awakening` | Awakening Flow | Pre-purchase nurture from presence-quiz completion to first order. | Numb → Convinced | Cut apology posture, refund pivot, backlog forms. Keep: instant acknowledgment, one-record-per-person, no-pressure dual-CTA. |
 | 2 | in-queue | `true-fit` | True Fit Flow | Order confirmation through sizing fork to confirmed fit; free-exchange safety net. | Convinced → Relieved | Refund-vs-delivery fork becomes know-my-size vs need-a-sizer fork. |
 | 3 | delivery | `arrival` | Arrival Flow | Ship notice through unboxing, charging, app pairing, first pulse. | Relieved | Cut weeks of wait-justification. Keep ceremonial ship email, prep, arrival-day pair, entry ritual. |
-| 4 | engagement | `first-25` | First 25 Days Flow | New owner builds the wear-charge-notice habit; ends with a felt presence shift. | Relieved → Grateful | 60d → 25d. Keep Day-4 newcomer/listener fork intact (best pattern in OPUS system). |
+| 4 | engagement | `first-30` | First 30 Days Flow | New owner builds the wear-charge-notice habit; ends with a felt presence shift. | Relieved → Grateful | 60d → 25d. Keep Day-4 newcomer/listener fork intact (best pattern in OPUS system). |
 | 5 | session-drop | `sunday-pause` | The Sunday Pause | Recurring Sunday theme release plus dormancy win-back triggers. | Grateful (re-entry Numb→Seen) | Friday → Sunday evening. Add lapse-detection branch — no OPUS equivalent. |
 | 6 | user-amplifier | `ripple` | Ripple Flow | Reviews, referrals, gifting, shareable presence stories. | Grateful → Generous | Cut crisis recovery ask. Add gift prompt. |
 | 7 | advocacy | `inner-circle` | Inner Circle Flow | Manually enrolled advocates: recognition, story capture, co-creation. | Generous | "Founding Circle" → "The First Hundred". |
@@ -21,7 +21,7 @@
 |---|---|---|
 | quiz-lead | Quiz Lead | Completed presence-quiz.html; no purchase yet. |
 | browser | Browser | Visited/carted on index.html without finishing; no quiz. |
-| new-owner | New Owner | Order placed through Day 25 post-activation. |
+| new-owner | New Owner | Order placed through Day 30 post-activation. |
 | owner | Owner | Day 26+, engaged (funnel stage 6, Believer). |
 | gift-giver | Gift Giver | Purchased for someone else; never wears the ring. |
 | gift-recipient | Gift Recipient | Activated a gifted ring; needs its own welcome. |
@@ -61,7 +61,7 @@
 | 5 | Day 0 | Website | Your first pulse | Relieved | Guided 90-second first-pulse arrival ritual page. | Completion > 85% | eng-tp-02 Threshold |
 | 6 | trigger | Email | Someone thought of you | Seen | Gift-recipient welcome: who sent it and why (opt-in note), own setup path. They start at Seen. | Activation > 70% | NEW |
 
-### Flow 4 — first-25 (dayOrigin: pairing-day) · new-owner, gift-recipient
+### Flow 4 — first-30 (dayOrigin: pairing-day) · new-owner, gift-recipient
 | 1 | 1 | Email | Day one: just wear it | Relieved | Zero-goal start; the only job is the ring on your finger. | Open > 60% | eng-tp-01 |
 | 2 | 2 | Website | Your pulse windows | Relieved | Set three daily pulse windows anchored to real moments (commute, lunch, bedtime). Setup, not tracking. | Windows set > 75% | NEW |
 | 3 | 3 | Email | What did you notice? | Relieved | First reflection: one word before, one after. | Reply > 40% | eng-tp-04 |
@@ -72,7 +72,7 @@
 | 8 | 10 | Email | The pause is working | Grateful | Reflection: count nothing; recall one moment you returned this week. (NO app data playback.) | Reply rate | eng-tp-07 |
 | 9 | 14 | Email | Two weeks of returning | Grateful | Time-based recognition (no streak counts) + pulse-window tune-up prompt. | Adjustment > 20% | eng-tp-08 |
 | 10 | 21 | Email | The 21-day threshold | Grateful | Habit science: what repetition does in the nervous system. | Open > 45% | eng-tp-09 |
-| 11 | 25 | Email | Twenty-five days present | Grateful | Milestone + quiz re-take invite; measure the shift they can feel. | Re-take > 35% | eng-tp-10 |
+| 11 | 25 | Email | Thirty days present | Grateful | Milestone + quiz re-take invite; measure the shift they can feel. | Re-take > 35% | eng-tp-10 |
 | 12 | 25 | Website | Your presence report | Grateful | Before/after quiz delta as archetype shift + reclaimed-life framing. Never a grade, never telemetry. Graduates to owner. | View > 60%; share > 10% | NEW |
 
 ### Flow 5 — sunday-pause (cadence weekly, anchor Sunday) · owner, new-owner, lapsed
@@ -83,7 +83,7 @@
 | 5 | +7d | Email | One minute, no ring required | Seen | Ringless 60-second practice; re-enter through practice, not product. Then quiet 30 days. | Completion > 15% | NEW |
 
 ### Flow 6 — ripple (dayOrigin: graduation-day) · owner
-| 1 | 0 | Email | Your first impression, in your words | Grateful | Review ask while Day-25 glow is fresh. | Review > 12% | ua-tp-01 |
+| 1 | 0 | Email | Your first impression, in your words | Grateful | Review ask while Day-30 glow is fresh. | Review > 12% | ua-tp-01 |
 | 2 | 7 | Email | Your story matters | Grateful | Testimonial ask; feeds Friday community email + site proof. | > 5% | ua-tp-02 |
 | 3 | 14 | Email | Give a month of presence | Generous | Referral link, gift-framed. | Share > 15% | ua-tp-03 |
 | 4 | 21 | Email | Someone you love is on autopilot too | Generous | Direct gift prompt — gift the person you named in the quiz. | Gift conv > 2% | NEW |
@@ -118,5 +118,5 @@ Relieved=75: the Convinced(55)→Relieved gap is the activation chasm, biggest s
 ## 6. Build notes
 
 - dayOrigin values: quiz-day, order-day, ship-day, pairing-day, graduation-day, enrollment-day, inquiry-day; weekly anchor sunday.
-- Port the eng-tp-13/13b fork pattern exactly (same sequence 1/2 + triggerCondition strings) for first-25 tp4/tp5 and true-fit tp2.
+- Port the eng-tp-13/13b fork pattern exactly (same sequence 1/2 + triggerCondition strings) for first-30 tp4/tp5 and true-fit tp2.
 - Buy CTAs only in Convinced/Generous phases — never during Seen.

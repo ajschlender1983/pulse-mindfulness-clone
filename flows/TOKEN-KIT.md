@@ -19,11 +19,11 @@ Decision rule: hero = Maya/life → cream. Hero = the ring/logistics → dark.
    without `.html`. Cream: inset `.hero-wrap` below the header (see cream
    golden). Dark: full-bleed at top with `.hero-fade` (see dark golden).
    Write a real, descriptive `alt`.
-3. Senders. Personal/journey (founder voice): `Elias from Pulse
-   <elias@pulsemindfulness.com>`, sig name "Elias", sig title "Founder, Pulse".
+3. Senders. Personal/journey (founder voice): `Johan from Pulse
+   <johan@pulsemindfulness.com>`, sig name "Johan", sig title "CEO, Pulse".
    Transactional/logistics: `Pulse <hello@pulsemindfulness.com>`, Reply-To
    `care@pulsemindfulness.com`, sig "The Pulse team". Spaces flow:
-   `Elias from Pulse <partners@pulsemindfulness.com>`.
+   `Johan from Pulse <partners@pulsemindfulness.com>`.
 4. Merge tags: `{{first_name}}`, `{{order_number}}`, `{{ring_size}}`,
    `{{ship_city}}`, `{{order_total}}`, `{{archetype}}`,
    `{{reclaimable_hours}}`, `{{tracking_link}}`, `{{gift_sender}}`,
