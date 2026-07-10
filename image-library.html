@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pulse — Image Library</title>
+<meta name="description" content="The Pulse image system: five user stories in soft ambient light, the Maya journey arc, the email hero worlds, and motion assets." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#EBE7D4; --warm:#F9F6E5; --ink:#1A1C22; --brown:#423D32;
+    --lime:#E3F47D; --honey:#A67C00; --muted:#6E6857; --faint:#8a8578;
+    --line:rgba(26,28,34,.14);
+    --font:"DM Sans",sans-serif; --mono:"DM Mono",monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{ font-family:var(--font); background:var(--cream); color:var(--ink);
+    letter-spacing:-0.02em; -webkit-font-smoothing:antialiased; line-height:1.5;
+    padding:clamp(30px,6vw,80px) clamp(20px,5vw,40px); }
+  .shell{ max-width:1120px; margin:0 auto; }
+  .topnav{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px; }
+  .brand{ font-weight:600; font-size:22px; letter-spacing:-0.05em; }
+  .brand i{ color:#cfe06a; font-style:normal; }
+  .topnav a{ font-family:var(--mono); font-size:12px; color:var(--muted); text-decoration:none; }
+  .topnav a:hover{ color:var(--ink); }
+  .eyebrow{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-top:26px; }
+  h1{ font-weight:600; font-size:clamp(32px,6vw,54px); letter-spacing:-0.045em; line-height:1.03; margin:14px 0 0; text-wrap:balance; }
+  .lede{ font-size:clamp(17px,2.2vw,19px); color:var(--brown); max-width:62ch; margin:18px 0 0; }
+
+  .seclab{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
+    border-top:1px solid var(--line); padding-top:14px; margin-top:clamp(40px,6vw,64px); display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+  .seclab a{ color:var(--honey); text-decoration:underline; text-underline-offset:3px; }
+
+  .story{ margin-top:26px; background:var(--warm); border:1px solid var(--line); border-radius:20px;
+    padding:26px 28px; box-shadow:0 14px 34px rgba(66,61,50,.10); }
+  .story h2{ font-size:22px; font-weight:600; letter-spacing:-0.035em; }
+  .story .seg{ font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase;
+    color:#101828; background:var(--lime); border-radius:100px; padding:4px 12px; display:inline-block; margin-bottom:10px; font-weight:500; }
+  .story p{ font-size:15px; color:var(--brown); max-width:70ch; margin:8px 0 16px; }
+  .frames{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  .frames figure{ margin:0; border-radius:12px; overflow:hidden; background:var(--cream); border:1px solid var(--line); }
+  .frames img{ width:100%; display:block; aspect-ratio:3/2; object-fit:cover; }
+  .frames figcaption{ font-family:var(--mono); font-size:10.5px; color:var(--muted); padding:8px 10px; }
+
+  .grid2{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:22px; }
+  .motion-card{ background:var(--warm); border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 14px 34px rgba(66,61,50,.10); }
+  .motion-card video{ width:100%; display:block; }
+  .motion-card .row{ display:flex; justify-content:space-between; align-items:center; padding:10px 14px; }
+  .motion-card .name{ font-family:var(--mono); font-size:12px; color:var(--ink); font-weight:500; }
+  .motion-card a{ font-family:var(--mono); font-size:11px; color:var(--honey); text-decoration:underline; text-underline-offset:3px; }
+
+  .linkcards{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:22px; }
+  .linkcard{ display:block; background:var(--warm); border:1px solid var(--line); border-radius:16px; padding:20px 22px;
+    text-decoration:none; color:inherit; box-shadow:0 14px 34px rgba(66,61,50,.08); transition:transform .18s ease; }
+  .linkcard:hover{ transform:translateY(-3px); }
+  .linkcard h3{ font-size:17px; font-weight:600; letter-spacing:-0.03em; }
+  .linkcard p{ font-size:13.5px; color:var(--muted); margin-top:6px; }
+  .linkcard .path{ font-family:var(--mono); font-size:11px; color:var(--honey); margin-top:12px; }
+
+  footer{ margin-top:clamp(44px,7vw,72px); border-top:1px solid var(--line); padding-top:20px;
+    font-family:var(--mono); font-size:12px; color:var(--faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  footer a{ color:var(--brown); }
+  @media(max-width:860px){ .frames{ grid-template-columns:repeat(2,1fr);} .grid2{grid-template-columns:1fr;} .linkcards{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="topnav">
+    <div class="brand">pulse<i>·</i></div>
+    <div><a href="builds.html">← Build index</a></div>
+  </div>
+  <div class="eyebrow">Image Library · Five stories, one light</div>
+  <h1>Real days, gently lit.</h1>
+  <p class="lede">Five user stories drawn from the founder conversation — the segments Pulse actually serves — photographed in soft ambient natural light. Plus the Maya journey arc, both email hero worlds, and motion assets.</p>
+
+  <div class="seclab"><span>Story 01 · Yoga &amp; meditation practitioners</span></div>
+  <div class="story">
+    <span class="seg">Practice, continued</span>
+    <h2>Ingrid — from the mat into the day</h2>
+    <p>She doesn't need convincing about presence; she needs continuity. The ring carries the last minute of savasana into the market, the classroom, the afternoon.</p>
+    <div class="frames">
+      <figure><img src="story-images/ingrid-1.png" alt="Ingrid rolling her mat by a bright studio window"><figcaption>after practice</figcaption></figure>
+      <figure><img src="story-images/ingrid-2.png" alt="Ingrid pausing at a market stall"><figcaption>the errand</figcaption></figure>
+      <figure><img src="story-images/ingrid-3.png" alt="Her hand at rest with mala beads and the gold band"><figcaption>texture</figcaption></figure>
+      <figure><img src="story-images/ingrid-4.png" alt="Ingrid kneeling beside a student, fully attentive"><figcaption>teaching</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="seclab"><span>Story 02 · ADHD &amp; focus</span></div>
+  <div class="story">
+    <span class="seg">One thing at a time</span>
+    <h2>Theo — the tap that brings the tab count down</h2>
+    <p>Not a productivity system. A physical anchor: drift, tap, return. The segment Pulse is actively testing — shown honestly, six tabs and all.</p>
+    <div class="frames">
+      <figure><img src="story-images/theo-1.png" alt="Theo at his desk, drifting across browser tabs"><figcaption>the drift</figcaption></figure>
+      <figure><img src="story-images/theo-2.png" alt="Theo leaning back, one breath, eyes closed"><figcaption>the tap</figcaption></figure>
+      <figure><img src="story-images/theo-3.png" alt="His hand steady on the keyboard, gold band in soft light"><figcaption>texture</figcaption></figure>
+      <figure><img src="story-images/theo-4.png" alt="Theo deep in one task, phone far away"><figcaption>one task</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="seclab"><span>Story 03 · Habit chasers</span></div>
+  <div class="story">
+    <span class="seg">Three things a day</span>
+    <h2>Rosa — the joy ledger</h2>
+    <p>"Three things that bring me joy every day — my life is fundamentally better." The ring is the reminder; the notebook is the practice; the day is the material.</p>
+    <div class="frames">
+      <figure><img src="story-images/rosa-1.png" alt="Rosa writing three lines in a notebook over coffee"><figcaption>the ledger</figcaption></figure>
+      <figure><img src="story-images/rosa-2.png" alt="Rosa pausing to look at a flowering street tree"><figcaption>noticing</figcaption></figure>
+      <figure><img src="story-images/rosa-3.png" alt="Her hand on a warm cup, steam in window light"><figcaption>texture</figcaption></figure>
+      <figure><img src="story-images/rosa-4.png" alt="Rosa laughing with a neighbor on a stoop"><figcaption>the third thing</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="seclab"><span>Story 04 · Anxiety &amp; stress</span></div>
+  <div class="story">
+    <span class="seg">Calm without the cushion</span>
+    <h2>Darius — "I can't just meditate right now"</h2>
+    <p>Straight from the founder conversation: when there's too much inside to sit still, the ring is aid, not homework. One tap on a crowded train. Shoulders down. Door opened differently.</p>
+    <div class="frames">
+      <figure><img src="story-images/darius-1.png" alt="Darius tense on a crowded morning train"><figcaption>the weight</figcaption></figure>
+      <figure><img src="story-images/darius-2.png" alt="Darius one breath later, shoulders lowered"><figcaption>one breath later</figcaption></figure>
+      <figure><img src="story-images/darius-3.png" alt="His hand flat on his chest, gold band as anchor"><figcaption>texture</figcaption></figure>
+      <figure><img src="story-images/darius-4.png" alt="Darius pausing at his front door before going in"><figcaption>the threshold</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="seclab"><span>Story 05 · Connection — me → we</span></div>
+  <div class="story">
+    <span class="seg">The same pulse</span>
+    <h2>Amara &amp; Ben — two rings, one moment</h2>
+    <p>The pivot from individual mindfulness to shared presence: both rings tap at the same moment, and a private practice becomes a small ritual between two people.</p>
+    <div class="frames">
+      <figure><img src="story-images/amara-ben-1.png" alt="Amara and Ben pausing at the same moment in their kitchen"><figcaption>same moment</figcaption></figure>
+      <figure><img src="story-images/amara-ben-2.png" alt="Ben thanking Amara across the kitchen"><figcaption>the thank-you</figcaption></figure>
+      <figure><img src="story-images/amara-ben-3.png" alt="Two hands loosely joined, two gold bands"><figcaption>texture</figcaption></figure>
+      <figure><img src="story-images/amara-ben-4.png" alt="The two of them on the sofa, phones nowhere"><figcaption>evening</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="seclab"><span>Motion assets</span><a href="motion/">browse folder</a></div>
+  <div class="grid2">
+    <div class="motion-card"><video src="motion/amara-ben-hands.mp4" autoplay loop muted playsinline></video><div class="row"><span class="name">amara-ben-hands</span><span><a href="motion/amara-ben-hands.mp4">mp4</a> · <a href="motion/amara-ben-hands.gif">gif</a></span></div></div>
+    <div class="motion-card"><video src="motion/luxe-ring.mp4" autoplay loop muted playsinline></video><div class="row"><span class="name">luxe-ring</span><span><a href="motion/luxe-ring.mp4">mp4</a> · <a href="motion/luxe-ring.gif">gif</a></span></div></div>
+    <div class="motion-card"><video src="motion/darius-train.mp4" autoplay loop muted playsinline></video><div class="row"><span class="name">darius-train</span><span><a href="motion/darius-train.mp4">mp4</a> · <a href="motion/darius-train.gif">gif</a></span></div></div>
+    <div class="motion-card"><video src="motion/rosa-notebook.mp4" autoplay loop muted playsinline></video><div class="row"><span class="name">rosa-notebook</span><span><a href="motion/rosa-notebook.mp4">mp4</a> · <a href="motion/rosa-notebook.gif">gif</a></span></div></div>
+    <div class="motion-card"><video src="motion/referral-pour.mp4" autoplay loop muted playsinline></video><div class="row"><span class="name">referral-pour</span><span><a href="motion/referral-pour.mp4">mp4</a> · <a href="motion/referral-pour.gif">gif</a></span></div></div>
+    <div class="motion-card"><video src="motion/sunday-pause.mp4" autoplay loop muted playsinline></video><div class="row"><span class="name">sunday-pause</span><span><a href="motion/sunday-pause.mp4">mp4</a> · <a href="motion/sunday-pause.gif">gif</a></span></div></div>
+  </div>
+
+  <div class="seclab"><span>The other collections</span></div>
+  <div class="linkcards">
+    <a class="linkcard" href="story-images/gallery.html"><h3>Five stories — contact sheet</h3><p>Every frame and character reference from this set, in one grid.</p><div class="path">story-images/gallery.html</div></a>
+    <a class="linkcard" href="emails/images/gallery.html"><h3>Email heroes</h3><p>The full lifecycle set — warm Maya letters and dark luxe product frames, plus the new soft-light variants.</p><div class="path">emails/images/gallery.html</div></a>
+    <a class="linkcard" href="journey-images/gallery.html"><h3>The Maya journey arc</h3><p>Numb to generous across seven stages and three lenses — the original golden-hour grammar.</p><div class="path">journey-images/gallery.html</div></a>
+  </div>
+
+  <footer>
+    <span>Pulse · Real days, gently lit</span>
+    <span><a href="presence-flow-map.html">Cadence</a> · <a href="presence-sms-console.html">Messages</a> · <a href="builds.html">Builds</a></span>
+  </footer>
+</div>
+</body>
+</html>
