@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse — Your First Pulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream:        #EBE7D4;
+  --cream-warm:   #F9F6E5;
+  --ink:          #1A1C22;
+  --brown:        #423D32;
+  --accent:       #E3F47D;
+  --accent-text:  #101828;
+  --honey:        #C9A227;
+  --muted:        #8a8578;
+  --font: "DM Sans", sans-serif;
+  --mono: "DM Mono", monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2 { font-weight: 400; letter-spacing: -0.04em; line-height: 1.02; }
+
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.btn--pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: var(--accent-text);
+  border: none;
+  border-radius: 100px;
+  padding: 13px 46px;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .25s ease, filter .25s ease;
+}
+.btn--pill:hover { filter: brightness(1.05); transform: translateY(-1px); }
+
+/* ---------- header ---------- */
+.top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 28px 6vw 0;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  color: var(--ink);
+}
+.logo span { color: var(--honey); }
+
+/* ---------- hero ---------- */
+.hero {
+  max-width: 960px;
+  margin: 34px auto 0;
+  padding: 0 6vw;
+}
+.hero img {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.intro {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 72px 6vw 40px;
+  text-align: center;
+}
+.intro .label { margin-bottom: 22px; }
+.intro h1 {
+  font-size: clamp(44px, 7vw, 84px);
+  color: var(--brown);
+  margin-bottom: 28px;
+}
+.intro p {
+  font-size: 19px;
+  color: #575344;
+  max-width: 480px;
+  margin: 0 auto 36px;
+}
+
+/* ---------- breathing dot ---------- */
+.breath {
+  padding: 90px 6vw 100px;
+  text-align: center;
+}
+.breath-stage {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.breath-dot {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--honey);
+  opacity: .85;
+  animation: breathe 8s ease-in-out infinite;
+}
+@keyframes breathe {
+  0%       { transform: scale(0.55); opacity: .55; }
+  45%      { transform: scale(1.6);  opacity: .9;  }
+  55%      { transform: scale(1.6);  opacity: .9;  }
+  100%     { transform: scale(0.55); opacity: .55; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .breath-dot { animation: none; transform: scale(1); }
+}
+.breath .label { letter-spacing: 0.04em; }
+
+/* ---------- steps ---------- */
+.steps {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 6vw 40px;
+}
+.step {
+  padding: 64px 0;
+  border-top: 1px solid rgba(66,61,50,0.12);
+}
+.step .label { margin-bottom: 16px; }
+.step h2 {
+  font-size: clamp(28px, 3.6vw, 40px);
+  color: var(--brown);
+  margin-bottom: 18px;
+}
+.step p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: #575344;
+  max-width: 520px;
+}
+.step p + p { margin-top: 14px; }
+
+/* ---------- closing ---------- */
+.closing {
+  text-align: center;
+  padding: 100px 6vw 90px;
+  border-top: 1px solid rgba(66,61,50,0.12);
+  max-width: 720px;
+  margin: 0 auto;
+}
+.closing h2 {
+  font-size: clamp(32px, 4.6vw, 54px);
+  color: var(--brown);
+  margin-bottom: 26px;
+}
+.closing p {
+  font-size: 18px;
+  color: #575344;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+/* ---------- footer ---------- */
+.footer {
+  text-align: center;
+  padding: 50px 6vw 60px;
+}
+.footer p {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: rgba(66,61,50,0.45);
+  line-height: 2;
+}
+.footer a {
+  color: rgba(66,61,50,0.45);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="logo">pulse<span>.</span></div>
+    <div class="label">90 seconds &middot; a guided arrival</div>
+  </header>
+
+  <div class="hero">
+    <img src="images/hero-landing-first-pulse.png" alt="Warm morning light across a quiet room, a chair waiting by the window">
+  </div>
+
+  <section class="intro">
+    <div class="label">the ring is charged. the app is set. now the easy part.</div>
+    <h1>Your first pulse</h1>
+    <p>
+      This page asks for ninety seconds and nothing else. No account, no sound, no timer. Read slowly. That's the only instruction.
+    </p>
+    <a class="btn--pill" href="#arrive">Begin</a>
+  </section>
+
+  <section class="breath" aria-label="A slowly breathing dot to pace your breath">
+    <div class="breath-stage">
+      <div class="breath-dot"></div>
+    </div>
+    <div class="label">the dot breathes every eight seconds. you can too.</div>
+  </section>
+
+  <main class="steps">
+
+    <div class="step" id="arrive">
+      <div class="label">01 &middot; arrive</div>
+      <h2>Sit down. Anywhere is fine.</h2>
+      <p>
+        Both feet on the floor. Let the chair hold your weight — it's been doing it all along, you just haven't noticed lately.
+      </p>
+      <p>
+        For the next minute and a half, there is nowhere else you need to be. That's not a metaphor. Check: nowhere.
+      </p>
+    </div>
+
+    <div class="step">
+      <div class="label">02 &middot; the ring</div>
+      <h2>Put it on.</h2>
+      <p>
+        Whichever hand feels natural. Slide it past the knuckle until it sits snug and quiet. Notice its small weight — that's the whole interface. There is nothing to switch on and nothing to open.
+      </p>
+    </div>
+
+    <div class="step">
+      <div class="label">03 &middot; three breaths</div>
+      <h2>Breathe with the dot.</h2>
+      <p>
+        Scroll back up to it if you like, or just remember its pace. In as it grows. Out as it softens. Three times, no more.
+      </p>
+      <p>
+        If your mind wanders during breath two, that's not failing. Noticing the wandering is the practice working.
+      </p>
+    </div>
+
+    <div class="step">
+      <div class="label">04 &middot; the first pulse</div>
+      <h2>It will come when it comes.</h2>
+      <p>
+        Sometime in the next while — maybe in ten minutes, maybe in forty — the ring will hum gently against your finger. You don't need to wait for it. Go make the coffee. Fold the laundry. Live.
+      </p>
+      <p>
+        When it does come, do one thing: notice where you are. The room, the light, the sound of it. That's all a pulse ever asks.
+      </p>
+    </div>
+
+  </main>
+
+  <section class="closing">
+    <h2>That's the whole practice.</h2>
+    <p>
+      Nothing was measured just now. No streak began, and none will. You sat down in a room, and for ninety seconds, you were actually in it. The ring will bring you back a few times an hour. The coming back is yours.
+    </p>
+  </section>
+
+  <footer class="footer">
+    <p>Pulse &middot; Amsterdam</p>
+    <p><a href="../index.html">pulsemindfulness.com</a></p>
+  </footer>
+
+</body>
+</html>

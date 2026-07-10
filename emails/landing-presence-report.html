@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse — Your Presence Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream:       #EBE7D4;
+  --cream-warm:  #F9F6E5;
+  --ink:         #1A1C22;
+  --brown:       #423D32;
+  --honey:       #C9A227;
+  --accent:      #E3F47D;
+  --accent-text: #101828;
+  --muted:       #8a8578;
+  --body:        #575344;
+  --font: "DM Sans", sans-serif;
+  --mono: "DM Mono", monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font);
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- nav ---------- */
+.nav {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 26px 5vw;
+}
+.nav__logo {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav__logo span { color: #97A93B; }
+.nav .label { text-transform: none; letter-spacing: 0; }
+
+/* ---------- page frame ---------- */
+.page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 24px 90px;
+}
+
+/* ---------- hero ---------- */
+.hero-wrap { margin: 12px 0 56px; }
+.hero-img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 30px 80px rgba(66,61,50,0.12);
+}
+
+/* ---------- headings & copy ---------- */
+h1 {
+  font-weight: 400;
+  font-size: clamp(38px, 5.6vw, 60px);
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+  color: var(--brown);
+  margin: 18px 0 26px;
+}
+.lede {
+  font-size: clamp(19px, 2.2vw, 22px);
+  color: var(--body);
+  max-width: 620px;
+}
+.prose p {
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--body);
+  max-width: 640px;
+  margin-bottom: 22px;
+}
+.prose strong { color: var(--ink); font-weight: 500; }
+
+section { margin-top: 84px; }
+
+/* ---------- the shift ---------- */
+.shift {
+  background: var(--cream-warm);
+  border-radius: 26px;
+  padding: clamp(40px, 6vw, 72px);
+  box-shadow: 0 30px 80px rgba(66,61,50,0.08);
+  text-align: center;
+}
+.shift .label { margin-bottom: 30px; display: block; }
+.shift__then {
+  font-size: clamp(26px, 4vw, 40px);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--muted);
+  font-weight: 400;
+}
+.shift__arrow {
+  font-size: 28px;
+  color: var(--honey);
+  margin: 22px 0;
+  line-height: 1;
+}
+.shift__now {
+  font-size: clamp(34px, 5.6vw, 58px);
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  color: var(--brown);
+  font-weight: 400;
+}
+.shift__note {
+  margin-top: 34px;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ---------- reclaimed life ---------- */
+.returned__line {
+  font-size: clamp(28px, 4.4vw, 46px);
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  color: var(--brown);
+  font-weight: 400;
+  max-width: 700px;
+  margin: 18px 0 30px;
+}
+
+/* ---------- page pause ---------- */
+.page-pause {
+  text-align: center;
+  margin-top: 90px;
+  padding: 0 24px;
+}
+.page-pause p {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 2;
+}
+
+/* ---------- divider ---------- */
+.divider {
+  border: none;
+  height: 1px;
+  max-width: 200px;
+  margin: 84px auto 0;
+  background: #ddd7c3;
+}
+
+/* ---------- closing links ---------- */
+.closing {
+  text-align: center;
+  margin-top: 64px;
+}
+.closing__give {
+  display: inline-block;
+  font-size: clamp(20px, 2.6vw, 26px);
+  letter-spacing: -0.03em;
+  color: var(--brown);
+  text-decoration: underline;
+  text-decoration-color: var(--honey);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1.5px;
+  transition: color .2s;
+}
+.closing__give:hover { color: var(--honey); }
+.closing__sub {
+  margin-top: 14px;
+  font-size: 15px;
+  color: var(--muted);
+}
+.share {
+  margin-top: 56px;
+}
+.share a {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.share a:hover { color: var(--brown); }
+
+/* ---------- footer ---------- */
+.footer {
+  text-align: center;
+  padding: 40px 24px 56px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(66,61,50,0.45);
+  line-height: 1.9;
+}
+
+/* ---------- merge-tag placeholders ---------- */
+.cm-placeholder {
+  display: inline-block;
+  background: rgba(201,162,39,0.08);
+  border: 1.5px dashed rgba(201,162,39,0.55);
+  border-radius: 6px;
+  padding: 0 12px;
+  color: #8A6D14;
+  font-style: normal;
+  letter-spacing: -0.01em;
+}
+.cm-placeholder--inline {
+  font-size: 15px;
+  padding: 1px 7px;
+  border-radius: 4px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 640px) {
+  .shift { padding: 36px 22px; }
+  section { margin-top: 64px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav__logo" href="../index.html">pulse<span>.</span></a>
+  <span class="label">Your presence report</span>
+</nav>
+
+<main class="page">
+
+  <div class="hero-wrap">
+    <img class="hero-img" src="images/hero-landing-presence-report.png" alt="A warm dinner table in golden evening light, a mother and daughter close together, present in a small everyday mess">
+  </div>
+
+  <span class="label">Twenty-five days apart · answered twice · by you</span>
+  <h1>Your presence report</h1>
+  <p class="lede">
+    <span class="cm-placeholder cm-placeholder--inline">{{first_name}}</span>, twenty-five days ago you answered a handful of quiet questions. This week you answered them again. Nothing measured you in between — no counting, no telemetry, nothing watching. Both times, the only instrument was you. Here is what moved, in words.
+  </p>
+
+  <section class="shift">
+    <span class="label">The shift</span>
+    <div class="shift__then"><span class="cm-placeholder">{{archetype_then}}</span></div>
+    <div class="shift__arrow">&darr;</div>
+    <div class="shift__now"><span class="cm-placeholder">{{archetype_now}}</span></div>
+    <div class="shift__note">
+      For many people this reads something like<br>
+      <em>The Elsewhere Parent &rarr; The One Who Comes Back.</em><br>
+      Yours is yours.
+    </div>
+  </section>
+
+  <section>
+    <span class="label">What came back</span>
+    <div class="returned__line">
+      About <span class="cm-placeholder">{{reclaimed_hours}}</span> hours a week, returned. That's <span class="cm-placeholder">{{reclaimed_life_line}}</span>.
+    </div>
+    <div class="prose">
+      <p>
+        Hours are an abstraction, so say it plainly: about four dinners a week, returned. A whole bedtime story with all of you in the room. The walk to school where you heard the second half of the sentence. The first coffee, actually tasted.
+      </p>
+      <p>
+        That time was never gone. It was happening around you while your attention was somewhere else. What changed is not your schedule. <strong>What changed is who shows up to it.</strong>
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <span class="label">What this is not</span>
+    <div class="prose">
+      <p>
+        There is no grade here. No percentile, no bar creeping toward a target, no number ranking you against strangers. Presence doesn't work like that, and neither do we.
+      </p>
+      <p>
+        Both answers were yours, a few weeks apart. The words above are simply the distance between them — and the person you described this week is the one reading this now.
+      </p>
+    </div>
+  </section>
+
+  <div class="page-pause">
+    <p>
+      Before you close this tab: ten seconds.<br>
+      Look up from the screen. Notice the room you came back to.<br>
+      We'll wait.
+    </p>
+  </div>
+
+  <hr class="divider">
+
+  <div class="closing">
+    <a class="closing__give" href="../index.html">Give this feeling to someone &rarr;</a>
+    <p class="closing__sub">You know exactly who came to mind just now.</p>
+
+    <div class="share">
+      <a id="shareLink">Share this report</a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  Pulse &middot; Amsterdam<br>
+  Written from your own answers. Nothing else was consulted.
+</footer>
+
+<script>
+  (function () {
+    var link = document.getElementById('shareLink');
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var url = window.location.href;
+      function done() {
+        var prev = link.textContent;
+        link.textContent = 'Link copied';
+        setTimeout(function () { link.textContent = prev; }, 2200);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, done);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = url;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (err) {}
+        document.body.removeChild(ta);
+        done();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>

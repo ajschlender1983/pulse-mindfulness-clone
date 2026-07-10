@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse — Call Script — Spaces Decision Call</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap');
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-family: 'DM Sans', -apple-system, sans-serif; font-size: 15px; -webkit-font-smoothing: antialiased; color: #575344; }
+  body { min-height: 100vh; background: #EBE7D4; padding: 40px 20px; }
+  .preview-banner { position: fixed; top: 0; left: 0; right: 0; background: rgba(249,246,229,0.94); backdrop-filter: blur(24px); border-bottom: 1px solid rgba(66,61,50,0.14); padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; z-index: 10; }
+  .preview-banner .label { font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8a8578; }
+  .preview-banner .meta { font-family: 'DM Mono', ui-monospace, monospace; font-size: 12px; color: rgba(66,61,50,0.45); }
+  .script-frame { max-width: 600px; margin: 80px auto 60px; }
+  .script-header { text-align: center; margin-bottom: 40px; }
+  .script-eyebrow { font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a8578; margin-bottom: 16px; }
+  .script-title { font-size: 28px; font-weight: 400; letter-spacing: -0.04em; color: #423D32; margin-bottom: 8px; }
+  .script-duration { font-family: 'DM Mono', ui-monospace, monospace; font-size: 13px; color: rgba(66,61,50,0.45); }
+  .doc-card { background: #F9F6E5; border: 1px solid rgba(66,61,50,0.10); border-radius: 16px; padding: 24px 28px; margin-bottom: 20px; box-shadow: 0 12px 30px rgba(66,61,50,0.08); }
+  .section-label { font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #8a8578; margin-bottom: 12px; }
+  .section-body { font-size: 15px; color: #575344; line-height: 1.7; letter-spacing: -0.01em; }
+  .section-body strong { color: #1A1C22; font-weight: 500; }
+  .beat-list { padding-left: 20px; }
+  .beat-list li { font-size: 15px; color: #575344; line-height: 1.7; margin-bottom: 12px; }
+  .beat-list li::marker { color: #C9A227; font-family: 'DM Mono', ui-monospace, monospace; }
+  .beat-list li strong { color: #1A1C22; font-weight: 500; }
+  .say-line { border-left: 2px solid #C9A227; padding-left: 16px; margin: 12px 0; color: #423D32; font-size: 15px; line-height: 1.7; }
+  .never-list { list-style: none; }
+  .never-list li { font-size: 15px; color: #575344; line-height: 1.7; margin-bottom: 12px; padding-left: 18px; position: relative; }
+  .never-list li::before { content: "—"; position: absolute; left: 0; color: #B0764F; }
+  .never-list li strong { color: #1A1C22; font-weight: 500; }
+  .cm-placeholder { display: inline-block; background: rgba(201,162,39,0.10); border: 1.5px dashed rgba(201,162,39,0.55); border-radius: 4px; padding: 1px 7px; color: #8A6D14; font-weight: 500; font-size: 13px; font-style: normal; letter-spacing: 0.02em; }
+</style>
+</head>
+<body>
+<div class="preview-banner">
+  <span class="label">Preview Mode — Call Script</span>
+  <span class="meta">spc-05 · Phone / Zoom · Day 14</span>
+</div>
+<div class="script-frame">
+  <div class="script-header">
+    <div class="script-eyebrow">Pulse Cadence · Spaces Decision</div>
+    <h1 class="script-title">The Decision Call</h1>
+    <p class="script-duration">25 minutes · their space on the calendar, not ours</p>
+  </div>
+
+  <div class="doc-card">
+    <div class="section-label">Goal</div>
+    <p class="section-body">Leave the call with a <strong>shaped pilot</strong>: which space or team, how many rings, and a sizing-day date on the calendar. Not a signed contract — a shape. If they need time, leave with a follow-up date instead. Both are wins. Pressure is the only loss.</p>
+  </div>
+
+  <div class="doc-card">
+    <div class="section-label">Opening</div>
+    <div class="say-line">"Thanks for the time, <span class="cm-placeholder">{{first_name}}</span>. I've read your assessment. Before I say anything — what does two in the afternoon feel like at <span class="cm-placeholder">{{company_name}}</span>?"</div>
+    <p class="section-body">Then be quiet and listen. Their answer is the call. Everything you propose from here gets tied back to what they just described.</p>
+  </div>
+
+  <div class="doc-card">
+    <div class="section-label">Three beats</div>
+    <ol class="beat-list">
+      <li><strong>Their space's rhythm.</strong> Mirror their words back. Ask when the day is loudest, and when people are physically there but somewhere else in their heads. You're finding the hour the pilot will serve — let them name it.</li>
+      <li><strong>The pilot shape.</strong> One team or one floor. <span class="cm-placeholder">{{ring_count}}</span> rings, one per person, each sized to its own hand. The shared quiet hour they chose. One month, then the team report — the group's own before-and-after words, no names.</li>
+      <li><strong>Sizing day logistics.</strong> Pick the date on the call. One afternoon covers forty people — five minutes each. We bring the sizers and run the table; they provide a quiet corner and tell people when to drop by.</li>
+    </ol>
+  </div>
+
+  <div class="doc-card">
+    <div class="section-label">What NOT to say</div>
+    <ul class="never-list">
+      <li><strong>Never "ROI on mindfulness."</strong> If they ask for it, the honest answer: the measurable story is the team's own words, before and after, anonymous. That's the only number we'd trust, so it's the only one we sell.</li>
+      <li><strong>Never individual data.</strong> The ring reports nothing and no one is watched. If they ask for per-person reporting, the answer is a calm no — that promise to the wearer is the reason the ring works at all.</li>
+      <li><strong>No promised feelings.</strong> "Your team may notice," never "your team will feel." No urgency, no expiring pricing, no exclamation energy.</li>
+    </ul>
+  </div>
+
+  <div class="doc-card">
+    <div class="section-label">Close</div>
+    <p class="section-body">If they're ready: <strong>"I'll send the launch kit today and confirm the sizing day for <span class="cm-placeholder">{{sizing_day_date}}</span>."</strong> If they're not: <strong>"Take the time you need. I'll write on <span class="cm-placeholder">{{followup_date}}</span> — nothing moves without you."</strong> Either way, end one minute early. Calm is the brand, on calls too.</p>
+  </div>
+</div>
+</body>
+</html>

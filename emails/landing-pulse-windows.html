@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse — Your Pulse Windows</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  --cream:        #EBE7D4;
+  --cream-warm:   #F9F6E5;
+  --ink:          #1A1C22;
+  --brown:        #423D32;
+  --accent:       #E3F47D;
+  --accent-text:  #101828;
+  --honey:        #C9A227;
+  --muted:        #8a8578;
+  --body-text:    #575344;
+  --line:         rgba(66,61,50,0.14);
+  --font: "DM Sans", sans-serif;
+  --mono: "DM Mono", monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 { font-weight: 400; letter-spacing: -0.04em; line-height: 1.02; color: var(--brown); }
+p { letter-spacing: -0.03em; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+.label {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.btn--pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: var(--accent-text);
+  border: none;
+  border-radius: 100px;
+  padding: 15px 46px;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform .25s ease, filter .25s ease;
+}
+.btn--pill:hover { filter: brightness(1.05); transform: translateY(-1px); }
+
+/* ---------- nav ---------- */
+.nav {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 28px 24px 0;
+}
+.nav__logo {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  color: var(--ink);
+}
+.nav__logo-dot { color: var(--honey); font-size: 20px; margin-left: 2px; }
+.nav__tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ---------- hero ---------- */
+.hero {
+  max-width: 880px;
+  margin: 36px auto 0;
+  padding: 0 24px;
+}
+.hero__img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 30px 80px rgba(66,61,50,0.12);
+}
+.hero__head {
+  max-width: 640px;
+  margin: 56px auto 0;
+  text-align: center;
+  padding: 0 24px;
+}
+.hero__head .label { margin-bottom: 18px; }
+.hero__head h1 {
+  font-size: clamp(38px, 7vw, 64px);
+}
+.hero__head p.lede {
+  margin: 26px auto 0;
+  max-width: 480px;
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--body-text);
+}
+
+/* ---------- sections ---------- */
+.section {
+  max-width: 880px;
+  margin: 88px auto 0;
+  padding: 0 24px;
+}
+.section > .label { text-align: center; margin-bottom: 36px; display: block; }
+
+.windows {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 720px) {
+  .windows { grid-template-columns: 1fr; }
+}
+.window-card {
+  background: var(--cream-warm);
+  border-radius: 18px;
+  padding: 34px 30px 38px;
+  box-shadow: 0 12px 30px rgba(66,61,50,0.08);
+}
+.window-card .win-time {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--honey);
+  margin-bottom: 14px;
+}
+.window-card h3 {
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+.window-card p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--body-text);
+}
+
+/* ---------- steps ---------- */
+.steps {
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--cream-warm);
+  border-radius: 22px;
+  padding: 44px 48px;
+  box-shadow: 0 12px 30px rgba(66,61,50,0.08);
+}
+@media (max-width: 600px) { .steps { padding: 32px 26px; } }
+.step {
+  display: flex;
+  gap: 20px;
+  padding: 18px 0;
+}
+.step + .step { border-top: 1px solid var(--line); }
+.step__num {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--honey);
+  padding-top: 3px;
+  flex: 0 0 24px;
+}
+.step__body strong {
+  display: block;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+  font-size: 17px;
+}
+.step__body p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--body-text);
+}
+
+/* ---------- quiet note ---------- */
+.quiet {
+  max-width: 560px;
+  margin: 88px auto 0;
+  padding: 0 24px;
+  text-align: center;
+}
+.quiet p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--body-text);
+}
+.quiet p strong { color: var(--ink); font-weight: 500; }
+
+/* ---------- pause ---------- */
+.pause-block {
+  max-width: 480px;
+  margin: 80px auto 0;
+  text-align: center;
+  padding: 0 24px;
+}
+.pause-block::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd7c3;
+  margin: 0 auto 36px;
+}
+.pause-block p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+/* ---------- cta ---------- */
+.cta {
+  text-align: center;
+  margin: 64px auto 0;
+  padding: 0 24px;
+}
+.cta p.hint {
+  margin-top: 18px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ---------- footer ---------- */
+.footer {
+  max-width: 880px;
+  margin: 100px auto 0;
+  padding: 28px 24px 48px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer p, .footer a {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(66,61,50,0.45);
+  line-height: 1.9;
+}
+.footer a { text-decoration: underline; text-underline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__logo">pulse<span class="nav__logo-dot">.</span></div>
+  <div class="nav__tag">setup &middot; two minutes</div>
+</nav>
+
+<header class="hero">
+  <img class="hero__img" src="images/hero-landing-pulse-windows.png" alt="A day laid out in soft light — car keys, a desk lunch, a bedside lamp — the gold band resting between them">
+  <div class="hero__head">
+    <span class="label">One small decision</span>
+    <h1>Your pulse windows</h1>
+    <p class="lede">
+      The ring taps a few times an hour — but only inside windows you choose. Pick three. Anchor them to moments that already exist in your day.
+    </p>
+  </div>
+</header>
+
+<section class="section">
+  <span class="label">Three real moments</span>
+  <div class="windows">
+    <div class="window-card">
+      <div class="win-time">Morning</div>
+      <h3>The commute</h3>
+      <p>The drive, the train, the walk — the stretch of day most likely to disappear entirely. A tap here lands you back behind your own eyes before the day takes over.</p>
+    </div>
+    <div class="window-card">
+      <div class="win-time">Midday</div>
+      <h3>The desk lunch</h3>
+      <p>The lunch you eat with one hand while reading with the other. A pulse in this window is an invitation to taste one bite. Just the one.</p>
+    </div>
+    <div class="window-card">
+      <div class="win-time">Evening</div>
+      <h3>The hour before sleep</h3>
+      <p>The hour that decides how the night goes. A tap here may catch you mid-scroll — and offer you the rest of the evening back.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <span class="label">Setting them in the app</span>
+  <div class="steps">
+    <div class="step">
+      <div class="step__num">01</div>
+      <div class="step__body">
+        <strong>Open the Pulse app</strong>
+        <p>From the home screen, choose <em>Windows</em>. You'll see a quiet map of your day, empty for now.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step__num">02</div>
+      <div class="step__body">
+        <strong>Place three windows</strong>
+        <p>Drag each one onto a real moment — the commute, the desk lunch, the hour before sleep. Yours may differ. Real beats ideal.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step__num">03</div>
+      <div class="step__body">
+        <strong>Choose a rhythm, then close the app</strong>
+        <p>Gentle, standard, or rare. That's the last decision. The ring takes it from here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="quiet">
+  <p>
+    One thing worth knowing: <strong>the windows are the only thing the app does.</strong> It never asks how it went. It never reports back. There is nothing to check, nothing to keep up, no number waiting for you in the morning. The practice lives on your finger, not on your phone.
+  </p>
+</div>
+
+<div class="pause-block">
+  <p>Before you set anything — ten seconds.<br>Where would a tap have found you an hour ago?<br>That's probably your first window.</p>
+</div>
+
+<div class="cta">
+  <a href="#" class="btn--pill">Set your windows in the app</a>
+  <p class="hint">two minutes, once — then the ring does the remembering</p>
+</div>
+
+<footer class="footer">
+  <p>Pulse &middot; Amsterdam</p>
+  <p><a href="#">Help with setup</a> &middot; <a href="#">View in browser</a></p>
+</footer>
+
+</body>
+</html>

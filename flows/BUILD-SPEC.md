@@ -43,16 +43,21 @@ Target repo: this repo (`PulseMindfulness-Clone`), branch `agent/presence-voice-
 ## File layout (target repo root)
 
 ```
-presence-flows.html      ← the Cadence app (port of opus-voice-flow-map.html)
-emails/                  ← all email/sms/call/social/form/landing assets
-email-images/            ← Gemini-generated heroes, <slug>.png
+presence-flow-map.html   ← the Cadence app (port of opus-voice-flow-map.html)
+emails/                  ← all email/sms/call/social/landing assets
+emails/images/           ← Gemini-generated heroes, hero-<slug>.png
 tools/generate-email-images.py   ← manifest-driven generator
+tools/email-image-manifest.json  ← slug → prompt/aspect/use_ref
 flows/BUILD-SPEC.md      ← this file
+flows/consult-{sage,brand,atlas}.md ← expert specs
+flows/presence-seeded-flows.json    ← canonical SEEDED_FLOWS data
 ```
 
-assetRefs in SEEDED_FLOWS use relative paths `emails/<file>.html` (served from
-repo root via python3 -m http.server 8842). Funnel links: `index.html`,
-`presence-quiz.html`, `presence-experience.html` (repo root).
+assetRefs in SEEDED_FLOWS use relative paths `emails/<file>.html`; email hero
+imgs use `src="images/hero-<slug>.png"` (relative to the email). ZERO absolute
+paths anywhere. Funnel links: `index.html`, `presence-quiz.html`,
+`presence-experience.html` (repo root). Port details: flows/consult-atlas.md
+(resolver gut at 4285–4292, localStorage renames, Supabase bridge excision).
 
 ## Design tokens — Cadence app (cream editorial; replaces OPUS dark)
 
