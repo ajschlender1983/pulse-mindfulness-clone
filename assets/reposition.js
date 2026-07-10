@@ -34,50 +34,70 @@
       }
       return null;
     }
-    function add(el, updHTML, updText, reason) {
+    function add(el, updHTML, updText, reason, conn) {
       if (!el) return;
       // make sure any intro-animation opacity does not hide restored originals
       el.querySelectorAll('[style*="opacity"]').forEach(function (n) { n.style.opacity = '1'; });
       if (getComputedStyle(el).opacity === '0') el.style.opacity = '1';
-      defs.push({ el: el, orig: Array.prototype.slice.call(el.childNodes), upd: updHTML, updText: updText, reason: reason });
+      conn = conn || {};
+      defs.push({ el: el, orig: Array.prototype.slice.call(el.childNodes),
+        upd: updHTML, updText: updText, reason: reason,
+        conn: conn.html || updHTML, connText: conn.text || updText, connReason: conn.reason || reason });
     }
 
     add(document.querySelector('h1.hero-title'),
       'A million moments.<br>Don’t miss this one.',
       'A million moments. Don’t miss this one.',
-      'Leads with a loss-framed relational hook instead of the abstract attribute “presence.” “A million moments” becomes the ownable signature; the turn to “this one” makes the stakes concrete.');
+      'Leads with a loss-framed relational hook instead of the abstract attribute “presence.” “A million moments” becomes the ownable signature; the turn to “this one” makes the stakes concrete.',
+      { html: 'Come back<br>to each other.', text: 'Come back to each other.',
+        reason: 'Connection state: leads we-centric. Names the drift between people and the way back to each other, not just back to the moment.' });
 
     add(document.querySelector('p.paragraph-medium.intro'),
       'A gentle pulse brings you back to the present. No screens, no scores, no noise.',
       'A gentle pulse brings you back to the present. No screens, no scores, no noise.',
-      'Tightened: drops the redundant time-stamp, keeps the mechanism and the anti-noise wedge in one clean line.');
+      'Tightened: drops the redundant time-stamp, keeps the mechanism and the anti-noise wedge in one clean line.',
+      { html: 'A gentle pulse brings you back to the person in front of you. Send one to someone far away, and you are present together.',
+        text: 'A gentle pulse brings you back to the person in front of you. Send one to someone far away, and you are present together.',
+        reason: 'Introduces the shared mechanism: couples mode and a vibration you can send, so presence becomes something two people feel at the same time.' });
 
     add(byText('p', 'Become Calm, Focused'),
       'Be here for it.',
       'Be here for it.',
-      'Cut to the shortest possible relational tag, and it frees “be here for the moment you are in” so it is not echoed at the close.');
+      'Cut to the shortest possible relational tag, and it frees “be here for the moment you are in” so it is not echoed at the close.',
+      { html: 'You are not in this alone.', text: 'You are not in this alone.',
+        reason: 'Anti-isolation tag: the we-centric turn, aimed at the loneliness that is the real pain under “connection.”' });
 
     add(byText('h2', 'micro-pause'),
       'So much passes while we’re somewhere else. One pulse brings you back.',
       'So much passes while we’re somewhere else. One pulse brings you back.',
-      'Loss to agency sequence, de-duplicated: “a million moments” now lives only in the hero so it stays an ownable signature.');
+      'Loss to agency sequence, de-duplicated: “a million moments” now lives only in the hero so it stays an ownable signature.',
+      { html: 'We are all somewhere else, together and alone. One pulse brings us back to each other.',
+        text: 'We are all somewhere else, together and alone. One pulse brings us back to each other.',
+        reason: 'Collective loss-to-agency: names the shared drift and the shared return, moving me to we.' });
 
     var benefits = document.querySelectorAll('h2.heading-medium.text-grad-blue');
     if (benefits.length >= 4) {
       add(benefits[0], 'Carry less,<br>notice more', 'Carry less, notice more',
-        'Moves the benefit heading from a clinical attribute to a felt outcome. The mechanism stays in the line beneath as proof.');
+        'Moves the benefit heading from a clinical attribute to a felt outcome. The mechanism stays in the line beneath as proof.',
+        { html: 'Feel less<br>alone', text: 'Feel less alone', reason: 'Reframes the calm benefit as the relief of loneliness, the real pain under connection.' });
       add(benefits[1], 'Your best work<br>needs all of you', 'Your best work needs all of you',
-        'Reframes focus as presence, not hustle. “All of you” carries a double meaning — your full attention and your whole self in the room — tying the focus benefit back to the ring. This exact line was refined through 5 dedicated EBI passes.');
+        'Reframes focus as presence, not hustle. “All of you” carries a double meaning — your full attention and your whole self in the room — tying the focus benefit back to the ring. This exact line was refined through 5 dedicated EBI passes.',
+        { html: 'Be all the way<br>here for them', text: 'Be all the way here for them', reason: 'Focus reframed toward being fully with your people, not just your own work.' });
       add(benefits[2], 'Be there for<br>the people you love', 'Be there for the people you love',
-        'Territory A: the relational payoff, the deepest pull and the highest-intent buyer.');
+        'Territory A: the relational payoff, the deepest pull and the highest-intent buyer.',
+        { html: 'Come back to<br>the ones you love', text: 'Come back to the ones you love', reason: 'The relational core, said as a return to each other.' });
       add(benefits[3], 'The joy is<br>already here', 'The joy is already here',
-        'Gain frame to close the benefit ladder warm. It sets up the closing line, where “here” blossoms into more than joy.');
+        'Gain frame to close the benefit ladder warm. It sets up the closing line, where “here” blossoms into more than joy.',
+        { html: 'Feel each<br>other again', text: 'Feel each other again', reason: 'Joy reframed as a shared feeling between people, the we-centric gain.' });
     }
 
     add(document.querySelector('h2.text-grad-green'),
       'Other devices pull you away. Pulse brings you back.',
       'Other devices pull you away. Pulse brings you back.',
-      'The anti-notification wedge, tightened to its cleanest contrast: the attention economy pulls you away, Pulse pulls you back.');
+      'The anti-notification wedge, tightened to its cleanest contrast: the attention economy pulls you away, Pulse pulls you back.',
+      { html: 'Other devices pull you apart. Pulse brings you back to each other.',
+        text: 'Other devices pull you apart. Pulse brings you back to each other.',
+        reason: 'The anti-notification wedge with the connection twist: the attention economy pulls people apart, Pulse brings them back to each other.' });
 
     add(byText('h2.heading-large', 'Be in your moment'),
       '<span class="rp-cycle"><span class="rp-cycle__w">joy</span></span><br>is right here',
@@ -159,6 +179,34 @@
       mediaBands.push(sec);
     }
 
+    // Connection state: a "presence you feel together" band, shown only in Connection mode
+    var connBands = [];
+    (function () {
+      var closeH2 = byText('h2.heading-large', 'Be in your moment') || byText('h2', 'Be here for the moment');
+      var closeSec = closeH2 ? closeH2.closest('section') : null;
+      if (!closeSec) return;
+      var sec = document.createElement('section');
+      sec.className = 'rp-media rp-band rp-connband';
+      var head = document.createElement('div'); head.className = 'rp-band__head';
+      var e = document.createElement('div'); e.className = 'rp-band__eyebrow'; e.textContent = 'Presence you feel together';
+      var t = document.createElement('h2'); t.className = 'rp-band__title'; t.textContent = 'Connection is right here.';
+      var s = document.createElement('div'); s.className = 'rp-band__sub'; s.textContent = 'Quiet by design. Once a day, so it stays a signal and never noise.';
+      head.appendChild(e); head.appendChild(t); head.appendChild(s); sec.appendChild(head);
+      var grid = document.createElement('div'); grid.className = 'rp-grid';
+      [['Couples mode', 'Two rings, one pulse. You and your person feel the same gentle moment at the same time, wherever you are.'],
+       ['A vibration you can send', 'Send one quiet pulse to someone you love. A secret “I am thinking of you,” felt on their finger, once a day.'],
+       ['A moment, together', 'Once in a while, everyone wearing Pulse feels it at once. A breath, a thank-you, a hug for whoever is beside you. You are not alone in it.']
+      ].forEach(function (p) {
+        var c = document.createElement('article'); c.className = 'rp-feat';
+        var h = document.createElement('h3'); h.textContent = p[0];
+        var d = document.createElement('p'); d.textContent = p[1];
+        c.appendChild(h); c.appendChild(d); grid.appendChild(c);
+      });
+      sec.appendChild(grid);
+      closeSec.parentNode.insertBefore(sec, closeSec);
+      connBands.push(sec);
+    })();
+
     // Band 1: "A million moments" gallery, after the micro-pause section
     var microH2 = byText('h2', 'micro-pause');
     var microSection = microH2 ? microH2.closest('section') : null;
@@ -234,8 +282,10 @@
     // copy-change hover handlers (bound to the persistent element)
     defs.forEach(function (d) {
       d.el.addEventListener('mouseenter', function (e) {
-        var repositioned = document.body.classList.contains('rp-mode-updated');
-        if (repositioned)
+        var m = document.body.getAttribute('data-rp-mode');
+        if (m === 'connection')
+          showTip(e, 'Connection', d.connReason, null, METHOD);
+        else if (m === 'updated')
           showTip(e, 'Repositioned', d.reason, null, METHOD);
         else
           showTip(e, 'Becomes', d.reason, '“' + d.updText + '”', METHOD);
@@ -313,18 +363,22 @@
 
     /* -------------------------------------------------- apply mode */
     function apply(mode) {
-      var updated = mode === 'updated';
+      var changed = (mode === 'updated' || mode === 'connection');
       defs.forEach(function (d) {
-        if (updated) { d.el.replaceChildren(frag(d.upd)); d.el.classList.add('rp-changed'); }
+        if (mode === 'connection') { d.el.replaceChildren(frag(d.conn)); d.el.classList.add('rp-changed'); }
+        else if (mode === 'updated') { d.el.replaceChildren(frag(d.upd)); d.el.classList.add('rp-changed'); }
         else { d.el.replaceChildren.apply(d.el, d.orig); d.el.classList.remove('rp-changed'); }
       });
-      mediaBands.forEach(function (b) { b.style.display = updated ? 'block' : 'none'; });
-      document.body.classList.toggle('rp-mode-updated', updated);
-      btnOrig.classList.toggle('rp-on', !updated);
-      btnNew.classList.toggle('rp-on', updated);
-      toggle.classList.toggle('rp-updated', updated);
+      mediaBands.forEach(function (b) { b.style.display = changed ? 'block' : 'none'; });
+      connBands.forEach(function (b) { b.style.display = (mode === 'connection') ? 'block' : 'none'; });
+      document.body.classList.toggle('rp-mode-updated', changed);
+      document.body.setAttribute('data-rp-mode', mode);
+      btnOrig.classList.toggle('rp-on', mode === 'original');
+      btnNew.classList.toggle('rp-on', mode === 'updated');
+      btnConn.classList.toggle('rp-on', mode === 'connection');
+      toggle.classList.toggle('rp-updated', changed);
       try { localStorage.setItem('rp-mode', mode); } catch (e) {}
-      if (updated) startCycle(); else stopCycle();
+      if (changed) startCycle(); else stopCycle();
       if (window.ScrollTrigger) { try { window.ScrollTrigger.refresh(); } catch (e) {} }
     }
 
@@ -334,13 +388,15 @@
     var lab = document.createElement('span'); lab.className = 'rp-lab'; lab.textContent = 'Positioning';
     var btnOrig = document.createElement('button'); btnOrig.type = 'button'; btnOrig.textContent = 'Original';
     var btnNew = document.createElement('button'); btnNew.type = 'button'; btnNew.textContent = 'Repositioned';
-    sw.appendChild(lab); sw.appendChild(btnOrig); sw.appendChild(btnNew);
+    var btnConn = document.createElement('button'); btnConn.type = 'button'; btnConn.textContent = 'Connection';
+    sw.appendChild(lab); sw.appendChild(btnOrig); sw.appendChild(btnNew); sw.appendChild(btnConn);
     var hint = document.createElement('div'); hint.className = 'rp-hint'; hint.textContent = 'Hover highlighted copy to see why it changed';
     toggle.appendChild(sw); toggle.appendChild(hint);
     document.body.appendChild(toggle);
 
     btnOrig.addEventListener('click', function () { apply('original'); });
     btnNew.addEventListener('click', function () { apply('updated'); });
+    btnConn.addEventListener('click', function () { apply('connection'); });
 
     var saved = 'original';
     try { saved = localStorage.getItem('rp-mode') || 'original'; } catch (e) {}
