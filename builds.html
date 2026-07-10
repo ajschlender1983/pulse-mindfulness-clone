@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pulse — Build Index</title>
+<meta name="description" content="An index of everything built for the Pulse repositioning: the site, the quizzes, the journey, the image system, and the strategy." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#EBE7D4; --warm:#F9F6E5; --ink:#1A1C22; --brown:#423D32;
+    --lime:#E3F47D; --blue:#B3C7D3; --muted:#8a8578; --line:#ddd7c3;
+    --font:"DM Sans",sans-serif; --mono:"DM Mono",monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{ font-family:var(--font); background:var(--cream); color:var(--ink);
+    letter-spacing:-0.02em; -webkit-font-smoothing:antialiased; line-height:1.5;
+    padding:clamp(30px,6vw,80px) clamp(20px,5vw,40px); }
+  .shell{ max-width:1060px; margin:0 auto; }
+  .brand{ display:flex; align-items:baseline; font-weight:600; font-size:22px; letter-spacing:-0.05em; }
+  .brand i{ color:#cfe06a; font-style:normal; margin-left:2px; }
+  .eyebrow{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-top:26px; }
+  h1{ font-weight:600; font-size:clamp(32px,6vw,56px); letter-spacing:-0.045em; line-height:1.03; margin:14px 0 0; text-wrap:balance; }
+  .lede{ font-size:clamp(17px,2.2vw,20px); color:var(--brown); max-width:60ch; margin:18px 0 0; }
+
+  .seclab{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
+    border-top:1px solid var(--line); padding-top:14px; margin-top:clamp(40px,6vw,64px); }
+  .grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:22px; }
+  .card{ display:flex; flex-direction:column; background:var(--warm); border:1px solid var(--line);
+    border-radius:18px; padding:24px 26px; text-decoration:none; color:inherit; transition:transform .18s ease, box-shadow .18s ease; }
+  a.card:hover{ transform:translateY(-3px); box-shadow:0 18px 44px rgba(66,61,50,.10); }
+  .card__top{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+  .card__n{ font-family:var(--mono); font-size:12px; color:var(--muted); }
+  .status{ font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; padding:4px 10px; border-radius:100px; }
+  .status.live{ background:var(--lime); color:var(--ink); }
+  .status.wip{ background:var(--blue); color:var(--ink); }
+  .status.doc{ background:var(--cream); border:1px solid var(--line); color:var(--brown); }
+  .status.ext{ background:#1A1C22; color:var(--lime); }
+  .card h3{ font-size:20px; font-weight:600; letter-spacing:-0.03em; }
+  .card p{ font-size:15px; color:var(--brown); margin-top:8px; }
+  .card .path{ font-family:var(--mono); font-size:11.5px; color:var(--muted); margin-top:14px; letter-spacing:0; word-break:break-all; }
+  .card__arrow{ margin-top:14px; font-family:var(--mono); font-size:12px; color:#7d84a6; }
+  a.card:hover .card__arrow{ color:var(--ink); }
+
+  .list{ margin-top:22px; display:flex; flex-direction:column; gap:2px; }
+  .row{ display:grid; grid-template-columns:1fr auto; gap:16px; align-items:baseline; padding:15px 4px; border-bottom:1px solid var(--line); }
+  .row h4{ font-size:16px; font-weight:500; }
+  .row p{ font-size:14px; color:var(--muted); margin-top:3px; }
+  .row .tag{ font-family:var(--mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); white-space:nowrap; }
+
+  footer{ margin-top:clamp(44px,7vw,72px); border-top:1px solid var(--line); padding-top:20px;
+    font-family:var(--mono); font-size:12px; color:var(--muted); display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+  footer a{ color:var(--brown); }
+  @media(max-width:720px){ .grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="brand">pulse<i>·</i></div>
+  <div class="eyebrow">Build Index · Repositioning workstream</div>
+  <h1>Everything we've built for Pulse.</h1>
+  <p class="lede">One hub for the site, the quizzes, the customer journey, the image system, and the strategy behind the shift from "presence" to the life it gives back.</p>
+
+  <div class="seclab">Live builds</div>
+  <div class="grid">
+
+    <a class="card" href="index.html">
+      <div class="card__top"><span class="card__n">01</span><span class="status live">Live</span></div>
+      <h3>The site, with an A/B toggle</h3>
+      <p>A pixel-for-pixel rebuild of the original site, plus a floating toggle between the original copy and the repositioned copy, hover tooltips on every change, and media placeholders with copyable prompts.</p>
+      <div class="path">index.html</div>
+      <div class="card__arrow">Open →</div>
+    </a>
+
+    <a class="card" href="presence-quiz.html">
+      <div class="card__top"><span class="card__n">02</span><span class="status live">Live</span></div>
+      <h3>The Presence Quiz</h3>
+      <p>A take-it-yourself quiz built on the six Alchemy of Joy pillars. Returns a Presence Map, then a personalized Cost-of-the-Gap at the CTA, always turned toward reclaimable life.</p>
+      <div class="path">presence-quiz.html</div>
+      <div class="card__arrow">Open →</div>
+    </a>
+
+    <a class="card" href="presence-experience.html">
+      <div class="card__top"><span class="card__n">03</span><span class="status wip">In progress</span></div>
+      <h3>The Presence Experience</h3>
+      <p>An immersive, cinematic version of the quiz. Momentum scroll used for settling not speed, a pulsing ring as a presence anchor, and a breath-meter moment. Motion that earns its place.</p>
+      <div class="path">presence-experience.html</div>
+      <div class="card__arrow">Coming →</div>
+    </a>
+
+    <a class="card" href="https://claude.ai/code/artifact/658b39ee-6d4d-475e-be6e-2cbd4ed61b19">
+      <div class="card__top"><span class="card__n">04</span><span class="status ext">Artifact</span></div>
+      <h3>The Customer Journey</h3>
+      <p>The sentiment funnel from unaware skeptic to advocate. A rising sentiment curve across 13 touchpoints, with the Cost-of-the-Gap as the pivot. A shareable one-pager for the founder conversation.</p>
+      <div class="path">claude.ai artifact</div>
+      <div class="card__arrow">Open →</div>
+    </a>
+
+    <a class="card" href="simple/index.html">
+      <div class="card__top"><span class="card__n">05</span><span class="status live">Live</span></div>
+      <h3>Clean hand-built version</h3>
+      <p>A from-scratch rebuild with readable markup and a tokenized stylesheet. Best when you want to restructure or restyle freely rather than edit the Webflow mirror.</p>
+      <div class="path">simple/index.html</div>
+      <div class="card__arrow">Open →</div>
+    </a>
+
+    <a class="card" href="https://github.com/ajschlender1983/pulse-mindfulness-clone">
+      <div class="card__top"><span class="card__n">06</span><span class="status ext">GitHub</span></div>
+      <h3>The repository</h3>
+      <p>Everything, versioned. Source for the site, both quizzes, the image generator, and the assets. Deployed to GitHub Pages.</p>
+      <div class="path">github.com/ajschlender1983/pulse-mindfulness-clone</div>
+      <div class="card__arrow">Open →</div>
+    </a>
+
+  </div>
+
+  <div class="seclab">Image system</div>
+  <div class="grid">
+    <a class="card" href="journey-images/gallery.html">
+      <div class="card__top"><span class="card__n">07</span><span class="status wip">On generation</span></div>
+      <h3>The journey, in pictures</h3>
+      <p>A character-consistent image set (Maya, numb to generous) across seven stages and three lenses, generated with Nano Banana Pro from the five-director creative bible. Gallery appears here once generated.</p>
+      <div class="path">journey-images/gallery.html · tools/generate-journey-images.py</div>
+      <div class="card__arrow">Open →</div>
+    </a>
+    <div class="card">
+      <div class="card__top"><span class="card__n">08</span><span class="status doc">Doc</span></div>
+      <h3>The master image style</h3>
+      <p>The reusable photo and video prompt system: warm golden-hour film look, the six-pillar moments, the ring worn as a discovered detail, and the state / time-and-place / texture lenses.</p>
+      <div class="path">documented in the workstream</div>
+    </div>
+  </div>
+
+  <div class="seclab">Strategy</div>
+  <div class="list">
+    <div class="row"><div><h4>Positioning assessment</h4><p>Presence sold as the attribute versus the relational payoff. Four-expert panel, taglines, the compare-and-contrast.</p></div><div class="tag">Strategic Resolve</div></div>
+    <div class="row"><div><h4>Brand messaging guide</h4><p>Voice, do's and don'ts, empathy-first then evidence, and a diverse thinkers library. The hopeful gap.</p></div><div class="tag">Guide</div></div>
+    <div class="row"><div><h4>Copy workshop and five EBI passes</h4><p>The repositioned lines refined to the bone. "Your best work needs all of you." The cycling closer.</p></div><div class="tag">EBI</div></div>
+    <div class="row"><div><h4>Quiz design and the Cost-of-the-Gap</h4><p>Reclaimable-moments scoring, the two-stage reveal, and the time-and-opportunity cost at the sale.</p></div><div class="tag">Spec</div></div>
+    <div class="row"><div><h4>Founder-meeting discussion guide</h4><p>A question-led map from vision to bottleneck to where an AI-native operator adds value.</p></div><div class="tag">Guide</div></div>
+  </div>
+
+  <footer>
+    <span>Pulse · Presence, all the way through</span>
+    <span><a href="https://ajschlender1983.github.io/pulse-mindfulness-clone/">ajschlender1983.github.io/pulse-mindfulness-clone</a></span>
+  </footer>
+</div>
+</body>
+</html>
