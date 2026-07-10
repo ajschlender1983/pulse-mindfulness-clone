@@ -16,7 +16,7 @@
   --accent-text:  #101828;
   --honey:        #C9A227;
   --muted:        #8a8578;
-  --body-text:    #575344;
+  --body-text:    #474234;
   --line:         rgba(66,61,50,0.14);
   --font: "DM Sans", sans-serif;
   --mono: "DM Mono", monospace;
@@ -37,7 +37,7 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3 { font-weight: 400; letter-spacing: -0.04em; line-height: 1.02; color: var(--brown); }
+h1, h2, h3 { font-weight: 600; letter-spacing: -0.04em; line-height: 1.02; color: var(--ink); }
 p { letter-spacing: -0.03em; }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -45,9 +45,10 @@ a { color: inherit; text-decoration: none; }
 .label {
   font-family: var(--mono);
   font-size: 12px;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #6E6857;
   line-height: 1.4;
 }
 
@@ -62,9 +63,10 @@ a { color: inherit; text-decoration: none; }
   padding: 15px 46px;
   font-family: var(--font);
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.02em;
   cursor: pointer;
+  box-shadow: 0 10px 24px rgba(66,61,50,0.20);
   transition: transform .25s ease, filter .25s ease;
 }
 .btn--pill:hover { filter: brightness(1.05); transform: translateY(-1px); }
@@ -88,7 +90,7 @@ a { color: inherit; text-decoration: none; }
 .nav__tag {
   font-family: var(--mono);
   font-size: 12px;
-  color: var(--muted);
+  color: #6E6857;
 }
 
 /* ---------- hero ---------- */
@@ -119,17 +121,19 @@ a { color: inherit; text-decoration: none; }
 .samples > .label { text-align: center; margin-bottom: 28px; display: block; }
 .sample-line {
   background: var(--cream-warm);
+  border: 1px solid rgba(26,28,34,0.14);
   border-radius: 16px;
   padding: 20px 26px;
-  box-shadow: 0 12px 30px rgba(66,61,50,0.08);
+  box-shadow: 0 14px 34px rgba(66,61,50,0.12);
   margin-bottom: 12px;
 }
 .sample-line .sample-kind {
   font-family: var(--mono);
   font-size: 11px;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--honey);
+  color: #A67C00;
   margin-bottom: 8px;
 }
 .sample-line p {
@@ -146,18 +150,20 @@ a { color: inherit; text-decoration: none; }
 }
 .optin-card {
   background: var(--cream-warm);
+  border: 1px solid rgba(26,28,34,0.14);
   border-radius: 22px;
   padding: 44px 48px;
-  box-shadow: 0 12px 30px rgba(66,61,50,0.08);
+  box-shadow: 0 14px 34px rgba(66,61,50,0.12);
 }
 @media (max-width: 600px) { .optin-card { padding: 32px 26px; } }
 
 .field-label {
   font-family: var(--mono);
   font-size: 11px;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #6E6857;
   display: block;
   margin-bottom: 10px;
 }

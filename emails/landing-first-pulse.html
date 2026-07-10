@@ -35,12 +35,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2 { font-weight: 400; letter-spacing: -0.04em; line-height: 1.02; }
+h1, h2 { font-weight: 600; letter-spacing: -0.04em; line-height: 1.02; color: var(--ink); }
 
 .label {
   font-family: var(--mono);
   font-size: 12px;
-  color: var(--muted);
+  font-weight: 500;
+  color: #6E6857;
   line-height: 1.4;
 }
 
@@ -55,10 +56,11 @@ h1, h2 { font-weight: 400; letter-spacing: -0.04em; line-height: 1.02; }
   padding: 13px 46px;
   font-family: var(--font);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.02em;
   cursor: pointer;
   text-decoration: none;
+  box-shadow: 0 10px 24px rgba(66,61,50,0.20);
   transition: transform .25s ease, filter .25s ease;
 }
 .btn--pill:hover { filter: brightness(1.05); transform: translateY(-1px); }
@@ -101,12 +103,12 @@ h1, h2 { font-weight: 400; letter-spacing: -0.04em; line-height: 1.02; }
 .intro .label { margin-bottom: 22px; }
 .intro h1 {
   font-size: clamp(44px, 7vw, 84px);
-  color: var(--brown);
+  color: var(--ink);
   margin-bottom: 28px;
 }
 .intro p {
   font-size: 19px;
-  color: #575344;
+  color: #474234;
   max-width: 480px;
   margin: 0 auto 36px;
 }
@@ -155,13 +157,13 @@ h1, h2 { font-weight: 400; letter-spacing: -0.04em; line-height: 1.02; }
 .step .label { margin-bottom: 16px; }
 .step h2 {
   font-size: clamp(28px, 3.6vw, 40px);
-  color: var(--brown);
+  color: var(--ink);
   margin-bottom: 18px;
 }
 .step p {
   font-size: 18px;
   line-height: 1.65;
-  color: #575344;
+  color: #474234;
   max-width: 520px;
 }
 .step p + p { margin-top: 14px; }
@@ -176,12 +178,12 @@ h1, h2 { font-weight: 400; letter-spacing: -0.04em; line-height: 1.02; }
 }
 .closing h2 {
   font-size: clamp(32px, 4.6vw, 54px);
-  color: var(--brown);
+  color: var(--ink);
   margin-bottom: 26px;
 }
 .closing p {
   font-size: 18px;
-  color: #575344;
+  color: #474234;
   max-width: 460px;
   margin: 0 auto;
 }
