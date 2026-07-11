@@ -175,7 +175,7 @@
   <section class="stage" id="s4">
     <div class="held">
       <div class="film">
-        <video id="heldvid" src="motion/maya-car-soft.mp4" poster="emails/images/hero-email-quiz-results-soft.png" autoplay loop muted playsinline></video>
+        <video id="heldvid" src="film-strip/motion/held-loop.mp4" poster="film-strip/same/moment-14.png" autoplay loop muted playsinline></video>
         <div class="counter">24 / 24 · the same moment</div>
         <div class="fade"></div>
       </div>
@@ -201,17 +201,14 @@
 
 <script>
 (function(){
-  // ---- asset pools (already on disk) ----
-  var DIFFERENT = [
-    "story-images/darius-1.png","story-images/theo-1.png","story-images/ingrid-2.png",
-    "story-images/rosa-2.png","story-images/amara-ben-1.png","library/performance/perf-run.png",
-    "library/performance/perf-chef.png","library/performance/perf-surgeon.png",
-    "library/avatars/avatar-05.png","library/avatars/avatar-08.png","library/avatars/avatar-03.png",
-    "library/ethereal/eth-tide.png","story-images/darius-4.png","library/performance/perf-speaker.png",
-    "story-images/theo-4.png","library/avatars/avatar-02.png"
-  ];
-  // the held moment: the SAME frame repeated (24fps of one instant)
-  var SAME = "emails/images/hero-email-quiz-results-soft.png";
+  // ---- asset pools: purpose-shot film-strip frames ----
+  function pad(n){ return (n<10?'0':'')+n; }
+  // Autopilot: 24 genuinely DIFFERENT one-second frames (the days that blur).
+  var DIFFERENT = [];
+  for(var a=1;a<=24;a++){ DIFFERENT.push("film-strip/autopilot/auto-"+pad(a)+".png"); }
+  // Presence: 24 frames of the SAME moment (Maya, one small realization).
+  var SAMESEQ = [];
+  for(var s=1;s<=24;s++){ SAMESEQ.push("film-strip/same/moment-"+pad(s)+".png"); }
 
   function cell(src, tag){
     var d=document.createElement('div'); d.className='cell';
@@ -219,14 +216,13 @@
     if(tag==='video'){ m.autoplay=m.loop=m.muted=m.playsInline=true; }
     d.appendChild(m); return d;
   }
-  // Act 1 track: many different frames, duplicated for a seamless -50% loop
+  // Act 1 track: 24 different frames, duplicated for a seamless -50% loop
   var t1=document.getElementById('track1');
-  var seq1=DIFFERENT.concat(DIFFERENT);
-  seq1.forEach(function(s){ t1.appendChild(cell(s,'img')); });
-  // Act 3 track: the SAME frame across ~24 cells (the held moment), duplicated
+  DIFFERENT.concat(DIFFERENT).forEach(function(s){ t1.appendChild(cell(s,'img')); });
+  // Act 3 track: the 24 same-moment frames in sequence, duplicated — a real
+  // strip of one moment, each frame a fraction different, reading as one instant.
   var t2=document.getElementById('track2');
-  for(var i=0;i<24;i++){ t2.appendChild(cell(SAME,'img')); }
-  for(var j=0;j<24;j++){ t2.appendChild(cell(SAME,'img')); }
+  SAMESEQ.concat(SAMESEQ).forEach(function(s){ t2.appendChild(cell(s,'img')); });
 
   // reveal on scroll
   var io=new IntersectionObserver(function(es){

@@ -48,15 +48,22 @@ is whether you're living it at the speed you can actually see.
 6. **Motion earns its place.** If a strip animation doesn't carry the numb→present
    story, cut it. This is a story device first, a decoration never.
 
-## To generate later (needs image budget)
+## Purpose-shot frames (done — now literal)
 
-The prototype uses existing stills/loops. The device gets dramatically stronger
-with a purpose-shot **"same moment × 24" sequence**: 24 near-identical frames of
-one instant (e.g. Maya's face crossing one small realization), rendered as a true
-24-frame micro-loop — so the "held moment" is literally 24 frames of one second,
-not a Ken-Burns still. Queue: `tools/` sequence generator, aspect 3:2, one
-character-locked moment, micro-variation only. Also a cold "autopilot montage"
-of 24 genuinely different 1-second frames for the race strip.
+The device is no longer simulated. Two purpose-shot 24-frame sets drive it:
+- **`film-strip/same/moment-01..24.png`** — 24 frames of ONE moment (Maya at a
+  sunlit window, a small realization crossing her face: neutral → a smile that
+  reaches the eyes). Character-locked to the Maya reference; only micro-variation
+  frame to frame.
+- **`film-strip/autopilot/auto-01..24.png`** — 24 genuinely different, cold,
+  blurred one-second frames (subway, inbox, dishes, gridlock…): the days that blur.
+
+Generators: `tools/generate-film-strip.py`. Because the same-moment frames are
+generated independently, framing drifts slightly — a hard 24fps cut jitters. So
+`tools/make-film-strip-loop.sh` **motion-blends** them (crossfade tween, not
+motion-compensated, to protect the face) into a slow morph, then ping-pongs it:
+`film-strip/motion/held-loop.mp4` — the single moment unfolding and breathing.
+That is the "comes alive" held loop in `pulse-of-life.html`.
 
 ## Placement
 
