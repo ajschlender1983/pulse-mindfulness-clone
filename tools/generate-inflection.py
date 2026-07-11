@@ -80,11 +80,11 @@ INFLECT=("A single continuous image that transitions across its width from LEFT 
 
 # (id, aspect, scene) — a moment you would miss, that the ring pulls you into.
 SCENES=[
- ("inflect-child-laugh","3:2","a young child at a kitchen table thrown back in a full belly-laugh, a parent's ringed hand reaching toward them"),
+ ("inflect-child-laugh","3:2","a young child at a sunlit kitchen table laughing with pure delight, a parent seated close and truly watching them, the parent's ringed hand resting on the table — a warm, simple, tender everyday moment (keep the illustrated half a clean calm pencil line-drawing, never chaotic or scribbled)"),
  ("inflect-sunset","3:2","a person stopped on a city sidewalk, turning to face a blazing sunset between buildings they would have walked straight past"),
  ("inflect-first-snow","3:2","a person at a window as the first snow falls, palm and ringed hand rising to the cold glass"),
  ("inflect-lover-face","3:2","two people across a candlelit dinner table, one truly seeing the other's face for the first time in a while, ringed hand on the table"),
- ("inflect-street-music","3:2","a commuter stopping for a street musician they would have hurried past, bag lowering, ringed hand stilling"),
+ ("inflect-street-music","3:2","a commuter on a sunlit street stopping to truly listen to a street musician with a guitar, bag lowered, ringed hand stilled at their side, other passersby blurred (the RIGHT half must be a clear warm real photograph, not a painting; no signs or lettering anywhere)"),
  ("inflect-morning-coffee","3:2","a mug of coffee with steam curling in low morning light, a ringed hand wrapped around it, someone finally noticing the warmth"),
  ("inflect-rain-window","3:2","rain running down a window in warm interior light, a ringed hand and forehead resting against the glass, watching it instead of the phone"),
  ("inflect-friend-story","3:2","a friend mid-story across a cafe table, hands alive, the listener fully leaning in, ringed hand around a cup"),
