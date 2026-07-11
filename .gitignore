@@ -1,3 +1,7 @@
 .gstack/
 .DS_Store
 *.log
+
+# local image backups (safety nets, not deployed)
+journey-images-local-backup-jul10/
+.journey-images-local-backup/
