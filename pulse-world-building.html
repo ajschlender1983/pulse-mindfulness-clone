@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pulse — World-Building Visual Language</title>
-<meta name="description" content="The single source of truth for the Pulse visual world: do's & don'ts, the full image library with green/yellow/red curation, an archive, core messaging & taglines, a text-on-screen workshop, and the prompt library." />
+<title>Pulse — World-Building</title>
+<meta name="description" content="The single source of truth for the Pulse world — two sections: the Visual Language (do's & don'ts, the full rateable image library, an archive, the prompt library) and the Brand & Messaging (positioning, the expert advisory board consensus, taglines, and the text-on-screen workshop)." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
@@ -38,10 +38,26 @@
 
   .eyebrow{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-top:34px; }
   h1{ font-weight:600; font-size:clamp(30px,5.5vw,50px); letter-spacing:-0.045em; line-height:1.03; margin:12px 0 0; text-wrap:balance; }
-  .lede{ font-size:clamp(16px,2.1vw,19px); color:var(--brown); max-width:64ch; margin:16px 0 0; }
+  .lede{ font-size:clamp(16px,2.1vw,19px); color:var(--brown); max-width:66ch; margin:16px 0 0; }
 
-  details.panel{ margin-top:22px; background:var(--warm); border:1px solid var(--line); border-radius:16px; overflow:hidden;
-    box-shadow:0 12px 30px rgba(66,61,50,.07); }
+  /* the two top-level expandable sections */
+  details.mega{ margin-top:26px; border-radius:20px; overflow:hidden; border:1px solid var(--line);
+    background:linear-gradient(180deg,#fffdf3,#f4f0dd); box-shadow:0 18px 44px rgba(66,61,50,.10); }
+  details.mega>summary{ list-style:none; cursor:pointer; padding:22px clamp(18px,3vw,30px);
+    display:flex; align-items:center; gap:16px; }
+  details.mega>summary::-webkit-details-marker{ display:none; }
+  details.mega>summary .num{ font-family:var(--mono); font-size:12px; color:var(--honey); border:1px solid var(--honey);
+    border-radius:100px; width:30px; height:30px; display:flex; align-items:center; justify-content:center; flex:0 0 auto; }
+  details.mega>summary .mt{ flex:1; }
+  details.mega>summary .mt .k{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+  details.mega>summary .mt h2{ font-size:clamp(21px,3vw,28px); font-weight:600; letter-spacing:-0.035em; margin-top:3px; }
+  details.mega>summary .mt p{ font-size:14px; color:var(--brown); margin-top:4px; max-width:70ch; }
+  details.mega>summary .chev{ font-family:var(--mono); font-size:15px; color:var(--muted); transition:transform .2s; flex:0 0 auto; }
+  details.mega[open]>summary .chev{ transform:rotate(90deg); }
+  .mega-body{ padding:0 clamp(18px,3vw,30px) 30px; }
+
+  details.panel{ margin-top:18px; background:var(--warm); border:1px solid var(--line); border-radius:16px; overflow:hidden;
+    box-shadow:0 8px 22px rgba(66,61,50,.06); }
   details.panel>summary{ list-style:none; cursor:pointer; padding:18px 22px; display:flex; align-items:center; gap:12px; }
   details.panel>summary::-webkit-details-marker{ display:none; }
   details.panel>summary .tw{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--honey); }
@@ -73,6 +89,59 @@
   .tagline .t{ flex:1; font-size:16px; }
   .tagline .cat{ font-family:var(--mono); font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
 
+  /* ===== advisory board ===== */
+  .board-intro{ font-size:14.5px; color:var(--brown); max-width:72ch; margin:4px 0 16px; }
+  .board-chips{ display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 22px; }
+  .chip{ display:flex; align-items:center; gap:9px; background:var(--cream); border:1px solid var(--line);
+    border-radius:100px; padding:5px 14px 5px 5px; }
+  .chip img{ width:34px; height:34px; border-radius:50%; object-fit:cover; background:#ddd7c3; border:1px solid var(--line); }
+  .chip .cn{ font-weight:600; font-size:13.5px; }
+  .chip .cr{ font-family:var(--mono); font-size:10px; color:var(--muted); }
+  .chip .cnwrap{ display:flex; flex-direction:column; line-height:1.15; }
+
+  .headline{ background:var(--ink); color:var(--warm); border-radius:16px; padding:20px 24px; margin:6px 0 20px; }
+  .headline .k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--lime); }
+  .headline .v{ font-size:clamp(18px,2.6vw,23px); font-weight:600; letter-spacing:-0.03em; margin-top:8px; line-height:1.25; }
+
+  .cons-hero{ background:var(--warm); border:1px solid var(--honey); border-radius:16px; padding:24px 26px; margin-bottom:16px; }
+  .cons-hero .k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--honey); }
+  .cons-hero .v{ font-size:clamp(24px,4vw,36px); font-weight:600; letter-spacing:-0.04em; margin-top:8px; line-height:1.08; text-wrap:balance; }
+  .cons-hero .v2{ font-size:clamp(15px,2vw,18px); color:var(--brown); margin-top:10px; line-height:1.3; font-weight:400; }
+  .cons-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
+  .cons-card{ background:var(--warm); border:1px solid var(--line); border-radius:13px; padding:15px 17px; }
+  .cons-card .k{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+  .cons-card .v{ font-size:15.5px; color:var(--ink); margin-top:6px; line-height:1.4; }
+  .cons-card ul{ list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:6px; }
+  .cons-card li{ font-size:14px; color:var(--brown); padding-left:16px; position:relative; }
+  .cons-card li::before{ content:"—"; position:absolute; left:0; color:var(--honey); }
+
+  .advisor-cards{ display:flex; flex-direction:column; gap:12px; margin-top:8px; }
+  .adv{ background:var(--cream); border:1px solid var(--line); border-radius:14px; padding:16px 18px; }
+  .adv-head{ display:flex; align-items:center; gap:12px; }
+  .adv-head img{ width:46px; height:46px; border-radius:50%; object-fit:cover; background:#ddd7c3; border:1px solid var(--line); }
+  .adv-head .an{ font-weight:600; font-size:16px; }
+  .adv-head .ar{ font-family:var(--mono); font-size:10.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+  .adv .thesis{ font-size:14.5px; color:var(--brown); margin-top:11px; line-height:1.5; }
+  .adv .sig{ font-size:15px; font-style:italic; color:var(--ink); margin-top:11px; padding-left:12px; border-left:3px solid var(--honey); }
+  .adv .recs{ margin-top:11px; }
+  .adv .recs .rh{ font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:5px; }
+  .adv .recs ul{ list-style:none; display:flex; flex-direction:column; gap:5px; }
+  .adv .recs li{ font-size:14px; color:var(--brown); padding-left:16px; position:relative; }
+  .adv .recs li::before{ content:"→"; position:absolute; left:0; color:var(--honey); }
+  .adv .dissent{ margin-top:11px; font-size:13.5px; color:var(--red); }
+  .adv .dissent b{ font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; }
+
+  .ebi-list{ display:flex; flex-direction:column; gap:0; margin-top:6px; border-left:2px solid var(--line); }
+  .ebi{ position:relative; padding:11px 0 11px 22px; }
+  .ebi::before{ content:""; position:absolute; left:-6px; top:16px; width:10px; height:10px; border-radius:50%; background:var(--honey); }
+  .ebi .eh{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+  .ebi .ep{ font-family:var(--mono); font-size:11px; color:var(--honey); }
+  .ebi .ef{ font-weight:600; font-size:14px; }
+  .ebi .conv{ font-family:var(--mono); font-size:10.5px; color:var(--faint); margin-left:auto; }
+  .ebi .ec{ font-size:14px; color:var(--brown); margin-top:4px; }
+  .board-note{ font-family:var(--mono); font-size:11.5px; color:var(--muted); margin-top:16px; }
+  .board-pending{ background:var(--cream); border:1px dashed var(--honey); border-radius:14px; padding:22px; color:var(--brown); font-size:15px; }
+
   .rate{ display:inline-flex; gap:4px; }
   .rate button{ width:26px; height:22px; border-radius:6px; border:1px solid var(--line); cursor:pointer;
     background:var(--warm); font-size:12px; line-height:1; display:flex; align-items:center; justify-content:center; }
@@ -101,7 +170,7 @@
   .pl-backends{ margin-top:12px; font-family:var(--mono); font-size:12px; color:var(--muted); }
 
   .collab{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
-    border-top:1px solid var(--line); padding-top:14px; margin-top:44px; display:flex; align-items:baseline; gap:12px; }
+    border-top:1px solid var(--line); padding-top:14px; margin-top:30px; display:flex; align-items:baseline; gap:12px; }
   .collab .cnt{ color:var(--honey); }
   .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px; margin-top:18px; }
   figure.card{ margin:0; background:var(--warm); border:1px solid var(--line); border-radius:12px; overflow:hidden;
@@ -123,6 +192,17 @@
   footer{ margin-top:60px; border-top:1px solid var(--line); padding-top:20px; font-family:var(--mono); font-size:12px; color:var(--faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
   footer a{ color:var(--brown); }
   .empty{ color:var(--muted); font-size:14px; padding:20px 0; }
+  .arch-bar{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-top:22px; padding:14px 18px;
+    background:var(--red-bg); border:1px solid var(--red); border-radius:14px; }
+  .arch-bar .back{ font-family:var(--mono); font-size:12px; font-weight:500; color:#fff; background:var(--red);
+    border:none; border-radius:100px; padding:9px 18px; cursor:pointer; }
+  .arch-bar .back:hover{ filter:brightness(1.08); }
+  .arch-bar .msg{ font-size:14px; color:var(--red); }
+  .arch-bar .restore-all{ font-family:var(--mono); font-size:11.5px; color:var(--red); background:none; border:1px solid var(--red);
+    border-radius:100px; padding:8px 14px; cursor:pointer; margin-left:auto; }
+  .arch-bar .restore-all:hover{ background:rgba(155,61,46,.08); }
+  figure.card.rr .arch-btn{ color:var(--red); font-weight:600; font-size:11px; border:1px solid var(--red); border-radius:100px; padding:4px 12px; text-decoration:none; }
+  figure.card.rr .arch-btn:hover{ background:var(--red-bg); }
   @media(max-width:720px){ .dd-grid{ grid-template-columns:1fr; } }
 </style>
 </head>
@@ -133,90 +213,136 @@
   <span class="spacer"></span>
   <button id="viewMain" class="on">Gallery</button>
   <button id="viewArchive">Archive <span id="archCount"></span></button>
-  <button id="exportBtn">Export ratings ↓</button>
+  <button id="exportBtn">Export ↓</button>
 </div>
 
 <div class="shell">
   <div class="eyebrow">The single source of truth · Pulse Voice + Pulse Filmmaker</div>
-  <h1>World-Building Visual Language</h1>
-  <p class="lede">Every image made for the Pulse world, in one place — to curate, to rate, and to learn from. Rate each frame <b style="color:var(--green)">keep</b> / <b style="color:var(--yellow)">caution</b> / <b style="color:var(--red)">archive</b>; the reds leave the gallery and carry a note; the yeses, noes, and notes feed the rules and the prompts below. AI-slop and hand deformities are pre-flagged by an audit pass.</p>
+  <h1>Pulse World-Building</h1>
+  <p class="lede">One home for the whole Pulse world, in two parts: <b>the visual language</b> — every image ever made, to curate and learn from — and <b>the brand &amp; messaging</b> — the positioning, the taglines, and an expert advisory board that argued it into a single consensus.</p>
 
-  <details class="panel" id="rulesPanel">
-    <summary><span class="tw">Start here</span><h2>Do's, don'ts &amp; usage rules</h2><span class="chev">▶</span></summary>
-    <div class="panel-body">
-      <div class="dd-grid">
-        <div class="dd do">
-          <h3>Do</h3>
-          <ul>
-            <li>Soft ambient natural light, warm cream / honey palette, medium-format film feel.</li>
-            <li>The wide polished <b>gold ring</b> as a discovered second-glance glint — present, never a hard sell.</li>
-            <li>Real, diverse people in true moments — editorial, un-staged, emotionally honest.</li>
-            <li>Two visual worlds kept distinct: warm Maya lifestyle vs. dark luxe product.</li>
-            <li>Anti-data everywhere: no screens-of-metrics, no streaks, nothing to check.</li>
-            <li>Motion earns its place — the pulse is always the hinge that slows the moment.</li>
-          </ul>
+  <!-- ============ SECTION 1 · VISUAL LANGUAGE ============ -->
+  <details class="mega" id="megaVisual" open>
+    <summary>
+      <span class="num">1</span>
+      <span class="mt">
+        <span class="k">Section one</span>
+        <h2>The Visual Language</h2>
+        <p>Do's &amp; don'ts, the full rateable image library with an archive, and the prompt library that made it.</p>
+      </span>
+      <span class="chev">▶</span>
+    </summary>
+    <div class="mega-body">
+
+      <details class="panel" id="rulesPanel" open>
+        <summary><span class="tw">Start here</span><h2>Do's, don'ts &amp; usage rules</h2><span class="chev">▶</span></summary>
+        <div class="panel-body">
+          <div class="dd-grid">
+            <div class="dd do">
+              <h3>Do</h3>
+              <ul>
+                <li>Soft ambient natural light, warm cream / honey palette, medium-format film feel.</li>
+                <li>The wide polished <b>gold ring</b> as a discovered second-glance glint — present, never a hard sell.</li>
+                <li>Real, diverse people in true moments — editorial, un-staged, emotionally honest.</li>
+                <li>Two visual worlds kept distinct: warm Maya lifestyle vs. dark luxe product.</li>
+                <li>Anti-data everywhere: no screens-of-metrics, no streaks, nothing to check.</li>
+                <li>Motion earns its place — the pulse is always the hinge that slows the moment.</li>
+              </ul>
+            </div>
+            <div class="dd dont">
+              <h3>Don't</h3>
+              <ul>
+                <li><b>Malformed hands</b> — extra/fused/six fingers, bent joints, melted hands. Archive on sight.</li>
+                <li>Uncanny/waxy faces, broken eyes or teeth, warped anatomy, extra limbs.</li>
+                <li>Text, watermarks, gibberish signage, or brand logos in the frame.</li>
+                <li>Cold, stocky, corporate, or over-saturated CGI looks. No glow on cream.</li>
+                <li>The ring rendered wrong — a thin band, a diamond ring, doubled, or mangled.</li>
+                <li>Hype grammar (urgency, scarcity, "drop", exclamation points).</li>
+              </ul>
+            </div>
+          </div>
+          <div class="rules">
+            <h3>Usage rules</h3>
+            <ol>
+              <li>Cream editorial for everything <i>felt</i>; dark luxe for the <i>product / logistics</i>. Arrival day is the deliberate crossover.</li>
+              <li>Hands are the #1 slop risk — every visible hand gets a finger-count check before a frame ships.</li>
+              <li>Rate honestly: <b>green</b> = ship, <b>yellow</b> = usable with a caveat, <b>red</b> = archive + note why.</li>
+              <li>Every red note names the failure (hands / light / anatomy / off-brand / ring) so it can adjust a prompt.</li>
+            </ol>
+            <div class="derived">Rules derived from your red notes so far:</div>
+            <div id="derivedRules">— rate some frames red with notes and a summary appears here —</div>
+          </div>
         </div>
-        <div class="dd dont">
-          <h3>Don't</h3>
-          <ul>
-            <li><b>Malformed hands</b> — extra/fused/six fingers, bent joints, melted hands. Archive on sight.</li>
-            <li>Uncanny/waxy faces, broken eyes or teeth, warped anatomy, extra limbs.</li>
-            <li>Text, watermarks, gibberish signage, or brand logos in the frame.</li>
-            <li>Cold, stocky, corporate, or over-saturated CGI looks. No glow on cream.</li>
-            <li>The ring rendered wrong — a thin band, a diamond ring, doubled, or mangled.</li>
-            <li>Hype grammar (urgency, scarcity, "drop", exclamation points).</li>
-          </ul>
+      </details>
+
+      <details class="panel" id="promptPanel">
+        <summary><span class="tw">Prompts</span><h2>Prompt library</h2><span class="chev">▶</span></summary>
+        <div class="panel-body" id="promptBody"><div class="empty">loading prompt library…</div></div>
+      </details>
+
+      <div id="gallery"></div>
+    </div>
+  </details>
+
+  <!-- ============ SECTION 2 · BRAND & MESSAGING ============ -->
+  <details class="mega" id="megaBrand" open>
+    <summary>
+      <span class="num">2</span>
+      <span class="mt">
+        <span class="k">Section two</span>
+        <h2>The Brand &amp; Messaging</h2>
+        <p>The positioning, the live-site and session copy, an expert advisory board's consensus, and the workshops for taglines and on-screen text.</p>
+      </span>
+      <span class="chev">▶</span>
+    </summary>
+    <div class="mega-body">
+
+      <details class="panel" id="corePanel" open>
+        <summary><span class="tw">Voice</span><h2>Core messaging</h2><span class="chev">▶</span></summary>
+        <div class="panel-body">
+          <div class="msg-grid">
+            <div class="msg-card"><div class="k">The category</div><div class="v">A mindfulness ring that brings you back to the present — anti-data, no screen, nothing to check.</div></div>
+            <div class="msg-card"><div class="k">The wedge</div><div class="v">A pulse instead of a ping. The opposite of one more notification.</div></div>
+            <div class="msg-card"><div class="k">The promise</div><div class="v">Make the most of the movie of your life — the same footage, at the speed of being here.</div></div>
+            <div class="msg-card"><div class="k">The feeling</div><div class="v">Numb → Seen → Hopeful → Convinced → Relieved → Grateful → Generous.</div></div>
+            <div class="msg-card"><div class="k">The voice</div><div class="v">Present tense, second person, one breath per sentence. Invite, never instruct. No exclamation points.</div></div>
+            <div class="msg-card"><div class="k">Canon lines</div><div class="v">“When would now be a good time?” · “Be Here WOW”</div></div>
+          </div>
         </div>
-      </div>
-      <div class="rules">
-        <h3>Usage rules</h3>
-        <ol>
-          <li>Cream editorial for everything <i>felt</i>; dark luxe for the <i>product / logistics</i>. Arrival day is the deliberate crossover.</li>
-          <li>Hands are the #1 slop risk — every visible hand gets a finger-count check before a frame ships.</li>
-          <li>Rate honestly: <b>green</b> = ship, <b>yellow</b> = usable with a caveat, <b>red</b> = archive + note why.</li>
-          <li>Every red note names the failure (hands / light / anatomy / off-brand / ring) so it can adjust a prompt.</li>
-        </ol>
-        <div class="derived">Rules derived from your red notes so far:</div>
-        <div id="derivedRules">— rate some frames red with notes and a summary appears here —</div>
-      </div>
+      </details>
+
+      <details class="panel" id="boardPanel" open>
+        <summary><span class="tw">Advisory board</span><h2>The board's consensus</h2><span class="chev">▶</span></summary>
+        <div class="panel-body" id="boardBody">
+          <div class="board-pending">The advisory board is convening — five experts (Hormozi, Godin, Watts, Jobs, Sutherland) across ten EBI passes. Their consensus appears here once the session is written.</div>
+        </div>
+      </details>
+
+      <details class="panel" id="msgPanel">
+        <summary><span class="tw">Workshop</span><h2>Taglines</h2><span class="chev">▶</span></summary>
+        <div class="panel-body">
+          <p style="font-size:14px;color:var(--brown);max-width:64ch;margin-bottom:10px;">The board's consensus tagline set (falls back to the working set). Rate each <b style="color:var(--green)">keep</b> / <b style="color:var(--yellow)">caution</b> / <b style="color:var(--red)">cut</b>.</p>
+          <div class="tagline-list" id="taglineList"></div>
+        </div>
+      </details>
+
+      <details class="panel" id="tosPanel">
+        <summary><span class="tw">Workshop</span><h2>Text on screen · 10 variations</h2><span class="chev">▶</span></summary>
+        <div class="panel-body">
+          <div class="tos-head">
+            <span class="tos-progress" id="tosProgress"></span>
+            <span class="tos-locked" id="tosLocked"></span>
+          </div>
+          <p style="font-size:14px;color:var(--brown);max-width:64ch;">Short lines for video / social overlays. Rate all ten; once every line has a verdict the greens lock in as the approved on-screen text rules (and reds carry a note on why).</p>
+          <div class="tos-list" id="tosList"></div>
+        </div>
+      </details>
+
     </div>
   </details>
-
-  <details class="panel" id="msgPanel">
-    <summary><span class="tw">Voice</span><h2>Core messaging &amp; taglines</h2><span class="chev">▶</span></summary>
-    <div class="panel-body">
-      <div class="msg-grid">
-        <div class="msg-card"><div class="k">The category</div><div class="v">A mindfulness ring that brings you back to the present — anti-data, no screen, nothing to check.</div></div>
-        <div class="msg-card"><div class="k">The wedge</div><div class="v">A pulse instead of a ping. The opposite of one more notification.</div></div>
-        <div class="msg-card"><div class="k">The promise</div><div class="v">Make the most of the movie of your life — the same footage, at the speed of being here.</div></div>
-        <div class="msg-card"><div class="k">The feeling</div><div class="v">Numb → Seen → Hopeful → Convinced → Relieved → Grateful → Generous.</div></div>
-        <div class="msg-card"><div class="k">The voice</div><div class="v">Present tense, second person, one breath per sentence. Invite, never instruct. No exclamation points.</div></div>
-      </div>
-      <div class="tagline-list" id="taglineList"></div>
-    </div>
-  </details>
-
-  <details class="panel" id="tosPanel" open>
-    <summary><span class="tw">Workshop</span><h2>Text on screen · 10 variations</h2><span class="chev">▶</span></summary>
-    <div class="panel-body">
-      <div class="tos-head">
-        <span class="tos-progress" id="tosProgress"></span>
-        <span class="tos-locked" id="tosLocked"></span>
-      </div>
-      <p style="font-size:14px;color:var(--brown);max-width:64ch;">Short lines for video / social overlays. Rate all ten; once every line has a verdict the greens lock in as the approved on-screen text rules (and reds carry a note on why).</p>
-      <div class="tos-list" id="tosList"></div>
-    </div>
-  </details>
-
-  <details class="panel" id="promptPanel">
-    <summary><span class="tw">Prompts</span><h2>Prompt library</h2><span class="chev">▶</span></summary>
-    <div class="panel-body" id="promptBody"><div class="empty">loading prompt library…</div></div>
-  </details>
-
-  <div id="gallery"></div>
 
   <footer>
-    <span>Pulse · World-building visual language · ratings saved in this browser</span>
+    <span>Pulse · World-building · ratings saved in this browser</span>
     <span><a href="image-library.html">Atlas</a> · <a href="builds.html">Builds</a></span>
   </footer>
 </div>
@@ -234,8 +360,9 @@
   function clear(el){ while(el.firstChild) el.removeChild(el.firstChild); }
   function el(tag, cls, txt){ var e=document.createElement(tag); if(cls) e.className=cls; if(txt!=null) e.textContent=txt; return e; }
 
-  var INDEX=null, showArchive=false;
+  var INDEX=null, BOARD=null, showArchive=false;
 
+  // working sets — replaced by the board's consensus once it loads
   var TAGLINES=[
     ["Be here for the moment you are in.","hero"],
     ["A pulse instead of a ping.","wedge"],
@@ -261,6 +388,11 @@
     "Presence, on your finger."
   ];
 
+  var ADVISOR_NAMES={ hormozi:"Hormozi", godin:"Godin", watts:"Watts", jobs:"Jobs", sutherland:"Sutherland" };
+  var ADVISOR_ROLES={ hormozi:"Offers & value", godin:"Remarkable & tribe", watts:"Presence", jobs:"Simplicity", sutherland:"Perceived value" };
+  var ADVISOR_ORDER=["hormozi","godin","watts","jobs","sutherland"];
+  function avatarSrc(id){ return "library/advisors/"+id+".png"; }
+
   function pill(current, onSet){
     var wrap=el('span','rate');
     [["g","green"],["y","yellow"],["r","red"]].forEach(function(o){
@@ -277,7 +409,7 @@
     TAGLINES.forEach(function(t,i){
       var row=el('div','tagline');
       row.appendChild(el('span','t','“'+t[0]+'”'));
-      row.appendChild(el('span','cat',t[1]));
+      row.appendChild(el('span','cat',t[1]||''));
       row.appendChild(pill(state.taglines[i], function(r){ state.taglines[i]=r; save(); renderTaglines(); }));
       host.appendChild(row);
     });
@@ -302,6 +434,96 @@
     });
     document.getElementById('tosProgress').textContent=rated+' / '+TOS.length+' rated';
     document.getElementById('tosLocked').textContent = (rated===TOS.length) ? ('✓ locked as rules — '+greens+' approved lines') : '';
+  }
+
+  // ===== advisory board =====
+  function consCard(k, v){
+    var c=el('div','cons-card'); c.appendChild(el('div','k',k)); c.appendChild(el('div','v',v)); return c;
+  }
+  function consListCard(k, items){
+    var c=el('div','cons-card'); c.appendChild(el('div','k',k));
+    var ul=el('ul'); (items||[]).forEach(function(x){ ul.appendChild(el('li',null,x)); }); c.appendChild(ul); return c;
+  }
+  function advImg(id){ var im=el('img'); im.src=avatarSrc(id); im.alt=ADVISOR_NAMES[id]||id; im.loading='lazy'; return im; }
+
+  function renderBoard(){
+    var host=document.getElementById('boardBody'); if(!host) return;
+    if(!BOARD){ return; }
+    clear(host);
+    var c=BOARD.final && BOARD.final.consensus ? BOARD.final.consensus : (BOARD.consensus||{});
+
+    // advisor chips
+    var chips=el('div','board-chips');
+    ADVISOR_ORDER.forEach(function(id){
+      var chip=el('div','chip'); chip.appendChild(advImg(id));
+      var w=el('div','cnwrap'); w.appendChild(el('span','cn',ADVISOR_NAMES[id])); w.appendChild(el('span','cr',ADVISOR_ROLES[id]||''));
+      chip.appendChild(w); chips.appendChild(chip);
+    });
+    host.appendChild(el('p','board-intro','Five advisors analysed the whole corpus independently, then argued it through ten explore-build-improve passes into one consensus. The consensus is below; expand to see what each member actually thought.'));
+    host.appendChild(chips);
+
+    // headline recommendation
+    var hr=(BOARD.final&&BOARD.final.headline_recommendation)||'';
+    if(hr){ var hb=el('div','headline'); hb.appendChild(el('div','k','What the board wants Johan to do')); hb.appendChild(el('div','v',hr)); host.appendChild(hb); }
+
+    // consensus hero (may be two lines: koan + plain clarifier)
+    if(c.hero){
+      var ch=el('div','cons-hero'); ch.appendChild(el('div','k','The consensus hero'));
+      var hl=String(c.hero).split('\n').map(function(s){return s.trim();}).filter(Boolean);
+      ch.appendChild(el('div','v','“'+hl[0]+'”'));
+      for(var hi=1; hi<hl.length; hi++){ ch.appendChild(el('div','v2',hl[hi])); }
+      host.appendChild(ch);
+    }
+
+    // consensus grid
+    var grid=el('div','cons-grid');
+    if(c.positioning) grid.appendChild(consCard('Positioning', c.positioning));
+    if(c.wedge) grid.appendChild(consCard('The wedge', c.wedge));
+    if(c.offer) grid.appendChild(consCard('The offer / value', c.offer));
+    if(c.hierarchy && c.hierarchy.length) grid.appendChild(consListCard('Message hierarchy', c.hierarchy));
+    if(c.guardrails && c.guardrails.length) grid.appendChild(consListCard('Voice guardrails', c.guardrails));
+    host.appendChild(grid);
+
+    // expandable: what each advisor thought
+    var advisors=(BOARD.final&&BOARD.final.advisors)||[];
+    var exp=BOARD.explore||{};
+    var d1=el('details','panel'); d1.style.marginTop='18px';
+    var s1=el('summary'); s1.appendChild(el('span','tw','Expand')); var s1h=el('h2',null,'What each advisor thought'); d1.appendChild(s1); s1.appendChild(s1h); s1.appendChild(el('span','chev','▶'));
+    var b1=el('div','panel-body'); var cards=el('div','advisor-cards');
+    ADVISOR_ORDER.forEach(function(id){
+      var fa=null; advisors.forEach(function(a){ if(a.id===id) fa=a; });
+      var ex=exp[id]||{};
+      var card=el('div','adv');
+      var head=el('div','adv-head'); head.appendChild(advImg(id));
+      var hw=el('div'); hw.appendChild(el('div','an',ADVISOR_NAMES[id]==='Hormozi'?'Alex Hormozi':(ADVISOR_NAMES[id]==='Godin'?'Seth Godin':(ADVISOR_NAMES[id]==='Watts'?'Alan Watts':(ADVISOR_NAMES[id]==='Jobs'?'Steve Jobs':'Rory Sutherland')))));
+      hw.appendChild(el('div','ar',ADVISOR_ROLES[id]||'')); head.appendChild(hw); card.appendChild(head);
+      if(ex.thesis) card.appendChild(el('div','thesis',ex.thesis));
+      var sig=(fa&&fa.signature_line)||ex.hero_pick;
+      if(sig) card.appendChild(el('div','sig','“'+sig+'”'));
+      var recs=(fa&&fa.top_recs)||ex.new_lines||[];
+      if(recs.length){ var rc=el('div','recs'); rc.appendChild(el('div','rh','Top recommendations')); var ul=el('ul'); recs.forEach(function(x){ ul.appendChild(el('li',null,x)); }); rc.appendChild(ul); card.appendChild(rc); }
+      var dis=(fa&&fa.dissent)||ex.warning;
+      if(dis && String(dis).toLowerCase()!=='none'){ var dd=el('div','dissent'); dd.appendChild(el('b',null,(fa&&fa.dissent)?'Still dissents: ':'Warns: ')); dd.appendChild(document.createTextNode(dis)); card.appendChild(dd); }
+      cards.appendChild(card);
+    });
+    b1.appendChild(cards); d1.appendChild(b1); host.appendChild(d1);
+
+    // expandable: the 10 EBI passes
+    var passes=BOARD.passes||[];
+    if(passes.length){
+      var d2=el('details','panel'); d2.style.marginTop='12px';
+      var s2=el('summary'); s2.appendChild(el('span','tw','Expand')); s2.appendChild(el('h2',null,'The ten EBI passes')); s2.appendChild(el('span','chev','▶')); d2.appendChild(s2);
+      var b2=el('div','panel-body'); var list=el('div','ebi-list');
+      passes.forEach(function(p){
+        var row=el('div','ebi'); var eh=el('div','eh');
+        eh.appendChild(el('span','ep','Pass '+p.pass)); eh.appendChild(el('span','ef',(p.focus||'').split(' — ')[0]));
+        if(p.convergence!=null) eh.appendChild(el('span','conv','converged '+Math.round(p.convergence*100)+'%'));
+        row.appendChild(eh); if(p.change) row.appendChild(el('div','ec',p.change)); list.appendChild(row);
+      });
+      b2.appendChild(list); d2.appendChild(b2); host.appendChild(d2);
+    }
+
+    host.appendChild(el('div','board-note','Board: Alex Hormozi · Seth Godin · Alan Watts · Steve Jobs · Rory Sutherland (5th seat, chosen to add the behavioral-science / perceived-value lens). Advisor portraits are stylized illustrations, not photographs.'));
   }
 
   function derivedRules(){
@@ -368,9 +590,19 @@
     return fig;
   }
 
+  function backToGallery(){ showArchive=false; document.getElementById('viewMain').classList.add('on'); document.getElementById('viewArchive').classList.remove('on'); renderGallery(); }
+  function restoreAll(){ Object.keys(state.archived).forEach(function(f){ delete state.archived[f]; if(state.ratings[f]==='red') delete state.ratings[f]; }); save(); renderGallery(); derivedRules(); updateStat(); }
   function renderGallery(){
     var host=document.getElementById('gallery'); clear(host);
     if(!INDEX) return;
+    var archCount=Object.keys(state.archived).length;
+    if(showArchive){
+      var bar=el('div','arch-bar');
+      var back=el('button','back','← Back to gallery'); back.onclick=backToGallery; bar.appendChild(back);
+      bar.appendChild(el('span','msg', archCount+' frame'+(archCount===1?'':'s')+' removed from the gallery. Rate one green/yellow, or click Restore under it, to bring it back.'));
+      if(archCount){ var ra=el('button','restore-all','Restore all'); ra.onclick=restoreAll; bar.appendChild(ra); }
+      host.appendChild(bar);
+    }
     var anyShown=false;
     Object.keys(INDEX.collections).forEach(function(key){
       var c=INDEX.collections[key];
@@ -423,8 +655,9 @@
     save();
   }
 
-  document.getElementById('viewMain').onclick=function(){ showArchive=false; this.classList.add('on'); document.getElementById('viewArchive').classList.remove('on'); renderGallery(); };
-  document.getElementById('viewArchive').onclick=function(){ showArchive=true; this.classList.add('on'); document.getElementById('viewMain').classList.remove('on'); renderGallery(); };
+  function openVisual(){ var m=document.getElementById('megaVisual'); if(m&&!m.open) m.open=true; }
+  document.getElementById('viewMain').onclick=function(){ openVisual(); showArchive=false; this.classList.add('on'); document.getElementById('viewArchive').classList.remove('on'); renderGallery(); document.getElementById('gallery').scrollIntoView({behavior:'smooth',block:'start'}); };
+  document.getElementById('viewArchive').onclick=function(){ openVisual(); showArchive=true; this.classList.add('on'); document.getElementById('viewMain').classList.remove('on'); renderGallery(); document.getElementById('gallery').scrollIntoView({behavior:'smooth',block:'start'}); };
   document.getElementById('exportBtn').onclick=function(){
     var out={ generated:new Date().toISOString(), ratings:state.ratings, notes:state.notes, archived:Object.keys(state.archived), taglines:state.taglines, textOnScreen:state.tos };
     var blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
@@ -444,6 +677,16 @@
   });
 
   fetch('world-building-prompts.json').then(function(r){return r.json();}).then(renderPrompts).catch(function(){});
+
+  fetch('messaging-board.json').then(function(r){return r.ok?r.json():null;}).then(function(b){
+    if(!b) return; BOARD=b;
+    var c=(b.final&&b.final.consensus)||b.consensus;
+    if(c){
+      if(c.taglines && c.taglines.length){ TAGLINES=c.taglines.map(function(t){ return [t.text, t.category||'']; }); state.taglines={}; renderTaglines(); }
+      if(c.tos && c.tos.length){ TOS=c.tos.slice(0,10); state.tos={}; renderTOS(); }
+    }
+    renderBoard();
+  }).catch(function(){});
 })();
 </script>
 </body>

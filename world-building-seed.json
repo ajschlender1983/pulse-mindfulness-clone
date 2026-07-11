@@ -58,5 +58,25 @@
   "library/stories/sam-6.png": {
     "rating": "yellow",
     "note": "faint gibberish text on background laptop screen"
+  },
+  "library/avatar-spectrum/avatar-12-spectrum.png": {
+    "rating": "yellow",
+    "note": "identity shifts illustration→photo; ring floats detached near thigh"
+  },
+  "library/avatar-spectrum/avatar-17-spectrum.png": {
+    "rating": "yellow",
+    "note": "oversized disembodied hand floating at the seam"
+  },
+  "library/avatar-spectrum/avatar-22-spectrum.png": {
+    "rating": "yellow",
+    "note": "floating hand at seam plus a stray ghosted second figure"
+  },
+  "library/peak/peak-hammock-forest.png": {
+    "rating": "yellow",
+    "note": "same wide gold band on both hands (doubled ring) — brand is one ring"
+  },
+  "library/peak/peak-temple-dawn.png": {
+    "rating": "yellow",
+    "note": "interlaced clasped fingers soft/merged just below the ring"
   }
 }

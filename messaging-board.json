@@ -1,0 +1,367 @@
+{
+ "advisorMeta": [
+  {
+   "id": "hormozi",
+   "name": "Alex Hormozi",
+   "role": "Offers & value equation"
+  },
+  {
+   "id": "godin",
+   "name": "Seth Godin",
+   "role": "Remarkable & tribe"
+  },
+  {
+   "id": "watts",
+   "name": "Alan Watts",
+   "role": "Spiritual advisor \u2014 presence"
+  },
+  {
+   "id": "jobs",
+   "name": "Steve Jobs",
+   "role": "Simplicity & the experience"
+  },
+  {
+   "id": "sutherland",
+   "name": "Rory Sutherland",
+   "role": "Behavioral science & perceived value"
+  }
+ ],
+ "explore": {
+  "hormozi": {
+   "thesis": "Run Pulse through the value equation and three of the four levers are already elite: effort is near zero (you wear a ring, you don't add a habit), time delay is near zero (\"feel good in 10 sec,\" two minutes to set up then the ring does the remembering), and the dream outcome is vivid and concrete (four dinners returned, a whole bedtime story, the first coffee actually tasted). The one weak leg is perceived likelihood of achievement \u2014 and it's weak on purpose, because the brand refuses data, scores, and charts. That's a defensible wedge, but it leaves a hole where proof normally sits. So the entire messaging game is: make people believe it without a graph. You have exactly three tools for that and you're barely using two of them \u2014 before/after words from real wearers, the personalized reclaimable-hours number from the quiz, and a money-back guarantee (which appears nowhere). The best material \u2014 the anti-data spine, the movie-of-life frame, the concrete returned-moments \u2014 lives in the Voice sessions. The live homepage, meanwhile, reverts to \"Become Calm, Focused & Present / Reduces stress and anxiety / Scientifically proven,\" which is the exact adjective soup every meditation app ships. That's value leaking out of the funnel: you built a differentiated product and describe it like a commodity.",
+   "hero_pick": "About four dinners a week, returned. A whole bedtime story with all of you in the room. The first coffee, actually tasted.",
+   "positioning": "For the price of one nice dinner, a gold ring you forget you're wearing quietly hands back the hours you're already losing \u2014 no app, no scores, and nothing new to remember to do.",
+   "wedge": "Every other wellness device sells you more data about your life; Pulse sells you back the life the data was distracting you from.",
+   "amplify": [
+    "About four dinners a week, returned. A whole bedtime story with all of you in the room. The first coffee, actually tasted.",
+    "$200. Set that against the {{reclaimable_hours}} hours a week your quiz found. You can do that math yourself.",
+    "It vibrates a few times an hour. That's all it does. There's nothing to check. No score, no app to open.",
+    "Wear it while you make the coffee tomorrow. That's the whole practice.",
+    "The measurable story is the team's own words, before and after, anonymous. That's the only number we'd trust, so it's the only one we sell.",
+    "Two minutes, once \u2014 then the ring does the remembering."
+   ],
+   "cut": [
+    "'Scientifically proven: feel calm, feel present' \u2014 unprovable adjective claim that every app makes, and 'feel' breaks your own you-may-notice rule. Replace with a specific before/after wearer quote, which is real proof.",
+    "'Become Calm, Focused & Present' / 'Reduces stress and anxiety' \u2014 commodity benefit-speak identical to every meditation app; it actively erases your only wedge. Lead with concrete returned moments instead.",
+    "'Feel good in 10 sec' \u2014 'feel' violates the rule and overpromises a guaranteed feeling; soften to 'you may notice' and keep the 10-second specificity, which is the good part.",
+    "The homepage sells the differentiated product with generic language while the sharp, believable copy sits unused in the Voice sessions \u2014 the gap itself is the leak."
+   ],
+   "new_lines": [
+    "Two minutes to set up. Then a gold ring taps your finger a few times an hour and does the remembering for you. That is the entire ask.",
+    "Wear it 30 days. If you can't recall a single moment of coming back to your own life, send it back for a full refund.",
+    "The quiz found the hours you're missing. The ring is $200. Divide one into the other and decide for yourself.",
+    "No app to open, no score to chase, nothing new to remember. You may notice the week stops blurring.",
+    "You don't add a habit. You wear a ring, and the remembering becomes the ring's job.",
+    "Before and after, in real wearers' own words. No chart \u2014 a chart never sat at your dinner table."
+   ],
+   "signature_move": "Add a plain money-back guarantee and make it the spine of the offer: \"Wear it 30 days; if you can't recall one moment of coming back, send it back for a full refund.\" It reverses the risk to zero and shrinks the only weak lever (perceived likelihood) without touching urgency, scarcity, or a single exclamation point \u2014 the corpus already hands you the pass/fail test in \"If you can recall one moment of coming back, the practice is working.\"",
+   "warning": "The trap is competing on adjectives. The moment the homepage says \"calm, focused, present\" and \"reduces stress and anxiety,\" you are indistinguishable from a $0 meditation app and your $200 ring loses its reason to exist. Your believable, specific, no-graph proof is the whole moat \u2014 if you keep it buried in the sessions and sell the store with generic wellness language, you win the wedge in the pitch deck and lose it at the checkout."
+  },
+  "godin": {
+   "thesis": "Pulse has two brands living in one company, and they don't like each other. The founder-and-wedge material (Sections C and H) is one of the most genuinely remarkable stances I've seen in wellness: a $200 gold ring that proudly knows nothing about you, in a category that has bet its entire soul on knowing everything. \"It tracks nothing. There is no graph, and there never will be\" is a purple cow \u2014 it makes people stop and remark. But the live homepage (Section A) is a different, frightened company: \"Feel good in 10 sec,\" \"Scientifically proven,\" \"SHOP NOW.\" That's supplement-ad language, and it drags Pulse into a feature fight against Oura, Apple, and every meditation app \u2014 a fight it cannot win and should refuse to enter. The whole opportunity is to let the wedge run the brand and starve the benefit-claims. Pulse isn't selling a better way to measure your calm. It's selling permission to stop measuring at all. That's the flag. Plant it on the homepage, not just in the founder's Sunday emails.",
+   "hero_pick": "It tracks nothing. There is no graph, and there never will be.",
+   "positioning": "Pulse isn't a better wellness wearable; it's the flag for people who refuse to turn their inner life into a dashboard.",
+   "wedge": "Every other wearable sells you more data about yourself. Pulse sells you back the moments the data was made of.",
+   "amplify": [
+    "It tracks nothing. There is no graph, and there never will be.",
+    "Your attention is the whole subject of this company. We're not going to be the ones spending it.",
+    "I'd rather build it with you than near you.",
+    "A pulse instead of a ping.",
+    "This isn't a campaign. I'm writing because you wrote first.",
+    "The days don't blur when you're in them."
+   ],
+   "cut": [
+    "'Feel good in 10 sec, the wearable for presence.' \u2014 A supplement-ad promise that competes on speed and betrays the anti-data soul; it also brushes against the banned 'you will feel.'",
+    "'SHOP NOW' / 'SHOP' \u2014 Shouting the transaction. A brand built entirely on permission and quiet should never bark the buy button; make the CTA as gentle as the pulse.",
+    "'Scientifically proven: feel calm, feel present.' \u2014 Proof-by-authority is the exact quantify-everything reflex Pulse exists to reject, and it violates 'you may notice, never you will feel.'",
+    "'Reduces stress and anxiety by helping you snap out of autopilot.' \u2014 Clinical benefit-comparison copy that enrolls Pulse in the wellness-gadget feature race it should refuse to run."
+   ],
+   "new_lines": [
+    "This isn't for everyone. It's for people who'd rather live the moment than measure it.",
+    "People like us don't check our presence. We practice it.",
+    "No score to chase means nothing to fail at.",
+    "The most radical thing a wearable can do is know nothing about you.",
+    "Wear it and you've said something out loud: my attention is mine.",
+    "You won't get a number. You'll get the kettle, the kid, the coffee \u2014 back."
+   ],
+   "signature_move": "Put a 'who this is NOT for' statement on the homepage. Name the optimizer who wants streaks, scores, and percentiles, and gently send them to Oura. The refusal is the flag \u2014 telling the wrong people no is what makes the right people feel found.",
+   "warning": "The live website is quietly hauling Pulse back into the wellness-gadget category \u2014 'feel good in 10 sec,' 'scientifically proven,' 'SHOP NOW' \u2014 arguing on speed and benefits against every device with a screen. The instant Pulse competes on features, it forfeits the only thing that makes it worth remarking about: its refusal to count you."
+  },
+  "watts": {
+   "thesis": "Pulse is selling the one thing it must never let you strive for. The wedge \u2014 no data, no scores, nothing to check \u2014 is pure gold, because it removes the ego's favorite toy: the scoreboard on which it plans, someday, to arrive. But the moment the copy says \"Become Calm, Focused & Present\" it hands that toy right back. \"Become\" is a promissory note on a future self, and the whole cosmic joke is that the future self never shows up to collect. The strongest lines in this corpus don't describe presence, they perform it \u2014 \"Here, actually: ten seconds. Feel your feet on the floor. We'll wait.\" That line makes the reader stop reading and be. That is the product. Everything about \"reduces stress,\" \"scientifically proven,\" and \"form new habits\" turns presence into a self-improvement errand, one more thing to get good at. The ring's genius is that it asks nothing back. Let the language ask nothing back either.",
+   "hero_pick": "When would now be a good time?",
+   "positioning": "Pulse doesn't get you somewhere \u2014 it returns you to the only place that was ever here, and the copy should let that homecoming happen inside the sentence itself.",
+   "wedge": "Every other wearable measures a you that doesn't exist yet; Pulse taps the you that already does.",
+   "amplify": [
+    "When would now be a good time?",
+    "Here, actually: ten seconds. Feel your feet on the floor. We'll wait.",
+    "Arriving in the room you're already in.",
+    "Day twenty-five has a different name: arriving. Not arriving somewhere new \u2014 arriving where you already were.",
+    "When it pulses, you don't stop what you're doing. You just arrive in it.",
+    "That feeling is the product. Everything else is logistics."
+   ],
+   "cut": [
+    "'Become Calm, Focused & Present' \u2014 'become' makes presence a destination and hands the ego exactly the striving the ring was built to dissolve; presence isn't a place you arrive at, it's the arriving.",
+    "'Reduces stress and anxiety by helping you snap out of autopilot' \u2014 clinical, causal, results-language; it frames now as a means to a better later, which is the very trance the ring interrupts.",
+    "'Scientifically proven: feel calm, feel present' \u2014 also breaks the brand's own 'you may notice, never you will feel' rule; a promised feeling is a debt the present moment can't be made to pay.",
+    "'Improves focus by helping you form new habits' \u2014 turns a homecoming into homework; nobody arrives in the present by grinding a streak, and a ring with nothing to check shouldn't smuggle self-optimization back in the side door."
+   ],
+   "new_lines": [
+    "You are not late. You were never anywhere but here.",
+    "Nowhere to get to. That is the good news the ring keeps forwarding.",
+    "It doesn't make you present. It reminds you that you can't be anywhere else.",
+    "The present isn't a skill you'll master. It's the only thing you've never once left.",
+    "A small tap, and the chase forgets what it was chasing.",
+    "Not calmer someday. Here, now, in the reading of this line."
+   ],
+   "signature_move": "Purge every \"become / get / improve / reduce\" verb and rebuild the copy around arriving in what already is \u2014 swap the destination frame (\"Become Calm & Present\") for the homecoming frame (\"You're already here \u2014 the ring just lets you notice\"), so no sentence anywhere sells a future self.",
+   "warning": "The trap is turning presence into one more thing to be good at \u2014 a practice you're quietly passing or failing, a calmer self you owe yourself by Friday. The instant the ring becomes self-improvement, it joins the very treadmill of \"getting somewhere\" it was built to step off, and the wearer starts striving to be present, which is the one posture in which presence cannot occur."
+  },
+  "jobs": {
+   "thesis": "There are two companies in this document. One of them ships a $200 gold ring that gives a person their own life back \u2014 and it speaks in the Voice and Filmmaker lines: \"When would now be a good time?\", \"A pulse instead of a ping.\", \"That feeling is the product. Everything else is logistics.\" The other company runs the live website, and it sounds like every stress-supplement ad ever made: \"Feel good in 10 sec,\" \"Scientifically proven,\" \"Become Calm, Focused & Present.\" That second company is a fraud you're committing against your own product. The genius of Pulse is that it competes with the entire notification economy by doing the opposite of it \u2014 nothing to check, ever. But the homepage is currently selling it as a \"smart wearable\" with a benefits bullet list, which drags the buyer right back into the thing they're trying to escape. You don't need more words. You need to delete about ninety percent of them and let the ten percent that already exist carry the whole thing.",
+   "hero_pick": "When would now be a good time?",
+   "positioning": "Pulse isn't a wearable that watches your life \u2014 it's the one object you own that quietly hands it back to you.",
+   "wedge": "Every other device on your body competes for your attention. This is the only one built to return it.",
+   "amplify": [
+    "When would now be a good time?",
+    "A pulse instead of a ping.",
+    "Not another thing to check. The opposite.",
+    "That feeling is the product. Everything else is logistics.",
+    "The days don't blur when you're in them.",
+    "It vibrates a few times an hour. That's all it does. There's nothing to check."
+   ],
+   "cut": [
+    "'Feel good in 10 sec, the wearable for presence.' \u2014 This is a painkiller commercial. It sells a dose, not a life. It's the cheapest line you own and it's sitting in the hero slot.",
+    "'Scientifically proven: feel calm, feel present.' \u2014 Nobody believes 'scientifically proven,' it reeks of the committee, and it breaks your own rule: you promised 'you may notice,' never 'you will feel.' Kill it.",
+    "'The first smart wearable that doesn't stress you with data.' \u2014 You define yourself by the word 'smart wearable,' which is the exact category you're escaping. Never let the enemy name you.",
+    "'Become Calm, Focused & Present' / 'SHOP NOW' \u2014 a three-word wellness bullet list and a shouted button. Generic, forgettable, and beneath the object."
+   ],
+   "new_lines": [
+    "It does one thing. It gives you back the moment you were about to miss.",
+    "No screen. No score. Nothing to check. Just your own life, handed back to you.",
+    "The hardest thing we built is a ring that asks nothing of you.",
+    "Two hundred dollars, once. Your attention, returned \u2014 a few times an hour, for as long as you wear it.",
+    "A gold ring. A small pulse. You come back. That's the entire product.",
+    "You don't check it. It doesn't count you. It just taps, and you arrive."
+   ],
+   "signature_move": "Burn the current homepage to the ground and rebuild it from the felt experience, not the spec sheet. Above the fold: one line \u2014 \"When would now be a good time?\" \u2014 the ring, and a single sentence of what the pulse feels like. Delete every benefit bullet, the word \"smart,\" \"scientifically proven,\" and the whole feature/mechanism grid. The Voice and Filmmaker sessions already wrote the real website. Ship that one. Say no to everything else on the page.",
+   "warning": "Pulse is quietly becoming the thing it was built to kill. Your own lexicon now includes a \"Presence Quiz / score / report\" \u2014 a score. The instant you hand someone a number for their presence, you're just Fitbit in gold, and your entire anti-data soul collapses. The trap is death by measurement: proving the magic with dashboards and stress-reduction stats until the product is indistinguishable from the anxiety machine it was supposed to replace. Protect the one thing \u2014 nothing to check, ever \u2014 and refuse every metric that betrays it, no matter how much easier it makes the sale."
+  },
+  "sutherland": {
+   "thesis": "Pulse is two brands wearing one ring. The website (Section A) sells a utility \u2014 \"feel good in 10 sec,\" \"scientifically proven,\" \"reduces stress and anxiety\" \u2014 while the deeper corpus (Sections C, E, F, G) sells a piece of psycho-logic so good it borders on genius: a wearable whose entire proposition is that it refuses to measure you. For a subjective benefit like presence, the framing isn't the packaging around the product \u2014 the framing IS the product. How you describe the ring literally changes how it feels to wear, because the experience is self-authored. That is why \"you may notice\" is not soft copy; it is the active ingredient. It hands the wearer agency and lets the effect become quietly self-fulfilling. \"Scientifically proven, calm in 10 seconds\" does the opposite: it sets a testable promise the wearer will fail against and then feel cheated by. The clinical claims don't strengthen the ring \u2014 they sabotage it. The board's job is to delete the Fitbit brand and let the confident, contrarian, unmeasurable one run the whole company.",
+   "hero_pick": "When would now be a good time?",
+   "positioning": "Pulse is the first wearable confident enough not to measure you \u2014 and that refusal to track is simultaneously the luxury, the reassurance, and the proof.",
+   "wedge": "Every other wearable adds a number to your life. This one removes one.",
+   "amplify": [
+    "It tracks nothing. There is no graph, and there never will be.",
+    "Not another thing to check. The opposite.",
+    "That feeling is the product. Everything else is logistics.",
+    "Isn't this just another device? It's the opposite of one. No screen, no notifications, no data collected. Nothing to check, ever.",
+    "A pulse arrives on your skin. Nothing to look at, nothing to answer, nothing to clear.",
+    "'Same footage, slower' is a truer promise than 'new life.'"
+   ],
+   "cut": [
+    "'Feel good in 10 sec' \u2014 a speed claim drags a signalling object into a stopwatch comparison it can only lose; magic doesn't come with a timer.",
+    "'Scientifically proven: feel calm, feel present' \u2014 the moment you claim proof you invite disproof, and you break the 'you may notice' spell that makes the ring actually work.",
+    "'Reduces stress and anxiety by helping you snap out of autopilot' \u2014 benefit-ladder language borrowed from meditation apps; it over-promises and secretly reintroduces the measurement the brand's whole spine rejects.",
+    "'$200\u2026 you can do that math yourself' \u2014 never invite the spreadsheet onto a Veblen good; a ring you can justify on ROI is a ring nobody wants to be seen wearing."
+   ],
+   "new_lines": [
+    "Every other wearable adds a number to your life. This one removes one.",
+    "The only wearable that knows less about you the longer you wear it.",
+    "A gold ring that does almost nothing, on purpose. That isn't the compromise \u2014 that's the luxury.",
+    "No streak to break. So nothing to feel guilty about at eleven at night.",
+    "The cheapest thing you own counts your steps. Let the most expensive one refuse to.",
+    "The confidence is in the silence: a device sure enough of itself that it never asks how it's doing."
+   ],
+   "signature_move": "Make unmeasurability the explicit hero, not a footnote. Reframe the absence of data from a spec-sheet lack (\"no screen, no scores\") into an emotional luxury and a confidence signal: the ring is the one object in your life that will never judge you, keep score, or make you feel behind. That reframe does three jobs at once \u2014 it justifies the $200 (you pay for restraint), it reduces the low-grade anxiety every other tracker manufactures, and it signals a maker so sure of the effect they don't need to prove it. The refusal to measure isn't a missing feature. It's the whole feature.",
+   "warning": "The trap is fighting on the meditation-app and smart-wearable battlefield \u2014 proof, speed, benefit ROI, \"reduces anxiety by X.\" On that terrain a $200 gold ring always loses to a $50 app and a free breathing exercise, because you've reframed a magical, self-signalling object as a rational utility purchase and lost the very premium that made it worth buying. The Fitbit-flavoured website is quietly euthanising the best idea the brand has."
+  }
+ },
+ "consensusV1": null,
+ "final": {
+  "consensus": {
+   "hero": "When would now be a good time?\nA gold ring that knows nothing about you \u2014 on purpose.",
+   "positioning": "Pulse is a smooth gold ring that knows nothing about you \u2014 on purpose. A few times an hour it taps your finger. You look up. Here you are. No screen, no scores, nothing to check, ever.",
+   "wedge": "Every other ring reports on your life. Pulse gives you the afternoon back \u2014 it taps, and the afternoon is still going on. Every buzz you've ever felt wanted something from you; this one wants nothing. A ping summons. A pulse hands you the room.",
+   "taglines": [
+    {
+     "text": "When would now be a good time?",
+     "category": "Hero / canon \u2014 ships"
+    },
+    {
+     "text": "A gold ring that knows nothing about you \u2014 on purpose.",
+     "category": "Plain subject line \u2014 3-second clarity + the flag; ships pinned beneath the hero"
+    },
+    {
+     "text": "A notification wants something from you. This wants nothing.",
+     "category": "Objection-killer / owner-voice retort \u2014 the 'isn't it just a buzz?' answer; ships"
+    },
+    {
+     "text": "Be Here WOW",
+     "category": "Canon anchor \u2014 ships"
+    },
+    {
+     "text": "It doesn't do anything. That's the whole point.",
+     "category": "INTERNAL PALETTE \u2014 owner-voice flag; use as body copy, never a shipped slogan"
+    },
+    {
+     "text": "I stopped measuring my life to start living it.",
+     "category": "INTERNAL PALETTE \u2014 tribe / first-person confession; use as body copy"
+    }
+   ],
+   "tos": [
+    "When would now be a good time?",
+    "A gold ring that knows nothing about you \u2014 on purpose.",
+    "A notification wants something from you. This wants nothing \u2014 it taps, and the wanting stops.",
+    "You're halfway up the stairs before you notice you took them.",
+    "It doesn't do anything. That's the point. It's the one thing I own that keeps no score of me.",
+    "Wear it a month. If it isn't for you, send it back \u2014 no reason needed.",
+    "Be Here WOW"
+   ],
+   "offer": "Lead with restraint and an unconditional return, never arithmetic. Spine: \"Wear it a month. If it isn't for you, send it back \u2014 no reason needed, no questions.\" The guarantee grades nothing: asking a wearer to certify presence would reinstall the scorecard the ring refuses. Frame the $200 as paying for restraint, not utility \u2014 \"The one thing you'll ever own that keeps no score of you,\" with \"for the cost of one nice dinner\" as a quiet frame beneath it, never an argument. Keep ROI and reclaimable-hours math out of the hero; that number stays downstream and gentle, never a grade. Proof = real wearers' anonymous before/after words \u2014 the only number we'd trust, so the only one we sell.",
+   "hierarchy": [
+    "First \u2014 the invitation: 'When would now be a good time?' pinned to the plain line beneath it, 'A gold ring that knows nothing about you \u2014 on purpose.' The koan leads; the plain line names the object (gold ring) and the wedge (knows nothing) so a distracted stranger gets it cold in three seconds. Nothing to prove above the fold.",
+    "Second \u2014 the wedge as category law: every other ring reports on your life; Pulse gives you the afternoon back \u2014 no screen, no score, nothing to check, because your life was never data. This is why the object exists and why it costs $200.",
+    "Third \u2014 the concrete return: one moment the body recognizes \u2014 the kettle you actually hear, the last page of the story read to the end \u2014 and the felt tap itself: 'A small tap on your finger \u2014 you look up, and the room is still there.' How little it asks: two minutes to set up, then it just taps; the remembering is yours.",
+    "Fourth \u2014 the flag, the objection, and the proof: the brag the wearer repeats \u2014 'It doesn't do anything. That's the point. The one thing I own that keeps no score of me' \u2014 and the sayable answer for the first friend who asks 'isn't that just another buzz?': 'A notification wants something from you. This wants nothing \u2014 it taps, and the wanting stops.' Concede the haptic resemblance, then flip the errand: a ping summons you toward a task; the pulse hands you the room and asks nothing back. Then real wearers' anonymous before/after words and an unconditional 30-day return that grades nothing.",
+    "Fifth \u2014 the founder and the tribe: Johan answers replies himself, usually with coffee; this is for people who'd rather live the moment than measure it \u2014 'I stopped measuring my life to start living it' \u2014 and not for the optimizer chasing streaks. The refusal is the flag that makes the right people feel found."
+   ],
+   "guardrails": [
+    "The wedge is a different verb, not fewer numbers. Never argue on data's ledger \u2014 no 'tracks less,' no 'removes a number,' no subtraction framing. They report; we return. They ask how you did; we ask where you are.",
+    "The return is a felt thing, not a retrieval. The ring stores nothing and hands nothing back. Say 'the afternoon back' or 'it was there all along,' never 'the ring does the remembering'; the remembering belongs to the wearer.",
+    "Land it in the chest, not the head: one felt, particular sensory instant beats any category of 'moments.' Ration each sensory prop (the kettle, the coffee, the tap, the stairs) to one appearance per surface.",
+    "Perform presence, don't narrate it. Prefer a present-tense instant that happens in the reader's body \u2014 'You're halfway up the stairs before you notice you took them,' 'You look up. Here you are.' \u2014 over a line that reports the benefit from outside the moment.",
+    "Kill the 'just another notification' objection by direction-of-ask, never by feature. Concede the haptic resemblance, then flip the errand: a ping summons and wants something; a pulse releases and wants nothing. The winning distinction is 'wants nothing' \u2014 never argue it's a better alert, smarter reminder, or quieter buzz; that files us back in the bucket we die in.",
+    "The flag is the wearer's to repeat, not ours to shout. Remarkability comes from a first-person owner-voice line the buyer says out loud \u2014 steal these verbatim from the corpus so they're earned, not clever.",
+    "Never 'you will feel' \u2014 always 'you may notice.' The uncertainty is the active ingredient.",
+    "Ban the destination verbs: no 'become,' 'get,' 'improve,' 'reduce,' 'unlock,' 'transform,' 'elevate,' 'journey.' Presence is arriving, not a place you arrive at.",
+    "Kill 'scientifically proven' and all proof-by-authority. Proof = real wearers' own before/after words only.",
+    "Never let the enemy name the product. No 'smart wearable,' no 'notification,' no benefit-bullet lists, no feature/mechanism grid \u2014 name the notification only to refuse it, never to describe what Pulse is.",
+    "Never ship a score. No quiz score/grade/percentile, no dashboard, no streaks. A number for someone's presence collapses the anti-data soul.",
+    "The guarantee grades nothing. The return is unconditional \u2014 any reason or none, no questions, no proof of presence at the door.",
+    "No shouted transactions. Retire 'SHOP NOW'; the CTA should be as quiet as the pulse. No exclamation points, no urgency or scarcity.",
+    "Don't invite the spreadsheet. Keep ROI math and the reclaimable-hours number out of the hero; price as identity and restraint. The dinner line is a quiet frame, not an argument.",
+    "The deliverable must withhold like the object. Ship the fewest lines that each wave a flag (~4 taglines, ~7 TOS); hold the rest as an internal palette that lives inside body copy, not on the shipped surface. Cut, don't add; prefer verbatim corpus lines; when in doubt, say less.",
+    "Clarity before cleverness in the hero: the koan may lead, but it must sit against one plain line that names the object and the wedge. Never leave the riddle standing alone above the fold.",
+    "Speak to the wearer in second person, present tense, and let the sentence embody presence rather than describe it. Keep triple-negation ('counts nothing, grades nothing, remembers nothing') as an owner-voice flag only \u2014 never on the shipped surface and never as the wedge's closing argument, where negation drags the reader back into the ledger we left.",
+    "Say who it's NOT for. Naming the optimizer and sending them to Oura is what makes the right people feel found."
+   ]
+  },
+  "advisors": [
+   {
+    "id": "hormozi",
+    "top_recs": [
+     "Add a plain, unconditional money-back guarantee as the spine of the offer \u2014 'Wear it a month; if it isn't for you, send it back, no reason needed' \u2014 to reverse the risk and shrink the only weak value lever (perceived likelihood) without touching urgency or scarcity.",
+     "Sell concrete returned moments instead of adjective soup \u2014 the kettle you actually hear, the last page of the story, the first coffee tasted \u2014 because the vivid dream outcome is already built and the live homepage was leaking it with 'Become Calm, Focused & Present.'",
+     "Make the proof real wearers' anonymous before/after words \u2014 'the only number we'd trust, so the only one we sell' \u2014 since the anti-data stance forbids a graph but not human testimony."
+    ],
+    "signature_line": "Wear it a month. If it isn't for you, send it back \u2014 no reason needed.",
+    "dissent": "Would still keep the reclaimable-hours quiz number and the 'cost of one nice dinner' math one honest scroll below the hero as a self-serve close; the board banished arithmetic entirely from the shipped surface, and I think a distracted buyer sometimes needs one permission-to-justify beat that the pure-identity frame withholds."
+   },
+   {
+    "id": "godin",
+    "top_recs": [
+     "Let the wedge run the whole brand and starve the benefit-claims \u2014 plant the flag ('a gold ring that knows nothing about you, on purpose') on the homepage, not just in the founder's Sunday emails.",
+     "Put a 'who this is NOT for' line on the shipped surface \u2014 name the optimizer chasing streaks and gently send them to Oura, because telling the wrong people no is what makes the right people feel found.",
+     "Make the remarkable line first-person and repeatable \u2014 'It doesn't do anything. That's the point.' \u2014 a flag the buyer says out loud, not a slogan we shout at them."
+    ],
+    "signature_line": "Say who it's NOT for \u2014 the refusal is the flag that makes the right people feel found.",
+    "dissent": "none"
+   },
+   {
+    "id": "watts",
+    "top_recs": [
+     "Purge every destination verb \u2014 'become / get / improve / reduce' \u2014 and rebuild around arriving in what already is, because 'become present' hands the ego the scoreboard the ring was built to dissolve.",
+     "Perform presence inside the sentence rather than describing it \u2014 'You look up. Here you are,' 'You're halfway up the stairs before you notice you took them' \u2014 so the line arrives instead of explaining itself.",
+     "Hold 'you may notice, never you will feel' as sacred: a promised feeling is a debt the present moment can't be made to pay, and the uncertainty is the active ingredient."
+    ],
+    "signature_line": "When would now be a good time?",
+    "dissent": "Mild \u2014 I'd let the koan stand alone above the fold for a breath before the plain line resolves it; the board pins the two together for three-second clarity, which is right for a stranger, but a hair less trusting of the pause than I'd be."
+   },
+   {
+    "id": "jobs",
+    "top_recs": [
+     "Burn the current homepage down and rebuild from the felt experience, not the spec sheet: one line above the fold, the ring, one sentence of what the pulse feels like \u2014 delete every benefit bullet, the word 'smart,' and 'scientifically proven.'",
+     "Never let the enemy name the product \u2014 refuse 'smart wearable' and 'notification' except to reject them; the moment you define Pulse by the category it escapes, you lose.",
+     "Protect the one thing \u2014 nothing to check, ever \u2014 and refuse every metric that betrays it: kill the Presence Quiz score, because a number for someone's presence makes you Fitbit in gold."
+    ],
+    "signature_line": "It does one thing. It gives you back the moment you were about to miss.",
+    "dissent": "none \u2014 though I'd cut even harder: I think seven TOS lines is one or two too many, and the truest ship is four. The board landed on withholding as a principle; I'd just apply the knife once more."
+   },
+   {
+    "id": "sutherland",
+    "top_recs": [
+     "Make unmeasurability the explicit hero, not a footnote \u2014 reframe 'no data' from a spec-sheet lack into an emotional luxury and a confidence signal: the one object in your life that will never keep score or make you feel behind.",
+     "Protect 'you may notice' as the mechanism, not soft copy \u2014 the framing IS the product for a self-authored benefit; 'scientifically proven, calm in 10 seconds' sets a testable promise the wearer fails against and then feels cheated by.",
+     "Never invite the spreadsheet onto a Veblen good \u2014 keep ROI and the reclaimable-hours math out of the hero; a ring you justify on payback is a ring nobody wants to be seen wearing."
+    ],
+    "signature_line": "A gold ring that does almost nothing, on purpose. That isn't the compromise \u2014 that's the luxury.",
+    "dissent": "Direct tension with Hormozi's quiz-number close: I'd keep the arithmetic off every surface, not just the hero. The board sided with me on the shipped page, so my dissent is only that the 'downstream, gentle' number should be gentler still \u2014 ideally absent."
+   }
+  ],
+  "headline_recommendation": "Ship the anti-data wedge on the homepage itself and delete the Fitbit-flavored brand entirely: replace 'Feel good in 10 sec / Scientifically proven / Become Calm, Focused & Present / SHOP NOW' with the koan pinned to one plain line \u2014 'When would now be a good time? A gold ring that knows nothing about you, on purpose' \u2014 backed by an unconditional 30-day return that grades nothing and proof made only of real wearers' before/after words. The refusal to measure is the whole product; put it above the fold, price it as restraint not utility, and answer replies yourself."
+ },
+ "passes": [
+  {
+   "pass": 1,
+   "focus": "CLARITY \u2014 is the core promise unmistakable to a distracted person in 3 seconds?",
+   "change": "Clarity pass: paired the hero koan with a plain subject line (\"A gold ring that tracks nothing \u2014 and hands back the moments you were about to miss\") so a distracted stranger knows what it is in 3 seconds, and threaded that line into hierarchy/tos.",
+   "convergence": 0.34
+  },
+  {
+   "pass": 2,
+   "focus": "THE WEDGE \u2014 sharpen the anti-data category difference until it's undeniable.",
+   "change": "Pass 2 rewrote the wedge from arithmetic (\"adds a number / removes one\") to a category law of opposite verbs \u2014 they report, Pulse returns \u2014 ending on the repeatable tribe flag \"the moments were never data to begin with\"; swapped the stale reframe tagline for Sutherland's un-scorable question and added the flag line; added a guardrail banning data's-ledger framing.",
+   "convergence": 0.56
+  },
+  {
+   "pass": 3,
+   "focus": "THE OFFER \u2014 make the $200 feel like an obvious yes, with zero hype/urgency.",
+   "change": "Pass 3 (Offer): replaced the conditional \"prove you recalled a moment\" guarantee with an unconditional no-reason/no-questions return, and swapped the dinner-vs-value trade for a restraint/identity price line \u2014 the exit is now as unmeasured as the ring.",
+   "convergence": 0.82
+  },
+  {
+   "pass": 4,
+   "focus": "EMOTIONAL TRUTH \u2014 does it land in the chest ('I heard the kettle'), not just the head?",
+   "change": "Pass 4 (emotional truth): pulled a single felt, sensory moment onto the object itself \u2014 swapped the abstract \"hands back the moments you were about to miss\" in the hero for a body-level image (tap on the finger, you look up, the room is still there), and turned the abstract-plural return lines into one recognizable kettle arc (missed in the afternoon \u2192 \"you heard the kettle this time\"), so it lands in the chest without breaking the anti-data wedge or the \"you may notice\" rule.",
+   "convergence": 0.86
+  },
+  {
+   "pass": 5,
+   "focus": "THE MOVIE-OF-YOUR-LIFE DEVICE \u2014 is it earning its place, or overused/precious?",
+   "change": "Retired the \"ring hands back / does the remembering\" retrieval device (off-wedge and precious) \u2014 wedge/positioning/taglines/ToS now give the concrete \"afternoon back\" and locate the remembering with the wearer, and the kettle is rationed to a single appearance while the other sensory beats vary.",
+   "convergence": 0.87
+  },
+  {
+   "pass": 6,
+   "focus": "REMARKABILITY \u2014 is this worth talking about? Does it give people a flag to wave?",
+   "change": "Made the ring remarkable: swapped the hero's spec line \"tracks nothing\" for the retellable scandal \"knows nothing about you \u2014 on purpose,\" and armed the wearer with a two-beat owner-voice brag (\"It doesn't do anything. That's the point.\") plus a first-person confession flag.",
+   "convergence": 0.83
+  },
+  {
+   "pass": 7,
+   "focus": "SIMPLICITY \u2014 cut everything inessential; every remaining line must be inevitable.",
+   "change": "Simplicity pass: hero cut to two lines (koan + plain line, tap moved to body), taglines trimmed 18\u21925, positioning collapsed to three sentences, offer and hierarchy stripped of meta-commentary.",
+   "convergence": 0.83
+  },
+  {
+   "pass": 8,
+   "focus": "PRESENCE \u2014 does the language EMBODY presence, or merely describe it?",
+   "change": "Pass 8 (Presence): rewrote three describe-from-outside lines into embodied present-tense instants \u2014 positioning now \"It taps your finger a few times an hour. You look up. Here you are.\" (Watts, cut the future-moment promise); the wedge drops its head-level triple-negation tail for \"it taps, the afternoon is still going on, no one keeping score\" (Sutherland) while the triple-negation survives as a sayable TOS flag; and \"The days don't blur when you're in them\" becomes \"You're halfway up the stairs before you notice you took them.\" (Jobs) \u2014 chosen over the tap/look-up variants to respect the one-prop-per-surface ration.",
+   "convergence": 0.86
+  },
+  {
+   "pass": 9,
+   "focus": "OBJECTIONS \u2014 kill 'isn't this just another gadget/notification?' cleanly.",
+   "change": "Killed the 'just another notification' objection with one sayable owner-voice retort ('A notification wants something from you. This wants nothing') threaded into taglines, ToS, wedge, Fourth-tier hierarchy, and a new direction-of-ask guardrail \u2014 conceding the buzz, flipping the errand, staying off data's ledger.",
+   "convergence": 0.9
+  },
+  {
+   "pass": 10,
+   "focus": "GATE \u2014 final coherence: lock the hero, tagline set, TOS set, hierarchy; ship-ready.",
+   "change": "Gate pass: performed the withholding rule in the deliverable \u2014 trimmed TOS 13\u21927 (dropped the ledger-y triple-negation and \"No screen. No score.\" redundancies), cut live taglines 6\u21924 with the rest moved to an internal-only palette, and shortened the wedge's back half to land in one breath.",
+   "convergence": 0.96
+  }
+ ]
+}
