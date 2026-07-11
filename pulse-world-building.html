@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pulse — World-Building Visual Language</title>
+<meta name="description" content="The single source of truth for the Pulse visual world: do's & don'ts, the full image library with green/yellow/red curation, an archive, core messaging & taglines, a text-on-screen workshop, and the prompt library." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#EBE7D4; --warm:#F9F6E5; --ink:#1A1C22; --brown:#423D32;
+    --lime:#E3F47D; --honey:#A67C00; --muted:#6E6857; --faint:#8a8578;
+    --line:rgba(26,28,34,.14);
+    --green:#4E7C34; --green-bg:#E3F0D4; --yellow:#B8860B; --yellow-bg:#F3E7C4;
+    --red:#9B3D2E; --red-bg:#F0D9D2;
+    --font:"DM Sans",sans-serif; --mono:"DM Mono",monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{ font-family:var(--font); background:var(--cream); color:var(--ink);
+    letter-spacing:-0.02em; -webkit-font-smoothing:antialiased; line-height:1.5;
+    padding:0 clamp(16px,4vw,40px) 80px; }
+  .shell{ max-width:1200px; margin:0 auto; }
+
+  .topbar{ position:sticky; top:0; z-index:60; background:var(--ink); color:var(--warm);
+    margin:0 calc(-1*clamp(16px,4vw,40px)) 0; padding:12px clamp(16px,4vw,40px);
+    display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .topbar .brand{ font-weight:600; font-size:16px; letter-spacing:-0.03em; }
+  .topbar .brand i{ color:var(--lime); font-style:normal; }
+  .topbar .stat{ font-family:var(--mono); font-size:11px; color:#b9b5a6; }
+  .topbar .stat b{ color:var(--warm); }
+  .topbar .spacer{ flex:1; }
+  .topbar button{ font-family:var(--mono); font-size:11px; color:#b9b5a6; background:none;
+    border:1px solid rgba(249,246,229,.18); border-radius:100px; padding:6px 13px; cursor:pointer; }
+  .topbar button:hover{ color:var(--warm); border-color:rgba(249,246,229,.4); }
+  .topbar button.on{ background:var(--lime); color:#101828; border-color:var(--lime); }
+
+  .eyebrow{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-top:34px; }
+  h1{ font-weight:600; font-size:clamp(30px,5.5vw,50px); letter-spacing:-0.045em; line-height:1.03; margin:12px 0 0; text-wrap:balance; }
+  .lede{ font-size:clamp(16px,2.1vw,19px); color:var(--brown); max-width:64ch; margin:16px 0 0; }
+
+  details.panel{ margin-top:22px; background:var(--warm); border:1px solid var(--line); border-radius:16px; overflow:hidden;
+    box-shadow:0 12px 30px rgba(66,61,50,.07); }
+  details.panel>summary{ list-style:none; cursor:pointer; padding:18px 22px; display:flex; align-items:center; gap:12px; }
+  details.panel>summary::-webkit-details-marker{ display:none; }
+  details.panel>summary .tw{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--honey); }
+  details.panel>summary h2{ font-size:19px; font-weight:600; letter-spacing:-0.03em; flex:1; }
+  details.panel>summary .chev{ font-family:var(--mono); font-size:12px; color:var(--muted); transition:transform .2s; }
+  details.panel[open]>summary .chev{ transform:rotate(90deg); }
+  .panel-body{ padding:0 22px 22px; }
+
+  .dd-grid{ display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:6px; }
+  .dd h3{ font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px; }
+  .dd.do h3{ color:var(--green); } .dd.dont h3{ color:var(--red); }
+  .dd ul{ list-style:none; display:flex; flex-direction:column; gap:9px; }
+  .dd li{ font-size:14.5px; color:var(--brown); padding-left:20px; position:relative; }
+  .dd.do li::before{ content:"✓"; position:absolute; left:0; color:var(--green); font-weight:600; }
+  .dd.dont li::before{ content:"✕"; position:absolute; left:0; color:var(--red); font-weight:600; }
+  .rules{ margin-top:20px; border-top:1px solid var(--line); padding-top:16px; }
+  .rules h3{ font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+  .rules ol{ padding-left:20px; display:flex; flex-direction:column; gap:7px; }
+  .rules li{ font-size:14.5px; color:var(--ink); }
+  .rules .derived{ margin-top:14px; font-family:var(--mono); font-size:12.5px; color:var(--honey); }
+  #derivedRules{ margin-top:6px; color:var(--brown); font-family:var(--font); font-size:14px; white-space:pre-wrap; }
+
+  .msg-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; margin-top:8px; }
+  .msg-card{ background:var(--cream); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .msg-card .k{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+  .msg-card .v{ font-size:15px; color:var(--ink); margin-top:5px; line-height:1.35; }
+  .tagline-list{ margin-top:6px; display:flex; flex-direction:column; gap:8px; }
+  .tagline{ display:flex; align-items:center; gap:12px; padding:11px 14px; background:var(--cream); border:1px solid var(--line); border-radius:10px; }
+  .tagline .t{ flex:1; font-size:16px; }
+  .tagline .cat{ font-family:var(--mono); font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+
+  .rate{ display:inline-flex; gap:4px; }
+  .rate button{ width:26px; height:22px; border-radius:6px; border:1px solid var(--line); cursor:pointer;
+    background:var(--warm); font-size:12px; line-height:1; display:flex; align-items:center; justify-content:center; }
+  .rate button.g.on{ background:var(--green-bg); border-color:var(--green); }
+  .rate button.y.on{ background:var(--yellow-bg); border-color:var(--yellow); }
+  .rate button.r.on{ background:var(--red-bg); border-color:var(--red); }
+  .rate button:hover{ filter:brightness(.97); }
+
+  .tos-head{ display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:4px; }
+  .tos-progress{ font-family:var(--mono); font-size:12px; color:var(--muted); }
+  .tos-locked{ font-family:var(--mono); font-size:12px; color:var(--green); font-weight:500; }
+  .tos-list{ display:flex; flex-direction:column; gap:8px; margin-top:12px; }
+  .tos{ display:flex; align-items:center; gap:12px; padding:12px 14px; background:var(--cream); border:1px solid var(--line); border-radius:10px; }
+  .tos .n{ font-family:var(--mono); font-size:12px; color:var(--faint); width:20px; }
+  .tos .t{ flex:1; font-size:16px; font-weight:500; }
+  .tos .note-in{ font-family:var(--font); font-size:12.5px; border:1px solid var(--line); border-radius:7px; padding:5px 9px; width:180px; background:var(--warm); }
+
+  .pl-block{ margin-top:14px; }
+  .pl-block h3{ font-family:var(--mono); font-size:12px; color:var(--honey); margin-bottom:6px; letter-spacing:.04em; }
+  .pl-block p{ font-size:13.5px; color:var(--brown); background:var(--cream); border:1px solid var(--line); border-radius:8px; padding:11px 13px; line-height:1.5; }
+  .pl-gens{ margin-top:16px; font-size:13px; }
+  .pl-gens .g-h{ font-family:var(--mono); font-size:12px; color:var(--honey); margin:16px 0 6px; }
+  .pl-gens .row{ display:flex; gap:10px; padding:7px 0; border-bottom:1px solid var(--line); }
+  .pl-gens .row code{ font-family:var(--mono); font-size:12px; color:var(--ink); white-space:nowrap; }
+  .pl-gens .row span{ color:var(--muted); }
+  .pl-backends{ margin-top:12px; font-family:var(--mono); font-size:12px; color:var(--muted); }
+
+  .collab{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
+    border-top:1px solid var(--line); padding-top:14px; margin-top:44px; display:flex; align-items:baseline; gap:12px; }
+  .collab .cnt{ color:var(--honey); }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px; margin-top:18px; }
+  figure.card{ margin:0; background:var(--warm); border:1px solid var(--line); border-radius:12px; overflow:hidden;
+    box-shadow:0 10px 24px rgba(66,61,50,.07); display:flex; flex-direction:column; }
+  figure.card .imgwrap{ position:relative; }
+  figure.card img, figure.card video{ width:100%; display:block; aspect-ratio:3/2; object-fit:cover; background:#ddd7c3; }
+  figure.card .badge{ position:absolute; top:8px; left:8px; font-family:var(--mono); font-size:9.5px; padding:3px 7px; border-radius:100px; letter-spacing:.04em; }
+  figure.card.rg .badge{ background:var(--green-bg); color:var(--green); }
+  figure.card.ry .badge{ background:var(--yellow-bg); color:var(--yellow); }
+  figure.card.rr .badge{ background:var(--red-bg); color:var(--red); }
+  figure.card .meta{ padding:9px 11px; display:flex; flex-direction:column; gap:8px; }
+  figure.card .fn{ font-family:var(--mono); font-size:10.5px; color:var(--muted); word-break:break-all; }
+  figure.card .ctl{ display:flex; align-items:center; justify-content:space-between; gap:8px; }
+  figure.card .arch-btn{ font-family:var(--mono); font-size:10px; color:var(--faint); background:none; border:none; cursor:pointer; text-decoration:underline; }
+  figure.card .arch-btn:hover{ color:var(--red); }
+  figure.card .note-in{ font-family:var(--font); font-size:12px; border:1px solid var(--red); border-radius:7px; padding:6px 9px; width:100%; background:#fff; display:none; }
+  figure.card.rr .note-in{ display:block; }
+
+  footer{ margin-top:60px; border-top:1px solid var(--line); padding-top:20px; font-family:var(--mono); font-size:12px; color:var(--faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  footer a{ color:var(--brown); }
+  .empty{ color:var(--muted); font-size:14px; padding:20px 0; }
+  @media(max-width:720px){ .dd-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span class="brand">pulse<i>·</i> world-building</span>
+  <span class="stat" id="stat">loading…</span>
+  <span class="spacer"></span>
+  <button id="viewMain" class="on">Gallery</button>
+  <button id="viewArchive">Archive <span id="archCount"></span></button>
+  <button id="exportBtn">Export ratings ↓</button>
+</div>
+
+<div class="shell">
+  <div class="eyebrow">The single source of truth · Pulse Voice + Pulse Filmmaker</div>
+  <h1>World-Building Visual Language</h1>
+  <p class="lede">Every image made for the Pulse world, in one place — to curate, to rate, and to learn from. Rate each frame <b style="color:var(--green)">keep</b> / <b style="color:var(--yellow)">caution</b> / <b style="color:var(--red)">archive</b>; the reds leave the gallery and carry a note; the yeses, noes, and notes feed the rules and the prompts below. AI-slop and hand deformities are pre-flagged by an audit pass.</p>
+
+  <details class="panel" id="rulesPanel">
+    <summary><span class="tw">Start here</span><h2>Do's, don'ts &amp; usage rules</h2><span class="chev">▶</span></summary>
+    <div class="panel-body">
+      <div class="dd-grid">
+        <div class="dd do">
+          <h3>Do</h3>
+          <ul>
+            <li>Soft ambient natural light, warm cream / honey palette, medium-format film feel.</li>
+            <li>The wide polished <b>gold ring</b> as a discovered second-glance glint — present, never a hard sell.</li>
+            <li>Real, diverse people in true moments — editorial, un-staged, emotionally honest.</li>
+            <li>Two visual worlds kept distinct: warm Maya lifestyle vs. dark luxe product.</li>
+            <li>Anti-data everywhere: no screens-of-metrics, no streaks, nothing to check.</li>
+            <li>Motion earns its place — the pulse is always the hinge that slows the moment.</li>
+          </ul>
+        </div>
+        <div class="dd dont">
+          <h3>Don't</h3>
+          <ul>
+            <li><b>Malformed hands</b> — extra/fused/six fingers, bent joints, melted hands. Archive on sight.</li>
+            <li>Uncanny/waxy faces, broken eyes or teeth, warped anatomy, extra limbs.</li>
+            <li>Text, watermarks, gibberish signage, or brand logos in the frame.</li>
+            <li>Cold, stocky, corporate, or over-saturated CGI looks. No glow on cream.</li>
+            <li>The ring rendered wrong — a thin band, a diamond ring, doubled, or mangled.</li>
+            <li>Hype grammar (urgency, scarcity, "drop", exclamation points).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rules">
+        <h3>Usage rules</h3>
+        <ol>
+          <li>Cream editorial for everything <i>felt</i>; dark luxe for the <i>product / logistics</i>. Arrival day is the deliberate crossover.</li>
+          <li>Hands are the #1 slop risk — every visible hand gets a finger-count check before a frame ships.</li>
+          <li>Rate honestly: <b>green</b> = ship, <b>yellow</b> = usable with a caveat, <b>red</b> = archive + note why.</li>
+          <li>Every red note names the failure (hands / light / anatomy / off-brand / ring) so it can adjust a prompt.</li>
+        </ol>
+        <div class="derived">Rules derived from your red notes so far:</div>
+        <div id="derivedRules">— rate some frames red with notes and a summary appears here —</div>
+      </div>
+    </div>
+  </details>
+
+  <details class="panel" id="msgPanel">
+    <summary><span class="tw">Voice</span><h2>Core messaging &amp; taglines</h2><span class="chev">▶</span></summary>
+    <div class="panel-body">
+      <div class="msg-grid">
+        <div class="msg-card"><div class="k">The category</div><div class="v">A mindfulness ring that brings you back to the present — anti-data, no screen, nothing to check.</div></div>
+        <div class="msg-card"><div class="k">The wedge</div><div class="v">A pulse instead of a ping. The opposite of one more notification.</div></div>
+        <div class="msg-card"><div class="k">The promise</div><div class="v">Make the most of the movie of your life — the same footage, at the speed of being here.</div></div>
+        <div class="msg-card"><div class="k">The feeling</div><div class="v">Numb → Seen → Hopeful → Convinced → Relieved → Grateful → Generous.</div></div>
+        <div class="msg-card"><div class="k">The voice</div><div class="v">Present tense, second person, one breath per sentence. Invite, never instruct. No exclamation points.</div></div>
+      </div>
+      <div class="tagline-list" id="taglineList"></div>
+    </div>
+  </details>
+
+  <details class="panel" id="tosPanel" open>
+    <summary><span class="tw">Workshop</span><h2>Text on screen · 10 variations</h2><span class="chev">▶</span></summary>
+    <div class="panel-body">
+      <div class="tos-head">
+        <span class="tos-progress" id="tosProgress"></span>
+        <span class="tos-locked" id="tosLocked"></span>
+      </div>
+      <p style="font-size:14px;color:var(--brown);max-width:64ch;">Short lines for video / social overlays. Rate all ten; once every line has a verdict the greens lock in as the approved on-screen text rules (and reds carry a note on why).</p>
+      <div class="tos-list" id="tosList"></div>
+    </div>
+  </details>
+
+  <details class="panel" id="promptPanel">
+    <summary><span class="tw">Prompts</span><h2>Prompt library</h2><span class="chev">▶</span></summary>
+    <div class="panel-body" id="promptBody"><div class="empty">loading prompt library…</div></div>
+  </details>
+
+  <div id="gallery"></div>
+
+  <footer>
+    <span>Pulse · World-building visual language · ratings saved in this browser</span>
+    <span><a href="image-library.html">Atlas</a> · <a href="builds.html">Builds</a></span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var LS="pmf-worldbuilding-v1";
+  var state=JSON.parse(localStorage.getItem(LS)||"{}");
+  state.ratings=state.ratings||{};
+  state.notes=state.notes||{};
+  state.archived=state.archived||{};
+  state.tos=state.tos||{};
+  state.taglines=state.taglines||{};
+  function save(){ localStorage.setItem(LS, JSON.stringify(state)); }
+  function clear(el){ while(el.firstChild) el.removeChild(el.firstChild); }
+  function el(tag, cls, txt){ var e=document.createElement(tag); if(cls) e.className=cls; if(txt!=null) e.textContent=txt; return e; }
+
+  var INDEX=null, showArchive=false;
+
+  var TAGLINES=[
+    ["Be here for the moment you are in.","hero"],
+    ["A pulse instead of a ping.","wedge"],
+    ["Make the most of the movie of your life.","film"],
+    ["The days don't blur when you're in them.","problem"],
+    ["Come back to now.","win-back"],
+    ["Presence you can wear.","product"],
+    ["One tap. You're here.","mechanism"],
+    ["Not another thing to check. The opposite.","anti-data"],
+    ["The moment you'd have missed.","inflection"],
+    ["Twenty-four frames of one moment.","film"]
+  ];
+  var TOS=[
+    "You're here.",
+    "One breath. Notice where you are.",
+    "The days you're in don't blur.",
+    "A pulse, not a ping.",
+    "This moment, at the speed you can live it.",
+    "Come back to now.",
+    "The movie of your life — play it slower.",
+    "Nothing to check. Just this.",
+    "Feel your feet. We'll wait.",
+    "Presence, on your finger."
+  ];
+
+  function pill(current, onSet){
+    var wrap=el('span','rate');
+    [["g","green"],["y","yellow"],["r","red"]].forEach(function(o){
+      var b=el('button',o[0]+(current===o[1]?" on":""),"●");
+      b.title=o[1]; b.style.color=({green:'#4E7C34',yellow:'#B8860B',red:'#9B3D2E'})[o[1]];
+      b.onclick=function(){ onSet(o[1]); };
+      wrap.appendChild(b);
+    });
+    return wrap;
+  }
+
+  function renderTaglines(){
+    var host=document.getElementById('taglineList'); clear(host);
+    TAGLINES.forEach(function(t,i){
+      var row=el('div','tagline');
+      row.appendChild(el('span','t','“'+t[0]+'”'));
+      row.appendChild(el('span','cat',t[1]));
+      row.appendChild(pill(state.taglines[i], function(r){ state.taglines[i]=r; save(); renderTaglines(); }));
+      host.appendChild(row);
+    });
+  }
+
+  function renderTOS(){
+    var host=document.getElementById('tosList'); clear(host);
+    var rated=0, greens=0;
+    TOS.forEach(function(line,i){
+      var v=state.tos[i]||{};
+      if(v.rating) rated++;
+      if(v.rating==='green') greens++;
+      var row=el('div','tos');
+      row.appendChild(el('span','n',String(i+1)));
+      row.appendChild(el('span','t','“'+line+'”'));
+      row.appendChild(pill(v.rating, function(r){ state.tos[i]=Object.assign({},state.tos[i],{rating:r}); save(); renderTOS(); }));
+      var note=el('input','note-in'); note.placeholder='why?'; note.value=v.note||'';
+      note.style.display = (v.rating==='red')?'block':'none';
+      note.oninput=function(){ state.tos[i]=Object.assign({},state.tos[i],{note:note.value}); save(); };
+      row.appendChild(note);
+      host.appendChild(row);
+    });
+    document.getElementById('tosProgress').textContent=rated+' / '+TOS.length+' rated';
+    document.getElementById('tosLocked').textContent = (rated===TOS.length) ? ('✓ locked as rules — '+greens+' approved lines') : '';
+  }
+
+  function derivedRules(){
+    var themes={hands:0,light:0,anatomy:0,ring:0,'off-brand':0,text:0,other:0};
+    Object.keys(state.notes).forEach(function(f){
+      if(state.ratings[f]!=='red') return;
+      var n=(state.notes[f]||'').toLowerCase();
+      if(/hand|finger|thumb/.test(n)) themes.hands++;
+      else if(/light|dark|harsh|glow|stock/.test(n)) themes.light++;
+      else if(/face|eye|teeth|limb|anatomy|melt|warp/.test(n)) themes.anatomy++;
+      else if(/ring|band|diamond/.test(n)) themes.ring++;
+      else if(/brand|corporate|cgi|saturat/.test(n)) themes['off-brand']++;
+      else if(/text|watermark|logo|sign/.test(n)) themes.text++;
+      else themes.other++;
+    });
+    var total=Object.keys(themes).reduce(function(a,k){return a+themes[k];},0);
+    var out=document.getElementById('derivedRules');
+    if(!total){ out.textContent='— rate some frames red with notes and a summary appears here —'; return; }
+    var lines=[];
+    if(themes.hands) lines.push('• Hands failing in '+themes.hands+' frames → tighten hand/finger constraints; prefer hands-hidden or ring-macro compositions.');
+    if(themes.anatomy) lines.push('• Anatomy/faces in '+themes.anatomy+' → add "natural anatomy, no distortion" and regenerate.');
+    if(themes.ring) lines.push('• Ring wrong in '+themes.ring+' → restate "wide smooth flat gold band, not a diamond ring".');
+    if(themes.light) lines.push('• Light off in '+themes.light+' → reinforce "soft ambient, warm, no harsh/CGI".');
+    if(themes['off-brand']) lines.push('• Off-brand in '+themes['off-brand']+' → re-anchor to the editorial film grammar.');
+    if(themes.text) lines.push('• Text/logo artifacts in '+themes.text+' → strengthen "no text, no logos, no signage".');
+    if(themes.other) lines.push('• '+themes.other+' other note(s) to review.');
+    out.textContent=lines.join('\n');
+  }
+
+  function setRating(file, r){
+    if(state.ratings[file]===r){ delete state.ratings[file]; } else { state.ratings[file]=r; }
+    if(state.ratings[file]==='red'){ state.archived[file]=true; } else { delete state.archived[file]; }
+    save(); renderGallery(); derivedRules(); updateStat();
+  }
+  function isVideo(f){ return /\.mp4$/i.test(f); }
+
+  function card(file){
+    var r=state.ratings[file];
+    var fig=el('figure','card'+(r?' r'+r[0]:''));
+    var wrap=el('div','imgwrap');
+    var media;
+    if(isVideo(file)){ media=document.createElement('video'); media.src=file; media.muted=true; media.loop=true; media.playsInline=true;
+      media.onmouseover=function(){media.play();}; media.onmouseout=function(){media.pause();}; }
+    else { media=document.createElement('img'); media.loading='lazy'; media.src=file; }
+    wrap.appendChild(media);
+    if(r){ wrap.appendChild(el('span','badge',({green:'KEEP',yellow:'CAUTION',red:'ARCHIVED'})[r])); }
+    fig.appendChild(wrap);
+    var meta=el('div','meta');
+    var ctl=el('div','ctl');
+    ctl.appendChild(pill(r, function(v){ setRating(file, v); }));
+    var arch=el('button','arch-btn', state.archived[file] ? 'restore' : 'archive');
+    arch.onclick=function(){
+      if(state.archived[file]){ delete state.archived[file]; if(state.ratings[file]==='red') delete state.ratings[file]; }
+      else { state.archived[file]=true; state.ratings[file]='red'; }
+      save(); renderGallery(); derivedRules(); updateStat();
+    };
+    ctl.appendChild(arch);
+    meta.appendChild(ctl);
+    meta.appendChild(el('div','fn',file.split('/').pop()));
+    var note=el('input','note-in'); note.placeholder='note (why archived)…'; note.value=state.notes[file]||'';
+    note.oninput=function(){ state.notes[file]=note.value; save(); derivedRules(); };
+    meta.appendChild(note);
+    fig.appendChild(meta);
+    return fig;
+  }
+
+  function renderGallery(){
+    var host=document.getElementById('gallery'); clear(host);
+    if(!INDEX) return;
+    var anyShown=false;
+    Object.keys(INDEX.collections).forEach(function(key){
+      var c=INDEX.collections[key];
+      var files=c.files.filter(function(f){ var a=!!state.archived[f]; return showArchive ? a : !a; });
+      if(!files.length) return;
+      anyShown=true;
+      var lab=el('div','collab');
+      lab.appendChild(el('span',null,c.label));
+      lab.appendChild(el('span','cnt', files.length+(showArchive?' archived':'')));
+      host.appendChild(lab);
+      var grid=el('div','grid');
+      files.forEach(function(f){ grid.appendChild(card(f)); });
+      host.appendChild(grid);
+    });
+    if(!anyShown){ host.appendChild(el('div','empty', showArchive?'Archive is empty — no frames archived yet.':'Nothing to show.')); }
+  }
+
+  function updateStat(){
+    if(!INDEX) return;
+    var total=0; Object.keys(INDEX.collections).forEach(function(k){ total+=INDEX.collections[k].files.length; });
+    var g=0,y=0,rd=0;
+    Object.keys(state.ratings).forEach(function(f){ var v=state.ratings[f]; if(v==='green')g++; else if(v==='yellow')y++; else if(v==='red')rd++; });
+    var s=document.getElementById('stat'); clear(s);
+    function seg(n,txt,col){ var b=el('b',null,String(n)); if(col) b.style.color=col; s.appendChild(b); s.appendChild(document.createTextNode(' '+txt+'  ')); }
+    seg(total,'images  ·',null); seg(g,'keep ·','#8fbf6a'); seg(y,'caution ·','#e0b84c'); seg(rd,'archived','#e08a7a');
+    document.getElementById('archCount').textContent='('+Object.keys(state.archived).length+')';
+  }
+
+  function renderPrompts(data){
+    var host=document.getElementById('promptBody'); clear(host);
+    Object.keys(data.grammar).forEach(function(k){
+      var b=el('div','pl-block'); b.appendChild(el('h3',null,k)); b.appendChild(el('p',null,data.grammar[k])); host.appendChild(b);
+    });
+    var g=el('div','pl-gens');
+    g.appendChild(el('div','g-h','Generators'));
+    data.generators.forEach(function(x){
+      var r=el('div','row'); r.appendChild(el('code',null,x.file)); r.appendChild(el('span',null,x.makes)); g.appendChild(r);
+    });
+    g.appendChild(el('div','pl-backends','Backends: '+data.backends.join('  ·  ')));
+    host.appendChild(g);
+  }
+
+  function applySeed(seed){
+    Object.keys(seed).forEach(function(f){
+      if(state.ratings[f]) return;
+      state.ratings[f]=seed[f].rating;
+      if(seed[f].note && !state.notes[f]) state.notes[f]=seed[f].note;
+      if(seed[f].rating==='red') state.archived[f]=true;
+    });
+    save();
+  }
+
+  document.getElementById('viewMain').onclick=function(){ showArchive=false; this.classList.add('on'); document.getElementById('viewArchive').classList.remove('on'); renderGallery(); };
+  document.getElementById('viewArchive').onclick=function(){ showArchive=true; this.classList.add('on'); document.getElementById('viewMain').classList.remove('on'); renderGallery(); };
+  document.getElementById('exportBtn').onclick=function(){
+    var out={ generated:new Date().toISOString(), ratings:state.ratings, notes:state.notes, archived:Object.keys(state.archived), taglines:state.taglines, textOnScreen:state.tos };
+    var blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
+    var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='pulse-worldbuilding-ratings.json'; a.click();
+  };
+
+  renderTaglines(); renderTOS(); derivedRules();
+
+  fetch('world-building-index.json').then(function(r){return r.json();}).then(function(idx){
+    INDEX=idx;
+    return fetch('world-building-seed.json').then(function(r){return r.ok?r.json():{};}).catch(function(){return {};});
+  }).then(function(seed){
+    applySeed(seed||{}); renderGallery(); updateStat(); derivedRules();
+  }).catch(function(){
+    var host=document.getElementById('gallery'); clear(host);
+    host.appendChild(el('div','empty','Could not load the image index. Serve this over http:// (the index is fetched).'));
+  });
+
+  fetch('world-building-prompts.json').then(function(r){return r.json();}).then(renderPrompts).catch(function(){});
+})();
+</script>
+</body>
+</html>

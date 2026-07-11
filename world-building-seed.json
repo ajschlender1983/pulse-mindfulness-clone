@@ -1,0 +1,62 @@
+{
+  "library/storytellers/fest-01.png": {
+    "rating": "yellow",
+    "note": "raised hand atop head: soft/melty backlit fingers"
+  },
+  "emails/images/hero-come-back.png": {
+    "rating": "yellow",
+    "note": "reaching hand pale/waxy, corpse-grey, off-mood"
+  },
+  "emails/images/hero-email-come-back-to-now.png": {
+    "rating": "yellow",
+    "note": "waxy grey reaching hand, off-mood"
+  },
+  "emails/images/hero-email-come-back-to-now-soft.png": {
+    "rating": "yellow",
+    "note": "waxy grey reaching hand, off-mood"
+  },
+  "emails/images/hero-email-give-a-month.png": {
+    "rating": "yellow",
+    "note": "pouring hands: lower fingertips soft/blended"
+  },
+  "emails/images/hero-give-a-month.png": {
+    "rating": "yellow",
+    "note": "pouring hands: lower fingers indistinct"
+  },
+  "library/ethereal/eth-window-tide.png": {
+    "rating": "yellow",
+    "note": "CGI/3D look, ring reduced to a golden blob"
+  },
+  "film-strip/autopilot/auto-07.png": {
+    "rating": "yellow",
+    "note": "gibberish planner text (MOINDAY)"
+  },
+  "film-strip/autopilot/auto-09.png": {
+    "rating": "yellow",
+    "note": "garbled keyboard keycap labels"
+  },
+  "journey-images/3b-stage3-time.png": {
+    "rating": "yellow",
+    "note": "two merged gold bands (brand is one ring)"
+  },
+  "journey-images/film-17-sync-hands.png": {
+    "rating": "yellow",
+    "note": "dozen-hand overhead: a few fingers rubbery \u2014 full-res check"
+  },
+  "library/stories/walter-3.png": {
+    "rating": "yellow",
+    "note": "adult+toddler fingers interleave, slightly ambiguous"
+  },
+  "journey-images/7c-stage7-texture.png": {
+    "rating": "yellow",
+    "note": "two different rings (wide + thin) \u2014 brand is one ring"
+  },
+  "journey-images/film-11-elders.png": {
+    "rating": "yellow",
+    "note": "elder resembles a recognizable celebrity \u2014 likeness/legal risk"
+  },
+  "library/stories/sam-6.png": {
+    "rating": "yellow",
+    "note": "faint gibberish text on background laptop screen"
+  }
+}
