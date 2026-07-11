@@ -143,7 +143,7 @@ STORIES = {
            "on his right ring finger."),
    "frames": [
      ("darius-1","3:2","Darius on a crowded morning train, shoulders up around his ears, jaw tight, the carriage bright with soft diffuse daylight through big windows."),
-     ("darius-2","4:5","Darius in the same seat one breath later, shoulders visibly lowered, eyes resting on the passing city, one hand loose on his knee."),
+     ("darius-2","4:5","Darius still on the same crowded rush-hour commuter train, standing and holding the overhead grab-pole, one breath later than his tension: shoulders visibly lowered, jaw unclenched, eyes softening on the city passing through the train window, the train interior and other standing passengers clearly around him."),
      ("darius-3","1:1","Macro: his hand flat on his chest over the shirt, even soft light, the gold band prominent as a quiet anchor."),
      ("darius-4","3:2","Darius arriving home in early evening, pausing at the door with his keys still in hand, taking the breath before he goes in to his family, light soft and forgiving."),
    ]},

@@ -13,7 +13,7 @@ SOURCES=(
   "story-images/ingrid-1.png:ingrid-mat"
   "story-images/theo-4.png:theo-focus"
   "story-images/rosa-1.png:rosa-notebook"
-  "story-images/darius-2.png:darius-train"
+  "story-images/darius-1.png:darius-train"
   "story-images/amara-ben-3.png:amara-ben-hands"
   "emails/images/hero-email-charge-pair-breathe.png:arrival-unboxing"
   "emails/images/hero-email-give-a-month.png:referral-pour"
@@ -31,9 +31,12 @@ for pair in "${SOURCES[@]}"; do
   if [ ! -f "$src" ]; then echo "missing: $src"; missing=$((missing+1)); continue; fi
   mp4="$OUT/$name.mp4"; gif="$OUT/$name.gif"
   if [ -f "$mp4" ] && [ -f "$gif" ]; then continue; fi
-  # seamless breathe: zoom oscillates 1.02..1.08 over the loop (sin), slight upward drift and back
+  # seamless breathe: zoom oscillates over the loop (sin). Scale-to-COVER then
+  # center-crop to a uniform 3:2 first, so portrait/square/wide sources are never
+  # stretched — only cropped. (Bug fixed: zoompan s=WxH used to force-distort.)
   ffmpeg -y -loglevel error -loop 1 -i "$src" -t $DUR -vf "
-    scale=1920:-2,
+    scale=1920:1280:force_original_aspect_ratio=increase,
+    crop=1920:1280,
     zoompan=z='1.05+0.03*sin(2*PI*on/$FRAMES)':d=$FRAMES:fps=$FPS:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1280x854,
     format=yuv420p" -c:v libx264 -preset slow -crf 24 -movflags +faststart "$mp4" || { echo "mp4 fail: $name"; continue; }
   ffmpeg -y -loglevel error -i "$mp4" -vf "fps=12,scale=640:-1:flags=lanczos,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4" -loop 0 "$gif" || echo "gif fail: $name"
