@@ -185,6 +185,21 @@ section.rp-band.rp-band--cream{ background: var(--rp-cream); }
 .rp-copy:hover{ filter: brightness(1.05); }
 .rp-copy.rp-copied{ background: var(--rp-ink); color: var(--rp-lime); }
 
+/* ---------- Connection state band (dark, we-centric) ---------- */
+.rp-connband{ background: var(--rp-ink); color: var(--rp-warm); }
+.rp-connband .rp-band__eyebrow{ color: #9a9c9f; }
+.rp-connband .rp-band__title{ color: var(--rp-warm); }
+.rp-connband .rp-band__sub{ color: #cbc7b8; }
+.rp-feat{ background: rgba(255,255,255,.03); border: 1px solid rgba(227,244,125,.18); border-radius: 16px; padding: 24px 22px; }
+.rp-feat h3{ font-family: var(--rp-font); font-weight: 500; font-size: 18px; letter-spacing: -0.03em; color: var(--rp-lime); margin: 0 0 10px; }
+.rp-feat p{ font-family: var(--rp-font); font-size: 15px; color: #cbc7b8; letter-spacing: -0.02em; line-height: 1.45; }
+
+/* 3-button toggle: keep it from overflowing on small screens */
+@media (max-width: 560px){
+  #rp-toggle .rp-lab{ display: none; }
+  #rp-toggle button{ padding: 8px 12px; font-size: 12px; }
+}
+
 @media (max-width: 900px){
   .rp-grid{ grid-template-columns: 1fr; }
   #rp-toggle{ bottom: 14px; }

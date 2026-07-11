@@ -129,7 +129,7 @@ STORIES={
     ("sam-2","4:5",True,"Sam on an aimless walk with coat open, no destination, looking up at bare branches against a bright sky, relearning slow."),
     ("sam-3","1:1",True,"Macro: a coffee going cold on purpose, Sam's ringed hand wrapped around the cool cup, steam long gone, soft light."),
     ("sam-4","3:2",True,"Sam repotting a plant at a sunlit table, hands deep in dark soil, fully absorbed in one small real task."),
-    ("sam-5","4:5",True,"Sam lying back in bright grass looking straight up, arms open, the body finally unclenching in warm daylight."),
+    ("sam-5","4:5",True,"Sam sitting back on a blanket in bright grass, leaning on both hands with face tilted up to the warm sun, eyes closed, shoulders finally dropping — the body unclenching in soft daylight. Natural upright framing, face clear and consistent with the reference, the wide gold band on the hand."),
     ("sam-6","3:2",True,"Sam back at work but changed — one task on the screen, the window open, shoulders down, the ringed hand at rest on the desk."),
    ]},
  "mei-david":{"who":("A long-distance couple in their early 30s: Mei, an East Asian woman with a sleek bob, "
@@ -138,8 +138,8 @@ STORIES={
    "frames":[
     ("mei-david-1","4:5",True,"Mei at her apartment window in cool morning light in one city, hand flat on the glass, the gold band catching the first sun, missing someone but present."),
     ("mei-david-2","4:5",True,"David in a different city at evening, warm lamp light, sitting at a small table taking the same breath at the same moment, his gold band lit."),
-    ("mei-david-3","1:1",False,"Macro split feeling: two phones face-down on two different tables, two ringed hands resting beside them, one in cool light one in warm — the same pause in two places."),
-    ("mei-david-4","3:2",False,"A laptop on a table showing a video call where nothing is being said, just two people breathing together across distance, soft light in the room."),
+    ("mei-david-3","1:1",False,"A single quiet macro photograph, one frame only, no split screen and no borders: one hand at rest on a sunlit wooden windowsill wearing a wide smooth polished gold band, a plain unbranded phone lying face-down nearby, the rest of the frame soft empty negative space — the stillness of missing someone. Warm honey morning light, medium-format film, editorial. No logos, no Apple phone, no second hand, no collage."),
+    ("mei-david-4","3:2",True,"Mei (an East Asian woman with a sleek dark bob) sitting close to her laptop in soft warm light, eyes softly closed, breathing, on a quiet video call — the screen glow gentle on her face, her ringed hand (wide polished gold band) near the keyboard. Just her, present and calm; keep her face consistent with the reference."),
     ("mei-david-5","3:2",True,"Mei walking a busy street alone at golden hour, unhurried and unlonely, the ring on her hand, carried by a shared practice."),
     ("mei-david-6","3:2",True,"Reunion in a sunlit train station, Mei and David's two ringed hands finding each other first, before the embrace, warm light flaring."),
    ]},
@@ -178,7 +178,7 @@ TEXTURE=[
  ("tex-concentric-sand","1:1","Concentric rings pressed into warm pale sand radiating outward from a small center, raking golden light, the pulse motif made earth."),
  ("tex-concentric-water","1:1","A single drop's concentric rings spreading on near-black still water, one gold rim of light tracing each ring, drifting dust above."),
  ("tex-eclipse","1:1","The gold band held up backlit against the sun so its rim glows into a thin ring of gold light like an eclipse, lens flare, deep surround."),
- ("tex-aperture","3:2","Warm gold light pouring through a slowly opening circular aperture into a dim space, the geometry of presence opening, dust in the beam."),
+ ("tex-aperture","3:2","Extreme macro: warm gold morning light pouring through the perfect O of the wide polished gold Pulse ring held up in soft focus, the ring itself forming the aperture, a soft warm bokeh circle of light glowing through its centre, dust drifting in the beam. Warm cream and honey, medium-format film, NOT industrial, no metal hatch or porthole — only the gold ring as the opening."),
  ("tex-dust-spiral","3:2","A slow spiral of golden dust turning inside a single shaft of low sun in a quiet room, larger than life, physics gently bent."),
  ("tex-half-light","1:1","The gold band resting on a surface exactly half in cool blue shadow and half in warm gold light — the two states, numb and present, in one frame."),
  ("tex-shadow-long","3:2","The gold band alone on a pale surface at very low sun, casting a long soft golden shadow far longer than itself, symbolic and quiet."),
@@ -186,9 +186,9 @@ TEXTURE=[
  ("tex-dew-roll","1:1","Macro: a single dew drop rolling down a green blade of grass at dawn, holding a bead of gold sun, everything else soft."),
  ("tex-goosebumps","1:1","Macro of forearm skin as fine hairs lift and goosebumps rise, warm raking light, the body quietly noticing something — the felt sense of a pulse."),
  ("tex-water-tension","3:2","Extreme macro of water surface tension doming and just about to break at the edge of the gold band half-submerged, gold caustics beneath."),
- ("tex-eye-ring","1:1","Macro of a human eye, calm, with a tiny warm ring of reflected golden light held in the iris — presence reflected, subjective and intimate."),
+ ("tex-eye-ring","1:1","Soft macro of a calm human eye in warm natural light, natural skin and lashes, a small perfectly-circular warm golden catchlight reflected in the iris like a tiny ring of light. Real, gentle, medium-format film — natural not synthetic, no clumped lashes, no uncanny rendering."),
  ("tex-leaf-vein","3:2","Backlit macro of a leaf's veins glowing gold, branching like a quiet nervous system, one lime-lit edge, drifting light."),
- ("tex-metronome","3:2","A brass metronome arm blurred to near-stillness at the center of its swing in warm lamplight, time softened toward a held pause."),
+ ("tex-metronome","3:2","Macro: the wide polished gold Pulse ring standing on end on a warm wooden surface, gently rocking so it blurs to near-stillness at the centre of its motion, one soft warm highlight tracing its rim, honey lamplight — time and motion settling into a held pause. The gold ring is the only subject."),
 ]
 
 def gallery(outdir,title):

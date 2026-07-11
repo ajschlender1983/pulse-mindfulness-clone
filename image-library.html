@@ -63,6 +63,23 @@
     font-family:var(--mono); font-size:12px; color:var(--faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
   footer a{ color:var(--brown); }
 
+  /* stat bar */
+  .statbar{ display:flex; flex-wrap:wrap; align-items:baseline; gap:22px; margin-top:26px;
+    padding:16px 20px; background:var(--warm); border:1px solid var(--line); border-radius:14px; }
+  .statbar .stat{ font-family:var(--mono); font-size:13px; color:var(--muted); letter-spacing:.02em; }
+  .statbar .stat b{ font-family:var(--font); font-size:22px; font-weight:600; color:var(--ink); letter-spacing:-.03em; margin-right:5px; }
+  .statbar .stat-note{ font-family:var(--mono); font-size:11px; color:var(--faint); margin-left:auto; }
+  /* collections index */
+  .ci-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px; margin-top:22px; }
+  .ci-card{ display:flex; flex-direction:column; gap:2px; padding:16px 18px; text-decoration:none; color:inherit;
+    background:var(--warm); border:1px solid var(--line); border-radius:14px; box-shadow:0 10px 26px rgba(66,61,50,.07); transition:transform .16s ease; }
+  .ci-card:hover{ transform:translateY(-3px); }
+  .ci-n{ font-family:var(--font); font-size:26px; font-weight:600; letter-spacing:-.04em; color:var(--honey); }
+  .ci-label{ font-size:15px; font-weight:600; letter-spacing:-.02em; color:var(--ink); }
+  .ci-sub{ font-family:var(--mono); font-size:11px; color:var(--muted); margin-top:2px; }
+  /* view-all links on section headers */
+  .seclab .viewall{ color:var(--honey); text-decoration:underline; text-underline-offset:3px; }
+
   /* --- expansion --- */
   .sectitle{ font-size:clamp(22px,3.4vw,30px); font-weight:600; letter-spacing:-0.04em; margin-top:14px; }
   .secintro{ font-size:15.5px; color:var(--brown); max-width:66ch; margin:10px 0 0; }
@@ -94,11 +111,26 @@
 <div class="shell">
   <div class="topnav">
     <div class="brand">pulse<i>·</i></div>
-    <div><a href="builds.html">← Build index</a></div>
+    <div style="display:flex;gap:16px;">
+      <a href="pulse-of-life.html">Movie of Your Life</a>
+      <a href="presence-flow-map.html">Cadence</a>
+      <a href="builds.html">Builds</a>
+    </div>
   </div>
   <div class="eyebrow">Image Library · The full visual world</div>
   <h1>The ring as presence.</h1>
-  <p class="lede">A wide, smooth gold band that changes the light in a room. This library holds every thread of the story — the ring as a symbol of presence, ethereal motion, twenty-two storytellers, performance moments, ten user stories carried six frames deep, a textural macro-and-symbol layer, and the email hero worlds. Beautiful, editorial, subtle.</p>
+  <p class="lede">A wide, smooth gold band that changes the light in a room. This library holds every thread of the story — the ring as a symbol of presence, ethereal motion, a cast of storytellers, ten user stories six frames deep, the journey arc, the film-strip device, the email hero worlds, and a textural macro-and-symbol layer. Beautiful, editorial, subtle.</p>
+
+  <div class="statbar">
+    <span class="stat"><b>286</b> stills</span>
+    <span class="stat"><b>31</b> motion loops &amp; films</span>
+    <span class="stat"><b>11</b> collections</span>
+    <span class="stat-note">counts derived from disk · one source of truth</span>
+  </div>
+
+  <div class="seclab"><span>Browse the full library</span><span>every collection, complete</span></div>
+  <p class="secintro">The atlas below is a curated tour. Every frame that exists — including all email heroes, the journey arc, and the film-strip device — lives in its complete gallery here. Counts are generated from the folders, so they can never overstate what's really there.</p>
+  <!--COLLECTIONS_INDEX_START--><div class="ci-grid"><a class="ci-card" href="library/gallery/ethereal.html"><span class="ci-n">17</span><span class="ci-label">The ring as presence</span><span class="ci-sub">11 stills · 6 motion · view all →</span></a><a class="ci-card" href="library/gallery/avatars.html"><span class="ci-n">22</span><span class="ci-label">Storytellers</span><span class="ci-sub">22 stills · view all →</span></a><a class="ci-card" href="library/gallery/performance.html"><span class="ci-n">8</span><span class="ci-label">Performance — the pause inside effort</span><span class="ci-sub">8 stills · view all →</span></a><a class="ci-card" href="library/gallery/stories.html"><span class="ci-n">59</span><span class="ci-label">User stories</span><span class="ci-sub">59 stills · view all →</span></a><a class="ci-card" href="library/gallery/journey.html"><span class="ci-n">38</span><span class="ci-label">The journey arc — numb to generous</span><span class="ci-sub">38 stills · view all →</span></a><a class="ci-card" href="library/gallery/film-strip.html"><span class="ci-n">49</span><span class="ci-label">The Movie of Your Life</span><span class="ci-sub">48 stills · 1 motion · view all →</span></a><a class="ci-card" href="library/gallery/email-heroes.html"><span class="ci-n">104</span><span class="ci-label">Email heroes — the lifecycle, illustrated</span><span class="ci-sub">104 stills · view all →</span></a><a class="ci-card" href="library/gallery/texture.html"><span class="ci-n">16</span><span class="ci-label">Texture, macro & symbol</span><span class="ci-sub">16 stills · view all →</span></a><a class="ci-card" href="library/gallery/motion-loops.html"><span class="ci-n">10</span><span class="ci-label">Motion — funnel loops</span><span class="ci-sub">10 motion · view all →</span></a><a class="ci-card" href="library/gallery/studio-broll.html"><span class="ci-n">11</span><span class="ci-label">Motion — ethereal b-roll</span><span class="ci-sub">11 motion · view all →</span></a><a class="ci-card" href="library/gallery/studio-films.html"><span class="ci-n">3</span><span class="ci-label">Finished testimonial films</span><span class="ci-sub">3 motion · view all →</span></a></div><!--COLLECTIONS_INDEX_END-->
 
   <div class="seclab"><span>The ring as a symbol of presence</span><span>Ethereal · no people</span></div>
   <p class="secintro">Not a product shot — a spell. The band sits in still water, in golden tides, on cold glass, and the environment answers: light spreads, the room warms, physics bends a beat. Presence, made visible. Ported from the testimonial studio's surreal light-leak grammar.</p>
@@ -116,7 +148,6 @@
     <figure class="tile ar32"><img src="library/ethereal/eth-submerged.png" alt="The band suspended in clear water, gold caustics across it"><figcaption><span class="cap-t">Weightless</span> · sunlight breaking into gold nets</figcaption></figure>
     <figure class="tile ar32"><img src="library/ethereal/eth-condensation.png" alt="The band on cold glass clearing a circle of golden morning"><figcaption><span class="cap-t">Where warmth touches</span> · the fog clears to gold</figcaption></figure>
     <figure class="tile ar32"><img src="library/ethereal/eth-leaf-light.png" alt="The band in the hollow of a leaf, dappled canopy light"><figcaption><span class="cap-t">Nature holds it</span> · light through leaves</figcaption></figure>
-    <figure class="tile ar169"><img src="library/ethereal/eth-pool-dawn.png" alt="The band at the edge of a still golden pool at first light"><figcaption><span class="cap-t">First light</span> · one ripple beginning from nothing</figcaption></figure>
     <figure class="tile ar32"><img src="library/ethereal/eth-candle-mirror.png" alt="The band on a dark reflective surface doubling into light"><figcaption><span class="cap-t">Symbol, not product</span> · a luminous figure-eight</figcaption></figure>
     <figure class="tile ar32"><img src="library/ethereal/eth-sand-hourglass.png" alt="Golden sand streaming past the band, slowed in the light"><figcaption><span class="cap-t">Time softened</span> · sand hanging a beat too long</figcaption></figure>
     <figure class="tile ar169"><img src="library/ethereal/eth-window-tide.png" alt="Golden-hour light pooling like liquid around the band"><figcaption><span class="cap-t">Half-remembered</span> · light pools like liquid gold</figcaption></figure>
@@ -308,7 +339,6 @@
     <div class="frames">
       <figure><img src="library/stories/mei-david-1.png" alt="Mei at her window in cool morning light, hand on glass"><figcaption>her morning</figcaption></figure>
       <figure><img src="library/stories/mei-david-2.png" alt="David in another city at evening, same breath"><figcaption>his evening</figcaption></figure>
-      <figure><img src="library/stories/mei-david-3.png" alt="Two phones face-down, two ringed hands, two cities"><figcaption>the same pause</figcaption></figure>
       <figure><img src="library/stories/mei-david-4.png" alt="A video call where they just breathe together"><figcaption>nothing said</figcaption></figure>
       <figure><img src="library/stories/mei-david-5.png" alt="Mei walking a street alone but not lonely"><figcaption>carried</figcaption></figure>
       <figure><img src="library/stories/mei-david-6.png" alt="Two ringed hands finding each other at a station"><figcaption>reunion</figcaption></figure>
@@ -329,7 +359,41 @@
     </div>
   </div>
 
-  <div class="seclab"><span>Texture, macro &amp; symbol</span><span>the felt sense</span></div>
+  <div class="seclab" data-collection="journey"><span>The journey arc · numb → generous</span><a class="viewall" href="library/gallery/journey.html">View all <span class="count">38</span> →</a></div>
+  <p class="secintro">The original Maya arc: seven emotional stages from numb to generous, each in three lenses — state, time-and-place, texture. The color warms grade by grade, cool grey-blue to full honey gold, as presence returns.</p>
+  <div class="ggrid g4">
+    <figure class="tile ar32"><img src="journey-images/1a-stage1-state.png" alt="Stage 1 — numb"><figcaption>1 · numb</figcaption></figure>
+    <figure class="tile ar32"><img src="journey-images/3a-stage3-state.png" alt="Stage 3 — hopeful"><figcaption>3 · hopeful</figcaption></figure>
+    <figure class="tile ar32"><img src="journey-images/5a-stage5-state.png" alt="Stage 5 — relieved"><figcaption>5 · relieved</figcaption></figure>
+    <figure class="tile ar32"><img src="journey-images/7a-stage7-state.png" alt="Stage 7 — generous"><figcaption>7 · generous</figcaption></figure>
+  </div>
+
+  <div class="seclab" data-collection="film-strip"><span>The Movie of Your Life · the film-strip device</span><a class="viewall" href="library/gallery/film-strip.html">View all <span class="count">49</span> →</a></div>
+  <p class="secintro">Autopilot is a film strip running too fast — a different frame every second, none of them seen. Presence slows it to twenty-four frames of a single moment. The <a href="pulse-of-life.html">live device is here</a>; below, the held moment and a few frames from each strip.</p>
+  <div class="eth-hero">
+    <video src="film-strip/motion/held-loop.mp4" poster="film-strip/same/moment-14.png" autoplay loop muted playsinline></video>
+    <div class="cap"><h3>Twenty-four frames of one moment</h3><p>The same instant, held long enough to become a movie — the same footage at the speed of being here.</p></div>
+  </div>
+  <div class="ggrid g3">
+    <figure class="tile ar32"><img src="film-strip/autopilot/auto-02.png" alt="Autopilot — a different frame every second"><figcaption>autopilot · the days that blur</figcaption></figure>
+    <figure class="tile ar32"><img src="film-strip/autopilot/auto-12.png" alt="Autopilot frame"><figcaption>autopilot · too fast to see</figcaption></figure>
+    <figure class="tile ar32"><img src="film-strip/same/moment-14.png" alt="One held moment"><figcaption>present · one moment, held</figcaption></figure>
+  </div>
+
+  <div class="seclab" data-collection="email-heroes"><span>Email heroes · the lifecycle, illustrated</span><a class="viewall" href="library/gallery/email-heroes.html">View all <span class="count">104</span> →</a></div>
+  <p class="secintro">Every lifecycle email carries a hero image — warm Maya lifestyle for everything felt, dark luxe gold for the product. A dozen from the spine below, from the first quiet notice to the win-back.</p>
+  <div class="ggrid g4">
+    <figure class="tile ar32"><img src="emails/images/hero-email-autopilot-cost.png" alt="What autopilot costs"><figcaption>what autopilot costs</figcaption></figure>
+    <figure class="tile ar32"><img src="emails/images/hero-email-quiz-results-soft.png" alt="Your presence score"><figcaption>your presence score</figcaption></figure>
+    <figure class="tile ar32"><img src="emails/images/hero-email-order-confirmed.png" alt="Your ring is coming"><figcaption>your ring is coming</figcaption></figure>
+    <figure class="tile ar32"><img src="emails/images/hero-email-charge-pair-breathe.png" alt="Charge, pair, breathe"><figcaption>charge, pair, breathe</figcaption></figure>
+    <figure class="tile ar32"><img src="emails/images/hero-email-day-one.png" alt="Day one: just wear it"><figcaption>day one</figcaption></figure>
+    <figure class="tile ar32"><img src="emails/images/hero-email-21-day-threshold.png" alt="The 21-day threshold"><figcaption>the 21-day threshold</figcaption></figure>
+    <figure class="tile ar32"><img src="emails/images/hero-email-30-days-present.png" alt="Thirty days present"><figcaption>thirty days present</figcaption></figure>
+    <figure class="tile ar32"><img src="emails/images/hero-email-come-back-to-now.png" alt="Come back to now"><figcaption>the win-back</figcaption></figure>
+  </div>
+
+  <div class="seclab" data-collection="texture"><span>Texture, macro &amp; symbol</span><a class="viewall" href="library/gallery/texture.html">View all <span class="count">16</span> →</a></div>
   <p class="secintro">The wordless layer: the gesture of a thumb on the band, breath clearing glass, concentric rings in sand and water, an eclipse of gold, skin noticing before the mind does. Presence as pure texture and symbol.</p>
   <div class="ggrid g4">
     <figure class="tile ar32"><img src="library/texture/tex-brushed.png" alt="Macro of the polished gold band, one streak of light"><figcaption>the surface</figcaption></figure>
@@ -339,7 +403,6 @@
     <figure class="tile ar32"><img src="library/texture/tex-concentric-sand.png" alt="Concentric rings radiating in warm sand"><figcaption>rings in sand</figcaption></figure>
     <figure class="tile ar32"><img src="library/texture/tex-concentric-water.png" alt="A drop's rings spreading on black water, gold rim"><figcaption>rings in water</figcaption></figure>
     <figure class="tile ar32"><img src="library/texture/tex-eclipse.png" alt="The band backlit into a thin ring of gold light"><figcaption>the eclipse</figcaption></figure>
-    <figure class="tile ar32"><img src="library/texture/tex-aperture.png" alt="Gold light through an opening circular aperture"><figcaption>the aperture</figcaption></figure>
     <figure class="tile ar32"><img src="library/texture/tex-dust-spiral.png" alt="A spiral of golden dust in a sunbeam"><figcaption>dust, turning</figcaption></figure>
     <figure class="tile ar32"><img src="library/texture/tex-half-light.png" alt="The band half in cool shadow, half in warm light"><figcaption>numb / present</figcaption></figure>
     <figure class="tile ar32"><img src="library/texture/tex-shadow-long.png" alt="The band casting a long golden shadow at low sun"><figcaption>the long shadow</figcaption></figure>
@@ -349,7 +412,6 @@
     <figure class="tile ar32"><img src="library/texture/tex-water-tension.png" alt="Water surface tension breaking at the band's edge"><figcaption>surface tension</figcaption></figure>
     <figure class="tile ar32"><img src="library/texture/tex-eye-ring.png" alt="A calm eye holding a tiny ring of golden light"><figcaption>reflected</figcaption></figure>
     <figure class="tile ar32"><img src="library/texture/tex-leaf-vein.png" alt="Backlit leaf veins glowing gold like a nervous system"><figcaption>the nervous system</figcaption></figure>
-    <figure class="tile ar32"><img src="library/texture/tex-metronome.png" alt="A metronome arm blurred to near-stillness"><figcaption>time, softened</figcaption></figure>
   </div>
 
   <div class="seclab"><span>Motion assets</span><a href="motion/">browse folder</a></div>

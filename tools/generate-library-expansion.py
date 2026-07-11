@@ -137,10 +137,10 @@ ETHEREAL_SET = [
  ("eth-submerged","3:2","The gold band suspended in clear water, sunlight from above breaking into caustic gold nets across it and the sandy floor below, slow drifting particles, weightless and calm."),
  ("eth-condensation","3:2","Macro: the gold band on a cold windowpane at dawn, a bloom of condensation around it, and where its warmth touches, the fog clears into a small circle of golden morning beyond."),
  ("eth-leaf-light","3:2","The gold band resting in an open palm-shaped hollow of a large leaf, light through the canopy dappling it, one lime-lit translucent leaf edge, golden dust adrift. Nature holding presence."),
- ("eth-pool-dawn","16:9","The gold band on the tiled edge of a still pool at first light, steam rising, the water impossibly smooth and gold, a single ring of ripple just beginning from nothing."),
+ ("eth-pool-dawn","16:9","The wide polished gold Pulse ring resting on the smooth stone edge of a still dawn pool, warm steam rising, the water a sheet of soft gold, one clean concentric ripple spreading outward from directly beneath the ring. Photographed on medium-format film, warm and soft, not CGI. Only ONE gold ring, clearly the wide band, no floating rectangles or frames."),
  ("eth-candle-mirror","3:2","The gold band on a dark reflective surface with one soft warm light source, its reflection doubling into a luminous figure-eight, honey bloom, deep quiet shadow. Product, elevated to symbol."),
  ("eth-sand-hourglass","3:2","The gold band lying in warm pale sand as a thin fall of golden sand streams past it and slows, hanging a beat too long in the light. Time softened around presence."),
- ("eth-window-tide","16:9","A calm interior at golden hour where light pours through a window and pools on the floor like liquid gold around the single gold band, the room half-real, half-remembered."),
+ ("eth-window-tide","16:9","A calm interior at golden hour, warm light pouring through a window and pooling like liquid gold across a wooden floor, the wide polished gold Pulse ring resting in the brightest pool of light casting a long soft reflection. Medium-format film grain, soft and warm, painterly not CGI. One clear gold ring, large and legible in frame."),
 ]
 
 COLLECTIONS = {

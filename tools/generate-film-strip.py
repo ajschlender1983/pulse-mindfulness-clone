@@ -78,11 +78,20 @@ STYLE=("Warm soft ambient natural light, medium-format film photograph, fine nat
        "calm, un-staged. No text, no logos, no watermark.")
 KEEP="Keep the exact same woman as the reference image: identical face, hair, and features. "
 
-# The single held moment, described 24 ways with only MICRO differences frame to frame.
-# Maya at a sunlit kitchen window, the half-second a small realization crosses her face.
-BASE=("Maya at a sunlit kitchen window in warm morning light, a cup of tea cooling in her ringed "
-      "hand (a wide polished gold band), caught in the half-second a small quiet realization crosses "
-      "her face. Same framing, same light, same pose throughout — a single continuous moment.")
+# The single held moment. A tightly-locked ANCHOR frame is generated first, then
+# every moment-NN is generated FROM the anchor as reference so the framing, cup,
+# background, pose and light stay identical — only the micro-expression shifts.
+# This makes it truly "24 frames of one moment" instead of 24 different photos.
+ANCHOR_PROMPT=("Maya seated at a small wooden table by a bright window in soft warm morning light "
+  "from the left, holding a plain cream stoneware mug in both hands just below her chin, a wide "
+  "polished gold band on her right ring finger, medium chest-up shot, centred, plain warm wall "
+  "behind her slightly out of focus, calm neutral expression looking softly at the middle distance. "
+  "A quiet, still, ordinary morning moment.")
+# Each frame reproduces the anchor EXACTLY, changing only the micro-expression.
+LOCK=("Reproduce the reference photograph EXACTLY: identical framing and crop, identical cream "
+      "stoneware mug held in both hands below the chin, identical wooden table and window, identical "
+      "warm morning light from the left, identical hair, cardigan and wide gold ring, identical head "
+      "position. Do not change the composition at all. The ONLY difference in this frame: ")
 # 24 micro-beats (only the tiniest change each frame: an eyelid, a breath, a lip)
 MICRO=[
  "eyes still soft and unfocused on the middle distance","the faintest settling of the shoulders",
@@ -132,13 +141,26 @@ def main():
     ok,failed,skip=0,[],0
 
     if group in (None,"same"):
+        # 1) the locked anchor (uses the Maya face ref); everything else uses the anchor
+        anchor_path=OUT/"same"/"00-anchor.png"; anchor_b64=None
+        if anchor_path.exists() and not force:
+            anchor_b64=base64.b64encode(anchor_path.read_bytes()).decode()
+        elif not only or only=="anchor":
+            print("[same/00-anchor]")
+            img=generate(model,key,f"{KEEP}{ANCHOR_PROMPT} {STYLE} Aspect ratio 3:2.",aspect="3:2",ref_b64=ref)
+            if img: anchor_path.write_bytes(img); anchor_b64=base64.b64encode(img).decode(); ok+=1
+            else: failed.append("00-anchor")
+            time.sleep(1)
+        if anchor_b64 is None and anchor_path.exists():
+            anchor_b64=base64.b64encode(anchor_path.read_bytes()).decode()
+        # 2) 24 frames FROM the anchor — composition locked, only expression varies
         for i,beat in enumerate(MICRO,1):
             cid=f"moment-{i:02d}"
-            if only and only!=cid: continue
+            if only and only not in (cid,"same"): continue
             out=OUT/"same"/f"{cid}.png"
             if out.exists() and not force: skip+=1; continue
             print(f"[same/{cid}]")
-            img=generate(model,key,f"{KEEP}{BASE} In this exact frame: {beat}. {STYLE} Aspect ratio 3:2.",aspect="3:2",ref_b64=ref)
+            img=generate(model,key,f"{LOCK}{beat}. {STYLE} Aspect ratio 3:2.",aspect="3:2",ref_b64=anchor_b64)
             if img: out.write_bytes(img); ok+=1
             else: failed.append(cid)
             time.sleep(1)
