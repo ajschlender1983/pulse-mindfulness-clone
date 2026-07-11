@@ -81,6 +81,48 @@
       ],
       "files_motion": []
     },
+    "storytellers": {
+      "label": "Storytellers, in life",
+      "kind": "stills",
+      "stills": 8,
+      "motion": 0,
+      "gallery": "library/gallery/storytellers.html",
+      "curated": [
+        "library/storytellers/dance-01.png",
+        "library/storytellers/fest-01.png",
+        "library/storytellers/fest-02.png",
+        "library/storytellers/fest-03.png",
+        "library/storytellers/fest-04.png",
+        "library/storytellers/fest-05.png",
+        "library/storytellers/gym-01.png",
+        "library/storytellers/gym-02.png"
+      ],
+      "files_stills": [
+        "library/storytellers/dance-01.png",
+        "library/storytellers/fest-01.png",
+        "library/storytellers/fest-02.png",
+        "library/storytellers/fest-03.png",
+        "library/storytellers/fest-04.png",
+        "library/storytellers/fest-05.png",
+        "library/storytellers/gym-01.png",
+        "library/storytellers/gym-02.png"
+      ],
+      "files_motion": []
+    },
+    "inflection": {
+      "label": "The inflection \u2014 illustration to photograph",
+      "kind": "stills",
+      "stills": 1,
+      "motion": 0,
+      "gallery": "library/gallery/inflection.html",
+      "curated": [
+        "library/inflection/inflect-child-laugh.png"
+      ],
+      "files_stills": [
+        "library/inflection/inflect-child-laugh.png"
+      ],
+      "files_motion": []
+    },
     "performance": {
       "label": "Performance \u2014 the pause inside effort",
       "kind": "stills",
@@ -569,7 +611,7 @@
       ]
     }
   },
-  "grand_total_stills": 306,
+  "grand_total_stills": 315,
   "grand_total_motion": 31,
-  "collection_count": 11
+  "collection_count": 13
 }
