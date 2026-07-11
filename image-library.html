@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Pulse — Image Library</title>
-<meta name="description" content="The Pulse image system: five user stories in soft ambient light, the Maya journey arc, the email hero worlds, and motion assets." />
+<meta name="description" content="The Pulse image library: the ring as a symbol of presence, ethereal motion b-roll, a cast of storytellers, performance moments, five user stories, and the email hero worlds." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
@@ -62,7 +62,32 @@
   footer{ margin-top:clamp(44px,7vw,72px); border-top:1px solid var(--line); padding-top:20px;
     font-family:var(--mono); font-size:12px; color:var(--faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
   footer a{ color:var(--brown); }
-  @media(max-width:860px){ .frames{ grid-template-columns:repeat(2,1fr);} .grid2{grid-template-columns:1fr;} .linkcards{grid-template-columns:1fr;} }
+
+  /* --- expansion --- */
+  .sectitle{ font-size:clamp(22px,3.4vw,30px); font-weight:600; letter-spacing:-0.04em; margin-top:14px; }
+  .secintro{ font-size:15.5px; color:var(--brown); max-width:66ch; margin:10px 0 0; }
+  .ggrid{ display:grid; gap:14px; margin-top:22px; }
+  .g4{ grid-template-columns:repeat(4,1fr); }
+  .g5{ grid-template-columns:repeat(5,1fr); }
+  .g3{ grid-template-columns:repeat(3,1fr); }
+  .tile{ margin:0; border-radius:14px; overflow:hidden; background:var(--warm); border:1px solid var(--line);
+    box-shadow:0 12px 30px rgba(66,61,50,.10); }
+  .tile img, .tile video{ width:100%; display:block; }
+  .tile.ar32 img, .tile.ar32 video{ aspect-ratio:3/2; object-fit:cover; }
+  .tile.ar45 img{ aspect-ratio:4/5; object-fit:cover; }
+  .tile.ar169 img, .tile.ar169 video{ aspect-ratio:16/9; object-fit:cover; }
+  .tile figcaption{ font-family:var(--mono); font-size:10.5px; color:var(--muted); padding:8px 11px; letter-spacing:.02em; }
+  .tile .cap-t{ color:var(--ink); font-weight:500; }
+  /* ethereal hero band — the ring as presence */
+  .eth-hero{ margin-top:24px; border-radius:22px; overflow:hidden; position:relative; border:1px solid var(--line);
+    box-shadow:0 22px 60px rgba(66,61,50,.16); background:#0d0d0f; }
+  .eth-hero video{ width:100%; display:block; aspect-ratio:16/9; object-fit:cover; }
+  .eth-hero .cap{ position:absolute; left:0; right:0; bottom:0; padding:26px 28px;
+    background:linear-gradient(to top, rgba(13,13,15,.82), rgba(13,13,15,0)); color:#F9F6E5; }
+  .eth-hero .cap h3{ font-size:20px; font-weight:600; letter-spacing:-0.03em; }
+  .eth-hero .cap p{ font-size:14px; color:rgba(249,246,229,.8); margin-top:4px; max-width:60ch; }
+  @media(max-width:860px){ .frames{ grid-template-columns:repeat(2,1fr);} .grid2{grid-template-columns:1fr;}
+    .linkcards{grid-template-columns:1fr;} .g4,.g5{ grid-template-columns:repeat(2,1fr);} .g3{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
@@ -71,9 +96,78 @@
     <div class="brand">pulse<i>·</i></div>
     <div><a href="builds.html">← Build index</a></div>
   </div>
-  <div class="eyebrow">Image Library · Five stories, one light</div>
-  <h1>Real days, gently lit.</h1>
-  <p class="lede">Five user stories drawn from the founder conversation — the segments Pulse actually serves — photographed in soft ambient natural light. Plus the Maya journey arc, both email hero worlds, and motion assets.</p>
+  <div class="eyebrow">Image Library · The full visual world</div>
+  <h1>The ring as presence.</h1>
+  <p class="lede">A wide, smooth gold band that changes the light in a room. This library holds every thread of the story — the ring as a symbol of presence, ethereal motion, a cast of storytellers, performance moments, five user stories, and the email hero worlds. Beautiful, editorial, subtle.</p>
+
+  <div class="seclab"><span>The ring as a symbol of presence</span><span>Ethereal · no people</span></div>
+  <p class="secintro">Not a product shot — a spell. The band sits in still water, in golden tides, on cold glass, and the environment answers: light spreads, the room warms, physics bends a beat. Presence, made visible. Ported from the testimonial studio's surreal light-leak grammar.</p>
+
+  <div class="eth-hero">
+    <video src="library/ethereal/motion/eth-water-drop.mp4" poster="library/ethereal/eth-water-drop.png" autoplay loop muted playsinline></video>
+    <div class="cap"><h3>Presence in one drop</h3><p>A whole golden-hour landscape, refracted inside the circle of the band. The ring as a symbol, not a product.</p></div>
+  </div>
+
+  <div class="ggrid g3">
+    <figure class="tile ar169"><video src="library/ethereal/motion/eth-ripples.mp4" poster="library/ethereal/eth-ripples.png" autoplay loop muted playsinline></video><figcaption><span class="cap-t">Rings of light</span> · the pulse made water</figcaption></figure>
+    <figure class="tile ar169"><video src="library/ethereal/motion/eth-tide.mp4" poster="library/ethereal/eth-tide.png" autoplay loop muted playsinline></video><figcaption><span class="cap-t">The golden tide</span> · light leaking like memory</figcaption></figure>
+    <figure class="tile ar169"><video src="library/ethereal/motion/eth-room-warms.mp4" poster="library/ethereal/eth-room-warms.png" autoplay loop muted playsinline></video><figcaption><span class="cap-t">The room warms</span> · environment changed by presence</figcaption></figure>
+    <figure class="tile ar32"><img src="library/ethereal/eth-threads.png" alt="Fine threads of golden light radiating from the band"><figcaption><span class="cap-t">The quiet signal</span> · a pulse made visible</figcaption></figure>
+    <figure class="tile ar32"><img src="library/ethereal/eth-submerged.png" alt="The band suspended in clear water, gold caustics across it"><figcaption><span class="cap-t">Weightless</span> · sunlight breaking into gold nets</figcaption></figure>
+    <figure class="tile ar32"><img src="library/ethereal/eth-condensation.png" alt="The band on cold glass clearing a circle of golden morning"><figcaption><span class="cap-t">Where warmth touches</span> · the fog clears to gold</figcaption></figure>
+    <figure class="tile ar32"><img src="library/ethereal/eth-leaf-light.png" alt="The band in the hollow of a leaf, dappled canopy light"><figcaption><span class="cap-t">Nature holds it</span> · light through leaves</figcaption></figure>
+    <figure class="tile ar169"><img src="library/ethereal/eth-pool-dawn.png" alt="The band at the edge of a still golden pool at first light"><figcaption><span class="cap-t">First light</span> · one ripple beginning from nothing</figcaption></figure>
+    <figure class="tile ar32"><img src="library/ethereal/eth-candle-mirror.png" alt="The band on a dark reflective surface doubling into light"><figcaption><span class="cap-t">Symbol, not product</span> · a luminous figure-eight</figcaption></figure>
+    <figure class="tile ar32"><img src="library/ethereal/eth-sand-hourglass.png" alt="Golden sand streaming past the band, slowed in the light"><figcaption><span class="cap-t">Time softened</span> · sand hanging a beat too long</figcaption></figure>
+    <figure class="tile ar169"><img src="library/ethereal/eth-window-tide.png" alt="Golden-hour light pooling like liquid around the band"><figcaption><span class="cap-t">Half-remembered</span> · light pools like liquid gold</figcaption></figure>
+  </div>
+
+  <div class="seclab"><span>Motion · ethereal b-roll</span><span>from the testimonial studio</span></div>
+  <p class="secintro">Slow, floating, larger-than-life. These loop under testimonials and across the funnel — nature, light, quiet domestic detail, never a person. Transcoded for web; the studio holds the full-resolution masters.</p>
+  <div class="ggrid g3">
+    <figure class="tile ar169"><video src="library/studio-broll/web/1-1.mp4" poster="library/posters/broll-1-1.jpg" autoplay loop muted playsinline></video><figcaption>leaves in the golden wood</figcaption></figure>
+    <figure class="tile ar169"><video src="library/studio-broll/web/114-0.mp4" poster="library/posters/broll-114-0.jpg" autoplay loop muted playsinline></video><figcaption>steam, dust, low sun</figcaption></figure>
+    <figure class="tile ar169"><video src="library/studio-broll/web/116-0.mp4" poster="library/posters/broll-116-0.jpg" autoplay loop muted playsinline></video><figcaption>light through the garden</figcaption></figure>
+    <figure class="tile ar169"><video src="library/studio-broll/web/115-0.mp4" poster="library/posters/broll-115-0.jpg" autoplay loop muted playsinline></video><figcaption>morning window</figcaption></figure>
+    <figure class="tile ar169"><video src="library/studio-broll/web/1-2.mp4" poster="library/posters/broll-1-2.jpg" autoplay loop muted playsinline></video><figcaption>the wood, again</figcaption></figure>
+    <figure class="tile ar169"><video src="library/studio-broll/web/114-1.mp4" poster="library/posters/broll-114-1.jpg" autoplay loop muted playsinline></video><figcaption>warm interior haze</figcaption></figure>
+  </div>
+
+  <div class="seclab"><span>The storytellers</span><span>a widening cast</span></div>
+  <p class="secintro">The faces behind the testimonials, and the personas behind the emails — a broad, real cast, each caught in soft ambient light with the ring as a discovered detail.</p>
+  <div class="ggrid g5">
+    <figure class="tile ar45"><img src="library/avatars/avatar-01.png" alt="Storyteller portrait"><figcaption>the cafe regular</figcaption></figure>
+    <figure class="tile ar45"><img src="library/avatars/avatar-02.png" alt="Storyteller portrait"><figcaption>the elder, plant room</figcaption></figure>
+    <figure class="tile ar45"><img src="library/avatars/avatar-03.png" alt="Storyteller portrait"><figcaption>by the window</figcaption></figure>
+    <figure class="tile ar45"><img src="library/avatars/avatar-04.png" alt="Storyteller portrait"><figcaption>the maker</figcaption></figure>
+    <figure class="tile ar45"><img src="library/avatars/avatar-05.png" alt="Storyteller portrait"><figcaption>on the balcony</figcaption></figure>
+    <figure class="tile ar45"><img src="library/avatars/avatar-06.png" alt="Storyteller portrait"><figcaption>the study</figcaption></figure>
+    <figure class="tile ar45"><img src="library/avatars/avatar-07.png" alt="Storyteller portrait"><figcaption>the market</figcaption></figure>
+    <figure class="tile ar45"><img src="library/avatars/avatar-08.png" alt="Storyteller portrait"><figcaption>the sunlit kitchen</figcaption></figure>
+    <figure class="tile ar45"><img src="library/avatars/avatar-09.png" alt="Storyteller portrait"><figcaption>the pottery studio</figcaption></figure>
+    <figure class="tile ar45"><img src="library/avatars/avatar-10.png" alt="Storyteller portrait"><figcaption>the rain window</figcaption></figure>
+  </div>
+
+  <div class="seclab"><span>Performance · the pause inside the effort</span><span>flow states</span></div>
+  <p class="secintro">Presence isn't only calm — it's the still point inside peak performance. The breath before the move, the hand on the rope, the palms flat on the pass. The ring, where high performers return to now.</p>
+  <div class="ggrid g4">
+    <figure class="tile ar32"><img src="library/performance/perf-run.png" alt="Runner pausing at the top of a hill at dawn"><figcaption>the hill, at dawn</figcaption></figure>
+    <figure class="tile ar32"><img src="library/performance/perf-climb.png" alt="Climber breathing at a belay ledge"><figcaption>at the belay</figcaption></figure>
+    <figure class="tile ar32"><img src="library/performance/perf-piano.png" alt="Pianist's hands lifted above the keys"><figcaption>before the phrase</figcaption></figure>
+    <figure class="tile ar32"><img src="library/performance/perf-surgeon.png" alt="Surgeon at the scrub sink"><figcaption>scrubbing in</figcaption></figure>
+    <figure class="tile ar32"><img src="library/performance/perf-chef.png" alt="Chef at the pass before service"><figcaption>before service</figcaption></figure>
+    <figure class="tile ar32"><img src="library/performance/perf-dancer.png" alt="Dancer gathering stillness in the wings"><figcaption>in the wings</figcaption></figure>
+    <figure class="tile ar32"><img src="library/performance/perf-speaker.png" alt="Founder backstage before a talk"><figcaption>before the talk</figcaption></figure>
+    <figure class="tile ar32"><img src="library/performance/perf-ice.png" alt="Athlete stepping out of an ice bath"><figcaption>after the cold</figcaption></figure>
+  </div>
+
+  <div class="seclab"><span>Testimonial stories</span><span>finished, from the studio</span></div>
+  <p class="secintro">Whole stories, composed end to end — a storyteller, captioned, bookended with the ring, cut against the ethereal b-roll. The output of the Pulse Stories studio.</p>
+  <div class="ggrid g3">
+    <figure class="tile ar32"><video src="library/studio-stories/maya.mp4" poster="library/posters/story-maya.jpg" controls playsinline></video><figcaption><span class="cap-t">Maya</span> · the elsewhere parent</figcaption></figure>
+    <figure class="tile ar32"><video src="library/studio-stories/priya.mp4" poster="library/posters/story-priya.jpg" controls playsinline></video><figcaption><span class="cap-t">Priya</span> · focus, found</figcaption></figure>
+    <figure class="tile ar32"><video src="library/studio-stories/james.mp4" poster="library/posters/story-james.jpg" controls playsinline></video><figcaption><span class="cap-t">James</span> · the calm underneath</figcaption></figure>
+  </div>
 
   <div class="seclab"><span>Story 01 · Yoga &amp; meditation practitioners</span></div>
   <div class="story">
