@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pulse — The Movie of Your Life</title>
+<meta name="description" content="Autopilot is a film strip running too fast — a different frame every second, none of them seen. Presence slows it to twenty-four frames of a single moment. Make the most of the movie of your life." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --void:#0b0b0d; --panel:#141416; --cream:#F9F6E5; --ink:#1A1C22;
+    --honey:#C9A227; --honey-lit:#E0B036; --lime:#E3F47D;
+    --cool:#8fa3ad; --muted:#8d8a80;
+    --font:"DM Sans",sans-serif; --mono:"DM Mono",monospace;
+    --frame-h: clamp(120px, 22vh, 220px);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{ font-family:var(--font); background:var(--void); color:var(--cream);
+    letter-spacing:-0.02em; -webkit-font-smoothing:antialiased; line-height:1.5; overflow-x:hidden; }
+
+  .topnav{ position:fixed; top:0; left:0; right:0; z-index:50; display:flex; justify-content:space-between;
+    align-items:center; padding:16px clamp(18px,4vw,34px); background:linear-gradient(to bottom, rgba(11,11,13,.9), transparent); }
+  .brand{ font-weight:600; font-size:18px; letter-spacing:-0.04em; color:var(--cream); }
+  .brand i{ color:var(--lime); font-style:normal; }
+  .topnav a{ font-family:var(--mono); font-size:12px; color:var(--muted); text-decoration:none; }
+  .topnav a:hover{ color:var(--cream); }
+
+  .stage{ min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:90px clamp(18px,5vw,40px) 60px; position:relative; }
+  .kicker{ font-family:var(--mono); font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--honey);
+    opacity:0; transform:translateY(8px); transition:opacity .9s ease, transform .9s ease; }
+  h1{ font-weight:300; font-size:clamp(34px,8vw,88px); letter-spacing:-0.05em; line-height:0.98; text-align:center;
+    margin:18px 0 0; text-wrap:balance; opacity:0; transform:translateY(14px); transition:opacity 1.1s ease, transform 1.1s ease; }
+  h1 b{ font-weight:600; }
+  .sub{ font-size:clamp(15px,2.2vw,19px); color:#c9c5b8; max-width:46ch; text-align:center; margin:22px auto 0;
+    opacity:0; transform:translateY(10px); transition:opacity 1.1s ease .15s, transform 1.1s ease .15s; }
+  .show .kicker,.show h1,.show .sub{ opacity:1; transform:none; }
+
+  .scrollcue{ position:absolute; bottom:26px; left:50%; transform:translateX(-50%); font-family:var(--mono);
+    font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); opacity:.7;
+    animation:bob 2.4s ease-in-out infinite; }
+  @keyframes bob{ 0%,100%{transform:translate(-50%,0)} 50%{transform:translate(-50%,6px)} }
+
+  /* ---------- film strip ---------- */
+  .reel-wrap{ width:100%; position:relative; margin:6vh 0; }
+  .reel{ position:relative; overflow:hidden; width:100%;
+    padding:14px 0; background:#050506;
+    border-top:1px solid rgba(255,255,255,.06); border-bottom:1px solid rgba(255,255,255,.06); }
+  /* sprocket holes */
+  .reel::before,.reel::after{ content:""; position:absolute; left:0; right:0; height:12px; z-index:3;
+    background-image:radial-gradient(circle at center, var(--void) 0 3.2px, transparent 3.6px);
+    background-size:26px 12px; background-repeat:repeat-x; opacity:.9; }
+  .reel::before{ top:0; } .reel::after{ bottom:0; }
+  .track{ display:flex; gap:10px; width:max-content; will-change:transform;
+    animation:race 5.5s linear infinite; }
+  .track.slow{ animation-duration:38s; }
+  .track.paused{ animation-play-state:paused; }
+  @keyframes race{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
+  .cell{ position:relative; height:var(--frame-h); aspect-ratio:3/2; flex:0 0 auto; overflow:hidden;
+    border-radius:3px; background:#111; box-shadow:inset 0 0 0 1px rgba(255,255,255,.05); }
+  .cell img,.cell video{ width:100%; height:100%; object-fit:cover; display:block; }
+  /* autopilot look: cold, fast, flickering */
+  .reel.autopilot .cell img{ filter:grayscale(.7) brightness(.72) contrast(1.05); }
+  .reel.autopilot .cell{ animation:flick 0.5s steps(2) infinite; }
+  .reel.autopilot .cell:nth-child(2n){ animation-delay:.12s; }
+  .reel.autopilot .cell:nth-child(3n){ animation-delay:.26s; }
+  @keyframes flick{ 0%,100%{opacity:1} 50%{opacity:.82} }
+  /* presence look: warm, slow, seamless — the same moment */
+  .reel.presence .cell img{ filter:none; transition:filter 1.6s ease; }
+  .reel.presence{ transition:background 1.6s ease; }
+
+  .caption{ max-width:52ch; margin:5vh auto 0; text-align:center; padding:0 20px; }
+  .caption .lab{ font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; }
+  .caption.cold .lab{ color:var(--cool); }
+  .caption.warm .lab{ color:var(--honey-lit); }
+  .caption p{ font-size:clamp(18px,3vw,26px); font-weight:300; letter-spacing:-0.03em; line-height:1.25; margin-top:14px; color:var(--cream); }
+  .caption p b{ font-weight:600; }
+  .caption .fine{ font-size:14px; color:var(--muted); margin-top:14px; font-weight:400; }
+
+  /* the pulse beat */
+  .beat{ display:flex; align-items:center; justify-content:center; height:34vh; position:relative; }
+  .dot{ width:10px; height:10px; border-radius:50%; background:var(--honey-lit); position:relative; box-shadow:0 0 24px 4px rgba(224,176,54,.5); }
+  .dot::before,.dot::after{ content:""; position:absolute; inset:0; border-radius:50%; border:1px solid rgba(224,176,54,.7);
+    animation:ping 2.6s ease-out infinite; }
+  .dot::after{ animation-delay:1.3s; }
+  @keyframes ping{ 0%{transform:scale(1);opacity:.8} 100%{transform:scale(9);opacity:0} }
+  .beat .label{ position:absolute; bottom:-6px; font-family:var(--mono); font-size:11px; letter-spacing:.24em;
+    text-transform:uppercase; color:var(--honey); }
+
+  /* the held moment — one frame, come alive */
+  .held{ width:100%; max-width:940px; margin:4vh auto 0; }
+  .held .film{ position:relative; border-radius:6px; overflow:hidden; box-shadow:0 40px 100px rgba(0,0,0,.6);
+    border:1px solid rgba(201,162,39,.28); }
+  .held video{ width:100%; display:block; aspect-ratio:3/2; object-fit:cover; }
+  .held .counter{ position:absolute; top:12px; left:14px; font-family:var(--mono); font-size:11px; letter-spacing:.14em;
+    color:rgba(249,246,229,.85); background:rgba(11,11,13,.5); padding:4px 9px; border-radius:100px; backdrop-filter:blur(6px); }
+  .held .fade{ position:absolute; left:0; right:0; bottom:0; height:40%;
+    background:linear-gradient(to top, rgba(11,11,13,.55), transparent); }
+
+  /* payoff */
+  .payoff{ text-align:center; }
+  .payoff h2{ font-weight:300; font-size:clamp(30px,6.5vw,68px); letter-spacing:-0.05em; line-height:1.0; text-wrap:balance; }
+  .payoff h2 b{ font-weight:600; }
+  .cta{ display:inline-flex; align-items:center; gap:9px; margin-top:34px; background:var(--lime); color:#101828;
+    font-weight:600; font-size:15px; padding:15px 34px; border-radius:100px; text-decoration:none;
+    box-shadow:0 14px 40px rgba(227,244,125,.16); }
+  .payoff .row{ margin-top:20px; font-family:var(--mono); font-size:12px; color:var(--muted); }
+  .payoff .row a{ color:#c9c5b8; text-decoration:underline; text-underline-offset:3px; }
+
+  .replay{ position:fixed; bottom:20px; right:20px; z-index:40; font-family:var(--mono); font-size:11px;
+    letter-spacing:.1em; color:var(--muted); background:rgba(20,20,22,.7); border:1px solid rgba(255,255,255,.08);
+    border-radius:100px; padding:9px 16px; cursor:pointer; backdrop-filter:blur(8px); display:none; }
+  .replay:hover{ color:var(--cream); }
+
+  footer{ text-align:center; padding:50px 20px 60px; font-family:var(--mono); font-size:12px; color:var(--muted); }
+  footer a{ color:#c9c5b8; }
+
+  @media (prefers-reduced-motion: reduce){
+    .track{ animation:none !important; } .reel.autopilot .cell{ animation:none !important; }
+    .dot::before,.dot::after{ animation:none !important; } .scrollcue{ animation:none; }
+    .kicker,h1,.sub{ opacity:1 !important; transform:none !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="topnav">
+    <div class="brand">pulse<i>·</i></div>
+    <div><a href="image-library.html">Image library →</a></div>
+  </div>
+
+  <!-- ACT 0 — the premise -->
+  <section class="stage" id="s0">
+    <div class="kicker">The pulse of life</div>
+    <h1>Your life is a <b>movie.</b></h1>
+    <p class="sub">Twenty-four frames a second. The only question is whether you're watching it at the speed you can live.</p>
+    <div class="scrollcue">Scroll</div>
+  </section>
+
+  <!-- ACT 1 — autopilot: the strip runs too fast -->
+  <section class="stage" id="s1">
+    <div class="reel-wrap">
+      <div class="reel autopilot" id="reel1"><div class="track" id="track1"></div></div>
+    </div>
+    <div class="caption cold">
+      <div class="lab">On autopilot · 60 frames a minute</div>
+      <p>The film runs too fast. A <b>different frame every second</b> — the commute, the inbox, the dishes, the years — and none of them are yours.</p>
+      <p class="fine">This is what the days-that-blur actually are: a strip moving faster than you can see it.</p>
+    </div>
+  </section>
+
+  <!-- ACT 2 — the pulse -->
+  <section class="stage" id="s2">
+    <div class="beat"><div class="dot"></div><div class="label">a pulse</div></div>
+    <div class="caption warm">
+      <p>Then, on your finger, <b>a small tap.</b> The reel begins to slow.</p>
+    </div>
+  </section>
+
+  <!-- ACT 3 — presence: 24 frames of one moment -->
+  <section class="stage" id="s3">
+    <div class="reel-wrap">
+      <div class="reel presence" id="reel2"><div class="track slow" id="track2"></div></div>
+    </div>
+    <div class="caption warm">
+      <div class="lab">Present · 24 frames, one moment</div>
+      <p>Presence slows the film until twenty-four frames hold <b>a single moment</b> — the same instant, fully lived, seamless.</p>
+      <p class="fine">Not more footage. The same footage, finally at the speed of being here.</p>
+    </div>
+  </section>
+
+  <!-- ACT 4 — the moment comes alive -->
+  <section class="stage" id="s4">
+    <div class="held">
+      <div class="film">
+        <video id="heldvid" src="motion/maya-car-soft.mp4" poster="emails/images/hero-email-quiz-results-soft.png" autoplay loop muted playsinline></video>
+        <div class="counter">24 / 24 · the same moment</div>
+        <div class="fade"></div>
+      </div>
+    </div>
+    <div class="caption warm">
+      <p>One frame, held long enough to become a movie.</p>
+    </div>
+  </section>
+
+  <!-- ACT 5 — payoff -->
+  <section class="stage" id="s5">
+    <div class="payoff">
+      <div class="kicker" style="opacity:1;transform:none">Pulse</div>
+      <h2>Make the most of the <b>movie of your life.</b></h2>
+      <a class="cta" href="index.html">Meet the ring →</a>
+      <div class="row"><a href="image-library.html">The image library</a> · <a href="presence-experience.html">The Presence Experience</a></div>
+    </div>
+  </section>
+
+  <div class="replay" id="replay">↻ replay</div>
+
+  <footer>Pulse · Twenty-four frames of one moment · <a href="builds.html">Build index</a></footer>
+
+<script>
+(function(){
+  // ---- asset pools (already on disk) ----
+  var DIFFERENT = [
+    "story-images/darius-1.png","story-images/theo-1.png","story-images/ingrid-2.png",
+    "story-images/rosa-2.png","story-images/amara-ben-1.png","library/performance/perf-run.png",
+    "library/performance/perf-chef.png","library/performance/perf-surgeon.png",
+    "library/avatars/avatar-05.png","library/avatars/avatar-08.png","library/avatars/avatar-03.png",
+    "library/ethereal/eth-tide.png","story-images/darius-4.png","library/performance/perf-speaker.png",
+    "story-images/theo-4.png","library/avatars/avatar-02.png"
+  ];
+  // the held moment: the SAME frame repeated (24fps of one instant)
+  var SAME = "emails/images/hero-email-quiz-results-soft.png";
+
+  function cell(src, tag){
+    var d=document.createElement('div'); d.className='cell';
+    var m=document.createElement(tag==='video'?'video':'img'); m.src=src;
+    if(tag==='video'){ m.autoplay=m.loop=m.muted=m.playsInline=true; }
+    d.appendChild(m); return d;
+  }
+  // Act 1 track: many different frames, duplicated for a seamless -50% loop
+  var t1=document.getElementById('track1');
+  var seq1=DIFFERENT.concat(DIFFERENT);
+  seq1.forEach(function(s){ t1.appendChild(cell(s,'img')); });
+  // Act 3 track: the SAME frame across ~24 cells (the held moment), duplicated
+  var t2=document.getElementById('track2');
+  for(var i=0;i<24;i++){ t2.appendChild(cell(SAME,'img')); }
+  for(var j=0;j<24;j++){ t2.appendChild(cell(SAME,'img')); }
+
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('show'); } });
+  },{threshold:.35});
+  document.querySelectorAll('.stage').forEach(function(s){ io.observe(s); });
+
+  // replay control
+  var replay=document.getElementById('replay');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>window.innerHeight*2){ replay.style.display='block'; }
+  },{passive:true});
+  replay.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>
