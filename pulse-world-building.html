@@ -4,1056 +4,138 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Pulse — World-Building</title>
-<meta name="description" content="The single source of truth for the Pulse world — two sections: the Visual Language (do's & don'ts, the filmmaking lexicon & motion rules with video, the full rateable image library incl. the illustration↔photograph hybrid family, an archive, the prompt library) and the Brand & Messaging (positioning, the expert advisory board consensus, taglines, and the text-on-screen workshop)." />
+<meta name="description" content="The single source of truth for the Pulse world — two rooms to work in. The writing room (what we say): the advisory board's consensus, core messaging, guardrails, a live voice-check, the current-vs-new bench, text-on-screen, and the email-flow review. The picture room (what they see): the do's & don'ts, the filmmaking lexicon & motion rules, the mood decider, the prompt builder, and the full rateable image library." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght@0,9..144,300..600&display=swap" rel="stylesheet" />
 <style>
   :root{
     --cream:#EBE7D4; --warm:#F9F6E5; --ink:#1A1C22; --brown:#423D32;
     --lime:#E3F47D; --honey:#A67C00; --muted:#6E6857; --faint:#8a8578;
     --line:rgba(26,28,34,.14);
-    --green:#4E7C34; --green-bg:#E3F0D4; --yellow:#B8860B; --yellow-bg:#F3E7C4;
-    --red:#9B3D2E; --red-bg:#F0D9D2;
-    --font:"DM Sans",sans-serif; --mono:"DM Mono",monospace;
+    --font:"DM Sans",sans-serif; --mono:"DM Mono",monospace; --serif:"Fraunces",serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{ font-family:var(--font); background:var(--cream); color:var(--ink);
     letter-spacing:-0.02em; -webkit-font-smoothing:antialiased; line-height:1.5;
     padding:0 clamp(16px,4vw,40px) 80px; }
-  .shell{ max-width:1200px; margin:0 auto; }
+  .shell{ max-width:1160px; margin:0 auto; }
 
   .topbar{ position:sticky; top:0; z-index:60; background:var(--ink); color:var(--warm);
     margin:0 calc(-1*clamp(16px,4vw,40px)) 0; padding:12px clamp(16px,4vw,40px);
     display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
   .topbar .brand{ font-weight:600; font-size:16px; letter-spacing:-0.03em; }
   .topbar .brand i{ color:var(--lime); font-style:normal; }
-  .topbar .stat{ font-family:var(--mono); font-size:11px; color:#b9b5a6; }
-  .topbar .stat b{ color:var(--warm); }
   .topbar .spacer{ flex:1; }
-  .topbar button{ font-family:var(--mono); font-size:11px; color:#b9b5a6; background:none;
-    border:1px solid rgba(249,246,229,.18); border-radius:100px; padding:6px 13px; cursor:pointer; }
-  .topbar button:hover{ color:var(--warm); border-color:rgba(249,246,229,.4); }
-  .topbar button.on{ background:var(--lime); color:#101828; border-color:var(--lime); }
+  .topbar a{ font-family:var(--mono); font-size:11.5px; color:#b9b5a6; text-decoration:none; }
+  .topbar a:hover{ color:var(--warm); }
 
-  .eyebrow{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-top:34px; }
-  h1{ font-weight:600; font-size:clamp(30px,5.5vw,50px); letter-spacing:-0.045em; line-height:1.03; margin:12px 0 0; text-wrap:balance; }
-  .lede{ font-size:clamp(16px,2.1vw,19px); color:var(--brown); max-width:66ch; margin:16px 0 0; }
+  .eyebrow{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-top:clamp(40px,7vw,72px); }
+  h1{ font-family:var(--serif); font-weight:400; font-size:clamp(34px,6.5vw,68px); letter-spacing:-0.02em; line-height:1.0; margin:14px 0 0; text-wrap:balance; }
+  .lede{ font-size:clamp(16px,2.1vw,19px); color:var(--brown); max-width:68ch; margin:18px 0 0; line-height:1.6; }
+  .lede b{ color:var(--ink); font-weight:600; }
 
-  /* the two top-level category cards */
-  .cat-cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin-top:26px; }
-  .cat-card{ background:var(--warm); border:1px solid var(--line); border-radius:20px; overflow:hidden;
-    box-shadow:0 18px 44px rgba(66,61,50,.10); display:flex; flex-direction:column; }
-  .cat-hero{ aspect-ratio:21/9; overflow:hidden; background:#22242a; }
+  /* the two rooms — mirrored doorways */
+  .cat-cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:18px; margin-top:clamp(28px,5vw,46px); }
+  .cat-card{ background:var(--warm); border:1px solid var(--line); border-radius:22px; overflow:hidden;
+    box-shadow:0 18px 44px rgba(66,61,50,.10); display:flex; flex-direction:column;
+    transition:transform .18s ease, box-shadow .18s ease; }
+  .cat-card:hover{ transform:translateY(-3px); box-shadow:0 26px 60px rgba(66,61,50,.16); }
+  .cat-hero{ aspect-ratio:16/9; overflow:hidden; background:#22242a; }
   .cat-hero img{ width:100%; height:100%; object-fit:cover; display:block; }
-  .cat-body{ padding:20px 24px 24px; display:flex; flex-direction:column; gap:8px; flex:1; }
+  .cat-body{ padding:22px clamp(20px,2.6vw,28px) 26px; display:flex; flex-direction:column; gap:9px; flex:1; }
   .cat-k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--honey); }
-  .cat-body h2{ font-size:clamp(22px,3vw,30px); font-weight:600; letter-spacing:-0.035em; }
-  .cat-body p{ font-size:14.5px; color:var(--brown); line-height:1.5; }
-  .cat-btns{ display:flex; gap:10px; margin-top:auto; padding-top:14px; flex-wrap:wrap; }
-  .cbtn{ font-family:var(--mono); font-size:12px; font-weight:500; border-radius:100px; padding:11px 22px; cursor:pointer;
-    text-decoration:none; display:inline-block; }
+  .cat-body h2{ font-family:var(--serif); font-size:clamp(26px,3.6vw,40px); font-weight:400; letter-spacing:-0.02em; line-height:1; }
+  .cat-body .essence{ font-size:15.5px; color:var(--brown); line-height:1.55; max-width:44ch; }
+  .cat-inside{ border-top:1px solid var(--line); margin-top:6px; padding-top:14px; }
+  .cat-inside .il{ font-family:var(--mono); font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+  .cat-inside ul{ list-style:none; margin-top:9px; display:flex; flex-wrap:wrap; gap:7px; }
+  .cat-inside li{ font-family:var(--mono); font-size:11px; color:var(--brown); background:var(--cream);
+    border:1px solid var(--line); border-radius:100px; padding:5px 11px; white-space:nowrap; }
+  .cat-inside li.hero{ background:var(--ink); color:var(--warm); border-color:var(--ink); }
+  .cat-btns{ margin-top:auto; padding-top:18px; }
+  .cbtn{ font-family:var(--mono); font-size:12.5px; font-weight:500; border-radius:100px; padding:14px 26px; cursor:pointer;
+    text-decoration:none; display:inline-flex; align-items:center; gap:8px; }
   .cbtn.solid{ background:var(--ink); color:var(--warm); border:1px solid var(--ink); }
   .cbtn.solid:hover{ background:#2a2d35; }
-  .cbtn.ghost{ background:none; color:var(--ink); border:1px solid rgba(26,28,34,.35); }
-  .cbtn.ghost:hover{ border-color:var(--honey); color:var(--honey); }
 
-  /* the two top-level expandable sections */
-  details.mega{ margin-top:26px; border-radius:20px; overflow:hidden; border:1px solid var(--line);
-    background:linear-gradient(180deg,#fffdf3,#f4f0dd); box-shadow:0 18px 44px rgba(66,61,50,.10); }
-  details.mega>summary{ list-style:none; cursor:pointer; padding:22px clamp(18px,3vw,30px);
-    display:flex; align-items:center; gap:16px; }
-  details.mega>summary::-webkit-details-marker{ display:none; }
-  details.mega>summary .num{ font-family:var(--mono); font-size:12px; color:var(--honey); border:1px solid var(--honey);
-    border-radius:100px; width:30px; height:30px; display:flex; align-items:center; justify-content:center; flex:0 0 auto; }
-  details.mega>summary .mt{ flex:1; }
-  details.mega>summary .mt .k{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
-  details.mega>summary .mt h2{ font-size:clamp(21px,3vw,28px); font-weight:600; letter-spacing:-0.035em; margin-top:3px; }
-  details.mega>summary .mt p{ font-size:14px; color:var(--brown); margin-top:4px; max-width:70ch; }
-  details.mega>summary .chev{ font-family:var(--mono); font-size:15px; color:var(--muted); transition:transform .2s; flex:0 0 auto; }
-  details.mega[open]>summary .chev{ transform:rotate(90deg); }
-  .mega-body{ padding:0 clamp(18px,3vw,30px) 30px; }
-
-  details.panel{ margin-top:18px; background:var(--warm); border:1px solid var(--line); border-radius:16px; overflow:hidden;
-    box-shadow:0 8px 22px rgba(66,61,50,.06); }
-  details.panel>summary{ list-style:none; cursor:pointer; padding:18px 22px; display:flex; align-items:center; gap:12px; }
-  details.panel>summary::-webkit-details-marker{ display:none; }
-  details.panel>summary .tw{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--honey); }
-  details.panel>summary h2{ font-size:19px; font-weight:600; letter-spacing:-0.03em; flex:1; }
-  details.panel>summary .chev{ font-family:var(--mono); font-size:12px; color:var(--muted); transition:transform .2s; }
-  details.panel[open]>summary .chev{ transform:rotate(90deg); }
-  .panel-body{ padding:0 22px 22px; }
-
-  .dd-grid{ display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:6px; }
-  .dd h3{ font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; margin-bottom:10px; }
-  .dd.do h3{ color:var(--green); } .dd.dont h3{ color:var(--red); }
-  .dd ul{ list-style:none; display:flex; flex-direction:column; gap:9px; }
-  .dd li{ font-size:14.5px; color:var(--brown); padding-left:20px; position:relative; }
-  .dd.do li::before{ content:"✓"; position:absolute; left:0; color:var(--green); font-weight:600; }
-  .dd.dont li::before{ content:"✕"; position:absolute; left:0; color:var(--red); font-weight:600; }
-  .rules{ margin-top:20px; border-top:1px solid var(--line); padding-top:16px; }
-  .rules h3{ font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
-  .rules ol{ padding-left:20px; display:flex; flex-direction:column; gap:7px; }
-  .rules li{ font-size:14.5px; color:var(--ink); }
-  .rules .derived{ margin-top:14px; font-family:var(--mono); font-size:12.5px; color:var(--honey); }
-  #derivedRules{ margin-top:6px; color:var(--brown); font-family:var(--font); font-size:14px; white-space:pre-wrap; }
-
-  /* ===== filmmaking lexicon & motion rules ===== */
-  .lex-intro{ font-size:14.5px; color:var(--brown); max-width:74ch; margin:2px 0 8px; }
-  .lex-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px; margin-top:10px; }
-  .lex-term{ background:var(--cream); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
-  .lex-term .lt{ font-weight:600; font-size:15px; }
-  .lex-term .lt span{ font-family:var(--mono); font-size:10px; color:var(--honey); text-transform:uppercase; letter-spacing:.08em; margin-left:6px; }
-  .lex-term .lw{ font-size:13.5px; color:var(--brown); margin-top:5px; line-height:1.45; }
-  .lex-term .lu{ font-size:13.5px; color:var(--ink); margin-top:7px; line-height:1.45; }
-  .lex-term .lu b{ font-family:var(--mono); font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
-  .aperture-essay{ background:var(--ink); color:var(--warm); border-radius:14px; padding:22px 26px; margin:20px 0; }
-  .aperture-essay h4{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--lime); font-weight:500; }
-  .aperture-essay p{ font-size:15.5px; line-height:1.58; margin-top:10px; color:#efe9d6; max-width:74ch; }
-  .aperture-essay p+p{ margin-top:12px; }
-  .foot{ margin-top:24px; border-top:1px solid var(--line); padding-top:18px; }
-  .foot .fh{ display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
-  .foot .fn{ font-weight:600; font-size:18px; letter-spacing:-0.02em; }
-  .foot .ftag{ font-family:var(--mono); font-size:10.5px; color:var(--honey); text-transform:uppercase; letter-spacing:.08em; }
-  .foot .frule{ font-size:14.5px; color:var(--brown); margin-top:6px; max-width:78ch; line-height:1.55; }
-  .foot .frule b{ color:var(--ink); }
-  .motion-strip{ display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:10px; margin-top:13px; }
-  .motion-strip figure{ margin:0; }
-  .motion-strip video{ width:100%; display:block; aspect-ratio:16/9; object-fit:cover; border-radius:10px; background:#111; border:1px solid var(--line); }
-  .motion-strip figcaption{ font-family:var(--mono); font-size:10px; color:var(--muted); padding:4px 2px; }
-  .msg-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; margin-top:8px; }
-  .msg-card{ background:var(--cream); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
-  .msg-card .k{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
-  .msg-card .v{ font-size:15px; color:var(--ink); margin-top:5px; line-height:1.35; }
-  .tagline-list{ margin-top:6px; display:flex; flex-direction:column; gap:8px; }
-  .tagline{ display:flex; align-items:center; gap:12px; padding:11px 14px; background:var(--cream); border:1px solid var(--line); border-radius:10px; }
-  .tagline .t{ flex:1; font-size:16px; }
-  .tagline .cat{ font-family:var(--mono); font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
-
-  /* ===== advisory board ===== */
-  .board-intro{ font-size:14.5px; color:var(--brown); max-width:72ch; margin:4px 0 16px; }
-  .board-chips{ display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 22px; }
-  .chip{ display:flex; align-items:center; gap:9px; background:var(--cream); border:1px solid var(--line);
-    border-radius:100px; padding:5px 14px 5px 5px; }
-  .chip img{ width:34px; height:34px; border-radius:50%; object-fit:cover; background:#ddd7c3; border:1px solid var(--line); }
-  .chip .cn{ font-weight:600; font-size:13.5px; }
-  .chip .cr{ font-family:var(--mono); font-size:10px; color:var(--muted); }
-  .chip .cnwrap{ display:flex; flex-direction:column; line-height:1.15; }
-
-  .headline{ background:var(--ink); color:var(--warm); border-radius:16px; padding:20px 24px; margin:6px 0 20px; }
-  .headline .k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--lime); }
-  .headline .v{ font-size:clamp(18px,2.6vw,23px); font-weight:600; letter-spacing:-0.03em; margin-top:8px; line-height:1.25; }
-
-  .cons-hero{ background:var(--warm); border:1px solid var(--honey); border-radius:16px; padding:24px 26px; margin-bottom:16px; }
-  .cons-hero .k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--honey); }
-  .cons-hero .v{ font-size:clamp(24px,4vw,36px); font-weight:600; letter-spacing:-0.04em; margin-top:8px; line-height:1.08; text-wrap:balance; }
-  .cons-hero .v2{ font-size:clamp(15px,2vw,18px); color:var(--brown); margin-top:10px; line-height:1.3; font-weight:400; }
-  .cons-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
-  .cons-card{ background:var(--warm); border:1px solid var(--line); border-radius:13px; padding:15px 17px; }
-  .cons-card .k{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
-  .cons-card .v{ font-size:15.5px; color:var(--ink); margin-top:6px; line-height:1.4; }
-  .cons-card ul{ list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:6px; }
-  .cons-card li{ font-size:14px; color:var(--brown); padding-left:16px; position:relative; }
-  .cons-card li::before{ content:"—"; position:absolute; left:0; color:var(--honey); }
-
-  .advisor-cards{ display:flex; flex-direction:column; gap:12px; margin-top:8px; }
-  .adv{ background:var(--cream); border:1px solid var(--line); border-radius:14px; padding:16px 18px; }
-  .adv-head{ display:flex; align-items:center; gap:12px; }
-  .adv-head img{ width:46px; height:46px; border-radius:50%; object-fit:cover; background:#ddd7c3; border:1px solid var(--line); }
-  .adv-head .an{ font-weight:600; font-size:16px; }
-  .adv-head .ar{ font-family:var(--mono); font-size:10.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
-  .adv .thesis{ font-size:14.5px; color:var(--brown); margin-top:11px; line-height:1.5; }
-  .adv .sig{ font-size:15px; font-style:italic; color:var(--ink); margin-top:11px; padding-left:12px; border-left:3px solid var(--honey); }
-  .adv .recs{ margin-top:11px; }
-  .adv .recs .rh{ font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:5px; }
-  .adv .recs ul{ list-style:none; display:flex; flex-direction:column; gap:5px; }
-  .adv .recs li{ font-size:14px; color:var(--brown); padding-left:16px; position:relative; }
-  .adv .recs li::before{ content:"→"; position:absolute; left:0; color:var(--honey); }
-  .adv .dissent{ margin-top:11px; font-size:13.5px; color:var(--red); }
-  .adv .dissent b{ font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; }
-
-  .ebi-list{ display:flex; flex-direction:column; gap:0; margin-top:6px; border-left:2px solid var(--line); }
-  .ebi{ position:relative; padding:11px 0 11px 22px; }
-  .ebi::before{ content:""; position:absolute; left:-6px; top:16px; width:10px; height:10px; border-radius:50%; background:var(--honey); }
-  .ebi .eh{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
-  .ebi .ep{ font-family:var(--mono); font-size:11px; color:var(--honey); }
-  .ebi .ef{ font-weight:600; font-size:14px; }
-  .ebi .conv{ font-family:var(--mono); font-size:10.5px; color:var(--faint); margin-left:auto; }
-  .ebi .ec{ font-size:14px; color:var(--brown); margin-top:4px; }
-  .board-note{ font-family:var(--mono); font-size:11.5px; color:var(--muted); margin-top:16px; }
-  .board-pending{ background:var(--cream); border:1px dashed var(--honey); border-radius:14px; padding:22px; color:var(--brown); font-size:15px; }
-
-  .rate{ display:inline-flex; gap:4px; }
-  .rate button{ width:26px; height:22px; border-radius:6px; border:1px solid var(--line); cursor:pointer;
-    background:var(--warm); font-size:12px; line-height:1; display:flex; align-items:center; justify-content:center; }
-  .rate button.g.on{ background:var(--green-bg); border-color:var(--green); }
-  .rate button.y.on{ background:var(--yellow-bg); border-color:var(--yellow); }
-  .rate button.r.on{ background:var(--red-bg); border-color:var(--red); }
-  .rate button:hover{ filter:brightness(.97); }
-
-  .tos-head{ display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:4px; }
-  .tos-progress{ font-family:var(--mono); font-size:12px; color:var(--muted); }
-  .tos-locked{ font-family:var(--mono); font-size:12px; color:var(--green); font-weight:500; }
-  .tos-list{ display:flex; flex-direction:column; gap:8px; margin-top:12px; }
-  .tos{ display:flex; align-items:center; gap:12px; padding:12px 14px; background:var(--cream); border:1px solid var(--line); border-radius:10px; }
-  .tos .n{ font-family:var(--mono); font-size:12px; color:var(--faint); width:20px; }
-  .tos .t{ flex:1; font-size:16px; font-weight:500; }
-  .tos .note-in{ font-family:var(--font); font-size:12.5px; border:1px solid var(--line); border-radius:7px; padding:5px 9px; width:180px; background:var(--warm); }
-
-  .pl-block{ margin-top:14px; }
-  .pl-block h3{ font-family:var(--mono); font-size:12px; color:var(--honey); margin-bottom:6px; letter-spacing:.04em; }
-  .pl-block p{ font-size:13.5px; color:var(--brown); background:var(--cream); border:1px solid var(--line); border-radius:8px; padding:11px 13px; line-height:1.5; }
-  .pl-gens{ margin-top:16px; font-size:13px; }
-  .pl-gens .g-h{ font-family:var(--mono); font-size:12px; color:var(--honey); margin:16px 0 6px; }
-  .pl-gens .row{ display:flex; gap:10px; padding:7px 0; border-bottom:1px solid var(--line); }
-  .pl-gens .row code{ font-family:var(--mono); font-size:12px; color:var(--ink); white-space:nowrap; }
-  .pl-gens .row span{ color:var(--muted); }
-  .pl-backends{ margin-top:12px; font-family:var(--mono); font-size:12px; color:var(--muted); }
-
-  .collab{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
-    border-top:1px solid var(--line); padding-top:14px; margin-top:30px; display:flex; align-items:baseline; gap:12px; }
-  .collab .cnt{ color:var(--honey); }
-  .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px; margin-top:18px; }
-  figure.card{ margin:0; background:var(--warm); border:1px solid var(--line); border-radius:12px; overflow:hidden;
-    box-shadow:0 10px 24px rgba(66,61,50,.07); display:flex; flex-direction:column; }
-  figure.card .imgwrap{ position:relative; }
-  figure.card img, figure.card video{ width:100%; display:block; aspect-ratio:3/2; object-fit:cover; background:#ddd7c3; }
-  figure.card .badge{ position:absolute; top:8px; left:8px; font-family:var(--mono); font-size:9.5px; padding:3px 7px; border-radius:100px; letter-spacing:.04em; }
-  figure.card.rg .badge{ background:var(--green-bg); color:var(--green); }
-  figure.card.ry .badge{ background:var(--yellow-bg); color:var(--yellow); }
-  figure.card.rr .badge{ background:var(--red-bg); color:var(--red); }
-  figure.card .meta{ padding:9px 11px; display:flex; flex-direction:column; gap:8px; }
-  figure.card .fn{ font-family:var(--mono); font-size:10.5px; color:var(--muted); word-break:break-all; }
-  figure.card .ctl{ display:flex; align-items:center; justify-content:space-between; gap:8px; }
-  figure.card .arch-btn{ font-family:var(--mono); font-size:10px; color:var(--faint); background:none; border:none; cursor:pointer; text-decoration:underline; }
-  figure.card .arch-btn:hover{ color:var(--red); }
-  figure.card .note-in{ font-family:var(--font); font-size:12px; border:1px solid var(--red); border-radius:7px; padding:6px 9px; width:100%; background:#fff; display:none; }
-  figure.card.rr .note-in{ display:block; }
-
-  /* ===== library: toolbar · contact sheet · cards · film-strip · stage ===== */
-  .lib-tools{ margin-top:26px; display:flex; align-items:center; gap:14px; flex-wrap:wrap;
-    position:sticky; top:56px; z-index:30; background:linear-gradient(180deg,var(--cream) 70%,rgba(235,231,212,0)); padding:10px 0; }
-  .lib-search{ flex:1; min-width:220px; font-family:var(--font); font-size:15px; color:var(--ink);
-    background:var(--warm); border:1px solid var(--line); border-radius:100px; padding:11px 18px; }
-  .lib-search::placeholder{ color:var(--faint); }
-  .lib-search:focus{ outline:none; border-color:var(--honey); }
-  .lib-chips{ display:flex; gap:7px; flex-wrap:wrap; }
-  .chipf{ font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:var(--muted); background:var(--warm);
-    border:1px solid var(--line); border-radius:100px; padding:7px 13px; cursor:pointer; white-space:nowrap; }
-  .chipf:hover{ color:var(--ink); }
-  .chipf.on{ background:var(--ink); color:var(--warm); border-color:var(--ink); }
-
-  .shelf{ margin-top:30px; }
-  .shelf-head{ display:flex; align-items:baseline; gap:12px; border-top:1px solid var(--line); padding-top:16px; }
-  .shelf-head h3{ font-size:20px; font-weight:600; letter-spacing:-0.03em; }
-  .shelf-head .sb{ font-size:13.5px; color:var(--muted); }
-  .shelf-head .sc{ margin-left:auto; font-family:var(--mono); font-size:11px; color:var(--faint); }
-  .card-row{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px; margin-top:16px; }
-
-  .cc{ text-align:left; background:var(--warm); border:1px solid var(--line); border-radius:14px; overflow:hidden;
-    cursor:pointer; padding:0; font:inherit; color:inherit; display:flex; flex-direction:column;
-    box-shadow:0 10px 24px rgba(66,61,50,.06); transition:transform .16s ease, box-shadow .16s ease; }
-  .cc:hover{ transform:translateY(-3px); box-shadow:0 20px 44px rgba(66,61,50,.12); }
-  .cc .cc-thumb{ position:relative; width:100%; background:#ddd7c3; overflow:hidden; }
-  .cc.section .cc-thumb{ aspect-ratio:16/10; }
-  .cc.persona .cc-thumb{ aspect-ratio:4/5; }
-  .cc .cc-thumb img,.cc .cc-thumb video{ width:100%; height:100%; object-fit:cover; display:block; }
-  .cc .glyph{ position:absolute; top:9px; right:9px; width:24px; height:24px; border-radius:50%;
-    background:rgba(249,246,229,.9); color:var(--brown); font-size:12px; display:flex; align-items:center; justify-content:center; }
-  .cc .kicker{ position:absolute; top:9px; left:9px; font-family:var(--mono); font-size:9px; letter-spacing:.1em;
-    text-transform:uppercase; color:var(--warm); background:rgba(26,28,34,.55); padding:3px 8px; border-radius:100px; }
-  .cc .cc-body{ padding:13px 15px 15px; display:flex; flex-direction:column; gap:6px; flex:1; }
-  .cc .cc-title{ font-size:16.5px; font-weight:600; letter-spacing:-0.02em; }
-  .cc .cc-bio{ font-family:var(--serif,"DM Sans"); font-style:italic; font-size:13.5px; color:var(--brown); line-height:1.4; }
-  .cc .cc-desc{ font-size:13px; color:var(--brown); line-height:1.42; }
-  .cc .cc-foot{ margin-top:auto; padding-top:8px; display:flex; align-items:center; gap:10px; }
-  .cc .cc-count{ font-family:var(--mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:var(--honey); white-space:nowrap; }
-  .hbar{ flex:1; height:5px; border-radius:100px; background:#e3ddc9; overflow:hidden; display:flex; }
-  .hbar i{ height:100%; display:block; }
-  .hbar .hg{ background:var(--green); } .hbar .hy{ background:var(--yellow); } .hbar .hr{ background:var(--red); }
-  .hratio{ font-family:var(--mono); font-size:9.5px; color:var(--faint); white-space:nowrap; }
-
-  /* stage */
-  .stage-head{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:26px; border-top:1px solid var(--line); padding-top:18px; }
-  .stage-back{ font-family:var(--mono); font-size:12px; color:var(--ink); background:var(--warm); border:1px solid var(--line);
-    border-radius:100px; padding:8px 15px; cursor:pointer; }
-  .stage-back:hover{ border-color:var(--honey); color:var(--honey); }
-  .stage-title{ font-size:clamp(22px,3vw,30px); font-weight:600; letter-spacing:-0.03em; }
-  .stage-sub{ font-size:14px; color:var(--muted); width:100%; max-width:70ch; }
-
-  /* persona profile header */
-  .persona-hero{ display:grid; grid-template-columns:220px 1fr; gap:22px; margin-top:20px; align-items:start; }
-  .persona-hero .ph-img{ border-radius:16px; overflow:hidden; aspect-ratio:4/5; background:#ddd7c3; border:1px solid var(--line); box-shadow:0 16px 38px rgba(66,61,50,.12); }
-  .persona-hero .ph-img img{ width:100%; height:100%; object-fit:cover; }
-  .persona-hero .ph-name{ font-family:var(--serif,"DM Sans"); font-weight:400; font-size:clamp(26px,4vw,40px); letter-spacing:-0.02em; }
-  .persona-hero .ph-bio{ font-family:var(--serif,"DM Sans"); font-style:italic; font-size:clamp(16px,2.2vw,20px); color:var(--brown); margin-top:10px; line-height:1.5; max-width:52ch; }
-  .persona-hero .ph-meta{ font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--honey); margin-top:14px; }
-  @media(max-width:620px){ .persona-hero{ grid-template-columns:1fr; } .persona-hero .ph-img{ max-width:220px; } }
-
-  /* ===== the branded film-strip ===== */
-  .fstrip-wrap{ margin-top:20px; }
-  .fstrip{ position:relative; display:flex; gap:2px; overflow-x:auto; scroll-snap-type:x proximity; scroll-behavior:smooth;
-    background:var(--warm); border-radius:5px; padding:16px 0; box-shadow:0 1px 2px rgba(66,61,50,.06),0 8px 24px rgba(66,61,50,.05);
-    scrollbar-width:thin; }
-  .fstrip::before,.fstrip::after{ content:""; position:absolute; left:0; right:0; height:15px; z-index:2; pointer-events:none;
-    background-color:rgba(26,28,34,.92);
-    background-image:radial-gradient(circle 3.4px at 14px 50%, var(--cream) 3.4px, transparent 4px);
-    background-size:28px 100%; background-repeat:repeat-x; }
-  .fstrip::before{ top:0; } .fstrip::after{ bottom:0; }
-  .frame{ flex:0 0 auto; width:min(60%,540px); scroll-snap-align:center; position:relative; padding:0 1px;
-    transition:opacity .4s ease, filter .4s ease; opacity:.78; filter:saturate(.92); }
-  .frame.active{ opacity:1; filter:none; }
-  .frame:first-child{ margin-left:16px; } .frame:last-child{ margin-right:24px; }
-  .frame .fimg{ width:100%; aspect-ratio:3/2; object-fit:cover; display:block; background:#ddd7c3; }
-  .frame .edge{ position:absolute; left:8px; bottom:19px; font-family:var(--mono); font-size:9px; letter-spacing:.14em;
-    color:var(--honey); opacity:.7; z-index:3; }
-  .frame.active .edge{ opacity:1; }
-  .frame .tick{ position:absolute; top:6px; left:50%; transform:translateX(-50%); width:14px; height:2px; background:var(--lime);
-    border-radius:2px; z-index:3; opacity:0; transition:opacity .3s ease; }
-  .frame.active .tick{ opacity:1; }
-  .frame .fcap{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--brown);
-    padding:9px 8px 0; }
-  .frame .fcap .fc2{ display:block; font-family:var(--font); font-size:12.5px; letter-spacing:0; text-transform:none; color:var(--brown); opacity:.85; margin-top:3px; text-wrap:pretty; }
-  .frame .frate{ position:absolute; top:6px; right:8px; z-index:3; }
-  .fstrip-foot{ display:flex; align-items:center; gap:12px; margin-top:10px; }
-  .fstrip-foot .fprog{ flex:1; height:2px; background:#e3ddc9; border-radius:2px; overflow:hidden; }
-  .fstrip-foot .fprog i{ display:block; height:100%; background:var(--ink); width:0; transition:width .2s ease; }
-  .fstrip-foot .fcount{ font-family:var(--mono); font-size:11px; color:var(--faint); }
-  @media(prefers-reduced-motion:reduce){ .frame{ opacity:1; filter:none; transition:none; } .frame .tick{ display:none; } }
-  @media(max-width:720px){ .frame{ width:84%; } }
-
-  /* rating dot (resting) + hover pills for frame cards */
-  figure.card .dot{ position:absolute; top:8px; right:8px; width:12px; height:12px; border-radius:50%; z-index:2; border:1.5px solid rgba(249,246,229,.8); }
-  figure.card .ctl{ opacity:0; transition:opacity .15s; }
-  figure.card:hover .ctl,figure.card:focus-within .ctl{ opacity:1; }
-
-  footer{ margin-top:60px; border-top:1px solid var(--line); padding-top:20px; font-family:var(--mono); font-size:12px; color:var(--faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
-  footer a{ color:var(--brown); }
-  .empty{ color:var(--muted); font-size:14px; padding:20px 0; }
-  .arch-bar{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-top:22px; padding:14px 18px;
-    background:var(--red-bg); border:1px solid var(--red); border-radius:14px; }
-  .arch-bar .back{ font-family:var(--mono); font-size:12px; font-weight:500; color:#fff; background:var(--red);
-    border:none; border-radius:100px; padding:9px 18px; cursor:pointer; }
-  .arch-bar .back:hover{ filter:brightness(1.08); }
-  .arch-bar .msg{ font-size:14px; color:var(--red); }
-  .arch-bar .restore-all{ font-family:var(--mono); font-size:11.5px; color:var(--red); background:none; border:1px solid var(--red);
-    border-radius:100px; padding:8px 14px; cursor:pointer; margin-left:auto; }
-  .arch-bar .restore-all:hover{ background:rgba(155,61,46,.08); }
-  figure.card.rr .arch-btn{ color:var(--red); font-weight:600; font-size:11px; border:1px solid var(--red); border-radius:100px; padding:4px 12px; text-decoration:none; }
-  figure.card.rr .arch-btn:hover{ background:var(--red-bg); }
-  @media(max-width:720px){ .dd-grid{ grid-template-columns:1fr; } }
+  footer{ margin-top:clamp(40px,7vw,70px); border-top:1px solid var(--line); padding-top:22px;
+    font-family:var(--mono); font-size:12px; color:var(--faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  footer a{ color:var(--brown); text-decoration:none; }
+  footer a:hover{ color:var(--ink); }
 </style>
 </head>
 <body>
 <div class="topbar">
   <span class="brand">pulse<i>·</i> world-building</span>
-  <span class="stat" id="stat">loading…</span>
   <span class="spacer"></span>
-  <button id="viewMain" class="on">Gallery</button>
-  <button id="viewArchive">Archive <span id="archCount"></span></button>
-  <button id="exportBtn">Export ↓</button>
+  <a href="pulse-workshop-say.html">Writing room</a>
+  <a href="pulse-workshop-see.html">Picture room</a>
+  <a href="pulse-video-workshop.html">Trailers</a>
+  <a href="builds.html">Builds</a>
 </div>
 
 <div class="shell">
   <div class="eyebrow">The single source of truth · Pulse Voice + Pulse Filmmaker</div>
-  <h1>Pulse World-Building</h1>
-  <p class="lede">One home for the whole Pulse world, in two categories: <b>what we say</b> — the voice, the taglines, the board's consensus — and <b>what they see</b> — the cinematic world, every image and motion rule, to curate and learn from.</p>
+  <h1>The whole Pulse world, in two rooms.</h1>
+  <p class="lede">Everything the brand <b>says</b> and everything they <b>see</b> — each with its own room to work in, and nothing kept in two places. <b>What we say</b> is the writing room, where the voice is argued by the board, then rated and locked line by line. <b>What they see</b> is the picture room, where a frame is decided, built, checked, and every image in the library is curated to train the model. Open a room.</p>
 
   <div class="cat-cards">
     <div class="cat-card">
-      <div class="cat-hero"><img src="library/trailers/presence-01.png" alt="The gold ring at rest on dark walnut, one warm glint — the voice of the brand" loading="eager"></div>
+      <div class="cat-hero"><img src="library/trailers/presence-01.png" alt="A wide polished gold ring at rest on dark walnut, one warm glint — the voice of the brand" loading="eager"></div>
       <div class="cat-body">
-        <div class="cat-k">Category one</div>
+        <div class="cat-k">Category one · the writing room</div>
         <h2>What we say</h2>
-        <p>The voice. Core messaging, the board's consensus, the taglines, the words on the screen.</p>
+        <p class="essence">The voice — argued into being by the advisory board, then rated and locked, line by line.</p>
+        <div class="cat-inside">
+          <div class="il">Inside</div>
+          <ul>
+            <li class="hero">The board's consensus</li>
+            <li>Core messaging</li>
+            <li>The guardrails</li>
+            <li>A live voice-check</li>
+            <li>Current vs. new</li>
+            <li>Text on screen</li>
+            <li>The email-flow review</li>
+            <li>A report for Johan</li>
+          </ul>
+        </div>
         <div class="cat-btns">
-          <a class="cbtn solid" href="pulse-workshop-say.html">Workshop</a>
-          <a class="cbtn ghost" href="pulse-workshop-say.html#coreSection">View guide</a>
+          <a class="cbtn solid" href="pulse-workshop-say.html">Enter the writing room →</a>
         </div>
       </div>
     </div>
+
     <div class="cat-card">
       <div class="cat-hero"><img src="library/hybrid/s01-aperture.png" alt="An illustrated scene opening through a circular aperture into a photograph — the world, seen" loading="eager"></div>
       <div class="cat-body">
-        <div class="cat-k">Category two</div>
+        <div class="cat-k">Category two · the picture room</div>
         <h2>What they see</h2>
-        <p>The cinematic world. The image library, the film grammar, the motion rules, the trailers.</p>
+        <p class="essence">The cinematic world — the grammar and motion rules, the tools to make a frame, and the whole library to curate.</p>
+        <div class="cat-inside">
+          <div class="il">Inside</div>
+          <ul>
+            <li class="hero">The rateable image library</li>
+            <li>Do's &amp; don'ts</li>
+            <li>The film lexicon</li>
+            <li>Motion rules</li>
+            <li>The mood decider</li>
+            <li>The prompt builder</li>
+            <li>Pre-flight checklist</li>
+            <li>The prompt library</li>
+          </ul>
+        </div>
         <div class="cat-btns">
-          <a class="cbtn solid" href="pulse-workshop-see.html">Workshop</a>
-          <button class="cbtn ghost" onclick="pmfGo('megaVisual','libAnchor')">View library</button>
+          <a class="cbtn solid" href="pulse-workshop-see.html">Enter the picture room →</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ============ CATEGORY ONE · WHAT WE SAY ============ -->
-  <details class="mega" id="megaBrand" open>
-    <summary>
-      <span class="num">1</span>
-      <span class="mt">
-        <span class="k">Category one</span>
-        <h2>What we say</h2>
-        <p>The voice — core messaging, the advisory board's consensus, the email-flow review, and the workshops for taglines and on-screen text.</p>
-      </span>
-      <span class="chev">▶</span>
-    </summary>
-    <div class="mega-body">
-
-      <details class="panel" id="corePanel" open>
-        <summary><span class="tw">Voice</span><h2>Core messaging</h2><span class="chev">▶</span></summary>
-        <div class="panel-body">
-          <div class="msg-grid">
-            <div class="msg-card"><div class="k">The category</div><div class="v">A mindfulness ring that brings you back to the present — anti-data, no screen, nothing to check.</div></div>
-            <div class="msg-card"><div class="k">The wedge</div><div class="v">A pulse instead of a ping. The opposite of one more notification.</div></div>
-            <div class="msg-card"><div class="k">The promise</div><div class="v">Make the most of the movie of your life — the same footage, at the speed of being here.</div></div>
-            <div class="msg-card"><div class="k">The feeling</div><div class="v">Numb → Seen → Hopeful → Convinced → Relieved → Grateful → Generous.</div></div>
-            <div class="msg-card"><div class="k">The voice</div><div class="v">Present tense, second person, one breath per sentence. Invite, never instruct. No exclamation points.</div></div>
-            <div class="msg-card"><div class="k">Canon lines</div><div class="v">“When would now be a good time?” · “Be Here WOW”</div></div>
-          </div>
-          <a href="now-a-good-time.html" style="display:flex;align-items:center;gap:14px;margin-top:14px;padding:16px 20px;background:var(--ink);color:var(--warm);border-radius:14px;text-decoration:none;">
-            <span style="font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);">Companion piece →</span>
-            <span style="flex:1;font-size:15.5px;font-weight:500;">“When would now be a good time?” — the manifesto &amp; 20 invitations</span>
-          </a>
-        </div>
-      </details>
-
-      <details class="panel" id="boardPanel" open>
-        <summary><span class="tw">Advisory board</span><h2>The board's consensus</h2><span class="chev">▶</span></summary>
-        <div class="panel-body" id="boardBody">
-          <div class="board-pending">The advisory board is convening — five experts (Hormozi, Godin, Watts, Jobs, Sutherland) across ten EBI passes. Their consensus appears here once the session is written.</div>
-        </div>
-      </details>
-
-      <details class="panel" id="flowReviewPanel">
-        <summary><span class="tw">Advisory board</span><h2>The board reviews the email flows</h2><span class="chev">▶</span></summary>
-        <div class="panel-body" id="flowReviewBody"><div class="empty">loading the board's flow review…</div></div>
-      </details>
-
-      <details class="panel" id="msgPanel">
-        <summary><span class="tw">Workshop</span><h2>Taglines</h2><span class="chev">▶</span></summary>
-        <div class="panel-body">
-          <p style="font-size:14px;color:var(--brown);max-width:64ch;margin-bottom:10px;">The board's consensus tagline set (falls back to the working set). Rate each <b style="color:var(--green)">keep</b> / <b style="color:var(--yellow)">caution</b> / <b style="color:var(--red)">cut</b>.</p>
-          <div class="tagline-list" id="taglineList"></div>
-        </div>
-      </details>
-
-      <details class="panel" id="tosPanel">
-        <summary><span class="tw">Workshop</span><h2>Text on screen · 10 variations</h2><span class="chev">▶</span></summary>
-        <div class="panel-body">
-          <div class="tos-head">
-            <span class="tos-progress" id="tosProgress"></span>
-            <span class="tos-locked" id="tosLocked"></span>
-          </div>
-          <p style="font-size:14px;color:var(--brown);max-width:64ch;">Short lines for video / social overlays. Rate all ten; once every line has a verdict the greens lock in as the approved on-screen text rules (and reds carry a note on why).</p>
-          <div class="tos-list" id="tosList"></div>
-        </div>
-      </details>
-
-    </div>
-  </details>
-
-<!-- ============ CATEGORY TWO · WHAT THEY SEE ============ -->
-  <details class="mega" id="megaVisual" open>
-    <summary>
-      <span class="num">2</span>
-      <span class="mt">
-        <span class="k">Category two</span>
-        <h2>What they see</h2>
-        <p>The cinematic world — do's &amp; don'ts, the filmmaking lexicon &amp; motion rules, the trailers, and the full rateable image library.</p>
-      </span>
-      <span class="chev">▶</span>
-    </summary>
-    <div class="mega-body">
-
-      <details class="panel" id="rulesPanel" open>
-        <summary><span class="tw">Start here</span><h2>Do's, don'ts &amp; usage rules</h2><span class="chev">▶</span></summary>
-        <div class="panel-body">
-          <div class="dd-grid">
-            <div class="dd do">
-              <h3>Do</h3>
-              <ul>
-                <li>Soft ambient natural light, warm cream / honey palette, medium-format film feel.</li>
-                <li>The wide polished <b>gold ring</b> as a discovered second-glance glint — present, never a hard sell.</li>
-                <li>Real, diverse people in true moments — editorial, un-staged, emotionally honest.</li>
-                <li>Two visual worlds kept distinct: warm Maya lifestyle vs. dark luxe product.</li>
-                <li>Anti-data everywhere: no screens-of-metrics, no streaks, nothing to check.</li>
-                <li>Motion earns its place — the pulse is always the hinge that slows the moment.</li>
-              </ul>
-            </div>
-            <div class="dd dont">
-              <h3>Don't</h3>
-              <ul>
-                <li><b>Malformed hands</b> — extra/fused/six fingers, bent joints, melted hands. Archive on sight.</li>
-                <li>Uncanny/waxy faces, broken eyes or teeth, warped anatomy, extra limbs.</li>
-                <li>Text, watermarks, gibberish signage, or brand logos in the frame.</li>
-                <li>Cold, stocky, corporate, or over-saturated CGI looks. No glow on cream.</li>
-                <li>The ring rendered wrong — a thin band, a diamond ring, doubled, or mangled.</li>
-                <li>Hype grammar (urgency, scarcity, "drop", exclamation points).</li>
-              </ul>
-            </div>
-          </div>
-          <div class="rules">
-            <h3>Usage rules</h3>
-            <ol>
-              <li>Cream editorial for everything <i>felt</i>; dark luxe for the <i>product / logistics</i>. Arrival day is the deliberate crossover.</li>
-              <li>Hands are the #1 slop risk — every visible hand gets a finger-count check before a frame ships.</li>
-              <li>Rate honestly: <b>green</b> = ship, <b>yellow</b> = usable with a caveat, <b>red</b> = archive + note why.</li>
-              <li>Every red note names the failure (hands / light / anatomy / off-brand / ring) so it can adjust a prompt.</li>
-            </ol>
-            <div class="derived">Rules derived from your red notes so far:</div>
-            <div id="derivedRules">— rate some frames red with notes and a summary appears here —</div>
-          </div>
-        </div>
-      </details>
-
-      <details class="panel" id="lexiconPanel">
-        <summary><span class="tw">Filmmaking</span><h2>The filmmaking lexicon &amp; motion rules</h2><span class="chev">▶</span></summary>
-        <div class="panel-body">
-          <p class="lex-intro">Pulse borrows the grammar of film because the product <i>is</i> a film idea: your life is twenty-four frames a second, and the only question is whether you're watching it at the speed you can live. Here's the vocabulary, where each term is used, and the motion rules — including the specific cinematic law for illustration, for photograph, and for the moment in between.</p>
-
-          <div class="lex-grid">
-            <div class="lex-term"><div class="lt">Frame <span>the unit</span></div><div class="lw">A single still instant. Twenty-four of them a second make a life.</div><div class="lu"><b>In Pulse</b> — every emailed moment ("the kettle," "the last page") is one frame asked to be exposed long enough to register.</div></div>
-            <div class="lex-term"><div class="lt">Frame rate <span>the speed</span></div><div class="lw">Frames per second. Too fast and it blurs; held longer and it becomes memory.</div><div class="lu"><b>In Pulse</b> — autopilot is 60 frames a minute, none seen; presence is 24 frames of one moment. "A pulse is a frame rate; presence is choosing the rate."</div></div>
-            <div class="lex-term"><div class="lt">Aperture <span>the iris</span></div><div class="lw">The iris that opens to let light in and set what's sharp.</div><div class="lu"><b>In Pulse</b> — attention is the aperture. The pulse opens it; the room floods back in.</div></div>
-            <div class="lex-term"><div class="lt">Focus / rack focus <span>the pull</span></div><div class="lw">The lens resolving a subject from blur to sharp; racking shifts focus between planes.</div><div class="lu"><b>In Pulse</b> — the ring racks focus off the future (blurred) and onto the now (sharp). This is the transition motion rule.</div></div>
-            <div class="lex-term"><div class="lt">Lens <span>the choice</span></div><div class="lw">What the camera sees through. Choosing the lens is choosing attention.</div><div class="lu"><b>In Pulse</b> — "Not more footage. The same footage, at the speed of being here." Presence is choosing the lens, not adding film.</div></div>
-            <div class="lex-term"><div class="lt">Depth of field <span>what's sharp</span></div><div class="lw">How much is in focus. Shallow = one plane sharp, the rest soft.</div><div class="lu"><b>In Pulse</b> — presence is shallow depth of field on the moment you're standing in; everything ahead of it goes soft.</div></div>
-            <div class="lex-term"><div class="lt">The hold <span>the dwell</span></div><div class="lw">Letting a shot run longer than expected until it lands.</div><div class="lu"><b>In Pulse</b> — "One frame, held long enough to become a movie." The pulse is permission to hold.</div></div>
-            <div class="lex-term"><div class="lt">The cut <span>the jump</span></div><div class="lw">The jump between frames. All cut and no continuity is disorientation.</div><div class="lu"><b>In Pulse</b> — the days that blur are a strip of hard cuts with nothing held between them.</div></div>
-            <div class="lex-term"><div class="lt">The seam <span>the hinge</span></div><div class="lw">Where illustration becomes photograph — the inflection point.</div><div class="lu"><b>In Pulse</b> — the ring is the seam. Cold + fast painterly memory resolves into warm + slow lived photograph.</div></div>
-            <div class="lex-term"><div class="lt">Grain &amp; warmth <span>the texture</span></div><div class="lw">The feel of film stock. Warm and slow reads as alive; cold and clean reads as data.</div><div class="lu"><b>In Pulse</b> — the whole style move is cold + fast → warm + slow. Grain over gloss, always.</div></div>
-          </div>
-
-          <div class="aperture-essay">
-            <h4>Frames in the aperture — expanding &amp; focusing the lens on the scene</h4>
-            <p>Attention is an aperture. On autopilot it's stopped down and racing: a thousand frames flicker past the sensor and not one is exposed long enough to register. The week goes by unwitnessed — not empty, just never developed.</p>
-            <p>The pulse is a hand on the aperture ring. It opens. Light floods in, the iris widens, and the lens pulls focus off the plane you were bracing for and onto the one you're actually standing in. The scene, which was always there, resolves. That is the entire mechanism rendered as cinematography: presence is not more footage — it's the aperture widening and the focus racking until a single frame is held long enough to become a memory. Every hybrid frame in this library stages that moment; every motion clip below obeys a rule about which side of the aperture it lives on.</p>
-          </div>
-
-          <div class="foot">
-            <div class="fh"><span class="fn">The illustration foot</span><span class="ftag">the memory, painted — in 3D</span></div>
-            <p class="frule"><b>Rule — composed camera on rails, and the 2D world must show its 3D space (Disney multiplane).</b> Illustration is a memory, painted — but it must never be a flat cut-out. Cut the scene into depth planes (foreground, midground, background) and glide them past the lens at different speeds, the way Disney's multiplane camera did — so parallax opens in every direction and the flat artwork reveals real dimensional space. The characters stay <b>alive and three-dimensional</b>: a soft breath, a blink, hair and fabric drifting, a small gesture — always enough motion that they read as dimensional beings, not paper dolls. Composed and dreamlike, never handheld: memory doesn't wobble, but it does breathe in depth.</p>
-            <div class="motion-strip">
-              <figure><video src="library/motion-rules/illustration/il-veo-01.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>multiplane · embrace</figcaption></figure>
-              <figure><video src="library/motion-rules/illustration/il-veo-02.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>multiplane · field of light</figcaption></figure>
-              <figure><video src="library/motion-rules/illustration/il-veo-03.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>multiplane · festival</figcaption></figure>
-              <figure><video src="library/motion-rules/illustration/il-veo-04.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>multiplane · dawn crowd</figcaption></figure>
-              <figure><video src="library/motion-rules/illustration/il-veo-05.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>multiplane · the table</figcaption></figure>
-            </div>
-          </div>
-
-          <div class="foot">
-            <div class="fh"><span class="fn">The transition foot</span><span class="ftag">the reel slowing</span></div>
-            <p class="frule"><b>Rule — illustration resolves into photograph, timed to the pulse.</b> This is the inflection: travel the axis from the painted side to the photographic side, rack focus from blur into sharp, or dissolve cold + fast into warm + slow. The tap is the hinge that slows the reel. Use it once and let it land — it's the whole story in one move, so never overuse it.</p>
-            <div class="motion-strip">
-              <figure><video src="library/motion-rules/transition/tr-veo-01.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>illustration → photo · cafe</figcaption></figure>
-              <figure><video src="library/motion-rules/transition/tr-veo-02.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>illustration → photo · balcony</figcaption></figure>
-              <figure><video src="library/motion-rules/transition/tr-veo-03.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>illustration → photo · studio</figcaption></figure>
-              <figure><video src="library/motion-rules/transition/tr-veo-04.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>illustration → photo · counter</figcaption></figure>
-              <figure><video src="library/motion-rules/transition/tr-veo-05.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>illustration → photo · bright room</figcaption></figure>
-            </div>
-          </div>
-
-          <div class="foot">
-            <div class="fh"><span class="fn">The photograph foot</span><span class="ftag">the present, handheld</span></div>
-            <p class="frule"><b>Rule — full photographic video feels handheld on a cell phone.</b> Organic micro-drift, a slight tilt, a breath of zoom — imperfect on purpose. It's the intimacy of a real hand holding a real moment: warm, alive, present, un-staged. Never the locked, gliding, composed camera of the illustration foot — a lived moment has a pulse in the frame itself.</p>
-            <div class="motion-strip">
-              <figure><video src="library/motion-rules/photograph/ph-veo-01.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>handheld · aurora</figcaption></figure>
-              <figure><video src="library/motion-rules/photograph/ph-veo-02.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>handheld · canyon rim</figcaption></figure>
-              <figure><video src="library/motion-rules/photograph/ph-veo-03.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>handheld · sea cliff</figcaption></figure>
-              <figure><video src="library/motion-rules/photograph/ph-veo-04.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>handheld · rooftop dusk</figcaption></figure>
-              <figure><video src="library/motion-rules/photograph/ph-veo-05.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>handheld · forest fog</figcaption></figure>
-            </div>
-          </div>
-
-          <div class="foot" style="border-top:2px solid var(--honey);">
-            <div class="fh"><span class="fn">When to use which</span><span class="ftag">let the mood be intentional</span></div>
-            <p class="frule">Not a mechanical choice — a <b>mood</b> choice. Pick the foot by the feeling the moment should carry, and never mix them inside one shot except at a deliberate transition.</p>
-            <div class="lex-grid" style="margin-top:12px;">
-              <div class="lex-term"><div class="lt">Illustration <span>multiplane</span></div><div class="lw">When the mood is <b>remembered, dreamlike, tender, universal</b> — a feeling <i>about</i> life.</div><div class="lu"><b>Because</b> — it reads as memory and metaphor; the multiplane depth keeps it alive without pretending to be real.</div></div>
-              <div class="lex-term"><div class="lt">Photograph <span>handheld</span></div><div class="lw">When the mood is <b>immediate, intimate, happening now, embodied</b> — a feeling you're <i>inside of</i>.</div><div class="lu"><b>Because</b> — handheld realism puts the viewer in the room; the moment has a pulse.</div></div>
-              <div class="lex-term"><div class="lt">50 / 50 transition <span>the hinge</span></div><div class="lw">When the mood is <b>the turn itself</b> — autopilot becoming presence, the missed moment being caught.</div><div class="lu"><b>Because</b> — the medium change <i>is</i> the message. Earn it only at the hinge, never as decoration.</div></div>
-            </div>
-            <p class="frule" style="margin-top:12px;">If a moment could be either, ask what you want the viewer to <i>feel</i> — remembered vs. lived — and let that decide.</p>
-          </div>
-        </div>
-      </details>
-
-      <details class="panel" id="promptPanel">
-        <summary><span class="tw">Prompts</span><h2>Prompt library</h2><span class="chev">▶</span></summary>
-        <div class="panel-body" id="promptBody"><div class="empty">loading prompt library…</div></div>
-      </details>
-
-      <div class="lib-tools" id="libAnchor">
-        <input id="libSearch" class="lib-search" placeholder="Search a persona, a section, a moment…" aria-label="Search the library" />
-        <div class="lib-chips" id="groupChips"></div>
-      </div>
-      <div id="contactSheet"></div>
-      <div id="stage" hidden></div>
-    </div>
-  </details>
-
-    <footer>
-    <span>Pulse · World-building · ratings saved in this browser</span>
-    <span><a href="image-library.html">Atlas</a> · <a href="builds.html">Builds</a></span>
+  <footer>
+    <span>Pulse · World-building · two rooms, one source of truth</span>
+    <span><a href="pulse-workshop-say.html">Writing room</a> · <a href="pulse-workshop-see.html">Picture room</a> · <a href="pulse-video-workshop.html">Trailers</a> · <a href="image-library.html">Atlas</a></span>
   </footer>
 </div>
-
-<script>
-(function(){
-  window.pmfGo=function(megaId,panelId){
-    var m=document.getElementById(megaId); if(m) m.open=true;
-    var t=document.getElementById(panelId);
-    if(t && t.tagName==='DETAILS') t.open=true;
-    (t||m).scrollIntoView({behavior:'smooth',block:'start'});
-  };
-  var LS="pmf-worldbuilding-v1";
-  var state=JSON.parse(localStorage.getItem(LS)||"{}");
-  state.ratings=state.ratings||{};
-  state.notes=state.notes||{};
-  state.archived=state.archived||{};
-  state.tos=state.tos||{};
-  state.taglines=state.taglines||{};
-  function save(){ localStorage.setItem(LS, JSON.stringify(state)); }
-  function clear(el){ while(el.firstChild) el.removeChild(el.firstChild); }
-  function el(tag, cls, txt){ var e=document.createElement(tag); if(cls) e.className=cls; if(txt!=null) e.textContent=txt; return e; }
-
-  var INDEX=null, BOARD=null, showArchive=false;
-
-  // working sets — replaced by the board's consensus once it loads
-  var TAGLINES=[
-    ["Be here for the moment you are in.","hero"],
-    ["A pulse instead of a ping.","wedge"],
-    ["Make the most of the movie of your life.","film"],
-    ["The days don't blur when you're in them.","problem"],
-    ["Come back to now.","win-back"],
-    ["Presence you can wear.","product"],
-    ["One tap. You're here.","mechanism"],
-    ["Not another thing to check. The opposite.","anti-data"],
-    ["The moment you'd have missed.","inflection"],
-    ["Twenty-four frames of one moment.","film"]
-  ];
-  var TOS=[
-    "You're here.",
-    "One breath. Notice where you are.",
-    "The days you're in don't blur.",
-    "A pulse, not a ping.",
-    "This moment, at the speed you can live it.",
-    "Come back to now.",
-    "The movie of your life — play it slower.",
-    "Nothing to check. Just this.",
-    "Feel your feet. We'll wait.",
-    "Presence, on your finger."
-  ];
-
-  var ADVISOR_NAMES={ hormozi:"Hormozi", godin:"Godin", watts:"Watts", jobs:"Jobs", sutherland:"Sutherland" };
-  var ADVISOR_ROLES={ hormozi:"Offers & value", godin:"Remarkable & tribe", watts:"Presence", jobs:"Simplicity", sutherland:"Perceived value" };
-  var ADVISOR_ORDER=["hormozi","godin","watts","jobs","sutherland"];
-  function avatarSrc(id){ return "library/advisors/"+id+".png"; }
-
-  function pill(current, onSet){
-    var wrap=el('span','rate');
-    [["g","green"],["y","yellow"],["r","red"]].forEach(function(o){
-      var b=el('button',o[0]+(current===o[1]?" on":""),"●");
-      b.title=o[1]; b.style.color=({green:'#4E7C34',yellow:'#B8860B',red:'#9B3D2E'})[o[1]];
-      b.onclick=function(){ onSet(o[1]); };
-      wrap.appendChild(b);
-    });
-    return wrap;
-  }
-
-  function renderTaglines(){
-    var host=document.getElementById('taglineList'); clear(host);
-    TAGLINES.forEach(function(t,i){
-      var row=el('div','tagline');
-      row.appendChild(el('span','t','“'+t[0]+'”'));
-      row.appendChild(el('span','cat',t[1]||''));
-      row.appendChild(pill(state.taglines[i], function(r){ state.taglines[i]=r; save(); renderTaglines(); }));
-      host.appendChild(row);
-    });
-  }
-
-  function renderTOS(){
-    var host=document.getElementById('tosList'); clear(host);
-    var rated=0, greens=0;
-    TOS.forEach(function(line,i){
-      var v=state.tos[i]||{};
-      if(v.rating) rated++;
-      if(v.rating==='green') greens++;
-      var row=el('div','tos');
-      row.appendChild(el('span','n',String(i+1)));
-      row.appendChild(el('span','t','“'+line+'”'));
-      row.appendChild(pill(v.rating, function(r){ state.tos[i]=Object.assign({},state.tos[i],{rating:r}); save(); renderTOS(); }));
-      var note=el('input','note-in'); note.placeholder='why?'; note.value=v.note||'';
-      note.style.display = (v.rating==='red')?'block':'none';
-      note.oninput=function(){ state.tos[i]=Object.assign({},state.tos[i],{note:note.value}); save(); };
-      row.appendChild(note);
-      host.appendChild(row);
-    });
-    document.getElementById('tosProgress').textContent=rated+' / '+TOS.length+' rated';
-    document.getElementById('tosLocked').textContent = (rated===TOS.length) ? ('✓ locked as rules — '+greens+' approved lines') : '';
-  }
-
-  // ===== advisory board =====
-  function consCard(k, v){
-    var c=el('div','cons-card'); c.appendChild(el('div','k',k)); c.appendChild(el('div','v',v)); return c;
-  }
-  function consListCard(k, items){
-    var c=el('div','cons-card'); c.appendChild(el('div','k',k));
-    var ul=el('ul'); (items||[]).forEach(function(x){ ul.appendChild(el('li',null,x)); }); c.appendChild(ul); return c;
-  }
-  function advImg(id){ var im=el('img'); im.src=avatarSrc(id); im.alt=ADVISOR_NAMES[id]||id; im.loading='lazy'; return im; }
-
-  function renderBoard(){
-    var host=document.getElementById('boardBody'); if(!host) return;
-    if(!BOARD){ return; }
-    clear(host);
-    var c=BOARD.final && BOARD.final.consensus ? BOARD.final.consensus : (BOARD.consensus||{});
-
-    // advisor chips
-    var chips=el('div','board-chips');
-    ADVISOR_ORDER.forEach(function(id){
-      var chip=el('div','chip'); chip.appendChild(advImg(id));
-      var w=el('div','cnwrap'); w.appendChild(el('span','cn',ADVISOR_NAMES[id])); w.appendChild(el('span','cr',ADVISOR_ROLES[id]||''));
-      chip.appendChild(w); chips.appendChild(chip);
-    });
-    host.appendChild(el('p','board-intro','Five advisors analysed the whole corpus independently, then argued it through ten explore-build-improve passes into one consensus. The consensus is below; expand to see what each member actually thought.'));
-    host.appendChild(chips);
-
-    // headline recommendation
-    var hr=(BOARD.final&&BOARD.final.headline_recommendation)||'';
-    if(hr){ var hb=el('div','headline'); hb.appendChild(el('div','k','What the board wants Johan to do')); hb.appendChild(el('div','v',hr)); host.appendChild(hb); }
-
-    // consensus hero (may be two lines: koan + plain clarifier)
-    if(c.hero){
-      var ch=el('div','cons-hero'); ch.appendChild(el('div','k','The consensus hero'));
-      var hl=String(c.hero).split('\n').map(function(s){return s.trim();}).filter(Boolean);
-      ch.appendChild(el('div','v','“'+hl[0]+'”'));
-      for(var hi=1; hi<hl.length; hi++){ ch.appendChild(el('div','v2',hl[hi])); }
-      host.appendChild(ch);
-    }
-
-    // consensus grid
-    var grid=el('div','cons-grid');
-    if(c.positioning) grid.appendChild(consCard('Positioning', c.positioning));
-    if(c.wedge) grid.appendChild(consCard('The wedge', c.wedge));
-    if(c.offer) grid.appendChild(consCard('The offer / value', c.offer));
-    if(c.hierarchy && c.hierarchy.length) grid.appendChild(consListCard('Message hierarchy', c.hierarchy));
-    if(c.guardrails && c.guardrails.length) grid.appendChild(consListCard('Voice guardrails', c.guardrails));
-    host.appendChild(grid);
-
-    // expandable: what each advisor thought
-    var advisors=(BOARD.final&&BOARD.final.advisors)||[];
-    var exp=BOARD.explore||{};
-    var d1=el('details','panel'); d1.style.marginTop='18px';
-    var s1=el('summary'); s1.appendChild(el('span','tw','Expand')); var s1h=el('h2',null,'What each advisor thought'); d1.appendChild(s1); s1.appendChild(s1h); s1.appendChild(el('span','chev','▶'));
-    var b1=el('div','panel-body'); var cards=el('div','advisor-cards');
-    ADVISOR_ORDER.forEach(function(id){
-      var fa=null; advisors.forEach(function(a){ if(a.id===id) fa=a; });
-      var ex=exp[id]||{};
-      var card=el('div','adv');
-      var head=el('div','adv-head'); head.appendChild(advImg(id));
-      var hw=el('div'); hw.appendChild(el('div','an',ADVISOR_NAMES[id]==='Hormozi'?'Alex Hormozi':(ADVISOR_NAMES[id]==='Godin'?'Seth Godin':(ADVISOR_NAMES[id]==='Watts'?'Alan Watts':(ADVISOR_NAMES[id]==='Jobs'?'Steve Jobs':'Rory Sutherland')))));
-      hw.appendChild(el('div','ar',ADVISOR_ROLES[id]||'')); head.appendChild(hw); card.appendChild(head);
-      if(ex.thesis) card.appendChild(el('div','thesis',ex.thesis));
-      var sig=(fa&&fa.signature_line)||ex.hero_pick;
-      if(sig) card.appendChild(el('div','sig','“'+sig+'”'));
-      var recs=(fa&&fa.top_recs)||ex.new_lines||[];
-      if(recs.length){ var rc=el('div','recs'); rc.appendChild(el('div','rh','Top recommendations')); var ul=el('ul'); recs.forEach(function(x){ ul.appendChild(el('li',null,x)); }); rc.appendChild(ul); card.appendChild(rc); }
-      var dis=(fa&&fa.dissent)||ex.warning;
-      if(dis && String(dis).toLowerCase()!=='none'){ var dd=el('div','dissent'); dd.appendChild(el('b',null,(fa&&fa.dissent)?'Still dissents: ':'Warns: ')); dd.appendChild(document.createTextNode(dis)); card.appendChild(dd); }
-      cards.appendChild(card);
-    });
-    b1.appendChild(cards); d1.appendChild(b1); host.appendChild(d1);
-
-    // expandable: the 10 EBI passes
-    var passes=BOARD.passes||[];
-    if(passes.length){
-      var d2=el('details','panel'); d2.style.marginTop='12px';
-      var s2=el('summary'); s2.appendChild(el('span','tw','Expand')); s2.appendChild(el('h2',null,'The ten EBI passes')); s2.appendChild(el('span','chev','▶')); d2.appendChild(s2);
-      var b2=el('div','panel-body'); var list=el('div','ebi-list');
-      passes.forEach(function(p){
-        var row=el('div','ebi'); var eh=el('div','eh');
-        eh.appendChild(el('span','ep','Pass '+p.pass)); eh.appendChild(el('span','ef',(p.focus||'').split(' — ')[0]));
-        if(p.convergence!=null) eh.appendChild(el('span','conv','converged '+Math.round(p.convergence*100)+'%'));
-        row.appendChild(eh); if(p.change) row.appendChild(el('div','ec',p.change)); list.appendChild(row);
-      });
-      b2.appendChild(list); d2.appendChild(b2); host.appendChild(d2);
-    }
-
-    host.appendChild(el('div','board-note','Board: Alex Hormozi · Seth Godin · Alan Watts · Steve Jobs · Rory Sutherland (5th seat, chosen to add the behavioral-science / perceived-value lens). Advisor portraits are stylized illustrations, not photographs.'));
-  }
-
-  function derivedRules(){
-    var themes={hands:0,light:0,anatomy:0,ring:0,'off-brand':0,text:0,other:0};
-    Object.keys(state.notes).forEach(function(f){
-      if(state.ratings[f]!=='red') return;
-      var n=(state.notes[f]||'').toLowerCase();
-      if(/hand|finger|thumb/.test(n)) themes.hands++;
-      else if(/light|dark|harsh|glow|stock/.test(n)) themes.light++;
-      else if(/face|eye|teeth|limb|anatomy|melt|warp/.test(n)) themes.anatomy++;
-      else if(/ring|band|diamond/.test(n)) themes.ring++;
-      else if(/brand|corporate|cgi|saturat/.test(n)) themes['off-brand']++;
-      else if(/text|watermark|logo|sign/.test(n)) themes.text++;
-      else themes.other++;
-    });
-    var total=Object.keys(themes).reduce(function(a,k){return a+themes[k];},0);
-    var out=document.getElementById('derivedRules');
-    if(!total){ out.textContent='— rate some frames red with notes and a summary appears here —'; return; }
-    var lines=[];
-    if(themes.hands) lines.push('• Hands failing in '+themes.hands+' frames → tighten hand/finger constraints; prefer hands-hidden or ring-macro compositions.');
-    if(themes.anatomy) lines.push('• Anatomy/faces in '+themes.anatomy+' → add "natural anatomy, no distortion" and regenerate.');
-    if(themes.ring) lines.push('• Ring wrong in '+themes.ring+' → restate "wide smooth flat gold band, not a diamond ring".');
-    if(themes.light) lines.push('• Light off in '+themes.light+' → reinforce "soft ambient, warm, no harsh/CGI".');
-    if(themes['off-brand']) lines.push('• Off-brand in '+themes['off-brand']+' → re-anchor to the editorial film grammar.');
-    if(themes.text) lines.push('• Text/logo artifacts in '+themes.text+' → strengthen "no text, no logos, no signage".');
-    if(themes.other) lines.push('• '+themes.other+' other note(s) to review.');
-    out.textContent=lines.join('\n');
-  }
-
-  var view={colId:null, archive:false}, gFilter='', curQ='';
-  function isVideo(f){ return /\.mp4$/i.test(f); }
-  function media(file, cls){
-    var m;
-    if(isVideo(file)){ m=document.createElement('video'); m.src=file; m.muted=true; m.loop=true; m.playsInline=true; m.preload='metadata';
-      m.onmouseover=function(){ var p=m.play(); if(p&&p.catch)p.catch(function(){}); }; m.onmouseout=function(){ m.pause(); }; }
-    else { m=document.createElement('img'); m.loading='lazy'; m.src=file; }
-    if(cls) m.className=cls; return m;
-  }
-  function setRating(file, r){
-    if(state.ratings[file]===r){ delete state.ratings[file]; } else { state.ratings[file]=r; }
-    if(state.ratings[file]==='red'){ state.archived[file]=true; } else { delete state.archived[file]; }
-    save(); renderLibrary(); derivedRules(); updateStat();
-  }
-  function collById(id){ return (INDEX.collections||[]).filter(function(c){ return c.id===id; })[0]; }
-  function health(col){ var g=0,y=0,r=0,u=0; (col.items||[]).forEach(function(it){ var v=state.ratings[it.file]; if(v==='green')g++; else if(v==='yellow')y++; else if(v==='red')r++; else u++; }); return {g:g,y:y,r:r,u:u,t:(col.items||[]).length}; }
-  function healthBar(col){ var h=health(col); var wrap=el('span','hbar'); function seg(cls,n){ if(!n)return; var i=document.createElement('i'); i.className=cls; i.style.width=(100*n/Math.max(1,h.t))+'%'; wrap.appendChild(i); } seg('hg',h.g); seg('hy',h.y); seg('hr',h.r); return wrap; }
-  function glyphChar(k){ return ({gallery:'▦',sequence:'▤',persona:'◉',link:'↗'})[k]||'▦'; }
-  function pad2(n){ n=String(n); return n.length<2 ? '0'+n : n; }
-
-  // rateable frame card (dot at rest, pills on hover)
-  function frameCard(item){
-    var file=item.file; var r=state.ratings[file];
-    var fig=el('figure','card'+(r?' r'+r[0]:''));
-    var wrap=el('div','imgwrap'); wrap.appendChild(media(file));
-    if(r){ var dot=el('span','dot'); dot.style.background=({green:'#4E7C34',yellow:'#B8860B',red:'#9B3D2E'})[r]; wrap.appendChild(dot); }
-    fig.appendChild(wrap);
-    var meta=el('div','meta'); var ctl=el('div','ctl');
-    ctl.appendChild(pill(r, function(v){ setRating(file, v); }));
-    var arch=el('button','arch-btn', state.archived[file] ? 'restore' : 'archive');
-    arch.onclick=function(){ if(state.archived[file]){ delete state.archived[file]; if(state.ratings[file]==='red') delete state.ratings[file]; } else { state.archived[file]=true; state.ratings[file]='red'; } save(); renderLibrary(); derivedRules(); updateStat(); };
-    ctl.appendChild(arch); meta.appendChild(ctl);
-    meta.appendChild(el('div','fn', item.caption || file.split('/').pop()));
-    var note=el('input','note-in'); note.placeholder='note…'; note.value=state.notes[file]||'';
-    note.oninput=function(){ state.notes[file]=note.value; save(); derivedRules(); };
-    meta.appendChild(note); fig.appendChild(meta); return fig;
-  }
-
-  // the branded film-strip
-  function filmStrip(items){
-    var wrap=el('div','fstrip-wrap'); var strip=el('div','fstrip');
-    items.forEach(function(it,i){
-      var fr=el('div','frame'+(i===0?' active':''));
-      fr.appendChild(el('span','tick'));
-      var mimg=media(it.file,'fimg'); if(i<2 && mimg.tagName==='IMG') mimg.loading='eager'; fr.appendChild(mimg);
-      fr.appendChild(el('span','edge', pad2(i+1)+' ▸'));
-      var fr8=el('span','frate'); fr8.appendChild(pill(state.ratings[it.file], function(v){ setRating(it.file, v); })); fr.appendChild(fr8);
-      var cap=el('div','fcap', pad2(i+1)+' ·');
-      if(it.caption){ cap.appendChild(el('span','fc2', it.caption)); }
-      fr.appendChild(cap); strip.appendChild(fr);
-    });
-    wrap.appendChild(strip);
-    var foot=el('div','fstrip-foot'); var prog=el('div','fprog'); var pi=document.createElement('i'); prog.appendChild(pi);
-    var cnt=el('span','fcount','01 / '+pad2(items.length)); foot.appendChild(prog); foot.appendChild(cnt); wrap.appendChild(foot);
-    var frames=strip.querySelectorAll('.frame'); var raf;
-    function upd(){ var mid=strip.scrollLeft+strip.clientWidth/2, best=0, bd=1e9;
-      for(var j=0;j<frames.length;j++){ var f=frames[j]; var c=f.offsetLeft+f.offsetWidth/2; var d=Math.abs(c-mid); if(d<bd){bd=d;best=j;} }
-      for(var k=0;k<frames.length;k++){ frames[k].classList.toggle('active', k===best); }
-      cnt.textContent=pad2(best+1)+' / '+pad2(items.length);
-      var mx=strip.scrollWidth-strip.clientWidth; pi.style.width=(mx>0?(100*strip.scrollLeft/mx):100)+'%'; }
-    strip.addEventListener('scroll',function(){ if(raf)cancelAnimationFrame(raf); raf=requestAnimationFrame(upd); });
-    setTimeout(upd,80);
-    return wrap;
-  }
-
-  // collection card for the contact sheet
-  function collectionCard(col){
-    var isP=col.kind==='persona';
-    var b=el('button','cc '+(isP?'persona':'section'));
-    var th=el('div','cc-thumb'); if(col.thumb) th.appendChild(media(col.thumb));
-    th.appendChild(el('span','glyph', glyphChar(col.kind)));
-    th.appendChild(el('span','kicker', isP?'Persona':(col.kind==='sequence'?'Sequence':(col.kind==='link'?'Page →':'Section'))));
-    b.appendChild(th);
-    var body=el('div','cc-body'); body.appendChild(el('div','cc-title', col.title));
-    if(isP && col.bio){ body.appendChild(el('div','cc-bio', col.bio)); }
-    else { body.appendChild(el('div','cc-desc', col.description||'')); }
-    var foot=el('div','cc-foot');
-    foot.appendChild(el('span','cc-count', col.kind==='link' ? 'open →' : (col.count+(isP?' frames':' items'))));
-    if(col.items && col.items.length){ foot.appendChild(healthBar(col)); }
-    body.appendChild(foot); b.appendChild(body);
-    b.onclick=function(){ if(col.kind==='link' && col.link){ window.location.href=col.link; return; } openCollection(col.id); };
-    return b;
-  }
-
-  function matchCol(col){ if(gFilter && col.group!==gFilter) return false; if(!curQ) return true;
-    var hay=(col.title+' '+(col.description||'')+' '+(col.bio||'')+' '+col.group+' '+col.kind).toLowerCase();
-    return hay.indexOf(curQ)>=0; }
-  function renderContactSheet(){
-    var host=document.getElementById('contactSheet'); clear(host);
-    var stage=document.getElementById('stage'); stage.hidden=true; host.hidden=false;
-    (INDEX.groups||[]).forEach(function(g){
-      var cols=(INDEX.collections||[]).filter(function(c){ return c.group===g.id && matchCol(c); });
-      if(!cols.length) return;
-      var shelf=el('div','shelf'); var hd=el('div','shelf-head');
-      hd.appendChild(el('h3',null,g.label)); hd.appendChild(el('span','sb',g.blurb)); hd.appendChild(el('span','sc',cols.length+' collections'));
-      shelf.appendChild(hd); var row=el('div','card-row');
-      cols.forEach(function(c){ row.appendChild(collectionCard(c)); }); shelf.appendChild(row); host.appendChild(shelf);
-    });
-    if(!host.children.length){ host.appendChild(el('div','empty','No collections match.')); }
-  }
-  function openCollection(id){ view.colId=id; view.archive=false;
-    document.getElementById('viewMain').classList.add('on'); document.getElementById('viewArchive').classList.remove('on');
-    renderStage(); document.getElementById('stage').scrollIntoView({behavior:'smooth',block:'start'}); }
-  function stageBack(){ view.colId=null; view.archive=false; renderLibrary(); document.querySelector('.lib-tools').scrollIntoView({behavior:'smooth',block:'start'}); }
-  function renderStage(){
-    var stage=document.getElementById('stage'); clear(stage);
-    document.getElementById('contactSheet').hidden=true; stage.hidden=false;
-    var col=collById(view.colId); if(!col){ stageBack(); return; }
-    var hd=el('div','stage-head'); var back=el('button','stage-back','← All collections'); back.onclick=stageBack;
-    hd.appendChild(back); hd.appendChild(el('span','stage-title', col.title)); stage.appendChild(hd);
-    if(col.kind==='persona'){
-      var hero=el('div','persona-hero'); var im=el('div','ph-img'); if(col.thumb) im.appendChild(media(col.thumb)); hero.appendChild(im);
-      var info=el('div'); info.appendChild(el('div','ph-name', col.title));
-      if(col.bio) info.appendChild(el('div','ph-bio','“'+col.bio+'”'));
-      info.appendChild(el('div','ph-meta', col.count+' frames · a Pulse persona')); hero.appendChild(info); stage.appendChild(hero);
-      stage.appendChild(filmStrip(col.items));
-    } else if(col.kind==='sequence'){
-      if(col.description) stage.appendChild(el('div','stage-sub', col.description));
-      stage.appendChild(filmStrip(col.items));
-    } else {
-      if(col.description) stage.appendChild(el('div','stage-sub', col.description));
-      var grid=el('div','grid'); grid.style.marginTop='16px';
-      col.items.filter(function(it){ return !state.archived[it.file]; }).forEach(function(it){ grid.appendChild(frameCard(it)); });
-      stage.appendChild(grid);
-    }
-  }
-  function renderArchive(){
-    var stage=document.getElementById('stage'); clear(stage); document.getElementById('contactSheet').hidden=true; stage.hidden=false;
-    var archived=Object.keys(state.archived);
-    var hd=el('div','stage-head'); var back=el('button','stage-back','← All collections');
-    back.onclick=function(){ view.archive=false; document.getElementById('viewMain').classList.add('on'); document.getElementById('viewArchive').classList.remove('on'); stageBack(); };
-    hd.appendChild(back); hd.appendChild(el('span','stage-title','Archive')); stage.appendChild(hd);
-    stage.appendChild(el('div','stage-sub', archived.length+' frame'+(archived.length===1?'':'s')+' removed from the library. Rate one keep/caution, or restore, to bring it back.'));
-    if(archived.length){ var ra=el('button','stage-back','Restore all'); ra.style.marginTop='12px'; ra.onclick=function(){ Object.keys(state.archived).forEach(function(f){ delete state.archived[f]; if(state.ratings[f]==='red') delete state.ratings[f]; }); save(); renderLibrary(); derivedRules(); updateStat(); }; stage.appendChild(ra); }
-    var grid=el('div','grid'); grid.style.marginTop='16px';
-    archived.forEach(function(f){ grid.appendChild(frameCard({file:f})); });
-    stage.appendChild(grid);
-    if(!archived.length){ grid.appendChild(el('div','empty','Archive is empty.')); }
-  }
-  function renderLibrary(){ if(!INDEX) return; if(view.archive){ renderArchive(); } else if(view.colId){ renderStage(); } else { renderContactSheet(); } }
-  function buildChips(){
-    var host=document.getElementById('groupChips'); clear(host);
-    var all=el('button','chipf'+(gFilter===''?' on':''),'All'); all.onclick=function(){ gFilter=''; view.colId=null; view.archive=false; buildChips(); renderLibrary(); }; host.appendChild(all);
-    (INDEX.groups||[]).forEach(function(g){ var b=el('button','chipf'+(gFilter===g.id?' on':''), g.label);
-      b.onclick=function(){ gFilter=g.id; view.colId=null; view.archive=false; buildChips(); renderLibrary(); }; host.appendChild(b); });
-  }
-
-  function updateStat(){
-    if(!INDEX) return;
-    var total=(INDEX.counts&&INDEX.counts.files)||0;
-    var g=0,y=0,rd=0;
-    Object.keys(state.ratings).forEach(function(f){ var v=state.ratings[f]; if(v==='green')g++; else if(v==='yellow')y++; else if(v==='red')rd++; });
-    var s=document.getElementById('stat'); clear(s);
-    function seg(n,txt,col){ var b=el('b',null,String(n)); if(col) b.style.color=col; s.appendChild(b); s.appendChild(document.createTextNode(' '+txt+'  ')); }
-    seg(total,'images  ·',null); seg(g,'keep ·','#8fbf6a'); seg(y,'caution ·','#e0b84c'); seg(rd,'archived','#e08a7a');
-    document.getElementById('archCount').textContent='('+Object.keys(state.archived).length+')';
-  }
-
-  function renderPrompts(data){
-    var host=document.getElementById('promptBody'); clear(host);
-    Object.keys(data.grammar).forEach(function(k){
-      var b=el('div','pl-block'); b.appendChild(el('h3',null,k)); b.appendChild(el('p',null,data.grammar[k])); host.appendChild(b);
-    });
-    var g=el('div','pl-gens');
-    g.appendChild(el('div','g-h','Generators'));
-    data.generators.forEach(function(x){
-      var r=el('div','row'); r.appendChild(el('code',null,x.file)); r.appendChild(el('span',null,x.makes)); g.appendChild(r);
-    });
-    g.appendChild(el('div','pl-backends','Backends: '+data.backends.join('  ·  ')));
-    host.appendChild(g);
-  }
-
-  function applySeed(seed){
-    Object.keys(seed).forEach(function(f){
-      if(state.ratings[f]) return;
-      state.ratings[f]=seed[f].rating;
-      if(seed[f].note && !state.notes[f]) state.notes[f]=seed[f].note;
-      if(seed[f].rating==='red') state.archived[f]=true;
-    });
-    save();
-  }
-
-  function openVisual(){ var m=document.getElementById('megaVisual'); if(m&&!m.open) m.open=true; }
-  document.getElementById('viewMain').onclick=function(){ openVisual(); view.archive=false; view.colId=null; this.classList.add('on'); document.getElementById('viewArchive').classList.remove('on'); renderLibrary(); document.querySelector('.lib-tools').scrollIntoView({behavior:'smooth',block:'start'}); };
-  document.getElementById('viewArchive').onclick=function(){ openVisual(); view.archive=true; view.colId=null; this.classList.add('on'); document.getElementById('viewMain').classList.remove('on'); renderLibrary(); document.getElementById('stage').scrollIntoView({behavior:'smooth',block:'start'}); };
-  var _srch=document.getElementById('libSearch'); if(_srch){ _srch.addEventListener('input',function(){ curQ=this.value.trim().toLowerCase(); view.colId=null; view.archive=false; document.getElementById('viewMain').classList.add('on'); document.getElementById('viewArchive').classList.remove('on'); renderLibrary(); }); }
-  document.getElementById('exportBtn').onclick=function(){
-    var out={ generated:new Date().toISOString(), ratings:state.ratings, notes:state.notes, archived:Object.keys(state.archived), taglines:state.taglines, textOnScreen:state.tos };
-    var blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
-    var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='pulse-worldbuilding-ratings.json'; a.click();
-  };
-
-  renderTaglines(); renderTOS(); derivedRules();
-
-  fetch('world-building-index.json').then(function(r){return r.json();}).then(function(idx){
-    INDEX=idx;
-    return fetch('world-building-seed.json').then(function(r){return r.ok?r.json():{};}).catch(function(){return {};});
-  }).then(function(seed){
-    applySeed(seed||{}); buildChips(); renderLibrary(); updateStat(); derivedRules();
-  }).catch(function(){
-    var host=document.getElementById('contactSheet'); clear(host);
-    host.appendChild(el('div','empty','Could not load the image index. Serve this over http:// (the index is fetched).'));
-  });
-
-  fetch('world-building-prompts.json').then(function(r){return r.json();}).then(renderPrompts).catch(function(){});
-
-  fetch('messaging-board.json').then(function(r){return r.ok?r.json():null;}).then(function(b){
-    if(!b) return; BOARD=b;
-    var c=(b.final&&b.final.consensus)||b.consensus;
-    if(c){
-      if(c.taglines && c.taglines.length){ TAGLINES=c.taglines.map(function(t){ return [t.text, t.category||'']; }); state.taglines={}; renderTaglines(); }
-      if(c.tos && c.tos.length){ TOS=c.tos.slice(0,10); state.tos={}; renderTOS(); }
-    }
-    renderBoard();
-  }).catch(function(){});
-
-  function renderFlowReview(d){
-    var host=document.getElementById('flowReviewBody'); if(!host) return; clear(host);
-    var c=d.consensus||{};
-    var advs=(d.advisors||[]).map(function(a){return a.name;}).join(' · ');
-    host.appendChild(el('p','board-intro','The five advisors audited the eight lifecycle flows and all 55 emails, then synthesized over two EBI passes. '+ (advs||'')));
-    if(c.headline){ var hb=el('div','headline'); hb.appendChild(el('div','k','The headline move')); hb.appendChild(el('div','v',c.headline)); host.appendChild(hb); }
-    // flow report
-    var grid=el('div','cons-grid');
-    (c.flow_report||[]).forEach(function(f){
-      var card=el('div','cons-card'); card.appendChild(el('div','k',f.flow));
-      card.appendChild(el('div','v',f.verdict));
-      if(f.changes && f.changes.length){ var ul=el('ul'); f.changes.forEach(function(x){ ul.appendChild(el('li',null,x)); }); card.appendChild(ul); }
-      grid.appendChild(card);
-    });
-    host.appendChild(grid);
-    // strategy
-    if(c.strategy && c.strategy.length){
-      var d1=el('details','panel'); d1.style.marginTop='16px';
-      var s1=el('summary'); s1.appendChild(el('span','tw','Roadmap')); s1.appendChild(el('h2',null,'Strategy moves')); s1.appendChild(el('span','chev','▶')); d1.appendChild(s1);
-      var b1=el('div','panel-body'); var ol=el('div','tagline-list');
-      c.strategy.forEach(function(s,i){ var row=el('div','tagline'); row.appendChild(el('span','t',(i+1)+'. '+s)); ol.appendChild(row); });
-      b1.appendChild(ol); d1.appendChild(b1); host.appendChild(d1);
-    }
-    host.appendChild(el('div','board-note','Copy edits applied to the emails; the unconditional 30-day return threaded into the close & arrival. Full report: flows/email-board-review.md.'));
-  }
-  fetch('email-board-review.json').then(function(r){return r.ok?r.json():null;}).then(function(d){ if(d) renderFlowReview(d); }).catch(function(){});
-})();
-</script>
 </body>
 </html>

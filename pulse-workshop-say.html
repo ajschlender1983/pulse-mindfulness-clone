@@ -145,6 +145,83 @@
   footer{ border-top:1px solid var(--line); margin-top:30px; padding:22px 0 50px; font-family:var(--mono); font-size:12px; color:var(--faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
   footer a{ color:var(--brown); }
   .empty{ color:var(--muted); font-size:14px; padding:12px 0; }
+
+  /* ===== relocated from world-building: board consensus · text-on-screen · flow review ===== */
+  details.panel{ margin-top:18px; background:var(--warm); border:1px solid var(--line); border-radius:16px; overflow:hidden;
+    box-shadow:0 8px 22px rgba(66,61,50,.06); }
+  details.panel>summary{ list-style:none; cursor:pointer; padding:18px 22px; display:flex; align-items:center; gap:12px; }
+  details.panel>summary::-webkit-details-marker{ display:none; }
+  details.panel>summary .tw{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--honey); }
+  details.panel>summary h2{ font-size:19px; font-weight:600; letter-spacing:-0.03em; flex:1; }
+  details.panel>summary .chev{ font-family:var(--mono); font-size:12px; color:var(--muted); transition:transform .2s; }
+  details.panel[open]>summary .chev{ transform:rotate(90deg); }
+  .panel-body{ padding:0 22px 22px; }
+
+  .tagline-list{ margin-top:6px; display:flex; flex-direction:column; gap:8px; }
+  .tagline{ display:flex; align-items:center; gap:12px; padding:11px 14px; background:var(--cream); border:1px solid var(--line); border-radius:10px; }
+  .tagline .t{ flex:1; font-size:16px; }
+  .tagline .cat{ font-family:var(--mono); font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+
+  .board-intro{ font-size:14.5px; color:var(--brown); max-width:72ch; margin:4px 0 16px; }
+  .board-chips{ display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 22px; }
+  .chip{ display:flex; align-items:center; gap:9px; background:var(--cream); border:1px solid var(--line);
+    border-radius:100px; padding:5px 14px 5px 5px; }
+  .chip img{ width:34px; height:34px; border-radius:50%; object-fit:cover; background:#ddd7c3; border:1px solid var(--line); }
+  .chip .cn{ font-weight:600; font-size:13.5px; }
+  .chip .cr{ font-family:var(--mono); font-size:10px; color:var(--muted); }
+  .chip .cnwrap{ display:flex; flex-direction:column; line-height:1.15; }
+
+  .headline{ background:var(--ink); color:var(--warm); border-radius:16px; padding:20px 24px; margin:6px 0 20px; }
+  .headline .k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--lime); }
+  .headline .v{ font-size:clamp(18px,2.6vw,23px); font-weight:600; letter-spacing:-0.03em; margin-top:8px; line-height:1.25; }
+
+  .cons-hero{ background:var(--warm); border:1px solid var(--honey); border-radius:16px; padding:24px 26px; margin-bottom:16px; }
+  .cons-hero .k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--honey); }
+  .cons-hero .v{ font-size:clamp(24px,4vw,36px); font-weight:600; letter-spacing:-0.04em; margin-top:8px; line-height:1.08; text-wrap:balance; }
+  .cons-hero .v2{ font-size:clamp(15px,2vw,18px); color:var(--brown); margin-top:10px; line-height:1.3; font-weight:400; }
+  .cons-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
+  .cons-card{ background:var(--warm); border:1px solid var(--line); border-radius:13px; padding:15px 17px; }
+  .cons-card .k{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+  .cons-card .v{ font-size:15.5px; color:var(--ink); margin-top:6px; line-height:1.4; }
+  .cons-card ul{ list-style:none; margin-top:6px; display:flex; flex-direction:column; gap:6px; }
+  .cons-card li{ font-size:14px; color:var(--brown); padding-left:16px; position:relative; }
+  .cons-card li::before{ content:"—"; position:absolute; left:0; color:var(--honey); }
+
+  .advisor-cards{ display:flex; flex-direction:column; gap:12px; margin-top:8px; }
+  .adv{ background:var(--cream); border:1px solid var(--line); border-radius:14px; padding:16px 18px; }
+  .adv-head{ display:flex; align-items:center; gap:12px; }
+  .adv-head img{ width:46px; height:46px; border-radius:50%; object-fit:cover; background:#ddd7c3; border:1px solid var(--line); }
+  .adv-head .an{ font-weight:600; font-size:16px; }
+  .adv-head .ar{ font-family:var(--mono); font-size:10.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+  .adv .thesis{ font-size:14.5px; color:var(--brown); margin-top:11px; line-height:1.5; }
+  .adv .sig{ font-size:15px; font-style:italic; color:var(--ink); margin-top:11px; padding-left:12px; border-left:3px solid var(--honey); }
+  .adv .recs{ margin-top:11px; }
+  .adv .recs .rh{ font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:5px; }
+  .adv .recs ul{ list-style:none; display:flex; flex-direction:column; gap:5px; }
+  .adv .recs li{ font-size:14px; color:var(--brown); padding-left:16px; position:relative; }
+  .adv .recs li::before{ content:"→"; position:absolute; left:0; color:var(--honey); }
+  .adv .dissent{ margin-top:11px; font-size:13.5px; color:var(--red); }
+  .adv .dissent b{ font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; }
+
+  .ebi-list{ display:flex; flex-direction:column; gap:0; margin-top:6px; border-left:2px solid var(--line); }
+  .ebi{ position:relative; padding:11px 0 11px 22px; }
+  .ebi::before{ content:""; position:absolute; left:-6px; top:16px; width:10px; height:10px; border-radius:50%; background:var(--honey); }
+  .ebi .eh{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+  .ebi .ep{ font-family:var(--mono); font-size:11px; color:var(--honey); }
+  .ebi .ef{ font-weight:600; font-size:14px; }
+  .ebi .conv{ font-family:var(--mono); font-size:10.5px; color:var(--faint); margin-left:auto; }
+  .ebi .ec{ font-size:14px; color:var(--brown); margin-top:4px; }
+  .board-note{ font-family:var(--mono); font-size:11.5px; color:var(--muted); margin-top:16px; }
+  .board-pending{ background:var(--cream); border:1px dashed var(--honey); border-radius:14px; padding:22px; color:var(--brown); font-size:15px; }
+
+  .tos-head{ display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:4px; }
+  .tos-progress{ font-family:var(--mono); font-size:12px; color:var(--muted); }
+  .tos-locked{ font-family:var(--mono); font-size:12px; color:var(--green); font-weight:500; }
+  .tos-list{ display:flex; flex-direction:column; gap:8px; margin-top:12px; }
+  .tos{ display:flex; align-items:center; gap:12px; padding:12px 14px; background:var(--cream); border:1px solid var(--line); border-radius:10px; }
+  .tos .n{ font-family:var(--mono); font-size:12px; color:var(--faint); width:20px; }
+  .tos .t{ flex:1; font-size:16px; font-weight:500; }
+  .tos .note-in{ font-family:var(--font); font-size:12.5px; border:1px solid var(--line); border-radius:7px; padding:5px 9px; width:180px; background:var(--warm); }
 </style>
 </head>
 <body>
@@ -159,7 +236,7 @@
   <header class="hero">
     <div class="kick">What we say · the workshop</div>
     <h1>The writing room.</h1>
-    <p>Start with the guardrails. Lint any line against them in the voice check. Then work the four message categories — CTA, tagline, product, benefits — with the current site copy and the new approach side by side. Ratings save in this browser and export as JSON.</p>
+    <p>The whole voice, in one place. Meet the <b>advisory board</b> and read the <b>consensus</b> they argued into being. Work the <b>core messaging</b>, the <b>hierarchy</b>, and the <b>guardrails</b>; lint any line in the <b>voice check</b>; weigh the current site copy against the new approach; rate the <b>on-screen text</b> and the <b>email-flow review</b>. Then produce one clean <b>report</b> for Johan. Ratings save in this browser.</p>
   </header>
 
   <section class="blk">
@@ -170,6 +247,15 @@
       <div class="b-chips" id="boardChips"></div>
       <p class="b-note">The guardrails below weren't handed down — they were <b>argued into being</b>. Each advisor is an AI persona built to think in the voice and body of work of a real strategist: <b>Alex Hormozi</b> (offers &amp; value), <b>Seth Godin</b> (remarkability &amp; tribe), <b>Alan Watts</b> (presence), <b>Steve Jobs</b> (ruthless simplicity), and <b>Rory Sutherland</b> (behavioral science &amp; perceived value — the fifth seat, chosen to add the lens the others were missing). Each evaluated the brand independently, then the panel debated it across <b>ten explore-build-improve passes</b> until the disagreements resolved into the rules and lines you see here.</p>
       <p class="b-fine">Portraits are stylized illustrations of the real figures, not photographs.</p>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">What they produced</div>
+    <h2>The board's consensus</h2>
+    <p class="bsub">Here's what the five advisors actually settled on after ten passes — the positioning, the wedge, the offer, the message hierarchy, and the voice guardrails, plus what each advisor thought and the ten EBI passes that got them there.</p>
+    <div id="boardBody">
+      <div class="board-pending">The advisory board is convening — five experts (Hormozi, Godin, Watts, Jobs, Sutherland) across ten EBI passes. Their consensus appears here once the session is written.</div>
     </div>
   </section>
 
@@ -224,6 +310,24 @@
   </section>
 
   <section class="blk">
+    <div class="bk">On-screen microcopy</div>
+    <h2>Text on screen · 10 variations</h2>
+    <p class="bsub">Short lines for video / social overlays. Rate all ten <b style="color:var(--green)">keep</b> / <b style="color:var(--yellow)">caution</b> / <b style="color:var(--red)">cut</b>; once every line has a verdict the greens lock in as the approved on-screen text rules (and reds carry a note on why).</p>
+    <div class="tos-head">
+      <span class="tos-progress" id="tosProgress"></span>
+      <span class="tos-locked" id="tosLocked"></span>
+    </div>
+    <div class="tos-list" id="tosList"></div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">The board · flows</div>
+    <h2>The board reviews the email flows</h2>
+    <p class="bsub">The same five advisors audited the eight lifecycle flows and all 55 emails, then synthesized their verdicts. Per-flow calls, the headline move, and the strategy roadmap.</p>
+    <div id="flowReviewBody"><div class="empty">loading the board's flow review…</div></div>
+  </section>
+
+  <section class="blk">
     <div class="bk">The outcome</div>
     <h2>Produce the report</h2>
     <p class="bsub">Run the exercise with Johan — rate the guardrails, the hierarchy, the core, and every line — then generate one clean report of the decisions to save or hand off. Highlights where a reviewer's call differs from the board.</p>
@@ -248,7 +352,7 @@
 (function(){
   var LS="pmf-say-workshop-v2";
   var state=JSON.parse(localStorage.getItem(LS)||"{}");
-  state.ratings=state.ratings||{}; state.custom=state.custom||[];
+  state.ratings=state.ratings||{}; state.custom=state.custom||[]; state.tos=state.tos||{};
   function save(){ localStorage.setItem(LS, JSON.stringify(state)); }
   function el(t,c,x){var e=document.createElement(t); if(c)e.className=c; if(x!=null)e.textContent=x; return e;}
   function clear(n){while(n.firstChild)n.removeChild(n.firstChild);}
@@ -478,6 +582,166 @@
     var blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
     var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='pulse-say-workshop.json'; a.click();
   };
+
+  /* ---------- relocated from world-building: board consensus · text-on-screen · flow review ---------- */
+  var BOARD=null;
+  // working set — replaced by the board's consensus once it loads
+  var TOS=[
+    "You're here.",
+    "One breath. Notice where you are.",
+    "The days you're in don't blur.",
+    "A pulse, not a ping.",
+    "This moment, at the speed you can live it.",
+    "Come back to now.",
+    "The movie of your life — play it slower.",
+    "Nothing to check. Just this.",
+    "Feel your feet. We'll wait.",
+    "Presence, on your finger."
+  ];
+  var ADVISOR_NAMES={ hormozi:"Hormozi", godin:"Godin", watts:"Watts", jobs:"Jobs", sutherland:"Sutherland" };
+  var ADVISOR_ROLES={ hormozi:"Offers & value", godin:"Remarkable & tribe", watts:"Presence", jobs:"Simplicity", sutherland:"Perceived value" };
+  var ADVISOR_ORDER=["hormozi","godin","watts","jobs","sutherland"];
+  function avatarSrc(id){ return "library/advisors/"+id+".png"; }
+
+  function renderTOS(){
+    var host=document.getElementById('tosList'); clear(host);
+    var rated=0, greens=0;
+    TOS.forEach(function(line,i){
+      var v=state.tos[i]||{};
+      if(v.rating) rated++;
+      if(v.rating==='green') greens++;
+      var row=el('div','tos');
+      row.appendChild(el('span','n',String(i+1)));
+      row.appendChild(el('span','t','“'+line+'”'));
+      row.appendChild(pill(v.rating, function(r){ state.tos[i]=Object.assign({},state.tos[i],{rating:r}); save(); renderTOS(); }));
+      var note=el('input','note-in'); note.placeholder='why?'; note.value=v.note||'';
+      note.style.display = (v.rating==='red')?'block':'none';
+      note.oninput=function(){ state.tos[i]=Object.assign({},state.tos[i],{note:note.value}); save(); };
+      row.appendChild(note);
+      host.appendChild(row);
+    });
+    document.getElementById('tosProgress').textContent=rated+' / '+TOS.length+' rated';
+    document.getElementById('tosLocked').textContent = (rated===TOS.length) ? ('✓ locked as rules — '+greens+' approved lines') : '';
+  }
+
+  // ===== advisory board =====
+  function consCard(k, v){
+    var c=el('div','cons-card'); c.appendChild(el('div','k',k)); c.appendChild(el('div','v',v)); return c;
+  }
+  function consListCard(k, items){
+    var c=el('div','cons-card'); c.appendChild(el('div','k',k));
+    var ul=el('ul'); (items||[]).forEach(function(x){ ul.appendChild(el('li',null,x)); }); c.appendChild(ul); return c;
+  }
+  function advImg(id){ var im=el('img'); im.src=avatarSrc(id); im.alt=ADVISOR_NAMES[id]||id; im.loading='lazy'; return im; }
+
+  function renderBoard(){
+    var host=document.getElementById('boardBody'); if(!host) return;
+    if(!BOARD){ return; }
+    clear(host);
+    var c=BOARD.final && BOARD.final.consensus ? BOARD.final.consensus : (BOARD.consensus||{});
+
+    host.appendChild(el('p','board-intro','Here is what the board settled on — downstream of the five advisors above. Expand any section to see what each member actually argued.'));
+
+    // headline recommendation
+    var hr=(BOARD.final&&BOARD.final.headline_recommendation)||'';
+    if(hr){ var hb=el('div','headline'); hb.appendChild(el('div','k','What the board wants Johan to do')); hb.appendChild(el('div','v',hr)); host.appendChild(hb); }
+
+    // consensus hero (may be two lines: koan + plain clarifier)
+    if(c.hero){
+      var ch=el('div','cons-hero'); ch.appendChild(el('div','k','The consensus hero'));
+      var hl=String(c.hero).split('\n').map(function(s){return s.trim();}).filter(Boolean);
+      ch.appendChild(el('div','v','“'+hl[0]+'”'));
+      for(var hi=1; hi<hl.length; hi++){ ch.appendChild(el('div','v2',hl[hi])); }
+      host.appendChild(ch);
+    }
+
+    // consensus grid
+    var grid=el('div','cons-grid');
+    if(c.positioning) grid.appendChild(consCard('Positioning', c.positioning));
+    if(c.wedge) grid.appendChild(consCard('The wedge', c.wedge));
+    if(c.offer) grid.appendChild(consCard('The offer / value', c.offer));
+    if(c.hierarchy && c.hierarchy.length) grid.appendChild(consListCard('Message hierarchy', c.hierarchy));
+    if(c.guardrails && c.guardrails.length) grid.appendChild(consListCard('Voice guardrails', c.guardrails));
+    host.appendChild(grid);
+
+    // expandable: what each advisor thought
+    var advisors=(BOARD.final&&BOARD.final.advisors)||[];
+    var exp=BOARD.explore||{};
+    var d1=el('details','panel'); d1.style.marginTop='18px';
+    var s1=el('summary'); s1.appendChild(el('span','tw','Expand')); var s1h=el('h2',null,'What each advisor thought'); d1.appendChild(s1); s1.appendChild(s1h); s1.appendChild(el('span','chev','▶'));
+    var b1=el('div','panel-body'); var cards=el('div','advisor-cards');
+    ADVISOR_ORDER.forEach(function(id){
+      var fa=null; advisors.forEach(function(a){ if(a.id===id) fa=a; });
+      var ex=exp[id]||{};
+      var card=el('div','adv');
+      var head=el('div','adv-head'); head.appendChild(advImg(id));
+      var hw=el('div'); hw.appendChild(el('div','an',ADVISOR_NAMES[id]==='Hormozi'?'Alex Hormozi':(ADVISOR_NAMES[id]==='Godin'?'Seth Godin':(ADVISOR_NAMES[id]==='Watts'?'Alan Watts':(ADVISOR_NAMES[id]==='Jobs'?'Steve Jobs':'Rory Sutherland')))));
+      hw.appendChild(el('div','ar',ADVISOR_ROLES[id]||'')); head.appendChild(hw); card.appendChild(head);
+      if(ex.thesis) card.appendChild(el('div','thesis',ex.thesis));
+      var sig=(fa&&fa.signature_line)||ex.hero_pick;
+      if(sig) card.appendChild(el('div','sig','“'+sig+'”'));
+      var recs=(fa&&fa.top_recs)||ex.new_lines||[];
+      if(recs.length){ var rc=el('div','recs'); rc.appendChild(el('div','rh','Top recommendations')); var ul=el('ul'); recs.forEach(function(x){ ul.appendChild(el('li',null,x)); }); rc.appendChild(ul); card.appendChild(rc); }
+      var dis=(fa&&fa.dissent)||ex.warning;
+      if(dis && String(dis).toLowerCase()!=='none'){ var dd=el('div','dissent'); dd.appendChild(el('b',null,(fa&&fa.dissent)?'Still dissents: ':'Warns: ')); dd.appendChild(document.createTextNode(dis)); card.appendChild(dd); }
+      cards.appendChild(card);
+    });
+    b1.appendChild(cards); d1.appendChild(b1); host.appendChild(d1);
+
+    // expandable: the 10 EBI passes
+    var passes=BOARD.passes||[];
+    if(passes.length){
+      var d2=el('details','panel'); d2.style.marginTop='12px';
+      var s2=el('summary'); s2.appendChild(el('span','tw','Expand')); s2.appendChild(el('h2',null,'The ten EBI passes')); s2.appendChild(el('span','chev','▶')); d2.appendChild(s2);
+      var b2=el('div','panel-body'); var list=el('div','ebi-list');
+      passes.forEach(function(p){
+        var row=el('div','ebi'); var eh=el('div','eh');
+        eh.appendChild(el('span','ep','Pass '+p.pass)); eh.appendChild(el('span','ef',(p.focus||'').split(' — ')[0]));
+        if(p.convergence!=null) eh.appendChild(el('span','conv','converged '+Math.round(p.convergence*100)+'%'));
+        row.appendChild(eh); if(p.change) row.appendChild(el('div','ec',p.change)); list.appendChild(row);
+      });
+      b2.appendChild(list); d2.appendChild(b2); host.appendChild(d2);
+    }
+
+    host.appendChild(el('div','board-note','Board: Alex Hormozi · Seth Godin · Alan Watts · Steve Jobs · Rory Sutherland (5th seat, chosen to add the behavioral-science / perceived-value lens). Advisor portraits are stylized illustrations, not photographs.'));
+  }
+
+  function renderFlowReview(d){
+    var host=document.getElementById('flowReviewBody'); if(!host) return; clear(host);
+    var c=d.consensus||{};
+    var advs=(d.advisors||[]).map(function(a){return a.name;}).join(' · ');
+    host.appendChild(el('p','board-intro','The five advisors audited the eight lifecycle flows and all 55 emails, then synthesized over two EBI passes. '+ (advs||'')));
+    if(c.headline){ var hb=el('div','headline'); hb.appendChild(el('div','k','The headline move')); hb.appendChild(el('div','v',c.headline)); host.appendChild(hb); }
+    // flow report
+    var grid=el('div','cons-grid');
+    (c.flow_report||[]).forEach(function(f){
+      var card=el('div','cons-card'); card.appendChild(el('div','k',f.flow));
+      card.appendChild(el('div','v',f.verdict));
+      if(f.changes && f.changes.length){ var ul=el('ul'); f.changes.forEach(function(x){ ul.appendChild(el('li',null,x)); }); card.appendChild(ul); }
+      grid.appendChild(card);
+    });
+    host.appendChild(grid);
+    // strategy
+    if(c.strategy && c.strategy.length){
+      var d1=el('details','panel'); d1.style.marginTop='16px';
+      var s1=el('summary'); s1.appendChild(el('span','tw','Roadmap')); s1.appendChild(el('h2',null,'Strategy moves')); s1.appendChild(el('span','chev','▶')); d1.appendChild(s1);
+      var b1=el('div','panel-body'); var ol=el('div','tagline-list');
+      c.strategy.forEach(function(s,i){ var row=el('div','tagline'); row.appendChild(el('span','t',(i+1)+'. '+s)); ol.appendChild(row); });
+      b1.appendChild(ol); d1.appendChild(b1); host.appendChild(d1);
+    }
+    host.appendChild(el('div','board-note','Copy edits applied to the emails; the unconditional 30-day return threaded into the close & arrival. Full report: flows/email-board-review.md.'));
+  }
+
+  renderTOS();
+
+  fetch('messaging-board.json').then(function(r){return r.ok?r.json():null;}).then(function(b){
+    if(!b) return; BOARD=b;
+    var c=(b.final&&b.final.consensus)||b.consensus;
+    if(c && c.tos && c.tos.length){ TOS=c.tos.slice(0,10); state.tos={}; renderTOS(); }
+    renderBoard();
+  }).catch(function(){});
+
+  fetch('email-board-review.json').then(function(r){return r.ok?r.json():null;}).then(function(d){ if(d) renderFlowReview(d); }).catch(function(){});
 })();
 </script>
 </body>
