@@ -46,6 +46,7 @@ GROUPS=[
 SECTION_META={
  "storytellers":("people","gallery","The wider cast, out in the world — forty candid, in-life moments."),
  "invitations":("stories","link","“When would now be a good time?” — the manifesto and twenty three-frame invitation stories.","now-a-good-time.html"),
+ "trailers":("stories","link","The Trailers — three brand films played on famous trailer grammars, with scripts and one-frame-per-shot storyboards.","pulse-video-workshop.html"),
  "film-strip":("stories","sequence","The Movie of Your Life — autopilot as a strip running too fast, the pulse slowing it to one held moment."),
  "inflection":("stories","gallery","The inflection — illustration resolving into photograph, the ring as the hinge into presence."),
  "peak":("moments","gallery","Out-in-the-world peak experiences — summits, waterfalls, aurora, dunes, alpine swims."),

@@ -864,6 +864,59 @@
       ],
       "files_motion": []
     },
+    "trailers": {
+      "label": "The Trailers \u2014 storyboards (Presence \u00b7 One Ring \u00b7 The First Rule)",
+      "kind": "stills",
+      "stills": 29,
+      "motion": 0,
+      "gallery": "library/gallery/trailers.html",
+      "curated": [
+        "library/trailers/first-rule-01.png",
+        "library/trailers/first-rule-03.png",
+        "library/trailers/first-rule-05.png",
+        "library/trailers/first-rule-08.png",
+        "library/trailers/first-rule-10.png",
+        "library/trailers/one-ring-03.png",
+        "library/trailers/one-ring-06.png",
+        "library/trailers/one-ring-08.png",
+        "library/trailers/presence-01.png",
+        "library/trailers/presence-03.png",
+        "library/trailers/presence-06.png",
+        "library/trailers/presence-08.png"
+      ],
+      "files_stills": [
+        "library/trailers/first-rule-01.png",
+        "library/trailers/first-rule-02.png",
+        "library/trailers/first-rule-03.png",
+        "library/trailers/first-rule-04.png",
+        "library/trailers/first-rule-05.png",
+        "library/trailers/first-rule-06.png",
+        "library/trailers/first-rule-07.png",
+        "library/trailers/first-rule-08.png",
+        "library/trailers/first-rule-09.png",
+        "library/trailers/first-rule-10.png",
+        "library/trailers/one-ring-01.png",
+        "library/trailers/one-ring-02.png",
+        "library/trailers/one-ring-03.png",
+        "library/trailers/one-ring-05.png",
+        "library/trailers/one-ring-06.png",
+        "library/trailers/one-ring-07.png",
+        "library/trailers/one-ring-08.png",
+        "library/trailers/one-ring-09.png",
+        "library/trailers/one-ring-10.png",
+        "library/trailers/presence-01.png",
+        "library/trailers/presence-02.png",
+        "library/trailers/presence-03.png",
+        "library/trailers/presence-04.png",
+        "library/trailers/presence-05.png",
+        "library/trailers/presence-06.png",
+        "library/trailers/presence-07.png",
+        "library/trailers/presence-08.png",
+        "library/trailers/presence-09.png",
+        "library/trailers/presence-10.png"
+      ],
+      "files_motion": []
+    },
     "stories": {
       "label": "User stories",
       "kind": "stills",
@@ -1391,7 +1444,7 @@
       ]
     }
   },
-  "grand_total_stills": 851,
+  "grand_total_stills": 880,
   "grand_total_motion": 46,
-  "collection_count": 22
+  "collection_count": 23
 }

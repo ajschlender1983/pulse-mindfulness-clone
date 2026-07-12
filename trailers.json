@@ -1,0 +1,245 @@
+{
+ "trailers": [
+  {
+   "id": "presence",
+   "title": "PRESENCE",
+   "after": "after the dream-thriller",
+   "logline": "A dramatic trailer that borrows the grammar of the dream-heist epic \u2014 time dilating, the fantastic bleeding into the ordinary \u2014 and inverts its most famous anxiety: when the gold ring stops spinning and settles, you're not lost in a dream. You're finally here.",
+   "music": "Low braams, a ticking clock that slows with each shot, then total silence before the settle.",
+   "social": "45s master \u00b7 16:9 + 9:16 crop-safe \u00b7 hook = the spinning ring in shot 1 \u00b7 captions burned",
+   "shots": [
+    {
+     "n": 1,
+     "vo": "",
+     "on": "",
+     "sfx": "BRAAM. Then the whir of the spin.",
+     "file": "library/trailers/presence-01.png"
+    },
+    {
+     "n": 2,
+     "vo": "You've learned to move through your life\u2026",
+     "on": "",
+     "sfx": "City roar, muffled.",
+     "file": "library/trailers/presence-02.png"
+    },
+    {
+     "n": 3,
+     "vo": "\u2026so fast it stopped feeling real.",
+     "on": "",
+     "sfx": "All sound cuts.",
+     "file": "library/trailers/presence-03.png"
+    },
+    {
+     "n": 4,
+     "vo": "",
+     "on": "WHAT IF TIME",
+     "sfx": "BRAAM.",
+     "file": "library/trailers/presence-04.png"
+    },
+    {
+     "n": 5,
+     "vo": "",
+     "on": "COULD OPEN",
+     "sfx": "A held breath.",
+     "file": "library/trailers/presence-05.png"
+    },
+    {
+     "n": 6,
+     "vo": "The fantastic was never somewhere else.",
+     "on": "",
+     "sfx": "Strings rising.",
+     "file": "library/trailers/presence-06.png"
+    },
+    {
+     "n": 7,
+     "vo": "It's the moment you're standing in.",
+     "on": "",
+     "sfx": "One piano note.",
+     "file": "library/trailers/presence-07.png"
+    },
+    {
+     "n": 8,
+     "vo": "",
+     "on": "",
+     "sfx": "A heartbeat, slowing.",
+     "file": "library/trailers/presence-08.png"
+    },
+    {
+     "n": 9,
+     "vo": "",
+     "on": "PRESENCE",
+     "sfx": "Silence.",
+     "file": "library/trailers/presence-09.png"
+    },
+    {
+     "n": 10,
+     "vo": "When would now be a good time?",
+     "on": "This is not a dream.",
+     "sfx": "One soft pulse.",
+     "file": "library/trailers/presence-10.png"
+    }
+   ]
+  },
+  {
+   "id": "one-ring",
+   "title": "ONE RING TO UNITE THEM ALL",
+   "after": "after the epic",
+   "logline": "An epic-fantasy homage built around the most famous ring shot in cinema \u2014 the slow fall onto the finger \u2014 recast with our hero user. Not a ring of power that corrupts, a ring of presence that returns. One ring to unite them all: with each other, with the present.",
+   "music": "A lone fiddle over drone, swelling to full orchestra at the fall, resolving to one warm sustained chord.",
+   "social": "60s master \u00b7 16:9 + 9:16 crop-safe \u00b7 hook = the molten-gold macro \u00b7 captions burned",
+   "shots": [
+    {
+     "n": 1,
+     "vo": "It begins with a gift.",
+     "on": "",
+     "sfx": "A whisper of wind.",
+     "file": "library/trailers/one-ring-01.png"
+    },
+    {
+     "n": 2,
+     "vo": "",
+     "on": "",
+     "sfx": "Deep slow whoosh.",
+     "file": "library/trailers/one-ring-02.png"
+    },
+    {
+     "n": 3,
+     "vo": "One ring.",
+     "on": "",
+     "sfx": "Orchestra hits, warm.",
+     "file": "library/trailers/one-ring-03.png"
+    },
+    {
+     "n": 4,
+     "vo": "Not to rule your life\u2026",
+     "on": "",
+     "sfx": "Swelling strings.",
+     "file": "library/peak/peak-summit-sunrise.png",
+     "reused": true
+    },
+    {
+     "n": 5,
+     "vo": "\u2026to return you to it.",
+     "on": "",
+     "sfx": "Choir under strings.",
+     "file": "library/trailers/one-ring-05.png"
+    },
+    {
+     "n": 6,
+     "vo": "It sees you. And asks for nothing back.",
+     "on": "",
+     "sfx": "The swell holds.",
+     "file": "library/trailers/one-ring-06.png"
+    },
+    {
+     "n": 7,
+     "vo": "",
+     "on": "ONE RING",
+     "sfx": "Fiddle, joyous.",
+     "file": "library/trailers/one-ring-07.png"
+    },
+    {
+     "n": 8,
+     "vo": "",
+     "on": "TO UNITE THEM ALL",
+     "sfx": "Orchestra pulls back.",
+     "file": "library/trailers/one-ring-08.png"
+    },
+    {
+     "n": 9,
+     "vo": "One ring to unite them all \u2014",
+     "on": "",
+     "sfx": "One deep drum.",
+     "file": "library/trailers/one-ring-09.png"
+    },
+    {
+     "n": 10,
+     "vo": "\u2014 with the present.",
+     "on": "Be Here WOW",
+     "sfx": "Warm sustained chord.",
+     "file": "library/trailers/one-ring-10.png"
+    }
+   ]
+  },
+  {
+   "id": "first-rule",
+   "title": "THE FIRST RULE",
+   "after": "after the anti-ad",
+   "logline": "An anti-marketing film in the grammar of the cult classic: rules delivered straight to camera, gritty and direct. Except the rebellion isn't fighting \u2014 it's putting the phone down. Don't post about it. Don't tell your friends. Just be present, and receive the gift of your life. Hook lands in the first three seconds, POV, direct address.",
+   "music": "A single dirty bass note under the hook, then near-silence with room tone; one deep pulse at the ring tap.",
+   "social": "30\u201340s master \u00b7 built 9:16-first \u00b7 HOOK 0:00\u20130:03 = shot 1 direct-to-camera \u00b7 captions burned",
+   "shots": [
+    {
+     "n": 1,
+     "vo": "The first rule of presence: you don't post about it.",
+     "on": "RULE 01",
+     "sfx": "Dirty bass note. HOOK 0:00\u20130:03.",
+     "file": "library/trailers/first-rule-01.png"
+    },
+    {
+     "n": 2,
+     "vo": "The second rule: you don't post about it.",
+     "on": "RULE 02",
+     "sfx": "The slap of the phone landing.",
+     "file": "library/trailers/first-rule-02.png"
+    },
+    {
+     "n": 3,
+     "vo": "Everyone you know is somewhere else.",
+     "on": "",
+     "sfx": "Room tone.",
+     "file": "library/trailers/first-rule-03.png"
+    },
+    {
+     "n": 4,
+     "vo": "You don't need witnesses.",
+     "on": "",
+     "sfx": "Silence.",
+     "file": "library/trailers/first-rule-04.png"
+    },
+    {
+     "n": 5,
+     "vo": "Eat the meal. Don't shoot it.",
+     "on": "",
+     "sfx": "A fork on a plate.",
+     "file": "library/trailers/first-rule-05.png"
+    },
+    {
+     "n": 6,
+     "vo": "We meet where the feed can't find us.",
+     "on": "THE PRESENCE CIRCLE",
+     "sfx": "Low hum.",
+     "file": "library/trailers/first-rule-06.png"
+    },
+    {
+     "n": 7,
+     "vo": "Don't tell your friends.",
+     "on": "",
+     "sfx": "Street ambience returns.",
+     "file": "library/trailers/first-rule-07.png"
+    },
+    {
+     "n": 8,
+     "vo": "Don't review it.",
+     "on": "",
+     "sfx": "ONE deep pulse.",
+     "file": "library/trailers/first-rule-08.png"
+    },
+    {
+     "n": 9,
+     "vo": "",
+     "on": "JUST BE HERE",
+     "sfx": "The bulb's creak.",
+     "file": "library/trailers/first-rule-09.png"
+    },
+    {
+     "n": 10,
+     "vo": "",
+     "on": "Receive the gift of your life.",
+     "sfx": "Silence. End card: This is not an ad. Pulse.",
+     "file": "library/trailers/first-rule-10.png"
+    }
+   ]
+  }
+ ]
+}

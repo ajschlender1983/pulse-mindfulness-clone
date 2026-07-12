@@ -42,6 +42,8 @@ COLLECTIONS = [
   "stills":["library/performance/*.png"], "curate":8},
  {"key":"invitations","label":"“When would now be a good time?” — 20 invitations","kind":"stills",
   "stills":["library/invitations/*.png"], "exclude":r"gallery", "curate":20},
+ {"key":"trailers","label":"The Trailers — storyboards (Presence · One Ring · The First Rule)","kind":"stills",
+  "stills":["library/trailers/*.png"], "exclude":r"gallery", "curate":12},
  {"key":"stories","label":"User stories","kind":"stills",
   "stills":["story-images/*.png","library/stories/*.png"],
   "exclude":r"(00-.*-reference|gallery)", "curate":12},

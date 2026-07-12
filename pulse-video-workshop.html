@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Trailers — Pulse video workshop</title>
+<meta name="description" content="Three social-optimized brand films played on famous trailer grammars — Presence (the dream-thriller), One Ring to Unite Them All (the epic), The First Rule (the anti-ad) — each with a full script and a one-frame-per-shot storyboard." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#EBE7D4; --warm:#F9F6E5; --ink:#1A1C22; --brown:#423D32;
+    --lime:#E3F47D; --honey:#A67C00; --muted:#6E6857; --faint:#8a8578;
+    --line:rgba(26,28,34,.13);
+    --font:"DM Sans",sans-serif; --mono:"DM Mono",monospace; --serif:"Fraunces",serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{ font-family:var(--font); background:var(--cream); color:var(--ink); line-height:1.5;
+    letter-spacing:-0.01em; -webkit-font-smoothing:antialiased; }
+  .shell{ max-width:1200px; margin:0 auto; padding:0 clamp(18px,4vw,44px); }
+  .top{ position:sticky; top:0; z-index:40; background:rgba(235,231,212,.86); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .top .shell{ display:flex; align-items:center; gap:14px; height:52px; }
+  .top .brand{ font-weight:600; font-size:15px; letter-spacing:-0.03em; }
+  .top .brand i{ color:var(--honey); font-style:normal; }
+  .top .spacer{ flex:1; }
+  .top a{ font-family:var(--mono); font-size:11.5px; color:var(--muted); text-decoration:none; }
+  .top a:hover{ color:var(--ink); }
+
+  header.hero{ padding:clamp(50px,9vw,100px) 0 clamp(24px,4vw,44px); }
+  .hero .kick{ font-family:var(--mono); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--honey); }
+  .hero h1{ font-family:var(--serif); font-weight:400; font-size:clamp(36px,7vw,74px); line-height:1.02; letter-spacing:-0.02em; margin-top:16px; max-width:18ch; text-wrap:balance; }
+  .hero p{ font-size:clamp(16px,2.1vw,19px); color:var(--brown); max-width:66ch; margin-top:18px; line-height:1.6; }
+
+  section.trailer{ border-top:1px solid var(--line); padding:clamp(36px,7vw,72px) 0; }
+  .t-kick{ font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--honey); }
+  .t-title{ font-family:var(--serif); font-weight:600; font-size:clamp(30px,5.6vw,58px); letter-spacing:-0.01em; line-height:1.02; margin-top:10px; text-wrap:balance; }
+  .t-log{ font-size:clamp(15.5px,1.9vw,18px); color:var(--brown); max-width:70ch; margin-top:16px; line-height:1.62; }
+  .t-meta{ display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+  .t-chip{ font-family:var(--mono); font-size:11px; color:var(--brown); background:var(--warm); border:1px solid var(--line); border-radius:100px; padding:8px 14px; }
+  .t-chip b{ color:var(--honey); font-weight:500; }
+
+  /* branded film-strip storyboard */
+  .fstrip{ position:relative; display:flex; gap:2px; overflow-x:auto; scroll-snap-type:x proximity; scroll-behavior:smooth;
+    background:var(--warm); border-radius:5px; padding:16px 0; margin-top:26px;
+    box-shadow:0 1px 2px rgba(66,61,50,.06),0 10px 28px rgba(66,61,50,.06); }
+  .fstrip::before,.fstrip::after{ content:""; position:absolute; left:0; right:0; height:15px; z-index:2; pointer-events:none;
+    background-color:rgba(26,28,34,.92);
+    background-image:radial-gradient(circle 3.4px at 14px 50%, var(--cream) 3.4px, transparent 4px);
+    background-size:28px 100%; background-repeat:repeat-x; }
+  .fstrip::before{ top:0; } .fstrip::after{ bottom:0; }
+  .frame{ flex:0 0 auto; width:min(58%,520px); scroll-snap-align:center; position:relative; padding:0 1px;
+    transition:opacity .4s ease, filter .4s ease; opacity:.8; filter:saturate(.93); }
+  .frame.on{ opacity:1; filter:none; }
+  .frame:first-child{ margin-left:16px; } .frame:last-child{ margin-right:24px; }
+  .frame img{ width:100%; aspect-ratio:16/9; object-fit:cover; display:block; background:#22242a; }
+  .frame .edge{ position:absolute; left:8px; top:21px; font-family:var(--mono); font-size:9px; letter-spacing:.14em; color:var(--honey); opacity:.85; z-index:3; }
+  .frame .cap{ padding:10px 8px 4px; }
+  .frame .cap .sh{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--brown); }
+  .frame .cap .onscreen{ font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--honey); margin-top:5px; }
+  .frame .cap .vo{ font-family:var(--serif); font-style:italic; font-size:14.5px; color:var(--ink); margin-top:6px; line-height:1.4; text-wrap:pretty; }
+  .frame .cap .sfx{ font-family:var(--mono); font-size:10px; color:var(--faint); margin-top:6px; }
+  .fstrip-foot{ display:flex; align-items:center; gap:12px; margin-top:10px; }
+  .fstrip-foot .fprog{ flex:1; height:2px; background:#e3ddc9; border-radius:2px; overflow:hidden; }
+  .fstrip-foot .fprog i{ display:block; height:100%; background:var(--ink); width:0; transition:width .2s ease; }
+  .fstrip-foot .fcount{ font-family:var(--mono); font-size:11px; color:var(--faint); }
+  @media(max-width:720px){ .frame{ width:84%; } }
+
+  .rules-note{ border-top:1px solid var(--line); padding:clamp(30px,5vw,54px) 0 60px; }
+  .rules-note h3{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); }
+  .rules-note p{ font-size:15px; color:var(--brown); max-width:70ch; margin-top:12px; line-height:1.6; }
+  footer{ border-top:1px solid var(--line); padding:22px 0 50px; font-family:var(--mono); font-size:12px; color:var(--faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  footer a{ color:var(--brown); }
+  .loading{ color:var(--muted); font-size:15px; padding:30px 0; }
+</style>
+</head>
+<body>
+<div class="top"><div class="shell">
+  <span class="brand">pulse<i>·</i> trailers</span>
+  <span class="spacer"></span>
+  <a href="pulse-world-building.html">← World-building</a>
+</div></div>
+
+<div class="shell">
+  <header class="hero">
+    <div class="kick">The video workshop</div>
+    <h1>Three trailers, played on films everyone already knows.</h1>
+    <p>Scripts and one-frame-per-shot storyboards for three social-first brand films — each borrowing a trailer grammar the audience can feel in their bones, and turning its tension toward presence. Built from the visual world system: the ring as the hinge, the mood rules, the board's language.</p>
+  </header>
+
+  <div id="trailers"><div class="loading">Loading the trailers…</div></div>
+
+  <div class="rules-note">
+    <h3>Production rules</h3>
+    <p>Every film obeys the motion rules: photographic shots are handheld cell-phone; any illustrated beat is multiplane; a medium change is earned only at the hinge. Homage means trope, never copy — original lines in the Pulse voice, familiar shapes, our world. Masters cut 16:9 with 9:16 crop-safe framing; hooks land inside the first three seconds; captions burned for sound-off viewing. No urgency, no exclamation points — even the anti-ad stays calm.</p>
+  </div>
+
+  <footer>
+    <span>Pulse · The Trailers · video workshop</span>
+    <span><a href="pulse-world-building.html">World-building</a> · <a href="image-library.html">Atlas</a></span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  function el(t,c,x){var e=document.createElement(t); if(c)e.className=c; if(x!=null)e.textContent=x; return e;}
+  function clear(n){while(n.firstChild)n.removeChild(n.firstChild);}
+  function pad2(n){n=String(n);return n.length<2?'0'+n:n;}
+
+  function strip(shots){
+    var wrap=el('div');
+    var s=el('div','fstrip');
+    shots.forEach(function(sh,i){
+      var fr=el('div','frame'+(i===0?' on':''));
+      var img=document.createElement('img'); img.loading=(i<2?'eager':'lazy'); img.src=sh.file; img.alt='Shot '+sh.n;
+      fr.appendChild(img);
+      fr.appendChild(el('span','edge',pad2(sh.n)+' ▸'));
+      var cap=el('div','cap');
+      cap.appendChild(el('div','sh','Shot '+pad2(sh.n)+(sh.reused?' · from the library':'')));
+      if(sh.on) cap.appendChild(el('div','onscreen','⌜ '+sh.on+' ⌟'));
+      if(sh.vo) cap.appendChild(el('div','vo','“'+sh.vo+'”'));
+      if(sh.sfx) cap.appendChild(el('div','sfx',sh.sfx));
+      fr.appendChild(cap);
+      s.appendChild(fr);
+    });
+    wrap.appendChild(s);
+    var foot=el('div','fstrip-foot'); var prog=el('div','fprog'); var pi=document.createElement('i'); prog.appendChild(pi);
+    var cnt=el('span','fcount','01 / '+pad2(shots.length)); foot.appendChild(prog); foot.appendChild(cnt); wrap.appendChild(foot);
+    var frames=s.querySelectorAll('.frame'); var raf;
+    function upd(){ var mid=s.scrollLeft+s.clientWidth/2,best=0,bd=1e9;
+      for(var j=0;j<frames.length;j++){var c=frames[j].offsetLeft+frames[j].offsetWidth/2,d=Math.abs(c-mid); if(d<bd){bd=d;best=j;}}
+      for(var k=0;k<frames.length;k++){frames[k].classList.toggle('on',k===best);}
+      cnt.textContent=pad2(best+1)+' / '+pad2(shots.length);
+      var mx=s.scrollWidth-s.clientWidth; pi.style.width=(mx>0?(100*s.scrollLeft/mx):100)+'%'; }
+    s.addEventListener('scroll',function(){if(raf)cancelAnimationFrame(raf);raf=requestAnimationFrame(upd);});
+    setTimeout(upd,80);
+    return wrap;
+  }
+
+  fetch('trailers.json').then(function(r){return r.json();}).then(function(d){
+    var host=document.getElementById('trailers'); clear(host);
+    (d.trailers||[]).forEach(function(t){
+      var sec=el('section','trailer'); sec.id='t-'+t.id;
+      sec.appendChild(el('div','t-kick',t.after));
+      sec.appendChild(el('h2','t-title',t.title));
+      sec.appendChild(el('p','t-log',t.logline));
+      var meta=el('div','t-meta');
+      var m1=el('span','t-chip'); m1.appendChild(el('b',null,'Social · ')); m1.appendChild(document.createTextNode(t.social)); meta.appendChild(m1);
+      var m2=el('span','t-chip'); m2.appendChild(el('b',null,'Score · ')); m2.appendChild(document.createTextNode(t.music)); meta.appendChild(m2);
+      sec.appendChild(meta);
+      sec.appendChild(strip(t.shots||[]));
+      host.appendChild(sec);
+    });
+  }).catch(function(){
+    var host=document.getElementById('trailers'); clear(host);
+    host.appendChild(el('div','loading','Could not load trailers.json — serve this over http://'));
+  });
+})();
+</script>
+</body>
+</html>

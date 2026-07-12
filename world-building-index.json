@@ -1232,6 +1232,105 @@
    ]
   },
   {
+   "id": "trailers",
+   "group": "stories",
+   "kind": "link",
+   "title": "The Trailers \u2014 storyboards (Presence \u00b7 One Ring \u00b7 The First Rule)",
+   "description": "The Trailers \u2014 three brand films played on famous trailer grammars, with scripts and one-frame-per-shot storyboards.",
+   "count": 29,
+   "thumb": "library/trailers/one-ring-06.png",
+   "items": [
+    {
+     "file": "library/trailers/first-rule-01.png"
+    },
+    {
+     "file": "library/trailers/first-rule-02.png"
+    },
+    {
+     "file": "library/trailers/first-rule-03.png"
+    },
+    {
+     "file": "library/trailers/first-rule-04.png"
+    },
+    {
+     "file": "library/trailers/first-rule-05.png"
+    },
+    {
+     "file": "library/trailers/first-rule-06.png"
+    },
+    {
+     "file": "library/trailers/first-rule-07.png"
+    },
+    {
+     "file": "library/trailers/first-rule-08.png"
+    },
+    {
+     "file": "library/trailers/first-rule-09.png"
+    },
+    {
+     "file": "library/trailers/first-rule-10.png"
+    },
+    {
+     "file": "library/trailers/one-ring-01.png"
+    },
+    {
+     "file": "library/trailers/one-ring-02.png"
+    },
+    {
+     "file": "library/trailers/one-ring-03.png"
+    },
+    {
+     "file": "library/trailers/one-ring-05.png"
+    },
+    {
+     "file": "library/trailers/one-ring-06.png"
+    },
+    {
+     "file": "library/trailers/one-ring-07.png"
+    },
+    {
+     "file": "library/trailers/one-ring-08.png"
+    },
+    {
+     "file": "library/trailers/one-ring-09.png"
+    },
+    {
+     "file": "library/trailers/one-ring-10.png"
+    },
+    {
+     "file": "library/trailers/presence-01.png"
+    },
+    {
+     "file": "library/trailers/presence-02.png"
+    },
+    {
+     "file": "library/trailers/presence-03.png"
+    },
+    {
+     "file": "library/trailers/presence-04.png"
+    },
+    {
+     "file": "library/trailers/presence-05.png"
+    },
+    {
+     "file": "library/trailers/presence-06.png"
+    },
+    {
+     "file": "library/trailers/presence-07.png"
+    },
+    {
+     "file": "library/trailers/presence-08.png"
+    },
+    {
+     "file": "library/trailers/presence-09.png"
+    },
+    {
+     "file": "library/trailers/presence-10.png"
+    }
+   ],
+   "link": "pulse-video-workshop.html"
+  },
+  {
    "id": "inflection",
    "group": "stories",
    "kind": "gallery",
@@ -3409,7 +3508,7 @@
  ],
  "counts": {
   "groups": 6,
-  "collections": 50,
-  "files": 859
+  "collections": 51,
+  "files": 888
  }
 }
