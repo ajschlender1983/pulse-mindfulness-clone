@@ -1,0 +1,75 @@
+{
+ "grammar": {
+  "SOFT (cream editorial \u00b7 people & life)": "Soft ambient natural light, diffuse and even, airy and breathable, lifted gentle shadows. \" \"Luminous cream, honey and warm oatmeal palette, a faint dusty-blue only in the deepest shadow. \" \"Medium-format film photograph, fine natural grain, shallow depth of field, soft highlight bloom. \" \"Calm, unhurried, real and un-staged, editorial. The gold band reads as a discovered \" \"second-glance glint, never centered. No text, no logos, no watermark.",
+  "STYLE (warm film \u00b7 scenes)": "Warm ambient natural light, medium-format film photograph, fine natural grain, shallow depth \" \"of field, soft highlight bloom, luminous cream and honey palette with real colour where the \" \"scene calls for it. Editorial, alive, un-staged, emotionally true \u2014 never stocky. The gold \" \"band is a discovered second-glance glint. No text, no logos, no watermark.",
+  "SYMBOL (macro \u00b7 subjective)": "Macro or near-macro, textural and subjective, poetic and symbolic \u2014 the feeling of a moment, \" \"not a catalogue shot. Larger than life yet real, slightly surreal. Warm golden-hour light, \" \"generous light leaks and soft bloom, drifting dust catching the sun, fine film grain, \" \"razor-shallow depth of field. Muted cream, honey and charcoal palette, dusty-blue in the \" \"deepest shadow. No text, no logos, no watermark.",
+  "ETHEREAL (ring-as-presence \u00b7 no people)": "Larger than life yet natural and real, slightly surreal \u2014 the way a moment feels in \" \"memory rather than how a camera saw it. Warm golden-hour light, generous natural light \" \"leaks and lens flares blooming across the frame, drifting dust and haze catching the sun. \" \"Medium-format film look, fine natural grain, shallow depth of field, soft highlight bloom. \" \"Muted cream, honey and charcoal palette with a faint dusty-blue in the deepest shadow. \" \"Poetic, ethereal, editorial and subtle. Scale and physics gently bend: light behaves like \" \"water, a room breathes with light. No text, no logos,",
+  "INFLECT (illustration \u2192 photograph)": "A single continuous image that transitions across its width from LEFT to RIGHT. \" \"On the LEFT: a loose, muted, unfinished ILLUSTRATION \u2014 flat cool grey-blue line-and-wash, \" \"sketchy pencil and pale watercolour, drained of colour and life, the moment on autopilot, \" \"about to be missed. On the RIGHT: the SAME scene as warm, luminous, full-colour PHOTOGRAPHY \u2014 \" \"medium-format film, golden light, rich and alive and present. The two blend seamlessly at a \" \"vertical inflection band in the middle where the drawing becomes real. Exactly at that seam, \" \"the wide polished gold Pulse ring catches a",
+  "RING (the product anchor)": "wearing a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 clearly on the finger",
+  "KEEP (character-lock)": "Keep the exact same person as the reference image: identical face, hair, and features. ",
+  "ANCHOR_PROMPT (same-moment lock)": "Maya seated at a small wooden table by a bright window in soft warm morning light \" \"from the left, holding a plain cream stoneware mug in both hands just below her chin, a wide \" \"polished gold band on her right ring finger, medium chest-up shot, centred, plain warm wall \" \"behind her slightly out of focus, calm neutral expression looking softly at the middle distance. \" \"A quiet, still, ordinary morning moment.",
+  "MOTION \u00b7 handheld (photograph foot \u00b7 Veo)": "Handheld cell-phone footage, as if filmed on a phone held in one hand: subtle organic drift, gentle micro-shake and a slight tilt. The person alive and present \u2014 a slow breath, hair moving, a blink, a small shift of weight. Warm medium-format film color, unhurried, no zoom, no cuts. {scene}",
+  "MOTION \u00b7 multiplane (illustration foot \u00b7 Veo)": "Bring the illustration to life with a Disney MULTIPLANE-camera effect: separate foreground/midground/background into depth layers and glide them past the lens at different speeds so parallax opens in every direction and the 2D artwork reveals its 3D space. Characters stay alive and dimensional (breath, blink, drifting hair/fabric, a small gesture). Keep the painterly look; composed, no cuts. {scene}",
+  "MOTION \u00b7 transition (illustration \u2192 photo \u00b7 Veo)": "Animate a transition from illustration to photograph: begins as hand-painted illustration, resolves into a warm living photograph of the same moment \u2014 paint settling into real light and texture, timed like one slow breath (the pulse). Subtle parallax, the subject coming alive as the medium changes. No hard cuts. {scene}"
+ },
+ "generators": [
+  {
+   "file": "tools/generate-storytellers.py",
+   "makes": "library/storytellers/ \u2014 people living (festivals, gym, music, art, dance, date-night, life)"
+  },
+  {
+   "file": "tools/generate-inflection.py",
+   "makes": "library/inflection/ \u2014 illustration\u2192photograph inflection frames"
+  },
+  {
+   "file": "tools/generate-library-expansion.py",
+   "makes": "avatars, performance, ethereal"
+  },
+  {
+   "file": "tools/generate-library-expansion-2.py",
+   "makes": "personas 11-22, new stories, deepen, texture"
+  },
+  {
+   "file": "tools/generate-film-strip.py",
+   "makes": "film-strip/same (anchor-locked) + autopilot"
+  },
+  {
+   "file": "tools/generate-story-images.py",
+   "makes": "the 5 original stories"
+  },
+  {
+   "file": "tools/generate-journey-images.py",
+   "makes": "journey-images/ \u2014 numb\u2192generous arc"
+  },
+  {
+   "file": "tools/generate-email-images.py",
+   "makes": "emails/images/ \u2014 email heroes (cream + dark luxe)"
+  },
+  {
+   "file": "tools/generate-runway.py",
+   "makes": "storytellers+inflection via Runway Gen-4 Image"
+  },
+  {
+   "file": "tools/generate-performance.py",
+   "makes": "40 'pause inside effort' performance frames"
+  },
+  {
+   "file": "tools/generate-motion-veo.py",
+   "makes": "real motion video per foot (Veo 3.1 image-to-video)"
+  },
+  {
+   "file": "tools/generate-invitations.py",
+   "makes": "20 'when would now be a good time' 3-frame stories"
+  },
+  {
+   "file": "tools/generate-hybrid.py",
+   "makes": "200 illustration\u2194photograph hybrid frames"
+  }
+ ],
+ "backends": [
+  "gemini-3.1-flash-image (flash, default)",
+  "gemini-3-pro-image (pro)",
+  "Runway gen4_image (via tools/runway_image.py)",
+  "Veo 3.1 (image-to-video)"
+ ]
+}

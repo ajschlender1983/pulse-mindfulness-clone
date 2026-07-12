@@ -1,25 +1,27 @@
 {
  "grammar": {
-  "SOFT (cream editorial \u00b7 people & life)": "Soft ambient natural light, diffuse and even, airy and breathable, lifted gentle shadows. \" \"Luminous cream, honey and warm oatmeal palette, a faint dusty-blue only in the deepest shadow. \" \"Medium-format film photograph, fine natural grain, shallow depth of field, soft highlight bloom. \" \"Calm, unhurried, real and un-staged, editorial. The gold band reads as a discovered \" \"second-glance glint, never centered. No text, no logos, no watermark.",
-  "STYLE (warm film \u00b7 scenes)": "Warm ambient natural light, medium-format film photograph, fine natural grain, shallow depth \" \"of field, soft highlight bloom, luminous cream and honey palette with real colour where the \" \"scene calls for it. Editorial, alive, un-staged, emotionally true \u2014 never stocky. The gold \" \"band is a discovered second-glance glint. No text, no logos, no watermark.",
-  "SYMBOL (macro \u00b7 subjective)": "Macro or near-macro, textural and subjective, poetic and symbolic \u2014 the feeling of a moment, \" \"not a catalogue shot. Larger than life yet real, slightly surreal. Warm golden-hour light, \" \"generous light leaks and soft bloom, drifting dust catching the sun, fine film grain, \" \"razor-shallow depth of field. Muted cream, honey and charcoal palette, dusty-blue in the \" \"deepest shadow. No text, no logos, no watermark.",
-  "ETHEREAL (ring-as-presence \u00b7 no people)": "Larger than life yet natural and real, slightly surreal \u2014 the way a moment feels in \" \"memory rather than how a camera saw it. Warm golden-hour light, generous natural light \" \"leaks and lens flares blooming across the frame, drifting dust and haze catching the sun. \" \"Medium-format film look, fine natural grain, shallow depth of field, soft highlight bloom. \" \"Muted cream, honey and charcoal palette with a faint dusty-blue in the deepest shadow. \" \"Poetic, ethereal, editorial and subtle. Scale and physics gently bend: light behaves like \" \"water, a room breathes with light. No text, no logos,",
-  "INFLECT (illustration \u2192 photograph)": "A single continuous image that transitions across its width from LEFT to RIGHT. \" \"On the LEFT: a loose, muted, unfinished ILLUSTRATION \u2014 flat cool grey-blue line-and-wash, \" \"sketchy pencil and pale watercolour, drained of colour and life, the moment on autopilot, \" \"about to be missed. On the RIGHT: the SAME scene as warm, luminous, full-colour PHOTOGRAPHY \u2014 \" \"medium-format film, golden light, rich and alive and present. The two blend seamlessly at a \" \"vertical inflection band in the middle where the drawing becomes real. Exactly at that seam, \" \"the wide polished gold Pulse ring catches a",
-  "RING (the product anchor)": "wearing a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 clearly on the finger",
+  "SOFT (cream editorial · people & life)": "Soft ambient natural light, diffuse and even, airy and breathable, lifted gentle shadows. \" \"Luminous cream, honey and warm oatmeal palette, a faint dusty-blue only in the deepest shadow. \" \"Medium-format film photograph, fine natural grain, shallow depth of field, soft highlight bloom. \" \"Calm, unhurried, real and un-staged, editorial. The gold band reads as a discovered \" \"second-glance glint, never centered. No text, no logos, no watermark. Kodak Portra 400 medium-format film, fine grain and gentle halation; an 85mm f/1.4 portrait prime wide open; if it moves, a slow gentle dolly-in on a breath.",
+  "STYLE (warm film · scenes)": "Warm ambient natural light, medium-format film photograph, fine natural grain, shallow depth \" \"of field, soft highlight bloom, luminous cream and honey palette with real colour where the \" \"scene calls for it. Editorial, alive, un-staged, emotionally true — never stocky. The gold \" \"band is a discovered second-glance glint. No text, no logos, no watermark. Kodak Portra 400 medium-format film with gentle halation; a 50mm f/2 prime at natural perspective; if it moves, a slow lateral track or soft push, never a zoom.",
+  "SYMBOL (macro · subjective)": "Macro or near-macro, textural and subjective, poetic and symbolic — the feeling of a moment, \" \"not a catalogue shot. Larger than life yet real, slightly surreal. Warm golden-hour light, \" \"generous light leaks and soft bloom, drifting dust catching the sun, fine film grain, \" \"razor-shallow depth of field. Muted cream, honey and charcoal palette, dusty-blue in the \" \"deepest shadow. No text, no logos, no watermark. Kodak Portra 800 film, warm grain and glow; a 100mm f/2.8 macro lens, razor-shallow focus; if it moves, a slow drift with a gentle rack focus.",
+  "ETHEREAL (ring-as-presence · no people)": "Larger than life yet natural and real, slightly surreal — the way a moment feels in \" \"memory rather than how a camera saw it. Warm golden-hour light, generous natural light \" \"leaks and lens flares blooming across the frame, drifting dust and haze catching the sun. \" \"Medium-format film look, fine natural grain, shallow depth of field, soft highlight bloom. \" \"Muted cream, honey and charcoal palette with a faint dusty-blue in the deepest shadow. \" \"Poetic, ethereal, editorial and subtle. Scale and physics gently bend: light behaves like \" \"water, a room breathes with light. No text, no logos, CineStill 800T halation look (or Portra 400 pushed); a 40mm anamorphic lens, oval bokeh and a soft horizontal flare; if it moves, a slow orbital revolve with parallax.",
+  "INFLECT (illustration → photograph)": "A single continuous image that transitions across its width from LEFT to RIGHT. \" \"On the LEFT: a loose, muted, unfinished ILLUSTRATION — flat cool grey-blue line-and-wash, \" \"sketchy pencil and pale watercolour, drained of colour and life, the moment on autopilot, \" \"about to be missed. On the RIGHT: the SAME scene as warm, luminous, full-colour PHOTOGRAPHY — \" \"medium-format film, golden light, rich and alive and present. The two blend seamlessly at a \" \"vertical inflection band in the middle where the drawing becomes real. Exactly at that seam, \" \"the wide polished gold Pulse ring catches a",
+  "RING (the product anchor)": "wearing a wide, smooth, polished gold band — the Pulse ring — clearly on the finger",
   "KEEP (character-lock)": "Keep the exact same person as the reference image: identical face, hair, and features. ",
   "ANCHOR_PROMPT (same-moment lock)": "Maya seated at a small wooden table by a bright window in soft warm morning light \" \"from the left, holding a plain cream stoneware mug in both hands just below her chin, a wide \" \"polished gold band on her right ring finger, medium chest-up shot, centred, plain warm wall \" \"behind her slightly out of focus, calm neutral expression looking softly at the middle distance. \" \"A quiet, still, ordinary morning moment.",
-  "MOTION \u00b7 handheld (photograph foot \u00b7 Veo)": "Handheld cell-phone footage, as if filmed on a phone held in one hand: subtle organic drift, gentle micro-shake and a slight tilt. The person alive and present \u2014 a slow breath, hair moving, a blink, a small shift of weight. Warm medium-format film color, unhurried, no zoom, no cuts. {scene}",
-  "MOTION \u00b7 multiplane (illustration foot \u00b7 Veo)": "Bring the illustration to life with a Disney MULTIPLANE-camera effect: separate foreground/midground/background into depth layers and glide them past the lens at different speeds so parallax opens in every direction and the 2D artwork reveals its 3D space. Characters stay alive and dimensional (breath, blink, drifting hair/fabric, a small gesture). Keep the painterly look; composed, no cuts. {scene}",
-  "MOTION \u00b7 transition (illustration \u2192 photo \u00b7 Veo)": "Animate a transition from illustration to photograph: begins as hand-painted illustration, resolves into a warm living photograph of the same moment \u2014 paint settling into real light and texture, timed like one slow breath (the pulse). Subtle parallax, the subject coming alive as the medium changes. No hard cuts. {scene}"
+  "MOTION · handheld (photograph foot · Veo)": "Handheld cell-phone footage, as if filmed on a phone held in one hand: subtle organic drift, gentle micro-shake and a slight tilt. The person alive and present — a slow breath, hair moving, a blink, a small shift of weight. Warm medium-format film color, unhurried, no zoom, no cuts. {scene}",
+  "MOTION · multiplane (illustration foot · Veo)": "Bring the illustration to life with a Disney MULTIPLANE-camera effect: separate foreground/midground/background into depth layers and glide them past the lens at different speeds so parallax opens in every direction and the 2D artwork reveals its 3D space. Characters stay alive and dimensional (breath, blink, drifting hair/fabric, a small gesture). Keep the painterly look; composed, no cuts. {scene}",
+  "MOTION · transition (illustration → photo · Veo)": "Animate a transition from illustration to photograph: begins as hand-painted illustration, resolves into a warm living photograph of the same moment — paint settling into real light and texture, timed like one slow breath (the pulse). Subtle parallax, the subject coming alive as the medium changes. No hard cuts. {scene}",
+  "CINEMATOGRAPHY (film stock · lens · length · motion)": "Shot on warm medium-format film: Kodak Portra 400 for people and warm scenes, Kodak Portra 800 for macro and golden-hour glow, CineStill 800T for night and ethereal moments — fine natural grain, gentle halation blooming around the highlights, soft highlight roll-off, true film colour (never digital-clean). Lensed on fast primes wide open for shallow depth of field: an 85mm f/1.4 for intimate chest-up portraits, a 50mm f/2 for scenes at natural human perspective, a 100mm f/2.8 macro for textural symbol shots, and a 40mm anamorphic for the most cinematic frames (oval bokeh, a soft horizontal flare). Camera motion, when it moves, is slow, deliberate and motivated by breath and light — a gentle dolly-in, a slow lateral track, a soft push or pull, or a slow orbital revolve with parallax. Never a zoom, never a whip, never fast; the frame breathes rather than chases.",
+  "MOTION · cinematic (dolly · orbit · Veo)": "Slow, deliberate cinematic camera motion motivated by breath and light: a gentle dolly-in, a slow lateral track, a soft push or pull, or a slow orbital revolve that opens parallax through the scene. The subject stays alive and present (a slow breath, a blink, drifting hair or fabric, a small shift of weight). No zoom, no whip, no cuts; unhurried, film-graded, the frame breathing rather than chasing. {scene}"
  },
  "generators": [
   {
    "file": "tools/generate-storytellers.py",
-   "makes": "library/storytellers/ \u2014 people living (festivals, gym, music, art, dance, date-night, life)"
+   "makes": "library/storytellers/ — people living (festivals, gym, music, art, dance, date-night, life)"
   },
   {
    "file": "tools/generate-inflection.py",
-   "makes": "library/inflection/ \u2014 illustration\u2192photograph inflection frames"
+   "makes": "library/inflection/ — illustration→photograph inflection frames"
   },
   {
    "file": "tools/generate-library-expansion.py",
@@ -39,11 +41,11 @@
   },
   {
    "file": "tools/generate-journey-images.py",
-   "makes": "journey-images/ \u2014 numb\u2192generous arc"
+   "makes": "journey-images/ — numb→generous arc"
   },
   {
    "file": "tools/generate-email-images.py",
-   "makes": "emails/images/ \u2014 email heroes (cream + dark luxe)"
+   "makes": "emails/images/ — email heroes (cream + dark luxe)"
   },
   {
    "file": "tools/generate-runway.py",
@@ -63,7 +65,7 @@
   },
   {
    "file": "tools/generate-hybrid.py",
-   "makes": "200 illustration\u2194photograph hybrid frames"
+   "makes": "200 illustration↔photograph hybrid frames"
   }
  ],
  "backends": [

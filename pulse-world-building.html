@@ -520,6 +520,11 @@
         </div>
       </details>
 
+      <details class="panel" id="flowReviewPanel">
+        <summary><span class="tw">Advisory board</span><h2>The board reviews the email flows</h2><span class="chev">▶</span></summary>
+        <div class="panel-body" id="flowReviewBody"><div class="empty">loading the board's flow review…</div></div>
+      </details>
+
       <details class="panel" id="msgPanel">
         <summary><span class="tw">Workshop</span><h2>Taglines</h2><span class="chev">▶</span></summary>
         <div class="panel-body">
@@ -970,6 +975,33 @@
     }
     renderBoard();
   }).catch(function(){});
+
+  function renderFlowReview(d){
+    var host=document.getElementById('flowReviewBody'); if(!host) return; clear(host);
+    var c=d.consensus||{};
+    var advs=(d.advisors||[]).map(function(a){return a.name;}).join(' · ');
+    host.appendChild(el('p','board-intro','The five advisors audited the eight lifecycle flows and all 55 emails, then synthesized over two EBI passes. '+ (advs||'')));
+    if(c.headline){ var hb=el('div','headline'); hb.appendChild(el('div','k','The headline move')); hb.appendChild(el('div','v',c.headline)); host.appendChild(hb); }
+    // flow report
+    var grid=el('div','cons-grid');
+    (c.flow_report||[]).forEach(function(f){
+      var card=el('div','cons-card'); card.appendChild(el('div','k',f.flow));
+      card.appendChild(el('div','v',f.verdict));
+      if(f.changes && f.changes.length){ var ul=el('ul'); f.changes.forEach(function(x){ ul.appendChild(el('li',null,x)); }); card.appendChild(ul); }
+      grid.appendChild(card);
+    });
+    host.appendChild(grid);
+    // strategy
+    if(c.strategy && c.strategy.length){
+      var d1=el('details','panel'); d1.style.marginTop='16px';
+      var s1=el('summary'); s1.appendChild(el('span','tw','Roadmap')); s1.appendChild(el('h2',null,'Strategy moves')); s1.appendChild(el('span','chev','▶')); d1.appendChild(s1);
+      var b1=el('div','panel-body'); var ol=el('div','tagline-list');
+      c.strategy.forEach(function(s,i){ var row=el('div','tagline'); row.appendChild(el('span','t',(i+1)+'. '+s)); ol.appendChild(row); });
+      b1.appendChild(ol); d1.appendChild(b1); host.appendChild(d1);
+    }
+    host.appendChild(el('div','board-note','Copy edits applied to the emails; the unconditional 30-day return threaded into the close & arrival. Full report: flows/email-board-review.md.'));
+  }
+  fetch('email-board-review.json').then(function(r){return r.ok?r.json():null;}).then(function(d){ if(d) renderFlowReview(d); }).catch(function(){});
 })();
 </script>
 </body>

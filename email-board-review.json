@@ -1,0 +1,793 @@
+{
+ "advisors": [
+  {
+   "id": "hormozi",
+   "name": "Alex Hormozi"
+  },
+  {
+   "id": "godin",
+   "name": "Seth Godin"
+  },
+  {
+   "id": "watts",
+   "name": "Alan Watts"
+  },
+  {
+   "id": "jobs",
+   "name": "Steve Jobs"
+  },
+  {
+   "id": "sutherland",
+   "name": "Rory Sutherland"
+  }
+ ],
+ "evaluations": {
+  "hormozi": {
+   "thesis": "The copy is elite and the value equation is three-quarters built: effort is near zero (wear a ring, don't add a habit), time delay is near zero (two minutes to set up), and the dream outcome is vivid and concrete (four dinners returned, the last page of the bedtime story, the coffee actually tasted). The one weak lever is perceived likelihood of achievement, weak on purpose because you refuse data and charts. That is a defensible wedge, but it leaves a hole where proof and risk-reversal normally sit, and nothing fills it. Here is the malpractice: your board already decided the offer, an unconditional 30-day return ('wear it a month, if it isn't for you send it back, no reason needed'), and that guarantee appears in ZERO of the 55 emails. Worse, AWAKENING is your purchase flow, 11 emails long, and not one makes a clean offer or a clear buy ask. You nurture beautifully and never close. The proof asset you need (real wearers' before/after words) is being collected in First 30 Days ('reply with your two words') but never piped back into the pre-purchase flow where it would do the persuading. Fix the missing risk reversal and the missing close in AWAKENING and you move more units without touching a single exclamation point, countdown, or hype word. The prose is done. The offer machinery is not.",
+   "flow_verdicts": [
+    {
+     "flow": "AWAKENING (quiz to purchase)",
+     "verdict": "Gorgeous nurture, no offer. Eleven emails and not one presents the price as restraint, states the return policy, or makes a clean buy ask; the de facto close, when-youre-ready, abdicates with 'When you're ready.' The value equation is fully built and left un-cashed.",
+     "top_change": "Thread the unconditional 30-day return through the close (when-youre-ready, still-thinking) and give it one real, quiet buy CTA; surface the reclaimable-hours quiz number downstream as the value anchor for the 200 dollars."
+    },
+    {
+     "flow": "TRUE FIT (transactional)",
+     "verdict": "Tight and low-friction. 'Fit is our problem to get right, not yours' is real risk reversal on the scariest part of buying a ring online, and exchange-simple removes the return fear. This flow does its job.",
+     "top_change": "Seed the 30-day unconditional return in order-confirmed; the confirmation email is prime real estate to kill buyer's remorse at the moment doubt creeps in, and it currently says nothing about the exit."
+    },
+    {
+     "flow": "ARRIVAL",
+     "verdict": "Strong activation. charge-pair-breathe with 'Begin your first pulse' is the right single clear first-use CTA, and it is the highest-leverage retention moment in the whole system; a wearer who sets up does not refund.",
+     "top_change": "Keep anticipation building; on-its-way and its-here have no CTA, so a one-line 'here is the 3-step setup waiting for you' primes activation before the box lands."
+    },
+    {
+     "flow": "FIRST 30 DAYS",
+     "verdict": "Where perceived likelihood gets proven by the customer's own experience, the strongest lever-fix in the sequence. what-did-you-notice ('reply with your two words') is a quiet testimonial-harvesting machine, and pause-is-working turns the no-chart wedge into a feature.",
+     "top_change": "Treat the replied 'two words' and week-one noticings as your proof inventory and pipe them, anonymized, back into AWAKENING (readers-tuesday, questions-answered) as the human before/after proof that fills the no-graph hole."
+    },
+    {
+     "flow": "SUNDAY PAUSE / WIN-BACK",
+     "verdict": "Correctly framed as re-activation, not re-purchase; they already own it. come-back-to-now and one-minute-no-ring offer genuinely zero-friction re-entry, which is how you win back a lapsed wearer of a physical product.",
+     "top_change": "Lead the reactivation with the softest touch; one-minute-no-ring ('asks for nothing, not even the ring') should precede come-back-to-now, and re-entry copy should be explicitly guilt-free."
+    },
+    {
+     "flow": "RIPPLE (review/referral/gift)",
+     "verdict": "Your growth-and-proof engine, and it is smart: someone-you-love retargets the stored quiz intent ('who you most want to be present for'), and first-impression harvests reviews. Referral stays gift-framed, not discount-bribed, which protects the wedge.",
+     "top_change": "Make the gift a clean, obvious purchase path with the same 30-day safety net; the sender should feel zero risk gifting a 200 dollar object, and give-a-month's 'Share your link' is softer than the intent someone-you-love just created."
+    },
+    {
+     "flow": "INNER CIRCLE (advocates)",
+     "verdict": "Status-as-currency done right; first-hundred ('Take your place,' not investors, not advisors) and we-noticed ('I'm writing because you wrote first') convert advocates into a UGC and referral engine with no discount. But too many asks have no button.",
+     "top_change": "Add a gentle one-tap CTA to every advocate ask; tell-your-story literally requests a story with CTA dash, and we-noticed, showing-the-way, shape-whats-next all drop the action."
+    },
+    {
+     "flow": "SPACES (studios/corporate)",
+     "verdict": "Your highest-ACV and tightest offer flow: spaces-proposal's 'Feel one pulse first' is product-led selling at its best, and team-report proves ROI in the team's own before/after words without betraying the no-data wedge. Assessment to proposal to objections to prove is clean.",
+     "top_change": "Fix speed-to-lead: spaces-inquiry answers a B2B hand-raise with a bare acknowledgment and no next step; it must drive straight to booking the assessment or a call while intent is hot."
+    }
+   ],
+   "email_edits": [
+    {
+     "id": "email-when-youre-ready",
+     "issue": "The decisive close of the purchase flow carries no offer and no risk reversal; 'When you're ready' abdicates the ask. The one weak value lever (perceived likelihood) is exactly what an unconditional return fixes, and it is absent where it matters most.",
+     "new_subject": "",
+     "new_cta": "Wear it a month, then decide"
+    },
+    {
+     "id": "email-still-thinking",
+     "issue": "Highest-intent moment in the funnel (started an order and stopped) and it never deploys the return policy that removes the precise hesitation the hook names, spending money on your own attention. Reverse the risk here and the pause resolves itself.",
+     "new_subject": "",
+     "new_cta": "Finish, a month to change your mind"
+    },
+    {
+     "id": "email-quiz-results",
+     "issue": "Subject leads with 'score,' a grade for someone's presence, the one thing the board flagged as fatal (Fitbit in gold). Lead instead with the reclaimable-hours value number that anchors the 200 dollars; the corpus already gives you 'a map of what's waiting for you.'",
+     "new_subject": "The hours that are waiting for you",
+     "new_cta": ""
+    },
+    {
+     "id": "email-order-confirmed",
+     "issue": "A confirmation email is prime real estate to kill buyer's remorse, and it says nothing about the exit. State the 30-day unconditional return here so the buyer feels safe the moment doubt first creeps in.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-readers-tuesday",
+     "issue": "A proof email (Johanna's Tuesday, same archetype as the reader) that ends with no next step. You build belief and give it nowhere to go; proof should always be followed by a quiet path to act.",
+     "new_subject": "",
+     "new_cta": "When would now be a good time?"
+    },
+    {
+     "id": "email-questions-answered",
+     "issue": "Your objection-handler in the purchase flow. You answer every practical question and offer the newly-reassured reader no soft close and no guarantee, the natural place to name the risk-free 30-day return.",
+     "new_subject": "",
+     "new_cta": "When you're ready"
+    },
+    {
+     "id": "email-presence-experience",
+     "issue": "Duplicate asset and CTA with try-this-first; both send to the Presence Experience inside AWAKENING ('Walk through it' / 'Walk through the Presence Experience'). Sending twice to the same thing without a new reason dilutes the path to yes. Differentiate or cut one.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-spaces-inquiry",
+     "issue": "A B2B lead just raised their hand and you reply with an acknowledgment and CTA dash. Speed-to-lead is everything in B2B; this must drive straight to booking the assessment or a call while intent is hot.",
+     "new_subject": "",
+     "new_cta": "Book your assessment"
+    },
+    {
+     "id": "email-tell-your-story",
+     "issue": "The email directly asks for a story and gives no button to tell one (CTA dash). A direct ask without a one-tap action is a wasted ask, the single easiest conversion in the advocate flow left on the floor.",
+     "new_subject": "",
+     "new_cta": "Share your story"
+    },
+    {
+     "id": "email-we-noticed",
+     "issue": "Your warmest advocate opener ('I'm writing because you wrote first') with no action. The implied ask is a reply; make it explicit and effortless so the relationship advances one step.",
+     "new_subject": "",
+     "new_cta": "Reply and say hello"
+    },
+    {
+     "id": "email-come-back-to-now",
+     "issue": "The core reactivation email for a lapsed wearer, with no action and no explicit guilt-relief. Re-entry must be frictionless and shame-free (the ring is still theirs, no catching up) with one soft step to start again.",
+     "new_subject": "",
+     "new_cta": "Start where you are"
+    }
+   ],
+   "strategy_moves": [
+    "ADD the offer to AWAKENING: thread the board's unconditional 30-day return ('wear it a month, if it isn't for you send it back, no reason needed') into when-youre-ready and still-thinking, and give the flow ONE quiet buy CTA. The purchase flow currently has no offer and no risk reversal across 11 emails; this is the whole game.",
+    "BUILD the proof loop: the 'two words' and noticings collected in First 30 Days (what-did-you-notice, week-one-noticing) plus first-impression reviews are your only allowed proof under the no-data wedge. Pipe them, anonymized, into readers-tuesday and questions-answered so the pre-purchase flow persuades with real before/after testimony instead of running on faith.",
+    "SURFACE the value number downstream (my dissent from the board): keep arithmetic off the hero, but the reclaimable-hours figure from the quiz belongs in the AWAKENING nurture as the anchor for the 200 dollars, 'set 200 against the hours a week your quiz found.' A distracted buyer sometimes needs one permission-to-justify beat the pure-identity frame withholds.",
+    "CONSOLIDATE the redundant Presence Experience sends (try-this-first plus presence-experience) and trim one pure-mood email from AWAKENING; 11 emails with several atmosphere-only pieces (well-be-here, the-moment) is a long road to a yes that never comes.",
+    "REORDER the win-back: lead with one-minute-no-ring (asks for nothing) before come-back-to-now, so reactivation opens with the lowest-friction touch for a lapsed wearer.",
+    "ARM the advocate flow with CTAs: tell-your-story, we-noticed, showing-the-way, and shape-whats-next all make asks with no button. Give every advocate ask a single gentle one-tap action.",
+    "FIX B2B speed-to-lead in SPACES: spaces-inquiry must route straight to booking the assessment or call, not acknowledge and wait."
+   ],
+   "biggest_win": "Put the risk reversal into the sequence. The board already decided the offer, an unconditional 30-day return that grades nothing, and it appears in none of the 55 emails, while AWAKENING makes no clean offer or buy ask across 11 emails. Thread that guarantee through the close (when-youre-ready, still-thinking) and seed it in order-confirmed. It directly shrinks your one weak value-equation lever (perceived likelihood), costs nothing in returns for a product this sticky, and does all of it without a single exclamation point, countdown, or banned word. You wrote a world-class nurture and forgot to make the yes obvious; this makes it obvious."
+  },
+  "godin": {
+   "thesis": "These flows are, mostly, remarkable \u2014 which is rare and worth protecting. The best of them don't describe presence, they perform it, and they run on permission rather than pressure: \"just wear it,\" \"reply with your two words,\" \"no ask today, just a small mirror.\" That's a tribe being built, not a list being farmed. The through-line that earns the next open is the founder's voice and the anti-data refusal \u2014 a $200 gold ring that proudly knows nothing about you, in a category that has bet its soul on knowing everything. That's the flag. But there's one crack running through the whole house: the system keeps handing people a SCORE. The AWAKENING flow opens the entire relationship with \"Your presence score,\" and the FIRST 30 DAYS flow peaks by inviting you to \"take the quiz again\" and re-measure yourself. A score is the enemy's scoreboard. The moment you grade someone's presence you file Pulse back into the Oura/Fitbit bucket it exists to escape \u2014 and you break the story the customer most wants to tell: \"I own the one thing that keeps no score of me.\" Two smaller structural things: SUNDAY PAUSE and WIN-BACK are two different jobs stapled together, and there is no \"this isn't for everyone\" moment anywhere \u2014 which is the single most tribe-making sentence you're not saying. Fix the score, split the muddle, plant the flag of refusal, and this goes from very good to unforgettable.",
+   "flow_verdicts": [
+    {
+     "flow": "AWAKENING (quiz\u2192purchase)",
+     "verdict": "The storytelling is genuinely remarkable \u2014 Maya's Tuesday, attention residue, 'you answered honestly, most people don't' \u2014 and 'try this before you buy anything' is textbook permission: you give the experience away for free. But it opens the whole relationship on the word 'score,' and eleven emails is a long time to dwell in the problem before offering relief.",
+     "top_change": "Reframe 'Your presence score' as a map, not a grade, and add a 'this isn't for everyone' email that names the optimizer and sends them to Oura \u2014 the refusal is what makes the right people feel found."
+    },
+    {
+     "flow": "TRUE FIT (transactional)",
+     "verdict": "Functional and honest \u2014 'fingers are not standard parts' is a lovely human touch, and there's no false urgency anywhere. But the guaranteed-open moment, order-confirmed, says nothing remarkable: 'Order received. Everything below is confirmed.' is the flattest line in the set.",
+     "top_change": "Carry one line of the brand into the confirmation \u2014 the most-opened email you own shouldn't read like a receipt from anyone."
+    },
+    {
+     "flow": "ARRIVAL",
+     "verdict": "Well-paced and low-pressure \u2014 'one ask, and then I'll leave you to it' respects attention, and 'charge, pair, breathe' makes setup feel like a ritual, not a chore. This flow largely earns its opens.",
+     "top_change": "Hold the line \u2014 resist adding anything; the restraint here IS the product, so don't let a well-meaning 'tips' email creep in."
+    },
+    {
+     "flow": "FIRST 30 DAYS",
+     "verdict": "The strongest sequence you have. 'Day one: just wear it' sets the lowest possible bar (permission genius), 'the pause is working' performs the anti-data wedge instead of claiming it, and '21-day threshold' is remarkable because it argues with the clich\u00e9 everyone else repeats.",
+     "top_change": "Change the day-30 CTA from 'take the quiz again' \u2014 re-scoring someone's presence at the emotional peak reinstalls the very scoreboard the ring refuses; make it a look-back mirror, not a re-grade."
+    },
+    {
+     "flow": "SUNDAY PAUSE / WIN-BACK",
+     "verdict": "Two different jobs wearing one ring: a weekly ritual for people who are present, and a re-invitation for people who've drifted. Merged, they blur \u2014 and 'one minute, no ring required' (asks for nothing) is the best thing in here and deserves its own spotlight.",
+     "top_change": "Split them. And remember the ring never reports wear \u2014 win-back can never say 'we noticed you stopped'; it can only gently re-invite, or it betrays the whole no-tracking promise."
+    },
+    {
+     "flow": "RIPPLE (review/referral/gift)",
+     "verdict": "The ladder of asks mostly climbs right \u2014 small impression first, bigger story later \u2014 and 'no ask today, just a small mirror' is a beautiful permission beat. But it's overcrowded: review, referral, gift, community, and advocacy all jostling in one flow, and 'Your story matters' is a nonprofit clich\u00e9.",
+     "top_change": "Move the community invite (Presence Circle) out of RIPPLE and use it as the bridge INTO Inner Circle \u2014 community is engagement, not referral."
+    },
+    {
+     "flow": "INNER CIRCLE (advocates)",
+     "verdict": "This is the tribe, done right. 'The First Hundred' is pure Godin \u2014 status, scarcity-of-meaning-not-supply, the smallest viable audience made to feel chosen. 'This isn't a campaign, I'm writing because you wrote first' earns permission the honest way.",
+     "top_change": "Pull the buried gold into the subject lines \u2014 'Built with you, not near you' is a better subject than 'Help shape what's next.'"
+    },
+    {
+     "flow": "SPACES (studios/corporate)",
+     "verdict": "Disciplined B2B that keeps the soul \u2014 'the team's own words, before and after' is the anti-data wedge applied correctly to proof, and 'eight minutes, the only homework' respects a busy buyer. But the first touch, 'We received your inquiry,' is cold for a warmth brand.",
+     "top_change": "Warm the opener and watch the word 'report' \u2014 'presence report' is defensible when it's words, dangerous the moment it becomes a number."
+    }
+   ],
+   "email_edits": [
+    {
+     "id": "email-quiz-results",
+     "issue": "Opening the ENTIRE lifecycle relationship on the word 'score' hands the reader the enemy's scoreboard on email one \u2014 it files Pulse into the data-wearable category it exists to escape. The corpus already gives you the fix: 'That's not a grade. It's a map of what's waiting for you.' Keep the excellent hook ('You answered honestly. Most people don't.') and kill the grade.",
+     "new_subject": "Not a score. A map.",
+     "new_cta": "See what's waiting for you"
+    },
+    {
+     "id": "email-30-days-present",
+     "issue": "The hook is gorgeous ('you answered them as someone slightly different') but the CTA 'Take the quiz again' re-installs the scorecard at the emotional peak of the whole first-30 arc \u2014 asking someone to re-measure their presence is the exact trance the ring interrupts. Make it a mirror of who they were, not a re-grade.",
+     "new_subject": "",
+     "new_cta": "Look back at day one"
+    },
+    {
+     "id": "email-your-story",
+     "issue": "'Your story matters' is a nonprofit-fundraiser clich\u00e9 \u2014 it tells instead of shows and earns no open. The hook is far better than the subject ('a different ask, and a bigger one'); lead with that tension.",
+     "new_subject": "A bigger ask than last time",
+     "new_cta": ""
+    },
+    {
+     "id": "email-how-is-it-going",
+     "issue": "'How is it going with your ring?' is generic customer-service check-in language \u2014 forgettable in a full inbox. The hook already has the sharp, specific promise ('one question, and it takes one tap'); put it in the subject.",
+     "new_subject": "One question, one tap",
+     "new_cta": ""
+    },
+    {
+     "id": "email-spaces-inquiry",
+     "issue": "'We received your inquiry' is a cold auto-reply subject for a brand built entirely on warmth and attention. The hook itself is lovely ('thank you for thinking about your people this way') \u2014 promote it.",
+     "new_subject": "Thank you for thinking about your people",
+     "new_cta": ""
+    },
+    {
+     "id": "email-shape-whats-next",
+     "issue": "'Help shape what's next' is generic advisory-board language. The hook contains one of the best founder lines in the whole corpus \u2014 'I'd rather build it with you than near you' \u2014 and it's wasted below the fold. Pull it up.",
+     "new_subject": "Built with you, not near you",
+     "new_cta": ""
+    },
+    {
+     "id": "email-order-confirmed",
+     "issue": "'Order received. Everything below is confirmed.' is the flattest hook in the set, and it sits on the single most-opened email in the entire system. A guaranteed open that says nothing brand is a wasted asset. Subject ('Your ring is coming') is fine \u2014 the hook should carry one quiet line of the brand, not read like a warehouse receipt.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-team-report",
+     "issue": "The flow is strong, but watch 'presence report' \u2014 it's safe when the report is the team's own before/after WORDS (as the corpus intends) and dangerous the instant anyone renders it as a number or chart. Keep it strictly to anonymous quotes; never let a B2B buyer turn it into a dashboard, or the anti-data wedge collapses in the one flow with budget attached.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-come-back-to-now",
+     "issue": "This is a good, gentle win-back \u2014 'the ring is probably there now' on a windowsill is a humane assumption, not surveillance. Keep it, but make sure this flow NEVER references actual wear data, because the ring reports nothing; a 'we noticed you stopped wearing it' line anywhere here would betray the entire no-tracking promise the brand is built on.",
+     "new_subject": "",
+     "new_cta": ""
+    }
+   ],
+   "strategy_moves": [
+    "EXCISE THE SCORE, SYSTEM-WIDE. Reframe every quiz output from 'score/grade/percentile' to 'map/mirror' \u2014 in quiz-results, in 30-days-present, and anywhere else it surfaces. A number for someone's presence is the one thing that makes Pulse indistinguishable from Fitbit-in-gold. This is a coherence pass across flows, not a single edit.",
+    "ADD A 'THIS ISN'T FOR EVERYONE' EMAIL to AWAKENING (place it after questions-answered, before when-youre-ready). Name the optimizer who wants streaks and percentiles and gently send them to Oura. Telling the wrong people no is the single most tribe-building sentence you're not currently saying \u2014 it makes the right people feel found. It is entirely missing from the sequence.",
+    "SPLIT SUNDAY PAUSE FROM WIN-BACK. They do opposite jobs: one is an indefinite opt-in ritual for people who are present; the other re-invites people who've drifted. Make Sunday Pause its own ongoing engagement track, and build Win-Back as a separate time-based (never wear-based) re-invitation \u2014 because the ring never reports wear, the win-back can only ever gently re-offer, never say 'we saw you stop.'",
+    "MOVE PRESENCE CIRCLE out of the crowded RIPPLE flow and use it as the bridge INTO Inner Circle. Community is engagement and status, not referral or gift; grouping it with 'give a month' and 'story kit' muddies both the ask and the ladder.",
+    "TIGHTEN THE FRONT OF AWAKENING. You have three problem-dwelling emails (the-moment, autopilot-cost, readers-tuesday) before relief arrives. Eleven emails to purchase is a lot of opens to earn; consider merging or cutting one problem beat so pulse-not-ping (the turn toward relief) lands sooner.",
+    "AMPLIFY 'WE'LL BE HERE' as a deliberate permission asset. A brand that openly tells people it will stop writing, and means it, earns the right to keep writing. Make that promise explicit early, not just as a quiet note late \u2014 permission you name out loud is worth more than permission you assume."
+   ],
+   "biggest_win": "Kill the presence 'score' everywhere and reframe it as a map. It's the one change that touches the whole system and protects the whole system. The score currently opens your very first email ('Your presence score') and reappears at the emotional peak of month one ('take the quiz again') \u2014 so the two moments a customer most decides what story to tell themselves about Pulse are the two moments you hand them a grade. But 'I own the one thing that keeps no score of me' is the flag that makes this remarkable; 'I got a 72 on the presence test' files it next to every wearable it's trying to escape. Every advisor on the board named this as the fatal crack, and they're right. Reframe the quiz result as a map of what's waiting ('That's not a grade \u2014 it's a map,' already in your own corpus), make the day-30 moment a look-back mirror instead of a re-test, and the anti-data soul stays intact across all eight flows. Nail that, and the tribe has something worth waving."
+  },
+  "watts": {
+   "thesis": "The lovely surprise here is how often these letters actually do the thing rather than advertise it. \"Day one: just wear it \u2014 that's the whole job today.\" \"This one asks for nothing.\" \"You returned. Not once. Many times, in small ways nobody saw.\" Lines like those don't describe presence, they perform it \u2014 the sentence itself is the pause. That is the whole product, and much of this corpus knows it. But three times the ego sneaks its favorite toy back onto the table: the scorecard. \"Your presence score.\" \"Take the quiz again.\" \"The 21-day threshold.\" Each one quietly turns a homecoming into homework \u2014 a thing you can be passing or failing, a streak you must not break, a self you owe yourself by Friday. That is the one betrayal that matters, because the ring's entire genius is that it asks nothing back; the moment the copy hands you a grade, the wearer starts striving to be present, which is precisely the posture in which presence cannot occur. And beneath that, a gentler paradox: a brand whose promise is \"a few words, a few times a month\" has written fifty-five letters. The volume itself can become the opposite of the message. My counsel throughout is the same \u2014 say less, sell no result, and let the last word be an open door rather than a button.",
+   "flow_verdicts": [
+    {
+     "flow": "AWAKENING (quiz\u2192purchase)",
+     "verdict": "The best writing in the whole system lives here \u2014 the-moment, try-this-first, when-youre-ready and well-be-here embody non-striving instead of pitching it. But eleven pre-purchase letters contradicts the brand's own promise of restraint, and the flow opens on a score, which is the one thing it must never do.",
+     "top_change": "Rename the 'Your presence score' opener to a map (not a grade), and trim the sequence from 11 toward 8, closing on the canon 'When would now be a good time?' rather than a nag."
+    },
+    {
+     "flow": "TRUE FIT (transactional)",
+     "verdict": "The calmest, most human flow in the set \u2014 'fingers are not standard parts,' 'the fit is our problem to get right, not yours.' Nothing here sells striving; even the logistics feel unhurried. It holds the line without trying.",
+     "top_change": "Leave it almost untouched; if anything, this flow's plainness is the standard the louder flows should be measured against."
+    },
+    {
+     "flow": "ARRIVAL",
+     "verdict": "Warm and low-pressure, with a genuinely non-striving touch ('only one of them is for tonight'). The single off-note is manufacturing anticipation \u2014 'this is the email you've been waiting for' seeds craving for a future arrival, the exact opposite of being here now.",
+     "top_change": "Cut the 'email you've been waiting for' line in on-its-way and let the arrival simply arrive, without selling the wait."
+    },
+    {
+     "flow": "FIRST 30 DAYS",
+     "verdict": "Contains some of the truest presence writing anywhere ('that's the whole job today,' 'you returned, many times') \u2014 yet the numbered milestone drumbeat (week one, two weeks, 21 days, thirty days) quietly gamifies the month into levels, and it ends by sending people back to re-score themselves.",
+     "top_change": "Dissolve the 21-day-threshold (a streak in disguise) and remove the 'take the quiz again' retake, so presence never becomes a habit you're grinding or a grade you're comparing."
+    },
+    {
+     "flow": "SUNDAY PAUSE / WIN-BACK",
+     "verdict": "Tonally the truest flow of them all \u2014 one-minute-no-ring ('asks for nothing') and come-back-to-now perform presence rather than reporting it, and the win-back never guilts. This is the brand at rest in itself.",
+     "top_change": "Nothing structural \u2014 protect it; this is the template the other flows should quietly imitate."
+    },
+    {
+     "flow": "RIPPLE (review/referral/gift)",
+     "verdict": "Crowded \u2014 review, two referral asks, a gift, and community all elbowing in \u2014 and it takes before it gives: the beautiful non-ask mirror ('what-youve-given') sits buried at position five, after two requests. 'Someone you love is on autopilot too' also pokes guilt and asks the reader to diagnose a loved one.",
+     "top_change": "Reorder to give before it asks \u2014 lead with the mirror ('What you've given yourself'), then invite sharing \u2014 and warm 'someone-you-love' off its guilt-poke into the quiz's own tender question."
+    },
+    {
+     "flow": "INNER CIRCLE (advocates)",
+     "verdict": "Genuinely non-coercive and rare for advocacy copy \u2014 'I want to make it easy to refuse,' 'I'd rather build it with you than near you.' It offers belonging without status-chasing, which is exactly right.",
+     "top_change": "Soften 'You're showing others the way,' which sets the wearer on a pedestal (a role to live up to is a faint form of striving); keep it to what their story actually did."
+    },
+    {
+     "flow": "SPACES (studios/corporate)",
+     "verdict": "Appropriately businesslike and still calm; 'Feel one pulse first' wisely leads with the experience over the document, and team-report keeps proof as the team's own words rather than a metric \u2014 the only measurement the brand can honestly sell.",
+     "top_change": "Guard 'presence report' from drifting toward measurement \u2014 keep it anonymous before/after words, never a number or a dashboard, even for the corporate buyer who will ask for one."
+    }
+   ],
+   "email_edits": [
+    {
+     "id": "email-quiz-results",
+     "issue": "'Your presence score' installs the exact scorecard the whole brand exists to refuse \u2014 a number for someone's presence is Fitbit in gold, and the board's own guardrail bans it. 'You answered honestly. Most people don't.' is quietly comparative \u2014 a rank dressed as a compliment.",
+     "new_subject": "A map, not a score",
+     "new_cta": "See what it noticed"
+    },
+    {
+     "id": "email-30-days-present",
+     "issue": "'Take the quiz again' invites re-scoring \u2014 a before/after grade on your own presence. That is the treadmill the ring stepped off. The reflection in the body is lovely; the retake quietly betrays it by asking you to measure whether you improved.",
+     "new_subject": "",
+     "new_cta": "Tell me one moment you came back"
+    },
+    {
+     "id": "email-21-day-threshold",
+     "issue": "A '21-day threshold' is a streak in disguise \u2014 habit-count achievement framing. Nobody arrives in the present by grinding to a milestone, and the corpus itself says so. The subject celebrates crossing a line that shouldn't exist; reframe to dissolve it rather than mark it.",
+     "new_subject": "There was never a finish line",
+     "new_cta": ""
+    },
+    {
+     "id": "email-pause-is-working",
+     "issue": "'The pause is working' is a verdict \u2014 it audits presence as a mechanism delivering a result, the very head-level frame the body then spends its whole length undoing ('the ring doesn't count anything, so neither can I'). Let the subject already be at rest instead of promising an outcome.",
+     "new_subject": "Ten days in, nothing to check",
+     "new_cta": ""
+    },
+    {
+     "id": "email-someone-you-love",
+     "issue": "'Someone you love is on autopilot too' pokes guilt and asks the reader to diagnose a loved one \u2014 a problem-poke, not an invitation. It's earned by the quiz answer, so warm it into that tender question rather than a diagnosis of someone else's failing.",
+     "new_subject": "The person you most want to be present for",
+     "new_cta": ""
+    },
+    {
+     "id": "email-on-its-way",
+     "issue": "'This is the email you've been waiting for' manufactures anticipation \u2014 it seeds craving for a future arrival, which is the opposite of being here now. Everything else in the note is fine; simply don't sell the wait.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-your-story",
+     "issue": "'Your story matters' is generic promotional reassurance \u2014 the flattest subject in the set, and 'matters' is empty affirmation. The hook ('a different ask, and a bigger one') is more honest than the subject; let the subject carry that plain truth instead.",
+     "new_subject": "A bigger ask than last time",
+     "new_cta": ""
+    },
+    {
+     "id": "email-showing-the-way",
+     "issue": "'You're showing others the way' places the wearer on a pedestal \u2014 a role to live up to, which is a faint striving smuggled into an advocacy note. Keep it to what actually happened out there, in the plainest terms.",
+     "new_subject": "What your story did out there",
+     "new_cta": ""
+    },
+    {
+     "id": "email-how-is-it-going",
+     "issue": "Near-duplicate of 'what-did-you-notice' just one day earlier \u2014 both are 'one question, one tap' check-ins. Two asks inside the first four days is more asking than a brand about silence should do; the second one dilutes the first.",
+     "new_subject": "",
+     "new_cta": ""
+    }
+   ],
+   "strategy_moves": [
+    "Trim AWAKENING from 11 letters toward ~8. The sheer volume contradicts the brand's own promise \u2014 'a few words, a few times a month' \u2014 and a brand about silence that over-writes becomes the very noise it sells relief from. Merge redundancies and let restraint be felt, not just claimed.",
+    "Purge the scorecard in all three places it has crept back: rename 'Your presence score,' delete the 'take the quiz again' retake, and dissolve 'the 21-day threshold.' A ring that proudly knows nothing about you cannot mail you a grade. This is the single non-negotiable.",
+    "De-number the FIRST 30 DAYS milestone subjects (week one, two weeks, 21 days, thirty days) so the month reads as arriving, not leveling up. Numbered milestones quietly gamify presence into a game with rounds to clear.",
+    "Merge the two near-identical first-week check-ins ('what-did-you-notice' on day 3 and 'how-is-it-going' on day 4) into one. Ask once, gently, then leave them to it.",
+    "Reorder RIPPLE so it gives before it asks: lead with the mirror ('what-youve-given'), then invite sharing. Right now it takes twice \u2014 two referral pushes \u2014 before it ever hands the wearer something with no strings.",
+    "Resist adding almost anything. The one letter worth adding, if any, is a quiet permission to put the ring down for a day \u2014 non-attachment is the most on-brand thing this company could say, and it's currently missing. But when in doubt, say less.",
+    "End sequences on the canon koan ('When would now be a good time?') rather than a CTA button. Let the last word be an open door at rest, not a click."
+   ],
+   "biggest_win": "Rip the scorecard out of the lifecycle entirely. It is sneaking back in three places \u2014 'Your presence score' (quiz-results), 'Take the quiz again' (30-days-present), and 'The 21-day threshold' (a streak in disguise). Each one turns a homecoming into homework, and the moment a ring that 'knows nothing about you, on purpose' mails you a grade, the entire anti-data soul collapses and it's simply Fitbit in gold. Remove all three and the brand's deepest promise \u2014 nothing to check, ever, nothing to pass or fail \u2014 finally holds all the way through the letters, not just in the hero line."
+  },
+  "jobs": {
+   "thesis": "There are two products in this lifecycle. One is a $200 gold ring that hands a person their own afternoon back and speaks in lines that stop you cold \u2014 \"When would now be a good time?\", \"One of them is for tonight,\" \"You returned. Not once. Many times, in small ways nobody saw.\" The other is a marketing calendar that sends 55 emails, eight check-ins in the first 30 days, two identical Tuesday-morning short stories, two identical \"walk through the Presence Experience\" emails, and four closers in a row \u2014 and that second product is a betrayal of the first. You built a ring whose entire soul is \"nothing to check, asks nothing back,\" and then you strapped it to an inbox that never stops asking. The writing is genuinely good, some of it inevitable. The problem is not the sentences. The problem is that there are too many of them, and the two things that actually matter \u2014 the unconditional \"send it back, no reason needed\" return, and the clean kill of \"isn't this just another buzz?\" \u2014 appear in exactly zero emails. Cut a third of the sequence. Let the restraint of the sending BE the brand. Then spend the silence you free on the two lines that carry the whole thing.",
+   "flow_verdicts": [
+    {
+     "flow": "AWAKENING (quiz\u2192purchase)",
+     "verdict": "Strong writing, wrong volume. Eleven emails to sell a ring to someone who hasn't bought is a firehose from a brand that promises nothing to check. It ships two Tuesday-morning story emails (the-moment, readers-tuesday), two Presence-Experience emails (try-this-first, presence-experience), and four closers stacked back to back (questions-answered, when-youre-ready, well-be-here, still-thinking).",
+     "top_change": "Cut to six. Kill readers-tuesday and presence-experience as duplicates, fold well-be-here into when-youre-ready, and put the missing 30-day return in the closer."
+    },
+    {
+     "flow": "TRUE FIT (transactional)",
+     "verdict": "The cleanest flow \u2014 warm, transactional, does its job. 'The fit is our problem to get right, not yours' is exactly right. But gift-of-presence sits stranded here while three more gift emails live in two other flows; the gifting story is scattered across the whole system.",
+     "top_change": "Pull all gifting into one coherent sub-thread instead of one gift email marooned inside the sizing flow."
+    },
+    {
+     "flow": "ARRIVAL",
+     "verdict": "Good, felt, well-paced: on-its-way \u2192 before-it-arrives \u2192 its-here \u2192 charge-pair-breathe. 'Charge, pair, breathe \u2014 only one of them is for tonight' is inevitable. But nowhere does arrival tell a nervous new owner they can send it back.",
+     "top_change": "State the unconditional return once, unmeasured, at day-one or no-rush \u2014 the box just landed and the buyer is most anxious right here."
+    },
+    {
+     "flow": "FIRST 30 DAYS",
+     "verdict": "The best emotional writing in the system (two-weeks-returning, week-one-noticing) buried under too many pings \u2014 day 1, 3, 4, 7, 10, 14, 21, 30. Day-3 and day-4 both ask 'one small question, one tap.' The 21-day email leans on 'it takes 21 days to make a habit,' which is the streak/habit framing the brand exists to reject.",
+     "top_change": "Merge the day-3 and day-4 check-ins, cut 21-day-threshold, and get the day-30 CTA off re-scoring the quiz."
+    },
+    {
+     "flow": "SUNDAY PAUSE / WIN-BACK",
+     "verdict": "Lovely and the most on-brand flow you have. one-minute-no-ring ('this one asks for nothing') and pause-by-text are the ritual done right \u2014 this is the product embodied in the cadence itself.",
+     "top_change": "Protect it. Keep it the lightest-touch flow and make pause-by-text explicitly opt-in, so a text channel never becomes the notification the ring was built to escape."
+    },
+    {
+     "flow": "RIPPLE (review/referral/gift)",
+     "verdict": "Three different intents tangled together. first-impression \u2192 your-story is two review asks; give-a-month, someone-you-love, what-youve-given, story-kit blur referral, gift, and reflection. 'Your story matters' is greeting-card generic \u2014 it tells instead of shows.",
+     "top_change": "Separate review, gift, and referral into clean lines, cut the weakest of each, and rename the flat subjects."
+    },
+    {
+     "flow": "INNER CIRCLE (advocates)",
+     "verdict": "Strong, genuinely remarkable concept \u2014 The First Hundred, 'I'd rather build it with you than near you.' It earns the advocate's pride. Some redundancy across share-kit, tell-your-story, and showing-the-way, which all circle the same 'share your story' move.",
+     "top_change": "Keep it small and exclusive: The First Hundred, one share tool, one shape-whats-next. Cut the middle."
+    },
+    {
+     "flow": "SPACES (studios/corporate)",
+     "verdict": "A solid B2B mirror of the consumer arc. 'Feel one pulse first' as the proposal CTA is the best line in the flow \u2014 sell the felt object, not the deck. team-report ('their own words, read as a group') is the correct anti-data proof for a business buyer.",
+     "top_change": "Extend the assessment's restraint ('eight minutes, once \u2014 the only homework') across the whole flow; stay lean and lead with the felt pulse before the proposal."
+    }
+   ],
+   "email_edits": [
+    {
+     "id": "email-quiz-results",
+     "issue": "The subject ships the banned word 'score' \u2014 a number for someone's presence is the exact Fitbit-in-gold betrayal I warned the board about. The hook line is the best sentence in the email; use it.",
+     "new_subject": "You answered honestly.",
+     "new_cta": "See what the quiz found"
+    },
+    {
+     "id": "email-readers-tuesday",
+     "issue": "Second 'Tuesday morning' short-story email in the same flow after the-moment already used Maya's Tuesday. The device is arresting once and a formula twice. Cut it from AWAKENING; move Johanna's before/after words downstream as real proof.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-how-is-it-going",
+     "issue": "Day-4 email one day after the day-3 'what-did-you-notice,' and both ask for 'one small question / one tap.' Two taps in two days from a brand that asks nothing back is nagging. Merge into the day-3 check-in and cut this one.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-21-day-threshold",
+     "issue": "'It takes 21 days to make a habit' is streak/habit framing the anti-data soul rejects, there's no CTA, and the email has no job. Cut it.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-when-youre-ready",
+     "issue": "The strongest closer, but the board's number-one offer \u2014 the unconditional 30-day 'send it back, no reason needed' return \u2014 appears in no email anywhere in the funnel. Carry it here, stated as quietly as the pulse.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-questions-answered",
+     "issue": "This is where 'isn't this just another buzz?' actually lives, yet the clean kill \u2014 'A notification wants something from you. This wants nothing' \u2014 isn't in it. Add that answer, and add one 'who this is not for' line that sends the streak-chasing optimizer to Oura.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-your-story",
+     "issue": "'Your story matters' is greeting-card generic and tells instead of shows. Name the specific, un-outsourceable thing you're asking for.",
+     "new_subject": "The part only you can tell",
+     "new_cta": ""
+    },
+    {
+     "id": "email-well-be-here",
+     "issue": "An email whose entire subject is the emails themselves ('a short note about these letters') is precious navel-gazing, and it's the fourth closer in a row. Fold its one real idea into when-youre-ready and cut it.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-presence-experience",
+     "issue": "Duplicate destination and CTA with try-this-first \u2014 both send to the Presence Experience longform. try-this-first is stronger because it hands over the felt sixty seconds instead of pitching a walkthrough. Cut this, keep that.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-30-days-present",
+     "issue": "'Take the quiz again' reinstalls the scorecard at the finish line \u2014 re-scoring presence on day 30 betrays the wedge the whole product is built on. Send them to write, not to be re-graded.",
+     "new_subject": "",
+     "new_cta": "Write your Be Here WOW"
+    },
+    {
+     "id": "email-no-rush",
+     "issue": "Right emotional note, but the arrival window is exactly when a nervous buyer wants to know they can send it back \u2014 and no arrival email says so. Add the unconditional return, once, unmeasured.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-someone-you-love",
+     "issue": "Third or fourth gift/referral email scattered across three flows (with gift-of-presence, someone-thought-of-you, give-a-month), each re-explaining the ring. Collapse into one gifter sub-thread so the buyer isn't pitched the same gift idea from four directions.",
+     "new_subject": "",
+     "new_cta": ""
+    }
+   ],
+   "strategy_moves": [
+    "Cut the system from 55 emails to roughly 38. The volume itself violates the product: a ring that asks nothing back cannot arrive with a calendar that never stops asking. Fewer, inevitable, each one earning its send.",
+    "AWAKENING 11 \u2192 6: cut readers-tuesday (duplicate Tuesday-story device), cut presence-experience (duplicate of try-this-first), fold well-be-here into when-youre-ready. Keep quiz-results, the-moment, the autopilot\u2192pulse pair, try-this-first, questions-answered, when-youre-ready, plus still-thinking as the abandoned-cart branch only.",
+    "FIRST 30 DAYS 9 \u2192 6: merge what-did-you-notice + how-is-it-going into one day-3 check-in; cut 21-day-threshold's habit/streak framing. Keep day-one, day-3, week-one, pause-is-working (day 10), two-weeks-returning, 30-days-present.",
+    "Add the unconditional 30-day return \u2014 'wear it a month; if it isn't for you, send it back, no reason needed' \u2014 at two moments: the decision (when-youre-ready) and the arrival (no-rush/day-one). It is the board's single most important offer and it is in zero emails today.",
+    "Thread the objection-killer 'A notification wants something from you. This wants nothing' into questions-answered, and add one 'who this is NOT for' line that names the optimizer and sends them to Oura \u2014 telling the wrong people no is what makes the right people feel found.",
+    "Kill every 'score': rename the quiz-results subject off 'Your presence score,' and change the day-30 CTA off 'take the quiz again.' A number for presence is the one thing that collapses the whole anti-data soul.",
+    "Consolidate the scattered gift story \u2014 gift-of-presence (TRUE FIT), someone-thought-of-you (ARRIVAL), give-a-month and someone-you-love (RIPPLE) \u2014 into one clean gifter sub-thread plus one recipient email, so no buyer gets the same gift pitch from four flows."
+   ],
+   "biggest_win": "The cadence has to become the product. A ring whose entire promise is 'nothing to check, asks nothing back' cannot ship inside 55 emails with eight check-ins in the first 30 days \u2014 the medium is calling the message a liar. Cut roughly a third of the sequence, starting with the two duplicate Tuesday stories, the two duplicate Presence-Experience emails, the double day-3/day-4 check-in, and the habit-framed 21-day email. Then take the room you just freed and put the two things that are actually missing into it: the unconditional 'send it back, no reason needed' return, and the one-line kill of 'isn't this just another buzz?' Say no to a thousand emails so the ones that remain are inevitable."
+  },
+  "sutherland": {
+   "thesis": "Two brands wearing one ring, but at the email layer the good one mostly wins. Line for line these are some of the most psychologically literate wellness flows I have read: they perform presence rather than describe it, they refuse the chart on principle, and they pull off the rarest move in direct marketing, turning the buyer's hesitation into proof of fit (\"Pausing before you spend money on your own attention is exactly the instinct the ring is built around\"). That abandoned-cart line alone is worth the copywriter's salary. What is missing is not voice, it is a spine. The board spent ten passes deciding the offer is an unconditional 30-day return framed as the maker's certainty, and that spine appears in exactly zero of the fifty-five emails. For a brand that has deliberately thrown away the graph, the guarantee is not a safety net, it is the only proof mechanism left standing; omitting it leaves the most persuasive object in the box unopened. Meanwhile the funnel's very first email leads with \"Your presence score\", a grade, which quietly files the whole company under Fitbit-in-gold on line one. Fix the missing offer, de-score the opener, and correct two small sequencing sins (reciprocity landing after the ask, two check-ins in two days) and this goes from lovely to lethal.",
+   "flow_verdicts": [
+    {
+     "flow": "AWAKENING",
+     "verdict": "Beautiful emotional architecture (diagnosis, problem, mechanism, real-reader proof, try-before-buy, quiet close) and the abandoned-cart aikido is the single best line in the corpus. But it sells hard on the problem and never once reverses risk: the unconditional-return offer spine is absent, and email one opens with a score that betrays the anti-data soul.",
+     "top_change": "Thread the unconditional 30-day return through when-youre-ready and still-thinking as maker's-certainty proof, and de-score the quiz-results subject."
+    },
+    {
+     "flow": "TRUE FIT",
+     "verdict": "The best transactional voice I have seen anywhere: 'fingers are not standard parts', 'the fit is our problem to get right, not yours' convert a dull logistics moment into a trust deposit. Nothing is broken here.",
+     "top_change": "Name the unconditional return inside the sizing and exchange emails, since fit anxiety is exactly where a no-questions promise converts hardest."
+    },
+    {
+     "flow": "ARRIVAL",
+     "verdict": "Correctly milks the anticipation window (the wait often out-pleasures the object): before-it-arrives primes it while charge-pair-breathe defuses setup dread ('only one of them is for tonight').",
+     "top_change": "Swap on-its-way's generic 'the email you have been waiting for' for a line that performs the anticipation instead of announcing it."
+    },
+    {
+     "flow": "FIRST 30 DAYS",
+     "verdict": "Carries the signature anti-data moment: pause-is-working's 'we don't have a chart' is the brand's soul in one email. But two response-asks land on consecutive days (day-3 two-words, day-4 how-is-it-going), which over-asks a new owner.",
+     "top_change": "Cut how-is-it-going and let the generative two-words reply stand alone; self-articulated benefit is self-persuasion."
+    },
+    {
+     "flow": "SUNDAY PAUSE / WIN-BACK",
+     "verdict": "The gentlest win-back I have read: 'there's a dish, or a drawer, or a windowsill; the ring is probably there now' reclaims a lapsed wearer without a gram of guilt, which is right for a brand that refuses to nag.",
+     "top_change": "It may be too soft to reactivate; give come-back-to-now one concrete zero-effort door back in (the one-minute practice)."
+    },
+    {
+     "flow": "RIPPLE",
+     "verdict": "Referral reframed as pointing not selling (give-a-month) and personalised off the quiz answer (someone-you-love) is genuinely excellent. But reciprocity is inverted: the no-ask mirror sits after two asks.",
+     "top_change": "Move what-youve-given ahead of give-a-month and someone-you-love; give the gift before you make the request."
+    },
+    {
+     "flow": "INNER CIRCLE",
+     "verdict": "The status-and-belonging play is pitch-perfect: First Hundred ('not investors, not advisors') and 'I would rather build it with you than near you' are identity rewards money cannot buy, and the co-creation effect is doing real work.",
+     "top_change": "Guard first-hundred's membership framing so 'about a hundred' never tips into spots-left countdown language; keep it identity-scarce, never clock-scarce."
+    },
+    {
+     "flow": "SPACES",
+     "verdict": "Carries the anti-data wedge into B2B without flinching: team-report's anonymised before/after is 'the only number we would trust', and spaces-proposal's 'feel one pulse first' puts the felt experience before the spreadsheet.",
+     "top_change": "This is the one flow allowed a little arithmetic; let team-report quantify the qualitative (share of the team using words like 'present') without ever installing an individual score."
+    }
+   ],
+   "email_edits": [
+    {
+     "id": "email-quiz-results",
+     "issue": "'Your presence score' ships a grade on the funnel's first line and files Pulse under the exact quantify-everything category it exists to refuse; the hook already reframes ('a map, not a grade'). The subject should diagnose the problem's size, never score the person.",
+     "new_subject": "A map of what's waiting",
+     "new_cta": ""
+    },
+    {
+     "id": "email-when-youre-ready",
+     "issue": "The soft-close carries no risk-reversal, and the board's entire offer consensus (an unconditional 30-day return) appears in none of the 55 emails. Add it here, and sell it as the maker's certainty (the proof a no-chart brand cannot otherwise show), not as a safety net.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-still-thinking",
+     "issue": "Owns the sharpest line in the funnel (hesitation-as-fit) but stops short of closing; the reframe has nowhere to land. Pair it with the no-reason, no-questions return so the objection you just validated gets resolved in the same breath.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-how-is-it-going",
+     "issue": "The most generic subject in the set, and a second response-ask landing one day after the two-words reply. Cut it, or merge its 'one tap' into what-did-you-notice; two check-ins in two days over-asks a new owner.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-your-story",
+     "issue": "'Your story matters' is greeting-card generic and undersells the email; the disarming hook ('an ask I want to make easy to refuse') is the real subject, and the permission framing is far more Pulse.",
+     "new_subject": "An ask you're free to refuse",
+     "new_cta": ""
+    },
+    {
+     "id": "email-well-be-here",
+     "issue": "A meta note about 'these letters themselves' dropped mid-conversion, before the reader has bought into the letters at all; it interrupts momentum. Fold its no-pressure message into when-youre-ready, or move it to post-purchase onboarding.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-what-youve-given",
+     "issue": "Reciprocity is inverted: this 'no ask, just a mirror' gift currently lands after two referral asks. Reorder it ahead of give-a-month and someone-you-love; you give before you request, not after.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-on-its-way",
+     "issue": "'This is the email you have been waiting for' announces the anticipation instead of performing it, a faintly hypey off-brand beat in an otherwise present-tense flow. Rewrite the hook to embody the wait rather than narrate it.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-first-hundred",
+     "issue": "The membership framing is a genuine status reward and should stay, but 'about a hundred people' is one careless edit from spots-left scarcity, which is banned. Keep the copy identity-scarce ('this is who they are'), never seat- or clock-scarce.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-questions-answered",
+     "issue": "'Your questions, answered' is functional but flat, and this FAQ is the natural home for the 'what if it is not for me?' answer. Add the unconditional-return question to the list so the objection dies exactly where the buyer goes looking for it.",
+     "new_subject": "",
+     "new_cta": ""
+    },
+    {
+     "id": "email-come-back-to-now",
+     "issue": "The gentlest win-back imaginable, which is right, but it may be too soft to actually reactivate. Give it one concrete zero-effort door back in (the one-minute-no-ring practice) so the kindness still has a handle the lapsed wearer can grab.",
+     "new_subject": "",
+     "new_cta": "Try one minute"
+    }
+   ],
+   "strategy_moves": [
+    "Add the unconditional 30-day return to the three purchase-decision emails (when-youre-ready, still-thinking, questions-answered) and to the sizing/exchange emails. The board decided the offer spine is 'wear it a month, send it back, no reason, no questions' and it currently exists in zero of the 55 emails. This is the biggest single gap in the whole system.",
+    "Add ONE new AWAKENING email: 'This might not be for you.' Name the optimiser who wants streaks, scores and percentiles and gently send them to Oura. Turning the wrong people away is costly signalling: it raises desire in the right ones and makes them feel found.",
+    "Reorder RIPPLE so reciprocity runs the right way: what-youve-given (the no-ask mirror) BEFORE give-a-month and someone-you-love. Give the gift, then make the request, never the reverse.",
+    "Cut how-is-it-going from FIRST 30 DAYS (redundant with the day-3 two-words reply, and a second ask in two days). Let the two-words email carry the early check-in alone; the customer articulating the benefit themselves is stronger persuasion than a company asking again.",
+    "Relocate well-be-here out of the pre-purchase sequence into post-purchase onboarding. A note about 'these letters' only makes sense once someone has chosen to receive them; mid-funnel it is momentum-killing filler.",
+    "Reframe the quiz output brand-wide as diagnosis, not grade. The quiz may name the SIZE of the problem (the reclaimable hours that are 'waiting, not spent') but must never hand back a presence percentile; one is a map, the other is the scoreboard the ring exists to switch off."
+   ],
+   "biggest_win": "The unconditional return, reframed as proof rather than protection. Add 'Wear it a month; if it isn't for you, send it back, no reason, no questions' to the purchase-decision emails (when-youre-ready, still-thinking, questions-answered) and the sizing flow, but sell it as the maker's certainty, not a refund policy. Here is the counterintuitive part: a brand that has deliberately refused the chart, the score and the graph has thrown away its usual proof mechanism. A no-questions guarantee does the graph's job better than the graph ever could, because it is a costly signal that says the maker is sure, and it lets the buyer stop calculating and simply try. It shrinks the one genuinely weak lever ('but will it work for ME?') to near zero without a single number, urgency cue, scarcity claim or exclamation point. The board wrote the line in ten passes of consensus; the flows never once said it out loud. Say it."
+  }
+ },
+ "consensus": {
+  "headline": "Fix the two things that betray the product: (1) strip every \"score / grade / re-quiz / streak\" so a ring that \"knows nothing about you, on purpose\" truly keeps no score of anyone, and (2) thread the board's unconditional 30-day return \u2014 currently in ZERO of the 55 emails \u2014 through the close and the arrival. Both move units and protect the anti-data soul without adding one number, countdown, or hype word.",
+  "flow_report": [
+   {
+    "flow": "AWAKENING (quiz to purchase)",
+    "verdict": "World-class nurture that opens on a grade and never closes \u2014 de-score the front, add the offer, cut the duplicates.",
+    "changes": [
+     "Rename email-quiz-results off the banned word 'score'; its own hook already carries the fix ('a map, not a grade')",
+     "Thread the unconditional 30-day return through email-when-youre-ready (keep the canon subject) and email-still-thinking, and give the flow one quiet buy ask \u2014 11 emails currently make no clean offer",
+     "Cut the duplicates: email-readers-tuesday (2nd Tuesday-story after email-the-moment) and email-presence-experience (same destination/CTA as email-try-this-first); fold email-well-be-here into the close",
+     "Add one 'this isn't for everyone' email that names the optimizer and points them to Oura \u2014 telling the wrong people no makes the right people feel found",
+     "Add the objection-killer 'a notification wants something from you; this wants nothing' to email-questions-answered, and name the return there",
+     "Trim 11 emails toward ~7 (exact depth unresolved \u2014 see dissent)"
+    ]
+   },
+   {
+    "flow": "TRUE FIT (transactional/sizing)",
+    "verdict": "Keep the receipt-plain restraint, but seed the guarantee and one brand line where doubt first creeps in.",
+    "changes": [
+     "State the unconditional 30-day return in email-order-confirmed and the sizing emails \u2014 fit anxiety converts hardest on a no-questions promise",
+     "Carry one quiet line of the brand into email-order-confirmed's flat hook; it is the single most-opened email you own",
+     "Pull email-gift-of-presence out of the sizing flow into one coherent gifter sub-thread",
+     "Guard any 'report' language from ever becoming a number"
+    ]
+   },
+   {
+    "flow": "ARRIVAL",
+    "verdict": "Protect the restraint; kill one hype hook; put the return where buyer anxiety peaks.",
+    "changes": [
+     "Rewrite email-on-its-way's hook 'This is the email you've been waiting for' \u2014 it manufactures craving, the opposite of presence",
+     "State the unconditional return once, unmeasured, in email-no-rush / email-day-one \u2014 the box just landed and the buyer is most anxious here",
+     "Keep email-its-here CTA-light, but a one-line setup primer can prime activation before the box lands"
+    ]
+   },
+   {
+    "flow": "FIRST 30 DAYS",
+    "verdict": "The emotional peak of the year \u2014 and it re-installs the scoreboard three times. De-score, de-streak, de-duplicate.",
+    "changes": [
+     "Change email-30-days-present CTA off 'Take the quiz again' to a look-back mirror \u2014 re-scoring presence at day 30 betrays the wedge",
+     "Cut email-21-day-threshold \u2014 habit/streak framing, no CTA, no job",
+     "Merge the day-3 email-what-did-you-notice ('Reply with your two words' \u2014 keep this canon line) and day-4 email-how-is-it-going into one gentle check-in; two asks in two days over-asks a brand that asks nothing back",
+     "De-number the milestone subjects so the month reads as arriving, not leveling up",
+     "Pipe the collected 'two words' back into AWAKENING as human, non-numeric proof"
+    ]
+   },
+   {
+    "flow": "SUNDAY PAUSE / WIN-BACK",
+    "verdict": "Two opposite jobs stapled together \u2014 split them, and never reference wear the ring cannot see.",
+    "changes": [
+     "Separate Sunday Pause (ongoing opt-in ritual) from Win-Back (time-based re-invite)",
+     "Win-back must never imply 'we noticed you stopped' \u2014 the ring reports nothing; that line would betray the whole no-tracking promise",
+     "Lead reactivation with email-one-minute-no-ring (asks for nothing) before email-come-back-to-now",
+     "Give email-come-back-to-now one concrete zero-effort door, kept explicitly guilt-free",
+     "Make email-pause-by-text explicitly opt-in so a text channel never becomes the notification the ring escapes"
+    ]
+   },
+   {
+    "flow": "RIPPLE (review/referral/gift)",
+    "verdict": "Reciprocity runs backwards and three asks are tangled \u2014 give before you ask, and separate the lines.",
+    "changes": [
+     "Reorder email-what-youve-given (the no-ask mirror) AHEAD of email-give-a-month and email-someone-you-love",
+     "Warm email-someone-you-love off its guilt-poke subject into the quiz's own tender question",
+     "Collapse the scattered gift emails (gift-of-presence, someone-thought-of-you, give-a-month, someone-you-love) into one gifter sub-thread + one recipient email",
+     "Move email-presence-circle out of RIPPLE and use it as the bridge INTO Inner Circle \u2014 community is engagement, not referral",
+     "Give the gift path the same 30-day safety net"
+    ]
+   },
+   {
+    "flow": "INNER CIRCLE (advocates)",
+    "verdict": "Some of the best founder lines in the corpus, buried below the fold, and asks with no button.",
+    "changes": [
+     "Pull founder gold into subjects: email-shape-whats-next to 'Built with you, not near you'",
+     "Arm every ask with one gentle one-tap CTA (email-tell-your-story, email-we-noticed)",
+     "Sharpen email-we-noticed's cold subject 'We noticed your practice' \u2014 a surveillance read that grazes the no-tracking wedge \u2014 to the hook's own 'Because you wrote first'",
+     "Soften email-showing-the-way's pedestal framing to what the story actually did",
+     "Fix email-your-story's greeting-card subject",
+     "Keep email-first-hundred identity-scarce ('about a hundred people who shaped this'), never seat- or clock-scarce"
+    ]
+   },
+   {
+    "flow": "SPACES (studios/corporate)",
+    "verdict": "Strong and restrained, but slow to the lead and one word from collapsing the wedge.",
+    "changes": [
+     "email-spaces-inquiry: warm the cold auto-reply subject AND drive straight to booking the assessment \u2014 B2B speed-to-lead is everything",
+     "Keep 'team's presence report' strictly anonymous before/after words, never a dashboard or number \u2014 this is the one flow with budget attached, so the anti-data wedge is most at risk here",
+     "Extend the assessment's restraint ('eight minutes, once \u2014 the only homework') across the whole flow; lead with the felt pulse before the proposal"
+    ]
+   }
+  ],
+  "email_edits": [
+   {
+    "id": "email-quiz-results",
+    "new_subject": "A map of what's waiting",
+    "new_cta": "See what's waiting for you",
+    "why": "GUARDRAIL + mandatory: kills the banned word 'score' on the funnel's first line (verified original subject is 'Your presence score'). 'Waiting' is the board-sanctioned diagnosis \u2014 the hours waiting for you \u2014 naming the SIZE of the problem, never a grade or percentile. New CTA beats the flat 'See your full result' with quiet curiosity and no number. Keeps the excellent hook 'You answered honestly. Most people don't.'"
+   },
+   {
+    "id": "email-30-days-present",
+    "new_cta": "Look back at day one",
+    "why": "GUARDRAIL + mandatory: removes 'Take the quiz again', which re-installs the scorecard at the month's emotional peak. A backward mirror, not a re-grade \u2014 no re-measurement of presence. Keeps the gorgeous hook intact."
+   },
+   {
+    "id": "email-when-youre-ready",
+    "new_cta": "Wear it a month, then decide",
+    "why": "Threads the unconditional 30-day return calmly as the maker's certainty \u2014 no deadline, no 'act now'. Resolves the one weak lever (perceived risk) on the decisive close; original CTA 'When you're ready' made no offer at all. Slightly less poetic than the original, but risk-reversal on the close is the single biggest unit-mover, so it stays. Keep the canon subject 'When would now be a good time?' and the countdown-free hook untouched."
+   },
+   {
+    "id": "email-still-thinking",
+    "new_cta": "Pick it back up \u2014 a month to change your mind",
+    "why": "Keeps the gentleness of the verified original 'Pick up where you left off' (no imperative 'Finish') while adding the no-reason return, so the corpus's sharpest line ('Pausing before you spend money on your own attention is exactly the instinct the ring is built around') resolves in the same breath. Risk reversal on an abandoned cart, zero urgency added."
+   },
+   {
+    "id": "email-your-story",
+    "new_subject": "A bigger ask than last time",
+    "why": "Replaces greeting-card-generic 'Your story matters' with the hook's own honest tension ('a different ask, and a bigger one'). Shows instead of tells; earns the open on candor, not flattery. Audience is already-warm advocates, so naming the ask up front reads as respect, not friction."
+   },
+   {
+    "id": "email-spaces-inquiry",
+    "new_subject": "Thank you for thinking about your people",
+    "new_cta": "Book your assessment",
+    "why": "Warms the cold auto-reply 'We received your inquiry' using the hook's own line, and gives the B2B hand-raise a next step while intent is hot. 'Book your assessment' is a plain action, not a hype push \u2014 and the assessment stays the restrained 'eight minutes, once'. This is the flow with budget attached, so speed-to-lead matters most."
+   },
+   {
+    "id": "email-shape-whats-next",
+    "new_subject": "Built with you, not near you",
+    "why": "Promotes one of the best founder lines in the corpus out from below the fold. Unmistakably Pulse voice; replaces generic 'Help shape what's next' with a line that earns the open on its own."
+   },
+   {
+    "id": "email-tell-your-story",
+    "new_cta": "Share your story",
+    "why": "The email asks for a story and gave no button (bare dash, verified). A plain one-tap action \u2014 no pressure \u2014 captures the easiest conversion in the advocate flow, honoring the hook's promise to 'make it easy to refuse'."
+   },
+   {
+    "id": "email-we-noticed",
+    "new_subject": "Because you wrote first",
+    "new_cta": "Reply and say hello",
+    "why": "SHARPENED this pass: the verified original subject 'We noticed your practice' reads as surveillance on a cold open \u2014 it grazes the no-tracking wedge before the hook can defend it. 'Because you wrote first' pulls straight from the hook ('I'm writing because you wrote first'), removes all tracking ambiguity, and converts harder on curiosity. The added CTA arms the warmest advocate opener with the effortless reply it implies."
+   },
+   {
+    "id": "email-come-back-to-now",
+    "new_cta": "Try one minute",
+    "why": "Gives the gentlest win-back a concrete zero-effort handle (the one-minute, no-ring practice) without guilt or 'we saw you stop'. Original CTA was a bare dash. Kindness with something a lapsed wearer can actually grab."
+   },
+   {
+    "id": "email-showing-the-way",
+    "new_subject": "What your story did out there",
+    "why": "Removes the pedestal of 'You're showing others the way' \u2014 a role to live up to, a faint striving smuggled into advocacy. Keeps it to what the story plainly did, matching the hook ('I want to show you one thing it did there')."
+   },
+   {
+    "id": "email-someone-you-love",
+    "new_subject": "The person you most want to be present for",
+    "why": "Warms the guilt-poke 'Someone you love is on autopilot too' \u2014 which diagnoses a loved one's failing \u2014 into the quiz's own tender question ('who you most want to be present for'). Invitation, not indictment. Keep the 'Give presence' CTA."
+   },
+   {
+    "id": "email-pause-is-working",
+    "new_subject": "Ten days in, nothing to check",
+    "why": "GUARDRAIL: 'The pause is working' is a verdict that audits presence as a mechanism delivering a result \u2014 the exact head-level frame the body spends its length undoing ('the ring doesn't count anything, so neither can I'). 'Nothing to check' lets the subject already be at rest \u2014 deeply Pulse, zero measurement, and now aligned with the body instead of fighting it."
+   }
+  ],
+  "strategy": [
+   "EXCISE THE SCORE SYSTEM-WIDE (all five agree, non-negotiable): rename email-quiz-results off 'Your presence score', change email-30-days-present's CTA off 'Take the quiz again', and cut email-21-day-threshold's streak framing. A ring that proudly keeps no score cannot mail anyone a grade \u2014 a coherence pass across flows, not one edit.",
+   "ADD THE UNCONDITIONAL 30-DAY RETURN to the close and the arrival \u2014 email-when-youre-ready, email-still-thinking, email-questions-answered, email-order-confirmed, email-no-rush \u2014 framed as the maker's certainty, never a countdown or 'act now'. It is the board's decided offer, in zero of 55 emails, and for a brand that threw away the chart it is the only proof mechanism left standing. On the decisive close, risk reversal is the single biggest unit-mover.",
+   "CUT THE CLEAR DUPLICATES: email-readers-tuesday, email-presence-experience, merge day-3/day-4 check-ins, cut email-21-day-threshold, fold email-well-be-here into the close. Trim AWAKENING 11 toward ~7 and the system toward the high-30s \u2014 a ring that asks nothing back cannot ship inside a calendar that never stops asking.",
+   "ADD ONE 'THIS ISN'T FOR EVERYONE' EMAIL to AWAKENING (after questions-answered, before the close): name the optimizer who wants streaks and percentiles and gently send them to Oura. Turning the wrong people away makes the right people feel found.",
+   "SPLIT SUNDAY PAUSE FROM WIN-BACK: Sunday Pause an ongoing opt-in ritual, Win-Back a strictly time-based re-invite. Because the ring reports nothing, win-back can only gently re-offer \u2014 never 'we saw you stop.' Lead it with email-one-minute-no-ring, then email-come-back-to-now's 'Try one minute' door.",
+   "SCRUB LATENT SURVEILLANCE SUBJECTS: 'We noticed your practice' (fixed this pass to 'Because you wrote first') is the tell \u2014 audit every subject line for any phrase that implies the ring or the brand watched the wearer, and rewrite to self-report or invitation.",
+   "REORDER RIPPLE TO GIVE BEFORE IT ASKS: email-what-youve-given ahead of email-give-a-month and email-someone-you-love. Consolidate the scattered gift emails into one gifter sub-thread + one recipient email, and move email-presence-circle out to bridge into Inner Circle.",
+   "BUILD THE PROOF LOOP: pipe the 'two words' and week-one noticings collected in FIRST 30 DAYS, anonymized, back into pre-purchase emails as the only allowed (human, non-numeric) before/after proof that fills the no-graph hole.",
+   "ARM THE ADVOCATE FLOW: give every ask one gentle one-tap CTA and lift the buried founder lines into subjects; keep email-first-hundred identity-scarce, never seat- or clock-scarce."
+  ],
+  "dissent": "Two live disagreements survive both passes. (1) The number question: Hormozi alone wants to SURFACE the reclaimable-hours figure from the quiz as a value anchor for the $200; Watts and Godin want zero numbers anywhere near presence. Sutherland's bridge holds \u2014 the quiz may name the SIZE of the problem (hours waiting, off the hero) as diagnosis, but must never hand back a presence score or percentile. This is why email-quiz-results' new subject 'A map of what's waiting' is allowed but 'A map, not a grade' is not: even negating the banned word 'grade' re-introduces the scoreboard on the funnel's first line. (2) Depth of cuts: Jobs pushes 55 to ~38 and Watts pushes AWAKENING to ~8, deeper than Hormozi. The board agrees unanimously on the named duplicate cuts but leaves the final total unsettled \u2014 start with the agreed duplicates, measure, then decide. PASS 2 RESULT: all 13 edits verified against the live corpus (every claimed original matched) and all clear the anti-data / no-hype / banned-words check. One sharpening applied \u2014 email-we-noticed gains a subject fix ('Because you wrote first') because the untouched original 'We noticed your practice' reads as surveillance on a cold open; no board member's stated guardrail objects, and it strictly improves clarity. No edit was dropped: each genuinely beats its original. Weakest kept edit is email-when-youre-ready's CTA (less poetic than the original) \u2014 retained because risk reversal on the close outweighs the polish loss."
+ }
+}

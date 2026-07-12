@@ -1,0 +1,332 @@
+[
+ {
+  "id": "email-21-day-threshold",
+  "subject": "The 21-day threshold",
+  "cta": "\u2014",
+  "hook": "People say it takes 21 days to make a habit. The real story is less tidy and more interesting, and you're standing in the middle of it."
+ },
+ {
+  "id": "email-30-days-present",
+  "subject": "Thirty days present",
+  "cta": "Take the quiz again",
+  "hook": "Thirty days ago you put the ring on. Before that, you answered a handful of quiet questions \u2014 remember the quiz? You answered them as someone slightly different. Someone who was somewhere else a little more often."
+ },
+ {
+  "id": "email-autopilot-cost",
+  "subject": "What autopilot costs",
+  "cta": "\u2014",
+  "hook": "Some good news first, because it's true: attention comes back. It isn't gone. It's just spoken for."
+ },
+ {
+  "id": "email-before-it-arrives",
+  "subject": "Before it arrives",
+  "cta": "\u2014",
+  "hook": "Your ring is a few days out. Between now and then there are exactly two things worth doing, and together they take less than five minutes."
+ },
+ {
+  "id": "email-charge-pair-breathe",
+  "subject": "Charge, pair, breathe",
+  "cta": "Begin your first pulse",
+  "hook": "The box is open, or about to be. Three small steps stand between you and your first pulse \u2014 and only one of them is for tonight."
+ },
+ {
+  "id": "email-come-back-to-now",
+  "subject": "Come back to now",
+  "cta": "\u2014",
+  "hook": "There's a dish, or a drawer, or a windowsill. The ring is probably there now."
+ },
+ {
+  "id": "email-confirm-size",
+  "subject": "Confirm your size",
+  "cta": "\u2014",
+  "hook": "The sizer has done its work. Tap the size that fit this morning \u2014 the one that cleared the knuckle and sat still \u2014 and your ring ships within two days."
+ },
+ {
+  "id": "email-day-one",
+  "subject": "Day one: just wear it",
+  "cta": "\u2014",
+  "hook": "The ring is on your finger. That's the whole job today."
+ },
+ {
+  "id": "email-exchange-simple",
+  "subject": "Exchange, made simple",
+  "cta": "Start your exchange",
+  "hook": "Your ring arrived and the size isn't right. That happens \u2014 fingers are not standard parts. The exchange is free, and it is short."
+ },
+ {
+  "id": "email-first-hundred",
+  "subject": "The First Hundred",
+  "cta": "Take your place",
+  "hook": "There are about a hundred people who shaped what Pulse is becoming. Not investors. Not advisors. People who wore the ring through real mornings, told the truth about it, and let us pass that truth on."
+ },
+ {
+  "id": "email-first-impression",
+  "subject": "Be Here WOW",
+  "cta": "Write your impression",
+  "hook": "Thirty days ago the ring went on your finger. Today I want to ask you for something small."
+ },
+ {
+  "id": "email-gift-of-presence",
+  "subject": "A gift of presence",
+  "cta": "\u2014",
+  "hook": "Your gift is confirmed. Somewhere, someone is about to get their attention back \u2014 and it comes from you."
+ },
+ {
+  "id": "email-give-a-month",
+  "subject": "Give a month of presence",
+  "cta": "Share your link",
+  "hook": "A month ago, you'd have wanted someone to point. That's all this is."
+ },
+ {
+  "id": "email-how-is-it-going",
+  "subject": "How is it going with your ring?",
+  "cta": "\u2014",
+  "hook": "Four days of wearing. I have exactly one question, and it takes one tap."
+ },
+ {
+  "id": "email-its-here",
+  "subject": "It's here",
+  "cta": "\u2014",
+  "hook": "Your ring is at your door. One ask, and then I'll leave you to it."
+ },
+ {
+  "id": "email-launch-kit",
+  "subject": "Your launch kit",
+  "cta": "Download the launch kit",
+  "hook": "The pilot is agreed and the rings are on their way. This kit is everything launch day needs, in three pieces."
+ },
+ {
+  "id": "email-no-rush",
+  "subject": "No rush",
+  "cta": "\u2014",
+  "hook": "Your ring arrived a few days ago. I'm not writing to hurry you."
+ },
+ {
+  "id": "email-on-its-way",
+  "subject": "It's on its way",
+  "cta": "\u2014",
+  "hook": "This is the email you've been waiting for. Your ring left us this morning."
+ },
+ {
+  "id": "email-one-minute-no-ring",
+  "subject": "One minute, no ring required",
+  "cta": "\u2014",
+  "hook": "This one asks for nothing. Not the ring, not the app, not even a quiet room."
+ },
+ {
+  "id": "email-order-confirmed",
+  "subject": "Your ring is coming",
+  "cta": "\u2014",
+  "hook": "Order received. Everything below is confirmed."
+ },
+ {
+  "id": "email-pause-by-text",
+  "subject": "The pause, by text",
+  "cta": "Get the midweek text",
+  "hook": "Most Wednesdays, somewhere around midday, we send one line by text. Not a picture. Not an offer. One sentence, then nothing."
+ },
+ {
+  "id": "email-pause-is-working",
+  "subject": "The pause is working",
+  "cta": "\u2014",
+  "hook": "Ten days in, this is usually where a company would show you a chart. Your numbers, your week in review. We don't have one. The ring doesn't count anything, so neither can I."
+ },
+ {
+  "id": "email-presence-circle",
+  "subject": "Join the Presence Circle",
+  "cta": "Join the Circle",
+  "hook": "Six weeks in. This invitation waits for that, on purpose \u2014 it means something different now than it would have on day two."
+ },
+ {
+  "id": "email-presence-experience",
+  "subject": "The Presence Experience",
+  "cta": "Walk through it",
+  "hook": "One thing to hand you today, and it isn't a pitch."
+ },
+ {
+  "id": "email-pulse-not-ping",
+  "subject": "A pulse instead of a ping",
+  "cta": "\u2014",
+  "hook": "The last two notes were about attention leaving. Today, the part I started this company to say: what gently brings it back."
+ },
+ {
+  "id": "email-questions-answered",
+  "subject": "Your questions, answered",
+  "cta": "\u2014",
+  "hook": "By now you know what the ring does. A few times an hour, a small pulse on your finger, and you come back to the room you're in. What's usually left are the practical questions. Here they are, answered plainly."
+ },
+ {
+  "id": "email-quiz-results",
+  "subject": "Your presence score",
+  "cta": "See your full result",
+  "hook": "You answered honestly. Most people don't."
+ },
+ {
+  "id": "email-readers-tuesday",
+  "subject": "One reader's Tuesday, after",
+  "cta": "\u2014",
+  "hook": "A few notes ago I told you about a Tuesday: 6:50am, the toast, the nod on a half-second delay. This week a reader named Johanna wrote to me about her Tuesday. Her quiz showed the same pattern as yours \u2014 {{archetype}}. I "
+ },
+ {
+  "id": "email-right-fit",
+  "subject": "First, the right fit",
+  "cta": "\u2014",
+  "hook": "Before order {{order_number}} ships, one question. Do you know your ring size?"
+ },
+ {
+  "id": "email-shape-whats-next",
+  "subject": "Help shape what's next",
+  "cta": "\u2014",
+  "hook": "We're building next year's Pulse now. I'd rather build it with you than near you."
+ },
+ {
+  "id": "email-share-kit",
+  "subject": "Here's what you can share",
+  "cta": "\u2014",
+  "hook": "By now someone has probably asked you about the ring. At the sink, in the car park, over someone else's shoulder at work. That question can be strangely hard to answer."
+ },
+ {
+  "id": "email-showing-the-way",
+  "subject": "You're showing others the way",
+  "cta": "\u2014",
+  "hook": "Your story went where you said it could \u2014 {{shared_where}}. I want to show you one thing it did there."
+ },
+ {
+  "id": "email-sizing-kit",
+  "subject": "Your sizing kit is here",
+  "cta": "\u2014",
+  "hook": "Your sizing kit was delivered today. No rush \u2014 good fit is a one-evening job, and it's worth doing slowly."
+ },
+ {
+  "id": "email-someone-thought-of-you",
+  "subject": "Someone thought of you",
+  "cta": "\u2014",
+  "hook": "There's a box on its way to you, or maybe already in your hands. {{gift_sender}} sent it. Inside is a gold ring that hums gently a few times an hour \u2014 not to alert you to anything, but to bring you back to where you alre"
+ },
+ {
+  "id": "email-someone-you-love",
+  "subject": "Someone you love is on autopilot too",
+  "cta": "Give presence",
+  "hook": "Near the end of the quiz, we asked who you most want to be present for."
+ },
+ {
+  "id": "email-space-assessment",
+  "subject": "Your space assessment",
+  "cta": "Begin the assessment",
+  "hook": "Next comes the assessment. Eight minutes, once &mdash; the only homework in this whole process."
+ },
+ {
+  "id": "email-spaces-inquiry",
+  "subject": "We received your inquiry",
+  "cta": "\u2014",
+  "hook": "Your note arrived. Thank you for thinking about your people this way."
+ },
+ {
+  "id": "email-spaces-proposal",
+  "subject": "Your proposal",
+  "cta": "Feel one pulse first",
+  "hook": "Your proposal is ready &mdash; it's attached. This note is just the cover."
+ },
+ {
+  "id": "email-spaces-questions",
+  "subject": "Questions answered",
+  "cta": "\u2014",
+  "hook": "You've had the proposal a few days, so you have questions. Here are the four we hear most, answered plainly."
+ },
+ {
+  "id": "email-still-thinking",
+  "subject": "Still thinking it over",
+  "cta": "Pick up where you left off",
+  "hook": "You started an order the other day and stopped partway. No guilt in that. Pausing before you spend money on your own attention is exactly the instinct the ring is built around."
+ },
+ {
+  "id": "email-story-kit",
+  "subject": "Your story kit",
+  "cta": "\u2014",
+  "hook": "Two months in, you tell this better than we ever could. So this isn't a script \u2014 it's a kit. Tell it your way, wherever you already talk to people."
+ },
+ {
+  "id": "email-sunday-pause",
+  "subject": "The Sunday Pause &mdash; Arrive",
+  "cta": "\u2014",
+  "hook": "It's Sunday evening. Somewhere in the house, tomorrow is already clearing its throat."
+ },
+ {
+  "id": "email-team-report",
+  "subject": "Month one: your team's presence report",
+  "cta": "\u2014",
+  "hook": "One month in. Here is your team's presence report &mdash; their own words, read as a group."
+ },
+ {
+  "id": "email-tell-your-story",
+  "subject": "Can we tell your story?",
+  "cta": "\u2014",
+  "hook": "I have an ask, and I want to make it easy to refuse."
+ },
+ {
+  "id": "email-the-moment",
+  "subject": "The moment you noticed",
+  "cta": "\u2014",
+  "hook": "It's 6:50 on a Tuesday morning. Maya is in her kitchen, buttering toast she won't remember buttering. The radio is on. She couldn't tell you what it's saying."
+ },
+ {
+  "id": "email-try-this-first",
+  "subject": "Try this before you buy anything",
+  "cta": "Walk through the Presence Experience",
+  "hook": "Before anything else, I want to give you the thing itself. You don't need to buy anything for this to work. Not the ring, not an app, not a cushion. Just the next sixty seconds."
+ },
+ {
+  "id": "email-two-weeks-returning",
+  "subject": "Two weeks of returning",
+  "cta": "\u2014",
+  "hook": "Two weeks ago the ring was new on your finger. Now it's just yours. I want to name what happened in between, because nobody else will: you returned. Not once. Many times, in small ways nobody saw."
+ },
+ {
+  "id": "email-we-noticed",
+  "subject": "We noticed your practice",
+  "cta": "\u2014",
+  "hook": "This isn't a campaign. I'm writing because you wrote first."
+ },
+ {
+  "id": "email-week-one-noticing",
+  "subject": "Week one: what to notice",
+  "cta": "\u2014",
+  "hook": "One week with the ring. Here is the thing nobody tells you about a practice this small: it works before you notice it working."
+ },
+ {
+  "id": "email-well-be-here",
+  "subject": "We'll be here",
+  "cta": "\u2014",
+  "hook": "A short note about these letters themselves."
+ },
+ {
+  "id": "email-what-did-you-notice",
+  "subject": "What did you notice?",
+  "cta": "Reply with your two words",
+  "hook": "Three days of small taps. Today, one small question."
+ },
+ {
+  "id": "email-what-others-noticed",
+  "subject": "What others noticed this week",
+  "cta": "\u2014",
+  "hook": "The week is nearly done. Sunday's theme was Arrive &mdash; arriving in the room you're already in. Here is what three people in the Presence Circle noticed. Shared with permission, first names only."
+ },
+ {
+  "id": "email-what-youve-given",
+  "subject": "What you've given yourself",
+  "cta": "\u2014",
+  "hook": "No ask today. Just a small mirror."
+ },
+ {
+  "id": "email-when-youre-ready",
+  "subject": "When would now be a good time?",
+  "cta": "When you're ready",
+  "hook": "There's no countdown in this letter. Nothing expires at midnight. Just where things stand, so the decision can be quiet."
+ },
+ {
+  "id": "email-your-story",
+  "subject": "Your story matters",
+  "cta": "\u2014",
+  "hook": "Last week I asked for an impression. This is a different ask, and a bigger one."
+ }
+]
