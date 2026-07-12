@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>What we say — the workshop · Pulse</title>
-<meta name="description" content="The working room for the Pulse voice: a voice-check that lints any copy against the board's guardrails, a rateable bench of taglines / on-screen lines / subjects, and a place to add your own." />
+<meta name="description" content="The writing room for the Pulse voice: the guardrails (do/careful/never), a voice-check linter, and the four message categories — CTA, Tagline, Product, Benefits — each showing the current site copy against the new board-consensus approach." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet" />
@@ -29,72 +29,91 @@
   .top a,.top button{ font-family:var(--mono); font-size:11.5px; color:var(--muted); text-decoration:none; background:none; border:none; cursor:pointer; }
   .top a:hover,.top button:hover{ color:var(--ink); }
 
-  header.hero{ padding:clamp(44px,8vw,84px) 0 clamp(20px,3vw,34px); }
+  header.hero{ padding:clamp(40px,7vw,72px) 0 clamp(8px,2vw,20px); }
   .hero .kick{ font-family:var(--mono); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--honey); }
-  .hero h1{ font-family:var(--serif); font-weight:400; font-size:clamp(34px,6.4vw,64px); line-height:1.03; letter-spacing:-0.02em; margin-top:14px; }
-  .hero p{ font-size:clamp(15.5px,2vw,18px); color:var(--brown); max-width:64ch; margin-top:14px; line-height:1.6; }
+  .hero h1{ font-family:var(--serif); font-weight:400; font-size:clamp(32px,6vw,60px); line-height:1.03; letter-spacing:-0.02em; margin-top:12px; }
+  .hero p{ font-size:clamp(15px,2vw,17.5px); color:var(--brown); max-width:64ch; margin-top:12px; line-height:1.6; }
 
-  section.blk{ border-top:1px solid var(--line); padding:clamp(28px,5vw,52px) 0; }
+  section.blk{ border-top:1px solid var(--line); padding:clamp(26px,4.5vw,46px) 0; }
   .blk .bk{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--honey); }
   .blk h2{ font-size:clamp(21px,3vw,28px); font-weight:600; letter-spacing:-0.03em; margin-top:8px; }
   .blk .bsub{ font-size:14.5px; color:var(--brown); max-width:66ch; margin-top:8px; line-height:1.55; }
 
+  /* board card */
+  .board{ background:var(--ink); color:var(--warm); border-radius:20px; padding:24px 26px; margin-top:22px; }
+  .board .b-k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--lime); }
+  .board .b-chips{ display:flex; flex-wrap:wrap; gap:16px; margin-top:16px; }
+  .board .chip{ display:flex; flex-direction:column; align-items:center; gap:7px; width:96px; text-align:center; }
+  .board .chip img{ width:60px; height:60px; border-radius:50%; object-fit:cover; background:#33353d; border:1px solid rgba(249,246,229,.2); }
+  .board .chip .cn{ font-weight:600; font-size:13px; }
+  .board .chip .cr{ font-family:var(--mono); font-size:9px; color:#b9b5a6; letter-spacing:.04em; line-height:1.3; }
+  .board .b-note{ font-size:14.5px; color:#efe9d6; margin-top:18px; line-height:1.6; max-width:74ch; }
+  .board .b-note b{ color:#fff; font-weight:600; }
+  .board .b-fine{ font-family:var(--mono); font-size:11px; color:#9a968a; margin-top:12px; }
+
+  /* guardrails traffic-light */
+  .g-legend{ display:flex; gap:14px; flex-wrap:wrap; margin-top:14px; }
+  .g-leg{ font-family:var(--mono); font-size:11px; display:flex; align-items:center; gap:7px; color:var(--muted); }
+  .g-dot{ width:11px; height:11px; border-radius:50%; display:inline-block; }
+  .g-dot.green{ background:var(--green); } .g-dot.yellow{ background:var(--yellow); } .g-dot.red{ background:var(--red); }
+  .g-filter{ margin-left:auto; display:flex; gap:6px; }
+  .g-fb{ font-family:var(--mono); font-size:10.5px; color:var(--muted); background:var(--warm); border:1px solid var(--line); border-radius:100px; padding:6px 12px; cursor:pointer; }
+  .g-fb.on{ background:var(--ink); color:var(--warm); border-color:var(--ink); }
+  .guard{ margin-top:14px; display:flex; flex-direction:column; gap:8px; }
+  .g-item{ display:flex; gap:13px; align-items:flex-start; background:var(--warm); border:1px solid var(--line); border-left-width:4px; border-radius:10px; padding:12px 15px; }
+  .g-item.green{ border-left-color:var(--green); } .g-item.yellow{ border-left-color:var(--yellow); } .g-item.red{ border-left-color:var(--red); }
+  .g-item .g-tag{ font-family:var(--mono); font-size:9.5px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; padding:3px 9px; border-radius:100px; white-space:nowrap; margin-top:1px; }
+  .g-item.green .g-tag{ background:var(--green-bg); color:var(--green); }
+  .g-item.yellow .g-tag{ background:var(--yellow-bg); color:var(--yellow); }
+  .g-item.red .g-tag{ background:var(--red-bg); color:var(--red); }
+  .g-item .g-txt{ font-size:14.5px; color:var(--brown); line-height:1.5; }
+
   /* voice check */
-  .vc-input{ width:100%; min-height:120px; margin-top:16px; font-family:var(--font); font-size:16px; line-height:1.6;
-    color:var(--ink); background:var(--warm); border:1px solid var(--line); border-radius:14px; padding:16px 18px; resize:vertical; }
+  .vc-input{ width:100%; min-height:96px; margin-top:14px; font-family:var(--font); font-size:16px; line-height:1.6;
+    color:var(--ink); background:var(--warm); border:1px solid var(--line); border-radius:14px; padding:15px 18px; resize:vertical; }
   .vc-input:focus{ outline:none; border-color:var(--honey); }
   .vc-run{ margin-top:12px; font-family:var(--mono); font-size:12px; font-weight:500; background:var(--ink); color:var(--warm);
     border:1px solid var(--ink); border-radius:100px; padding:11px 24px; cursor:pointer; }
   .vc-run:hover{ background:#2a2d35; }
-  .vc-out{ margin-top:16px; display:flex; flex-direction:column; gap:8px; }
-  .vc-hit{ display:flex; gap:12px; align-items:baseline; background:var(--red-bg); border:1px solid rgba(155,61,46,.35);
-    border-radius:10px; padding:11px 14px; }
+  .vc-out{ margin-top:14px; display:flex; flex-direction:column; gap:8px; }
+  .vc-hit{ display:flex; gap:12px; align-items:baseline; background:var(--red-bg); border:1px solid rgba(155,61,46,.35); border-radius:10px; padding:11px 14px; }
   .vc-hit .w{ font-family:var(--mono); font-size:12.5px; color:var(--red); font-weight:500; white-space:nowrap; }
   .vc-hit .why{ font-size:13.5px; color:var(--brown); }
-  .vc-pass{ background:var(--green-bg); border:1px solid rgba(78,124,52,.35); border-radius:10px; padding:12px 15px;
-    font-size:14px; color:var(--green); font-weight:500; }
-  .vc-warn{ background:var(--yellow-bg); border:1px solid rgba(184,134,11,.35); border-radius:10px; padding:11px 14px;
-    display:flex; gap:12px; align-items:baseline; }
+  .vc-pass{ background:var(--green-bg); border:1px solid rgba(78,124,52,.35); border-radius:10px; padding:12px 15px; font-size:14px; color:var(--green); font-weight:500; }
+  .vc-warn{ background:var(--yellow-bg); border:1px solid rgba(184,134,11,.35); border-radius:10px; padding:11px 14px; display:flex; gap:12px; align-items:baseline; }
   .vc-warn .w{ font-family:var(--mono); font-size:12.5px; color:var(--yellow); font-weight:500; white-space:nowrap; }
   .vc-warn .why{ font-size:13.5px; color:var(--brown); }
 
-  /* bench */
+  /* the category bench */
   .tabs{ display:flex; gap:8px; margin-top:16px; flex-wrap:wrap; }
-  .tab{ font-family:var(--mono); font-size:11.5px; color:var(--muted); background:var(--warm); border:1px solid var(--line);
-    border-radius:100px; padding:8px 16px; cursor:pointer; }
+  .tab{ font-family:var(--mono); font-size:11.5px; color:var(--muted); background:var(--warm); border:1px solid var(--line); border-radius:100px; padding:8px 16px; cursor:pointer; }
   .tab.on{ background:var(--ink); color:var(--warm); border-color:var(--ink); }
-  .bench{ margin-top:14px; display:flex; flex-direction:column; gap:8px; }
+  .cat-blurb{ font-size:14px; color:var(--muted); margin-top:12px; }
+  .sec-h{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; margin:22px 0 10px; display:flex; align-items:center; gap:10px; }
+  .sec-h .pipe{ flex:1; height:1px; background:var(--line); }
+  .sec-h.cur{ color:var(--red); } .sec-h.nw{ color:var(--green); }
+  .bench{ display:flex; flex-direction:column; gap:8px; }
   .ln{ display:flex; align-items:center; gap:12px; padding:12px 15px; background:var(--warm); border:1px solid var(--line); border-radius:12px; }
+  .ln.nw{ background:var(--green-bg); border-color:rgba(78,124,52,.28); }
   .ln .t{ flex:1; font-size:15.5px; }
   .ln .cat{ font-family:var(--mono); font-size:9.5px; color:var(--faint); text-transform:uppercase; letter-spacing:.06em; white-space:nowrap; }
-  .ln .ln-flag{ font-family:var(--mono); font-size:9.5px; color:var(--red); background:var(--red-bg); border:1px solid rgba(155,61,46,.3);
-    border-radius:100px; padding:3px 9px; white-space:nowrap; cursor:help; }
+  .ln .ln-flag{ font-family:var(--mono); font-size:9.5px; color:var(--red); background:var(--red-bg); border:1px solid rgba(155,61,46,.3); border-radius:100px; padding:3px 9px; white-space:nowrap; cursor:help; }
   .ln .del{ font-family:var(--mono); font-size:10px; color:var(--faint); background:none; border:none; cursor:pointer; text-decoration:underline; }
   .ln .del:hover{ color:var(--red); }
   .rate{ display:inline-flex; gap:4px; }
-  .rate button{ width:26px; height:22px; border-radius:6px; border:1px solid var(--line); cursor:pointer;
-    background:var(--cream); font-size:12px; line-height:1; display:flex; align-items:center; justify-content:center; }
+  .rate button{ width:26px; height:22px; border-radius:6px; border:1px solid var(--line); cursor:pointer; background:var(--cream); font-size:12px; line-height:1; display:flex; align-items:center; justify-content:center; }
   .rate button.g.on{ background:var(--green-bg); border-color:var(--green); }
   .rate button.y.on{ background:var(--yellow-bg); border-color:var(--yellow); }
   .rate button.r.on{ background:var(--red-bg); border-color:var(--red); }
-  .add-row{ display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; }
-  .add-row input{ flex:1; min-width:220px; font-family:var(--font); font-size:15px; background:var(--warm);
-    border:1px solid var(--line); border-radius:100px; padding:12px 18px; }
+  .add-row{ display:flex; gap:10px; margin-top:16px; flex-wrap:wrap; }
+  .add-row input{ flex:1; min-width:220px; font-family:var(--font); font-size:15px; background:var(--warm); border:1px solid var(--line); border-radius:100px; padding:12px 18px; }
   .add-row input:focus{ outline:none; border-color:var(--honey); }
-  .add-row button{ font-family:var(--mono); font-size:12px; background:var(--ink); color:var(--warm); border:1px solid var(--ink);
-    border-radius:100px; padding:11px 22px; cursor:pointer; }
-  .bench-stat{ font-family:var(--mono); font-size:11.5px; color:var(--muted); margin-top:12px; }
+  .add-row button{ font-family:var(--mono); font-size:12px; background:var(--ink); color:var(--warm); border:1px solid var(--ink); border-radius:100px; padding:11px 22px; cursor:pointer; }
+  .bench-stat{ font-family:var(--mono); font-size:11.5px; color:var(--muted); margin-top:14px; }
 
-  /* guardrails */
-  .guard{ margin-top:14px; display:flex; flex-direction:column; gap:8px; }
-  .guard .g-item{ display:flex; gap:12px; padding:11px 14px; background:var(--warm); border:1px solid var(--line); border-radius:10px;
-    font-size:14px; color:var(--brown); line-height:1.5; }
-  .guard .g-item::before{ content:"—"; color:var(--honey); }
-
-  footer{ border-top:1px solid var(--line); margin-top:30px; padding:22px 0 50px; font-family:var(--mono); font-size:12px; color:var(--faint);
-    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  footer{ border-top:1px solid var(--line); margin-top:30px; padding:22px 0 50px; font-family:var(--mono); font-size:12px; color:var(--faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
   footer a{ color:var(--brown); }
-  .empty{ color:var(--muted); font-size:14px; padding:14px 0; }
+  .empty{ color:var(--muted); font-size:14px; padding:12px 0; }
 </style>
 </head>
 <body>
@@ -109,36 +128,54 @@
   <header class="hero">
     <div class="kick">What we say · the workshop</div>
     <h1>The writing room.</h1>
-    <p>Three tools: a <b>voice check</b> that lints any copy against the board's guardrails, the <b>line bench</b> where every tagline, on-screen line, and subject gets rated and new ones get added, and the <b>guardrails</b> themselves. Ratings save in this browser and export as JSON.</p>
+    <p>Start with the guardrails. Lint any line against them in the voice check. Then work the four message categories — CTA, tagline, product, benefits — with the current site copy and the new approach side by side. Ratings save in this browser and export as JSON.</p>
   </header>
 
   <section class="blk">
-    <div class="bk">Tool one</div>
+    <div class="bk">Who wrote the rules</div>
+    <h2>The advisory board</h2>
+    <div class="board" id="board">
+      <div class="b-k">Five experts · ten EBI passes · one consensus</div>
+      <div class="b-chips" id="boardChips"></div>
+      <p class="b-note">The guardrails below weren't handed down — they were <b>argued into being</b>. Each advisor is an AI persona built to think in the voice and body of work of a real strategist: <b>Alex Hormozi</b> (offers &amp; value), <b>Seth Godin</b> (remarkability &amp; tribe), <b>Alan Watts</b> (presence), <b>Steve Jobs</b> (ruthless simplicity), and <b>Rory Sutherland</b> (behavioral science &amp; perceived value — the fifth seat, chosen to add the lens the others were missing). Each evaluated the brand independently, then the panel debated it across <b>ten explore-build-improve passes</b> until the disagreements resolved into the rules and lines you see here.</p>
+      <p class="b-fine">Portraits are stylized illustrations of the real figures, not photographs.</p>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">Start here · the law</div>
+    <h2>Guardrails</h2>
+    <p class="bsub">Green is a <b style="color:var(--green)">do</b>, yellow is a <b style="color:var(--yellow)">careful</b>, red is a <b style="color:var(--red)">never</b>. The voice check enforces the mechanical reds automatically.</p>
+    <div class="g-legend">
+      <span class="g-leg"><span class="g-dot green"></span>Do</span>
+      <span class="g-leg"><span class="g-dot yellow"></span>Careful</span>
+      <span class="g-leg"><span class="g-dot red"></span>Never</span>
+      <span class="g-filter" id="gFilter"></span>
+    </div>
+    <div class="guard" id="guard"><div class="empty">loading guardrails…</div></div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">Tool · lint</div>
     <h2>Voice check</h2>
-    <p class="bsub">Paste any copy — an email, a caption, a subject line — and it's checked against the banned vocabulary, the anti-data rule, the no-hype rule, and the "you may notice" rule.</p>
+    <p class="bsub">Paste any copy — a line, an email, a caption — and it's checked against the mechanical guardrails: banned words, the anti-data rule, no hype, and “you may notice.”</p>
     <textarea id="vcInput" class="vc-input" placeholder="Paste copy here…"></textarea>
     <button id="vcRun" class="vc-run">Run the check</button>
     <div id="vcOut" class="vc-out"></div>
   </section>
 
   <section class="blk">
-    <div class="bk">Tool two</div>
-    <h2>The line bench</h2>
-    <p class="bsub">The <b>live site</b> copy (pulled from pulsemindfulness.com), the board's consensus lines, and everything added in this room. Lines that trip a guardrail are flagged <span style="color:var(--red)">⚠</span> — the Live site tab doubles as a rewrite queue. Rate each <b style="color:var(--green)">keep</b> / <b style="color:var(--yellow)">maybe</b> / <b style="color:var(--red)">cut</b>.</p>
+    <div class="bk">The bench</div>
+    <h2>Current vs. the new approach</h2>
+    <p class="bsub">Four message categories. Each shows what's on the site now (flagged <span style="color:var(--red)">⚠</span> where it trips a guardrail) against the new board-consensus approach. Rate each <b style="color:var(--green)">keep</b> / <b style="color:var(--yellow)">maybe</b> / <b style="color:var(--red)">cut</b>, and add your own.</p>
     <div class="tabs" id="tabs"></div>
-    <div class="bench" id="bench"><div class="empty">loading the bench…</div></div>
+    <div class="cat-blurb" id="catBlurb"></div>
+    <div id="benchWrap"><div class="empty">loading the bench…</div></div>
     <div class="add-row">
-      <input id="addInput" placeholder="Write a new line…" />
-      <button id="addBtn">Add to the bench</button>
+      <input id="addInput" placeholder="Write a new line for this category…" />
+      <button id="addBtn">Add</button>
     </div>
     <div class="bench-stat" id="benchStat"></div>
-  </section>
-
-  <section class="blk">
-    <div class="bk">The law</div>
-    <h2>Guardrails</h2>
-    <p class="bsub">The voice rules the board locked. The voice check enforces the mechanical ones; the rest are judgment.</p>
-    <div class="guard" id="guard"><div class="empty">loading guardrails…</div></div>
   </section>
 
   <footer>
@@ -149,14 +186,15 @@
 
 <script>
 (function(){
-  var LS="pmf-say-workshop-v1";
+  var LS="pmf-say-workshop-v2";
   var state=JSON.parse(localStorage.getItem(LS)||"{}");
   state.ratings=state.ratings||{}; state.custom=state.custom||[];
   function save(){ localStorage.setItem(LS, JSON.stringify(state)); }
   function el(t,c,x){var e=document.createElement(t); if(c)e.className=c; if(x!=null)e.textContent=x; return e;}
   function clear(n){while(n.firstChild)n.removeChild(n.firstChild);}
+  function key(t){ return t.toLowerCase().replace(/[^a-z0-9]+/g,'-').slice(0,64); }
 
-  /* ---------- voice check ---------- */
+  /* ---------- voice-check rules ---------- */
   var RULES=[
     {re:/\b(journey|journeys)\b/gi, why:"Banned word — presence is arriving, not a place you travel to."},
     {re:/\btransform(s|ed|ing|ation|ations)?\b/gi, why:"Banned destination verb."},
@@ -164,15 +202,16 @@
     {re:/\belevate(s|d|ing)?\b/gi, why:"Banned destination verb."},
     {re:/\bbecome (calm|present|focused|better)\b/gi, why:"Destination framing — presence isn't a place you arrive at."},
     {re:/!/g, why:"No exclamation points — the voice never shouts."},
-    {re:/\byou will feel\b/gi, why:"Always “you may notice,” never “you will feel” — uncertainty is the active ingredient."},
-    {re:/\b(score|scores|scored|grade|graded|percentile|streak|streaks|leaderboard|dashboard)\b/gi, why:"Anti-data rule — never ship a score or grade for someone's presence."},
+    {re:/\byou will feel\b/gi, why:"Always “you may notice,” never “you will feel.”"},
+    {re:/\b(score|scores|scored|grade|graded|percentile|streak|streaks|leaderboard|dashboard)\b/gi, why:"Anti-data rule — never ship a score or grade for presence."},
     {re:/\b(track|tracks|tracking|tracked)\b/gi, why:"They report; we return. Never argue on data's ledger."},
     {re:/\bscientifically proven\b/gi, why:"No proof-by-authority — proof is real wearers' own words."},
-    {re:/\b(hurry|last chance|don't miss|act now|limited time|only \d+ left|ends (soon|tonight|today)|final hours)\b/gi, why:"No urgency or scarcity — the CTA is as quiet as the pulse."},
-    {re:/\bSHOP NOW\b/g, why:"No shouted transactions."},
-    {re:/\b(smart wearable|notification)\b/gi, why:"Never let the enemy name the product — name the notification only to refuse it.", warn:true},
-    {re:/\b(unwitnessed|witnesses)\b/gi, why:"Fine — just check it lands in the chest, not the head.", warn:true}
+    {re:/\b(hurry|last chance|don't miss|act now|limited time|only \d+ left|ends (soon|tonight|today)|final hours)\b/gi, why:"No urgency or scarcity."},
+    {re:/\bSHOP NOW\b/g, why:"No shouted transactions — the CTA is as quiet as the pulse."},
+    {re:/\bchange (that|your life) forever\b/gi, why:"Overpromise / hype — the voice underclaims."},
+    {re:/\b(smart wearable|notification)\b/gi, why:"Never let the enemy name the product.", warn:true}
   ];
+  function breaksRule(t){ for(var i=0;i<RULES.length;i++){ if(RULES[i].warn) continue; RULES[i].re.lastIndex=0; if(RULES[i].re.test(t)) return true; } return false; }
   function runCheck(){
     var txt=document.getElementById('vcInput').value;
     var out=document.getElementById('vcOut'); clear(out);
@@ -180,104 +219,106 @@
     var hits=0;
     RULES.forEach(function(r){
       var m=txt.match(r.re);
-      if(m){
-        var uniq=Array.from(new Set(m.map(function(x){return x.toLowerCase();})));
-        uniq.forEach(function(w){
-          var row=el('div', r.warn?'vc-warn':'vc-hit');
-          row.appendChild(el('span','w', w==='!' ? '!' : '“'+w+'”'));
-          row.appendChild(el('span','why', r.why));
-          out.appendChild(row); if(!r.warn) hits++;
-        });
-      }
+      if(m){ Array.from(new Set(m.map(function(x){return x.toLowerCase();}))).forEach(function(w){
+        var row=el('div', r.warn?'vc-warn':'vc-hit');
+        row.appendChild(el('span','w', w==='!' ? '!' : '“'+w+'”'));
+        row.appendChild(el('span','why', r.why)); out.appendChild(row); if(!r.warn) hits++;
+      }); }
     });
     if(!hits){ out.insertBefore(el('div','vc-pass','✓ Clean — nothing breaks the guardrails. The rest is taste.'), out.firstChild); }
   }
   document.getElementById('vcRun').onclick=runCheck;
 
-  /* ---------- the bench ---------- */
-  var GROUPS=[["site","Live site"],["tagline","Taglines"],["tos","Text on screen"],["subject","Subjects & CTAs"],["mine","Added here"]];
-  var curTab="site";
-  function breaksRule(t){ for(var i=0;i<RULES.length;i++){ if(RULES[i].warn) continue; RULES[i].re.lastIndex=0; if(RULES[i].re.test(t)) return true; } return false; }
-  var LINES=[]; // {id, text, group, cat, custom}
-  function key(t){ return t.toLowerCase().replace(/[^a-z0-9]+/g,'-').slice(0,60); }
-  function renderTabs(){
-    var host=document.getElementById('tabs'); clear(host);
-    GROUPS.forEach(function(g){
-      var n=LINES.filter(function(l){return g[0]==='mine' ? l.custom : l.group===g[0];}).length;
-      var b=el('button','tab'+(curTab===g[0]?' on':''), g[1]+' ('+n+')');
-      b.onclick=function(){ curTab=g[0]; renderTabs(); renderBench(); };
-      host.appendChild(b);
+  /* ---------- board card ---------- */
+  var ADV=[["hormozi","Hormozi","Offers"],["godin","Godin","Remarkable"],["watts","Watts","Presence"],["jobs","Jobs","Simplicity"],["sutherland","Sutherland","Perceived value"]];
+  (function(){ var host=document.getElementById('boardChips');
+    ADV.forEach(function(a){ var c=el('div','chip'); var im=document.createElement('img'); im.src='library/advisors/'+a[0]+'.png'; im.alt=a[1]; im.loading='eager'; c.appendChild(im); c.appendChild(el('div','cn',a[1])); c.appendChild(el('div','cr',a[2])); host.appendChild(c); });
+  })();
+
+  /* ---------- data ---------- */
+  var MAP=null, curTab="cta", gLevel="all";
+
+  function levelLabel(l){ return {green:'DO',yellow:'CAREFUL',red:'NEVER'}[l]||'RULE'; }
+  function renderGuard(){
+    var host=document.getElementById('guard'); clear(host);
+    var gs=(MAP.guardrails||[]).filter(function(g){ return gLevel==='all' || g.level===gLevel; });
+    gs.forEach(function(g){ var row=el('div','g-item '+g.level);
+      row.appendChild(el('span','g-tag',levelLabel(g.level)));
+      row.appendChild(el('span','g-txt',g.text)); host.appendChild(row); });
+    if(!gs.length) host.appendChild(el('div','empty','None in this level.'));
+  }
+  function renderGFilter(){
+    var host=document.getElementById('gFilter'); clear(host);
+    [["all","All"],["green","Do"],["yellow","Careful"],["red","Never"]].forEach(function(o){
+      var b=el('button','g-fb'+(gLevel===o[0]?' on':''),o[1]); b.onclick=function(){ gLevel=o[0]; renderGFilter(); renderGuard(); }; host.appendChild(b);
     });
   }
+
   function pill(cur,onSet){
     var wrap=el('span','rate');
     [["g","green"],["y","yellow"],["r","red"]].forEach(function(o){
       var b=el('button',o[0]+(cur===o[1]?" on":""),"●");
       b.title=o[1]; b.style.color=({green:'#4E7C34',yellow:'#B8860B',red:'#9B3D2E'})[o[1]];
-      b.onclick=function(){ onSet(o[1]); };
-      wrap.appendChild(b);
+      b.onclick=function(){ onSet(o[1]); }; wrap.appendChild(b);
     });
     return wrap;
   }
-  function renderBench(){
-    var host=document.getElementById('bench'); clear(host);
-    var rows=LINES.filter(function(l){return curTab==='mine' ? l.custom : l.group===curTab;});
-    if(!rows.length){ host.appendChild(el('div','empty', curTab==='mine' ? 'Nothing added yet — write one below.' : 'No lines in this group.')); }
-    rows.forEach(function(l){
-      var row=el('div','ln');
-      row.appendChild(el('span','t','“'+l.text+'”'));
-      if(l.cat) row.appendChild(el('span','cat',l.cat));
-      if(breaksRule(l.text)){ var fl=el('span','ln-flag','⚠ breaks a guardrail'); fl.title='Run it through the voice check above to see which rule'; row.appendChild(fl); }
-      row.appendChild(pill(state.ratings[l.id], function(r){ state.ratings[l.id]=(state.ratings[l.id]===r?null:r); save(); renderBench(); renderStat(); }));
-      if(l.custom){
-        var d=el('button','del','remove');
-        d.onclick=function(){ state.custom=state.custom.filter(function(c){return c.id!==l.id;}); LINES=LINES.filter(function(x){return x.id!==l.id;}); save(); renderTabs(); renderBench(); renderStat(); };
-        row.appendChild(d);
-      }
-      host.appendChild(row);
+  function lineRow(item, isNew){
+    var id=(isNew?'new-':'cur-')+key(item.text);
+    var row=el('div','ln'+(isNew?' nw':''));
+    row.appendChild(el('span','t','“'+item.text+'”'));
+    if(item.where) row.appendChild(el('span','cat',item.where));
+    if(!isNew && breaksRule(item.text)){ var f=el('span','ln-flag','⚠ breaks a guardrail'); f.title='Paste it into the voice check to see which rule'; row.appendChild(f); }
+    row.appendChild(pill(state.ratings[id], function(r){ state.ratings[id]=(state.ratings[id]===r?null:r); save(); renderBench(); }));
+    if(item.custom){ var d=el('button','del','remove'); d.onclick=function(){ state.custom=state.custom.filter(function(c){return c.id!==item.id;}); save(); renderBench(); }; row.appendChild(d); }
+    return row;
+  }
+  function renderTabs(){
+    var host=document.getElementById('tabs'); clear(host);
+    (MAP.categories||[]).forEach(function(c){
+      var mine=(state.custom||[]).filter(function(x){return x.cat===c.id;}).length;
+      var b=el('button','tab'+(curTab===c.id?' on':''), c.label+' ('+(c.current.length+c.new.length+mine)+')');
+      b.onclick=function(){ curTab=c.id; renderTabs(); renderBench(); }; host.appendChild(b);
     });
+  }
+  function renderBench(){
+    var cat=(MAP.categories||[]).filter(function(c){return c.id===curTab;})[0]; if(!cat) return;
+    document.getElementById('catBlurb').textContent=cat.blurb||'';
+    var host=document.getElementById('benchWrap'); clear(host);
+    // current
+    var h1=el('div','sec-h cur'); h1.appendChild(el('span',null,'On the site now')); h1.appendChild(el('span','pipe')); host.appendChild(h1);
+    var b1=el('div','bench');
+    if(cat.current.length) cat.current.forEach(function(it){ b1.appendChild(lineRow(it,false)); });
+    else b1.appendChild(el('div','empty','Nothing on the current site for this category.'));
+    host.appendChild(b1);
+    // new
+    var h2=el('div','sec-h nw'); h2.appendChild(el('span',null,'The new approach')); h2.appendChild(el('span','pipe')); host.appendChild(h2);
+    var b2=el('div','bench');
+    var mine=(state.custom||[]).filter(function(x){return x.cat===curTab;});
+    cat.new.forEach(function(it){ b2.appendChild(lineRow(it,true)); });
+    mine.forEach(function(it){ b2.appendChild(lineRow(it,true)); });
+    if(!cat.new.length && !mine.length) b2.appendChild(el('div','empty','Add the new lines below.'));
+    host.appendChild(b2);
     renderStat();
   }
   function renderStat(){
-    var g=0,y=0,r=0;
-    LINES.forEach(function(l){ var v=state.ratings[l.id]; if(v==='green')g++; else if(v==='yellow')y++; else if(v==='red')r++; });
-    document.getElementById('benchStat').textContent=LINES.length+' lines on the bench · '+g+' keep · '+y+' maybe · '+r+' cut';
+    var g=0,y=0,r=0,n=0;
+    Object.keys(state.ratings).forEach(function(k){ var v=state.ratings[k]; n++; if(v==='green')g++; else if(v==='yellow')y++; else if(v==='red')r++; });
+    document.getElementById('benchStat').textContent=n+' lines rated · '+g+' keep · '+y+' maybe · '+r+' cut';
   }
   document.getElementById('addBtn').onclick=function(){
-    var inp=document.getElementById('addInput'); var t=inp.value.trim();
-    if(!t) return;
-    // voice-check the new line first
+    var inp=document.getElementById('addInput'); var t=inp.value.trim(); if(!t) return;
     document.getElementById('vcInput').value=t; runCheck();
-    var group = curTab==='mine' ? 'tagline' : curTab;
-    var item={id:'c-'+key(t), text:t, group:group, cat:'added here', custom:true};
-    if(!LINES.some(function(l){return l.id===item.id;})){ state.custom.push(item); LINES.push(item); save(); }
-    inp.value='';
-    renderTabs(); renderBench();
+    var item={id:'m-'+key(t), text:t, cat:curTab, where:'yours', custom:true};
+    if(!state.custom.some(function(c){return c.id===item.id;})) state.custom.push(item);
+    save(); inp.value=''; renderTabs(); renderBench();
   };
 
-  /* ---------- data ---------- */
-  fetch('live-site-copy.json').then(function(r){return r.ok?r.json():null;}).then(function(d){
-    if(d&&d.lines){ d.lines.forEach(function(l){ if(!LINES.some(function(x){return x.id==='w-'+key(l.text);})) LINES.push({id:'w-'+key(l.text), text:l.text, group:'site', cat:l.where||'live site'}); }); renderTabs(); renderBench(); }
-  }).catch(function(){});
-  fetch('messaging-board.json').then(function(r){return r.json();}).then(function(b){
-    var c=(b.final&&b.final.consensus)||{};
-    (c.taglines||[]).forEach(function(t){ LINES.push({id:'t-'+key(t.text), text:t.text, group:'tagline', cat:(t.category||'').split('—')[0].trim().slice(0,26)}); });
-    (c.tos||[]).forEach(function(t){ LINES.push({id:'o-'+key(t), text:t, group:'tos', cat:'on screen'}); });
-    var guard=document.getElementById('guard'); clear(guard);
-    (c.guardrails||[]).forEach(function(g){ guard.appendChild(el('div','g-item',g)); });
-    return fetch('email-board-review.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});
-  }).then(function(d){
-    if(d&&d.consensus){
-      (d.consensus.email_edits||[]).forEach(function(e){
-        if(e.new_subject) LINES.push({id:'s-'+key(e.new_subject), text:e.new_subject, group:'subject', cat:e.id.replace('email-','')});
-        if(e.new_cta) LINES.push({id:'cta-'+key(e.new_cta), text:e.new_cta, group:'subject', cat:'CTA · '+e.id.replace('email-','')});
-      });
-    }
-    (state.custom||[]).forEach(function(cst){ if(!LINES.some(function(l){return l.id===cst.id;})) LINES.push(cst); });
-    renderTabs(); renderBench();
+  fetch('messaging-map.json').then(function(r){return r.json();}).then(function(m){
+    MAP=m; renderGFilter(); renderGuard(); renderTabs(); renderBench();
   }).catch(function(){
-    var host=document.getElementById('bench'); clear(host);
-    host.appendChild(el('div','empty','Could not load the board data — serve this over http://'));
+    document.getElementById('guard').textContent='';
+    document.getElementById('benchWrap').textContent='Could not load messaging-map.json — serve over http://';
   });
 
   document.getElementById('exportBtn').onclick=function(){

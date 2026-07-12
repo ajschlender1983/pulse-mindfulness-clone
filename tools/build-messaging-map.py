@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+"""
+Build messaging-map.json for the writing-room workshop: the 4 message categories
+(CTA / Tagline / Product / Benefits), each with the CURRENT live-site copy and the
+NEW board-consensus approach side by side, plus the guardrails classified
+green (do) / yellow (careful) / red (never).
+"""
+import json, pathlib, re
+ROOT=pathlib.Path(__file__).resolve().parent.parent
+def load(f, default=None):
+    p=ROOT/f
+    return json.loads(p.read_text()) if p.exists() else default
+
+site=load("live-site-copy.json",{"lines":[]})
+board=load("messaging-board.json",{})
+emails=load("email-board-review.json",{})
+
+CATS=[("cta","CTA","The ask — what a reader is invited to do."),
+      ("tagline","Tagline","The line — the hook, the headline, the thing on the billboard."),
+      ("product","Product","What Pulse IS and does — the mechanism, in words."),
+      ("benefits","Benefits","What it gives back — the felt outcome, the proof.")]
+
+# ---- CURRENT (from the live site) ----
+current={c[0]:[] for c in CATS}
+for ln in site.get("lines",[]):
+    cat=ln.get("cat")
+    if cat in current: current[cat].append({"text":ln["text"],"where":ln.get("where","")})
+
+# ---- NEW (board consensus + applied edits + the presence-return language) ----
+cons=(board.get("final",{}) or {}).get("consensus",{}) or board.get("consensus",{}) or {}
+new={c[0]:[] for c in CATS}
+def add(cat,text,where):
+    if text and not any(x["text"]==text for x in new[cat]): new[cat].append({"text":text,"where":where})
+
+# tagline: hero + consensus taglines + text-on-screen
+for line in re.split(r'\n', str(cons.get("hero",""))):
+    line=line.strip()
+    if line: add("tagline",line,"hero")
+for t in cons.get("taglines",[]):
+    add("tagline",t.get("text",""),(t.get("category","") or "").split("—")[0].strip()[:26] or "tagline")
+for t in cons.get("tos",[]):
+    add("tagline",t,"on screen")
+add("tagline","Be Here WOW","canon")
+# product: positioning + wedge + the plain-object lines
+if cons.get("positioning"): add("product",cons["positioning"],"positioning")
+if cons.get("wedge"): add("product",cons["wedge"],"the wedge")
+for p in ["A gold ring that knows nothing about you — on purpose.",
+          "No screen, no scores, nothing to check, ever.",
+          "A pulse instead of a ping.",
+          "It taps. You look up. Here you are.",
+          "Two minutes to set up — then the ring does the remembering."]:
+    add("product",p,"object")
+# cta: the offer + the applied email CTAs
+if cons.get("offer"): add("cta",cons["offer"],"the offer")
+for e in (emails.get("consensus",{}) or {}).get("email_edits",[]):
+    if e.get("new_cta"): add("cta",e["new_cta"],e.get("id","").replace("email-",""))
+add("cta","When would now be a good time?","hero / close")
+# benefits: the presence-return language (the board's concrete returns)
+for b in ["About four dinners a week, returned.",
+          "A whole bedtime story, with all of you in the room.",
+          "The first coffee, actually tasted.",
+          "Not more footage — the same footage, at the speed of being here.",
+          "The days stop blurring when you're in them.",
+          "If you can recall one moment of coming back, it's working.",
+          "The word that matters is reclaimable — those hours aren't spent, they're waiting.",
+          "Nothing measured you. The only instrument was you."]:
+    add("benefits",b,"return")
+
+# ---- GUARDRAILS classified green/yellow/red ----
+def level(g):
+    t=g.lower(); head=t.split(".")[0].split("—")[0].split(":")[0]  # the leading clause
+    # a positive imperative in the LEAD clause wins → green (a "do")
+    if re.match(r'\s*(always|lead|say|speak|perform|prefer|keep|land|ration|clarity|the wedge is a different|the return is a felt|the flag is)', head) or "always" in head:
+        return "green"
+    # a flat prohibition → red (a "never")
+    if re.match(r'\s*(never|no |don\'t|don’t|ban|kill|retire|avoid)', head) or re.search(r'\bnever\b', head):
+        return "red"
+    return "yellow"
+guardrails=[{"text":g,"level":level(g)} for g in cons.get("guardrails",[])]
+
+out={"generated":"BUILD","categories":[{"id":c[0],"label":c[1],"blurb":c[2],
+       "current":current[c[0]],"new":new[c[0]]} for c in CATS],
+     "guardrails":guardrails,
+     "counts":{"current":sum(len(v) for v in current.values()),"new":sum(len(v) for v in new.values()),"guardrails":len(guardrails)}}
+(ROOT/"messaging-map.json").write_text(json.dumps(out,indent=1))
+print("messaging-map.json:",out["counts"])
+from collections import Counter
+print("guardrail levels:",dict(Counter(g["level"] for g in guardrails)))
+for c in out["categories"]: print(f"  {c['label']}: {len(c['current'])} current · {len(c['new'])} new")

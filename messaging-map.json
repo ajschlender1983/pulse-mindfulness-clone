@@ -1,0 +1,424 @@
+{
+ "generated": "BUILD",
+ "categories": [
+  {
+   "id": "cta",
+   "label": "CTA",
+   "blurb": "The ask \u2014 what a reader is invited to do.",
+   "current": [
+    {
+     "text": "SHOP NOW",
+     "where": "CTA"
+    },
+    {
+     "text": "SHOP",
+     "where": "CTA"
+    },
+    {
+     "text": "Unlock premium features",
+     "where": "app features"
+    },
+    {
+     "text": "Join a Community of Presence",
+     "where": "testimonials"
+    },
+    {
+     "text": "Stay in touch by subscribing to our newsletter!",
+     "where": "newsletter"
+    }
+   ],
+   "new": [
+    {
+     "text": "Lead with restraint and an unconditional return, never arithmetic. Spine: \"Wear it a month. If it isn't for you, send it back \u2014 no reason needed, no questions.\" The guarantee grades nothing: asking a wearer to certify presence would reinstall the scorecard the ring refuses. Frame the $200 as paying for restraint, not utility \u2014 \"The one thing you'll ever own that keeps no score of you,\" with \"for the cost of one nice dinner\" as a quiet frame beneath it, never an argument. Keep ROI and reclaimable-hours math out of the hero; that number stays downstream and gentle, never a grade. Proof = real wearers' anonymous before/after words \u2014 the only number we'd trust, so the only one we sell.",
+     "where": "the offer"
+    },
+    {
+     "text": "See what's waiting for you",
+     "where": "quiz-results"
+    },
+    {
+     "text": "Look back at day one",
+     "where": "30-days-present"
+    },
+    {
+     "text": "Wear it a month, then decide",
+     "where": "when-youre-ready"
+    },
+    {
+     "text": "Pick it back up \u2014 a month to change your mind",
+     "where": "still-thinking"
+    },
+    {
+     "text": "Book your assessment",
+     "where": "spaces-inquiry"
+    },
+    {
+     "text": "Share your story",
+     "where": "tell-your-story"
+    },
+    {
+     "text": "Reply and say hello",
+     "where": "we-noticed"
+    },
+    {
+     "text": "Try one minute",
+     "where": "come-back-to-now"
+    },
+    {
+     "text": "When would now be a good time?",
+     "where": "hero / close"
+    }
+   ]
+  },
+  {
+   "id": "tagline",
+   "label": "Tagline",
+   "blurb": "The line \u2014 the hook, the headline, the thing on the billboard.",
+   "current": [
+    {
+     "text": "Feel good in 10 sec, the wearable for presence.",
+     "where": "hero"
+    },
+    {
+     "text": "Become Calm, Focused & Present",
+     "where": "hero"
+    },
+    {
+     "text": "Pulse just might change your life.",
+     "where": "section heading"
+    },
+    {
+     "text": "Snap out of autopilot and become present",
+     "where": "app features"
+    },
+    {
+     "text": "Meditation apps de-invented",
+     "where": "app features"
+    },
+    {
+     "text": "Shape new habits and focus",
+     "where": "app features"
+    },
+    {
+     "text": "Be in your moment \u2014 not in your thoughts.",
+     "where": "tagline"
+    }
+   ],
+   "new": [
+    {
+     "text": "When would now be a good time?",
+     "where": "hero"
+    },
+    {
+     "text": "A gold ring that knows nothing about you \u2014 on purpose.",
+     "where": "hero"
+    },
+    {
+     "text": "What if all you need is a gentle reminder to fully experience what's already here for you.",
+     "where": "Hero"
+    },
+    {
+     "text": "A notification wants something from you. This wants nothing.",
+     "where": "Objection-killer / owner-v"
+    },
+    {
+     "text": "Be Here WOW",
+     "where": "Canon anchor"
+    },
+    {
+     "text": "It doesn't do anything. That's the whole point.",
+     "where": "INTERNAL PALETTE"
+    },
+    {
+     "text": "I stopped measuring my life to start living it.",
+     "where": "INTERNAL PALETTE"
+    },
+    {
+     "text": "A notification wants something from you. This wants nothing \u2014 it taps, and the wanting stops.",
+     "where": "on screen"
+    },
+    {
+     "text": "You're halfway up the stairs before you notice you took them.",
+     "where": "on screen"
+    },
+    {
+     "text": "It doesn't do anything. That's the point. It's the one thing I own that keeps no score of me.",
+     "where": "on screen"
+    },
+    {
+     "text": "Wear it a month. If it isn't for you, send it back \u2014 no reason needed.",
+     "where": "on screen"
+    }
+   ]
+  },
+  {
+   "id": "product",
+   "label": "Product",
+   "blurb": "What Pulse IS and does \u2014 the mechanism, in words.",
+   "current": [
+    {
+     "text": "Gentle vibrations on your finger remind you to pause, breathe, and reset \u2014 all day long.",
+     "where": "hero"
+    },
+    {
+     "text": "To become calm and present, all you need is a 10-second micro-pause.",
+     "where": "how it works"
+    },
+    {
+     "text": "Vibration \u2014 Snaps you out of autopilot.",
+     "where": "how it works"
+    },
+    {
+     "text": "Practice \u2014 Gratitude exercise or deep breathing.",
+     "where": "how it works"
+    },
+    {
+     "text": "No unnecessary screen time",
+     "where": "app features"
+    },
+    {
+     "text": "Set your vibration patterns in the Pulse App, choose your intention, and let Pulse's gentle vibrations guide you throughout your day.",
+     "where": "app features"
+    },
+    {
+     "text": "Mindfulness works, but we often forget to practice it. Pulse is here to change that forever.",
+     "where": "app features"
+    },
+    {
+     "text": "Activate and Focus. Pulse discreetly starts vibrating every 30 seconds, every minute or every 5th minute.",
+     "where": "app features"
+    },
+    {
+     "text": "For the first time ever, Pulse lets you enjoy a guided meditation without headphones.",
+     "where": "app features"
+    },
+    {
+     "text": "A universe of the best teachers",
+     "where": "app features"
+    },
+    {
+     "text": "The first smart wearable that doesn't stress you with data and information.",
+     "where": "USP"
+    },
+    {
+     "text": "Mindfulness and wellbeing only",
+     "where": "USP"
+    },
+    {
+     "text": "Pulse vibrations are completely separate from smartphone or other notifications.",
+     "where": "USP"
+    },
+    {
+     "text": "Unintrusive and discreet",
+     "where": "USP"
+    },
+    {
+     "text": "It's simply the most subtle smart wearable ever.",
+     "where": "USP"
+    },
+    {
+     "text": "Smart without phone",
+     "where": "USP"
+    },
+    {
+     "text": "Unlike regular meditation apps, it is made for digital detox.",
+     "where": "USP"
+    }
+   ],
+   "new": [
+    {
+     "text": "Pulse is a smooth gold ring that knows nothing about you \u2014 on purpose. A few times an hour it taps your finger. You look up. Here you are. No screen, no scores, nothing to check, ever.",
+     "where": "positioning"
+    },
+    {
+     "text": "Every other ring reports on your life. Pulse gives you the afternoon back \u2014 it taps, and the afternoon is still going on. Every buzz you've ever felt wanted something from you; this one wants nothing. A ping summons. A pulse hands you the room.",
+     "where": "the wedge"
+    },
+    {
+     "text": "A gold ring that knows nothing about you \u2014 on purpose.",
+     "where": "object"
+    },
+    {
+     "text": "No screen, no scores, nothing to check, ever.",
+     "where": "object"
+    },
+    {
+     "text": "A pulse instead of a ping.",
+     "where": "object"
+    },
+    {
+     "text": "It taps. You look up. Here you are.",
+     "where": "object"
+    },
+    {
+     "text": "Two minutes to set up \u2014 then the ring does the remembering.",
+     "where": "object"
+    }
+   ]
+  },
+  {
+   "id": "benefits",
+   "label": "Benefits",
+   "blurb": "What it gives back \u2014 the felt outcome, the proof.",
+   "current": [
+    {
+     "text": "Benefit \u2014 Scientifically proven: feel calm, feel present.",
+     "where": "how it works"
+    },
+    {
+     "text": "Reduces stress and anxiety \u2014 by helping you snap out of autopilot and overthinking.",
+     "where": "benefits"
+    },
+    {
+     "text": "Improves focus \u2014 by helping you form new habits and stopping you from getting sidetracked.",
+     "where": "benefits"
+    },
+    {
+     "text": "Lets you be present \u2014 by keeping you in the moment without getting lost in thought.",
+     "where": "benefits"
+    },
+    {
+     "text": "Calms you effortlessly \u2014 by making mindfulness and meditation a regular part of your life.",
+     "where": "benefits"
+    },
+    {
+     "text": "After the vibration I returned to really being there with my son.",
+     "where": "testimonial"
+    },
+    {
+     "text": "In the first week I noticed I stopped reaching for my phone during deep work.",
+     "where": "testimonial"
+    },
+    {
+     "text": "Pulse helps me slow down, be present, and appreciate the moment I'm in.",
+     "where": "testimonial"
+    },
+    {
+     "text": "It feels like the missing puzzle piece in my personal development journey.",
+     "where": "testimonial"
+    },
+    {
+     "text": "Pulse has transformed the way I experience presence.",
+     "where": "testimonial"
+    },
+    {
+     "text": "Pulse helps me feel more in control of my attention and my time.",
+     "where": "testimonial"
+    }
+   ],
+   "new": [
+    {
+     "text": "About four dinners a week, returned.",
+     "where": "return"
+    },
+    {
+     "text": "A whole bedtime story, with all of you in the room.",
+     "where": "return"
+    },
+    {
+     "text": "The first coffee, actually tasted.",
+     "where": "return"
+    },
+    {
+     "text": "Not more footage \u2014 the same footage, at the speed of being here.",
+     "where": "return"
+    },
+    {
+     "text": "The days stop blurring when you're in them.",
+     "where": "return"
+    },
+    {
+     "text": "If you can recall one moment of coming back, it's working.",
+     "where": "return"
+    },
+    {
+     "text": "The word that matters is reclaimable \u2014 those hours aren't spent, they're waiting.",
+     "where": "return"
+    },
+    {
+     "text": "Nothing measured you. The only instrument was you.",
+     "where": "return"
+    }
+   ]
+  }
+ ],
+ "guardrails": [
+  {
+   "text": "The wedge is a different verb, not fewer numbers. Never argue on data's ledger \u2014 no 'tracks less,' no 'removes a number,' no subtraction framing. They report; we return. They ask how you did; we ask where you are.",
+   "level": "green"
+  },
+  {
+   "text": "The return is a felt thing, not a retrieval. The ring stores nothing and hands nothing back. Say 'the afternoon back' or 'it was there all along,' never 'the ring does the remembering'; the remembering belongs to the wearer.",
+   "level": "green"
+  },
+  {
+   "text": "Land it in the chest, not the head: one felt, particular sensory instant beats any category of 'moments.' Ration each sensory prop (the kettle, the coffee, the tap, the stairs) to one appearance per surface.",
+   "level": "green"
+  },
+  {
+   "text": "Perform presence, don't narrate it. Prefer a present-tense instant that happens in the reader's body \u2014 'You're halfway up the stairs before you notice you took them,' 'You look up. Here you are.' \u2014 over a line that reports the benefit from outside the moment.",
+   "level": "green"
+  },
+  {
+   "text": "Kill the 'just another notification' objection by direction-of-ask, never by feature. Concede the haptic resemblance, then flip the errand: a ping summons and wants something; a pulse releases and wants nothing. The winning distinction is 'wants nothing' \u2014 never argue it's a better alert, smarter reminder, or quieter buzz; that files us back in the bucket we die in.",
+   "level": "red"
+  },
+  {
+   "text": "The flag is the wearer's to repeat, not ours to shout. Remarkability comes from a first-person owner-voice line the buyer says out loud \u2014 steal these verbatim from the corpus so they're earned, not clever.",
+   "level": "green"
+  },
+  {
+   "text": "Never 'you will feel' \u2014 always 'you may notice.' The uncertainty is the active ingredient.",
+   "level": "red"
+  },
+  {
+   "text": "Ban the destination verbs: no 'become,' 'get,' 'improve,' 'reduce,' 'unlock,' 'transform,' 'elevate,' 'journey.' Presence is arriving, not a place you arrive at.",
+   "level": "red"
+  },
+  {
+   "text": "Kill 'scientifically proven' and all proof-by-authority. Proof = real wearers' own before/after words only.",
+   "level": "red"
+  },
+  {
+   "text": "Never let the enemy name the product. No 'smart wearable,' no 'notification,' no benefit-bullet lists, no feature/mechanism grid \u2014 name the notification only to refuse it, never to describe what Pulse is.",
+   "level": "red"
+  },
+  {
+   "text": "Never ship a score. No quiz score/grade/percentile, no dashboard, no streaks. A number for someone's presence collapses the anti-data soul.",
+   "level": "red"
+  },
+  {
+   "text": "The guarantee grades nothing. The return is unconditional \u2014 any reason or none, no questions, no proof of presence at the door.",
+   "level": "yellow"
+  },
+  {
+   "text": "No shouted transactions. Retire 'SHOP NOW'; the CTA should be as quiet as the pulse. No exclamation points, no urgency or scarcity.",
+   "level": "red"
+  },
+  {
+   "text": "Don't invite the spreadsheet. Keep ROI math and the reclaimable-hours number out of the hero; price as identity and restraint. The dinner line is a quiet frame, not an argument.",
+   "level": "red"
+  },
+  {
+   "text": "The deliverable must withhold like the object. Ship the fewest lines that each wave a flag (~4 taglines, ~7 TOS); hold the rest as an internal palette that lives inside body copy, not on the shipped surface. Cut, don't add; prefer verbatim corpus lines; when in doubt, say less.",
+   "level": "yellow"
+  },
+  {
+   "text": "Clarity before cleverness in the hero: the koan may lead, but it must sit against one plain line that names the object and the wedge. Never leave the riddle standing alone above the fold.",
+   "level": "green"
+  },
+  {
+   "text": "Speak to the wearer in second person, present tense, and let the sentence embody presence rather than describe it. Keep triple-negation ('counts nothing, grades nothing, remembers nothing') as an owner-voice flag only \u2014 never on the shipped surface and never as the wedge's closing argument, where negation drags the reader back into the ledger we left.",
+   "level": "green"
+  },
+  {
+   "text": "Say who it's NOT for. Naming the optimizer and sending them to Oura is what makes the right people feel found.",
+   "level": "green"
+  }
+ ],
+ "counts": {
+  "current": 40,
+  "new": 36,
+  "guardrails": 18
+ }
+}
