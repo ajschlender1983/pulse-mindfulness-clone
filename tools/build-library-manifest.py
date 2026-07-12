@@ -58,7 +58,7 @@ COLLECTIONS = [
   "motion":["motion/*.mp4"], "curate":8},
  {"key":"studio-broll","label":"Motion — ethereal b-roll","kind":"motion",
   "motion":["library/studio-broll/web/*.mp4"], "curate":6},
- {"key":"motion-illustration","label":"Motion rule · illustration foot (composed, on rails)","kind":"motion",
+ {"key":"motion-illustration","label":"Motion rule · illustration foot (multiplane parallax)","kind":"motion",
   "motion":["library/motion-rules/illustration/*.mp4"], "curate":5},
  {"key":"motion-transition","label":"Motion rule · transition (illustration → photograph)","kind":"motion",
   "motion":["library/motion-rules/transition/*.mp4"], "curate":5},

@@ -2835,9 +2835,27 @@
    "kind": "gallery",
    "title": "Performance \u2014 the pause inside effort",
    "description": "The pause inside effort \u2014 presence held under pressure.",
-   "count": 8,
-   "thumb": "library/performance/perf-piano.png",
+   "count": 40,
+   "thumb": "library/performance/perf-lifter.png",
    "items": [
+    {
+     "file": "library/performance/perf-archer.png"
+    },
+    {
+     "file": "library/performance/perf-barista.png"
+    },
+    {
+     "file": "library/performance/perf-boxer.png"
+    },
+    {
+     "file": "library/performance/perf-calligrapher.png"
+    },
+    {
+     "file": "library/performance/perf-carpenter.png"
+    },
+    {
+     "file": "library/performance/perf-cellist.png"
+    },
     {
      "file": "library/performance/perf-chef.png"
     },
@@ -2845,22 +2863,100 @@
      "file": "library/performance/perf-climb.png"
     },
     {
+     "file": "library/performance/perf-coder.png"
+    },
+    {
+     "file": "library/performance/perf-conductor.png"
+    },
+    {
+     "file": "library/performance/perf-cyclist.png"
+    },
+    {
      "file": "library/performance/perf-dancer.png"
+    },
+    {
+     "file": "library/performance/perf-diver.png"
+    },
+    {
+     "file": "library/performance/perf-drummer.png"
+    },
+    {
+     "file": "library/performance/perf-firefighter.png"
+    },
+    {
+     "file": "library/performance/perf-freediver.png"
+    },
+    {
+     "file": "library/performance/perf-goalkeeper.png"
+    },
+    {
+     "file": "library/performance/perf-gymnast.png"
     },
     {
      "file": "library/performance/perf-ice.png"
     },
     {
+     "file": "library/performance/perf-lawyer.png"
+    },
+    {
+     "file": "library/performance/perf-lifter.png"
+    },
+    {
+     "file": "library/performance/perf-mountaineer.png"
+    },
+    {
+     "file": "library/performance/perf-nurse.png"
+    },
+    {
+     "file": "library/performance/perf-painter.png"
+    },
+    {
      "file": "library/performance/perf-piano.png"
+    },
+    {
+     "file": "library/performance/perf-pilot.png"
+    },
+    {
+     "file": "library/performance/perf-potter.png"
+    },
+    {
+     "file": "library/performance/perf-rower.png"
     },
     {
      "file": "library/performance/perf-run.png"
     },
     {
+     "file": "library/performance/perf-singer.png"
+    },
+    {
+     "file": "library/performance/perf-skater.png"
+    },
+    {
      "file": "library/performance/perf-speaker.png"
     },
     {
+     "file": "library/performance/perf-sprinter.png"
+    },
+    {
      "file": "library/performance/perf-surgeon.png"
+    },
+    {
+     "file": "library/performance/perf-swimmer.png"
+    },
+    {
+     "file": "library/performance/perf-teacher.png"
+    },
+    {
+     "file": "library/performance/perf-trader.png"
+    },
+    {
+     "file": "library/performance/perf-violinist.png"
+    },
+    {
+     "file": "library/performance/perf-welder.png"
+    },
+    {
+     "file": "library/performance/perf-yoga.png"
     }
    ]
   },
@@ -3030,25 +3126,25 @@
    "id": "motion-illustration",
    "group": "motion",
    "kind": "gallery",
-   "title": "Motion rule \u00b7 illustration foot (composed, on rails)",
-   "description": "Motion rule \u00b7 the illustration foot \u2014 composed camera, on rails, no handheld.",
+   "title": "Motion rule \u00b7 illustration foot (multiplane parallax)",
+   "description": "Motion rule \u00b7 the illustration foot \u2014 Disney multiplane parallax, the 2D world showing its 3D space, characters alive. Real Veo video.",
    "count": 5,
-   "thumb": "library/motion-rules/illustration/ill-drift-rl.mp4",
+   "thumb": "library/motion-rules/illustration/il-veo-03.mp4",
    "items": [
     {
-     "file": "library/motion-rules/illustration/ill-breathe.mp4"
+     "file": "library/motion-rules/illustration/il-veo-01.mp4"
     },
     {
-     "file": "library/motion-rules/illustration/ill-drift-lr.mp4"
+     "file": "library/motion-rules/illustration/il-veo-02.mp4"
     },
     {
-     "file": "library/motion-rules/illustration/ill-drift-rl.mp4"
+     "file": "library/motion-rules/illustration/il-veo-03.mp4"
     },
     {
-     "file": "library/motion-rules/illustration/ill-pull-out.mp4"
+     "file": "library/motion-rules/illustration/il-veo-04.mp4"
     },
     {
-     "file": "library/motion-rules/illustration/ill-push-in.mp4"
+     "file": "library/motion-rules/illustration/il-veo-05.mp4"
     }
    ]
   },
@@ -3057,24 +3153,24 @@
    "group": "motion",
    "kind": "gallery",
    "title": "Motion rule \u00b7 photograph foot (handheld cell-phone)",
-   "description": "Motion rule \u00b7 the photograph foot \u2014 handheld cell-phone motion, alive and present.",
+   "description": "Motion rule \u00b7 the photograph foot \u2014 handheld cell-phone motion, the subject alive and present. Real Veo video.",
    "count": 5,
-   "thumb": "library/motion-rules/photograph/ph-handheld-03.mp4",
+   "thumb": "library/motion-rules/photograph/ph-veo-03.mp4",
    "items": [
     {
-     "file": "library/motion-rules/photograph/ph-handheld-01.mp4"
+     "file": "library/motion-rules/photograph/ph-veo-01.mp4"
     },
     {
-     "file": "library/motion-rules/photograph/ph-handheld-02.mp4"
+     "file": "library/motion-rules/photograph/ph-veo-02.mp4"
     },
     {
-     "file": "library/motion-rules/photograph/ph-handheld-03.mp4"
+     "file": "library/motion-rules/photograph/ph-veo-03.mp4"
     },
     {
-     "file": "library/motion-rules/photograph/ph-handheld-04.mp4"
+     "file": "library/motion-rules/photograph/ph-veo-04.mp4"
     },
     {
-     "file": "library/motion-rules/photograph/ph-handheld-05.mp4"
+     "file": "library/motion-rules/photograph/ph-veo-05.mp4"
     }
    ]
   },
@@ -3083,24 +3179,24 @@
    "group": "motion",
    "kind": "gallery",
    "title": "Motion rule \u00b7 transition (illustration \u2192 photograph)",
-   "description": "Motion rule \u00b7 the transition \u2014 illustration resolving into photograph, timed to the pulse.",
+   "description": "Motion rule \u00b7 the transition \u2014 illustration resolving into a living photograph, timed to the pulse. Real Veo video.",
    "count": 5,
-   "thumb": "library/motion-rules/transition/tr-seam-push.mp4",
+   "thumb": "library/motion-rules/transition/tr-veo-03.mp4",
    "items": [
     {
-     "file": "library/motion-rules/transition/tr-dissolve.mp4"
+     "file": "library/motion-rules/transition/tr-veo-01.mp4"
     },
     {
-     "file": "library/motion-rules/transition/tr-focus.mp4"
+     "file": "library/motion-rules/transition/tr-veo-02.mp4"
     },
     {
-     "file": "library/motion-rules/transition/tr-seam-push.mp4"
+     "file": "library/motion-rules/transition/tr-veo-03.mp4"
     },
     {
-     "file": "library/motion-rules/transition/tr-travel.mp4"
+     "file": "library/motion-rules/transition/tr-veo-04.mp4"
     },
     {
-     "file": "library/motion-rules/transition/tr-wipe.mp4"
+     "file": "library/motion-rules/transition/tr-veo-05.mp4"
     }
    ]
   },
@@ -3516,6 +3612,6 @@
  "counts": {
   "groups": 6,
   "collections": 51,
-  "files": 865
+  "files": 897
  }
 }

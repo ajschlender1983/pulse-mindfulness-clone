@@ -715,28 +715,60 @@
     "performance": {
       "label": "Performance \u2014 the pause inside effort",
       "kind": "stills",
-      "stills": 8,
+      "stills": 40,
       "motion": 0,
       "gallery": "library/gallery/performance.html",
       "curated": [
-        "library/performance/perf-chef.png",
-        "library/performance/perf-climb.png",
-        "library/performance/perf-dancer.png",
-        "library/performance/perf-ice.png",
-        "library/performance/perf-piano.png",
-        "library/performance/perf-run.png",
-        "library/performance/perf-speaker.png",
-        "library/performance/perf-surgeon.png"
+        "library/performance/perf-archer.png",
+        "library/performance/perf-cellist.png",
+        "library/performance/perf-cyclist.png",
+        "library/performance/perf-freediver.png",
+        "library/performance/perf-lifter.png",
+        "library/performance/perf-pilot.png",
+        "library/performance/perf-skater.png",
+        "library/performance/perf-teacher.png"
       ],
       "files_stills": [
+        "library/performance/perf-archer.png",
+        "library/performance/perf-barista.png",
+        "library/performance/perf-boxer.png",
+        "library/performance/perf-calligrapher.png",
+        "library/performance/perf-carpenter.png",
+        "library/performance/perf-cellist.png",
         "library/performance/perf-chef.png",
         "library/performance/perf-climb.png",
+        "library/performance/perf-coder.png",
+        "library/performance/perf-conductor.png",
+        "library/performance/perf-cyclist.png",
         "library/performance/perf-dancer.png",
+        "library/performance/perf-diver.png",
+        "library/performance/perf-drummer.png",
+        "library/performance/perf-firefighter.png",
+        "library/performance/perf-freediver.png",
+        "library/performance/perf-goalkeeper.png",
+        "library/performance/perf-gymnast.png",
         "library/performance/perf-ice.png",
+        "library/performance/perf-lawyer.png",
+        "library/performance/perf-lifter.png",
+        "library/performance/perf-mountaineer.png",
+        "library/performance/perf-nurse.png",
+        "library/performance/perf-painter.png",
         "library/performance/perf-piano.png",
+        "library/performance/perf-pilot.png",
+        "library/performance/perf-potter.png",
+        "library/performance/perf-rower.png",
         "library/performance/perf-run.png",
+        "library/performance/perf-singer.png",
+        "library/performance/perf-skater.png",
         "library/performance/perf-speaker.png",
-        "library/performance/perf-surgeon.png"
+        "library/performance/perf-sprinter.png",
+        "library/performance/perf-surgeon.png",
+        "library/performance/perf-swimmer.png",
+        "library/performance/perf-teacher.png",
+        "library/performance/perf-trader.png",
+        "library/performance/perf-violinist.png",
+        "library/performance/perf-welder.png",
+        "library/performance/perf-yoga.png"
       ],
       "files_motion": []
     },
@@ -1275,25 +1307,25 @@
       ]
     },
     "motion-illustration": {
-      "label": "Motion rule \u00b7 illustration foot (composed, on rails)",
+      "label": "Motion rule \u00b7 illustration foot (multiplane parallax)",
       "kind": "motion",
       "stills": 0,
       "motion": 5,
       "gallery": "library/gallery/motion-illustration.html",
       "curated": [
-        "library/motion-rules/illustration/ill-breathe.mp4",
-        "library/motion-rules/illustration/ill-drift-lr.mp4",
-        "library/motion-rules/illustration/ill-drift-rl.mp4",
-        "library/motion-rules/illustration/ill-pull-out.mp4",
-        "library/motion-rules/illustration/ill-push-in.mp4"
+        "library/motion-rules/illustration/il-veo-01.mp4",
+        "library/motion-rules/illustration/il-veo-02.mp4",
+        "library/motion-rules/illustration/il-veo-03.mp4",
+        "library/motion-rules/illustration/il-veo-04.mp4",
+        "library/motion-rules/illustration/il-veo-05.mp4"
       ],
       "files_stills": [],
       "files_motion": [
-        "library/motion-rules/illustration/ill-breathe.mp4",
-        "library/motion-rules/illustration/ill-drift-lr.mp4",
-        "library/motion-rules/illustration/ill-drift-rl.mp4",
-        "library/motion-rules/illustration/ill-pull-out.mp4",
-        "library/motion-rules/illustration/ill-push-in.mp4"
+        "library/motion-rules/illustration/il-veo-01.mp4",
+        "library/motion-rules/illustration/il-veo-02.mp4",
+        "library/motion-rules/illustration/il-veo-03.mp4",
+        "library/motion-rules/illustration/il-veo-04.mp4",
+        "library/motion-rules/illustration/il-veo-05.mp4"
       ]
     },
     "motion-transition": {
@@ -1303,19 +1335,19 @@
       "motion": 5,
       "gallery": "library/gallery/motion-transition.html",
       "curated": [
-        "library/motion-rules/transition/tr-dissolve.mp4",
-        "library/motion-rules/transition/tr-focus.mp4",
-        "library/motion-rules/transition/tr-seam-push.mp4",
-        "library/motion-rules/transition/tr-travel.mp4",
-        "library/motion-rules/transition/tr-wipe.mp4"
+        "library/motion-rules/transition/tr-veo-01.mp4",
+        "library/motion-rules/transition/tr-veo-02.mp4",
+        "library/motion-rules/transition/tr-veo-03.mp4",
+        "library/motion-rules/transition/tr-veo-04.mp4",
+        "library/motion-rules/transition/tr-veo-05.mp4"
       ],
       "files_stills": [],
       "files_motion": [
-        "library/motion-rules/transition/tr-dissolve.mp4",
-        "library/motion-rules/transition/tr-focus.mp4",
-        "library/motion-rules/transition/tr-seam-push.mp4",
-        "library/motion-rules/transition/tr-travel.mp4",
-        "library/motion-rules/transition/tr-wipe.mp4"
+        "library/motion-rules/transition/tr-veo-01.mp4",
+        "library/motion-rules/transition/tr-veo-02.mp4",
+        "library/motion-rules/transition/tr-veo-03.mp4",
+        "library/motion-rules/transition/tr-veo-04.mp4",
+        "library/motion-rules/transition/tr-veo-05.mp4"
       ]
     },
     "motion-photograph": {
@@ -1325,19 +1357,19 @@
       "motion": 5,
       "gallery": "library/gallery/motion-photograph.html",
       "curated": [
-        "library/motion-rules/photograph/ph-handheld-01.mp4",
-        "library/motion-rules/photograph/ph-handheld-02.mp4",
-        "library/motion-rules/photograph/ph-handheld-03.mp4",
-        "library/motion-rules/photograph/ph-handheld-04.mp4",
-        "library/motion-rules/photograph/ph-handheld-05.mp4"
+        "library/motion-rules/photograph/ph-veo-01.mp4",
+        "library/motion-rules/photograph/ph-veo-02.mp4",
+        "library/motion-rules/photograph/ph-veo-03.mp4",
+        "library/motion-rules/photograph/ph-veo-04.mp4",
+        "library/motion-rules/photograph/ph-veo-05.mp4"
       ],
       "files_stills": [],
       "files_motion": [
-        "library/motion-rules/photograph/ph-handheld-01.mp4",
-        "library/motion-rules/photograph/ph-handheld-02.mp4",
-        "library/motion-rules/photograph/ph-handheld-03.mp4",
-        "library/motion-rules/photograph/ph-handheld-04.mp4",
-        "library/motion-rules/photograph/ph-handheld-05.mp4"
+        "library/motion-rules/photograph/ph-veo-01.mp4",
+        "library/motion-rules/photograph/ph-veo-02.mp4",
+        "library/motion-rules/photograph/ph-veo-03.mp4",
+        "library/motion-rules/photograph/ph-veo-04.mp4",
+        "library/motion-rules/photograph/ph-veo-05.mp4"
       ]
     },
     "studio-films": {
@@ -1359,7 +1391,7 @@
       ]
     }
   },
-  "grand_total_stills": 819,
+  "grand_total_stills": 851,
   "grand_total_motion": 46,
   "collection_count": 22
 }

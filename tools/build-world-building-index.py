@@ -58,9 +58,9 @@ SECTION_META={
  "email-heroes":("message","gallery","The lifecycle, illustrated — one hero per email across the two visual worlds."),
  "motion-loops":("motion","gallery","Funnel motion loops — breathing Ken-Burns and same-moment morphs."),
  "studio-broll":("motion","gallery","Ethereal b-roll — the ring-as-presence in gentle motion."),
- "motion-illustration":("motion","gallery","Motion rule · the illustration foot — composed camera, on rails, no handheld."),
- "motion-transition":("motion","gallery","Motion rule · the transition — illustration resolving into photograph, timed to the pulse."),
- "motion-photograph":("motion","gallery","Motion rule · the photograph foot — handheld cell-phone motion, alive and present."),
+ "motion-illustration":("motion","gallery","Motion rule · the illustration foot — Disney multiplane parallax, the 2D world showing its 3D space, characters alive. Real Veo video."),
+ "motion-transition":("motion","gallery","Motion rule · the transition — illustration resolving into a living photograph, timed to the pulse. Real Veo video."),
+ "motion-photograph":("motion","gallery","Motion rule · the photograph foot — handheld cell-phone motion, the subject alive and present. Real Veo video."),
  "studio-films":("motion","gallery","Finished testimonial films — the full cut."),
 }
 # manifest collections folded into personas (dropped as flat collections)
