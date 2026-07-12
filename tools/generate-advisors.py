@@ -36,7 +36,7 @@ STYLE=("A stylized editorial ILLUSTRATION rendered from a real photograph — a 
  "Square 1:1, framed for a circular avatar crop.")
 # stylized illustrations OF the actual public figures (recognizable likeness, per Adam's direction)
 ADV=[
- ("hormozi","Alex Hormozi, the entrepreneur and author of $100M Offers — a very muscular, powerfully built bald man in his mid-30s with a FULL thick dark well-groomed beard covering the jaw, a broad square face, thick neck, olive-tan skin, heavy dark eyebrows and an intense direct confident gaze, wearing a plain fitted black crew-neck t-shirt over big shoulders"),
+ ("hormozi","Alex Hormozi, the entrepreneur — a muscular, powerfully built man in his mid-30s with THICK DARK WAVY BROWN HAIR swept back off the forehead (medium length, tousled, NOT bald), a full thick dark-brown beard covering the jaw, heavy dark eyebrows, warm genuine broad smile with visible teeth, broad shoulders, wearing an open red-and-navy plaid flannel shirt over a white crew-neck tee"),
  ("godin","Seth Godin, the marketing author of Purple Cow and This Is Marketing — a warm bald man in his 60s with round wire glasses, an animated knowing smile, often a bright yellow accent"),
  ("watts","Alan Watts, the British philosopher of Zen and presence — a serene man in his 50s-60s with swept-back greying hair and a trimmed goatee, twinkling amused eyes, mid-century intellectual air"),
  ("jobs","Steve Jobs, the Apple co-founder — a lean man with a short grey beard, round rimless glasses, and a simple black turtleneck, thoughtful intense expression"),
