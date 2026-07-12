@@ -68,6 +68,37 @@
   .g-item.red .g-tag{ background:var(--red-bg); color:var(--red); }
   .g-item .g-txt{ font-size:14.5px; color:var(--brown); line-height:1.5; }
 
+  /* core messaging + hierarchy (rateable) */
+  .core-grid{ display:flex; flex-direction:column; gap:8px; margin-top:14px; }
+  .core-item,.hstep{ display:flex; align-items:flex-start; gap:14px; background:var(--warm); border:1px solid var(--line); border-radius:12px; padding:13px 16px; }
+  .core-item .ci-k{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--honey); width:118px; flex:0 0 118px; margin-top:2px; }
+  .core-item .ci-v{ flex:1; font-size:15px; color:var(--ink); line-height:1.5; }
+  .hier{ margin-top:14px; display:flex; flex-direction:column; gap:8px; }
+  .hstep .hn{ font-family:var(--serif); font-size:26px; color:var(--honey); width:40px; flex:0 0 40px; line-height:1; }
+  .hstep .hb{ flex:1; }
+  .hstep .hb .hl{ font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+  .hstep .hb .ht{ font-size:14px; color:var(--ink); line-height:1.5; margin-top:3px; }
+  .g-item .rate,.core-item .rate,.hstep .rate{ margin-left:auto; flex:0 0 auto; }
+  /* report */
+  .rep-btn{ font-family:var(--mono); font-size:12px; font-weight:500; background:var(--lime); color:#101828; border:1px solid var(--lime); border-radius:100px; padding:13px 28px; cursor:pointer; margin-top:14px; }
+  .modal{ position:fixed; inset:0; background:rgba(26,28,34,.55); z-index:100; display:none; align-items:flex-start; justify-content:center; padding:40px 16px; overflow:auto; }
+  .modal.on{ display:flex; }
+  .modal .sheet{ background:var(--cream); max-width:780px; width:100%; border-radius:18px; padding:28px 32px 36px; box-shadow:0 40px 90px rgba(0,0,0,.4); }
+  .modal .m-top{ display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:6px; position:sticky; top:-40px; background:var(--cream); padding-top:6px; }
+  .modal .m-top .m-actions{ display:flex; gap:8px; }
+  .modal .m-top button{ font-family:var(--mono); font-size:11px; border-radius:100px; padding:8px 15px; cursor:pointer; border:1px solid var(--line); background:var(--warm); color:var(--ink); }
+  .modal .m-top button.primary{ background:var(--ink); color:var(--warm); border-color:var(--ink); }
+  .report h3{ font-family:var(--serif); font-weight:400; font-size:24px; margin:6px 0 4px; }
+  .report .r-meta{ font-family:var(--mono); font-size:11px; color:var(--muted); }
+  .report .r-sum{ font-size:14.5px; color:var(--brown); margin:12px 0; line-height:1.55; }
+  .report h4{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--honey); margin:22px 0 8px; border-top:1px solid var(--line); padding-top:14px; }
+  .report .r-line{ font-size:13.5px; color:var(--brown); line-height:1.45; padding:4px 0; display:flex; gap:9px; align-items:flex-start; }
+  .report .r-dot{ width:9px; height:9px; border-radius:50%; margin-top:5px; flex:0 0 9px; }
+  .report .r-dot.green{ background:var(--green); } .report .r-dot.yellow{ background:var(--yellow); }
+  .report .r-dot.red{ background:var(--red); } .report .r-dot.none{ background:#cfc9b6; }
+  .report .r-line b{ color:var(--ink); font-weight:500; }
+  .report .r-note{ font-family:var(--mono); font-size:10.5px; color:var(--red); margin-left:6px; }
+
   /* voice check */
   .vc-input{ width:100%; min-height:96px; margin-top:14px; font-family:var(--font); font-size:16px; line-height:1.6;
     color:var(--ink); background:var(--warm); border:1px solid var(--line); border-radius:14px; padding:15px 18px; resize:vertical; }
@@ -142,6 +173,20 @@
     </div>
   </section>
 
+  <section class="blk" id="coreSection">
+    <div class="bk">Downstream of the advisors · the guide</div>
+    <h2>Core messaging</h2>
+    <p class="bsub">What the board settled on — the spine of the whole voice. Rate each <b style="color:var(--green)">keep</b> / <b style="color:var(--yellow)">maybe</b> / <b style="color:var(--red)">rework</b> as you go through it with the team.</p>
+    <div class="core-grid" id="core"><div class="empty">loading…</div></div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">The order of the argument</div>
+    <h2>Messaging hierarchy</h2>
+    <p class="bsub">What to say first, second, third — above the fold to the founder-and-tribe close. Rate each step; this is where the sequence gets locked.</p>
+    <div class="hier" id="hier"><div class="empty">loading…</div></div>
+  </section>
+
   <section class="blk">
     <div class="bk">Start here · the law</div>
     <h2>Guardrails</h2>
@@ -177,6 +222,21 @@
     </div>
     <div class="bench-stat" id="benchStat"></div>
   </section>
+
+  <section class="blk">
+    <div class="bk">The outcome</div>
+    <h2>Produce the report</h2>
+    <p class="bsub">Run the exercise with Johan — rate the guardrails, the hierarchy, the core, and every line — then generate one clean report of the decisions to save or hand off. Highlights where a reviewer's call differs from the board.</p>
+    <button class="rep-btn" id="repBtn">Produce the report ↗</button>
+  </section>
+
+  <div class="modal" id="repModal"><div class="sheet">
+    <div class="m-top">
+      <div class="m-actions"><button class="primary" id="repDownload">Download HTML</button><button id="repCopy">Copy as text</button></div>
+      <button id="repClose">Close ✕</button>
+    </div>
+    <div class="report" id="reportBody"></div>
+  </div></div>
 
   <footer>
     <span>Pulse · What we say · the workshop</span>
@@ -239,13 +299,39 @@
   var MAP=null, curTab="cta", gLevel="all";
 
   function levelLabel(l){ return {green:'DO',yellow:'CAREFUL',red:'NEVER'}[l]||'RULE'; }
+  function ratePill(id){ return pill(state.ratings[id], function(r){ state.ratings[id]=(state.ratings[id]===r?null:r); save(); renderAll(); }); }
+  function renderAll(){ if(!MAP) return; renderGuard(); renderCore(); renderHier(); renderBench(); renderStat(); }
   function renderGuard(){
-    var host=document.getElementById('guard'); clear(host);
-    var gs=(MAP.guardrails||[]).filter(function(g){ return gLevel==='all' || g.level===gLevel; });
-    gs.forEach(function(g){ var row=el('div','g-item '+g.level);
+    var host=document.getElementById('guard'); clear(host); var shown=0;
+    (MAP.guardrails||[]).forEach(function(g,idx){
+      if(!(gLevel==='all'||g.level===gLevel)) return; shown++;
+      var row=el('div','g-item '+g.level);
       row.appendChild(el('span','g-tag',levelLabel(g.level)));
-      row.appendChild(el('span','g-txt',g.text)); host.appendChild(row); });
-    if(!gs.length) host.appendChild(el('div','empty','None in this level.'));
+      row.appendChild(el('span','g-txt',g.text));
+      row.appendChild(ratePill('g-'+idx));
+      host.appendChild(row);
+    });
+    if(!shown) host.appendChild(el('div','empty','None in this level.'));
+  }
+  function renderCore(){
+    var host=document.getElementById('core'); if(!host) return; clear(host);
+    (MAP.core||[]).forEach(function(c){
+      var row=el('div','core-item');
+      row.appendChild(el('span','ci-k',c.k));
+      row.appendChild(el('span','ci-v',c.v));
+      row.appendChild(ratePill('core-'+key(c.k)));
+      host.appendChild(row);
+    });
+  }
+  function renderHier(){
+    var host=document.getElementById('hier'); if(!host) return; clear(host);
+    (MAP.hierarchy||[]).forEach(function(h){
+      var row=el('div','hstep');
+      row.appendChild(el('span','hn',String(h.n)));
+      var hb=el('div','hb'); hb.appendChild(el('div','hl',h.label)); hb.appendChild(el('div','ht',h.text)); row.appendChild(hb);
+      row.appendChild(ratePill('h-'+h.n));
+      host.appendChild(row);
+    });
   }
   function renderGFilter(){
     var host=document.getElementById('gFilter'); clear(host);
@@ -315,11 +401,77 @@
   };
 
   fetch('messaging-map.json').then(function(r){return r.json();}).then(function(m){
-    MAP=m; renderGFilter(); renderGuard(); renderTabs(); renderBench();
+    MAP=m; renderGFilter(); renderTabs(); renderAll();
   }).catch(function(){
     document.getElementById('guard').textContent='';
     document.getElementById('benchWrap').textContent='Could not load messaging-map.json — serve over http://';
   });
+
+  /* ---------- the report ---------- */
+  function rget(id){ return state.ratings[id]||null; }
+  function rlabel(rt){ return ({green:'keep',yellow:'maybe',red:'rework / cut'})[rt]||'—'; }
+  function buildSections(){
+    if(!MAP) return [];
+    var S=[];
+    S.push({h:'Guardrails — the reviewer stance on each rule', lines:(MAP.guardrails||[]).map(function(g,i){
+      return {rt:rget('g-'+i), text:g.text, meta:levelLabel(g.level)}; })});
+    S.push({h:'Core messaging', lines:(MAP.core||[]).map(function(c){
+      return {rt:rget('core-'+key(c.k)), text:c.k+' — '+c.v}; })});
+    S.push({h:'Messaging hierarchy', lines:(MAP.hierarchy||[]).map(function(h){
+      return {rt:rget('h-'+h.n), text:h.label+': '+h.text}; })});
+    (MAP.categories||[]).forEach(function(cat){
+      var lines=[];
+      cat.current.forEach(function(it){ lines.push({rt:rget('cur-'+key(it.text)), text:it.text, meta:'site', flag:breaksRule(it.text)}); });
+      cat.new.forEach(function(it){ lines.push({rt:rget('new-'+key(it.text)), text:it.text, meta:'new'}); });
+      (state.custom||[]).filter(function(x){return x.cat===cat.id;}).forEach(function(it){ lines.push({rt:rget('new-'+key(it.text)), text:it.text, meta:'added'}); });
+      S.push({h:cat.label, lines:lines});
+    });
+    return S;
+  }
+  function tally(){ var t={green:0,yellow:0,red:0,total:0}; Object.keys(state.ratings).forEach(function(k){ var v=state.ratings[k]; if(v){t.total++; t[v]++;} }); return t; }
+
+  function renderReport(){
+    var host=document.getElementById('reportBody'); clear(host);
+    host.appendChild(el('h3','Pulse — messaging review'));
+    var d=new Date();
+    host.appendChild(el('div','r-meta','With Johan · '+d.toISOString().slice(0,10)+' · pulsemindfulness.com'));
+    var t=tally();
+    host.appendChild(el('div','r-sum',t.total+' decisions captured — '+t.green+' keep · '+t.yellow+' maybe · '+t.red+' rework/cut. Advisory board: Hormozi · Godin · Watts · Jobs · Sutherland, argued over ten EBI passes.'));
+    buildSections().forEach(function(sec){
+      host.appendChild(el('h4',null,sec.h));
+      sec.lines.forEach(function(l){
+        var row=el('div','r-line');
+        row.appendChild(el('span','r-dot '+(l.rt||'none')));
+        var tx=el('span',null,''); tx.appendChild(document.createTextNode(l.text+' '));
+        if(l.meta) tx.appendChild(el('b',null,'['+l.meta+']'));
+        tx.appendChild(document.createTextNode(' — '+rlabel(l.rt)));
+        if(l.flag) tx.appendChild(el('span','r-note','⚠ breaks a guardrail'));
+        row.appendChild(tx); host.appendChild(row);
+      });
+    });
+  }
+  function reportText(){
+    var t=tally(), out=['PULSE — MESSAGING REVIEW','With Johan · '+new Date().toISOString().slice(0,10),
+      t.total+' decisions — '+t.green+' keep, '+t.yellow+' maybe, '+t.red+' rework/cut',''];
+    buildSections().forEach(function(sec){ out.push('## '+sec.h);
+      sec.lines.forEach(function(l){ out.push('['+(l.rt?rlabel(l.rt).toUpperCase():'—')+'] '+l.text+(l.meta?' ('+l.meta+')':'')+(l.flag?' ⚠':'')); });
+      out.push(''); });
+    return out.join('\n');
+  }
+  document.getElementById('repBtn').onclick=function(){ renderReport(); document.getElementById('repModal').classList.add('on'); };
+  document.getElementById('repClose').onclick=function(){ document.getElementById('repModal').classList.remove('on'); };
+  document.getElementById('repModal').onclick=function(e){ if(e.target===this) this.classList.remove('on'); };
+  document.getElementById('repCopy').onclick=function(){ var b=this; if(navigator.clipboard) navigator.clipboard.writeText(reportText()); b.textContent='Copied'; setTimeout(function(){b.textContent='Copy as text';},1200); };
+  document.getElementById('repDownload').onclick=function(){
+    var css='body{font-family:Georgia,serif;max-width:720px;margin:40px auto;padding:0 24px;color:#1A1C22;line-height:1.5}h1{font-size:26px}h2{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#A67C00;border-top:1px solid #ddd;padding-top:14px;margin-top:24px;font-family:monospace}.l{padding:4px 0;font-size:14px;color:#423D32}.d{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px}.green{background:#4E7C34}.yellow{background:#B8860B}.red{background:#9B3D2E}.none{background:#ccc}';
+    function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    var t=tally(), h=['<!doctype html><meta charset=utf-8><title>Pulse — messaging review</title><style>'+css+'</style>',
+      '<h1>Pulse — messaging review</h1><p><b>With Johan</b> · '+new Date().toISOString().slice(0,10)+'<br>'+t.total+' decisions — '+t.green+' keep · '+t.yellow+' maybe · '+t.red+' rework/cut</p>'];
+    buildSections().forEach(function(sec){ h.push('<h2>'+esc(sec.h)+'</h2>');
+      sec.lines.forEach(function(l){ h.push('<div class=l><span class="d '+(l.rt||'none')+'"></span>'+esc(l.text)+(l.meta?' <i>['+esc(l.meta)+']</i>':'')+' — '+rlabel(l.rt)+(l.flag?' ⚠':'')+'</div>'); }); });
+    var blob=new Blob([h.join('\n')],{type:'text/html'});
+    var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='pulse-messaging-review.html'; a.click();
+  };
 
   document.getElementById('exportBtn').onclick=function(){
     var out={ generated:new Date().toISOString(), ratings:state.ratings, added:state.custom };

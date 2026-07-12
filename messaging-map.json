@@ -342,6 +342,67 @@
    ]
   }
  ],
+ "core": [
+  {
+   "k": "The category",
+   "v": "A mindfulness ring that brings you back to the present \u2014 anti-data, no screen, nothing to check."
+  },
+  {
+   "k": "Positioning",
+   "v": "Pulse is a smooth gold ring that knows nothing about you \u2014 on purpose. A few times an hour it taps your finger. You look up. Here you are. No screen, no scores, nothing to check, ever."
+  },
+  {
+   "k": "The wedge",
+   "v": "Every other ring reports on your life. Pulse gives you the afternoon back \u2014 it taps, and the afternoon is still going on. Every buzz you've ever felt wanted something from you; this one wants nothing. A ping summons. A pulse hands you the room."
+  },
+  {
+   "k": "The promise",
+   "v": "Make the most of the movie of your life \u2014 the same footage, at the speed of being here."
+  },
+  {
+   "k": "The offer",
+   "v": "Lead with restraint and an unconditional return, never arithmetic. Spine: \"Wear it a month. If it isn't for you, send it back \u2014 no reason needed, no questions.\" The guarantee grades nothing: asking a wearer to certify presence would reinstall the scorecard the ring refuses. Frame the $200 as paying for restraint, not utility \u2014 \"The one thing you'll ever own that keeps no score of you,\" with \"for the cost of one nice dinner\" as a quiet frame beneath it, never an argument. Keep ROI and reclaimable-hours math out of the hero; that number stays downstream and gentle, never a grade. Proof = real wearers' anonymous before/after words \u2014 the only number we'd trust, so the only one we sell."
+  },
+  {
+   "k": "The feeling arc",
+   "v": "Numb \u2192 Seen \u2192 Hopeful \u2192 Convinced \u2192 Relieved \u2192 Grateful \u2192 Generous."
+  },
+  {
+   "k": "The voice",
+   "v": "Present tense, second person, one breath per sentence. Invite, never instruct. No exclamation points."
+  },
+  {
+   "k": "Canon lines",
+   "v": "When would now be a good time? \u00b7 Be Here WOW"
+  }
+ ],
+ "hierarchy": [
+  {
+   "n": 1,
+   "label": "First",
+   "text": "the invitation: 'When would now be a good time?' pinned to the plain line beneath it, 'A gold ring that knows nothing about you \u2014 on purpose.' The koan leads; the plain line names the object (gold ring) and the wedge (knows nothing) so a distracted stranger gets it cold in three seconds. Nothing to prove above the fold."
+  },
+  {
+   "n": 2,
+   "label": "Second",
+   "text": "the wedge as category law: every other ring reports on your life; Pulse gives you the afternoon back \u2014 no screen, no score, nothing to check, because your life was never data. This is why the object exists and why it costs $200."
+  },
+  {
+   "n": 3,
+   "label": "Third",
+   "text": "the concrete return: one moment the body recognizes \u2014 the kettle you actually hear, the last page of the story read to the end \u2014 and the felt tap itself: 'A small tap on your finger \u2014 you look up, and the room is still there.' How little it asks: two minutes to set up, then it just taps; the remembering is yours."
+  },
+  {
+   "n": 4,
+   "label": "Fourth",
+   "text": "the flag, the objection, and the proof: the brag the wearer repeats \u2014 'It doesn't do anything. That's the point. The one thing I own that keeps no score of me' \u2014 and the sayable answer for the first friend who asks 'isn't that just another buzz?': 'A notification wants something from you. This wants nothing \u2014 it taps, and the wanting stops.' Concede the haptic resemblance, then flip the errand: a ping summons you toward a task; the pulse hands you the room and asks nothing back. Then real wearers' anonymous before/after words and an unconditional 30-day return that grades nothing."
+  },
+  {
+   "n": 5,
+   "label": "Fifth",
+   "text": "the founder and the tribe: Johan answers replies himself, usually with coffee; this is for people who'd rather live the moment than measure it \u2014 'I stopped measuring my life to start living it' \u2014 and not for the optimizer chasing streaks. The refusal is the flag that makes the right people feel found."
+  }
+ ],
  "guardrails": [
   {
    "text": "The wedge is a different verb, not fewer numbers. Never argue on data's ledger \u2014 no 'tracks less,' no 'removes a number,' no subtraction framing. They report; we return. They ask how you did; we ask where you are.",
@@ -419,6 +480,8 @@
  "counts": {
   "current": 40,
   "new": 36,
+  "core": 8,
+  "hierarchy": 5,
   "guardrails": 18
  }
 }

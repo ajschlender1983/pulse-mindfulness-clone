@@ -78,10 +78,33 @@ def level(g):
     return "yellow"
 guardrails=[{"text":g,"level":level(g)} for g in cons.get("guardrails",[])]
 
+# ---- CORE MESSAGING (the guide, downstream of the advisors) ----
+core=[
+ {"k":"The category","v":"A mindfulness ring that brings you back to the present — anti-data, no screen, nothing to check."},
+ {"k":"Positioning","v":cons.get("positioning","")},
+ {"k":"The wedge","v":cons.get("wedge","")},
+ {"k":"The promise","v":"Make the most of the movie of your life — the same footage, at the speed of being here."},
+ {"k":"The offer","v":cons.get("offer","")},
+ {"k":"The feeling arc","v":"Numb → Seen → Hopeful → Convinced → Relieved → Grateful → Generous."},
+ {"k":"The voice","v":"Present tense, second person, one breath per sentence. Invite, never instruct. No exclamation points."},
+ {"k":"Canon lines","v":"When would now be a good time? · Be Here WOW"},
+]
+core=[c for c in core if c["v"]]
+
+# ---- MESSAGING HIERARCHY (first / second / third …) ----
+ORD=["First","Second","Third","Fourth","Fifth","Sixth","Seventh"]
+hierarchy=[]
+for i,step in enumerate(cons.get("hierarchy",[])):
+    s=str(step).strip()
+    # strip a leading "First — " / "1." if present; we relabel ourselves
+    s=re.sub(r'^(first|second|third|fourth|fifth|sixth|seventh)\s*[—:-]\s*', '', s, flags=re.I)
+    hierarchy.append({"n":i+1,"label":ORD[i] if i<len(ORD) else str(i+1),"text":s})
+
 out={"generated":"BUILD","categories":[{"id":c[0],"label":c[1],"blurb":c[2],
        "current":current[c[0]],"new":new[c[0]]} for c in CATS],
-     "guardrails":guardrails,
-     "counts":{"current":sum(len(v) for v in current.values()),"new":sum(len(v) for v in new.values()),"guardrails":len(guardrails)}}
+     "core":core, "hierarchy":hierarchy, "guardrails":guardrails,
+     "counts":{"current":sum(len(v) for v in current.values()),"new":sum(len(v) for v in new.values()),
+               "core":len(core),"hierarchy":len(hierarchy),"guardrails":len(guardrails)}}
 (ROOT/"messaging-map.json").write_text(json.dumps(out,indent=1))
 print("messaging-map.json:",out["counts"])
 from collections import Counter
