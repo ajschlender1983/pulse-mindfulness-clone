@@ -67,6 +67,8 @@
   .ln{ display:flex; align-items:center; gap:12px; padding:12px 15px; background:var(--warm); border:1px solid var(--line); border-radius:12px; }
   .ln .t{ flex:1; font-size:15.5px; }
   .ln .cat{ font-family:var(--mono); font-size:9.5px; color:var(--faint); text-transform:uppercase; letter-spacing:.06em; white-space:nowrap; }
+  .ln .ln-flag{ font-family:var(--mono); font-size:9.5px; color:var(--red); background:var(--red-bg); border:1px solid rgba(155,61,46,.3);
+    border-radius:100px; padding:3px 9px; white-space:nowrap; cursor:help; }
   .ln .del{ font-family:var(--mono); font-size:10px; color:var(--faint); background:none; border:none; cursor:pointer; text-decoration:underline; }
   .ln .del:hover{ color:var(--red); }
   .rate{ display:inline-flex; gap:4px; }
@@ -122,7 +124,7 @@
   <section class="blk">
     <div class="bk">Tool two</div>
     <h2>The line bench</h2>
-    <p class="bsub">The board's consensus lines plus everything added in this room. Rate each <b style="color:var(--green)">keep</b> / <b style="color:var(--yellow)">maybe</b> / <b style="color:var(--red)">cut</b> — new lines are voice-checked as they're added.</p>
+    <p class="bsub">The <b>live site</b> copy (pulled from pulsemindfulness.com), the board's consensus lines, and everything added in this room. Lines that trip a guardrail are flagged <span style="color:var(--red)">⚠</span> — the Live site tab doubles as a rewrite queue. Rate each <b style="color:var(--green)">keep</b> / <b style="color:var(--yellow)">maybe</b> / <b style="color:var(--red)">cut</b>.</p>
     <div class="tabs" id="tabs"></div>
     <div class="bench" id="bench"><div class="empty">loading the bench…</div></div>
     <div class="add-row">
@@ -193,8 +195,9 @@
   document.getElementById('vcRun').onclick=runCheck;
 
   /* ---------- the bench ---------- */
-  var GROUPS=[["tagline","Taglines"],["tos","Text on screen"],["subject","Subjects & CTAs"],["mine","Added here"]];
-  var curTab="tagline";
+  var GROUPS=[["site","Live site"],["tagline","Taglines"],["tos","Text on screen"],["subject","Subjects & CTAs"],["mine","Added here"]];
+  var curTab="site";
+  function breaksRule(t){ for(var i=0;i<RULES.length;i++){ if(RULES[i].warn) continue; RULES[i].re.lastIndex=0; if(RULES[i].re.test(t)) return true; } return false; }
   var LINES=[]; // {id, text, group, cat, custom}
   function key(t){ return t.toLowerCase().replace(/[^a-z0-9]+/g,'-').slice(0,60); }
   function renderTabs(){
@@ -224,6 +227,7 @@
       var row=el('div','ln');
       row.appendChild(el('span','t','“'+l.text+'”'));
       if(l.cat) row.appendChild(el('span','cat',l.cat));
+      if(breaksRule(l.text)){ var fl=el('span','ln-flag','⚠ breaks a guardrail'); fl.title='Run it through the voice check above to see which rule'; row.appendChild(fl); }
       row.appendChild(pill(state.ratings[l.id], function(r){ state.ratings[l.id]=(state.ratings[l.id]===r?null:r); save(); renderBench(); renderStat(); }));
       if(l.custom){
         var d=el('button','del','remove');
@@ -252,6 +256,9 @@
   };
 
   /* ---------- data ---------- */
+  fetch('live-site-copy.json').then(function(r){return r.ok?r.json():null;}).then(function(d){
+    if(d&&d.lines){ d.lines.forEach(function(l){ if(!LINES.some(function(x){return x.id==='w-'+key(l.text);})) LINES.push({id:'w-'+key(l.text), text:l.text, group:'site', cat:l.where||'live site'}); }); renderTabs(); renderBench(); }
+  }).catch(function(){});
   fetch('messaging-board.json').then(function(r){return r.json();}).then(function(b){
     var c=(b.final&&b.final.consensus)||{};
     (c.taglines||[]).forEach(function(t){ LINES.push({id:'t-'+key(t.text), text:t.text, group:'tagline', cat:(t.category||'').split('—')[0].trim().slice(0,26)}); });
