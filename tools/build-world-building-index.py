@@ -94,13 +94,9 @@ def build_personas():
             "title":title if "—" not in title else title.split("—")[0].strip(),
             "description":f"{len(items)}-frame story · a named Pulse persona.",
             "bio":bio, "count":len(items), "thumb":items[0]["file"], "items":items})
-    # --- Maya (the journey arc) ---
-    maya=globs("journey-images/*.png", exclude=r"(reference|gallery|00b-|00-)")
-    if maya:
-        items=[{"file":f,"order":i+1,"caption":re.sub(r'[-_]',' ',pathlib.Path(f).stem)} for i,f in enumerate(maya)]
-        personas.append({"id":"persona-maya","group":"people","kind":"persona","title":"Maya",
-            "description":"The journey arc · numb → generous, seven stages.","bio":"38, charge nurse, mother to Priya — the brand's north-star persona, from numb to generous.",
-            "count":len(items),"thumb":items[0]["file"],"items":items})
+    # --- Maya (the journey arc) is intentionally NOT a standalone persona collection:
+    #     the arc is already carried by the named storytellers + the messaging, so it's
+    #     integrated rather than duplicated as its own card (per Adam's direction).
     # --- 22 avatars (portrait + illustration→real) ---
     av_bios={}
     try:

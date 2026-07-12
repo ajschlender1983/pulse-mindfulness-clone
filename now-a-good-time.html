@@ -35,6 +35,11 @@
     letter-spacing:-0.02em; margin-top:18px; max-width:16ch; text-wrap:balance; }
   .hero h1 em{ font-style:italic; color:var(--honey); }
 
+  .breath{ margin:clamp(24px,5vw,52px) 0 clamp(8px,2vw,20px); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:clamp(30px,6vw,60px) 0; }
+  .breath .bl{ font-family:var(--serif); font-weight:300; font-size:clamp(24px,4.6vw,46px); line-height:1.18; letter-spacing:-0.015em; color:var(--ink); display:block; }
+  .breath .bl:nth-child(2){ padding-left:clamp(10px,4vw,60px); }
+  .breath .bl:nth-child(3){ padding-left:clamp(20px,8vw,120px); }
+  .breath .bl:nth-child(4){ padding-left:clamp(30px,12vw,180px); color:var(--honey); font-style:italic; }
   .manifesto{ max-width:60ch; margin:clamp(20px,5vw,44px) 0 clamp(40px,8vw,80px); }
   .manifesto p{ font-size:clamp(18px,2.3vw,23px); line-height:1.62; color:var(--brown); margin-top:20px; text-wrap:pretty; }
   .manifesto p:first-child{ margin-top:0; }
@@ -103,6 +108,8 @@
     <h1 id="hero">When would <em>now</em> be a good time?</h1>
   </header>
 
+  <div class="breath" id="breath"></div>
+
   <div class="manifesto" id="manifesto"></div>
 
   <div class="count" id="count">Twenty invitations</div>
@@ -124,6 +131,8 @@
 
   function render(d){
     if(d.kicker) document.getElementById('kick').textContent=d.kicker;
+    var br=document.getElementById('breath'); clear(br);
+    (d.breath||[]).forEach(function(line){ br.appendChild(el('span','bl',line)); });
     var m=document.getElementById('manifesto'); clear(m);
     (d.manifesto||[]).forEach(function(par){ m.appendChild(el('p',null,par)); });
     document.getElementById('count').textContent=(d.invitations||[]).length+' invitations · say yes to the one you’re in';

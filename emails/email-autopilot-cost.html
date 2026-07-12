@@ -63,13 +63,13 @@ table{border-collapse:collapse !important;}
   margin-top: 16px;
 }
 
-.hero-wrap { margin: 28px 0; }
-.hero-img {
-  width: 100%;
-  border-radius: 16px;
-  display: block;
-  box-shadow: 0 14px 34px rgba(66,61,50,0.16);
-}
+.hero-wrap { margin: 34px 0 36px; }
+.hero-frame { position: relative; background: linear-gradient(157deg,#F7F2E1 0%,#EFE8CF 100%); border-radius:20px; border:1px solid rgba(26,28,34,0.06); padding:15px 15px 5px 15px; box-shadow:0 2px 5px rgba(66,61,50,0.05),0 30px 66px rgba(66,61,50,0.15); }
+.hero-plate { position: relative; background:#FCFAF0; border:1px solid rgba(166,124,0,0.34); border-radius:12px; padding:8px; }
+.hero-cap { font-family:'DM Mono',ui-monospace,monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#8a8578; padding:13px 5px 3px 5px; overflow:hidden; }
+.hero-cap .hc-tick { display:inline-block; width:16px; height:2px; background:#A67C00; vertical-align:middle; margin-right:10px; }
+.hero-cap .hc-mark { float:right; color:#C4AE68; letter-spacing:0.2em; }
+.hero-img { width:100%; border-radius:7px; display:block; box-shadow:0 4px 12px rgba(66,61,50,0.10); }
 
 .email-body p {
   margin-bottom: 20px;
@@ -124,16 +124,8 @@ table{border-collapse:collapse !important;}
 }
 
 /* --- Pause block (the signature move) --- */
-.pause-block {
-  text-align: center;
-  margin: 34px 0;
-}
-.pause-block p {
-  font-size: 15px !important;
-  color: #8a8578 !important;
-  margin-bottom: 0 !important;
-  line-height: 1.9 !important;
-}
+.pause-block { text-align: center; margin: 34px 0; padding:26px 28px; background:#FBF8EC; border-radius:16px; border-top:2px solid #A67C00; box-shadow:0 12px 30px rgba(66,61,50,0.06); }
+.pause-block p { font-size: 15px !important; color: #6E6857 !important; margin-bottom: 0 !important; line-height: 1.95 !important; letter-spacing:0.01em; }
 
 /* --- CTA --- */
 .cta-wrap {
@@ -205,9 +197,9 @@ table{border-collapse:collapse !important;}
 }
 </style>
 </head>
-<body style="margin:0;padding:0;background-color:#EBE7D4;font-family:'DM Sans',-apple-system,BlinkMacSystemFont,Arial,sans-serif;color:#1A1C22;-webkit-font-smoothing:antialiased;">
+<body style="margin:0;padding:0;background-color:#EBE7D4;background-image:radial-gradient(120% 70% at 50% 0%, #F1EBD8 0%, #EBE7D4 52%, #E4DEC7 100%);font-family:'DM Sans',-apple-system,BlinkMacSystemFont,Arial,sans-serif;color:#1A1C22;-webkit-font-smoothing:antialiased;">
 
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#EBE7D4;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:transparent;">
 <tr><td align="center" style="padding:0;">
 
 <table role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" style="max-width:640px;width:100%;">
@@ -225,8 +217,13 @@ table{border-collapse:collapse !important;}
   </div>
 
   <div class="hero-wrap">
-    <img class="hero-img" src="images/hero-email-autopilot-cost-soft.png" alt="A week of identical days: the same commuter window, the same grey morning light, blurring past" width="552">
-  </div>
+      <div class="hero-frame">
+        <div class="hero-plate">
+          <img class="hero-img" src="images/hero-email-autopilot-cost-soft.png" alt="A week of identical days: the same commuter window, the same grey morning light, blurring past" width="520">
+        </div>
+        <div class="hero-cap"><span class="hc-mark">PULSE</span><span class="hc-tick"></span>Week of identical days: the same commuter window</div>
+      </div>
+    </div>
 
   <div class="email-body">
 
