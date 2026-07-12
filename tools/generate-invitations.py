@@ -61,8 +61,47 @@ def generate(model,key,prompt,aspect,tries=3):
 
 STYLE=("Warm, editorial, un-staged — medium-format film, soft ambient natural light, honey and cream tones, "
        "fine grain, gentle highlight bloom, real and intimate, never stocky or posed. A quiet, ordinary, "
-       "easily-missed moment made beautiful. No text, no logos, no watermark.")
+       "easily-missed moment made beautiful. Anatomy correct: natural hands, fingers and feet. "
+       "No text, no lettering, no logos, no watermark.")
 RING="a wide smooth polished gold band (the Pulse ring) on the finger catches a small spark of light"
+# every frame carries the ring (audit fix: scenes/faces were shipping ringless or with thin bands)
+RING_ALL=("On their ring finger sits a WIDE, smooth, polished gold band — the Pulse ring — clearly visible "
+          "wherever a hand is in frame, catching one small warm glint. Not a thin band, not ornate, no other rings.")
+# identity lock: the same person across all three frames of an invitation
+PERSONAS={
+ "01":"a woman in her mid-30s, dark hair in a loose low bun, cream sweater",
+ "02":"a man in his early 40s, short dark hair, olive henley",
+ "03":"a woman in her late 30s, curly brown hair, denim jacket",
+ "04":"a woman in her early 30s, straight black hair, mustard cardigan",
+ "05":"a man in his 50s, salt-and-pepper hair, grey crew-neck",
+ "06":"a woman in her late 20s, auburn hair pulled back, white tee",
+ "07":"a man in his 30s, short beard, flannel shirt",
+ "08":"a father in his late 30s, stubble, chambray shirt",
+ "09":"a woman in her 40s, shoulder-length blonde hair, navy blazer",
+ "10":"a man in his early 30s, tousled brown hair, bare-shouldered towel",
+ "11":"a woman in her 50s, silver-streaked hair, oatmeal shawl",
+ "12":"a man in his late 20s, curly black hair, white linen shirt",
+ "13":"a woman in her mid-30s, straight dark hair, sage blouse",
+ "14":"a woman in her early 40s, wavy brown hair, soft grey lounge set",
+ "15":"a man in his 40s, close-cropped hair, rust-colored tee",
+ "16":"a woman in her early 30s, long dark braid, cream sleep set",
+ "17":"a woman in her mid-30s, dark hair loose at the shoulders, moss-green sweater",
+ "18":"a man in his 30s behind a small shop counter, short locs, canvas apron",
+ "19":"a woman in her late 30s, chestnut hair in a low ponytail, wool coat",
+ "20":"a woman in her 60s, soft grey bob, linen shirt",
+}
+# targeted prompt fixes from the audit (2 reds + physics/composition breaks)
+FIXES={
+ "05-kettle-scene":"standing at the stove in a quiet morning kitchen, a classic stovetop kettle on the lit burner just beginning to steam, warm early light",
+ "05-kettle-face":"a portrait watching the same stovetop kettle on the stove, unhurried, present in the wait",
+ "18-change-detail":"macro of a few coins resting in an open palm as another hand gently closes over them to receive, fingers just brushing, "+RING,
+ "17-rain-detail":"macro from inside the room: the first raindrops sliding down the windowpane outside the glass, a hand resting gently against the inside of the glass, warm room light, "+RING,
+ "19-car-warm-face":"portrait inside the cold car, feeling the first warm air from the heater vent, shoulders loosening, a small relieved smile, breath faintly visible",
+ "14-bare-feet-detail":"macro of a woman's bare feet settling onto a warm wooden floor just inside the front door, shoes slipped off nearby",
+ "03-seatbelt-scene":"sitting in a parked car before driving, one hand resting on the fastened seatbelt at the chest, soft morning light through the windshield",
+ "09-elevator-scene":"standing alone in an elevator between floors, plain brushed-metal walls with no visible displays or buttons, soft even light, calm",
+ "09-elevator-face":"a close portrait alone in the elevator, eyes closed for one breath, plain metal wall behind, a private moment of stillness",
+}
 
 # (NN, slug, title, scene, detail-macro, face-beat)
 INV=[
@@ -174,7 +213,10 @@ def main():
             out=OUT/f"{cid}.png"
             if out.exists() and not force: skip+=1; continue
             body={"scene":scene,"detail":detail,"face":face}[frame]
-            prompt=f"{body}. {STYLE} Aspect ratio {aspect}."
+            if cid in FIXES: body=FIXES[cid]
+            who=PERSONAS.get(nn,"")
+            lead=f"The person in this moment: {who}. " if who else ""
+            prompt=f"{lead}{body}. {RING_ALL} {STYLE} Aspect ratio {aspect}."
             img=generate(model,key,prompt,aspect)
             if img: out.write_bytes(img); ok+=1; print(f"  ok {cid}", flush=True)
             else: failed.append(cid); print(f"  FAIL {cid}", flush=True)
