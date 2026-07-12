@@ -788,7 +788,7 @@
     items.forEach(function(it,i){
       var fr=el('div','frame'+(i===0?' active':''));
       fr.appendChild(el('span','tick'));
-      fr.appendChild(media(it.file,'fimg'));
+      var mimg=media(it.file,'fimg'); if(i<2 && mimg.tagName==='IMG') mimg.loading='eager'; fr.appendChild(mimg);
       fr.appendChild(el('span','edge', pad2(i+1)+' ▸'));
       var fr8=el('span','frate'); fr8.appendChild(pill(state.ratings[it.file], function(v){ setRating(it.file, v); })); fr.appendChild(fr8);
       var cap=el('div','fcap', pad2(i+1)+' ·');

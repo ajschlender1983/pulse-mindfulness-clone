@@ -138,7 +138,7 @@
       var film=el('div','film');
       FR.forEach(function(f,fi){
         var fig=el('figure', fi===0?'on':null);
-        var img=document.createElement('img'); img.loading='lazy';
+        var img=document.createElement('img'); img.loading=(fi===0?'eager':'lazy');
         img.src='library/invitations/'+iv.nn+'-'+iv.slug+'-'+f[0]+'.png';
         img.alt=iv.title+' — '+f[1];
         fig.appendChild(img);
