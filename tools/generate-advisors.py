@@ -27,18 +27,20 @@ def gen(m,k,prompt,tries=3):
                 break
     return None
 
-STYLE=("Stylized hand-painted portrait, warm gouache and soft screen-print texture, gentle cel-animation "
- "warmth, editorial and dreamlike, clearly an ILLUSTRATION (not a photograph). Head-and-shoulders, face "
- "centered and facing forward, soft neutral cream-to-honey background, warm honey and gold palette, gentle "
- "rim light. A calm, wise, approachable expression. No text, no logos, no watermark. Square 1:1, framed for "
- "a circular avatar crop.")
-# archetype descriptions — evoke the figure's signature look without photoreal likeness
+STYLE=("A stylized editorial ILLUSTRATION rendered from a real photograph — a recognizable, true-to-life "
+ "likeness, then hand-illustrated: confident inked linework over warm gouache and soft screen-print "
+ "shading, gentle painterly cel-animation finish, editorial and characterful. Keep the real person clearly "
+ "recognizable (accurate face, proportions, signature look) but unmistakably an illustration, not a photo. "
+ "Head-and-shoulders, face centered and facing forward, soft neutral cream-to-honey background, warm honey "
+ "and gold palette, gentle rim light, a calm approachable expression. No text, no logos, no watermark. "
+ "Square 1:1, framed for a circular avatar crop.")
+# stylized illustrations OF the actual public figures (recognizable likeness, per Adam's direction)
 ADV=[
- ("hormozi","a fit, bald man in his mid-30s with a short dark beard, broad shoulders, wearing a plain dark crew-neck t-shirt, direct confident gaze"),
- ("godin","a warm bald man with round wire glasses and a bright yellow scarf or collar accent, kind animated smile, mid-50s"),
- ("watts","a serene elderly man with swept-back silver hair and a trimmed grey goatee, twinkling amused eyes, soft earth-toned collar, 1960s intellectual air"),
- ("jobs","a lean man in his 40s with a short grey beard, round rimless glasses, a simple black turtleneck, thoughtful intense expression"),
- ("sutherland","a genial ruddy-cheeked British man in his 50s, tousled hair, round glasses, a slightly rumpled tweed jacket, wry warm smile"),
+ ("hormozi","Alex Hormozi, the entrepreneur and author of $100M Offers — a fit bald man in his mid-30s with a short dark beard and broad shoulders, wearing a plain black crew-neck t-shirt, direct confident gaze"),
+ ("godin","Seth Godin, the marketing author of Purple Cow and This Is Marketing — a warm bald man in his 60s with round wire glasses, an animated knowing smile, often a bright yellow accent"),
+ ("watts","Alan Watts, the British philosopher of Zen and presence — a serene man in his 50s-60s with swept-back greying hair and a trimmed goatee, twinkling amused eyes, mid-century intellectual air"),
+ ("jobs","Steve Jobs, the Apple co-founder — a lean man with a short grey beard, round rimless glasses, and a simple black turtleneck, thoughtful intense expression"),
+ ("sutherland","Rory Sutherland, Ogilvy vice-chairman and author of Alchemy — a genial ruddy-cheeked British man in his late 50s with tousled greying hair, round glasses, a rumpled jacket, and a wry warm smile"),
 ]
 def main():
     k=key(); m="gemini-3.1-flash-image"; OUT.mkdir(parents=True,exist_ok=True)

@@ -78,5 +78,13 @@
   "library/peak/peak-temple-dawn.png": {
     "rating": "yellow",
     "note": "interlaced clasped fingers soft/merged just below the ring"
+  },
+  "library/hybrid/s09-aperture.png": {
+    "rating": "yellow",
+    "note": "photographic hand wears two gold bands on adjacent fingers"
+  },
+  "library/hybrid/s06-frame-in-frame.png": {
+    "rating": "yellow",
+    "note": "gold ring reads as split/doubled band spanning two fingers"
   }
 }

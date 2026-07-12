@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Pulse — World-Building</title>
-<meta name="description" content="The single source of truth for the Pulse world — two sections: the Visual Language (do's & don'ts, the full rateable image library, an archive, the prompt library) and the Brand & Messaging (positioning, the expert advisory board consensus, taglines, and the text-on-screen workshop)." />
+<meta name="description" content="The single source of truth for the Pulse world — two sections: the Visual Language (do's & don'ts, the filmmaking lexicon & motion rules with video, the full rateable image library incl. the illustration↔photograph hybrid family, an archive, the prompt library) and the Brand & Messaging (positioning, the expert advisory board consensus, taglines, and the text-on-screen workshop)." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
@@ -80,6 +80,29 @@
   .rules .derived{ margin-top:14px; font-family:var(--mono); font-size:12.5px; color:var(--honey); }
   #derivedRules{ margin-top:6px; color:var(--brown); font-family:var(--font); font-size:14px; white-space:pre-wrap; }
 
+  /* ===== filmmaking lexicon & motion rules ===== */
+  .lex-intro{ font-size:14.5px; color:var(--brown); max-width:74ch; margin:2px 0 8px; }
+  .lex-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px; margin-top:10px; }
+  .lex-term{ background:var(--cream); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .lex-term .lt{ font-weight:600; font-size:15px; }
+  .lex-term .lt span{ font-family:var(--mono); font-size:10px; color:var(--honey); text-transform:uppercase; letter-spacing:.08em; margin-left:6px; }
+  .lex-term .lw{ font-size:13.5px; color:var(--brown); margin-top:5px; line-height:1.45; }
+  .lex-term .lu{ font-size:13.5px; color:var(--ink); margin-top:7px; line-height:1.45; }
+  .lex-term .lu b{ font-family:var(--mono); font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+  .aperture-essay{ background:var(--ink); color:var(--warm); border-radius:14px; padding:22px 26px; margin:20px 0; }
+  .aperture-essay h4{ font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--lime); font-weight:500; }
+  .aperture-essay p{ font-size:15.5px; line-height:1.58; margin-top:10px; color:#efe9d6; max-width:74ch; }
+  .aperture-essay p+p{ margin-top:12px; }
+  .foot{ margin-top:24px; border-top:1px solid var(--line); padding-top:18px; }
+  .foot .fh{ display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
+  .foot .fn{ font-weight:600; font-size:18px; letter-spacing:-0.02em; }
+  .foot .ftag{ font-family:var(--mono); font-size:10.5px; color:var(--honey); text-transform:uppercase; letter-spacing:.08em; }
+  .foot .frule{ font-size:14.5px; color:var(--brown); margin-top:6px; max-width:78ch; line-height:1.55; }
+  .foot .frule b{ color:var(--ink); }
+  .motion-strip{ display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:10px; margin-top:13px; }
+  .motion-strip figure{ margin:0; }
+  .motion-strip video{ width:100%; display:block; aspect-ratio:16/9; object-fit:cover; border-radius:10px; background:#111; border:1px solid var(--line); }
+  .motion-strip figcaption{ font-family:var(--mono); font-size:10px; color:var(--muted); padding:4px 2px; }
   .msg-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; margin-top:8px; }
   .msg-card{ background:var(--cream); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
   .msg-card .k{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
@@ -228,7 +251,7 @@
       <span class="mt">
         <span class="k">Section one</span>
         <h2>The Visual Language</h2>
-        <p>Do's &amp; don'ts, the full rateable image library with an archive, and the prompt library that made it.</p>
+        <p>Do's &amp; don'ts, the filmmaking lexicon &amp; motion rules, the full rateable image library with an archive, and the prompt library that made it.</p>
       </span>
       <span class="chev">▶</span>
     </summary>
@@ -271,6 +294,68 @@
             </ol>
             <div class="derived">Rules derived from your red notes so far:</div>
             <div id="derivedRules">— rate some frames red with notes and a summary appears here —</div>
+          </div>
+        </div>
+      </details>
+
+      <details class="panel" id="lexiconPanel">
+        <summary><span class="tw">Filmmaking</span><h2>The filmmaking lexicon &amp; motion rules</h2><span class="chev">▶</span></summary>
+        <div class="panel-body">
+          <p class="lex-intro">Pulse borrows the grammar of film because the product <i>is</i> a film idea: your life is twenty-four frames a second, and the only question is whether you're watching it at the speed you can live. Here's the vocabulary, where each term is used, and the motion rules — including the specific cinematic law for illustration, for photograph, and for the moment in between.</p>
+
+          <div class="lex-grid">
+            <div class="lex-term"><div class="lt">Frame <span>the unit</span></div><div class="lw">A single still instant. Twenty-four of them a second make a life.</div><div class="lu"><b>In Pulse</b> — every emailed moment ("the kettle," "the last page") is one frame asked to be exposed long enough to register.</div></div>
+            <div class="lex-term"><div class="lt">Frame rate <span>the speed</span></div><div class="lw">Frames per second. Too fast and it blurs; held longer and it becomes memory.</div><div class="lu"><b>In Pulse</b> — autopilot is 60 frames a minute, none seen; presence is 24 frames of one moment. "A pulse is a frame rate; presence is choosing the rate."</div></div>
+            <div class="lex-term"><div class="lt">Aperture <span>the iris</span></div><div class="lw">The iris that opens to let light in and set what's sharp.</div><div class="lu"><b>In Pulse</b> — attention is the aperture. The pulse opens it; the room floods back in.</div></div>
+            <div class="lex-term"><div class="lt">Focus / rack focus <span>the pull</span></div><div class="lw">The lens resolving a subject from blur to sharp; racking shifts focus between planes.</div><div class="lu"><b>In Pulse</b> — the ring racks focus off the future (blurred) and onto the now (sharp). This is the transition motion rule.</div></div>
+            <div class="lex-term"><div class="lt">Lens <span>the choice</span></div><div class="lw">What the camera sees through. Choosing the lens is choosing attention.</div><div class="lu"><b>In Pulse</b> — "Not more footage. The same footage, at the speed of being here." Presence is choosing the lens, not adding film.</div></div>
+            <div class="lex-term"><div class="lt">Depth of field <span>what's sharp</span></div><div class="lw">How much is in focus. Shallow = one plane sharp, the rest soft.</div><div class="lu"><b>In Pulse</b> — presence is shallow depth of field on the moment you're standing in; everything ahead of it goes soft.</div></div>
+            <div class="lex-term"><div class="lt">The hold <span>the dwell</span></div><div class="lw">Letting a shot run longer than expected until it lands.</div><div class="lu"><b>In Pulse</b> — "One frame, held long enough to become a movie." The pulse is permission to hold.</div></div>
+            <div class="lex-term"><div class="lt">The cut <span>the jump</span></div><div class="lw">The jump between frames. All cut and no continuity is disorientation.</div><div class="lu"><b>In Pulse</b> — the days that blur are a strip of hard cuts with nothing held between them.</div></div>
+            <div class="lex-term"><div class="lt">The seam <span>the hinge</span></div><div class="lw">Where illustration becomes photograph — the inflection point.</div><div class="lu"><b>In Pulse</b> — the ring is the seam. Cold + fast painterly memory resolves into warm + slow lived photograph.</div></div>
+            <div class="lex-term"><div class="lt">Grain &amp; warmth <span>the texture</span></div><div class="lw">The feel of film stock. Warm and slow reads as alive; cold and clean reads as data.</div><div class="lu"><b>In Pulse</b> — the whole style move is cold + fast → warm + slow. Grain over gloss, always.</div></div>
+          </div>
+
+          <div class="aperture-essay">
+            <h4>Frames in the aperture — expanding &amp; focusing the lens on the scene</h4>
+            <p>Attention is an aperture. On autopilot it's stopped down and racing: a thousand frames flicker past the sensor and not one is exposed long enough to register. The week goes by unwitnessed — not empty, just never developed.</p>
+            <p>The pulse is a hand on the aperture ring. It opens. Light floods in, the iris widens, and the lens pulls focus off the plane you were bracing for and onto the one you're actually standing in. The scene, which was always there, resolves. That is the entire mechanism rendered as cinematography: presence is not more footage — it's the aperture widening and the focus racking until a single frame is held long enough to become a memory. Every hybrid frame in this library stages that moment; every motion clip below obeys a rule about which side of the aperture it lives on.</p>
+          </div>
+
+          <div class="foot">
+            <div class="fh"><span class="fn">The illustration foot</span><span class="ftag">the memory, painted</span></div>
+            <p class="frule"><b>Rule — composed camera, on rails, never handheld.</b> Illustration is stylized recollection, not a filmed moment, so the camera is deliberate and dreamlike: a slow push, a gentle lateral drift, a breathing scale. No human shake, no imperfection — memory doesn't wobble. Cool, unhurried, a painting that quietly breathes.</p>
+            <div class="motion-strip">
+              <figure><video src="library/motion-rules/illustration/ill-push-in.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>slow push-in</figcaption></figure>
+              <figure><video src="library/motion-rules/illustration/ill-pull-out.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>slow pull-out</figcaption></figure>
+              <figure><video src="library/motion-rules/illustration/ill-drift-lr.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>lateral drift →</figcaption></figure>
+              <figure><video src="library/motion-rules/illustration/ill-drift-rl.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>lateral drift ←</figcaption></figure>
+              <figure><video src="library/motion-rules/illustration/ill-breathe.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>breathing scale</figcaption></figure>
+            </div>
+          </div>
+
+          <div class="foot">
+            <div class="fh"><span class="fn">The transition foot</span><span class="ftag">the reel slowing</span></div>
+            <p class="frule"><b>Rule — illustration resolves into photograph, timed to the pulse.</b> This is the inflection: travel the axis from the painted side to the photographic side, rack focus from blur into sharp, or dissolve cold + fast into warm + slow. The tap is the hinge that slows the reel. Use it once and let it land — it's the whole story in one move, so never overuse it.</p>
+            <div class="motion-strip">
+              <figure><video src="library/motion-rules/transition/tr-travel.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>travel the axis</figcaption></figure>
+              <figure><video src="library/motion-rules/transition/tr-seam-push.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>push in on the seam</figcaption></figure>
+              <figure><video src="library/motion-rules/transition/tr-focus.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>come into focus</figcaption></figure>
+              <figure><video src="library/motion-rules/transition/tr-dissolve.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>illustration → photo dissolve</figcaption></figure>
+              <figure><video src="library/motion-rules/transition/tr-wipe.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>smooth reveal</figcaption></figure>
+            </div>
+          </div>
+
+          <div class="foot">
+            <div class="fh"><span class="fn">The photograph foot</span><span class="ftag">the present, handheld</span></div>
+            <p class="frule"><b>Rule — full photographic video feels handheld on a cell phone.</b> Organic micro-drift, a slight tilt, a breath of zoom — imperfect on purpose. It's the intimacy of a real hand holding a real moment: warm, alive, present, un-staged. Never the locked, gliding, composed camera of the illustration foot — a lived moment has a pulse in the frame itself.</p>
+            <div class="motion-strip">
+              <figure><video src="library/motion-rules/photograph/ph-handheld-01.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>handheld · aurora</figcaption></figure>
+              <figure><video src="library/motion-rules/photograph/ph-handheld-02.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>handheld · canyon rim</figcaption></figure>
+              <figure><video src="library/motion-rules/photograph/ph-handheld-03.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>handheld · sea cliff</figcaption></figure>
+              <figure><video src="library/motion-rules/photograph/ph-handheld-04.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>handheld · rooftop dusk</figcaption></figure>
+              <figure><video src="library/motion-rules/photograph/ph-handheld-05.mp4" muted loop playsinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()"></video><figcaption>handheld · forest fog</figcaption></figure>
+            </div>
           </div>
         </div>
       </details>
