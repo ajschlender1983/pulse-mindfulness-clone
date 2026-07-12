@@ -15,10 +15,10 @@ site=load("live-site-copy.json",{"lines":[]})
 board=load("messaging-board.json",{})
 emails=load("email-board-review.json",{})
 
-CATS=[("cta","CTA","The ask — what a reader is invited to do."),
-      ("tagline","Tagline","The line — the hook, the headline, the thing on the billboard."),
-      ("product","Product","What Pulse IS and does — the mechanism, in words."),
-      ("benefits","Benefits","What it gives back — the felt outcome, the proof.")]
+CATS=[("cta","CTA","The ask: what a reader is invited to do."),
+      ("tagline","Tagline","The line: the hook, the headline, the thing on the billboard."),
+      ("product","Product","What Pulse is and does, the mechanism in words."),
+      ("benefits","Benefits","What it gives back: the felt outcome, the proof.")]
 
 # ---- CURRENT (from the live site) ----
 current={c[0]:[] for c in CATS}

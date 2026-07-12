@@ -4,7 +4,7 @@
   {
    "id": "cta",
    "label": "CTA",
-   "blurb": "The ask \u2014 what a reader is invited to do.",
+   "blurb": "The ask: what a reader is invited to do.",
    "current": [
     {
      "text": "SHOP NOW",
@@ -73,7 +73,7 @@
   {
    "id": "tagline",
    "label": "Tagline",
-   "blurb": "The line \u2014 the hook, the headline, the thing on the billboard.",
+   "blurb": "The line: the hook, the headline, the thing on the billboard.",
    "current": [
     {
      "text": "Feel good in 10 sec, the wearable for presence.",
@@ -154,7 +154,7 @@
   {
    "id": "product",
    "label": "Product",
-   "blurb": "What Pulse IS and does \u2014 the mechanism, in words.",
+   "blurb": "What Pulse is and does, the mechanism in words.",
    "current": [
     {
      "text": "Gentle vibrations on your finger remind you to pause, breathe, and reset \u2014 all day long.",
@@ -259,7 +259,7 @@
   {
    "id": "benefits",
    "label": "Benefits",
-   "blurb": "What it gives back \u2014 the felt outcome, the proof.",
+   "blurb": "What it gives back: the felt outcome, the proof.",
    "current": [
     {
      "text": "Benefit \u2014 Scientifically proven: feel calm, feel present.",
