@@ -40,6 +40,24 @@
   h1{ font-weight:600; font-size:clamp(30px,5.5vw,50px); letter-spacing:-0.045em; line-height:1.03; margin:12px 0 0; text-wrap:balance; }
   .lede{ font-size:clamp(16px,2.1vw,19px); color:var(--brown); max-width:66ch; margin:16px 0 0; }
 
+  /* the two top-level category cards */
+  .cat-cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin-top:26px; }
+  .cat-card{ background:var(--warm); border:1px solid var(--line); border-radius:20px; overflow:hidden;
+    box-shadow:0 18px 44px rgba(66,61,50,.10); display:flex; flex-direction:column; }
+  .cat-hero{ aspect-ratio:21/9; overflow:hidden; background:#22242a; }
+  .cat-hero img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .cat-body{ padding:20px 24px 24px; display:flex; flex-direction:column; gap:8px; flex:1; }
+  .cat-k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--honey); }
+  .cat-body h2{ font-size:clamp(22px,3vw,30px); font-weight:600; letter-spacing:-0.035em; }
+  .cat-body p{ font-size:14.5px; color:var(--brown); line-height:1.5; }
+  .cat-btns{ display:flex; gap:10px; margin-top:auto; padding-top:14px; flex-wrap:wrap; }
+  .cbtn{ font-family:var(--mono); font-size:12px; font-weight:500; border-radius:100px; padding:11px 22px; cursor:pointer;
+    text-decoration:none; display:inline-block; }
+  .cbtn.solid{ background:var(--ink); color:var(--warm); border:1px solid var(--ink); }
+  .cbtn.solid:hover{ background:#2a2d35; }
+  .cbtn.ghost{ background:none; color:var(--ink); border:1px solid rgba(26,28,34,.35); }
+  .cbtn.ghost:hover{ border-color:var(--honey); color:var(--honey); }
+
   /* the two top-level expandable sections */
   details.mega{ margin-top:26px; border-radius:20px; overflow:hidden; border:1px solid var(--line);
     background:linear-gradient(180deg,#fffdf3,#f4f0dd); box-shadow:0 18px 44px rgba(66,61,50,.10); }
@@ -339,22 +357,109 @@
 <div class="shell">
   <div class="eyebrow">The single source of truth · Pulse Voice + Pulse Filmmaker</div>
   <h1>Pulse World-Building</h1>
-  <p class="lede">One home for the whole Pulse world, in two parts: <b>the visual language</b> — every image ever made, to curate and learn from — and <b>the brand &amp; messaging</b> — the positioning, the taglines, and an expert advisory board that argued it into a single consensus.</p>
+  <p class="lede">One home for the whole Pulse world, in two categories: <b>what we say</b> — the voice, the taglines, the board's consensus — and <b>what they see</b> — the cinematic world, every image and motion rule, to curate and learn from.</p>
 
-  <a href="pulse-video-workshop.html" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:22px;padding:20px 24px;background:var(--ink);color:var(--warm);border-radius:18px;text-decoration:none;box-shadow:0 18px 44px rgba(66,61,50,.14);">
-    <span style="font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);white-space:nowrap;">New · The Trailers</span>
-    <span style="flex:1;font-size:16px;font-weight:500;min-width:240px;">Three brand films played on trailers everyone knows — <i>Presence</i> (the dream-thriller), <i>One Ring to Unite Them All</i> (the epic), <i>The First Rule</i> (the anti-ad) — scripts + one-frame-per-shot storyboards.</span>
-    <span style="font-family:var(--mono);font-size:12px;color:var(--lime);white-space:nowrap;">Open the workshop →</span>
-  </a>
+  <div class="cat-cards">
+    <div class="cat-card">
+      <div class="cat-hero"><img src="library/trailers/presence-01.png" alt="The gold ring at rest on dark walnut, one warm glint — the voice of the brand" loading="eager"></div>
+      <div class="cat-body">
+        <div class="cat-k">Category one</div>
+        <h2>What we say</h2>
+        <p>The voice. Core messaging, the board's consensus, the taglines, the words on the screen.</p>
+        <div class="cat-btns">
+          <button class="cbtn solid" onclick="pmfGo('megaBrand','msgPanel')">Workshop</button>
+          <button class="cbtn ghost" onclick="pmfGo('megaBrand','corePanel')">View guide</button>
+        </div>
+      </div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-hero"><img src="library/hybrid/s01-aperture.png" alt="An illustrated scene opening through a circular aperture into a photograph — the world, seen" loading="eager"></div>
+      <div class="cat-body">
+        <div class="cat-k">Category two</div>
+        <h2>What they see</h2>
+        <p>The cinematic world. The image library, the film grammar, the motion rules, the trailers.</p>
+        <div class="cat-btns">
+          <a class="cbtn solid" href="pulse-video-workshop.html">Workshop</a>
+          <button class="cbtn ghost" onclick="pmfGo('megaVisual','libAnchor')">View library</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- ============ SECTION 1 · VISUAL LANGUAGE ============ -->
-  <details class="mega" id="megaVisual" open>
+  <!-- ============ CATEGORY ONE · WHAT WE SAY ============ -->
+  <details class="mega" id="megaBrand" open>
     <summary>
       <span class="num">1</span>
       <span class="mt">
-        <span class="k">Section one</span>
-        <h2>The Visual Language</h2>
-        <p>Do's &amp; don'ts, the filmmaking lexicon &amp; motion rules, the full rateable image library with an archive, and the prompt library that made it.</p>
+        <span class="k">Category one</span>
+        <h2>What we say</h2>
+        <p>The voice — core messaging, the advisory board's consensus, the email-flow review, and the workshops for taglines and on-screen text.</p>
+      </span>
+      <span class="chev">▶</span>
+    </summary>
+    <div class="mega-body">
+
+      <details class="panel" id="corePanel" open>
+        <summary><span class="tw">Voice</span><h2>Core messaging</h2><span class="chev">▶</span></summary>
+        <div class="panel-body">
+          <div class="msg-grid">
+            <div class="msg-card"><div class="k">The category</div><div class="v">A mindfulness ring that brings you back to the present — anti-data, no screen, nothing to check.</div></div>
+            <div class="msg-card"><div class="k">The wedge</div><div class="v">A pulse instead of a ping. The opposite of one more notification.</div></div>
+            <div class="msg-card"><div class="k">The promise</div><div class="v">Make the most of the movie of your life — the same footage, at the speed of being here.</div></div>
+            <div class="msg-card"><div class="k">The feeling</div><div class="v">Numb → Seen → Hopeful → Convinced → Relieved → Grateful → Generous.</div></div>
+            <div class="msg-card"><div class="k">The voice</div><div class="v">Present tense, second person, one breath per sentence. Invite, never instruct. No exclamation points.</div></div>
+            <div class="msg-card"><div class="k">Canon lines</div><div class="v">“When would now be a good time?” · “Be Here WOW”</div></div>
+          </div>
+          <a href="now-a-good-time.html" style="display:flex;align-items:center;gap:14px;margin-top:14px;padding:16px 20px;background:var(--ink);color:var(--warm);border-radius:14px;text-decoration:none;">
+            <span style="font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);">Companion piece →</span>
+            <span style="flex:1;font-size:15.5px;font-weight:500;">“When would now be a good time?” — the manifesto &amp; 20 invitations</span>
+          </a>
+        </div>
+      </details>
+
+      <details class="panel" id="boardPanel" open>
+        <summary><span class="tw">Advisory board</span><h2>The board's consensus</h2><span class="chev">▶</span></summary>
+        <div class="panel-body" id="boardBody">
+          <div class="board-pending">The advisory board is convening — five experts (Hormozi, Godin, Watts, Jobs, Sutherland) across ten EBI passes. Their consensus appears here once the session is written.</div>
+        </div>
+      </details>
+
+      <details class="panel" id="flowReviewPanel">
+        <summary><span class="tw">Advisory board</span><h2>The board reviews the email flows</h2><span class="chev">▶</span></summary>
+        <div class="panel-body" id="flowReviewBody"><div class="empty">loading the board's flow review…</div></div>
+      </details>
+
+      <details class="panel" id="msgPanel">
+        <summary><span class="tw">Workshop</span><h2>Taglines</h2><span class="chev">▶</span></summary>
+        <div class="panel-body">
+          <p style="font-size:14px;color:var(--brown);max-width:64ch;margin-bottom:10px;">The board's consensus tagline set (falls back to the working set). Rate each <b style="color:var(--green)">keep</b> / <b style="color:var(--yellow)">caution</b> / <b style="color:var(--red)">cut</b>.</p>
+          <div class="tagline-list" id="taglineList"></div>
+        </div>
+      </details>
+
+      <details class="panel" id="tosPanel">
+        <summary><span class="tw">Workshop</span><h2>Text on screen · 10 variations</h2><span class="chev">▶</span></summary>
+        <div class="panel-body">
+          <div class="tos-head">
+            <span class="tos-progress" id="tosProgress"></span>
+            <span class="tos-locked" id="tosLocked"></span>
+          </div>
+          <p style="font-size:14px;color:var(--brown);max-width:64ch;">Short lines for video / social overlays. Rate all ten; once every line has a verdict the greens lock in as the approved on-screen text rules (and reds carry a note on why).</p>
+          <div class="tos-list" id="tosList"></div>
+        </div>
+      </details>
+
+    </div>
+  </details>
+
+<!-- ============ CATEGORY TWO · WHAT THEY SEE ============ -->
+  <details class="mega" id="megaVisual" open>
+    <summary>
+      <span class="num">2</span>
+      <span class="mt">
+        <span class="k">Category two</span>
+        <h2>What they see</h2>
+        <p>The cinematic world — do's &amp; don'ts, the filmmaking lexicon &amp; motion rules, the trailers, and the full rateable image library.</p>
       </span>
       <span class="chev">▶</span>
     </summary>
@@ -479,7 +584,7 @@
         <div class="panel-body" id="promptBody"><div class="empty">loading prompt library…</div></div>
       </details>
 
-      <div class="lib-tools">
+      <div class="lib-tools" id="libAnchor">
         <input id="libSearch" class="lib-search" placeholder="Search a persona, a section, a moment…" aria-label="Search the library" />
         <div class="lib-chips" id="groupChips"></div>
       </div>
@@ -488,73 +593,7 @@
     </div>
   </details>
 
-  <!-- ============ SECTION 2 · BRAND & MESSAGING ============ -->
-  <details class="mega" id="megaBrand" open>
-    <summary>
-      <span class="num">2</span>
-      <span class="mt">
-        <span class="k">Section two</span>
-        <h2>The Brand &amp; Messaging</h2>
-        <p>The positioning, the live-site and session copy, an expert advisory board's consensus, and the workshops for taglines and on-screen text.</p>
-      </span>
-      <span class="chev">▶</span>
-    </summary>
-    <div class="mega-body">
-
-      <details class="panel" id="corePanel" open>
-        <summary><span class="tw">Voice</span><h2>Core messaging</h2><span class="chev">▶</span></summary>
-        <div class="panel-body">
-          <div class="msg-grid">
-            <div class="msg-card"><div class="k">The category</div><div class="v">A mindfulness ring that brings you back to the present — anti-data, no screen, nothing to check.</div></div>
-            <div class="msg-card"><div class="k">The wedge</div><div class="v">A pulse instead of a ping. The opposite of one more notification.</div></div>
-            <div class="msg-card"><div class="k">The promise</div><div class="v">Make the most of the movie of your life — the same footage, at the speed of being here.</div></div>
-            <div class="msg-card"><div class="k">The feeling</div><div class="v">Numb → Seen → Hopeful → Convinced → Relieved → Grateful → Generous.</div></div>
-            <div class="msg-card"><div class="k">The voice</div><div class="v">Present tense, second person, one breath per sentence. Invite, never instruct. No exclamation points.</div></div>
-            <div class="msg-card"><div class="k">Canon lines</div><div class="v">“When would now be a good time?” · “Be Here WOW”</div></div>
-          </div>
-          <a href="now-a-good-time.html" style="display:flex;align-items:center;gap:14px;margin-top:14px;padding:16px 20px;background:var(--ink);color:var(--warm);border-radius:14px;text-decoration:none;">
-            <span style="font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);">Companion piece →</span>
-            <span style="flex:1;font-size:15.5px;font-weight:500;">“When would now be a good time?” — the manifesto &amp; 20 invitations</span>
-          </a>
-        </div>
-      </details>
-
-      <details class="panel" id="boardPanel" open>
-        <summary><span class="tw">Advisory board</span><h2>The board's consensus</h2><span class="chev">▶</span></summary>
-        <div class="panel-body" id="boardBody">
-          <div class="board-pending">The advisory board is convening — five experts (Hormozi, Godin, Watts, Jobs, Sutherland) across ten EBI passes. Their consensus appears here once the session is written.</div>
-        </div>
-      </details>
-
-      <details class="panel" id="flowReviewPanel">
-        <summary><span class="tw">Advisory board</span><h2>The board reviews the email flows</h2><span class="chev">▶</span></summary>
-        <div class="panel-body" id="flowReviewBody"><div class="empty">loading the board's flow review…</div></div>
-      </details>
-
-      <details class="panel" id="msgPanel">
-        <summary><span class="tw">Workshop</span><h2>Taglines</h2><span class="chev">▶</span></summary>
-        <div class="panel-body">
-          <p style="font-size:14px;color:var(--brown);max-width:64ch;margin-bottom:10px;">The board's consensus tagline set (falls back to the working set). Rate each <b style="color:var(--green)">keep</b> / <b style="color:var(--yellow)">caution</b> / <b style="color:var(--red)">cut</b>.</p>
-          <div class="tagline-list" id="taglineList"></div>
-        </div>
-      </details>
-
-      <details class="panel" id="tosPanel">
-        <summary><span class="tw">Workshop</span><h2>Text on screen · 10 variations</h2><span class="chev">▶</span></summary>
-        <div class="panel-body">
-          <div class="tos-head">
-            <span class="tos-progress" id="tosProgress"></span>
-            <span class="tos-locked" id="tosLocked"></span>
-          </div>
-          <p style="font-size:14px;color:var(--brown);max-width:64ch;">Short lines for video / social overlays. Rate all ten; once every line has a verdict the greens lock in as the approved on-screen text rules (and reds carry a note on why).</p>
-          <div class="tos-list" id="tosList"></div>
-        </div>
-      </details>
-
-    </div>
-  </details>
-
-  <footer>
+    <footer>
     <span>Pulse · World-building · ratings saved in this browser</span>
     <span><a href="image-library.html">Atlas</a> · <a href="builds.html">Builds</a></span>
   </footer>
@@ -562,6 +601,12 @@
 
 <script>
 (function(){
+  window.pmfGo=function(megaId,panelId){
+    var m=document.getElementById(megaId); if(m) m.open=true;
+    var t=document.getElementById(panelId);
+    if(t && t.tagName==='DETAILS') t.open=true;
+    (t||m).scrollIntoView({behavior:'smooth',block:'start'});
+  };
   var LS="pmf-worldbuilding-v1";
   var state=JSON.parse(localStorage.getItem(LS)||"{}");
   state.ratings=state.ratings||{};
