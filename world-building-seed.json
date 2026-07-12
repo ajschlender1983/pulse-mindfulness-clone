@@ -141,138 +141,38 @@
   },
   "library/invitations/01-dishes-scene.png": {
     "rating": "yellow",
-    "note": "no ring on prominent soapy hands; near-hand grip slightly odd \u2014 regen queued (credits)"
-  },
-  "library/invitations/02-orange-scene.png": {
-    "rating": "yellow",
-    "note": "no ring on either prominent hand \u2014 regen queued (credits)"
-  },
-  "library/invitations/02-orange-detail.png": {
-    "rating": "yellow",
-    "note": "digging digit stubby and thumb-like; ring rides mid-finger \u2014 regen queued (credits)"
-  },
-  "library/invitations/02-orange-face.png": {
-    "rating": "yellow",
-    "note": "no ring on prominent hand at mouth \u2014 regen queued (credits)"
-  },
-  "library/invitations/03-seatbelt-scene.png": {
-    "rating": "yellow",
-    "note": "garbled arrow-shaped seatbelt tongue; no ring visible \u2014 regen queued (credits)"
-  },
-  "library/invitations/04-laundry-scene.png": {
-    "rating": "yellow",
-    "note": "thin band instead of wide Pulse ring \u2014 regen queued (credits)"
-  },
-  "library/invitations/04-laundry-face.png": {
-    "rating": "yellow",
-    "note": "prominent spread hand, no ring \u2014 regen queued (credits)"
-  },
-  "library/invitations/05-kettle-scene.png": {
-    "rating": "red",
-    "note": "electric kettle heating on lit gas flame; garbled logo \u2014 regen queued (credits)"
-  },
-  "library/invitations/05-kettle-face.png": {
-    "rating": "yellow",
-    "note": "different older woman, third kettle style; thin band \u2014 regen queued (credits)"
-  },
-  "library/invitations/06-face-wash-detail.png": {
-    "rating": "yellow",
-    "note": "male hands/face; scene and face frames show a woman \u2014 regen queued (credits)"
+    "note": "flame-like glare artifact on fingertip; ring on middle finger"
   },
   "library/invitations/07-dog-scene.png": {
     "rating": "yellow",
-    "note": "blank watch dial; thin band, not Pulse ring \u2014 regen queued (credits)"
-  },
-  "library/invitations/08-child-asleep-scene.png": {
-    "rating": "yellow",
-    "note": "thin bands only; wide Pulse ring absent \u2014 regen queued (credits)"
+    "note": "glowing orb artifact floating on back of hand"
   },
   "library/invitations/09-elevator-scene.png": {
     "rating": "yellow",
-    "note": "floor display gibberish; no ring on clasped hands \u2014 regen queued (credits)"
-  },
-  "library/invitations/09-elevator-face.png": {
-    "rating": "yellow",
-    "note": "garbled elevator button labels \u2014 regen queued (credits)"
-  },
-  "library/invitations/10-mirror-scene.png": {
-    "rating": "yellow",
-    "note": "no ring on prominent mirror-touching hand \u2014 regen queued (credits)"
-  },
-  "library/invitations/11-mug-scene.png": {
-    "rating": "yellow",
-    "note": "ornate silver rings instead of gold Pulse band \u2014 regen queued (credits)"
+    "note": "chunky signet ring instead of wide smooth band"
   },
   "library/invitations/11-mug-face.png": {
     "rating": "yellow",
-    "note": "no ring on either prominent hand \u2014 regen queued (credits)"
-  },
-  "library/invitations/12-toast-scene.png": {
-    "rating": "yellow",
-    "note": "thin rings, not the wide Pulse band \u2014 regen queued (credits)"
+    "note": "ring on left hand; scene frame shows right"
   },
   "library/invitations/12-toast-face.png": {
     "rating": "yellow",
-    "note": "no ring on prominent foreground hands \u2014 regen queued (credits)"
-  },
-  "library/invitations/14-bare-feet-scene.png": {
-    "rating": "yellow",
-    "note": "thin ring, not Pulse band \u2014 regen queued (credits)"
-  },
-  "library/invitations/14-bare-feet-detail.png": {
-    "rating": "yellow",
-    "note": "male feet; woman elsewhere in set \u2014 regen queued (credits)"
-  },
-  "library/invitations/14-bare-feet-face.png": {
-    "rating": "yellow",
-    "note": "steam floats at mouth while mug rests at hip; no ring \u2014 regen queued (credits)"
-  },
-  "library/invitations/16-stretch-scene.png": {
-    "rating": "yellow",
-    "note": "right foot's big toe on outer side (two-left-feet look) \u2014 regen queued (credits)"
-  },
-  "library/invitations/16-stretch-face.png": {
-    "rating": "yellow",
-    "note": "no ring on raised clasped hands \u2014 regen queued (credits)"
-  },
-  "library/invitations/17-rain-scene.png": {
-    "rating": "yellow",
-    "note": "thin band, not wide Pulse ring \u2014 regen queued (credits)"
-  },
-  "library/invitations/17-rain-detail.png": {
-    "rating": "yellow",
-    "note": "dry hand on rainy exterior side of glass; inverted \u2014 regen queued (credits)"
-  },
-  "library/invitations/17-rain-face.png": {
-    "rating": "yellow",
-    "note": "different woman than scene; no ring \u2014 regen queued (credits)"
+    "note": "band ribbed not smooth; ring switched hands vs scene"
   },
   "library/invitations/18-change-scene.png": {
     "rating": "yellow",
-    "note": "no Pulse ring on exchanging hands; menu pseudo-text \u2014 regen queued (credits)"
+    "note": "ring on index finger, not ring finger"
   },
   "library/invitations/18-change-detail.png": {
-    "rating": "red",
-    "note": "coins hang in impossible vertical mid-air chain \u2014 regen queued (credits)"
-  },
-  "library/invitations/18-change-face.png": {
     "rating": "yellow",
-    "note": "thin band, not wide Pulse ring \u2014 regen queued (credits)"
+    "note": "baker's locs longer than scene/face frames"
   },
   "library/invitations/19-car-warm-detail.png": {
     "rating": "yellow",
-    "note": "vent air rendered as hair-like streaks \u2014 regen queued (credits)"
-  },
-  "library/invitations/19-car-warm-face.png": {
-    "rating": "yellow",
-    "note": "different older woman in house interior; breaks set \u2014 regen queued (credits)"
+    "note": "dashboard vent glows orange like a heating coil"
   },
   "library/invitations/20-plant-scene.png": {
     "rating": "yellow",
-    "note": "no Pulse ring on either weathered hand \u2014 regen queued (credits)"
-  },
-  "library/invitations/20-plant-face.png": {
-    "rating": "yellow",
-    "note": "no ring; younger woman than scene \u2014 regen queued (credits)"
+    "note": "ring on middle finger of left hand; face frame differs"
   }
 }

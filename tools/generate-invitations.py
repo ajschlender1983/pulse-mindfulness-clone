@@ -66,7 +66,8 @@ STYLE=("Warm, editorial, un-staged — medium-format film, soft ambient natural 
 RING="a wide smooth polished gold band (the Pulse ring) on the finger catches a small spark of light"
 # every frame carries the ring (audit fix: scenes/faces were shipping ringless or with thin bands)
 RING_ALL=("On their ring finger sits a WIDE, smooth, polished gold band — the Pulse ring — clearly visible "
-          "wherever a hand is in frame, catching one small warm glint. Not a thin band, not ornate, no other rings.")
+          "wherever a hand is in frame, catching one small warm glint. EXACTLY ONE ring in the entire image, "
+          "on one finger of one hand only. Not a thin band, not ornate, no signet, no second band anywhere.")
 # identity lock: the same person across all three frames of an invitation
 PERSONAS={
  "01":"a woman in her mid-30s, dark hair in a loose low bun, cream sweater",
@@ -93,7 +94,7 @@ PERSONAS={
 # targeted prompt fixes from the audit (2 reds + physics/composition breaks)
 FIXES={
  "05-kettle-scene":"standing at the stove in a quiet morning kitchen, a classic stovetop kettle on the lit burner just beginning to steam, warm early light",
- "05-kettle-face":"a portrait watching the same stovetop kettle on the stove, unhurried, present in the wait",
+ "05-kettle-face":"a portrait watching the same stovetop kettle on the stove, unhurried, present in the wait; his left hand rests on the counter wearing the single wide gold band, his right hand and arm completely bare with no jewelry at all",
  "18-change-detail":"macro of a few coins resting in an open palm as another hand gently closes over them to receive, fingers just brushing, "+RING,
  "17-rain-detail":"macro from inside the room: the first raindrops sliding down the windowpane outside the glass, a hand resting gently against the inside of the glass, warm room light, "+RING,
  "19-car-warm-face":"portrait inside the cold car, feeling the first warm air from the heater vent, shoulders loosening, a small relieved smile, breath faintly visible",
