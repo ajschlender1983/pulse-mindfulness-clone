@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What they see — the workshop · Pulse</title>
+<meta name="description" content="The working room for the Pulse visual world: a mood decider that picks the right foot (illustration / photograph / transition), a prompt builder assembled from the world's grammar, and the pre-flight checklist every frame passes before it ships." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#EBE7D4; --warm:#F9F6E5; --ink:#1A1C22; --brown:#423D32;
+    --lime:#E3F47D; --honey:#A67C00; --muted:#6E6857; --faint:#8a8578;
+    --line:rgba(26,28,34,.13);
+    --green:#4E7C34; --green-bg:#E3F0D4;
+    --font:"DM Sans",sans-serif; --mono:"DM Mono",monospace; --serif:"Fraunces",serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{ font-family:var(--font); background:var(--cream); color:var(--ink); line-height:1.5;
+    letter-spacing:-0.01em; -webkit-font-smoothing:antialiased; }
+  .shell{ max-width:1060px; margin:0 auto; padding:0 clamp(18px,4vw,44px); }
+  .top{ position:sticky; top:0; z-index:40; background:rgba(235,231,212,.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .top .shell{ display:flex; align-items:center; gap:14px; height:52px; }
+  .top .brand{ font-weight:600; font-size:15px; letter-spacing:-0.03em; }
+  .top .brand i{ color:var(--honey); font-style:normal; }
+  .top .spacer{ flex:1; }
+  .top a{ font-family:var(--mono); font-size:11.5px; color:var(--muted); text-decoration:none; }
+  .top a:hover{ color:var(--ink); }
+
+  header.hero{ padding:clamp(44px,8vw,84px) 0 clamp(20px,3vw,34px); }
+  .hero .kick{ font-family:var(--mono); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--honey); }
+  .hero h1{ font-family:var(--serif); font-weight:400; font-size:clamp(34px,6.4vw,64px); line-height:1.03; letter-spacing:-0.02em; margin-top:14px; }
+  .hero p{ font-size:clamp(15.5px,2vw,18px); color:var(--brown); max-width:64ch; margin-top:14px; line-height:1.6; }
+
+  section.blk{ border-top:1px solid var(--line); padding:clamp(28px,5vw,52px) 0; }
+  .blk .bk{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--honey); }
+  .blk h2{ font-size:clamp(21px,3vw,28px); font-weight:600; letter-spacing:-0.03em; margin-top:8px; }
+  .blk .bsub{ font-size:14.5px; color:var(--brown); max-width:66ch; margin-top:8px; line-height:1.55; }
+
+  /* mood decider */
+  .mood-q{ font-family:var(--serif); font-style:italic; font-size:clamp(18px,2.6vw,24px); color:var(--ink); margin-top:18px; }
+  .moods{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:16px; }
+  .mood{ text-align:left; background:var(--warm); border:1px solid var(--line); border-radius:14px; padding:18px 20px;
+    cursor:pointer; font:inherit; color:inherit; transition:transform .15s ease, box-shadow .15s ease; }
+  .mood:hover{ transform:translateY(-2px); box-shadow:0 14px 32px rgba(66,61,50,.10); }
+  .mood.on{ border-color:var(--honey); box-shadow:0 14px 32px rgba(66,61,50,.12); }
+  .mood .mw{ font-family:var(--serif); font-style:italic; font-size:19px; }
+  .mood .md{ font-size:13px; color:var(--brown); margin-top:6px; line-height:1.45; }
+  .verdict{ margin-top:18px; display:none; }
+  .verdict.show{ display:block; }
+  .verdict .v-card{ background:var(--ink); color:var(--warm); border-radius:16px; padding:20px 24px; }
+  .verdict .v-k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--lime); }
+  .verdict .v-t{ font-size:clamp(18px,2.4vw,22px); font-weight:600; margin-top:8px; }
+  .verdict .v-r{ font-size:14.5px; color:#efe9d6; margin-top:8px; line-height:1.55; }
+  .v-frames{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; }
+  .v-frames img{ width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:10px; display:block; background:#ddd7c3; }
+  .v-prompt{ margin-top:12px; background:var(--warm); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .v-prompt .p-k{ font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--honey); margin-bottom:8px; display:flex; justify-content:space-between; align-items:center; }
+  .v-prompt .p-t{ font-family:var(--mono); font-size:12px; color:var(--brown); line-height:1.6; white-space:pre-wrap; }
+
+  /* prompt builder */
+  .pb{ margin-top:16px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media(max-width:760px){ .pb{ grid-template-columns:1fr; } }
+  .pb-col label{ font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); display:block; margin:14px 0 6px; }
+  .pb-col select, .pb-col textarea{ width:100%; font-family:var(--font); font-size:14.5px; color:var(--ink);
+    background:var(--warm); border:1px solid var(--line); border-radius:12px; padding:12px 14px; }
+  .pb-col textarea{ min-height:84px; resize:vertical; }
+  .pb-col select:focus,.pb-col textarea:focus{ outline:none; border-color:var(--honey); }
+  .pb-check{ display:flex; align-items:center; gap:9px; margin-top:12px; font-size:14px; color:var(--brown); }
+  .pb-out{ background:var(--ink); border-radius:16px; padding:18px 20px; align-self:start; position:sticky; top:70px; }
+  .pb-out .p-k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--lime); display:flex; justify-content:space-between; align-items:center; }
+  .pb-out .p-t{ font-family:var(--mono); font-size:12.5px; color:#efe9d6; line-height:1.65; margin-top:10px; white-space:pre-wrap; word-break:break-word; }
+  .copy{ font-family:var(--mono); font-size:10.5px; color:var(--ink); background:var(--lime); border:none; border-radius:100px; padding:7px 14px; cursor:pointer; }
+  .copy:hover{ filter:brightness(1.05); }
+
+  /* checklist */
+  .check{ margin-top:14px; display:flex; flex-direction:column; gap:8px; }
+  .ck{ display:flex; align-items:baseline; gap:12px; background:var(--warm); border:1px solid var(--line); border-radius:12px; padding:13px 16px; cursor:pointer; }
+  .ck input{ transform:translateY(1px); accent-color:#4E7C34; }
+  .ck .ct{ font-size:14.5px; color:var(--ink); }
+  .ck .cw{ font-size:12.5px; color:var(--muted); display:block; margin-top:2px; }
+  .ck.done .ct{ color:var(--muted); text-decoration:line-through; }
+  .check-stat{ font-family:var(--mono); font-size:11.5px; color:var(--muted); margin-top:12px; }
+  .check-stat b{ color:var(--green); }
+  .reset{ font-family:var(--mono); font-size:10.5px; color:var(--faint); background:none; border:1px solid var(--line); border-radius:100px; padding:6px 13px; cursor:pointer; margin-left:10px; }
+
+  .links{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:16px; }
+  .lk{ display:block; background:var(--warm); border:1px solid var(--line); border-radius:14px; padding:16px 18px; text-decoration:none; color:inherit; transition:transform .15s ease; }
+  .lk:hover{ transform:translateY(-2px); }
+  .lk .lk-k{ font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--honey); }
+  .lk .lk-t{ font-size:15.5px; font-weight:600; margin-top:5px; }
+
+  footer{ border-top:1px solid var(--line); margin-top:30px; padding:22px 0 50px; font-family:var(--mono); font-size:12px; color:var(--faint);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  footer a{ color:var(--brown); }
+</style>
+</head>
+<body>
+<div class="top"><div class="shell">
+  <span class="brand">pulse<i>·</i> see</span>
+  <span class="spacer"></span>
+  <a href="pulse-world-building.html">← World-building</a>
+</div></div>
+
+<div class="shell">
+  <header class="hero">
+    <div class="kick">What they see · the workshop</div>
+    <h1>The picture room.</h1>
+    <p>Three tools: the <b>mood decider</b> that picks the right foot for a shot, the <b>prompt builder</b> that assembles a generation prompt from the world's grammar, and the <b>pre-flight checklist</b> every frame passes before it ships. Plus the doors to the trailers and the library.</p>
+  </header>
+
+  <section class="blk">
+    <div class="bk">Tool one</div>
+    <h2>The mood decider</h2>
+    <p class="bsub">Not a mechanical choice — a mood choice. Answer one question and get the foot, the rule, two reference frames, and the motion prompt.</p>
+    <div class="mood-q">What should the viewer feel — a feeling <em>about</em> life, a feeling they're <em>inside of</em>, or the turn itself?</div>
+    <div class="moods" id="moods"></div>
+    <div class="verdict" id="verdict"></div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">Tool two</div>
+    <h2>The prompt builder</h2>
+    <p class="bsub">Pick a style block from the world's grammar, describe the scene, and the full generation prompt assembles itself — ring clause, palette, and the no-text rule included.</p>
+    <div class="pb">
+      <div class="pb-col">
+        <label for="pbStyle">Style block (the grammar)</label>
+        <select id="pbStyle"></select>
+        <label for="pbScene">The scene</label>
+        <textarea id="pbScene" placeholder="e.g. a woman at a kitchen window at dawn, steam rising from her mug…"></textarea>
+        <label for="pbAspect">Aspect</label>
+        <select id="pbAspect">
+          <option value="3:2">3:2 · editorial still</option>
+          <option value="16:9">16:9 · cinematic / sequence</option>
+          <option value="4:5">4:5 · portrait / social</option>
+          <option value="1:1">1:1 · square</option>
+        </select>
+        <label class="pb-check"><input type="checkbox" id="pbRing" checked /> include the ring clause (the discovered second-glance glint)</label>
+      </div>
+      <div class="pb-out">
+        <div class="p-k"><span>The assembled prompt</span><button class="copy" id="pbCopy">Copy</button></div>
+        <div class="p-t" id="pbOut">Pick a style and describe a scene…</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">Tool three</div>
+    <h2>Pre-flight checklist</h2>
+    <p class="bsub">Run every frame through this before it ships. Hands are the number-one slop risk — count fingers first.</p>
+    <div class="check" id="check"></div>
+    <div class="check-stat"><span id="checkStat"></span><button class="reset" id="checkReset">Reset for next frame</button></div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">The doors</div>
+    <h2>Where this work lives</h2>
+    <div class="links">
+      <a class="lk" href="pulse-video-workshop.html"><span class="lk-k">The films</span><span class="lk-t">The Trailers — scripts &amp; storyboards</span></a>
+      <a class="lk" href="pulse-world-building.html#libAnchor"><span class="lk-k">The frames</span><span class="lk-t">The image library — every collection</span></a>
+      <a class="lk" href="now-a-good-time.html"><span class="lk-k">The stories</span><span class="lk-t">“When would now be a good time?”</span></a>
+      <a class="lk" href="pulse-workshop-say.html"><span class="lk-k">The other room</span><span class="lk-t">What we say — the writing room</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Pulse · What they see · the workshop</span>
+    <span><a href="pulse-world-building.html">World-building</a> · <a href="pulse-workshop-say.html">What we say →</a></span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  function el(t,c,x){var e=document.createElement(t); if(c)e.className=c; if(x!=null)e.textContent=x; return e;}
+  function clear(n){while(n.firstChild)n.removeChild(n.firstChild);}
+
+  /* ---------- mood decider ---------- */
+  var MOODS=[
+    {id:"about", word:"Remembered", desc:"Dreamlike, tender, universal — a feeling about life.",
+     foot:"The illustration foot — multiplane", rule:"Composed camera on rails, never handheld. Cut the scene into depth planes and glide them at different speeds — the 2D world shows its 3D space; the characters breathe, blink, drift. Memory doesn't wobble, but it does breathe in depth.",
+     frames:["library/illustrations/illus-coll-embrace.png","library/illustrations/illus-coll-field-light.png"],
+     prompt:"Bring this hand-painted illustration to life with a classic Disney MULTIPLANE-camera effect: separate the scene into depth layers — foreground, midground, background — and glide them past the lens at different speeds so rich parallax opens up in every direction and the flat 2D artwork reveals its real 3D space. The characters are alive and three-dimensional: a soft breath, a blink, hair and fabric drifting, a small natural gesture. Keep the painterly, gouache, cel-animation look intact; warm, unhurried, composed dimensional camera move; no cuts. {scene}"},
+    {id:"inside", word:"Lived", desc:"Immediate, intimate, happening right now — a feeling you're inside of.",
+     foot:"The photograph foot — handheld", rule:"Full photographic video feels handheld on a cell phone: organic micro-drift, a slight tilt, a breath of motion — imperfect on purpose. The subject is alive: a slow breath, hair moving, a blink. A lived moment has a pulse in the frame itself.",
+     frames:["library/peak/peak-cliff-ocean.png","library/peak/peak-aurora.png"],
+     prompt:"Handheld cell-phone footage, as if filmed on a phone held in one hand: subtle organic camera drift, gentle micro-shake and a slight tilt, a breath of natural motion — never a locked tripod. The person is alive and present: a slow breath, hair and clothing moving in the air, a blink, a small shift of weight, the scene living quietly around them. Warm medium-format film color, unhurried and intimate. No zoom punches, no cuts. {scene}"},
+    {id:"turn", word:"The turn", desc:"Autopilot becoming presence — the missed moment being caught.",
+     foot:"The 50/50 transition — the hinge", rule:"Illustration resolves into photograph, timed like one slow breath — the pulse that slows the reel. The medium change IS the message: earn it only at the hinge, never as decoration. Use it once and let it land.",
+     frames:["library/avatar-spectrum/avatar-01-spectrum.png","library/inflection/inflect-bath-steam.png"],
+     prompt:"Animate a transition from illustration to photograph: the image begins as a hand-painted illustration and resolves into a warm, living photograph of the same person and the same moment — the paint settling into real skin, light and texture. Time it like one slow breath, the pulse that slows the reel. Subtle parallax and the subject quietly coming alive as the medium changes. Warm, unhurried, no hard cuts. {scene}"}
+  ];
+  var moodsHost=document.getElementById('moods');
+  MOODS.forEach(function(m){
+    var b=el('button','mood');
+    b.appendChild(el('div','mw',m.word));
+    b.appendChild(el('div','md',m.desc));
+    b.onclick=function(){
+      Array.from(moodsHost.children).forEach(function(x){x.classList.remove('on');});
+      b.classList.add('on'); renderVerdict(m);
+    };
+    moodsHost.appendChild(b);
+  });
+  function renderVerdict(m){
+    var v=document.getElementById('verdict'); clear(v); v.classList.add('show');
+    var card=el('div','v-card');
+    card.appendChild(el('div','v-k','The foot'));
+    card.appendChild(el('div','v-t',m.foot));
+    card.appendChild(el('div','v-r',m.rule));
+    v.appendChild(card);
+    var fr=el('div','v-frames');
+    m.frames.forEach(function(f){ var i=document.createElement('img'); i.loading='lazy'; i.src=f; i.alt=m.foot; i.onerror=function(){ i.style.display='none'; }; fr.appendChild(i); });
+    v.appendChild(fr);
+    var p=el('div','v-prompt');
+    var pk=el('div','p-k'); pk.appendChild(el('span',null,'The motion prompt (Veo) — {scene} is yours'));
+    var cp=el('button','copy','Copy'); cp.onclick=function(){ navigator.clipboard&&navigator.clipboard.writeText(m.prompt); cp.textContent='Copied'; setTimeout(function(){cp.textContent='Copy';},1200); };
+    pk.appendChild(cp); p.appendChild(pk);
+    p.appendChild(el('div','p-t',m.prompt));
+    v.appendChild(p);
+    v.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+
+  /* ---------- prompt builder ---------- */
+  var RING="a wide, smooth, polished gold band — the Pulse ring — on the finger, a discovered second-glance glint";
+  var TAIL="No text, no lettering, no logos, no watermark.";
+  var GRAMMAR={};
+  var sel=document.getElementById('pbStyle');
+  function assemble(){
+    var style=GRAMMAR[sel.value]||'';
+    var scene=document.getElementById('pbScene').value.trim();
+    var aspect=document.getElementById('pbAspect').value;
+    var ring=document.getElementById('pbRing').checked;
+    var out=document.getElementById('pbOut');
+    if(!scene){ out.textContent='Pick a style and describe a scene…'; return; }
+    var parts=[scene.replace(/\.*$/,'.')];
+    if(ring) parts.push(RING.charAt(0).toUpperCase()+RING.slice(1)+'.');
+    if(style) parts.push(style.replace(/\.*$/,'.'));
+    parts.push(TAIL);
+    parts.push('Aspect ratio '+aspect+'.');
+    out.textContent=parts.join(' ');
+  }
+  ['pbScene','pbAspect','pbRing'].forEach(function(id){ document.getElementById(id).addEventListener('input',assemble); document.getElementById(id).addEventListener('change',assemble); });
+  sel.addEventListener('change',assemble);
+  document.getElementById('pbCopy').onclick=function(){
+    var t=document.getElementById('pbOut').textContent;
+    if(navigator.clipboard) navigator.clipboard.writeText(t);
+    this.textContent='Copied'; var btn=this; setTimeout(function(){btn.textContent='Copy';},1200);
+  };
+  fetch('world-building-prompts.json').then(function(r){return r.json();}).then(function(d){
+    Object.keys(d.grammar||{}).forEach(function(k){
+      GRAMMAR[k]=d.grammar[k];
+      var o=document.createElement('option'); o.value=k; o.textContent=k; sel.appendChild(o);
+    });
+  }).catch(function(){
+    var o=document.createElement('option'); o.textContent='(grammar unavailable — serve over http://)'; sel.appendChild(o);
+  });
+
+  /* ---------- pre-flight checklist ---------- */
+  var CHECKS=[
+    ["Count the fingers","Every visible hand: five fingers, natural curl, correct wrist — no reversed or melted hands."],
+    ["One ring, the right ring","A single wide smooth polished gold band, on a finger — never a thin band, a diamond, or doubled."],
+    ["No text in the frame","No lettering, signage, watermarks, or logos anywhere."],
+    ["Faces are alive","No waxy skin, dead eyes, or warped features — real people in true moments."],
+    ["The palette holds","Warm cream/honey, soft ambient light, film grain — no cold CGI gloss."],
+    ["The right foot","Remembered → multiplane illustration · lived → handheld photograph · the turn → the 50/50 hinge."],
+    ["Crop-safe","The subject survives a 9:16 vertical crop — centered composition."],
+    ["It breathes","Enough motion (or implied motion) that the characters feel three-dimensional, never a cut-out."]
+  ];
+  var ckHost=document.getElementById('check'); var ckState=CHECKS.map(function(){return false;});
+  function renderChecks(){
+    clear(ckHost);
+    CHECKS.forEach(function(c,i){
+      var row=el('label','ck'+(ckState[i]?' done':''));
+      var box=document.createElement('input'); box.type='checkbox'; box.checked=ckState[i];
+      box.onchange=function(){ ckState[i]=box.checked; renderChecks(); };
+      row.appendChild(box);
+      var t=el('span','ct',c[0]); t.appendChild(el('span','cw',c[1])); row.appendChild(t);
+      ckHost.appendChild(row);
+    });
+    var n=ckState.filter(Boolean).length;
+    var st=document.getElementById('checkStat');
+    st.textContent=n+' / '+CHECKS.length+' checks passed';
+    if(n===CHECKS.length){ st.textContent=''; var b=el('b',null,'✓ Cleared — this frame can ship.'); clear(st); st.appendChild(b); }
+  }
+  document.getElementById('checkReset').onclick=function(){ ckState=CHECKS.map(function(){return false;}); renderChecks(); };
+  renderChecks();
+})();
+</script>
+</body>
+</html>
