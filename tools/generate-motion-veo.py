@@ -21,13 +21,21 @@ P_HANDHELD=("Handheld cell-phone footage, as if filmed on a phone held in one ha
  "person is alive and present: a slow breath, hair and clothing moving in the air, a blink, a small shift "
  "of weight, the scene living quietly around them (water, light, distant movement). Warm medium-format film "
  "color, unhurried and intimate. No zoom punches, no cuts. {scene}")
-P_MULTIPLANE=("Bring this hand-painted illustration to life with a classic Disney MULTIPLANE-camera effect: "
- "separate the scene into depth layers — foreground, midground, background — and glide them past the lens at "
- "different speeds so rich parallax opens up in every direction and the flat 2D artwork reveals its real 3D "
- "space. The characters are alive and three-dimensional: a soft breath, a blink, hair and fabric drifting, a "
- "small natural gesture — always enough gentle motion that they read as dimensional beings, never a static "
- "cut-out. Keep the painterly, gouache, cel-animation look intact; warm, unhurried, composed dimensional "
- "camera move; no cuts. {scene}")
+P_MULTIPLANE=("Animate this hand-painted illustration as a classic Disney MULTIPLANE-camera shot. The camera "
+ "creeps forward extremely slowly and only a little — a very subtle, barely-perceptible dolly-in along the "
+ "lens axis, easing forward like a held breath, never travelling deep into the scene — so the nearer painted "
+ "planes drift outward just slightly faster than the far ones. That small difference between foreground, "
+ "midground and background IS the parallax: gentle dimensional depth, not a journey. The camera stays locked, "
+ "level and composed, never handheld. "
+ "CRITICAL: keep the original framing and the main subject centred and present the whole time. No lateral "
+ "sliding, no horizontal panning, tracking or trucking, no whip or swoop, no conveyor-belt or train-window "
+ "motion; the people and objects stay exactly where they are and must NOT slide across the frame. Do NOT pull "
+ "back, rise into an aerial or bird's-eye view, or fly over the scene, and do NOT lose or shrink the subject. "
+ "The background stays one stable painted backdrop and must NEVER repeat, tile, multiply, or recede into a "
+ "tunnel or hall of mirrors. "
+ "The only movement in the subjects is small and human: a slow breath, a blink, hair and fabric stirring, "
+ "steam rising, a candle flicker, leaves shifting, a tiny turn of the head. Keep the painterly gouache "
+ "cel-animation look fully intact; warm, unhurried, dreamlike; no cuts. {scene}")
 P_TRANSITION=("Animate a transition from illustration to photograph: the image begins as a hand-painted "
  "illustration and resolves into a warm, living photograph of the same person and the same moment — the paint "
  "settling into real skin, light and texture. Time it like one slow breath, the pulse that slows the reel: "
@@ -43,11 +51,11 @@ JOBS=[
  ("photograph","ph-veo-04","library/peak/peak-rooftop-dusk.png","A young woman on a city rooftop at blue-gold dusk, skyline lit below, wind in her hair."),
  ("photograph","ph-veo-05","library/peak/peak-forest-fog.png","A hiker on a ridge as fog pours through a golden pine forest below."),
  # illustration foot — multiplane parallax, from illustration frames with characters
- ("illustration","il-veo-01","library/illustrations/illus-coll-embrace.png","Two people in a warm embrace, painterly."),
- ("illustration","il-veo-02","library/illustrations/illus-coll-field-light.png","A figure in a field of light, painterly."),
- ("illustration","il-veo-03","library/illustrations/illus-coll-festival.png","People at a festival in warm light, painterly crowd with depth."),
- ("illustration","il-veo-04","library/illustrations/illus-coll-dawn-crowd.png","A crowd at dawn, layered depth, painterly."),
- ("illustration","il-veo-05","library/illustrations/illus-coll-table.png","People around a warm table, painterly interior with depth."),
+ ("illustration","il-veo-01","library/illustrations/illus-coll-embrace.png","Two people holding a warm, still embrace, staying in place, soft painterly layers of the room receding behind them."),
+ ("illustration","il-veo-02","library/illustrations/illus-coll-field-light.png","A painterly aerial view at dusk of rolling hills threaded with glowing golden paths and little lit villages, deep layers of land receding to distant hills."),
+ ("illustration","il-veo-03","library/illustrations/illus-coll-festival.png","People standing together at a warm festival, staying where they are, strings of lanterns receding into deep painterly layers behind them."),
+ ("illustration","il-veo-04","library/illustrations/illus-coll-dawn-crowd.png","A few people standing quietly at dawn, staying in place, soft painterly layers of landscape receding far behind them."),
+ ("illustration","il-veo-05","library/illustrations/illus-coll-table.png","A group seated around a warm outdoor table, staying in their seats, foliage in the foreground and the sunlit trees receding in deep painterly layers behind them."),
  # transition foot — illustration -> photograph, from avatar-spectrum frames
  ("transition","tr-veo-01","library/avatar-spectrum/avatar-01-spectrum.png","A young man at a warm cafe table."),
  ("transition","tr-veo-02","library/avatar-spectrum/avatar-05-spectrum.png","A young woman on a bright balcony."),
