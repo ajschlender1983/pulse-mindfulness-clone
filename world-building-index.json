@@ -1,914 +1,3521 @@
 {
- "collections": {
-  "ethereal": {
-   "label": "The ring as presence",
-   "files": [
-    "library/ethereal/eth-candle-mirror.png",
-    "library/ethereal/eth-condensation.png",
-    "library/ethereal/eth-leaf-light.png",
-    "library/ethereal/eth-ripples.png",
-    "library/ethereal/eth-room-warms.png",
-    "library/ethereal/eth-sand-hourglass.png",
-    "library/ethereal/eth-submerged.png",
-    "library/ethereal/eth-threads.png",
-    "library/ethereal/eth-tide.png",
-    "library/ethereal/eth-water-drop.png",
-    "library/ethereal/eth-window-tide.png",
-    "library/ethereal/motion/eth-ripples.mp4",
-    "library/ethereal/motion/eth-room-warms.mp4",
-    "library/ethereal/motion/eth-submerged.mp4",
-    "library/ethereal/motion/eth-tide.mp4",
-    "library/ethereal/motion/eth-water-drop.mp4",
-    "library/ethereal/motion/eth-window-tide.mp4"
+ "groups": [
+  {
+   "id": "people",
+   "label": "The People",
+   "blurb": "Who Pulse is for \u2014 the faces, the personas, the cast.",
+   "order": 1
+  },
+  {
+   "id": "stories",
+   "label": "The Stories",
+   "blurb": "Ordered narratives you scroll frame by frame.",
+   "order": 2
+  },
+  {
+   "id": "moments",
+   "label": "The Moments",
+   "blurb": "The felt experience \u2014 unordered pools of the world.",
+   "order": 3
+  },
+  {
+   "id": "craft",
+   "label": "The Craft",
+   "blurb": "Rendering and style studies \u2014 how the world is drawn.",
+   "order": 4
+  },
+  {
+   "id": "motion",
+   "label": "In Motion",
+   "blurb": "Moving image \u2014 loops, b-roll, and the motion rules.",
+   "order": 5
+  },
+  {
+   "id": "message",
+   "label": "The Message",
+   "blurb": "Deployment-ready surfaces.",
+   "order": 6
+  }
+ ],
+ "collections": [
+  {
+   "id": "storytellers",
+   "group": "people",
+   "kind": "gallery",
+   "title": "Storytellers, in life",
+   "description": "The wider cast, out in the world \u2014 forty candid, in-life moments.",
+   "count": 40,
+   "thumb": "library/storytellers/fest-05.png",
+   "items": [
+    {
+     "file": "library/storytellers/art-01.png"
+    },
+    {
+     "file": "library/storytellers/art-02.png"
+    },
+    {
+     "file": "library/storytellers/art-03.png"
+    },
+    {
+     "file": "library/storytellers/art-04.png"
+    },
+    {
+     "file": "library/storytellers/dance-01.png"
+    },
+    {
+     "file": "library/storytellers/dance-02.png"
+    },
+    {
+     "file": "library/storytellers/dance-03.png"
+    },
+    {
+     "file": "library/storytellers/dance-04.png"
+    },
+    {
+     "file": "library/storytellers/date-01.png"
+    },
+    {
+     "file": "library/storytellers/date-02.png"
+    },
+    {
+     "file": "library/storytellers/date-03.png"
+    },
+    {
+     "file": "library/storytellers/date-04.png"
+    },
+    {
+     "file": "library/storytellers/date-05.png"
+    },
+    {
+     "file": "library/storytellers/expand-01.png"
+    },
+    {
+     "file": "library/storytellers/expand-02.png"
+    },
+    {
+     "file": "library/storytellers/expand-03.png"
+    },
+    {
+     "file": "library/storytellers/fest-01.png"
+    },
+    {
+     "file": "library/storytellers/fest-02.png"
+    },
+    {
+     "file": "library/storytellers/fest-03.png"
+    },
+    {
+     "file": "library/storytellers/fest-04.png"
+    },
+    {
+     "file": "library/storytellers/fest-05.png"
+    },
+    {
+     "file": "library/storytellers/gym-01.png"
+    },
+    {
+     "file": "library/storytellers/gym-02.png"
+    },
+    {
+     "file": "library/storytellers/gym-03.png"
+    },
+    {
+     "file": "library/storytellers/gym-04.png"
+    },
+    {
+     "file": "library/storytellers/life-coffee-01.png"
+    },
+    {
+     "file": "library/storytellers/life-cook-01.png"
+    },
+    {
+     "file": "library/storytellers/life-friends-01.png"
+    },
+    {
+     "file": "library/storytellers/life-garden-01.png"
+    },
+    {
+     "file": "library/storytellers/life-hike-01.png"
+    },
+    {
+     "file": "library/storytellers/life-kids-01.png"
+    },
+    {
+     "file": "library/storytellers/life-read-01.png"
+    },
+    {
+     "file": "library/storytellers/life-surf-01.png"
+    },
+    {
+     "file": "library/storytellers/life-water-01.png"
+    },
+    {
+     "file": "library/storytellers/life-yoga-01.png"
+    },
+    {
+     "file": "library/storytellers/music-01.png"
+    },
+    {
+     "file": "library/storytellers/music-02.png"
+    },
+    {
+     "file": "library/storytellers/music-03.png"
+    },
+    {
+     "file": "library/storytellers/music-04.png"
+    },
+    {
+     "file": "library/storytellers/music-05.png"
+    }
    ]
   },
-  "avatars": {
-   "label": "Storytellers",
-   "files": [
-    "library/avatars/avatar-01.png",
-    "library/avatars/avatar-02.png",
-    "library/avatars/avatar-03.png",
-    "library/avatars/avatar-04.png",
-    "library/avatars/avatar-05.png",
-    "library/avatars/avatar-06.png",
-    "library/avatars/avatar-07.png",
-    "library/avatars/avatar-08.png",
-    "library/avatars/avatar-09.png",
-    "library/avatars/avatar-10.png",
-    "library/avatars/avatar-11.png",
-    "library/avatars/avatar-12.png",
-    "library/avatars/avatar-13.png",
-    "library/avatars/avatar-14.png",
-    "library/avatars/avatar-15.png",
-    "library/avatars/avatar-16.png",
-    "library/avatars/avatar-17.png",
-    "library/avatars/avatar-18.png",
-    "library/avatars/avatar-19.png",
-    "library/avatars/avatar-20.png",
-    "library/avatars/avatar-21.png",
-    "library/avatars/avatar-22.png"
+  {
+   "id": "persona-amara-ben",
+   "group": "people",
+   "kind": "persona",
+   "title": "Amara & Ben",
+   "description": "6-frame story \u00b7 a named Pulse persona.",
+   "bio": "couple in their mid-30s: Amara, a Black woman with short natural hair, warm open face, cream ribbed sweater; and Ben, a white man with sandy hair and stubble, soft flannel overshirt.",
+   "count": 6,
+   "thumb": "story-images/amara-ben-1.png",
+   "items": [
+    {
+     "file": "story-images/amara-ben-1.png",
+     "order": 1,
+     "caption": "Amara and Ben in their kitchen on a slow morning, both pausing mid-task at the same moment"
+    },
+    {
+     "file": "story-images/amara-ben-2.png",
+     "order": 2,
+     "caption": "Ben saying a quiet thank-you to Amara across the kitchen, her hand on his shoulder, both p"
+    },
+    {
+     "file": "story-images/amara-ben-3.png",
+     "order": 3,
+     "caption": "Macro: their two hands loosely joined on a wooden table in even window light, the two gold"
+    },
+    {
+     "file": "story-images/amara-ben-4.png",
+     "order": 4,
+     "caption": "Evening: the two of them on a sofa in soft lamp-warmed ambient light, phones nowhere, mid-"
+    },
+    {
+     "file": "story-images/amara-ben-5.png",
+     "order": 5,
+     "caption": ""
+    },
+    {
+     "file": "story-images/amara-ben-6.png",
+     "order": 6,
+     "caption": ""
+    }
    ]
   },
-  "storytellers": {
-   "label": "Storytellers, in life",
-   "files": [
-    "library/storytellers/art-01.png",
-    "library/storytellers/art-02.png",
-    "library/storytellers/art-03.png",
-    "library/storytellers/art-04.png",
-    "library/storytellers/dance-01.png",
-    "library/storytellers/dance-02.png",
-    "library/storytellers/dance-03.png",
-    "library/storytellers/dance-04.png",
-    "library/storytellers/date-01.png",
-    "library/storytellers/date-02.png",
-    "library/storytellers/date-03.png",
-    "library/storytellers/date-04.png",
-    "library/storytellers/date-05.png",
-    "library/storytellers/expand-01.png",
-    "library/storytellers/expand-02.png",
-    "library/storytellers/expand-03.png",
-    "library/storytellers/fest-01.png",
-    "library/storytellers/fest-02.png",
-    "library/storytellers/fest-03.png",
-    "library/storytellers/fest-04.png",
-    "library/storytellers/fest-05.png",
-    "library/storytellers/gym-01.png",
-    "library/storytellers/gym-02.png",
-    "library/storytellers/gym-03.png",
-    "library/storytellers/gym-04.png",
-    "library/storytellers/life-coffee-01.png",
-    "library/storytellers/life-cook-01.png",
-    "library/storytellers/life-friends-01.png",
-    "library/storytellers/life-garden-01.png",
-    "library/storytellers/life-hike-01.png",
-    "library/storytellers/life-kids-01.png",
-    "library/storytellers/life-read-01.png",
-    "library/storytellers/life-surf-01.png",
-    "library/storytellers/life-water-01.png",
-    "library/storytellers/life-yoga-01.png",
-    "library/storytellers/music-01.png",
-    "library/storytellers/music-02.png",
-    "library/storytellers/music-03.png",
-    "library/storytellers/music-04.png",
-    "library/storytellers/music-05.png"
+  {
+   "id": "persona-avatar-08",
+   "group": "people",
+   "kind": "persona",
+   "title": "Black man",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "38-year-old Black man, clean fade, charcoal henley, in a sunlit kitchen, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, easy warmth, mid-laugh softening.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-08.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-08.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-08-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
    ]
   },
-  "peak": {
-   "label": "Peak experiences \u2014 out in the world",
-   "files": [
-    "library/peak/peak-alpine-swim.png",
-    "library/peak/peak-aurora.png",
-    "library/peak/peak-balloon.png",
-    "library/peak/peak-bioluminescent.png",
-    "library/peak/peak-canyon-rim.png",
-    "library/peak/peak-cave-light.png",
-    "library/peak/peak-cherry-blossom.png",
-    "library/peak/peak-city-lookout.png",
-    "library/peak/peak-cliff-ocean.png",
-    "library/peak/peak-coastal-run.png",
-    "library/peak/peak-desert-road.png",
-    "library/peak/peak-desert-stars.png",
-    "library/peak/peak-dune-descent.png",
-    "library/peak/peak-dunes.png",
-    "library/peak/peak-festival-aerial.png",
-    "library/peak/peak-forest-fog.png",
-    "library/peak/peak-frozen-lake.png",
-    "library/peak/peak-glacial-river.png",
-    "library/peak/peak-glacier.png",
-    "library/peak/peak-hammock-forest.png",
-    "library/peak/peak-iceberg-kayak.png",
-    "library/peak/peak-jungle-river.png",
-    "library/peak/peak-lavender.png",
-    "library/peak/peak-lighthouse-storm.png",
-    "library/peak/peak-meadow-storm.png",
-    "library/peak/peak-mesa-sunset.png",
-    "library/peak/peak-monastery.png",
-    "library/peak/peak-mountain-picnic.png",
-    "library/peak/peak-mountain-tent.png",
-    "library/peak/peak-northern-fjord.png",
-    "library/peak/peak-observatory.png",
-    "library/peak/peak-paddleboard-mist.png",
-    "library/peak/peak-redwoods.png",
-    "library/peak/peak-riverbend.png",
-    "library/peak/peak-rooftop-dusk.png",
-    "library/peak/peak-sailing.png",
-    "library/peak/peak-saltflat.png",
-    "library/peak/peak-savanna.png",
-    "library/peak/peak-summit-sunrise.png",
-    "library/peak/peak-superbloom.png",
-    "library/peak/peak-surf-dawn.png",
-    "library/peak/peak-temple-dawn.png",
-    "library/peak/peak-terraces.png",
-    "library/peak/peak-thermal-dawn.png",
-    "library/peak/peak-tide-pools.png",
-    "library/peak/peak-vineyard-dusk.png",
-    "library/peak/peak-waterfall.png",
-    "library/peak/peak-wheatfield-gold.png"
+  {
+   "id": "persona-avatar-18",
+   "group": "people",
+   "kind": "persona",
+   "title": "Black man",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "22-year-old Black man, new graduate, in a bright bedroom with moving boxes, hoodie, hopeful open face, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, on the edge of something.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-18.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-18.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-18-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
    ]
   },
-  "avatar-spectrum": {
-   "label": "Avatar spectrum \u2014 illustration to real life",
-   "files": [
-    "library/avatar-spectrum/avatar-01-spectrum.png",
-    "library/avatar-spectrum/avatar-02-spectrum.png",
-    "library/avatar-spectrum/avatar-03-spectrum.png",
-    "library/avatar-spectrum/avatar-04-spectrum.png",
-    "library/avatar-spectrum/avatar-05-spectrum.png",
-    "library/avatar-spectrum/avatar-06-spectrum.png",
-    "library/avatar-spectrum/avatar-07-spectrum.png",
-    "library/avatar-spectrum/avatar-08-spectrum.png",
-    "library/avatar-spectrum/avatar-09-spectrum.png",
-    "library/avatar-spectrum/avatar-10-spectrum.png",
-    "library/avatar-spectrum/avatar-11-spectrum.png",
-    "library/avatar-spectrum/avatar-12-spectrum.png",
-    "library/avatar-spectrum/avatar-13-spectrum.png",
-    "library/avatar-spectrum/avatar-14-spectrum.png",
-    "library/avatar-spectrum/avatar-15-spectrum.png",
-    "library/avatar-spectrum/avatar-16-spectrum.png",
-    "library/avatar-spectrum/avatar-17-spectrum.png",
-    "library/avatar-spectrum/avatar-18-spectrum.png",
-    "library/avatar-spectrum/avatar-19-spectrum.png",
-    "library/avatar-spectrum/avatar-20-spectrum.png",
-    "library/avatar-spectrum/avatar-21-spectrum.png",
-    "library/avatar-spectrum/avatar-22-spectrum.png"
+  {
+   "id": "persona-avatar-21",
+   "group": "people",
+   "kind": "persona",
+   "title": "Black woman",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "63-year-old Black woman, choir director, bright scarf, in a sunlit church hall, hands mid-gesture, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, radiant and grounded.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-21.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-21.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-21-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
    ]
   },
-  "hybrid": {
-   "label": "Illustration \u2194 photograph \u2014 the hybrid frame",
-   "files": [
-    "library/hybrid/s01-aperture.png",
-    "library/hybrid/s01-brushstroke.png",
-    "library/hybrid/s01-dissolve.png",
-    "library/hybrid/s01-double-exposure.png",
-    "library/hybrid/s01-filmstrip.png",
-    "library/hybrid/s01-frame-in-frame.png",
-    "library/hybrid/s01-painted-edges.png",
-    "library/hybrid/s01-rackfocus.png",
-    "library/hybrid/s01-split.png",
-    "library/hybrid/s01-torn-seam.png",
-    "library/hybrid/s02-aperture.png",
-    "library/hybrid/s02-brushstroke.png",
-    "library/hybrid/s02-dissolve.png",
-    "library/hybrid/s02-double-exposure.png",
-    "library/hybrid/s02-filmstrip.png",
-    "library/hybrid/s02-frame-in-frame.png",
-    "library/hybrid/s02-painted-edges.png",
-    "library/hybrid/s02-rackfocus.png",
-    "library/hybrid/s02-split.png",
-    "library/hybrid/s02-torn-seam.png",
-    "library/hybrid/s03-aperture.png",
-    "library/hybrid/s03-brushstroke.png",
-    "library/hybrid/s03-dissolve.png",
-    "library/hybrid/s03-double-exposure.png",
-    "library/hybrid/s03-filmstrip.png",
-    "library/hybrid/s03-frame-in-frame.png",
-    "library/hybrid/s03-painted-edges.png",
-    "library/hybrid/s03-rackfocus.png",
-    "library/hybrid/s03-split.png",
-    "library/hybrid/s03-torn-seam.png",
-    "library/hybrid/s04-aperture.png",
-    "library/hybrid/s04-brushstroke.png",
-    "library/hybrid/s04-dissolve.png",
-    "library/hybrid/s04-double-exposure.png",
-    "library/hybrid/s04-filmstrip.png",
-    "library/hybrid/s04-frame-in-frame.png",
-    "library/hybrid/s04-painted-edges.png",
-    "library/hybrid/s04-rackfocus.png",
-    "library/hybrid/s04-split.png",
-    "library/hybrid/s04-torn-seam.png",
-    "library/hybrid/s05-aperture.png",
-    "library/hybrid/s05-brushstroke.png",
-    "library/hybrid/s05-dissolve.png",
-    "library/hybrid/s05-double-exposure.png",
-    "library/hybrid/s05-filmstrip.png",
-    "library/hybrid/s05-frame-in-frame.png",
-    "library/hybrid/s05-painted-edges.png",
-    "library/hybrid/s05-rackfocus.png",
-    "library/hybrid/s05-split.png",
-    "library/hybrid/s05-torn-seam.png",
-    "library/hybrid/s06-aperture.png",
-    "library/hybrid/s06-brushstroke.png",
-    "library/hybrid/s06-dissolve.png",
-    "library/hybrid/s06-double-exposure.png",
-    "library/hybrid/s06-filmstrip.png",
-    "library/hybrid/s06-frame-in-frame.png",
-    "library/hybrid/s06-painted-edges.png",
-    "library/hybrid/s06-rackfocus.png",
-    "library/hybrid/s06-split.png",
-    "library/hybrid/s06-torn-seam.png",
-    "library/hybrid/s07-aperture.png",
-    "library/hybrid/s07-brushstroke.png",
-    "library/hybrid/s07-dissolve.png",
-    "library/hybrid/s07-double-exposure.png",
-    "library/hybrid/s07-filmstrip.png",
-    "library/hybrid/s07-frame-in-frame.png",
-    "library/hybrid/s07-painted-edges.png",
-    "library/hybrid/s07-rackfocus.png",
-    "library/hybrid/s07-split.png",
-    "library/hybrid/s07-torn-seam.png",
-    "library/hybrid/s08-aperture.png",
-    "library/hybrid/s08-brushstroke.png",
-    "library/hybrid/s08-dissolve.png",
-    "library/hybrid/s08-double-exposure.png",
-    "library/hybrid/s08-filmstrip.png",
-    "library/hybrid/s08-frame-in-frame.png",
-    "library/hybrid/s08-painted-edges.png",
-    "library/hybrid/s08-rackfocus.png",
-    "library/hybrid/s08-split.png",
-    "library/hybrid/s08-torn-seam.png",
-    "library/hybrid/s09-aperture.png",
-    "library/hybrid/s09-brushstroke.png",
-    "library/hybrid/s09-dissolve.png",
-    "library/hybrid/s09-double-exposure.png",
-    "library/hybrid/s09-filmstrip.png",
-    "library/hybrid/s09-frame-in-frame.png",
-    "library/hybrid/s09-painted-edges.png",
-    "library/hybrid/s09-rackfocus.png",
-    "library/hybrid/s09-split.png",
-    "library/hybrid/s09-torn-seam.png",
-    "library/hybrid/s10-aperture.png",
-    "library/hybrid/s10-brushstroke.png",
-    "library/hybrid/s10-dissolve.png",
-    "library/hybrid/s10-double-exposure.png",
-    "library/hybrid/s10-filmstrip.png",
-    "library/hybrid/s10-frame-in-frame.png",
-    "library/hybrid/s10-painted-edges.png",
-    "library/hybrid/s10-rackfocus.png",
-    "library/hybrid/s10-split.png",
-    "library/hybrid/s10-torn-seam.png",
-    "library/hybrid/s11-aperture.png",
-    "library/hybrid/s11-brushstroke.png",
-    "library/hybrid/s11-dissolve.png",
-    "library/hybrid/s11-double-exposure.png",
-    "library/hybrid/s11-filmstrip.png",
-    "library/hybrid/s11-frame-in-frame.png",
-    "library/hybrid/s11-painted-edges.png",
-    "library/hybrid/s11-rackfocus.png",
-    "library/hybrid/s11-split.png",
-    "library/hybrid/s11-torn-seam.png",
-    "library/hybrid/s12-aperture.png",
-    "library/hybrid/s12-brushstroke.png",
-    "library/hybrid/s12-dissolve.png",
-    "library/hybrid/s12-double-exposure.png",
-    "library/hybrid/s12-filmstrip.png",
-    "library/hybrid/s12-frame-in-frame.png",
-    "library/hybrid/s12-painted-edges.png",
-    "library/hybrid/s12-rackfocus.png",
-    "library/hybrid/s12-split.png",
-    "library/hybrid/s12-torn-seam.png",
-    "library/hybrid/s13-aperture.png",
-    "library/hybrid/s13-brushstroke.png",
-    "library/hybrid/s13-dissolve.png",
-    "library/hybrid/s13-double-exposure.png",
-    "library/hybrid/s13-filmstrip.png",
-    "library/hybrid/s13-frame-in-frame.png",
-    "library/hybrid/s13-painted-edges.png",
-    "library/hybrid/s13-rackfocus.png",
-    "library/hybrid/s13-split.png",
-    "library/hybrid/s13-torn-seam.png",
-    "library/hybrid/s14-aperture.png",
-    "library/hybrid/s14-brushstroke.png",
-    "library/hybrid/s14-dissolve.png",
-    "library/hybrid/s14-double-exposure.png",
-    "library/hybrid/s14-filmstrip.png",
-    "library/hybrid/s14-frame-in-frame.png",
-    "library/hybrid/s14-painted-edges.png",
-    "library/hybrid/s14-rackfocus.png",
-    "library/hybrid/s14-split.png",
-    "library/hybrid/s14-torn-seam.png",
-    "library/hybrid/s15-aperture.png",
-    "library/hybrid/s15-brushstroke.png",
-    "library/hybrid/s15-dissolve.png",
-    "library/hybrid/s15-double-exposure.png",
-    "library/hybrid/s15-filmstrip.png",
-    "library/hybrid/s15-frame-in-frame.png",
-    "library/hybrid/s15-painted-edges.png",
-    "library/hybrid/s15-rackfocus.png",
-    "library/hybrid/s15-split.png",
-    "library/hybrid/s15-torn-seam.png",
-    "library/hybrid/s16-aperture.png",
-    "library/hybrid/s16-brushstroke.png",
-    "library/hybrid/s16-dissolve.png",
-    "library/hybrid/s16-double-exposure.png",
-    "library/hybrid/s16-filmstrip.png",
-    "library/hybrid/s16-frame-in-frame.png",
-    "library/hybrid/s16-painted-edges.png",
-    "library/hybrid/s16-rackfocus.png",
-    "library/hybrid/s16-split.png",
-    "library/hybrid/s16-torn-seam.png",
-    "library/hybrid/s17-aperture.png",
-    "library/hybrid/s17-brushstroke.png",
-    "library/hybrid/s17-dissolve.png",
-    "library/hybrid/s17-double-exposure.png",
-    "library/hybrid/s17-filmstrip.png",
-    "library/hybrid/s17-frame-in-frame.png",
-    "library/hybrid/s17-painted-edges.png",
-    "library/hybrid/s17-rackfocus.png",
-    "library/hybrid/s17-split.png",
-    "library/hybrid/s17-torn-seam.png",
-    "library/hybrid/s18-aperture.png",
-    "library/hybrid/s18-brushstroke.png",
-    "library/hybrid/s18-dissolve.png",
-    "library/hybrid/s18-double-exposure.png",
-    "library/hybrid/s18-filmstrip.png",
-    "library/hybrid/s18-frame-in-frame.png",
-    "library/hybrid/s18-painted-edges.png",
-    "library/hybrid/s18-rackfocus.png",
-    "library/hybrid/s18-split.png",
-    "library/hybrid/s18-torn-seam.png",
-    "library/hybrid/s19-aperture.png",
-    "library/hybrid/s19-brushstroke.png",
-    "library/hybrid/s19-dissolve.png",
-    "library/hybrid/s19-double-exposure.png",
-    "library/hybrid/s19-filmstrip.png",
-    "library/hybrid/s19-frame-in-frame.png",
-    "library/hybrid/s19-painted-edges.png",
-    "library/hybrid/s19-rackfocus.png",
-    "library/hybrid/s19-split.png",
-    "library/hybrid/s19-torn-seam.png",
-    "library/hybrid/s20-aperture.png",
-    "library/hybrid/s20-brushstroke.png",
-    "library/hybrid/s20-dissolve.png",
-    "library/hybrid/s20-double-exposure.png",
-    "library/hybrid/s20-filmstrip.png",
-    "library/hybrid/s20-frame-in-frame.png",
-    "library/hybrid/s20-painted-edges.png",
-    "library/hybrid/s20-rackfocus.png",
-    "library/hybrid/s20-split.png",
-    "library/hybrid/s20-torn-seam.png"
+  {
+   "id": "persona-avatar-13",
+   "group": "people",
+   "kind": "persona",
+   "title": "Black woman using a wheelchair\u2026",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "47-year-old Black woman using a wheelchair by a big studio window, bright headwrap, painter's smock, brushes in hand, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, luminous focus.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-13.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-13.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-13-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
    ]
   },
-  "inflection": {
-   "label": "The inflection \u2014 illustration to photograph",
-   "files": [
-    "library/inflection/inflect-bath-steam.png",
-    "library/inflection/inflect-birdsong.png",
-    "library/inflection/inflect-child-laugh.png",
-    "library/inflection/inflect-child-sleep.png",
-    "library/inflection/inflect-city-look-up.png",
-    "library/inflection/inflect-dance-kitchen.png",
-    "library/inflection/inflect-first-snow.png",
-    "library/inflection/inflect-friend-story.png",
-    "library/inflection/inflect-garden-bloom.png",
-    "library/inflection/inflect-grandparent-hands.png",
-    "library/inflection/inflect-leaf-fall.png",
-    "library/inflection/inflect-lover-face.png",
-    "library/inflection/inflect-morning-coffee.png",
-    "library/inflection/inflect-ocean-dawn.png",
-    "library/inflection/inflect-partner-doorway.png",
-    "library/inflection/inflect-rain-window.png",
-    "library/inflection/inflect-street-music.png",
-    "library/inflection/inflect-sunset.png"
+  {
+   "id": "persona-avatar-02",
+   "group": "people",
+   "kind": "persona",
+   "title": "Black woman with silver locs",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "61-year-old Black woman with silver locs, reading glasses pushed up, mustard scarf, in a bright plant-filled room, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, serene and warm.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-02.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-02.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-02-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
    ]
   },
-  "illustrations": {
-   "label": "Illustrations \u2014 the painterly journey (Filmmaker)",
-   "files": [
-    "library/illustrations/illus-coll-circle.png",
-    "library/illustrations/illus-coll-dawn-crowd.png",
-    "library/illustrations/illus-coll-embrace.png",
-    "library/illustrations/illus-coll-festival.png",
-    "library/illustrations/illus-coll-field-light.png",
-    "library/illustrations/illus-coll-hands-circle.png",
-    "library/illustrations/illus-coll-table.png",
-    "library/illustrations/illus-coll-turn.png",
-    "library/illustrations/illus-coll-windows.png",
-    "library/illustrations/illus-inner-bloom.png",
-    "library/illustrations/illus-inner-breath.png",
-    "library/illustrations/illus-inner-chest.png",
-    "library/illustrations/illus-inner-cocoon.png",
-    "library/illustrations/illus-inner-constellation.png",
-    "library/illustrations/illus-inner-dawnrise.png",
-    "library/illustrations/illus-inner-dissolve.png",
-    "library/illustrations/illus-inner-door.png",
-    "library/illustrations/illus-inner-exhale-gold.png",
-    "library/illustrations/illus-inner-fog.png",
-    "library/illustrations/illus-inner-horizon.png",
-    "library/illustrations/illus-inner-leaf-memory.png",
-    "library/illustrations/illus-inner-noise-gold.png",
-    "library/illustrations/illus-inner-static.png",
-    "library/illustrations/illus-inner-still.png",
-    "library/illustrations/illus-inner-sunbeam.png",
-    "library/illustrations/illus-inner-thread.png",
-    "library/illustrations/illus-inner-tide.png",
-    "library/illustrations/illus-inner-weight.png",
-    "library/illustrations/illus-inner-window-self.png",
-    "library/illustrations/illus-place-01a.png",
-    "library/illustrations/illus-place-01b.png",
-    "library/illustrations/illus-place-01c.png",
-    "library/illustrations/illus-place-02a.png",
-    "library/illustrations/illus-place-02b.png",
-    "library/illustrations/illus-place-02c.png",
-    "library/illustrations/illus-place-03a.png",
-    "library/illustrations/illus-place-03b.png",
-    "library/illustrations/illus-place-04a.png",
-    "library/illustrations/illus-place-04b.png",
-    "library/illustrations/illus-place-05a.png",
-    "library/illustrations/illus-place-05c.png",
-    "library/illustrations/illus-place-06a.png",
-    "library/illustrations/illus-place-06b.png",
-    "library/illustrations/illus-place-06c.png",
-    "library/illustrations/illus-place-07a.png",
-    "library/illustrations/illus-place-07b.png",
-    "library/illustrations/illus-ring-dusk.png",
-    "library/illustrations/illus-ring-hand-cafe.png",
-    "library/illustrations/illus-ring-macro-glint.png",
-    "library/illustrations/illus-ring-nightstand.png",
-    "library/illustrations/illus-ring-pocket.png",
-    "library/illustrations/illus-ring-sun-through.png",
-    "library/illustrations/illus-ring-two-hands.png",
-    "library/illustrations/illus-ring-void-01.png",
-    "library/illustrations/illus-ring-void-ripple.png",
-    "library/illustrations/illus-ring-worn-dawn.png",
-    "library/illustrations/illus-ripple-body.png",
-    "library/illustrations/illus-ripple-cafe.png",
-    "library/illustrations/illus-ripple-dawn.png",
-    "library/illustrations/illus-ripple-field.png",
-    "library/illustrations/illus-ripple-hands.png",
-    "library/illustrations/illus-ripple-ring-macro.png",
-    "library/illustrations/illus-ripple-void.png",
-    "library/illustrations/illus-ripple-water.png",
-    "library/illustrations/illus-state-01a.png",
-    "library/illustrations/illus-state-01b.png",
-    "library/illustrations/illus-state-02a.png",
-    "library/illustrations/illus-state-02b.png",
-    "library/illustrations/illus-state-02c.png",
-    "library/illustrations/illus-state-03a.png",
-    "library/illustrations/illus-state-03b.png",
-    "library/illustrations/illus-state-04a.png",
-    "library/illustrations/illus-state-05a.png",
-    "library/illustrations/illus-state-05b.png",
-    "library/illustrations/illus-state-06a.png",
-    "library/illustrations/illus-state-06b.png",
-    "library/illustrations/illus-state-07a.png",
-    "library/illustrations/illus-state-07b.png",
-    "library/illustrations/illus-tex-bed.png",
-    "library/illustrations/illus-tex-breath-glass.png",
-    "library/illustrations/illus-tex-candle.png",
-    "library/illustrations/illus-tex-coffee.png",
-    "library/illustrations/illus-tex-dust.png",
-    "library/illustrations/illus-tex-eye.png",
-    "library/illustrations/illus-tex-floor.png",
-    "library/illustrations/illus-tex-hand-01.png",
-    "library/illustrations/illus-tex-hand-03.png",
-    "library/illustrations/illus-tex-hands-two.png",
-    "library/illustrations/illus-tex-heart.png",
-    "library/illustrations/illus-tex-keys.png",
-    "library/illustrations/illus-tex-leaf.png",
-    "library/illustrations/illus-tex-pages.png",
-    "library/illustrations/illus-tex-phone-down.png",
-    "library/illustrations/illus-tex-plant.png",
-    "library/illustrations/illus-tex-rain-glass.png",
-    "library/illustrations/illus-tex-ripple-pond.png",
-    "library/illustrations/illus-tex-steam.png",
-    "library/illustrations/illus-tex-tea.png",
-    "library/illustrations/illus-tex-water.png",
-    "library/illustrations/illus-tex-window-light.png"
+  {
+   "id": "persona-darius",
+   "group": "people",
+   "kind": "persona",
+   "title": "Darius",
+   "description": "6-frame story \u00b7 a named Pulse persona.",
+   "bio": "44-year-old man named Darius.",
+   "count": 6,
+   "thumb": "story-images/darius-1.png",
+   "items": [
+    {
+     "file": "story-images/darius-1.png",
+     "order": 1,
+     "caption": "Darius on a crowded morning train, shoulders up around his ears, jaw tight, the carriage b"
+    },
+    {
+     "file": "story-images/darius-2.png",
+     "order": 2,
+     "caption": "Darius still on the same crowded rush-hour commuter train, standing and holding the overhe"
+    },
+    {
+     "file": "story-images/darius-3.png",
+     "order": 3,
+     "caption": "Macro: his hand flat on his chest over the shirt, even soft light, the gold band prominent"
+    },
+    {
+     "file": "story-images/darius-4.png",
+     "order": 4,
+     "caption": "Darius arriving home in early evening, pausing at the door with his keys still in hand, ta"
+    },
+    {
+     "file": "story-images/darius-5.png",
+     "order": 5,
+     "caption": ""
+    },
+    {
+     "file": "story-images/darius-6.png",
+     "order": 6,
+     "caption": ""
+    }
    ]
   },
-  "studio-frames": {
-   "label": "Pulse Filmmaker \u2014 hero frames (the light-thread)",
-   "files": [
-    "library/studio-frames/studio-strip-01.png",
-    "library/studio-frames/studio-strip-02.png",
-    "library/studio-frames/studio-strip-03.png",
-    "library/studio-frames/studio-strip-04.png",
-    "library/studio-frames/studio-strip-05.png",
-    "library/studio-frames/studio-strip-06.png",
-    "library/studio-frames/studio-strip-07.png",
-    "library/studio-frames/studio-strip-08.png",
-    "library/studio-frames/studio-strip-09.png",
-    "library/studio-frames/studio-strip-10.png",
-    "library/studio-frames/studio-strip-11.png",
-    "library/studio-frames/studio-strip-12.png",
-    "library/studio-frames/studio-vault-01.png",
-    "library/studio-frames/studio-vault-02.png",
-    "library/studio-frames/studio-vault-03.png",
-    "library/studio-frames/studio-vault-04.png",
-    "library/studio-frames/studio-vault-05.png",
-    "library/studio-frames/studio-vault-06.png",
-    "library/studio-frames/studio-vault-07.png",
-    "library/studio-frames/studio-vault-08.png",
-    "library/studio-frames/studio-vault-09.png",
-    "library/studio-frames/studio-vault-10.png",
-    "library/studio-frames/studio-vault-11.png",
-    "library/studio-frames/studio-vault-12.png"
+  {
+   "id": "persona-avatar-01",
+   "group": "people",
+   "kind": "persona",
+   "title": "East Asian man",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "27-year-old East Asian man, warm smile, cropped hair, olive linen shirt, at a sunlit cafe table, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, relaxed and present, looking softly toward camera.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-01.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-01.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-01-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
    ]
   },
-  "performance": {
-   "label": "Performance \u2014 the pause inside effort",
-   "files": [
-    "library/performance/perf-chef.png",
-    "library/performance/perf-climb.png",
-    "library/performance/perf-dancer.png",
-    "library/performance/perf-ice.png",
-    "library/performance/perf-piano.png",
-    "library/performance/perf-run.png",
-    "library/performance/perf-speaker.png",
-    "library/performance/perf-surgeon.png"
+  {
+   "id": "persona-avatar-12",
+   "group": "people",
+   "kind": "persona",
+   "title": "Filipino nurse just off a night\u2026",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "33-year-old Filipino nurse just off a night shift, scrubs, hair coming loose, sitting in a bright break room with a paper cup, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, exhausted but settled.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-12.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-12.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-12-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
    ]
   },
-  "stories": {
-   "label": "User stories",
-   "files": [
-    "library/stories/mei-david-1.png",
-    "library/stories/mei-david-2.png",
-    "library/stories/mei-david-3.png",
-    "library/stories/mei-david-4.png",
-    "library/stories/mei-david-5.png",
-    "library/stories/mei-david-6.png",
-    "library/stories/nadia-1.png",
-    "library/stories/nadia-2.png",
-    "library/stories/nadia-3.png",
-    "library/stories/nadia-4.png",
-    "library/stories/nadia-5.png",
-    "library/stories/nadia-6.png",
-    "library/stories/sam-1.png",
-    "library/stories/sam-2.png",
-    "library/stories/sam-3.png",
-    "library/stories/sam-4.png",
-    "library/stories/sam-5.png",
-    "library/stories/sam-6.png",
-    "library/stories/tomas-1.png",
-    "library/stories/tomas-2.png",
-    "library/stories/tomas-3.png",
-    "library/stories/tomas-4.png",
-    "library/stories/tomas-5.png",
-    "library/stories/tomas-6.png",
-    "library/stories/walter-1.png",
-    "library/stories/walter-2.png",
-    "library/stories/walter-3.png",
-    "library/stories/walter-4.png",
-    "library/stories/walter-5.png",
-    "library/stories/walter-6.png",
-    "story-images/amara-ben-1.png",
-    "story-images/amara-ben-2.png",
-    "story-images/amara-ben-3.png",
-    "story-images/amara-ben-4.png",
-    "story-images/amara-ben-5.png",
-    "story-images/amara-ben-6.png",
-    "story-images/darius-1.png",
-    "story-images/darius-2.png",
-    "story-images/darius-3.png",
-    "story-images/darius-4.png",
-    "story-images/darius-5.png",
-    "story-images/darius-6.png",
-    "story-images/ingrid-1.png",
-    "story-images/ingrid-2.png",
-    "story-images/ingrid-3.png",
-    "story-images/ingrid-4.png",
-    "story-images/ingrid-5.png",
-    "story-images/ingrid-6.png",
-    "story-images/rosa-1.png",
-    "story-images/rosa-2.png",
-    "story-images/rosa-3.png",
-    "story-images/rosa-4.png",
-    "story-images/rosa-5.png",
-    "story-images/rosa-6.png",
-    "story-images/theo-1.png",
-    "story-images/theo-2.png",
-    "story-images/theo-3.png",
-    "story-images/theo-4.png",
-    "story-images/theo-5.png",
-    "story-images/theo-6.png"
+  {
+   "id": "persona-avatar-16",
+   "group": "people",
+   "kind": "persona",
+   "title": "Indian woman",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "37-year-old Indian woman, schoolteacher, cardigan, chalk dust on her sleeve, in a bright empty classroom, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, gentle and attentive.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-16.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-16.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-16-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
    ]
   },
-  "journey": {
-   "label": "The journey arc \u2014 numb to generous",
-   "files": [
-    "journey-images/1a-stage1-state.png",
-    "journey-images/1b-stage1-time.png",
-    "journey-images/1c-stage1-texture.png",
-    "journey-images/2a-stage2-state.png",
-    "journey-images/2b-stage2-time.png",
-    "journey-images/2c-stage2-texture.png",
-    "journey-images/3a-stage3-state.png",
-    "journey-images/3b-stage3-time.png",
-    "journey-images/3c-stage3-texture.png",
-    "journey-images/4a-stage4-state.png",
-    "journey-images/4b-stage4-time.png",
-    "journey-images/4c-stage4-texture.png",
-    "journey-images/5a-stage5-state.png",
-    "journey-images/5b-stage5-time.png",
-    "journey-images/5c-stage5-texture.png",
-    "journey-images/6a-stage6-state.png",
-    "journey-images/6b-stage6-time.png",
-    "journey-images/6c-stage6-texture.png",
-    "journey-images/7a-stage7-state.png",
-    "journey-images/7b-stage7-time.png",
-    "journey-images/7c-stage7-texture.png",
-    "journey-images/film-01-open.png",
-    "journey-images/film-02-cafe-before.png",
-    "journey-images/film-03-cafe-return.png",
-    "journey-images/film-04-father-return.png",
-    "journey-images/film-05-couple-return.png",
-    "journey-images/film-06-sync-festival.png",
-    "journey-images/film-07-field-of-light.png",
-    "journey-images/film-08-tag-ring.png",
-    "journey-images/film-09-split-partners.png",
-    "journey-images/film-10-focus-desk.png",
-    "journey-images/film-11-elders.png",
-    "journey-images/film-12-yoga.png",
-    "journey-images/film-13-friends-dinner.png",
-    "journey-images/film-14-street-lookup.png",
-    "journey-images/film-15-caregiver.png",
-    "journey-images/film-16-ring-ecu.png",
-    "journey-images/film-17-sync-hands.png"
+  {
+   "id": "persona-ingrid",
+   "group": "people",
+   "kind": "persona",
+   "title": "Ingrid",
+   "description": "6-frame story \u00b7 a named Pulse persona.",
+   "bio": "52-year-old yoga teacher named Ingrid.",
+   "count": 6,
+   "thumb": "story-images/ingrid-1.png",
+   "items": [
+    {
+     "file": "story-images/ingrid-1.png",
+     "order": 1,
+     "caption": "Ingrid rolling up her mat by a bright studio window after morning practice, unhurried, the"
+    },
+    {
+     "file": "story-images/ingrid-2.png",
+     "order": 2,
+     "caption": "Ingrid mid-afternoon at a market stall choosing apples, paused with one in her hand, eyes "
+    },
+    {
+     "file": "story-images/ingrid-3.png",
+     "order": 3,
+     "caption": "Macro: her weathered hand resting on a linen knee in even window light, thumb touching the"
+    },
+    {
+     "file": "story-images/ingrid-4.png",
+     "order": 4,
+     "caption": "Ingrid teaching, kneeling beside a student, fully attentive, bright airy studio, morning l"
+    },
+    {
+     "file": "story-images/ingrid-5.png",
+     "order": 5,
+     "caption": ""
+    },
+    {
+     "file": "story-images/ingrid-6.png",
+     "order": 6,
+     "caption": ""
+    }
    ]
   },
-  "film-strip": {
-   "label": "The Movie of Your Life",
-   "files": [
-    "film-strip/autopilot/auto-01.png",
-    "film-strip/autopilot/auto-02.png",
-    "film-strip/autopilot/auto-03.png",
-    "film-strip/autopilot/auto-04.png",
-    "film-strip/autopilot/auto-05.png",
-    "film-strip/autopilot/auto-06.png",
-    "film-strip/autopilot/auto-07.png",
-    "film-strip/autopilot/auto-08.png",
-    "film-strip/autopilot/auto-09.png",
-    "film-strip/autopilot/auto-10.png",
-    "film-strip/autopilot/auto-11.png",
-    "film-strip/autopilot/auto-12.png",
-    "film-strip/autopilot/auto-13.png",
-    "film-strip/autopilot/auto-14.png",
-    "film-strip/autopilot/auto-15.png",
-    "film-strip/autopilot/auto-16.png",
-    "film-strip/autopilot/auto-17.png",
-    "film-strip/autopilot/auto-18.png",
-    "film-strip/autopilot/auto-19.png",
-    "film-strip/autopilot/auto-20.png",
-    "film-strip/autopilot/auto-21.png",
-    "film-strip/autopilot/auto-22.png",
-    "film-strip/autopilot/auto-23.png",
-    "film-strip/autopilot/auto-24.png",
-    "film-strip/same/moment-01.png",
-    "film-strip/same/moment-02.png",
-    "film-strip/same/moment-03.png",
-    "film-strip/same/moment-04.png",
-    "film-strip/same/moment-05.png",
-    "film-strip/same/moment-06.png",
-    "film-strip/same/moment-07.png",
-    "film-strip/same/moment-08.png",
-    "film-strip/same/moment-09.png",
-    "film-strip/same/moment-10.png",
-    "film-strip/same/moment-11.png",
-    "film-strip/same/moment-12.png",
-    "film-strip/same/moment-13.png",
-    "film-strip/same/moment-14.png",
-    "film-strip/same/moment-15.png",
-    "film-strip/same/moment-16.png",
-    "film-strip/same/moment-17.png",
-    "film-strip/same/moment-18.png",
-    "film-strip/same/moment-19.png",
-    "film-strip/same/moment-20.png",
-    "film-strip/same/moment-21.png",
-    "film-strip/same/moment-22.png",
-    "film-strip/same/moment-23.png",
-    "film-strip/same/moment-24.png",
-    "film-strip/motion/held-loop.mp4"
+  {
+   "id": "persona-avatar-15",
+   "group": "people",
+   "kind": "persona",
+   "title": "Japanese man",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "58-year-old Japanese man, fisherman, weathered face, canvas jacket, at a harbour in soft morning light, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, quiet and steady.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-15.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-15.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-15-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
    ]
   },
-  "email-heroes": {
-   "label": "Email heroes \u2014 the lifecycle, illustrated",
-   "files": [
-    "emails/images/hero-21-days.png",
-    "emails/images/hero-arrival-day.png",
-    "emails/images/hero-autopilot-cost.png",
-    "emails/images/hero-before-arrival.png",
-    "emails/images/hero-come-back.png",
-    "emails/images/hero-day-one.png",
-    "emails/images/hero-email-21-day-threshold.png",
-    "emails/images/hero-email-30-days-present.png",
-    "emails/images/hero-email-autopilot-cost-soft.png",
-    "emails/images/hero-email-autopilot-cost.png",
-    "emails/images/hero-email-before-it-arrives.png",
-    "emails/images/hero-email-charge-pair-breathe.png",
-    "emails/images/hero-email-come-back-to-now-soft.png",
-    "emails/images/hero-email-come-back-to-now.png",
-    "emails/images/hero-email-confirm-size.png",
-    "emails/images/hero-email-day-one.png",
-    "emails/images/hero-email-exchange-simple.png",
-    "emails/images/hero-email-first-hundred.png",
-    "emails/images/hero-email-first-impression.png",
-    "emails/images/hero-email-gift-of-presence.png",
-    "emails/images/hero-email-give-a-month.png",
-    "emails/images/hero-email-how-is-it-going.png",
-    "emails/images/hero-email-its-here.png",
-    "emails/images/hero-email-launch-kit.png",
-    "emails/images/hero-email-no-rush-soft.png",
-    "emails/images/hero-email-no-rush.png",
-    "emails/images/hero-email-on-its-way.png",
-    "emails/images/hero-email-one-minute-no-ring.png",
-    "emails/images/hero-email-order-confirmed.png",
-    "emails/images/hero-email-pause-by-text.png",
-    "emails/images/hero-email-pause-is-working.png",
-    "emails/images/hero-email-presence-circle.png",
-    "emails/images/hero-email-presence-experience.png",
-    "emails/images/hero-email-pulse-not-ping.png",
-    "emails/images/hero-email-questions-answered.png",
-    "emails/images/hero-email-quiz-results-soft.png",
-    "emails/images/hero-email-quiz-results.png",
-    "emails/images/hero-email-readers-tuesday.png",
-    "emails/images/hero-email-right-fit.png",
-    "emails/images/hero-email-shape-whats-next.png",
-    "emails/images/hero-email-share-kit.png",
-    "emails/images/hero-email-showing-the-way.png",
-    "emails/images/hero-email-sizing-kit.png",
-    "emails/images/hero-email-someone-thought-of-you.png",
-    "emails/images/hero-email-someone-you-love.png",
-    "emails/images/hero-email-space-assessment.png",
-    "emails/images/hero-email-spaces-inquiry.png",
-    "emails/images/hero-email-spaces-proposal.png",
-    "emails/images/hero-email-spaces-questions.png",
-    "emails/images/hero-email-still-thinking.png",
-    "emails/images/hero-email-story-kit.png",
-    "emails/images/hero-email-sunday-pause.png",
-    "emails/images/hero-email-team-report.png",
-    "emails/images/hero-email-tell-your-story.png",
-    "emails/images/hero-email-the-moment-soft.png",
-    "emails/images/hero-email-the-moment.png",
-    "emails/images/hero-email-try-this-first.png",
-    "emails/images/hero-email-two-weeks-returning.png",
-    "emails/images/hero-email-we-noticed.png",
-    "emails/images/hero-email-week-one-noticing.png",
-    "emails/images/hero-email-well-be-here.png",
-    "emails/images/hero-email-what-did-you-notice.png",
-    "emails/images/hero-email-what-others-noticed.png",
-    "emails/images/hero-email-what-youve-given.png",
-    "emails/images/hero-email-when-youre-ready.png",
-    "emails/images/hero-email-your-story.png",
-    "emails/images/hero-exchange-simple.png",
-    "emails/images/hero-first-hundred.png",
-    "emails/images/hero-first-noticing.png",
-    "emails/images/hero-gift-of-presence.png",
-    "emails/images/hero-give-a-month.png",
-    "emails/images/hero-landing-first-pulse.png",
-    "emails/images/hero-landing-presence-report.png",
-    "emails/images/hero-landing-pulse-windows.png",
-    "emails/images/hero-launch-kit.png",
-    "emails/images/hero-milestone-heart.png",
-    "emails/images/hero-no-rush.png",
-    "emails/images/hero-noticing-breath.png",
-    "emails/images/hero-on-its-way.png",
-    "emails/images/hero-one-minute.png",
-    "emails/images/hero-order-confirmed.png",
-    "emails/images/hero-others-noticed.png",
-    "emails/images/hero-pause-working.png",
-    "emails/images/hero-presence-circle.png",
-    "emails/images/hero-presence-experience.png",
-    "emails/images/hero-pulse-not-ping.png",
-    "emails/images/hero-questions-answered.png",
-    "emails/images/hero-quiz-results.png",
-    "emails/images/hero-readers-tuesday.png",
-    "emails/images/hero-shape-whats-next.png",
-    "emails/images/hero-share-kit.png",
-    "emails/images/hero-showing-the-way.png",
-    "emails/images/hero-sizing-set.png",
-    "emails/images/hero-someone-thought-of-you.png",
-    "emails/images/hero-someone-you-love.png",
-    "emails/images/hero-spaces-proposal.png",
-    "emails/images/hero-spaces-rings.png",
-    "emails/images/hero-story-ask.png",
-    "emails/images/hero-sunday-pause.png",
-    "emails/images/hero-team-report.png",
-    "emails/images/hero-the-moment.png",
-    "emails/images/hero-two-weeks.png",
-    "emails/images/hero-we-noticed.png",
-    "emails/images/hero-when-ready.png"
+  {
+   "id": "persona-avatar-03",
+   "group": "people",
+   "kind": "persona",
+   "title": "Latina woman",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "34-year-old Latina woman, dark wavy hair, freckles, cream turtleneck, by a large window, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, calm half-smile.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-03.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-03.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-03-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
    ]
   },
-  "texture": {
-   "label": "Texture, macro & symbol",
-   "files": [
-    "library/texture/tex-breath-glass.png",
-    "library/texture/tex-brushed.png",
-    "library/texture/tex-concentric-sand.png",
-    "library/texture/tex-concentric-water.png",
-    "library/texture/tex-dew-roll.png",
-    "library/texture/tex-dust-spiral.png",
-    "library/texture/tex-eclipse.png",
-    "library/texture/tex-eye-ring.png",
-    "library/texture/tex-fingerprint.png",
-    "library/texture/tex-goosebumps.png",
-    "library/texture/tex-half-light.png",
-    "library/texture/tex-leaf-vein.png",
-    "library/texture/tex-shadow-long.png",
-    "library/texture/tex-thumb.png",
-    "library/texture/tex-water-tension.png",
-    "library/texture/tex-wrist-pulse.png"
+  {
+   "id": "persona-avatar-19",
+   "group": "people",
+   "kind": "persona",
+   "title": "Latino chef in whites at a\u2026",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "44-year-old Latino chef in whites at a sunlit prep bench, forearms tattooed, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, calm before the rush.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-19.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-19.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-19-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
    ]
   },
-  "motion-loops": {
-   "label": "Motion \u2014 funnel loops",
-   "files": [
-    "motion/amara-ben-hands.mp4",
-    "motion/arrival-unboxing.mp4",
-    "motion/darius-train.mp4",
-    "motion/ingrid-mat.mp4",
-    "motion/luxe-ring.mp4",
-    "motion/maya-car-soft.mp4",
-    "motion/referral-pour.mp4",
-    "motion/rosa-notebook.mp4",
-    "motion/sunday-pause.mp4",
-    "motion/theo-focus.mp4"
+  {
+   "id": "persona-maya",
+   "group": "people",
+   "kind": "persona",
+   "title": "Maya",
+   "description": "The journey arc \u00b7 numb \u2192 generous, seven stages.",
+   "bio": "38, charge nurse, mother to Priya \u2014 the brand's north-star persona, from numb to generous.",
+   "count": 38,
+   "thumb": "journey-images/1a-stage1-state.png",
+   "items": [
+    {
+     "file": "journey-images/1a-stage1-state.png",
+     "order": 1,
+     "caption": "1a stage1 state"
+    },
+    {
+     "file": "journey-images/1b-stage1-time.png",
+     "order": 2,
+     "caption": "1b stage1 time"
+    },
+    {
+     "file": "journey-images/1c-stage1-texture.png",
+     "order": 3,
+     "caption": "1c stage1 texture"
+    },
+    {
+     "file": "journey-images/2a-stage2-state.png",
+     "order": 4,
+     "caption": "2a stage2 state"
+    },
+    {
+     "file": "journey-images/2b-stage2-time.png",
+     "order": 5,
+     "caption": "2b stage2 time"
+    },
+    {
+     "file": "journey-images/2c-stage2-texture.png",
+     "order": 6,
+     "caption": "2c stage2 texture"
+    },
+    {
+     "file": "journey-images/3a-stage3-state.png",
+     "order": 7,
+     "caption": "3a stage3 state"
+    },
+    {
+     "file": "journey-images/3b-stage3-time.png",
+     "order": 8,
+     "caption": "3b stage3 time"
+    },
+    {
+     "file": "journey-images/3c-stage3-texture.png",
+     "order": 9,
+     "caption": "3c stage3 texture"
+    },
+    {
+     "file": "journey-images/4a-stage4-state.png",
+     "order": 10,
+     "caption": "4a stage4 state"
+    },
+    {
+     "file": "journey-images/4b-stage4-time.png",
+     "order": 11,
+     "caption": "4b stage4 time"
+    },
+    {
+     "file": "journey-images/4c-stage4-texture.png",
+     "order": 12,
+     "caption": "4c stage4 texture"
+    },
+    {
+     "file": "journey-images/5a-stage5-state.png",
+     "order": 13,
+     "caption": "5a stage5 state"
+    },
+    {
+     "file": "journey-images/5b-stage5-time.png",
+     "order": 14,
+     "caption": "5b stage5 time"
+    },
+    {
+     "file": "journey-images/5c-stage5-texture.png",
+     "order": 15,
+     "caption": "5c stage5 texture"
+    },
+    {
+     "file": "journey-images/6a-stage6-state.png",
+     "order": 16,
+     "caption": "6a stage6 state"
+    },
+    {
+     "file": "journey-images/6b-stage6-time.png",
+     "order": 17,
+     "caption": "6b stage6 time"
+    },
+    {
+     "file": "journey-images/6c-stage6-texture.png",
+     "order": 18,
+     "caption": "6c stage6 texture"
+    },
+    {
+     "file": "journey-images/7a-stage7-state.png",
+     "order": 19,
+     "caption": "7a stage7 state"
+    },
+    {
+     "file": "journey-images/7b-stage7-time.png",
+     "order": 20,
+     "caption": "7b stage7 time"
+    },
+    {
+     "file": "journey-images/7c-stage7-texture.png",
+     "order": 21,
+     "caption": "7c stage7 texture"
+    },
+    {
+     "file": "journey-images/film-01-open.png",
+     "order": 22,
+     "caption": "film 01 open"
+    },
+    {
+     "file": "journey-images/film-02-cafe-before.png",
+     "order": 23,
+     "caption": "film 02 cafe before"
+    },
+    {
+     "file": "journey-images/film-03-cafe-return.png",
+     "order": 24,
+     "caption": "film 03 cafe return"
+    },
+    {
+     "file": "journey-images/film-04-father-return.png",
+     "order": 25,
+     "caption": "film 04 father return"
+    },
+    {
+     "file": "journey-images/film-05-couple-return.png",
+     "order": 26,
+     "caption": "film 05 couple return"
+    },
+    {
+     "file": "journey-images/film-06-sync-festival.png",
+     "order": 27,
+     "caption": "film 06 sync festival"
+    },
+    {
+     "file": "journey-images/film-07-field-of-light.png",
+     "order": 28,
+     "caption": "film 07 field of light"
+    },
+    {
+     "file": "journey-images/film-08-tag-ring.png",
+     "order": 29,
+     "caption": "film 08 tag ring"
+    },
+    {
+     "file": "journey-images/film-09-split-partners.png",
+     "order": 30,
+     "caption": "film 09 split partners"
+    },
+    {
+     "file": "journey-images/film-10-focus-desk.png",
+     "order": 31,
+     "caption": "film 10 focus desk"
+    },
+    {
+     "file": "journey-images/film-11-elders.png",
+     "order": 32,
+     "caption": "film 11 elders"
+    },
+    {
+     "file": "journey-images/film-12-yoga.png",
+     "order": 33,
+     "caption": "film 12 yoga"
+    },
+    {
+     "file": "journey-images/film-13-friends-dinner.png",
+     "order": 34,
+     "caption": "film 13 friends dinner"
+    },
+    {
+     "file": "journey-images/film-14-street-lookup.png",
+     "order": 35,
+     "caption": "film 14 street lookup"
+    },
+    {
+     "file": "journey-images/film-15-caregiver.png",
+     "order": 36,
+     "caption": "film 15 caregiver"
+    },
+    {
+     "file": "journey-images/film-16-ring-ecu.png",
+     "order": 37,
+     "caption": "film 16 ring ecu"
+    },
+    {
+     "file": "journey-images/film-17-sync-hands.png",
+     "order": 38,
+     "caption": "film 17 sync hands"
+    }
    ]
   },
-  "studio-broll": {
-   "label": "Motion \u2014 ethereal b-roll",
-   "files": [
-    "library/studio-broll/web/1-0.mp4",
-    "library/studio-broll/web/1-1.mp4",
-    "library/studio-broll/web/1-2.mp4",
-    "library/studio-broll/web/114-0.mp4",
-    "library/studio-broll/web/114-1.mp4",
-    "library/studio-broll/web/114-2.mp4",
-    "library/studio-broll/web/115-0.mp4",
-    "library/studio-broll/web/115-1.mp4",
-    "library/studio-broll/web/115-2.mp4",
-    "library/studio-broll/web/116-0.mp4",
-    "library/studio-broll/web/116-1.mp4"
+  {
+   "id": "persona-mei-david",
+   "group": "people",
+   "kind": "persona",
+   "title": "Mei David",
+   "description": "6-frame story \u00b7 a named Pulse persona.",
+   "bio": "long-distance couple in their early 30s: Mei, an East Asian woman with a sleek bob, and David, a Black man with short locs.",
+   "count": 6,
+   "thumb": "library/stories/mei-david-1.png",
+   "items": [
+    {
+     "file": "library/stories/mei-david-1.png",
+     "order": 1,
+     "caption": "Mei at her apartment window in cool morning light in one city, hand flat on the glass, the"
+    },
+    {
+     "file": "library/stories/mei-david-2.png",
+     "order": 2,
+     "caption": "David in a different city at evening, warm lamp light, sitting at a small table taking the"
+    },
+    {
+     "file": "library/stories/mei-david-3.png",
+     "order": 3,
+     "caption": "A single quiet macro photograph, one frame only, no split screen and no borders: one hand "
+    },
+    {
+     "file": "library/stories/mei-david-4.png",
+     "order": 4,
+     "caption": "Mei (an East Asian woman with a sleek dark bob) sitting close to her laptop in soft warm l"
+    },
+    {
+     "file": "library/stories/mei-david-5.png",
+     "order": 5,
+     "caption": "Mei walking a busy street alone at golden hour, unhurried and unlonely, the ring on her ha"
+    },
+    {
+     "file": "library/stories/mei-david-6.png",
+     "order": 6,
+     "caption": "Reunion in a sunlit train station, Mei and David's two ringed hands finding each other fir"
+    }
    ]
   },
-  "motion-illustration": {
-   "label": "Motion rule \u00b7 illustration foot (composed, on rails)",
-   "files": [
-    "library/motion-rules/illustration/ill-breathe.mp4",
-    "library/motion-rules/illustration/ill-drift-lr.mp4",
-    "library/motion-rules/illustration/ill-drift-rl.mp4",
-    "library/motion-rules/illustration/ill-pull-out.mp4",
-    "library/motion-rules/illustration/ill-push-in.mp4"
+  {
+   "id": "persona-avatar-06",
+   "group": "people",
+   "kind": "persona",
+   "title": "Middle Eastern man",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "52-year-old Middle Eastern man, salt-and-pepper hair, open-collar shirt, in a light-filled study, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, thoughtful and settled.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-06.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-06.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-06-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
    ]
   },
-  "motion-transition": {
-   "label": "Motion rule \u00b7 transition (illustration \u2192 photograph)",
-   "files": [
-    "library/motion-rules/transition/tr-dissolve.mp4",
-    "library/motion-rules/transition/tr-focus.mp4",
-    "library/motion-rules/transition/tr-seam-push.mp4",
-    "library/motion-rules/transition/tr-travel.mp4",
-    "library/motion-rules/transition/tr-wipe.mp4"
+  {
+   "id": "persona-avatar-20",
+   "group": "people",
+   "kind": "persona",
+   "title": "Middle Eastern woman",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "30-year-old Middle Eastern woman, translator, headphones round her neck, at a light-filled desk of books, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, thoughtful mid-pause.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-20.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-20.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-20-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
    ]
   },
-  "motion-photograph": {
-   "label": "Motion rule \u00b7 photograph foot (handheld cell-phone)",
-   "files": [
-    "library/motion-rules/photograph/ph-handheld-01.mp4",
-    "library/motion-rules/photograph/ph-handheld-02.mp4",
-    "library/motion-rules/photograph/ph-handheld-03.mp4",
-    "library/motion-rules/photograph/ph-handheld-04.mp4",
-    "library/motion-rules/photograph/ph-handheld-05.mp4"
+  {
+   "id": "persona-avatar-10",
+   "group": "people",
+   "kind": "persona",
+   "title": "Mixed-race nonbinary person",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "29-year-old mixed-race nonbinary person, short curly hair, oversized oatmeal cardigan, by a rain-streaked window with soft light, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, gentle and self-possessed.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-10.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-10.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-10-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
    ]
   },
-  "studio-films": {
-   "label": "Finished testimonial films",
-   "files": [
-    "library/studio-stories/james.mp4",
-    "library/studio-stories/maya.mp4",
-    "library/studio-stories/priya.mp4"
+  {
+   "id": "persona-nadia",
+   "group": "people",
+   "kind": "persona",
+   "title": "Nadia",
+   "description": "6-frame story \u00b7 a named Pulse persona.",
+   "bio": "34-year-old woman named Nadia, new mother.",
+   "count": 6,
+   "thumb": "library/stories/nadia-1.png",
+   "items": [
+    {
+     "file": "library/stories/nadia-1.png",
+     "order": 1,
+     "caption": "Nadia at 3am nursing in a dim room, the cool blue of a phone face-down beside her, her eye"
+    },
+    {
+     "file": "library/stories/nadia-2.png",
+     "order": 2,
+     "caption": "Nadia at a dawn window holding her baby against her shoulder, first warm light on both the"
+    },
+    {
+     "file": "library/stories/nadia-3.png",
+     "order": 3,
+     "caption": "Macro: the baby's tiny hand curled around Nadia's ringed finger, soft morning light, the g"
+    },
+    {
+     "file": "library/stories/nadia-4.png",
+     "order": 4,
+     "caption": "Nadia handing the baby to her partner in a sunlit kitchen, a real look passing between the"
+    },
+    {
+     "file": "library/stories/nadia-5.png",
+     "order": 5,
+     "caption": "Nadia alone in the shower's steam for her one quiet minute, forehead to the tile, thumb fi"
+    },
+    {
+     "file": "library/stories/nadia-6.png",
+     "order": 6,
+     "caption": "Nadia laughing on the floor with her baby in warm afternoon light, phone nowhere, fully in"
+    }
+   ]
+  },
+  {
+   "id": "persona-rosa",
+   "group": "people",
+   "kind": "persona",
+   "title": "Rosa",
+   "description": "6-frame story \u00b7 a named Pulse persona.",
+   "bio": "34-year-old woman named Rosa.",
+   "count": 6,
+   "thumb": "story-images/rosa-1.png",
+   "items": [
+    {
+     "file": "story-images/rosa-1.png",
+     "order": 1,
+     "caption": "Rosa at a sunny kitchen table writing three short lines in a small notebook over coffee, m"
+    },
+    {
+     "file": "story-images/rosa-2.png",
+     "order": 2,
+     "caption": "Rosa pausing on a walk to actually look at a street tree in flower, one hand touching a lo"
+    },
+    {
+     "file": "story-images/rosa-3.png",
+     "order": 3,
+     "caption": "Macro: her hand on a warm coffee cup, steam rising in even window light, the gold band and"
+    },
+    {
+     "file": "story-images/rosa-4.png",
+     "order": 4,
+     "caption": "Rosa laughing on a stoop with a neighbor in soft afternoon light, present in an unremarkab"
+    },
+    {
+     "file": "story-images/rosa-5.png",
+     "order": 5,
+     "caption": ""
+    },
+    {
+     "file": "story-images/rosa-6.png",
+     "order": 6,
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "persona-sam",
+   "group": "people",
+   "kind": "persona",
+   "title": "Sam",
+   "description": "6-frame story \u00b7 a named Pulse persona.",
+   "bio": "39-year-old person named Sam, recovering from burnout.",
+   "count": 6,
+   "thumb": "library/stories/sam-1.png",
+   "items": [
+    {
+     "file": "library/stories/sam-1.png",
+     "order": 1,
+     "caption": "Sam sitting at a desk with the laptop deliberately closed, hands still, learning how to ju"
+    },
+    {
+     "file": "library/stories/sam-2.png",
+     "order": 2,
+     "caption": "Sam on an aimless walk with coat open, no destination, looking up at bare branches against"
+    },
+    {
+     "file": "library/stories/sam-3.png",
+     "order": 3,
+     "caption": "Macro: a coffee going cold on purpose, Sam's ringed hand wrapped around the cool cup, stea"
+    },
+    {
+     "file": "library/stories/sam-4.png",
+     "order": 4,
+     "caption": "Sam repotting a plant at a sunlit table, hands deep in dark soil, fully absorbed in one sm"
+    },
+    {
+     "file": "library/stories/sam-5.png",
+     "order": 5,
+     "caption": "Sam sitting back on a blanket in bright grass, leaning on both hands with face tilted up t"
+    },
+    {
+     "file": "library/stories/sam-6.png",
+     "order": 6,
+     "caption": "Sam back at work but changed \u2014 one task on the screen, the window open, shoulders down, th"
+    }
+   ]
+  },
+  {
+   "id": "persona-avatar-05",
+   "group": "people",
+   "kind": "persona",
+   "title": "South Asian woman",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "23-year-old South Asian woman, long dark hair, gold nose stud, sage sweater, on a bright balcony, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, quietly confident.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-05.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-05.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-05-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
+   ]
+  },
+  {
+   "id": "persona-theo",
+   "group": "people",
+   "kind": "persona",
+   "title": "Theo",
+   "description": "6-frame story \u00b7 a named Pulse persona.",
+   "bio": "29-year-old software developer named Theo.",
+   "count": 6,
+   "thumb": "story-images/theo-1.png",
+   "items": [
+    {
+     "file": "story-images/theo-1.png",
+     "order": 1,
+     "caption": "Theo at a tidy desk by a big window, six browser tabs reflected in his glasses, hand hover"
+    },
+    {
+     "file": "story-images/theo-2.png",
+     "order": 2,
+     "caption": "Theo leaning back from the screen, eyes closed for one breath, morning light even across t"
+    },
+    {
+     "file": "story-images/theo-3.png",
+     "order": 3,
+     "caption": "Macro: his hand back on the keyboard, steady, the gold band catching soft daylight, a sing"
+    },
+    {
+     "file": "story-images/theo-4.png",
+     "order": 4,
+     "caption": "Theo deep in one task, the room bright and calm around him, phone face-down and far away o"
+    },
+    {
+     "file": "story-images/theo-5.png",
+     "order": 5,
+     "caption": ""
+    },
+    {
+     "file": "story-images/theo-6.png",
+     "order": 6,
+     "caption": ""
+    }
+   ]
+  },
+  {
+   "id": "persona-tomas",
+   "group": "people",
+   "kind": "persona",
+   "title": "Tomas",
+   "description": "6-frame story \u00b7 a named Pulse persona.",
+   "bio": "66-year-old man named Tomas, recently widowed.",
+   "count": 6,
+   "thumb": "library/stories/tomas-1.png",
+   "items": [
+    {
+     "file": "library/stories/tomas-1.png",
+     "order": 1,
+     "caption": "Tomas at a kitchen table set with one cup where there were once two, soft morning light, t"
+    },
+    {
+     "file": "library/stories/tomas-2.png",
+     "order": 2,
+     "caption": "Tomas standing in the doorway of a sunlit room he can't quite enter yet, one hand on the f"
+    },
+    {
+     "file": "library/stories/tomas-3.png",
+     "order": 3,
+     "caption": "Macro: Tomas's ringed hand resting beside a small soft-focus framed photograph on a window"
+    },
+    {
+     "file": "library/stories/tomas-4.png",
+     "order": 4,
+     "caption": "Tomas outside for the first time in weeks, sun full on his upturned face on a park bench, "
+    },
+    {
+     "file": "library/stories/tomas-5.png",
+     "order": 5,
+     "caption": "Tomas tending a garden bed in golden light, ringed hands in the earth, giving care to some"
+    },
+    {
+     "file": "library/stories/tomas-6.png",
+     "order": 6,
+     "caption": "Tomas with a real small smile at a sudden memory, present with the grief rather than lost "
+    }
+   ]
+  },
+  {
+   "id": "persona-walter",
+   "group": "people",
+   "kind": "persona",
+   "title": "Walter",
+   "description": "6-frame story \u00b7 a named Pulse persona.",
+   "bio": "74-year-old man named Walter with a grandchild of about seven.",
+   "count": 6,
+   "thumb": "library/stories/walter-1.png",
+   "items": [
+    {
+     "file": "library/stories/walter-1.png",
+     "order": 1,
+     "caption": "Walter and his grandchild sitting on a porch step in golden afternoon light, Walter pointi"
+    },
+    {
+     "file": "library/stories/walter-2.png",
+     "order": 2,
+     "caption": "The child copying Walter's stillness on the step, both with eyes closed, faces turned to t"
+    },
+    {
+     "file": "library/stories/walter-3.png",
+     "order": 3,
+     "caption": "Macro: Walter's old ringed hand and the child's small hand both resting on a single large "
+    },
+    {
+     "file": "library/stories/walter-4.png",
+     "order": 4,
+     "caption": "Walter crouched at the water's edge with the child, the held pause before a skipping stone"
+    },
+    {
+     "file": "library/stories/walter-5.png",
+     "order": 5,
+     "caption": "Walter alone later on the same porch at dusk, turning the gold band on his finger, a soft "
+    },
+    {
+     "file": "library/stories/walter-6.png",
+     "order": 6,
+     "caption": "Two figures small in the frame, an old man and a child, walking away hand in hand down a s"
+    }
+   ]
+  },
+  {
+   "id": "persona-avatar-11",
+   "group": "people",
+   "kind": "persona",
+   "title": "White man",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "41-year-old white man, young dad, tired kind eyes, stubble, grey tee, a baby carrier on his chest, in a sunlit hallway, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, soft half-smile.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-11.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-11.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-11-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
+   ]
+  },
+  {
+   "id": "persona-avatar-17",
+   "group": "people",
+   "kind": "persona",
+   "title": "White man",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "71-year-old white man and 69-year-old white woman, a retired couple, in a sunlit garden doorway, gardening clothes, both with a wide polished gold band, easy companionship.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-17.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-17.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-17-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
+   ]
+  },
+  {
+   "id": "persona-avatar-04",
+   "group": "people",
+   "kind": "persona",
+   "title": "White man with a greying beard",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "45-year-old white man with a greying beard, soft flannel, in a woodshop doorway in daylight, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, grounded and kind.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-04.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-04.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-04-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
+   ]
+  },
+  {
+   "id": "persona-avatar-14",
+   "group": "people",
+   "kind": "persona",
+   "title": "White nonbinary barista behind\u2026",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "26-year-old white nonbinary barista behind a sunlit counter, apron, tattoos, easy grin, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, present and warm.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-14.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-14.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-14-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
+   ]
+  },
+  {
+   "id": "persona-avatar-22",
+   "group": "people",
+   "kind": "persona",
+   "title": "White woman",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "35-year-old white woman, long-distance runner, on a bright porch stretching, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, breath still settling, quietly strong.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-22.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-22.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-22-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
+   ]
+  },
+  {
+   "id": "persona-avatar-09",
+   "group": "people",
+   "kind": "persona",
+   "title": "White woman with a soft white\u2026",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "68-year-old white woman with a soft white bob, linen apron, in a bright pottery studio, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, peaceful and present.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-09.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-09.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-09-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
+   ]
+  },
+  {
+   "id": "persona-avatar-07",
+   "group": "people",
+   "kind": "persona",
+   "title": "White woman with red curly hair",
+   "description": "2 frames \u00b7 portrait and illustration\u2194real.",
+   "bio": "30-year-old white woman with red curly hair, denim shirt, at a farmers-market stall in soft daylight, a wide, smooth, polished gold band \u2014 the Pulse ring \u2014 on the finger, bright and open.",
+   "count": 2,
+   "thumb": "library/avatars/avatar-07.png",
+   "items": [
+    {
+     "file": "library/avatars/avatar-07.png",
+     "order": 1,
+     "caption": "portrait"
+    },
+    {
+     "file": "library/avatar-spectrum/avatar-07-spectrum.png",
+     "order": 2,
+     "caption": "illustration \u2192 real life"
+    }
+   ]
+  },
+  {
+   "id": "film-strip",
+   "group": "stories",
+   "kind": "sequence",
+   "title": "The Movie of Your Life",
+   "description": "The Movie of Your Life \u2014 autopilot as a strip running too fast, the pulse slowing it to one held moment.",
+   "count": 49,
+   "thumb": "film-strip/same/moment-01.png",
+   "items": [
+    {
+     "file": "film-strip/autopilot/auto-01.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-02.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-03.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-04.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-05.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-06.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-07.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-08.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-09.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-10.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-11.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-12.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-13.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-14.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-15.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-16.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-17.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-18.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-19.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-20.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-21.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-22.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-23.png"
+    },
+    {
+     "file": "film-strip/autopilot/auto-24.png"
+    },
+    {
+     "file": "film-strip/same/moment-01.png"
+    },
+    {
+     "file": "film-strip/same/moment-02.png"
+    },
+    {
+     "file": "film-strip/same/moment-03.png"
+    },
+    {
+     "file": "film-strip/same/moment-04.png"
+    },
+    {
+     "file": "film-strip/same/moment-05.png"
+    },
+    {
+     "file": "film-strip/same/moment-06.png"
+    },
+    {
+     "file": "film-strip/same/moment-07.png"
+    },
+    {
+     "file": "film-strip/same/moment-08.png"
+    },
+    {
+     "file": "film-strip/same/moment-09.png"
+    },
+    {
+     "file": "film-strip/same/moment-10.png"
+    },
+    {
+     "file": "film-strip/same/moment-11.png"
+    },
+    {
+     "file": "film-strip/same/moment-12.png"
+    },
+    {
+     "file": "film-strip/same/moment-13.png"
+    },
+    {
+     "file": "film-strip/same/moment-14.png"
+    },
+    {
+     "file": "film-strip/same/moment-15.png"
+    },
+    {
+     "file": "film-strip/same/moment-16.png"
+    },
+    {
+     "file": "film-strip/same/moment-17.png"
+    },
+    {
+     "file": "film-strip/same/moment-18.png"
+    },
+    {
+     "file": "film-strip/same/moment-19.png"
+    },
+    {
+     "file": "film-strip/same/moment-20.png"
+    },
+    {
+     "file": "film-strip/same/moment-21.png"
+    },
+    {
+     "file": "film-strip/same/moment-22.png"
+    },
+    {
+     "file": "film-strip/same/moment-23.png"
+    },
+    {
+     "file": "film-strip/same/moment-24.png"
+    },
+    {
+     "file": "film-strip/motion/held-loop.mp4"
+    }
+   ]
+  },
+  {
+   "id": "inflection",
+   "group": "stories",
+   "kind": "gallery",
+   "title": "The inflection \u2014 illustration to photograph",
+   "description": "The inflection \u2014 illustration resolving into photograph, the ring as the hinge into presence.",
+   "count": 18,
+   "thumb": "library/inflection/inflect-grandparent-hands.png",
+   "items": [
+    {
+     "file": "library/inflection/inflect-bath-steam.png"
+    },
+    {
+     "file": "library/inflection/inflect-birdsong.png"
+    },
+    {
+     "file": "library/inflection/inflect-child-laugh.png"
+    },
+    {
+     "file": "library/inflection/inflect-child-sleep.png"
+    },
+    {
+     "file": "library/inflection/inflect-city-look-up.png"
+    },
+    {
+     "file": "library/inflection/inflect-dance-kitchen.png"
+    },
+    {
+     "file": "library/inflection/inflect-first-snow.png"
+    },
+    {
+     "file": "library/inflection/inflect-friend-story.png"
+    },
+    {
+     "file": "library/inflection/inflect-garden-bloom.png"
+    },
+    {
+     "file": "library/inflection/inflect-grandparent-hands.png"
+    },
+    {
+     "file": "library/inflection/inflect-leaf-fall.png"
+    },
+    {
+     "file": "library/inflection/inflect-lover-face.png"
+    },
+    {
+     "file": "library/inflection/inflect-morning-coffee.png"
+    },
+    {
+     "file": "library/inflection/inflect-ocean-dawn.png"
+    },
+    {
+     "file": "library/inflection/inflect-partner-doorway.png"
+    },
+    {
+     "file": "library/inflection/inflect-rain-window.png"
+    },
+    {
+     "file": "library/inflection/inflect-street-music.png"
+    },
+    {
+     "file": "library/inflection/inflect-sunset.png"
+    }
+   ]
+  },
+  {
+   "id": "invitations",
+   "group": "stories",
+   "kind": "link",
+   "title": "\u201cWhen would now be a good time?\u201d \u2014 20 invitations",
+   "description": "\u201cWhen would now be a good time?\u201d \u2014 the manifesto and twenty three-frame invitation stories.",
+   "count": 60,
+   "thumb": "library/invitations/11-mug-detail.png",
+   "items": [
+    {
+     "file": "library/invitations/01-dishes-detail.png"
+    },
+    {
+     "file": "library/invitations/01-dishes-face.png"
+    },
+    {
+     "file": "library/invitations/01-dishes-scene.png"
+    },
+    {
+     "file": "library/invitations/02-orange-detail.png"
+    },
+    {
+     "file": "library/invitations/02-orange-face.png"
+    },
+    {
+     "file": "library/invitations/02-orange-scene.png"
+    },
+    {
+     "file": "library/invitations/03-seatbelt-detail.png"
+    },
+    {
+     "file": "library/invitations/03-seatbelt-face.png"
+    },
+    {
+     "file": "library/invitations/03-seatbelt-scene.png"
+    },
+    {
+     "file": "library/invitations/04-laundry-detail.png"
+    },
+    {
+     "file": "library/invitations/04-laundry-face.png"
+    },
+    {
+     "file": "library/invitations/04-laundry-scene.png"
+    },
+    {
+     "file": "library/invitations/05-kettle-detail.png"
+    },
+    {
+     "file": "library/invitations/05-kettle-face.png"
+    },
+    {
+     "file": "library/invitations/05-kettle-scene.png"
+    },
+    {
+     "file": "library/invitations/06-face-wash-detail.png"
+    },
+    {
+     "file": "library/invitations/06-face-wash-face.png"
+    },
+    {
+     "file": "library/invitations/06-face-wash-scene.png"
+    },
+    {
+     "file": "library/invitations/07-dog-detail.png"
+    },
+    {
+     "file": "library/invitations/07-dog-face.png"
+    },
+    {
+     "file": "library/invitations/07-dog-scene.png"
+    },
+    {
+     "file": "library/invitations/08-child-asleep-detail.png"
+    },
+    {
+     "file": "library/invitations/08-child-asleep-face.png"
+    },
+    {
+     "file": "library/invitations/08-child-asleep-scene.png"
+    },
+    {
+     "file": "library/invitations/09-elevator-detail.png"
+    },
+    {
+     "file": "library/invitations/09-elevator-face.png"
+    },
+    {
+     "file": "library/invitations/09-elevator-scene.png"
+    },
+    {
+     "file": "library/invitations/10-mirror-detail.png"
+    },
+    {
+     "file": "library/invitations/10-mirror-face.png"
+    },
+    {
+     "file": "library/invitations/10-mirror-scene.png"
+    },
+    {
+     "file": "library/invitations/11-mug-detail.png"
+    },
+    {
+     "file": "library/invitations/11-mug-face.png"
+    },
+    {
+     "file": "library/invitations/11-mug-scene.png"
+    },
+    {
+     "file": "library/invitations/12-toast-detail.png"
+    },
+    {
+     "file": "library/invitations/12-toast-face.png"
+    },
+    {
+     "file": "library/invitations/12-toast-scene.png"
+    },
+    {
+     "file": "library/invitations/13-green-light-detail.png"
+    },
+    {
+     "file": "library/invitations/13-green-light-face.png"
+    },
+    {
+     "file": "library/invitations/13-green-light-scene.png"
+    },
+    {
+     "file": "library/invitations/14-bare-feet-detail.png"
+    },
+    {
+     "file": "library/invitations/14-bare-feet-face.png"
+    },
+    {
+     "file": "library/invitations/14-bare-feet-scene.png"
+    },
+    {
+     "file": "library/invitations/15-laughter-detail.png"
+    },
+    {
+     "file": "library/invitations/15-laughter-face.png"
+    },
+    {
+     "file": "library/invitations/15-laughter-scene.png"
+    },
+    {
+     "file": "library/invitations/16-stretch-detail.png"
+    },
+    {
+     "file": "library/invitations/16-stretch-face.png"
+    },
+    {
+     "file": "library/invitations/16-stretch-scene.png"
+    },
+    {
+     "file": "library/invitations/17-rain-detail.png"
+    },
+    {
+     "file": "library/invitations/17-rain-face.png"
+    },
+    {
+     "file": "library/invitations/17-rain-scene.png"
+    },
+    {
+     "file": "library/invitations/18-change-detail.png"
+    },
+    {
+     "file": "library/invitations/18-change-face.png"
+    },
+    {
+     "file": "library/invitations/18-change-scene.png"
+    },
+    {
+     "file": "library/invitations/19-car-warm-detail.png"
+    },
+    {
+     "file": "library/invitations/19-car-warm-face.png"
+    },
+    {
+     "file": "library/invitations/19-car-warm-scene.png"
+    },
+    {
+     "file": "library/invitations/20-plant-detail.png"
+    },
+    {
+     "file": "library/invitations/20-plant-face.png"
+    },
+    {
+     "file": "library/invitations/20-plant-scene.png"
+    }
+   ],
+   "link": "now-a-good-time.html"
+  },
+  {
+   "id": "hybrid",
+   "group": "moments",
+   "kind": "gallery",
+   "title": "Illustration \u2194 photograph \u2014 the hybrid frame",
+   "description": "Illustration \u2194 photograph \u2014 two hundred hybrid frames across ten composition rules.",
+   "count": 200,
+   "thumb": "library/hybrid/s11-aperture.png",
+   "items": [
+    {
+     "file": "library/hybrid/s01-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s01-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s01-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s01-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s01-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s01-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s01-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s01-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s01-split.png"
+    },
+    {
+     "file": "library/hybrid/s01-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s02-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s02-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s02-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s02-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s02-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s02-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s02-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s02-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s02-split.png"
+    },
+    {
+     "file": "library/hybrid/s02-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s03-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s03-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s03-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s03-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s03-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s03-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s03-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s03-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s03-split.png"
+    },
+    {
+     "file": "library/hybrid/s03-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s04-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s04-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s04-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s04-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s04-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s04-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s04-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s04-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s04-split.png"
+    },
+    {
+     "file": "library/hybrid/s04-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s05-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s05-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s05-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s05-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s05-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s05-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s05-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s05-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s05-split.png"
+    },
+    {
+     "file": "library/hybrid/s05-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s06-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s06-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s06-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s06-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s06-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s06-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s06-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s06-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s06-split.png"
+    },
+    {
+     "file": "library/hybrid/s06-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s07-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s07-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s07-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s07-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s07-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s07-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s07-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s07-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s07-split.png"
+    },
+    {
+     "file": "library/hybrid/s07-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s08-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s08-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s08-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s08-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s08-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s08-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s08-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s08-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s08-split.png"
+    },
+    {
+     "file": "library/hybrid/s08-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s09-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s09-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s09-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s09-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s09-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s09-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s09-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s09-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s09-split.png"
+    },
+    {
+     "file": "library/hybrid/s09-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s10-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s10-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s10-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s10-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s10-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s10-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s10-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s10-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s10-split.png"
+    },
+    {
+     "file": "library/hybrid/s10-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s11-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s11-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s11-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s11-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s11-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s11-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s11-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s11-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s11-split.png"
+    },
+    {
+     "file": "library/hybrid/s11-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s12-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s12-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s12-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s12-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s12-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s12-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s12-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s12-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s12-split.png"
+    },
+    {
+     "file": "library/hybrid/s12-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s13-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s13-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s13-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s13-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s13-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s13-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s13-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s13-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s13-split.png"
+    },
+    {
+     "file": "library/hybrid/s13-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s14-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s14-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s14-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s14-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s14-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s14-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s14-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s14-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s14-split.png"
+    },
+    {
+     "file": "library/hybrid/s14-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s15-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s15-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s15-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s15-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s15-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s15-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s15-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s15-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s15-split.png"
+    },
+    {
+     "file": "library/hybrid/s15-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s16-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s16-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s16-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s16-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s16-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s16-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s16-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s16-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s16-split.png"
+    },
+    {
+     "file": "library/hybrid/s16-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s17-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s17-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s17-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s17-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s17-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s17-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s17-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s17-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s17-split.png"
+    },
+    {
+     "file": "library/hybrid/s17-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s18-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s18-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s18-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s18-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s18-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s18-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s18-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s18-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s18-split.png"
+    },
+    {
+     "file": "library/hybrid/s18-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s19-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s19-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s19-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s19-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s19-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s19-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s19-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s19-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s19-split.png"
+    },
+    {
+     "file": "library/hybrid/s19-torn-seam.png"
+    },
+    {
+     "file": "library/hybrid/s20-aperture.png"
+    },
+    {
+     "file": "library/hybrid/s20-brushstroke.png"
+    },
+    {
+     "file": "library/hybrid/s20-dissolve.png"
+    },
+    {
+     "file": "library/hybrid/s20-double-exposure.png"
+    },
+    {
+     "file": "library/hybrid/s20-filmstrip.png"
+    },
+    {
+     "file": "library/hybrid/s20-frame-in-frame.png"
+    },
+    {
+     "file": "library/hybrid/s20-painted-edges.png"
+    },
+    {
+     "file": "library/hybrid/s20-rackfocus.png"
+    },
+    {
+     "file": "library/hybrid/s20-split.png"
+    },
+    {
+     "file": "library/hybrid/s20-torn-seam.png"
+    }
+   ]
+  },
+  {
+   "id": "peak",
+   "group": "moments",
+   "kind": "gallery",
+   "title": "Peak experiences \u2014 out in the world",
+   "description": "Out-in-the-world peak experiences \u2014 summits, waterfalls, aurora, dunes, alpine swims.",
+   "count": 48,
+   "thumb": "library/peak/peak-meadow-storm.png",
+   "items": [
+    {
+     "file": "library/peak/peak-alpine-swim.png"
+    },
+    {
+     "file": "library/peak/peak-aurora.png"
+    },
+    {
+     "file": "library/peak/peak-balloon.png"
+    },
+    {
+     "file": "library/peak/peak-bioluminescent.png"
+    },
+    {
+     "file": "library/peak/peak-canyon-rim.png"
+    },
+    {
+     "file": "library/peak/peak-cave-light.png"
+    },
+    {
+     "file": "library/peak/peak-cherry-blossom.png"
+    },
+    {
+     "file": "library/peak/peak-city-lookout.png"
+    },
+    {
+     "file": "library/peak/peak-cliff-ocean.png"
+    },
+    {
+     "file": "library/peak/peak-coastal-run.png"
+    },
+    {
+     "file": "library/peak/peak-desert-road.png"
+    },
+    {
+     "file": "library/peak/peak-desert-stars.png"
+    },
+    {
+     "file": "library/peak/peak-dune-descent.png"
+    },
+    {
+     "file": "library/peak/peak-dunes.png"
+    },
+    {
+     "file": "library/peak/peak-festival-aerial.png"
+    },
+    {
+     "file": "library/peak/peak-forest-fog.png"
+    },
+    {
+     "file": "library/peak/peak-frozen-lake.png"
+    },
+    {
+     "file": "library/peak/peak-glacial-river.png"
+    },
+    {
+     "file": "library/peak/peak-glacier.png"
+    },
+    {
+     "file": "library/peak/peak-hammock-forest.png"
+    },
+    {
+     "file": "library/peak/peak-iceberg-kayak.png"
+    },
+    {
+     "file": "library/peak/peak-jungle-river.png"
+    },
+    {
+     "file": "library/peak/peak-lavender.png"
+    },
+    {
+     "file": "library/peak/peak-lighthouse-storm.png"
+    },
+    {
+     "file": "library/peak/peak-meadow-storm.png"
+    },
+    {
+     "file": "library/peak/peak-mesa-sunset.png"
+    },
+    {
+     "file": "library/peak/peak-monastery.png"
+    },
+    {
+     "file": "library/peak/peak-mountain-picnic.png"
+    },
+    {
+     "file": "library/peak/peak-mountain-tent.png"
+    },
+    {
+     "file": "library/peak/peak-northern-fjord.png"
+    },
+    {
+     "file": "library/peak/peak-observatory.png"
+    },
+    {
+     "file": "library/peak/peak-paddleboard-mist.png"
+    },
+    {
+     "file": "library/peak/peak-redwoods.png"
+    },
+    {
+     "file": "library/peak/peak-riverbend.png"
+    },
+    {
+     "file": "library/peak/peak-rooftop-dusk.png"
+    },
+    {
+     "file": "library/peak/peak-sailing.png"
+    },
+    {
+     "file": "library/peak/peak-saltflat.png"
+    },
+    {
+     "file": "library/peak/peak-savanna.png"
+    },
+    {
+     "file": "library/peak/peak-summit-sunrise.png"
+    },
+    {
+     "file": "library/peak/peak-superbloom.png"
+    },
+    {
+     "file": "library/peak/peak-surf-dawn.png"
+    },
+    {
+     "file": "library/peak/peak-temple-dawn.png"
+    },
+    {
+     "file": "library/peak/peak-terraces.png"
+    },
+    {
+     "file": "library/peak/peak-thermal-dawn.png"
+    },
+    {
+     "file": "library/peak/peak-tide-pools.png"
+    },
+    {
+     "file": "library/peak/peak-vineyard-dusk.png"
+    },
+    {
+     "file": "library/peak/peak-waterfall.png"
+    },
+    {
+     "file": "library/peak/peak-wheatfield-gold.png"
+    }
+   ]
+  },
+  {
+   "id": "ethereal",
+   "group": "moments",
+   "kind": "gallery",
+   "title": "The ring as presence",
+   "description": "The ring as presence \u2014 ethereal light-leak stills and motion, the world warming.",
+   "count": 17,
+   "thumb": "library/ethereal/eth-tide.png",
+   "items": [
+    {
+     "file": "library/ethereal/eth-candle-mirror.png"
+    },
+    {
+     "file": "library/ethereal/eth-condensation.png"
+    },
+    {
+     "file": "library/ethereal/eth-leaf-light.png"
+    },
+    {
+     "file": "library/ethereal/eth-ripples.png"
+    },
+    {
+     "file": "library/ethereal/eth-room-warms.png"
+    },
+    {
+     "file": "library/ethereal/eth-sand-hourglass.png"
+    },
+    {
+     "file": "library/ethereal/eth-submerged.png"
+    },
+    {
+     "file": "library/ethereal/eth-threads.png"
+    },
+    {
+     "file": "library/ethereal/eth-tide.png"
+    },
+    {
+     "file": "library/ethereal/eth-water-drop.png"
+    },
+    {
+     "file": "library/ethereal/eth-window-tide.png"
+    },
+    {
+     "file": "library/ethereal/motion/eth-ripples.mp4"
+    },
+    {
+     "file": "library/ethereal/motion/eth-room-warms.mp4"
+    },
+    {
+     "file": "library/ethereal/motion/eth-submerged.mp4"
+    },
+    {
+     "file": "library/ethereal/motion/eth-tide.mp4"
+    },
+    {
+     "file": "library/ethereal/motion/eth-water-drop.mp4"
+    },
+    {
+     "file": "library/ethereal/motion/eth-window-tide.mp4"
+    }
+   ]
+  },
+  {
+   "id": "illustrations",
+   "group": "craft",
+   "kind": "gallery",
+   "title": "Illustrations \u2014 the painterly journey (Filmmaker)",
+   "description": "The painterly journey \u2014 one hundred hand-illustrated frames, gouache and cel-warmth.",
+   "count": 100,
+   "thumb": "library/illustrations/illus-ring-pocket.png",
+   "items": [
+    {
+     "file": "library/illustrations/illus-coll-circle.png"
+    },
+    {
+     "file": "library/illustrations/illus-coll-dawn-crowd.png"
+    },
+    {
+     "file": "library/illustrations/illus-coll-embrace.png"
+    },
+    {
+     "file": "library/illustrations/illus-coll-festival.png"
+    },
+    {
+     "file": "library/illustrations/illus-coll-field-light.png"
+    },
+    {
+     "file": "library/illustrations/illus-coll-hands-circle.png"
+    },
+    {
+     "file": "library/illustrations/illus-coll-table.png"
+    },
+    {
+     "file": "library/illustrations/illus-coll-turn.png"
+    },
+    {
+     "file": "library/illustrations/illus-coll-windows.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-bloom.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-breath.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-chest.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-cocoon.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-constellation.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-dawnrise.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-dissolve.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-door.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-exhale-gold.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-fog.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-horizon.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-leaf-memory.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-noise-gold.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-static.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-still.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-sunbeam.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-thread.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-tide.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-weight.png"
+    },
+    {
+     "file": "library/illustrations/illus-inner-window-self.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-01a.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-01b.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-01c.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-02a.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-02b.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-02c.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-03a.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-03b.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-04a.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-04b.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-05a.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-05c.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-06a.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-06b.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-06c.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-07a.png"
+    },
+    {
+     "file": "library/illustrations/illus-place-07b.png"
+    },
+    {
+     "file": "library/illustrations/illus-ring-dusk.png"
+    },
+    {
+     "file": "library/illustrations/illus-ring-hand-cafe.png"
+    },
+    {
+     "file": "library/illustrations/illus-ring-macro-glint.png"
+    },
+    {
+     "file": "library/illustrations/illus-ring-nightstand.png"
+    },
+    {
+     "file": "library/illustrations/illus-ring-pocket.png"
+    },
+    {
+     "file": "library/illustrations/illus-ring-sun-through.png"
+    },
+    {
+     "file": "library/illustrations/illus-ring-two-hands.png"
+    },
+    {
+     "file": "library/illustrations/illus-ring-void-01.png"
+    },
+    {
+     "file": "library/illustrations/illus-ring-void-ripple.png"
+    },
+    {
+     "file": "library/illustrations/illus-ring-worn-dawn.png"
+    },
+    {
+     "file": "library/illustrations/illus-ripple-body.png"
+    },
+    {
+     "file": "library/illustrations/illus-ripple-cafe.png"
+    },
+    {
+     "file": "library/illustrations/illus-ripple-dawn.png"
+    },
+    {
+     "file": "library/illustrations/illus-ripple-field.png"
+    },
+    {
+     "file": "library/illustrations/illus-ripple-hands.png"
+    },
+    {
+     "file": "library/illustrations/illus-ripple-ring-macro.png"
+    },
+    {
+     "file": "library/illustrations/illus-ripple-void.png"
+    },
+    {
+     "file": "library/illustrations/illus-ripple-water.png"
+    },
+    {
+     "file": "library/illustrations/illus-state-01a.png"
+    },
+    {
+     "file": "library/illustrations/illus-state-01b.png"
+    },
+    {
+     "file": "library/illustrations/illus-state-02a.png"
+    },
+    {
+     "file": "library/illustrations/illus-state-02b.png"
+    },
+    {
+     "file": "library/illustrations/illus-state-02c.png"
+    },
+    {
+     "file": "library/illustrations/illus-state-03a.png"
+    },
+    {
+     "file": "library/illustrations/illus-state-03b.png"
+    },
+    {
+     "file": "library/illustrations/illus-state-04a.png"
+    },
+    {
+     "file": "library/illustrations/illus-state-05a.png"
+    },
+    {
+     "file": "library/illustrations/illus-state-05b.png"
+    },
+    {
+     "file": "library/illustrations/illus-state-06a.png"
+    },
+    {
+     "file": "library/illustrations/illus-state-06b.png"
+    },
+    {
+     "file": "library/illustrations/illus-state-07a.png"
+    },
+    {
+     "file": "library/illustrations/illus-state-07b.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-bed.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-breath-glass.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-candle.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-coffee.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-dust.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-eye.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-floor.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-hand-01.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-hand-03.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-hands-two.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-heart.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-keys.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-leaf.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-pages.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-phone-down.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-plant.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-rain-glass.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-ripple-pond.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-steam.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-tea.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-water.png"
+    },
+    {
+     "file": "library/illustrations/illus-tex-window-light.png"
+    }
+   ]
+  },
+  {
+   "id": "performance",
+   "group": "craft",
+   "kind": "gallery",
+   "title": "Performance \u2014 the pause inside effort",
+   "description": "The pause inside effort \u2014 presence held under pressure.",
+   "count": 8,
+   "thumb": "library/performance/perf-piano.png",
+   "items": [
+    {
+     "file": "library/performance/perf-chef.png"
+    },
+    {
+     "file": "library/performance/perf-climb.png"
+    },
+    {
+     "file": "library/performance/perf-dancer.png"
+    },
+    {
+     "file": "library/performance/perf-ice.png"
+    },
+    {
+     "file": "library/performance/perf-piano.png"
+    },
+    {
+     "file": "library/performance/perf-run.png"
+    },
+    {
+     "file": "library/performance/perf-speaker.png"
+    },
+    {
+     "file": "library/performance/perf-surgeon.png"
+    }
+   ]
+  },
+  {
+   "id": "studio-frames",
+   "group": "craft",
+   "kind": "gallery",
+   "title": "Pulse Filmmaker \u2014 hero frames (the light-thread)",
+   "description": "Pulse Filmmaker hero frames \u2014 the light-thread b-roll stills.",
+   "count": 24,
+   "thumb": "library/studio-frames/studio-vault-01.png",
+   "items": [
+    {
+     "file": "library/studio-frames/studio-strip-01.png"
+    },
+    {
+     "file": "library/studio-frames/studio-strip-02.png"
+    },
+    {
+     "file": "library/studio-frames/studio-strip-03.png"
+    },
+    {
+     "file": "library/studio-frames/studio-strip-04.png"
+    },
+    {
+     "file": "library/studio-frames/studio-strip-05.png"
+    },
+    {
+     "file": "library/studio-frames/studio-strip-06.png"
+    },
+    {
+     "file": "library/studio-frames/studio-strip-07.png"
+    },
+    {
+     "file": "library/studio-frames/studio-strip-08.png"
+    },
+    {
+     "file": "library/studio-frames/studio-strip-09.png"
+    },
+    {
+     "file": "library/studio-frames/studio-strip-10.png"
+    },
+    {
+     "file": "library/studio-frames/studio-strip-11.png"
+    },
+    {
+     "file": "library/studio-frames/studio-strip-12.png"
+    },
+    {
+     "file": "library/studio-frames/studio-vault-01.png"
+    },
+    {
+     "file": "library/studio-frames/studio-vault-02.png"
+    },
+    {
+     "file": "library/studio-frames/studio-vault-03.png"
+    },
+    {
+     "file": "library/studio-frames/studio-vault-04.png"
+    },
+    {
+     "file": "library/studio-frames/studio-vault-05.png"
+    },
+    {
+     "file": "library/studio-frames/studio-vault-06.png"
+    },
+    {
+     "file": "library/studio-frames/studio-vault-07.png"
+    },
+    {
+     "file": "library/studio-frames/studio-vault-08.png"
+    },
+    {
+     "file": "library/studio-frames/studio-vault-09.png"
+    },
+    {
+     "file": "library/studio-frames/studio-vault-10.png"
+    },
+    {
+     "file": "library/studio-frames/studio-vault-11.png"
+    },
+    {
+     "file": "library/studio-frames/studio-vault-12.png"
+    }
+   ]
+  },
+  {
+   "id": "texture",
+   "group": "craft",
+   "kind": "gallery",
+   "title": "Texture, macro & symbol",
+   "description": "Texture, macro & symbol \u2014 the sensory close-ups the world is built from.",
+   "count": 16,
+   "thumb": "library/texture/tex-fingerprint.png",
+   "items": [
+    {
+     "file": "library/texture/tex-breath-glass.png"
+    },
+    {
+     "file": "library/texture/tex-brushed.png"
+    },
+    {
+     "file": "library/texture/tex-concentric-sand.png"
+    },
+    {
+     "file": "library/texture/tex-concentric-water.png"
+    },
+    {
+     "file": "library/texture/tex-dew-roll.png"
+    },
+    {
+     "file": "library/texture/tex-dust-spiral.png"
+    },
+    {
+     "file": "library/texture/tex-eclipse.png"
+    },
+    {
+     "file": "library/texture/tex-eye-ring.png"
+    },
+    {
+     "file": "library/texture/tex-fingerprint.png"
+    },
+    {
+     "file": "library/texture/tex-goosebumps.png"
+    },
+    {
+     "file": "library/texture/tex-half-light.png"
+    },
+    {
+     "file": "library/texture/tex-leaf-vein.png"
+    },
+    {
+     "file": "library/texture/tex-shadow-long.png"
+    },
+    {
+     "file": "library/texture/tex-thumb.png"
+    },
+    {
+     "file": "library/texture/tex-water-tension.png"
+    },
+    {
+     "file": "library/texture/tex-wrist-pulse.png"
+    }
+   ]
+  },
+  {
+   "id": "studio-films",
+   "group": "motion",
+   "kind": "gallery",
+   "title": "Finished testimonial films",
+   "description": "Finished testimonial films \u2014 the full cut.",
+   "count": 3,
+   "thumb": "library/studio-stories/maya.mp4",
+   "items": [
+    {
+     "file": "library/studio-stories/james.mp4"
+    },
+    {
+     "file": "library/studio-stories/maya.mp4"
+    },
+    {
+     "file": "library/studio-stories/priya.mp4"
+    }
+   ]
+  },
+  {
+   "id": "motion-illustration",
+   "group": "motion",
+   "kind": "gallery",
+   "title": "Motion rule \u00b7 illustration foot (composed, on rails)",
+   "description": "Motion rule \u00b7 the illustration foot \u2014 composed camera, on rails, no handheld.",
+   "count": 5,
+   "thumb": "library/motion-rules/illustration/ill-drift-rl.mp4",
+   "items": [
+    {
+     "file": "library/motion-rules/illustration/ill-breathe.mp4"
+    },
+    {
+     "file": "library/motion-rules/illustration/ill-drift-lr.mp4"
+    },
+    {
+     "file": "library/motion-rules/illustration/ill-drift-rl.mp4"
+    },
+    {
+     "file": "library/motion-rules/illustration/ill-pull-out.mp4"
+    },
+    {
+     "file": "library/motion-rules/illustration/ill-push-in.mp4"
+    }
+   ]
+  },
+  {
+   "id": "motion-photograph",
+   "group": "motion",
+   "kind": "gallery",
+   "title": "Motion rule \u00b7 photograph foot (handheld cell-phone)",
+   "description": "Motion rule \u00b7 the photograph foot \u2014 handheld cell-phone motion, alive and present.",
+   "count": 5,
+   "thumb": "library/motion-rules/photograph/ph-handheld-03.mp4",
+   "items": [
+    {
+     "file": "library/motion-rules/photograph/ph-handheld-01.mp4"
+    },
+    {
+     "file": "library/motion-rules/photograph/ph-handheld-02.mp4"
+    },
+    {
+     "file": "library/motion-rules/photograph/ph-handheld-03.mp4"
+    },
+    {
+     "file": "library/motion-rules/photograph/ph-handheld-04.mp4"
+    },
+    {
+     "file": "library/motion-rules/photograph/ph-handheld-05.mp4"
+    }
+   ]
+  },
+  {
+   "id": "motion-transition",
+   "group": "motion",
+   "kind": "gallery",
+   "title": "Motion rule \u00b7 transition (illustration \u2192 photograph)",
+   "description": "Motion rule \u00b7 the transition \u2014 illustration resolving into photograph, timed to the pulse.",
+   "count": 5,
+   "thumb": "library/motion-rules/transition/tr-seam-push.mp4",
+   "items": [
+    {
+     "file": "library/motion-rules/transition/tr-dissolve.mp4"
+    },
+    {
+     "file": "library/motion-rules/transition/tr-focus.mp4"
+    },
+    {
+     "file": "library/motion-rules/transition/tr-seam-push.mp4"
+    },
+    {
+     "file": "library/motion-rules/transition/tr-travel.mp4"
+    },
+    {
+     "file": "library/motion-rules/transition/tr-wipe.mp4"
+    }
+   ]
+  },
+  {
+   "id": "studio-broll",
+   "group": "motion",
+   "kind": "gallery",
+   "title": "Motion \u2014 ethereal b-roll",
+   "description": "Ethereal b-roll \u2014 the ring-as-presence in gentle motion.",
+   "count": 11,
+   "thumb": "library/studio-broll/web/114-2.mp4",
+   "items": [
+    {
+     "file": "library/studio-broll/web/1-0.mp4"
+    },
+    {
+     "file": "library/studio-broll/web/1-1.mp4"
+    },
+    {
+     "file": "library/studio-broll/web/1-2.mp4"
+    },
+    {
+     "file": "library/studio-broll/web/114-0.mp4"
+    },
+    {
+     "file": "library/studio-broll/web/114-1.mp4"
+    },
+    {
+     "file": "library/studio-broll/web/114-2.mp4"
+    },
+    {
+     "file": "library/studio-broll/web/115-0.mp4"
+    },
+    {
+     "file": "library/studio-broll/web/115-1.mp4"
+    },
+    {
+     "file": "library/studio-broll/web/115-2.mp4"
+    },
+    {
+     "file": "library/studio-broll/web/116-0.mp4"
+    },
+    {
+     "file": "library/studio-broll/web/116-1.mp4"
+    }
+   ]
+  },
+  {
+   "id": "motion-loops",
+   "group": "motion",
+   "kind": "gallery",
+   "title": "Motion \u2014 funnel loops",
+   "description": "Funnel motion loops \u2014 breathing Ken-Burns and same-moment morphs.",
+   "count": 10,
+   "thumb": "motion/maya-car-soft.mp4",
+   "items": [
+    {
+     "file": "motion/amara-ben-hands.mp4"
+    },
+    {
+     "file": "motion/arrival-unboxing.mp4"
+    },
+    {
+     "file": "motion/darius-train.mp4"
+    },
+    {
+     "file": "motion/ingrid-mat.mp4"
+    },
+    {
+     "file": "motion/luxe-ring.mp4"
+    },
+    {
+     "file": "motion/maya-car-soft.mp4"
+    },
+    {
+     "file": "motion/referral-pour.mp4"
+    },
+    {
+     "file": "motion/rosa-notebook.mp4"
+    },
+    {
+     "file": "motion/sunday-pause.mp4"
+    },
+    {
+     "file": "motion/theo-focus.mp4"
+    }
+   ]
+  },
+  {
+   "id": "email-heroes",
+   "group": "message",
+   "kind": "gallery",
+   "title": "Email heroes \u2014 the lifecycle, illustrated",
+   "description": "The lifecycle, illustrated \u2014 one hero per email across the two visual worlds.",
+   "count": 104,
+   "thumb": "emails/images/hero-email-team-report.png",
+   "items": [
+    {
+     "file": "emails/images/hero-21-days.png"
+    },
+    {
+     "file": "emails/images/hero-arrival-day.png"
+    },
+    {
+     "file": "emails/images/hero-autopilot-cost.png"
+    },
+    {
+     "file": "emails/images/hero-before-arrival.png"
+    },
+    {
+     "file": "emails/images/hero-come-back.png"
+    },
+    {
+     "file": "emails/images/hero-day-one.png"
+    },
+    {
+     "file": "emails/images/hero-email-21-day-threshold.png"
+    },
+    {
+     "file": "emails/images/hero-email-30-days-present.png"
+    },
+    {
+     "file": "emails/images/hero-email-autopilot-cost-soft.png"
+    },
+    {
+     "file": "emails/images/hero-email-autopilot-cost.png"
+    },
+    {
+     "file": "emails/images/hero-email-before-it-arrives.png"
+    },
+    {
+     "file": "emails/images/hero-email-charge-pair-breathe.png"
+    },
+    {
+     "file": "emails/images/hero-email-come-back-to-now-soft.png"
+    },
+    {
+     "file": "emails/images/hero-email-come-back-to-now.png"
+    },
+    {
+     "file": "emails/images/hero-email-confirm-size.png"
+    },
+    {
+     "file": "emails/images/hero-email-day-one.png"
+    },
+    {
+     "file": "emails/images/hero-email-exchange-simple.png"
+    },
+    {
+     "file": "emails/images/hero-email-first-hundred.png"
+    },
+    {
+     "file": "emails/images/hero-email-first-impression.png"
+    },
+    {
+     "file": "emails/images/hero-email-gift-of-presence.png"
+    },
+    {
+     "file": "emails/images/hero-email-give-a-month.png"
+    },
+    {
+     "file": "emails/images/hero-email-how-is-it-going.png"
+    },
+    {
+     "file": "emails/images/hero-email-its-here.png"
+    },
+    {
+     "file": "emails/images/hero-email-launch-kit.png"
+    },
+    {
+     "file": "emails/images/hero-email-no-rush-soft.png"
+    },
+    {
+     "file": "emails/images/hero-email-no-rush.png"
+    },
+    {
+     "file": "emails/images/hero-email-on-its-way.png"
+    },
+    {
+     "file": "emails/images/hero-email-one-minute-no-ring.png"
+    },
+    {
+     "file": "emails/images/hero-email-order-confirmed.png"
+    },
+    {
+     "file": "emails/images/hero-email-pause-by-text.png"
+    },
+    {
+     "file": "emails/images/hero-email-pause-is-working.png"
+    },
+    {
+     "file": "emails/images/hero-email-presence-circle.png"
+    },
+    {
+     "file": "emails/images/hero-email-presence-experience.png"
+    },
+    {
+     "file": "emails/images/hero-email-pulse-not-ping.png"
+    },
+    {
+     "file": "emails/images/hero-email-questions-answered.png"
+    },
+    {
+     "file": "emails/images/hero-email-quiz-results-soft.png"
+    },
+    {
+     "file": "emails/images/hero-email-quiz-results.png"
+    },
+    {
+     "file": "emails/images/hero-email-readers-tuesday.png"
+    },
+    {
+     "file": "emails/images/hero-email-right-fit.png"
+    },
+    {
+     "file": "emails/images/hero-email-shape-whats-next.png"
+    },
+    {
+     "file": "emails/images/hero-email-share-kit.png"
+    },
+    {
+     "file": "emails/images/hero-email-showing-the-way.png"
+    },
+    {
+     "file": "emails/images/hero-email-sizing-kit.png"
+    },
+    {
+     "file": "emails/images/hero-email-someone-thought-of-you.png"
+    },
+    {
+     "file": "emails/images/hero-email-someone-you-love.png"
+    },
+    {
+     "file": "emails/images/hero-email-space-assessment.png"
+    },
+    {
+     "file": "emails/images/hero-email-spaces-inquiry.png"
+    },
+    {
+     "file": "emails/images/hero-email-spaces-proposal.png"
+    },
+    {
+     "file": "emails/images/hero-email-spaces-questions.png"
+    },
+    {
+     "file": "emails/images/hero-email-still-thinking.png"
+    },
+    {
+     "file": "emails/images/hero-email-story-kit.png"
+    },
+    {
+     "file": "emails/images/hero-email-sunday-pause.png"
+    },
+    {
+     "file": "emails/images/hero-email-team-report.png"
+    },
+    {
+     "file": "emails/images/hero-email-tell-your-story.png"
+    },
+    {
+     "file": "emails/images/hero-email-the-moment-soft.png"
+    },
+    {
+     "file": "emails/images/hero-email-the-moment.png"
+    },
+    {
+     "file": "emails/images/hero-email-try-this-first.png"
+    },
+    {
+     "file": "emails/images/hero-email-two-weeks-returning.png"
+    },
+    {
+     "file": "emails/images/hero-email-we-noticed.png"
+    },
+    {
+     "file": "emails/images/hero-email-week-one-noticing.png"
+    },
+    {
+     "file": "emails/images/hero-email-well-be-here.png"
+    },
+    {
+     "file": "emails/images/hero-email-what-did-you-notice.png"
+    },
+    {
+     "file": "emails/images/hero-email-what-others-noticed.png"
+    },
+    {
+     "file": "emails/images/hero-email-what-youve-given.png"
+    },
+    {
+     "file": "emails/images/hero-email-when-youre-ready.png"
+    },
+    {
+     "file": "emails/images/hero-email-your-story.png"
+    },
+    {
+     "file": "emails/images/hero-exchange-simple.png"
+    },
+    {
+     "file": "emails/images/hero-first-hundred.png"
+    },
+    {
+     "file": "emails/images/hero-first-noticing.png"
+    },
+    {
+     "file": "emails/images/hero-gift-of-presence.png"
+    },
+    {
+     "file": "emails/images/hero-give-a-month.png"
+    },
+    {
+     "file": "emails/images/hero-landing-first-pulse.png"
+    },
+    {
+     "file": "emails/images/hero-landing-presence-report.png"
+    },
+    {
+     "file": "emails/images/hero-landing-pulse-windows.png"
+    },
+    {
+     "file": "emails/images/hero-launch-kit.png"
+    },
+    {
+     "file": "emails/images/hero-milestone-heart.png"
+    },
+    {
+     "file": "emails/images/hero-no-rush.png"
+    },
+    {
+     "file": "emails/images/hero-noticing-breath.png"
+    },
+    {
+     "file": "emails/images/hero-on-its-way.png"
+    },
+    {
+     "file": "emails/images/hero-one-minute.png"
+    },
+    {
+     "file": "emails/images/hero-order-confirmed.png"
+    },
+    {
+     "file": "emails/images/hero-others-noticed.png"
+    },
+    {
+     "file": "emails/images/hero-pause-working.png"
+    },
+    {
+     "file": "emails/images/hero-presence-circle.png"
+    },
+    {
+     "file": "emails/images/hero-presence-experience.png"
+    },
+    {
+     "file": "emails/images/hero-pulse-not-ping.png"
+    },
+    {
+     "file": "emails/images/hero-questions-answered.png"
+    },
+    {
+     "file": "emails/images/hero-quiz-results.png"
+    },
+    {
+     "file": "emails/images/hero-readers-tuesday.png"
+    },
+    {
+     "file": "emails/images/hero-shape-whats-next.png"
+    },
+    {
+     "file": "emails/images/hero-share-kit.png"
+    },
+    {
+     "file": "emails/images/hero-showing-the-way.png"
+    },
+    {
+     "file": "emails/images/hero-sizing-set.png"
+    },
+    {
+     "file": "emails/images/hero-someone-thought-of-you.png"
+    },
+    {
+     "file": "emails/images/hero-someone-you-love.png"
+    },
+    {
+     "file": "emails/images/hero-spaces-proposal.png"
+    },
+    {
+     "file": "emails/images/hero-spaces-rings.png"
+    },
+    {
+     "file": "emails/images/hero-story-ask.png"
+    },
+    {
+     "file": "emails/images/hero-sunday-pause.png"
+    },
+    {
+     "file": "emails/images/hero-team-report.png"
+    },
+    {
+     "file": "emails/images/hero-the-moment.png"
+    },
+    {
+     "file": "emails/images/hero-two-weeks.png"
+    },
+    {
+     "file": "emails/images/hero-we-noticed.png"
+    },
+    {
+     "file": "emails/images/hero-when-ready.png"
+    }
    ]
   }
+ ],
+ "counts": {
+  "groups": 6,
+  "collections": 51,
+  "files": 865
  }
 }

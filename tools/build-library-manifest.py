@@ -40,6 +40,8 @@ COLLECTIONS = [
   "stills":["library/studio-frames/*.png"], "exclude":r"gallery", "curate":12},
  {"key":"performance","label":"Performance — the pause inside effort","kind":"stills",
   "stills":["library/performance/*.png"], "curate":8},
+ {"key":"invitations","label":"“When would now be a good time?” — 20 invitations","kind":"stills",
+  "stills":["library/invitations/*.png"], "exclude":r"gallery", "curate":20},
  {"key":"stories","label":"User stories","kind":"stills",
   "stills":["story-images/*.png","library/stories/*.png"],
   "exclude":r"(00-.*-reference|gallery)", "curate":12},

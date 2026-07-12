@@ -1,0 +1,34 @@
+{
+  "hero": "When would now be a good time?",
+  "kicker": "The invitation",
+  "manifesto": [
+    "The ring asks one question, a few times an hour. Not how you're doing. Not how you did. Only this: when would now be a good time?",
+    "It's a small yes. Small enough to say with your hands still in the dishwater. You don't have to stop, or sit, or close your eyes. You only have to arrive, for one breath, in the room your body is already in.",
+    "Saying yes is opening a door you keep walking past. What's on the other side isn't grand. It's warm soapy water. It's the fine spray of oil off an orange. It's the ten seconds between floors when no one needs anything from you. Your life is mostly made of these, and mostly you miss them.",
+    "So the answer is almost always the same. Now. This one. The one happening while you read this — your feet on the floor, the light in the room, the small sounds you'd forgotten were there.",
+    "Twenty small yeses follow. None of them ask you to change your day. They ask you to be in it."
+  ],
+  "closing": "None of these is a practice. Each is a door. The ring taps; you look up; you're here. That's the whole of it.",
+  "invitations": [
+    {"nn":"01","slug":"dishes","title":"The warm soapy water","copy":"The water's warm and the suds catch the light. Your hands already know the work — let the rest of you come stand in it."},
+    {"nn":"02","slug":"orange","title":"Peeling an orange","copy":"The peel gives, and a fine mist of oil lifts off it. You may notice the whole room smells like it now."},
+    {"nn":"03","slug":"seatbelt","title":"One breath in the parked car","copy":"Before the day starts moving, the click. One breath here, in the parked car, is still your morning."},
+    {"nn":"04","slug":"laundry","title":"Warm laundry, just out of the dryer","copy":"Straight from the dryer, the shirt is warm against your arms. Hold it a second longer than you need to."},
+    {"nn":"05","slug":"kettle","title":"Waiting for the kettle","copy":"The water finds its rising note. You're not waiting for it — you're here with it, until it clicks off."},
+    {"nn":"06","slug":"face-wash","title":"Cold water at the end of the day","copy":"Cold water, your own cupped hands. The day rinses off, and you meet yourself again."},
+    {"nn":"07","slug":"dog","title":"The dog leans its weight into you","copy":"The dog leans its whole weight into your leg, certain you'll hold it. For this second, you do, completely."},
+    {"nn":"08","slug":"child-asleep","title":"A small hand goes slack in yours","copy":"The small hand in yours goes slack. You feel the exact moment sleep takes them, and you're there for it."},
+    {"nn":"09","slug":"elevator","title":"The ten seconds between floors","copy":"Ten seconds, alone, between floors. No one needs anything. You may notice you can breathe all the way down."},
+    {"nn":"10","slug":"mirror","title":"Wiping the steam from the mirror","copy":"You wipe a clear streak through the fog, and there you are. Say good morning like you mean it."},
+    {"nn":"11","slug":"mug","title":"A warm mug on cold fingers","copy":"Cold fingers, a warm mug. The heat travels up your hands before the coffee ever reaches you."},
+    {"nn":"12","slug":"toast","title":"Buttering the toast","copy":"The knife drags, the butter melts in. You may notice the smell before you notice you're smiling."},
+    {"nn":"13","slug":"green-light","title":"The second before the light turns","copy":"The light's still red. Nowhere to be for three more seconds. Let your shoulders come down from your ears."},
+    {"nn":"14","slug":"bare-feet","title":"Bare feet on the floor at the door","copy":"Shoes off, the floor meets your feet. This is the sound of being home; stand in it for one breath."},
+    {"nn":"15","slug":"laughter","title":"Laughter from the next room","copy":"Someone laughs in the next room and you don't know why. You're smiling anyway. That counts."},
+    {"nn":"16","slug":"stretch","title":"The last stretch before bed","copy":"Arms up, the spine lengthens, the yawn finishes itself. The day is allowed to be over now."},
+    {"nn":"17","slug":"rain","title":"The first taps of rain on the window","copy":"The first taps land on the glass. You don't have to do anything about the rain — just be in the room it's falling on."},
+    {"nn":"18","slug":"change","title":"Handing someone their change","copy":"The coins pass, your fingers brush theirs. 'Have a good one' — and for once, you actually mean it."},
+    {"nn":"19","slug":"car-warm","title":"The heater's first warm push","copy":"The heater's first warm push finds your cold hands. Small mercy. Stay for it before you pull away."},
+    {"nn":"20","slug":"plant","title":"Watering the plant by the window","copy":"The soil darkens, a bead sits on a leaf. There's a new one since yesterday — you'd have missed it, going fast."}
+  ]
+}

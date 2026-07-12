@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>When would now be a good time? — Pulse</title>
+<meta name="description" content="Twenty small, tactile, easily-missed moments — and the invitation to say yes to the one you're in. A photo-visual companion to the Pulse hero line, 'When would now be a good time?'" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#EBE7D4; --warm:#F9F6E5; --ink:#1A1C22; --brown:#423D32;
+    --lime:#E3F47D; --honey:#A67C00; --muted:#6E6857; --faint:#8a8578;
+    --line:rgba(26,28,34,.13);
+    --font:"DM Sans",sans-serif; --mono:"DM Mono",monospace; --serif:"Fraunces",serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{ font-family:var(--font); background:var(--cream); color:var(--ink); line-height:1.5;
+    letter-spacing:-0.01em; -webkit-font-smoothing:antialiased; }
+  .shell{ max-width:1160px; margin:0 auto; padding:0 clamp(18px,4vw,44px); }
+
+  .top{ position:sticky; top:0; z-index:40; background:rgba(235,231,212,.86); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line); }
+  .top .shell{ display:flex; align-items:center; gap:14px; height:52px; }
+  .top .brand{ font-weight:600; font-size:15px; letter-spacing:-0.03em; }
+  .top .brand i{ color:var(--honey); font-style:normal; }
+  .top .spacer{ flex:1; }
+  .top a{ font-family:var(--mono); font-size:11.5px; color:var(--muted); text-decoration:none; }
+  .top a:hover{ color:var(--ink); }
+
+  header.hero{ padding:clamp(56px,11vw,120px) 0 clamp(30px,6vw,60px); }
+  .hero .kick{ font-family:var(--mono); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--honey); }
+  .hero h1{ font-family:var(--serif); font-weight:400; font-size:clamp(38px,8vw,86px); line-height:1.0;
+    letter-spacing:-0.02em; margin-top:18px; max-width:16ch; text-wrap:balance; }
+  .hero h1 em{ font-style:italic; color:var(--honey); }
+
+  .manifesto{ max-width:60ch; margin:clamp(20px,5vw,44px) 0 clamp(40px,8vw,80px); }
+  .manifesto p{ font-size:clamp(18px,2.3vw,23px); line-height:1.62; color:var(--brown); margin-top:20px; text-wrap:pretty; }
+  .manifesto p:first-child{ margin-top:0; }
+  .manifesto p:first-child::first-letter{ font-family:var(--serif); font-size:3.4em; line-height:.8; float:left;
+    padding:6px 12px 0 0; color:var(--ink); }
+  .manifesto p b{ color:var(--ink); font-weight:600; }
+
+  .count{ font-family:var(--mono); font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
+    border-top:1px solid var(--line); padding-top:18px; margin-bottom:8px; }
+
+  .inv{ padding:clamp(30px,6vw,64px) 0; border-top:1px solid var(--line); position:relative; }
+  .inv:first-of-type{ border-top:none; }
+  .inv-head{ display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; }
+  .inv .num{ font-family:var(--mono); font-size:13px; color:var(--honey); font-weight:500; }
+  .inv h3{ font-family:var(--serif); font-weight:400; font-size:clamp(24px,3.6vw,38px); letter-spacing:-0.015em; }
+  .inv-copy{ font-size:clamp(17px,2vw,20px); line-height:1.55; color:var(--brown); max-width:56ch; margin:14px 0 22px; text-wrap:pretty; }
+  .inv-copy b{ color:var(--ink); font-weight:500; }
+
+  /* branded film-strip side-scroll */
+  .film{ position:relative; display:flex; gap:2px; overflow-x:auto; scroll-snap-type:x proximity; scroll-behavior:smooth;
+    background:var(--warm); border-radius:5px; padding:16px 0; box-shadow:0 1px 2px rgba(66,61,50,.06),0 10px 28px rgba(66,61,50,.06); }
+  .film::before,.film::after{ content:""; position:absolute; left:0; right:0; height:15px; z-index:2; pointer-events:none;
+    background-color:rgba(26,28,34,.92);
+    background-image:radial-gradient(circle 3.4px at 14px 50%, var(--cream) 3.4px, transparent 4px);
+    background-size:28px 100%; background-repeat:repeat-x; }
+  .film::before{ top:0; } .film::after{ bottom:0; }
+  .film figure{ flex:0 0 auto; width:min(46%,440px); scroll-snap-align:center; margin:0; position:relative; padding:0 1px;
+    transition:opacity .4s ease, filter .4s ease; opacity:.82; filter:saturate(.94); }
+  .film figure.on{ opacity:1; filter:none; }
+  .film figure:first-child{ margin-left:16px; } .film figure:last-child{ margin-right:24px; }
+  .film img{ width:100%; height:clamp(240px,34vw,400px); object-fit:cover; display:block; background:#ddd7c3; }
+  .film .edge{ position:absolute; left:8px; bottom:19px; font-family:var(--mono); font-size:9px; letter-spacing:.14em; color:var(--honey); opacity:.85; z-index:3; }
+  .film .lab{ display:block; font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--brown); padding:10px 8px 0; }
+  @media(max-width:640px){ .film figure{ width:82%; } }
+
+  .closing{ border-top:1px solid var(--line); padding:clamp(46px,9vw,90px) 0; }
+  .closing p{ font-family:var(--serif); font-style:italic; font-weight:300; font-size:clamp(22px,3.4vw,34px);
+    line-height:1.4; color:var(--ink); max-width:30ch; }
+  .closing .re{ font-family:var(--mono); font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--honey); margin-top:28px; }
+  .closing .re a{ color:var(--honey); text-decoration:none; border-bottom:1px solid rgba(166,124,0,.4); }
+
+  footer{ border-top:1px solid var(--line); padding:22px 0 50px; font-family:var(--mono); font-size:12px; color:var(--faint);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  footer a{ color:var(--brown); }
+  .loading{ color:var(--muted); font-size:15px; padding:30px 0; }
+
+  @media(max-width:820px){
+    .film{ grid-template-columns:1fr 1fr; }
+    .film figure:first-child{ grid-column:1 / -1; }
+    .film img{ height:clamp(200px,52vw,300px); }
+  }
+  @media(max-width:520px){ .film{ grid-template-columns:1fr; } .film figure:first-child{ grid-column:auto; } }
+</style>
+</head>
+<body>
+<div class="top"><div class="shell">
+  <span class="brand">pulse<i>·</i> now</span>
+  <span class="spacer"></span>
+  <a href="pulse-world-building.html">← World-building</a>
+</div></div>
+
+<div class="shell">
+  <header class="hero">
+    <div class="kick" id="kick">The invitation</div>
+    <h1 id="hero">When would <em>now</em> be a good time?</h1>
+  </header>
+
+  <div class="manifesto" id="manifesto"></div>
+
+  <div class="count" id="count">Twenty invitations</div>
+  <div id="list"><div class="loading">Loading the invitations…</div></div>
+
+  <div class="closing" id="closing"></div>
+
+  <footer>
+    <span>Pulse · When would now be a good time?</span>
+    <span><a href="pulse-world-building.html">World-building</a> · <a href="image-library.html">Atlas</a></span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  function el(t,c,x){var e=document.createElement(t); if(c)e.className=c; if(x!=null)e.textContent=x; return e;}
+  function clear(n){while(n.firstChild)n.removeChild(n.firstChild);}
+  var FR=[["scene","the moment"],["detail","the detail"],["face","the arrival"]];
+
+  function render(d){
+    if(d.kicker) document.getElementById('kick').textContent=d.kicker;
+    var m=document.getElementById('manifesto'); clear(m);
+    (d.manifesto||[]).forEach(function(par){ m.appendChild(el('p',null,par)); });
+    document.getElementById('count').textContent=(d.invitations||[]).length+' invitations · say yes to the one you’re in';
+    var list=document.getElementById('list'); clear(list);
+    (d.invitations||[]).forEach(function(iv){
+      var sec=el('section','inv');
+      var head=el('div','inv-head');
+      head.appendChild(el('span','num',iv.nn));
+      head.appendChild(el('h3',null,iv.title));
+      sec.appendChild(head);
+      sec.appendChild(el('p','inv-copy',iv.copy));
+      var film=el('div','film');
+      FR.forEach(function(f,fi){
+        var fig=el('figure', fi===0?'on':null);
+        var img=document.createElement('img'); img.loading='lazy';
+        img.src='library/invitations/'+iv.nn+'-'+iv.slug+'-'+f[0]+'.png';
+        img.alt=iv.title+' — '+f[1];
+        fig.appendChild(img);
+        fig.appendChild(el('span','edge', '0'+(fi+1)+' ▸'));
+        fig.appendChild(el('span','lab', '0'+(fi+1)+' · '+f[1]));
+        film.appendChild(fig);
+      });
+      (function(strip){
+        var figs=strip.querySelectorAll('figure'); var raf;
+        function upd(){ var mid=strip.scrollLeft+strip.clientWidth/2, best=0, bd=1e9;
+          for(var j=0;j<figs.length;j++){ var c=figs[j].offsetLeft+figs[j].offsetWidth/2, d=Math.abs(c-mid); if(d<bd){bd=d;best=j;} }
+          for(var k=0;k<figs.length;k++){ figs[k].classList.toggle('on', k===best); } }
+        strip.addEventListener('scroll',function(){ if(raf)cancelAnimationFrame(raf); raf=requestAnimationFrame(upd); });
+        setTimeout(upd,60);
+      })(film);
+      sec.appendChild(film);
+      list.appendChild(sec);
+    });
+    var c=document.getElementById('closing'); clear(c);
+    if(d.closing){ c.appendChild(el('p',null,d.closing)); }
+    var re=el('div','re'); var a=el('a',null,'When would now be a good time?'); a.href='pulse-world-building.html'; re.appendChild(a);
+    c.appendChild(re);
+  }
+
+  fetch('invitations.json').then(function(r){return r.json();}).then(render).catch(function(){
+    var l=document.getElementById('list'); clear(l);
+    l.appendChild(el('div','loading','Could not load invitations.json — serve this over http://'));
+  });
+})();
+</script>
+</body>
+</html>
