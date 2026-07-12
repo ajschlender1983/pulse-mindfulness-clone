@@ -106,6 +106,27 @@ TRAILERS=[
   ]}
 ]
 
+# ---- EBI: the mixed-media visual system (illustration ↔ photograph), tied to the motion-rule feet ----
+# media per shot: photograph (handheld/lived) · illustration (multiplane/remembered) · hybrid (the turn)
+MEDIA={
+ "presence-04":"illustration","presence-05":"hybrid","presence-06":"illustration","presence-10":"hybrid",
+ "one-ring-02":"illustration","one-ring-03":"hybrid","one-ring-05":"illustration","one-ring-06":"illustration","one-ring-09":"illustration","one-ring-10":"hybrid",
+ "first-rule-03":"hybrid","first-rule-09":"illustration","first-rule-10":"hybrid",
+}
+def media_of(cid): return MEDIA.get(cid,"photograph")
+# the pivotal beats regenerated in the brand's mixed-media grammar (the autopilot→presence TURN = the inflection)
+_INK="No text, no lettering, no logos, no watermark. Centered, 9:16 crop-safe."
+MEDIA_GEN={
+ "presence-04":("A hand-painted ILLUSTRATION — gouache and soft screen-print texture, gentle cel-animation warmth, painterly 2.5D, dreamlike: a sunlit residential street curling impossibly upward into a golden sky like a rising wave, houses and trees folding over, surreal but warm. Steel-blue shadows against warm gold. "+_INK),
+ "presence-05":("A circular camera APERTURE / iris in the center of the frame reveals a sharp warm PHOTOGRAPH of a human eye opening, a circle of warm gold light reflected in the iris; the surround is loose hand-painted illustration — the aperture focusing out of the drawing into the real. Steel-blue and gold, cinematic. "+_INK),
+ "presence-10":("A single cinematic frame that resolves LEFT-to-RIGHT from a hand-painted illustration into a warm real PHOTOGRAPH of the same moment: a wide, smooth, polished gold ring come to rest, perfectly still on a dark walnut table, one warm glint along its edge. The painterly dream on the left settles into real light and texture on the right; the gold ring glints at the seam where illustration becomes photograph. Steel-blue easing to warm gold. "+_INK),
+ "one-ring-02":("An epic hand-painted ILLUSTRATION — sweeping painterly gouache, golden god-rays: a wide gold ring falling slowly through the air in a sunlit kitchen, dust motes hanging, mythic and warm. "+_INK),
+ "one-ring-03":("A single frame that resolves LEFT-to-RIGHT from an epic hand-painted illustration into a warm real PHOTOGRAPH of the same moment: a wide gold band landing perfectly onto the outstretched finger of a woman in a warm kitchen, the exact instant of the fit. The mythic painterly left settles into real skin and light on the right; the ring glints at the seam. Golden, epic. "+_INK),
+ "one-ring-10":("A frame resolving from hand-painted illustration into warm real PHOTOGRAPH: a hand slowly raised into sunlight, the wide gold band catching a clean lens flare against a bright sky — painterly at the wrist becoming photographic at the fingers. Epic golden light. "+_INK),
+ "first-rule-03":("A single frame split down the middle: the LEFT half a cold, gritty hand-painted illustration of a night street where every face is underlit by a phone screen; the RIGHT half a warm real PHOTOGRAPH of one man looking up at the sky, sodium-vapor warmth. The cold illustrated feed-world against the warm real present. "+_INK),
+ "first-rule-10":("A single frame resolving LEFT-to-RIGHT from a gritty, cold hand-painted illustration into a warm real PHOTOGRAPH: a face half-lit in warm light, eyes open, the smallest beginning of a smile, completely present. The cold illustrated world on the left settles into a warm real present face on the right. Gritty-warm 35mm. "+_INK),
+}
+
 def main():
     args=sys.argv[1:]
     only=args[args.index("--only")+1] if "--only" in args else None
@@ -118,14 +139,16 @@ def main():
         shots=[]
         for s in t["shots"]:
             cid=f"{t['id']}-{s['n']:02d}"
+            med=media_of(cid)
             if "reuse" in s:
-                shots.append({**{k:s[k] for k in ("n","vo","on","sfx")},"file":s["reuse"],"reused":True})
+                shots.append({**{k:s[k] for k in ("n","vo","on","sfx")},"file":s["reuse"],"reused":True,"media":med})
                 continue
             out=OUT/f"{cid}.png"
-            shots.append({**{k:s[k] for k in ("n","vo","on","sfx")},"file":f"library/trailers/{cid}.png"})
+            shots.append({**{k:s[k] for k in ("n","vo","on","sfx")},"file":f"library/trailers/{cid}.png","media":med})
             if only and only!=cid: continue
             if out.exists() and not force: skip+=1; continue
-            img=generate(model,key,f"{s['gen']} {t['grade']}")
+            prompt=MEDIA_GEN[cid] if cid in MEDIA_GEN else f"{s['gen']} {t['grade']}"
+            img=generate(model,key,prompt)
             if img: out.write_bytes(img); ok+=1; print(f"  ok {cid}",flush=True)
             else: failed.append(cid); print(f"  FAIL {cid}",flush=True)
             time.sleep(1)

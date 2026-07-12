@@ -13,70 +13,80 @@
      "vo": "",
      "on": "",
      "sfx": "BRAAM. Then the whir of the spin.",
-     "file": "library/trailers/presence-01.png"
+     "file": "library/trailers/presence-01.png",
+     "media": "photograph"
     },
     {
      "n": 2,
      "vo": "You've learned to move through your life\u2026",
      "on": "",
      "sfx": "City roar, muffled.",
-     "file": "library/trailers/presence-02.png"
+     "file": "library/trailers/presence-02.png",
+     "media": "photograph"
     },
     {
      "n": 3,
      "vo": "\u2026so fast it stopped feeling real.",
      "on": "",
      "sfx": "All sound cuts.",
-     "file": "library/trailers/presence-03.png"
+     "file": "library/trailers/presence-03.png",
+     "media": "photograph"
     },
     {
      "n": 4,
      "vo": "",
      "on": "WHAT IF TIME",
      "sfx": "BRAAM.",
-     "file": "library/trailers/presence-04.png"
+     "file": "library/trailers/presence-04.png",
+     "media": "illustration"
     },
     {
      "n": 5,
      "vo": "",
      "on": "COULD OPEN",
      "sfx": "A held breath.",
-     "file": "library/trailers/presence-05.png"
+     "file": "library/trailers/presence-05.png",
+     "media": "hybrid"
     },
     {
      "n": 6,
      "vo": "The fantastic was never somewhere else.",
      "on": "",
      "sfx": "Strings rising.",
-     "file": "library/trailers/presence-06.png"
+     "file": "library/trailers/presence-06.png",
+     "media": "illustration"
     },
     {
      "n": 7,
      "vo": "It's the moment you're standing in.",
      "on": "",
      "sfx": "One piano note.",
-     "file": "library/trailers/presence-07.png"
+     "file": "library/trailers/presence-07.png",
+     "media": "photograph"
     },
     {
      "n": 8,
      "vo": "",
      "on": "",
      "sfx": "A heartbeat, slowing.",
-     "file": "library/trailers/presence-08.png"
+     "file": "library/trailers/presence-08.png",
+     "media": "photograph"
     },
     {
      "n": 9,
      "vo": "",
      "on": "PRESENCE",
      "sfx": "Silence.",
-     "file": "library/trailers/presence-09.png"
+     "file": "library/trailers/presence-09.png",
+     "media": "photograph"
     },
     {
      "n": 10,
      "vo": "When would now be a good time?",
      "on": "This is not a dream.",
      "sfx": "One soft pulse.",
-     "file": "library/trailers/presence-10.png"
+     "file": "library/trailers/presence-10.png",
+     "media": "hybrid"
     }
    ]
   },
@@ -93,21 +103,24 @@
      "vo": "It begins with a gift.",
      "on": "",
      "sfx": "A whisper of wind.",
-     "file": "library/trailers/one-ring-01.png"
+     "file": "library/trailers/one-ring-01.png",
+     "media": "photograph"
     },
     {
      "n": 2,
      "vo": "",
      "on": "",
      "sfx": "Deep slow whoosh.",
-     "file": "library/trailers/one-ring-02.png"
+     "file": "library/trailers/one-ring-02.png",
+     "media": "illustration"
     },
     {
      "n": 3,
      "vo": "One ring.",
      "on": "",
      "sfx": "Orchestra hits, warm.",
-     "file": "library/trailers/one-ring-03.png"
+     "file": "library/trailers/one-ring-03.png",
+     "media": "hybrid"
     },
     {
      "n": 4,
@@ -115,49 +128,56 @@
      "on": "",
      "sfx": "Swelling strings.",
      "file": "library/peak/peak-summit-sunrise.png",
-     "reused": true
+     "reused": true,
+     "media": "photograph"
     },
     {
      "n": 5,
      "vo": "\u2026to return you to it.",
      "on": "",
      "sfx": "Choir under strings.",
-     "file": "library/trailers/one-ring-05.png"
+     "file": "library/trailers/one-ring-05.png",
+     "media": "illustration"
     },
     {
      "n": 6,
      "vo": "It sees you. And asks for nothing back.",
      "on": "",
      "sfx": "The swell holds.",
-     "file": "library/trailers/one-ring-06.png"
+     "file": "library/trailers/one-ring-06.png",
+     "media": "illustration"
     },
     {
      "n": 7,
      "vo": "",
      "on": "ONE RING",
      "sfx": "Fiddle, joyous.",
-     "file": "library/trailers/one-ring-07.png"
+     "file": "library/trailers/one-ring-07.png",
+     "media": "photograph"
     },
     {
      "n": 8,
      "vo": "",
      "on": "TO UNITE THEM ALL",
      "sfx": "Orchestra pulls back.",
-     "file": "library/trailers/one-ring-08.png"
+     "file": "library/trailers/one-ring-08.png",
+     "media": "photograph"
     },
     {
      "n": 9,
      "vo": "One ring to unite them all \u2014",
      "on": "",
      "sfx": "One deep drum.",
-     "file": "library/trailers/one-ring-09.png"
+     "file": "library/trailers/one-ring-09.png",
+     "media": "illustration"
     },
     {
      "n": 10,
      "vo": "\u2014 with the present.",
      "on": "Be Here WOW",
      "sfx": "Warm sustained chord.",
-     "file": "library/trailers/one-ring-10.png"
+     "file": "library/trailers/one-ring-10.png",
+     "media": "hybrid"
     }
    ]
   },
@@ -174,70 +194,80 @@
      "vo": "The first rule of presence: you don't post about it.",
      "on": "RULE 01",
      "sfx": "Dirty bass note. HOOK 0:00\u20130:03.",
-     "file": "library/trailers/first-rule-01.png"
+     "file": "library/trailers/first-rule-01.png",
+     "media": "photograph"
     },
     {
      "n": 2,
      "vo": "The second rule: you don't post about it.",
      "on": "RULE 02",
      "sfx": "The slap of the phone landing.",
-     "file": "library/trailers/first-rule-02.png"
+     "file": "library/trailers/first-rule-02.png",
+     "media": "photograph"
     },
     {
      "n": 3,
      "vo": "Everyone you know is somewhere else.",
      "on": "",
      "sfx": "Room tone.",
-     "file": "library/trailers/first-rule-03.png"
+     "file": "library/trailers/first-rule-03.png",
+     "media": "hybrid"
     },
     {
      "n": 4,
      "vo": "You don't need witnesses.",
      "on": "",
      "sfx": "Silence.",
-     "file": "library/trailers/first-rule-04.png"
+     "file": "library/trailers/first-rule-04.png",
+     "media": "photograph"
     },
     {
      "n": 5,
      "vo": "Eat the meal. Don't shoot it.",
      "on": "",
      "sfx": "A fork on a plate.",
-     "file": "library/trailers/first-rule-05.png"
+     "file": "library/trailers/first-rule-05.png",
+     "media": "photograph"
     },
     {
      "n": 6,
      "vo": "We meet where the feed can't find us.",
      "on": "THE PRESENCE CIRCLE",
      "sfx": "Low hum.",
-     "file": "library/trailers/first-rule-06.png"
+     "file": "library/trailers/first-rule-06.png",
+     "media": "photograph"
     },
     {
      "n": 7,
      "vo": "Don't tell your friends.",
      "on": "",
      "sfx": "Street ambience returns.",
-     "file": "library/trailers/first-rule-07.png"
+     "file": "library/trailers/first-rule-07.png",
+     "media": "photograph"
     },
     {
      "n": 8,
      "vo": "Don't review it.",
      "on": "",
      "sfx": "ONE deep pulse.",
-     "file": "library/trailers/first-rule-08.png"
+     "file": "library/trailers/first-rule-08.png",
+     "media": "photograph"
     },
     {
      "n": 9,
      "vo": "",
      "on": "JUST BE HERE",
      "sfx": "The bulb's creak.",
-     "file": "library/trailers/first-rule-09.png"
+     "file": "library/trailers/first-rule-09.png",
+     "media": "illustration"
     },
     {
      "n": 10,
      "vo": "",
      "on": "Receive the gift of your life.",
      "sfx": "Silence. End card: This is not an ad. Pulse.",
-     "file": "library/trailers/first-rule-10.png"
+     "file": "library/trailers/first-rule-10.png",
+     "media": "hybrid"
     }
    ]
   }
