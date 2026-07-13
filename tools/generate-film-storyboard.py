@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Pulse — Hero film storyboard generator (Nano Banana Pro / Gemini)
-Generates the key frames of the "Somewhere Else, Together" brand film.
+Generates the key frames of the "Right Here & Now Together" brand film.
 Reads the key from GEMINI_API_KEY or ~/.gemini_api_key. Prints no secrets.
 Outputs to ./journey-images/ as film-NN-*.png plus film.html.
 """
@@ -122,7 +122,7 @@ def build_gallery():
       "h1{font-weight:400;letter-spacing:-.03em}.g{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:24px}"
       "figure{margin:0;border-radius:14px;overflow:hidden;background:#16181d}img{width:100%;display:block}"
       "figcaption{font:11px ui-monospace,monospace;color:#8a8a8e;padding:10px 14px;letter-spacing:.08em;text-transform:uppercase}</style>"
-      "<h1>Pulse — Hero film storyboard</h1><p style='color:#9a978c'>Somewhere Else, Together</p><div class=g>"+rows+"</div>")
+      "<h1>Pulse — Hero film storyboard</h1><p style='color:#9a978c'>Right Here &amp; Now Together</p><div class=g>"+rows+"</div>")
 
 def main():
     key = get_key(); only = sys.argv[sys.argv.index("--only")+1] if "--only" in sys.argv else None
