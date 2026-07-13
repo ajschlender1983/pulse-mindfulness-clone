@@ -64,6 +64,18 @@ STYLE = ("Cinematic anamorphic film still, wide 2.39:1 feel, shallow depth of fi
 RIPPLE = ("A soft concentric ring of warm golden light ripples outward from the wide polished gold ring on the "
           "finger, the visual moment of coming back to the present. ")
 
+# the world's own illustration grammar (matches tools/generate-hybrid.py ILLUS + the multiplane motion rule):
+# gouache/cel-animation painterly, Disney MULTIPLANE depth layers. Used for the churn (cold) and the sync (warm).
+ILLUS_COLD = ("A wide hand-painted illustration in gouache and soft screen-print texture with confident inked "
+ "linework, gentle cel-animation warmth, muted painterly 2.5D, composed in classic Disney MULTIPLANE depth "
+ "layers — foreground, midground and background gliding at different depths so the flat artwork reveals real "
+ "dimensional space. Steel-blue, cool, desaturated palette, hazy dusk city light, painterly and dreamlike, "
+ "deliberately melancholy. No text, no logos, no watermark, no lettering.")
+ILLUS_WARM = ("A poetic wide hand-painted illustration in gouache and soft screen-print texture, confident "
+ "inked linework, gentle cel-animation warmth, composed in classic Disney MULTIPLANE depth layers — "
+ "foreground, midground and background at different depths, real dimensional space. Warm honey and gold "
+ "palette, painterly and dreamlike. No text, no logos, no watermark, no lettering.")
+
 # (id, aspect, ref_from, prompt)
 FRAMES = [
  ("01-open", "16:9", None,
@@ -80,9 +92,17 @@ FRAMES = [
  ("06-sync-festival", "16:9", None,
   "A wide cinematic frame of a conscious festival field in the mountains at golden hour, hundreds of people, strangers turning to embrace the person beside them at the same moment, warm gold light and floating dust, a collective wave of people landing in their bodies together. " + STYLE),
  ("07-field-of-light", "16:9", None,
-  "A poetic wide aerial at dusk over a city and landscape where many small warm-lit windows and gatherings are connected by delicate threads of warm golden light spreading across the map, countless strangers sharing one gentle moment at the same instant, one single field of light. " + STYLE),
+  "An aerial view at dusk over a city and landscape where countless small warm-lit windows and gatherings are connected by delicate threads of warm golden light spreading across the whole map, countless strangers sharing one gentle moment at the same instant, one single field of light. Deep dimensional layers of rooftops, streets and hills. " + ILLUS_WARM),
  ("08-tag-ring", "16:9", None,
   "A single wide polished gold ring resting on a pure near-black background. " + RIPPLE + "Minimal, elegant, the final tag frame of a film, deep negative space. " + STYLE),
+ # Act I — the churn, expanded into a multiplane illustration montage (EBI: "show the churn more",
+ # weave in the world's illustration/hybrid grammar). Cold and universal, many lives at once, one painted world.
+ ("18-churn-montage", "16:9", None,
+  "A single continuous painted world showing many different people in the same instant, all quietly somewhere else: in a foreground window a father scrolls his phone at the dinner table while his child talks unseen beside him; through a midground window rows of train commuters sit head-down, lit by phone-glow; on a park bench in the mid-ground a woman doom-scrolls alone; in a background crosswalk a whole crowd crosses with eyes down; in another window a couple lie in bed back to back, both lit by phone-light. This is autopilot, painted as one shared world. " + ILLUS_COLD),
+ ("19-churn-waiting-room", "16:9", None,
+  "A waiting room at dusk: a row of people side by side, every one of them looking down at a phone, not one face lifted, empty chairs between them though the room is full. Cold and quiet. " + ILLUS_COLD),
+ ("20-churn-recital", "16:9", None,
+  "A child's dance recital on a small stage; in the audience, parents hold up phones filming instead of watching, screens glowing, the child performing to a wall of raised devices. Cold and quiet. " + ILLUS_COLD),
 ]
 
 def build_gallery():
