@@ -102,7 +102,7 @@ FRAMES = [
  ("19-churn-waiting-room", "16:9", None,
   "A waiting room at dusk: a row of people side by side, every one of them looking down at a phone, not one face lifted, empty chairs between them though the room is full. Cold and quiet. " + ILLUS_COLD),
  ("20-churn-recital", "16:9", None,
-  "A child's dance recital on a small stage; in the audience, parents hold up phones filming instead of watching, screens glowing, the child performing to a wall of raised devices. Cold and quiet. " + ILLUS_COLD),
+  "A child's dance recital on a small stage, seen from the stage looking out at the audience. Parents hold up phones and tablets filming instead of watching — camera-accurate: we see the dark, matte BACKS of every device, held facing the parents' own faces, not the camera. The only light from the screens is a faint blue glow spilling up onto each parent's face and chin from below/in front of them, illuminating their expressions while the device bodies themselves stay dark silhouettes. The child performs to a wall of raised device-backs. Cold and quiet. " + ILLUS_COLD),
  # the mind movie — the churn was never only phones. A person can be fully present in body and
  # still gone, replaying or rehearsing a scene only they can see. Made literal: a small, faint,
  # translucent film-frame hovers just beside their head, its own private screening, dimmer and
