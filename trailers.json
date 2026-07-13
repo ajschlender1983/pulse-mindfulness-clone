@@ -18,74 +18,154 @@
     },
     {
      "n": 2,
-     "vo": "You've learned to move through your life\u2026",
+     "vo": "You're replaying a conversation that already ended.",
      "on": "",
-     "sfx": "City roar, muffled.",
+     "sfx": "A murmur, looped.",
      "file": "library/trailers/presence-02.png",
      "media": "photograph"
     },
     {
      "n": 3,
-     "vo": "\u2026so fast it stopped feeling real.",
+     "vo": "You've learned to move through your life\u2026",
      "on": "",
-     "sfx": "All sound cuts.",
+     "sfx": "City roar, muffled.",
      "file": "library/trailers/presence-03.png",
      "media": "photograph"
     },
     {
      "n": 4,
-     "vo": "",
-     "on": "WHAT IF TIME",
-     "sfx": "BRAAM.",
+     "vo": "\u2026so fast it stopped feeling real.",
+     "on": "",
+     "sfx": "All sound cuts.",
      "file": "library/trailers/presence-04.png",
-     "media": "illustration"
+     "media": "photograph"
     },
     {
      "n": 5,
-     "vo": "",
-     "on": "COULD OPEN",
-     "sfx": "A held breath.",
+     "vo": "Even mid-argument, presence finds you.",
+     "on": "",
+     "sfx": "A tense breath, then release.",
      "file": "library/trailers/presence-05.png",
-     "media": "hybrid"
+     "media": "photograph"
     },
     {
      "n": 6,
-     "vo": "The fantastic was never somewhere else.",
-     "on": "",
-     "sfx": "Strings rising.",
+     "vo": "",
+     "on": "WHAT IF TIME",
+     "sfx": "BRAAM.",
      "file": "library/trailers/presence-06.png",
      "media": "illustration"
     },
     {
      "n": 7,
-     "vo": "It's the moment you're standing in.",
-     "on": "",
-     "sfx": "One piano note.",
+     "vo": "",
+     "on": "PRESENCE \u00b7 PEACE \u00b7 POWER \u00b7 PLEASURE \u00b7 PURPOSE",
+     "sfx": "Five soft chimes, one per door.",
      "file": "library/trailers/presence-07.png",
      "media": "photograph"
     },
     {
      "n": 8,
      "vo": "",
-     "on": "",
-     "sfx": "A heartbeat, slowing.",
+     "on": "COULD OPEN",
+     "sfx": "A held breath.",
      "file": "library/trailers/presence-08.png",
-     "media": "photograph"
+     "media": "hybrid"
     },
     {
      "n": 9,
-     "vo": "",
-     "on": "PRESENCE",
-     "sfx": "Silence.",
+     "vo": "There are only three reasons to look down. Every other reason, you look up.",
+     "on": "",
+     "sfx": "A soft pulse, then quiet.",
      "file": "library/trailers/presence-09.png",
      "media": "photograph"
     },
     {
      "n": 10,
+     "vo": "The fantastic was never somewhere else.",
+     "on": "",
+     "sfx": "Strings rising.",
+     "file": "library/trailers/presence-10.png",
+     "media": "illustration"
+    },
+    {
+     "n": 11,
+     "vo": "Breath is the door that's already open.",
+     "on": "",
+     "sfx": "A slow inhale.",
+     "file": "library/trailers/presence-11.png",
+     "media": "photograph"
+    },
+    {
+     "n": 12,
+     "vo": "It's the moment you're standing in.",
+     "on": "",
+     "sfx": "One piano note.",
+     "file": "library/trailers/presence-12.png",
+     "media": "photograph"
+    },
+    {
+     "n": 13,
+     "vo": "Pulse gives you rhythm. Rhythm gives you pause.",
+     "on": "",
+     "sfx": "A steady, warm pulse, like a heartbeat.",
+     "file": "library/trailers/presence-13.png",
+     "media": "photograph"
+    },
+    {
+     "n": 14,
+     "vo": "Stop watching the movie of your mind.",
+     "on": "",
+     "sfx": "Time seems to hush.",
+     "file": "library/trailers/presence-14.png",
+     "media": "photograph"
+    },
+    {
+     "n": 15,
+     "vo": "",
+     "on": "",
+     "sfx": "A heartbeat, slowing.",
+     "file": "library/trailers/presence-15.png",
+     "media": "photograph"
+    },
+    {
+     "n": 16,
+     "vo": "Start making the movie of your life \u2014 the same footage, at the speed of being here.",
+     "on": "",
+     "sfx": "Sound returns, warm and full.",
+     "file": "library/trailers/presence-16.png",
+     "media": "photograph"
+    },
+    {
+     "n": 17,
+     "vo": "You may notice you're already looking for someone else's eyes.",
+     "on": "",
+     "sfx": "A shared breath.",
+     "file": "library/trailers/presence-17.png",
+     "media": "photograph"
+    },
+    {
+     "n": 18,
+     "vo": "",
+     "on": "PRESENCE",
+     "sfx": "Silence.",
+     "file": "library/trailers/presence-18.png",
+     "media": "photograph"
+    },
+    {
+     "n": 19,
+     "vo": "Not to escape your life. To return, and serve it.",
+     "on": "",
+     "sfx": "The last note fades to warm silence.",
+     "file": "library/trailers/presence-19.png",
+     "media": "photograph"
+    },
+    {
+     "n": 20,
      "vo": "When would now be a good time?",
      "on": "This is not a dream.",
      "sfx": "One soft pulse.",
-     "file": "library/trailers/presence-10.png",
+     "file": "library/trailers/presence-20.png",
      "media": "hybrid"
     }
    ]
@@ -108,22 +188,46 @@
     },
     {
      "n": 2,
-     "vo": "",
+     "vo": "Not for power. For connection.",
      "on": "",
-     "sfx": "Deep slow whoosh.",
+     "sfx": "A low horn, distant.",
      "file": "library/trailers/one-ring-02.png",
-     "media": "illustration"
+     "media": "photograph"
     },
     {
      "n": 3,
-     "vo": "One ring.",
+     "vo": "",
      "on": "",
-     "sfx": "Orchestra hits, warm.",
+     "sfx": "Deep slow whoosh.",
      "file": "library/trailers/one-ring-03.png",
-     "media": "hybrid"
+     "media": "illustration"
     },
     {
      "n": 4,
+     "vo": "Focus was never the world going quiet.",
+     "on": "",
+     "sfx": "A single sustained string note.",
+     "file": "library/trailers/one-ring-04.png",
+     "media": "photograph"
+    },
+    {
+     "n": 5,
+     "vo": "One ring.",
+     "on": "",
+     "sfx": "Orchestra hits, warm.",
+     "file": "library/trailers/one-ring-05.png",
+     "media": "hybrid"
+    },
+    {
+     "n": 6,
+     "vo": "There are only three reasons to look down on this road. Every other reason, you look up.",
+     "on": "",
+     "sfx": "Wind, then a horn answering.",
+     "file": "library/trailers/one-ring-06.png",
+     "media": "photograph"
+    },
+    {
+     "n": 7,
      "vo": "Not to rule your life\u2026",
      "on": "",
      "sfx": "Swelling strings.",
@@ -132,51 +236,107 @@
      "media": "photograph"
     },
     {
-     "n": 5,
-     "vo": "\u2026to return you to it.",
-     "on": "",
-     "sfx": "Choir under strings.",
-     "file": "library/trailers/one-ring-05.png",
-     "media": "illustration"
-    },
-    {
-     "n": 6,
-     "vo": "It sees you. And asks for nothing back.",
-     "on": "",
-     "sfx": "The swell holds.",
-     "file": "library/trailers/one-ring-06.png",
-     "media": "illustration"
-    },
-    {
-     "n": 7,
-     "vo": "",
-     "on": "ONE RING",
-     "sfx": "Fiddle, joyous.",
-     "file": "library/trailers/one-ring-07.png",
-     "media": "photograph"
-    },
-    {
      "n": 8,
-     "vo": "",
-     "on": "TO UNITE THEM ALL",
-     "sfx": "Orchestra pulls back.",
+     "vo": "Five gifts ride with them.",
+     "on": "PRESENCE \u00b7 PEACE \u00b7 POWER \u00b7 PLEASURE \u00b7 PURPOSE",
+     "sfx": "A choir rises softly.",
      "file": "library/trailers/one-ring-08.png",
      "media": "photograph"
     },
     {
      "n": 9,
-     "vo": "One ring to unite them all \u2014",
+     "vo": "\u2026to return you to it.",
      "on": "",
-     "sfx": "One deep drum.",
+     "sfx": "Choir under strings.",
      "file": "library/trailers/one-ring-09.png",
      "media": "illustration"
     },
     {
      "n": 10,
+     "vo": "They stop only to breathe.",
+     "on": "",
+     "sfx": "Wind easing to quiet.",
+     "file": "library/trailers/one-ring-10.png",
+     "media": "photograph"
+    },
+    {
+     "n": 11,
+     "vo": "It sees you. And asks for nothing back.",
+     "on": "",
+     "sfx": "The swell holds.",
+     "file": "library/trailers/one-ring-11.png",
+     "media": "illustration"
+    },
+    {
+     "n": 12,
+     "vo": "Even old friends must learn to soften.",
+     "on": "",
+     "sfx": "Raised voices, then quiet.",
+     "file": "library/trailers/one-ring-12.png",
+     "media": "photograph"
+    },
+    {
+     "n": 13,
+     "vo": "",
+     "on": "ONE RING",
+     "sfx": "Fiddle, joyous.",
+     "file": "library/trailers/one-ring-13.png",
+     "media": "photograph"
+    },
+    {
+     "n": 14,
+     "vo": "Some evenings, they make something instead of consuming it.",
+     "on": "",
+     "sfx": "A knife against wood, a soft chord.",
+     "file": "library/trailers/one-ring-14.png",
+     "media": "photograph"
+    },
+    {
+     "n": 15,
+     "vo": "",
+     "on": "TO UNITE THEM ALL",
+     "sfx": "Orchestra pulls back.",
+     "file": "library/trailers/one-ring-15.png",
+     "media": "photograph"
+    },
+    {
+     "n": 16,
+     "vo": "Stop watching the movie in your mind.",
+     "on": "",
+     "sfx": "A distant echo, then birdsong returns.",
+     "file": "library/trailers/one-ring-16.png",
+     "media": "photograph"
+    },
+    {
+     "n": 17,
+     "vo": "Pulse gives you rhythm. Rhythm gives you pause.",
+     "on": "",
+     "sfx": "A slow drumbeat, matching the embers.",
+     "file": "library/trailers/one-ring-17.png",
+     "media": "photograph"
+    },
+    {
+     "n": 18,
+     "vo": "One ring to unite them all \u2014",
+     "on": "",
+     "sfx": "One deep drum.",
+     "file": "library/trailers/one-ring-18.png",
+     "media": "illustration"
+    },
+    {
+     "n": 19,
+     "vo": "Not the ring that rules. The ring that returns you \u2014 charged, clear, and ready to serve.",
+     "on": "",
+     "sfx": "Full orchestra, warm and rising.",
+     "file": "library/trailers/one-ring-19.png",
+     "media": "photograph"
+    },
+    {
+     "n": 20,
      "vo": "\u2014 with the present.",
      "on": "Be Here WOW",
      "sfx": "Warm sustained chord.",
-     "file": "library/trailers/one-ring-10.png",
+     "file": "library/trailers/one-ring-20.png",
      "media": "hybrid"
     }
    ]
@@ -207,66 +367,146 @@
     },
     {
      "n": 3,
-     "vo": "Everyone you know is somewhere else.",
-     "on": "",
-     "sfx": "Room tone.",
+     "vo": "The third rule: it's a pulse. That's the only word for it.",
+     "on": "RULE 03",
+     "sfx": "A dirty bass note.",
      "file": "library/trailers/first-rule-03.png",
-     "media": "hybrid"
-    },
-    {
-     "n": 4,
-     "vo": "You don't need witnesses.",
-     "on": "",
-     "sfx": "Silence.",
-     "file": "library/trailers/first-rule-04.png",
      "media": "photograph"
     },
     {
-     "n": 5,
-     "vo": "Eat the meal. Don't shoot it.",
+     "n": 4,
+     "vo": "Everyone you know is somewhere else.",
      "on": "",
-     "sfx": "A fork on a plate.",
+     "sfx": "Room tone.",
+     "file": "library/trailers/first-rule-04.png",
+     "media": "hybrid"
+    },
+    {
+     "n": 5,
+     "vo": "The fourth rule: stop watching the movie in your mind.",
+     "on": "RULE 04",
+     "sfx": "Room tone, then a slow breath.",
      "file": "library/trailers/first-rule-05.png",
      "media": "photograph"
     },
     {
      "n": 6,
-     "vo": "We meet where the feed can't find us.",
-     "on": "THE PRESENCE CIRCLE",
-     "sfx": "Low hum.",
+     "vo": "You don't need witnesses.",
+     "on": "",
+     "sfx": "Silence.",
      "file": "library/trailers/first-rule-06.png",
      "media": "photograph"
     },
     {
      "n": 7,
-     "vo": "Don't tell your friends.",
+     "vo": "The pulse finds you right before you'd say something you'd regret.",
      "on": "",
-     "sfx": "Street ambience returns.",
+     "sfx": "A held breath, then quiet.",
      "file": "library/trailers/first-rule-07.png",
      "media": "photograph"
     },
     {
      "n": 8,
-     "vo": "Don't review it.",
+     "vo": "Eat the meal. Don't shoot it.",
      "on": "",
-     "sfx": "ONE deep pulse.",
+     "sfx": "A fork on a plate.",
      "file": "library/trailers/first-rule-08.png",
      "media": "photograph"
     },
     {
      "n": 9,
-     "vo": "",
-     "on": "JUST BE HERE",
-     "sfx": "The bulb's creak.",
+     "vo": "The fifth rule: there are only three reasons to look down \u2014 to set your intention, to deepen your practice, to find the others. Every other reason, you look up.",
+     "on": "RULE 05",
+     "sfx": "A dirty bass note, harder this time.",
      "file": "library/trailers/first-rule-09.png",
-     "media": "illustration"
+     "media": "photograph"
     },
     {
      "n": 10,
+     "vo": "We meet where the feed can't find us.",
+     "on": "THE PRESENCE CIRCLE",
+     "sfx": "Low hum.",
+     "file": "library/trailers/first-rule-10.png",
+     "media": "photograph"
+    },
+    {
+     "n": 11,
+     "vo": "No one posts the best part.",
+     "on": "",
+     "sfx": "Quiet laughter, unrecorded.",
+     "file": "library/trailers/first-rule-11.png",
+     "media": "photograph"
+    },
+    {
+     "n": 12,
+     "vo": "Don't tell your friends.",
+     "on": "",
+     "sfx": "Street ambience returns.",
+     "file": "library/trailers/first-rule-12.png",
+     "media": "photograph"
+    },
+    {
+     "n": 13,
+     "vo": "The sixth rule: Pulse gives you rhythm. Rhythm gives you pause.",
+     "on": "RULE 06",
+     "sfx": "The bass note softens into a heartbeat.",
+     "file": "library/trailers/first-rule-13.png",
+     "media": "photograph"
+    },
+    {
+     "n": 14,
+     "vo": "Don't review it.",
+     "on": "",
+     "sfx": "ONE deep pulse.",
+     "file": "library/trailers/first-rule-14.png",
+     "media": "photograph"
+    },
+    {
+     "n": 15,
+     "vo": "Make something no one will ever see.",
+     "on": "",
+     "sfx": "The soft press of hands on dough.",
+     "file": "library/trailers/first-rule-15.png",
+     "media": "photograph"
+    },
+    {
+     "n": 16,
+     "vo": "",
+     "on": "JUST BE HERE",
+     "sfx": "The bulb's creak.",
+     "file": "library/trailers/first-rule-16.png",
+     "media": "illustration"
+    },
+    {
+     "n": 17,
+     "vo": "The last rule: you don't get credit for this one.",
+     "on": "RULE 07",
+     "sfx": "Silence, then the bulb's creak.",
+     "file": "library/trailers/first-rule-17.png",
+     "media": "photograph"
+    },
+    {
+     "n": 18,
+     "vo": "Not so you can prove it. So you can live it.",
+     "on": "",
+     "sfx": "A single warm pulse.",
+     "file": "library/trailers/first-rule-18.png",
+     "media": "photograph"
+    },
+    {
+     "n": 19,
+     "vo": "You may notice how easy it was to leave it behind.",
+     "on": "",
+     "sfx": "Street sound rising, warm.",
+     "file": "library/trailers/first-rule-19.png",
+     "media": "photograph"
+    },
+    {
+     "n": 20,
      "vo": "",
      "on": "Receive the gift of your life.",
      "sfx": "Silence. End card: This is not an ad. Pulse.",
-     "file": "library/trailers/first-rule-10.png",
+     "file": "library/trailers/first-rule-20.png",
      "media": "hybrid"
     }
    ]
