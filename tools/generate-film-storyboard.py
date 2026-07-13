@@ -154,6 +154,14 @@ FRAMES = [
   "An aerial illustrated view at dusk over a city and landscape where countless small warm-lit windows are connected by delicate threads of gold light — but now the threads are actively drawing themselves between distant strangers in real time, like a living map of people finding each other, thousands of quiet 'nice to be here with you' moments happening across the world in the same instant. Deep dimensional multiplane layers of rooftops, streets and hills. " + ILLUS_WARM),
  ("41-hybrid-ring-water", "16:9", None,
   "An extreme close-up macro shot of a gold ring resting exactly at the edge of still water at dusk, the frame split by an invisible vertical seam down the exact center: on the right half of the frame the water is rendered as sharp, photoreal cinematography — real ripples, real reflected light — while the ring resting in it is rendered in soft painterly gouache illustration, the brand's illustration grammar; on the left half of the frame the water is rendered in that same soft painterly illustration, while the ring itself is sharp, hyper-real photography. The ring appears to cross its own seam, half painted and half real, mirrored. Extremely minimal, near-black surroundings, warm gold light, the film's final signature image. No text, no logos, no watermark, no lettering."),
+ # the new opening — shot 0 formalizes the "private bubble" motif (first seen as an emergent
+ # flourish in the crosswalk-crowd shot) as a deliberate illustrated device, then shot 1 dissolves
+ # it into the live-action photographic open, a third hybrid moment bracketing the film's start
+ # to match the double-seam ring at its close.
+ ("42-bubble-train", "16:9", None,
+  "A crowded commuter train interior at dusk, painted in confident inked linework and gouache, Disney multiplane depth — rows of seated passengers, each one sealed inside a faint, translucent circular bubble that hovers around their head like a soundproof bell jar, some looking down at a softly glowing phone inside their own bubble, none making eye contact, no two bubbles touching. Steel-blue, cold, desaturated palette, hazy dusk light through the windows. Held, still, composed — a single quiet painted moment before the story begins, not yet the frantic churn camera. " + ILLUS_COLD),
+ ("43-train-dissolve", "16:9", "42-bubble-train",
+  "Keep the exact same train interior and passengers as the reference image. Show the painterly brushwork and each passenger's translucent head-bubble dissolving away across the whole frame at once, resolving into sharp cinematic photography of the same row of real passengers — phones now ordinary, ungrouped by any bubble, cool anamorphic film grain settling in. A single continuous cross-fade across the entire image, not a hard vertical split — the world resolving from paint into photograph before the story has even properly begun. " + STYLE),
 ]
 
 def build_gallery():
