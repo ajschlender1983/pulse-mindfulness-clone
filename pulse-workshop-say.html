@@ -222,6 +222,16 @@
   .tos .n{ font-family:var(--mono); font-size:12px; color:var(--faint); width:20px; }
   .tos .t{ flex:1; font-size:16px; font-weight:500; }
   .tos .note-in{ font-family:var(--font); font-size:12.5px; border:1px solid var(--line); border-radius:7px; padding:5px 9px; width:180px; background:var(--warm); }
+  .tos-fam{ margin-top:28px; }
+  .tos-fam:first-of-type{ margin-top:16px; }
+  .tos-fam-head{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; padding-bottom:8px; border-bottom:1px solid var(--line); margin-bottom:10px; }
+  .tos-fam-name{ font-size:17px; font-weight:600; letter-spacing:-.01em; }
+  .tos-fam-count{ font-family:var(--mono); font-size:11px; color:var(--faint); }
+  .tos-fam-usage{ font-size:13px; color:var(--muted); line-height:1.5; margin-bottom:12px; max-width:62ch; }
+  .tos-fam-usage b{ color:var(--brown); font-weight:600; }
+  .tos.style-general .t{ font-weight:500; text-transform:none; }
+  .tos.style-clarity .t{ font-weight:800; text-transform:uppercase; letter-spacing:.01em; font-size:15px; }
+  .tos.style-pulsemap .t{ font-weight:500; text-transform:none; color:var(--honey); }
 </style>
 </head>
 <body>
@@ -311,8 +321,8 @@
 
   <section class="blk">
     <div class="bk">On-screen microcopy</div>
-    <h2>Text on screen · 10 variations</h2>
-    <p class="bsub">Short lines for video / social overlays. Rate all ten <b style="color:var(--green)">keep</b> / <b style="color:var(--yellow)">caution</b> / <b style="color:var(--red)">cut</b>; once every line has a verdict the greens lock in as the approved on-screen text rules (and reds carry a note on why).</p>
+    <h2>Text on screen · 3 typographic families</h2>
+    <p class="bsub">Short lines for video / social overlays, grouped into three typographic families — each with its own suggested weight/case treatment and where it's meant to appear, not just a flat list. Rate every line <b style="color:var(--green)">keep</b> / <b style="color:var(--yellow)">caution</b> / <b style="color:var(--red)">cut</b>; once a family is fully rated its greens lock in as the approved on-screen text rules for that style (and reds carry a note on why).</p>
     <div class="tos-head">
       <span class="tos-progress" id="tosProgress"></span>
       <span class="tos-locked" id="tosLocked"></span>
@@ -598,6 +608,46 @@
     "Feel your feet. We'll wait.",
     "Presence, on your finger."
   ];
+  // Clarity · Charge · Capacity — drawn from Core Radiance (connection to others and the planet;
+  // charged up by life; clarity of heart and mind; capacity to love and serve others). Bold-weight,
+  // small-caps, one idea per card — the family for static end cards and carousel slides, landing
+  // after a return beat to name who someone is becoming, not just what they did.
+  var TOS_CLARITY=[
+    "Charged up by life.",
+    "Clarity, before the day asks for it.",
+    "Capacity, not depletion.",
+    "Connected — to the people around you. To the ground under you.",
+    "A clear heart moves the same as a clear mind.",
+    "You have more to give than the feed leaves you.",
+    "Charge comes from being here, not from the outlet.",
+    "Clarity isn't the absence of noise. It's the presence of you.",
+    "The capacity to love was never depleted. Just buried.",
+    "Connection to others. Connection to the ground you're standing on."
+  ];
+  // Pulse Map — the five states a pulse returns you to: Presence, Peace, Power, Pleasure, Purpose.
+  // Medium-weight, sentence case, warm gold — app-UI and screen-insert microcopy, appears inside a
+  // device screen or as a label on the spinning-ring graphic. Names where a pulse takes you.
+  var TOS_PULSEMAP=[
+    "Presence.",
+    "Peace, on your terms.",
+    "Power, without performing it.",
+    "Pleasure — the kind that doesn't need an audience.",
+    "Purpose, at the size of one ordinary Tuesday.",
+    "Five places a pulse can take you. Today, just one.",
+    "Not five things to achieve. Five ways to already be here.",
+    "Presence first. The rest follow.",
+    "Power is quiet, most days.",
+    "Purpose doesn't need to be loud to be real."
+  ];
+  var TOS_FAMILIES=[
+    {key:"general", style:"style-general", name:"General · ambient",
+     usageLead:"Video and social overlays.", usageRest:"Light weight, lowercase, understated — appears low-third or centered on a held beat, never fighting the image. The everyday register."},
+    {key:"clarity", style:"style-clarity", name:"Clarity · Charge · Capacity",
+     usageLead:"Static end cards and carousel slides.", usageRest:"Bold, small-caps, centered — one idea per card, landing on a full stop rather than mid-scene. Names who someone is becoming, after a return beat. Drawn from Core Radiance."},
+    {key:"pulsemap", style:"style-pulsemap", name:"Pulse Map",
+     usageLead:"App-UI and screen-insert microcopy.", usageRest:"Medium weight, sentence case, warm gold — appears inside a device screen or as a label on the spinning-ring graphic, never as a full-screen card. Names where a pulse takes you: Presence, Peace, Power, Pleasure, Purpose."}
+  ];
+  function tosArr(fam){ return fam.key==="general" ? TOS : (fam.key==="clarity" ? TOS_CLARITY : TOS_PULSEMAP); }
   var ADVISOR_NAMES={ hormozi:"Hormozi", godin:"Godin", watts:"Watts", jobs:"Jobs", sutherland:"Sutherland" };
   var ADVISOR_ROLES={ hormozi:"Offers & value", godin:"Remarkable & tribe", watts:"Presence", jobs:"Simplicity", sutherland:"Perceived value" };
   var ADVISOR_ORDER=["hormozi","godin","watts","jobs","sutherland"];
@@ -605,23 +655,43 @@
 
   function renderTOS(){
     var host=document.getElementById('tosList'); clear(host);
-    var rated=0, greens=0;
-    TOS.forEach(function(line,i){
-      var v=state.tos[i]||{};
-      if(v.rating) rated++;
-      if(v.rating==='green') greens++;
-      var row=el('div','tos');
-      row.appendChild(el('span','n',String(i+1)));
-      row.appendChild(el('span','t','“'+line+'”'));
-      row.appendChild(pill(v.rating, function(r){ state.tos[i]=Object.assign({},state.tos[i],{rating:r}); save(); renderTOS(); }));
-      var note=el('input','note-in'); note.placeholder='why?'; note.value=v.note||'';
-      note.style.display = (v.rating==='red')?'block':'none';
-      note.oninput=function(){ state.tos[i]=Object.assign({},state.tos[i],{note:note.value}); save(); };
-      row.appendChild(note);
-      host.appendChild(row);
+    var totalRated=0, totalLines=0, totalGreens=0, lockedFamilies=0;
+    TOS_FAMILIES.forEach(function(fam){
+      var arr=tosArr(fam);
+      totalLines+=arr.length;
+      var famHost=el('div','tos-fam');
+      var head=el('div','tos-fam-head');
+      head.appendChild(el('span','tos-fam-name',fam.name));
+      var countEl=el('span','tos-fam-count'); head.appendChild(countEl);
+      famHost.appendChild(head);
+      var usage=el('div','tos-fam-usage');
+      var lead=document.createElement('b'); lead.textContent=fam.usageLead;
+      usage.appendChild(lead); usage.appendChild(document.createTextNode(' '+fam.usageRest));
+      famHost.appendChild(usage);
+      var list=el('div','tos-list');
+      var famRated=0, famGreens=0;
+      arr.forEach(function(line,i){
+        var sk=fam.key+'-'+i;
+        var v=state.tos[sk]||{};
+        if(v.rating){ famRated++; totalRated++; }
+        if(v.rating==='green'){ famGreens++; totalGreens++; }
+        var row=el('div','tos '+fam.style);
+        row.appendChild(el('span','n',String(i+1)));
+        row.appendChild(el('span','t','“'+line+'”'));
+        row.appendChild(pill(v.rating, function(r){ state.tos[sk]=Object.assign({},state.tos[sk],{rating:r}); save(); renderTOS(); }));
+        var note=el('input','note-in'); note.placeholder='why?'; note.value=v.note||'';
+        note.style.display = (v.rating==='red')?'block':'none';
+        note.oninput=function(){ state.tos[sk]=Object.assign({},state.tos[sk],{note:note.value}); save(); };
+        row.appendChild(note);
+        list.appendChild(row);
+      });
+      famHost.appendChild(list);
+      countEl.textContent = famRated+' / '+arr.length+' rated'+(famRated===arr.length?' · ✓ locked: '+famGreens+' approved':'');
+      if(famRated===arr.length) lockedFamilies++;
+      host.appendChild(famHost);
     });
-    document.getElementById('tosProgress').textContent=rated+' / '+TOS.length+' rated';
-    document.getElementById('tosLocked').textContent = (rated===TOS.length) ? ('✓ locked as rules: '+greens+' approved lines') : '';
+    document.getElementById('tosProgress').textContent=totalRated+' / '+totalLines+' rated across '+TOS_FAMILIES.length+' families';
+    document.getElementById('tosLocked').textContent = (lockedFamilies===TOS_FAMILIES.length) ? ('✓ all families locked: '+totalGreens+' approved lines') : (lockedFamilies ? lockedFamilies+' / '+TOS_FAMILIES.length+' families locked' : '');
   }
 
   // ===== advisory board =====

@@ -384,6 +384,10 @@
    "v": "There are only three reasons to look down at a screen with Pulse: to set your intention, to deepen your practice, or to find the others. Every other reason, you look up. The vocabulary stays pulses, never pings \u2014 you schedule your pulses the way you schedule a practice, not the way you dread a notification."
   },
   {
+   "k": "The four pillars (new, 2026-07-13)",
+   "v": "Two frameworks underneath everything Pulse says. The Pulse Map is the five states a pulse can return you to: Presence, Peace, Power, Pleasure, Purpose. Core Radiance is the four-part definition of what a person is like once they're living from that map \u2014 connection to others and the planet; charged up by life; clarity of heart and mind; capacity to love and serve others. The map is where you go. Radiance is who you become by going there."
+  },
+  {
    "k": "The feeling arc",
    "v": "Numb \u2192 Seen \u2192 Hopeful \u2192 Convinced \u2192 Relieved \u2192 Grateful \u2192 Generous."
   },
@@ -500,7 +504,7 @@
  "counts": {
   "current": 40,
   "new": 39,
-  "core": 10,
+  "core": 11,
   "hierarchy": 5,
   "guardrails": 18
  }
