@@ -43,6 +43,7 @@ for t in cons.get("tos",[]):
 add("tagline","Be Here WOW","canon")
 add("tagline","Here & Now Together","canon")
 add("tagline","Three reasons to look down. Every other reason, you look up.","canon")
+add("tagline","Pulse gives you rhythm. Rhythm gives you pause.","canon")
 # product: positioning + wedge + the plain-object lines
 if cons.get("positioning"): add("product",cons["positioning"],"positioning")
 if cons.get("wedge"): add("product",cons["wedge"],"the wedge")
@@ -87,11 +88,11 @@ core=[
  {"k":"The wedge","v":cons.get("wedge","")},
  {"k":"The promise","v":"Stop watching the movie of your mind. Start making the movie of your life — the same footage, at the speed of being here. It isn't only the phone: even with empty hands, you can be replaying, rehearsing, worrying, instead of living what's actually in front of you."},
  {"k":"The offer","v":cons.get("offer","")},
- {"k":"The ritual (new, 2026-07-12)","v":"Pulse is a verb. The ring sends a vibration; the Pulse is the ritual of presence that follows. The ritual can look like breath, focus, feeling fully, appreciation, intimacy, or creativity — surrender, honesty and courage are held back pending advisory-board review (persona research flagged them as Seeker-specific, at risk of overreach in mass copy). Rate this to weigh in."},
+ {"k":"The ritual (rev. 2026-07-13)","v":"Pulse is a verb. Pulse is the rhythm: it gives you a rhythm, helps you find pause, and pause is what lets you build a ritual of presence out of it. The ring sends a vibration; you choose your intention, and the Pulse is the ritual that follows. The ritual can look like breath, focus, feeling fully, appreciation, connection, creativity, soften, serve, or smile — surrender, honesty and courage are held back pending advisory-board review (persona research flagged them as Seeker-specific, at risk of overreach in mass copy). Rate this to weigh in."},
  {"k":"The three reasons to look (new, 2026-07-13)","v":"There are only three reasons to look down at a screen with Pulse: to set your intention, to deepen your practice, or to find the others. Every other reason, you look up. The vocabulary stays pulses, never pings — you schedule your pulses the way you schedule a practice, not the way you dread a notification."},
  {"k":"The feeling arc","v":"Numb → Seen → Hopeful → Convinced → Relieved → Grateful → Generous."},
  {"k":"The voice","v":"Present tense, second person, one breath per sentence. Invite, never instruct. No exclamation points."},
- {"k":"Canon lines","v":"When would now be a good time? · Be Here WOW · Here & Now Together · Three reasons to look down. Every other reason, you look up."},
+ {"k":"Canon lines","v":"When would now be a good time? · Be Here WOW · Here & Now Together · Three reasons to look down. Every other reason, you look up. · Pulse gives you rhythm. Rhythm gives you pause."},
 ]
 core=[c for c in core if c["v"]]
 

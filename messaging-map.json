@@ -134,6 +134,10 @@
      "where": "Canon anchor"
     },
     {
+     "text": "Pulse gives you rhythm. Rhythm gives you pause.",
+     "where": "Canon anchor"
+    },
+    {
      "text": "It doesn't do anything. That's the whole point.",
      "where": "INTERNAL PALETTE"
     },
@@ -372,8 +376,8 @@
    "v": "Lead with restraint and an unconditional return, never arithmetic. Spine: \"Wear it a month. If it isn't for you, send it back \u2014 no reason needed, no questions.\" The guarantee grades nothing: asking a wearer to certify presence would reinstall the scorecard the ring refuses. Frame the $200 as paying for restraint, not utility \u2014 \"The one thing you'll ever own that keeps no score of you,\" with \"for the cost of one nice dinner\" as a quiet frame beneath it, never an argument. Keep ROI and reclaimable-hours math out of the hero; that number stays downstream and gentle, never a grade. Proof = real wearers' anonymous before/after words \u2014 the only number we'd trust, so the only one we sell."
   },
   {
-   "k": "The ritual (new, 2026-07-12)",
-   "v": "Pulse is a verb. The ring sends a vibration; the Pulse is the ritual of presence that follows. The ritual can look like breath, focus, feeling fully, appreciation, intimacy, or creativity \u2014 surrender, honesty and courage are held back pending advisory-board review (persona research flagged them as Seeker-specific, at risk of overreach in mass copy). Rate this to weigh in."
+   "k": "The ritual (rev. 2026-07-13)",
+   "v": "Pulse is a verb. Pulse is the rhythm: it gives you a rhythm, helps you find pause, and pause is what lets you build a ritual of presence out of it. The ring sends a vibration; you choose your intention, and the Pulse is the ritual that follows. The ritual can look like breath, focus, feeling fully, appreciation, connection, creativity, soften, serve, or smile \u2014 surrender, honesty and courage are held back pending advisory-board review (persona research flagged them as Seeker-specific, at risk of overreach in mass copy). Rate this to weigh in."
   },
   {
    "k": "The three reasons to look (new, 2026-07-13)",
@@ -389,7 +393,7 @@
   },
   {
    "k": "Canon lines",
-   "v": "When would now be a good time? \u00b7 Be Here WOW \u00b7 Here & Now Together \u00b7 Three reasons to look down. Every other reason, you look up."
+   "v": "When would now be a good time? \u00b7 Be Here WOW \u00b7 Here & Now Together \u00b7 Three reasons to look down. Every other reason, you look up. \u00b7 Pulse gives you rhythm. Rhythm gives you pause."
   }
  ],
  "hierarchy": [
@@ -495,7 +499,7 @@
  ],
  "counts": {
   "current": 40,
-  "new": 38,
+  "new": 39,
   "core": 10,
   "hierarchy": 5,
   "guardrails": 18

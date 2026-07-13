@@ -181,7 +181,15 @@ FRAMES = [
  ("49-peak-surfer-wave", "16:9", None,
   "A surfer emerging from inside a breaking wave, board steady beneath her, spray catching the light — then, for one beat, going completely still: eyes closing, a breath released, before the next swell arrives. Awe held in the body. " + STYLE),
  ("50-peak-friends-laughing", "16:9", None,
-  "Two old friends at a small table, mid-laugh at a shared joke, genuine and unguarded — the laughter settling into a comfortable silence, eyes meeting instead of closing this time, warm and easy. Joy resolving into intimacy. " + STYLE),
+  "Two old friends at a small table, mid-laugh at a shared joke, genuine and unguarded — the laughter settling into a comfortable silence, eyes meeting instead of closing this time, warm and easy. Joy resolving into connection. " + STYLE),
+ # the product-proof beat — once the film has already earned the emotional case, a brief honest
+ # look at the mechanism and the practical facts, right before the closing tag. The testimonials
+ # montage that follows this pair is deliberately NOT generated — an existing guardrail says proof
+ # has to be real wearers' own words, so that shot reuses the site's live testimonials component.
+ ("51-ring-exploded", "16:9", None,
+  "A macro product shot of a gold ring exploded into its layers, each piece suspended in space with precise gaps between them — the outer polished gold band, the inner mechanism, and at the exact center, a small glowing component pulsing warm orange-gold light. This is the literal source of the ring's ripple, visible for the first time. Extremely clean, near-black background, studio product photography, beautiful and precise. No text, no logos, no watermark."),
+ ("52-ring-charging", "16:9", None,
+  "A macro product shot of a gold ring resting in a minimal circular charging dock on a dark surface, a soft warm light glowing steadily at its base as it charges. Extremely clean, near-black background, studio product photography, calm and quiet. No text, no logos, no watermark."),
 ]
 
 def build_gallery():
