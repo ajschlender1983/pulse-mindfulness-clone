@@ -12,17 +12,28 @@ HERO_WRAP=""".hero-wrap { margin: 34px 0 36px; }
 .hero-plate { position: relative; background:#FCFAF0; border:1px solid rgba(166,124,0,0.34); border-radius:12px; padding:8px; }
 .hero-cap { font-family:'DM Mono',ui-monospace,monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#8a8578; padding:13px 5px 3px 5px; overflow:hidden; }
 .hero-cap .hc-tick { display:inline-block; width:16px; height:2px; background:#A67C00; vertical-align:middle; margin-right:10px; }
-.hero-cap .hc-mark { float:right; color:#C4AE68; letter-spacing:0.2em; }"""
+.hero-cap .hc-mark { float:right; color:#C4AE68; letter-spacing:0.2em; }
+.hero-frame.no-cap { padding-bottom: 15px; }"""
 HERO_IMG=".hero-img { width:100%; border-radius:7px; display:block; box-shadow:0 4px 12px rgba(66,61,50,0.10); }"
 PROMPTS=".prompts { margin: 32px 0; padding: 24px 28px; background: linear-gradient(158deg,#EEE8D0 0%,#E7E0C6 100%); border:1px solid rgba(26,28,34,0.06); border-radius: 16px; box-shadow:0 14px 34px rgba(66,61,50,0.07); }"
 PAUSE=".pause-block { text-align: center; margin: 34px 0; padding:26px 28px; background:#FBF8EC; border-radius:16px; border-top:2px solid #A67C00; box-shadow:0 12px 30px rgba(66,61,50,0.06); }"
 PAUSE_P=".pause-block p { font-size: 15px !important; color: #6E6857 !important; margin-bottom: 0 !important; line-height: 1.95 !important; letter-spacing:0.01em; }"
 
+DANGLERS={'in','into','on','at','of','the','a','an','to','for','with','one','under',
+          'beside','and','cool','soft','dark','warm','grey','kraft','quiet'}
+
 def caption(alt):
     a=re.sub(r'^(A|An|The)\s+','',alt.strip())
-    first=a.split(',')[0].strip()
-    if len(first)>50: first=first[:50].rsplit(' ',1)[0]+'…'
-    return (first[0].upper()+first[1:]) if first else 'The moment'
+    truncated=False
+    if len(a)>60:
+        a=a[:60].rsplit(' ',1)[0]
+        truncated=True
+    words=a.split(' ')
+    while words and words[-1].lower().strip(',') in DANGLERS:
+        words.pop(); truncated=True
+    text=' '.join(words).rstrip(',').strip()
+    if truncated: text+='…'
+    return (text[0].upper()+text[1:]) if text else 'The moment'
 
 def hero_repl(m):
     attrs=m.group(1)
@@ -36,6 +47,25 @@ def hero_repl(m):
             '        </div>\n'
             f'        <div class="hero-cap"><span class="hc-mark">PULSE</span><span class="hc-tick"></span>{cap}</div>\n'
             '      </div>\n    </div>')
+
+def refresh_captions(p):
+    """Idempotent correction pass over already-elevated heroes: dark-luxe (product-shot)
+    emails lose the caption band entirely (it only ever duplicated the PULSE mark);
+    lifestyle emails get their caption recomputed with the fixed caption() algorithm."""
+    h=p.read_text(); orig=h
+    is_dark='hero-fade' in h
+    m=re.search(r'<img class="hero-img"[^>]*alt="([^"]*)"', h)
+    if not m: return False
+    if is_dark:
+        h=re.sub(r'[ \t]*<div class="hero-cap">.*?</div>\n', '', h, count=1)
+        h=re.sub(r'<div class="hero-frame">', '<div class="hero-frame no-cap">', h, count=1)
+    else:
+        cap=caption(m.group(1))
+        h=re.sub(r'(<div class="hero-cap"><span class="hc-mark">PULSE</span><span class="hc-tick"></span>).*?(</div>)',
+                  lambda mm: mm.group(1)+cap+mm.group(2), h, count=1)
+    if h!=orig:
+        p.write_text(h); return True
+    return False
 
 def process(p):
     h=p.read_text(); orig=h
@@ -58,12 +88,13 @@ def process(p):
     return False
 
 def main():
-    changed=0; heroes=0
+    changed=0; heroes=0; refreshed=0
     for p in sorted(EM.glob("*.html")):
-        before=p.read_text()
         if process(p):
             changed+=1
             if 'class="hero-frame"' in p.read_text(): heroes+=1
-    print(f"elevated {changed} emails; {heroes} now have framed heroes")
+        if refresh_captions(p):
+            refreshed+=1
+    print(f"elevated {changed} emails; {heroes} now have framed heroes; {refreshed} captions refreshed")
 
 if __name__=="__main__": main()

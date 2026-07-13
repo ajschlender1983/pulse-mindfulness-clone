@@ -47,6 +47,12 @@ table{border-collapse:collapse !important;}
 .hero-cap { font-family:'DM Mono',ui-monospace,monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#8a8578; padding:13px 5px 3px 5px; overflow:hidden; }
 .hero-cap .hc-tick { display:inline-block; width:16px; height:2px; background:#A67C00; vertical-align:middle; margin-right:10px; }
 .hero-cap .hc-mark { float:right; color:#C4AE68; letter-spacing:0.2em; }
+.hero-frame.no-cap { padding-bottom: 15px; }
+.hero-frame { position: relative; background: linear-gradient(157deg,#F7F2E1 0%,#EFE8CF 100%); border-radius:20px; border:1px solid rgba(26,28,34,0.06); padding:15px 15px 5px 15px; box-shadow:0 2px 5px rgba(66,61,50,0.05),0 30px 66px rgba(66,61,50,0.15); }
+.hero-plate { position: relative; background:#FCFAF0; border:1px solid rgba(166,124,0,0.34); border-radius:12px; padding:8px; }
+.hero-cap { font-family:'DM Mono',ui-monospace,monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#8a8578; padding:13px 5px 3px 5px; overflow:hidden; }
+.hero-cap .hc-tick { display:inline-block; width:16px; height:2px; background:#A67C00; vertical-align:middle; margin-right:10px; }
+.hero-cap .hc-mark { float:right; color:#C4AE68; letter-spacing:0.2em; }
 .hero-img { width:100%; border-radius:7px; display:block; box-shadow:0 4px 12px rgba(66,61,50,0.10); }
 .hero-fade {
   position: absolute; left: 0; right: 0; bottom: 0; height: 90px;
@@ -137,13 +143,8 @@ table{border-collapse:collapse !important;}
   background: rgba(201,162,39,0.18);
 }
 
-.pause-block { text-align: center; margin: 34px 0; }
-.pause-block p {
-  font-size: 15px !important;
-  color: #6d6f74 !important;
-  margin-bottom: 0 !important;
-  line-height: 1.9 !important;
-}
+.pause-block { text-align: center; margin: 34px 0; padding:26px 28px; background:#FBF8EC; border-radius:16px; border-top:2px solid #A67C00; box-shadow:0 12px 30px rgba(66,61,50,0.06); }
+.pause-block p { font-size: 15px !important; color: #6E6857 !important; margin-bottom: 0 !important; line-height: 1.95 !important; letter-spacing:0.01em; }
 
 .cta-wrap { text-align: center; margin: 34px 0 8px 0; }
 .btn-pill {
@@ -210,11 +211,10 @@ table{border-collapse:collapse !important;}
 <div class="pmf-card">
 
   <div class="hero-wrap">
-      <div class="hero-frame">
+      <div class="hero-frame no-cap">
         <div class="hero-plate">
           <img class="hero-img" src="images/hero-email-spaces-proposal.png" alt="Five gold Pulse rings on black stone under one raking gold light, long architectural shadows" width="520">
         </div>
-        <div class="hero-cap"><span class="hc-mark">PULSE</span><span class="hc-tick"></span>Five gold Pulse rings on black stone under one…</div>
       </div>
     </div>
 
