@@ -41,6 +41,7 @@ for t in cons.get("taglines",[]):
 for t in cons.get("tos",[]):
     add("tagline",t,"on screen")
 add("tagline","Be Here WOW","canon")
+add("tagline","Here & Now Together","canon")
 # product: positioning + wedge + the plain-object lines
 if cons.get("positioning"): add("product",cons["positioning"],"positioning")
 if cons.get("wedge"): add("product",cons["wedge"],"the wedge")
@@ -88,7 +89,7 @@ core=[
  {"k":"The ritual (new, 2026-07-12)","v":"Pulse is a verb. The ring sends a vibration; the Pulse is the ritual of presence that follows. The ritual can look like breath, focus, feeling fully, appreciation, intimacy, or creativity — surrender, honesty and courage are held back pending advisory-board review (persona research flagged them as Seeker-specific, at risk of overreach in mass copy). Rate this to weigh in."},
  {"k":"The feeling arc","v":"Numb → Seen → Hopeful → Convinced → Relieved → Grateful → Generous."},
  {"k":"The voice","v":"Present tense, second person, one breath per sentence. Invite, never instruct. No exclamation points."},
- {"k":"Canon lines","v":"When would now be a good time? · Be Here WOW"},
+ {"k":"Canon lines","v":"When would now be a good time? · Be Here WOW · Here & Now Together"},
 ]
 core=[c for c in core if c["v"]]
 

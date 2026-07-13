@@ -126,6 +126,10 @@
      "where": "Canon anchor"
     },
     {
+     "text": "Here & Now Together",
+     "where": "Canon anchor"
+    },
+    {
      "text": "It doesn't do anything. That's the whole point.",
      "where": "INTERNAL PALETTE"
     },
@@ -377,7 +381,7 @@
   },
   {
    "k": "Canon lines",
-   "v": "When would now be a good time? \u00b7 Be Here WOW"
+   "v": "When would now be a good time? \u00b7 Be Here WOW \u00b7 Here & Now Together"
   }
  ],
  "hierarchy": [
@@ -483,7 +487,7 @@
  ],
  "counts": {
   "current": 40,
-  "new": 36,
+  "new": 37,
   "core": 9,
   "hierarchy": 5,
   "guardrails": 18
