@@ -111,6 +111,28 @@ FRAMES = [
   "A man walking down a familiar sidewalk at dusk, no phone in his hand or pocket, his eyes open but glazed, physically here and mentally gone — replaying an old argument. Beside his head, faint and translucent, a small floating film-frame shows two tiny painted figures mid-argument, its own private screening only we can see, dimmer and cooler than the real street around him. Cold and quiet. " + ILLUS_COLD),
  ("23-mind-movie-chores", "16:9", None,
   "A woman washing dishes at a kitchen sink, hands moving on autopilot, no phone anywhere, staring through the window rather than at it — rehearsing a conversation that hasn't happened yet. Beside her head, faint and translucent, a small floating film-frame shows her painted figure mid-conversation with someone unseen, its own private screening only we can see, dimmer and cooler than the real kitchen around her. Cold and quiet. " + ILLUS_COLD),
+ # shooting-board coverage pass — filling every shot that still had no dedicated reference still.
+ # All live-action photographic beats (matches the medium marked in the shooting board table).
+ ("24-father-before", "16:9", None,
+  "A father at a home dinner table, phone in hand and completely absorbed, his young child mid-story beside him going totally unseen, her small hopeful face starting to fade. Cool, flat, blue-tinted dusk light draining the warmth from the room. " + STYLE),
+ ("25-couple-bed-before", "16:9", None,
+  "A high angle shot over a bed at night: a couple lying apart, both lit by the cold blue glow of their phones, backs almost touching, thumbs scrolling, no words passing between them. " + STYLE),
+ ("26-quickcuts-busstop", "16:9", None,
+  "A person standing alone at a bus stop at dusk, head down into their phone, an empty bench beside them, cool desaturated light, quietly isolated. " + STYLE),
+ ("27-quickcuts-scrollingcrowd", "16:9", None,
+  "A person walking through a busy crowded sidewalk, eyes fixed on their phone, scrolling, completely oblivious to the people passing inches away, cool flat city light. " + STYLE),
+ ("28-quickcuts-table-devices", "16:9", None,
+  "A restaurant table of friends, every single person looking down at their own phone, no one talking, plates untouched between them, cool blue-tinted light. " + STYLE),
+ ("29-crosswalk-crowd", "16:9", None,
+  "A slow-motion wide shot of a busy crosswalk crowd at dusk, dozens of people crossing at once, every one of them sealed in their own private bubble, eyes down, no eye contact between any two people. " + STYLE),
+ ("30-building-dusk", "16:9", None,
+  "A wide held shot of an apartment building at dusk, dozens of lit windows, each one a separate glowing life, no two windows touching, quiet and cool. " + STYLE),
+ ("31-her-pov-stranger", "16:9", None,
+  "Point of view across a warm, golden cafe: a stranger at a nearby table looks up at the exact same instant, eyes meeting yours for the first time, soft warm light, the quiet held moment of being truly seen. " + STYLE),
+ ("32-rapid-sync-montage", "16:9", None,
+  "A four-panel cinematic collage in one continuous frame: a rooftop, a kitchen, a train car, and a park, each showing a different person pausing at the exact same instant, eyes closing, shoulders dropping, landing fully present. Warm golden hour light unifies all four into one shared moment. " + STYLE),
+ ("33-two-strangers-embrace", "16:9", None,
+  "A close-up of two strangers at a festival embracing tightly, both visibly moved, golden hour light catching tears, a spontaneous and real human connection. " + STYLE),
 ]
 
 def build_gallery():
