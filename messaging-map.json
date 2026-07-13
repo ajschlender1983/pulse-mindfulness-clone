@@ -130,6 +130,10 @@
      "where": "Canon anchor"
     },
     {
+     "text": "Three reasons to look down. Every other reason, you look up.",
+     "where": "Canon anchor"
+    },
+    {
      "text": "It doesn't do anything. That's the whole point.",
      "where": "INTERNAL PALETTE"
     },
@@ -349,7 +353,7 @@
  "core": [
   {
    "k": "The category",
-   "v": "A mindfulness ring that brings you back to the present \u2014 anti-data, no screen, nothing to check."
+   "v": "A mindfulness ring that brings you back to the present \u2014 anti-data, nearly screen-free, nothing to check. The one screen that exists is deliberate, not ambient."
   },
   {
    "k": "Positioning",
@@ -372,6 +376,10 @@
    "v": "Pulse is a verb. The ring sends a vibration; the Pulse is the ritual of presence that follows. The ritual can look like breath, focus, feeling fully, appreciation, intimacy, or creativity \u2014 surrender, honesty and courage are held back pending advisory-board review (persona research flagged them as Seeker-specific, at risk of overreach in mass copy). Rate this to weigh in."
   },
   {
+   "k": "The three reasons to look (new, 2026-07-13)",
+   "v": "There are only three reasons to look down at a screen with Pulse: to set your intention, to deepen your practice, or to find the others. Every other reason, you look up. The vocabulary stays pulses, never pings \u2014 you schedule your pulses the way you schedule a practice, not the way you dread a notification."
+  },
+  {
    "k": "The feeling arc",
    "v": "Numb \u2192 Seen \u2192 Hopeful \u2192 Convinced \u2192 Relieved \u2192 Grateful \u2192 Generous."
   },
@@ -381,7 +389,7 @@
   },
   {
    "k": "Canon lines",
-   "v": "When would now be a good time? \u00b7 Be Here WOW \u00b7 Here & Now Together"
+   "v": "When would now be a good time? \u00b7 Be Here WOW \u00b7 Here & Now Together \u00b7 Three reasons to look down. Every other reason, you look up."
   }
  ],
  "hierarchy": [
@@ -487,8 +495,8 @@
  ],
  "counts": {
   "current": 40,
-  "new": 37,
-  "core": 9,
+  "new": 38,
+  "core": 10,
   "hierarchy": 5,
   "guardrails": 18
  }

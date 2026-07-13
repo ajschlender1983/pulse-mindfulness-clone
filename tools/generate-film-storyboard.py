@@ -133,6 +133,27 @@ FRAMES = [
   "A four-panel cinematic collage in one continuous frame: a rooftop, a kitchen, a train car, and a park, each showing a different person pausing at the exact same instant, eyes closing, shoulders dropping, landing fully present. Warm golden hour light unifies all four into one shared moment. " + STYLE),
  ("33-two-strangers-embrace", "16:9", None,
   "A close-up of two strangers at a festival embracing tightly, both visibly moved, golden hour light catching tears, a spontaneous and real human connection. " + STYLE),
+ # "Finding the others" — a new scene bridging Act II into Act III. The screen was never the
+ # enemy on its own; the film makes literal the three sanctioned reasons to look down (set your
+ # intention, deepen your practice, find the others) by having its own churn-shot grammar
+ # (a person on their phone, walking, seemingly checked out) return on purpose as a deliberate
+ # misdirect — then reveal what the phone is actually being used for.
+ ("34-screen-breath-meter", "16:9", None,
+  "Extreme close-up of a phone screen held at chest height, showing the Pulse app's breath meter mid-session — a soft single ring of warm gold light slowly expanding and contracting like a breath, minimal, no numbers, no streaks, no red badges. A small quiet label reads 'Pulses scheduled: 3 today.' Warm, calm, intentional, nothing urgent about it. " + STYLE),
+ ("35-eyes-opening", "16:9", None,
+  "Extreme close-up on a woman's closed eyes, mid-breath, in warm soft light, as they gently begin to open — the exact instant of finishing a short guided practice, calm and unhurried, present. " + STYLE),
+ ("36-pov-stranger-ring", "16:9", None,
+  "A point-of-view wide shot walking down a sunlit sidewalk: up ahead, a stranger's hand catches the light for a moment, a glint of gold from a ring on his finger, barely noticeable unless you're looking. Warm, ordinary, unremarkable except for that one detail. " + STYLE),
+ ("37-stranger-on-phone-misdirect", "16:9", None,
+  "A man walking down a sunlit sidewalk, head down, looking at his phone — at a glance, exactly like the film's earlier churn shots of someone checked out and elsewhere. Warm daylight though, not cold — a visual echo meant to be misread. " + STYLE),
+ ("38-screen-find-the-others", "16:9", None,
+  "Extreme close-up of a phone screen: the Pulse app's 'Find the Others' view, a soft minimal map with a few gentle anonymous pins nearby, one of them pulsing warm gold as it grows closer, no names, no photos, no profiles — just presence, nearby. Warm, calm, intentional interface design. " + STYLE),
+ ("39-the-recognition", "16:9", None,
+  "Two-shot on a sunlit sidewalk: a man lowers his phone as a woman approaches, and they both notice the gold ring on each other's hand at the same instant — the smallest surprised, warm smile of recognition between two strangers. Golden hour light, intimate and unhurried. " + STYLE),
+ ("40-constellation-field-of-light", "16:9", None,
+  "An aerial illustrated view at dusk over a city and landscape where countless small warm-lit windows are connected by delicate threads of gold light — but now the threads are actively drawing themselves between distant strangers in real time, like a living map of people finding each other, thousands of quiet 'nice to be here with you' moments happening across the world in the same instant. Deep dimensional multiplane layers of rooftops, streets and hills. " + ILLUS_WARM),
+ ("41-hybrid-ring-water", "16:9", None,
+  "An extreme close-up macro shot of a gold ring resting exactly at the edge of still water at dusk, the frame split by an invisible vertical seam down the exact center: on the right half of the frame the water is rendered as sharp, photoreal cinematography — real ripples, real reflected light — while the ring resting in it is rendered in soft painterly gouache illustration, the brand's illustration grammar; on the left half of the frame the water is rendered in that same soft painterly illustration, while the ring itself is sharp, hyper-real photography. The ring appears to cross its own seam, half painted and half real, mirrored. Extremely minimal, near-black surroundings, warm gold light, the film's final signature image. No text, no logos, no watermark, no lettering."),
 ]
 
 def build_gallery():

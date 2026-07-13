@@ -42,6 +42,7 @@ for t in cons.get("tos",[]):
     add("tagline",t,"on screen")
 add("tagline","Be Here WOW","canon")
 add("tagline","Here & Now Together","canon")
+add("tagline","Three reasons to look down. Every other reason, you look up.","canon")
 # product: positioning + wedge + the plain-object lines
 if cons.get("positioning"): add("product",cons["positioning"],"positioning")
 if cons.get("wedge"): add("product",cons["wedge"],"the wedge")
@@ -81,15 +82,16 @@ guardrails=[{"text":g,"level":level(g)} for g in cons.get("guardrails",[])]
 
 # ---- CORE MESSAGING (the guide, downstream of the advisors) ----
 core=[
- {"k":"The category","v":"A mindfulness ring that brings you back to the present — anti-data, no screen, nothing to check."},
+ {"k":"The category","v":"A mindfulness ring that brings you back to the present — anti-data, nearly screen-free, nothing to check. The one screen that exists is deliberate, not ambient."},
  {"k":"Positioning","v":cons.get("positioning","")},
  {"k":"The wedge","v":cons.get("wedge","")},
  {"k":"The promise","v":"Stop watching the movie of your mind. Start making the movie of your life — the same footage, at the speed of being here. It isn't only the phone: even with empty hands, you can be replaying, rehearsing, worrying, instead of living what's actually in front of you."},
  {"k":"The offer","v":cons.get("offer","")},
  {"k":"The ritual (new, 2026-07-12)","v":"Pulse is a verb. The ring sends a vibration; the Pulse is the ritual of presence that follows. The ritual can look like breath, focus, feeling fully, appreciation, intimacy, or creativity — surrender, honesty and courage are held back pending advisory-board review (persona research flagged them as Seeker-specific, at risk of overreach in mass copy). Rate this to weigh in."},
+ {"k":"The three reasons to look (new, 2026-07-13)","v":"There are only three reasons to look down at a screen with Pulse: to set your intention, to deepen your practice, or to find the others. Every other reason, you look up. The vocabulary stays pulses, never pings — you schedule your pulses the way you schedule a practice, not the way you dread a notification."},
  {"k":"The feeling arc","v":"Numb → Seen → Hopeful → Convinced → Relieved → Grateful → Generous."},
  {"k":"The voice","v":"Present tense, second person, one breath per sentence. Invite, never instruct. No exclamation points."},
- {"k":"Canon lines","v":"When would now be a good time? · Be Here WOW · Here & Now Together"},
+ {"k":"Canon lines","v":"When would now be a good time? · Be Here WOW · Here & Now Together · Three reasons to look down. Every other reason, you look up."},
 ]
 core=[c for c in core if c["v"]]
 
