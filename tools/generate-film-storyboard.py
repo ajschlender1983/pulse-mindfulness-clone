@@ -103,6 +103,14 @@ FRAMES = [
   "A waiting room at dusk: a row of people side by side, every one of them looking down at a phone, not one face lifted, empty chairs between them though the room is full. Cold and quiet. " + ILLUS_COLD),
  ("20-churn-recital", "16:9", None,
   "A child's dance recital on a small stage; in the audience, parents hold up phones filming instead of watching, screens glowing, the child performing to a wall of raised devices. Cold and quiet. " + ILLUS_COLD),
+ # the mind movie — the churn was never only phones. A person can be fully present in body and
+ # still gone, replaying or rehearsing a scene only they can see. Made literal: a small, faint,
+ # translucent film-frame hovers just beside their head, its own private screening, dimmer and
+ # cooler than the real room around them, no phone anywhere in the shot.
+ ("22-mind-movie-commute", "16:9", None,
+  "A man walking down a familiar sidewalk at dusk, no phone in his hand or pocket, his eyes open but glazed, physically here and mentally gone — replaying an old argument. Beside his head, faint and translucent, a small floating film-frame shows two tiny painted figures mid-argument, its own private screening only we can see, dimmer and cooler than the real street around him. Cold and quiet. " + ILLUS_COLD),
+ ("23-mind-movie-chores", "16:9", None,
+  "A woman washing dishes at a kitchen sink, hands moving on autopilot, no phone anywhere, staring through the window rather than at it — rehearsing a conversation that hasn't happened yet. Beside her head, faint and translucent, a small floating film-frame shows her painted figure mid-conversation with someone unseen, its own private screening only we can see, dimmer and cooler than the real kitchen around her. Cold and quiet. " + ILLUS_COLD),
 ]
 
 def build_gallery():
