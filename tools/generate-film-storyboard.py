@@ -162,6 +162,26 @@ FRAMES = [
   "A crowded commuter train interior at dusk, painted in confident inked linework and gouache, Disney multiplane depth — rows of seated passengers, each one sealed inside a faint, translucent circular bubble that hovers around their head like a soundproof bell jar, some looking down at a softly glowing phone inside their own bubble, none making eye contact, no two bubbles touching. Steel-blue, cold, desaturated palette, hazy dusk light through the windows. Held, still, composed — a single quiet painted moment before the story begins, not yet the frantic churn camera. " + ILLUS_COLD),
  ("43-train-dissolve", "16:9", "42-bubble-train",
   "Keep the exact same train interior and passengers as the reference image. Show the painterly brushwork and each passenger's translucent head-bubble dissolving away across the whole frame at once, resolving into sharp cinematic photography of the same row of real passengers — phones now ordinary, ungrouped by any bubble, cool anamorphic film grain settling in. A single continuous cross-fade across the entire image, not a hard vertical split — the world resolving from paint into photograph before the story has even properly begun. " + STYLE),
+ # the intention-setting trio — makes "set your intention" concrete instead of just naming it in
+ # the three-reasons graphic. A small, organic payoff (someone asks, she says yes) is the spark
+ # that starts the film's energy ramping toward the climax.
+ ("44-daily-pulse-intention", "16:9", None,
+  "Extreme close-up of a phone screen: the Pulse app's 'Daily Pulse' screen, a slowly spinning ring of warm gold light behind the text, header reading 'Daily Pulse,' body text reading 'Today I intend to...' above a short vertical list of gentle selectable phrases in a beautiful minimal UI. A finger taps one that reads 'Say yes, more.' Warm, calm, intentional interface design, nothing urgent about it. " + STYLE),
+ ("45-intention-ring-pulse", "16:9", None,
+  "Extreme close-up on a woman's hand wearing a wide polished gold ring, the ring giving one small, warm pulse of soft golden light — the exact instant an intention locks in, confirmed. " + RIPPLE + STYLE),
+ ("46-intention-payoff-yes", "16:9", None,
+  "A woman at her desk in a bright office, a colleague leaning into the doorway mid-question, casual and ordinary. She looks up from her work and answers with an easy, unguarded smile — a small 'yes' that costs her nothing, warm morning light, the first quiet spark of energy in her day. " + STYLE),
+ # the climax match-cut vignettes — a wider range of peak-experience emotions (triumph,
+ # grief-relief, awe, joy) all cut together on the exact same beat: eyes closing, one exhale,
+ # the body settling into presence. Widens Act III without breaking its rhythm.
+ ("47-peak-runner-finish", "16:9", None,
+  "A marathon runner crossing a finish line at golden hour, arms thrown up in triumph, ribbon breaking across her chest — then, in the same motion, her arms beginning to drop, her eyes closing, one long exhale, triumph settling into stillness. Cinematic, warm, real sweat and real light. " + STYLE),
+ ("48-peak-grandmother-photo", "16:9", None,
+  "An elderly woman at a kitchen table looking at an old photograph in her hands, one tear on her cheek — then her eyes closing, a slow exhale, a small smile breaking through. Grief and relief in the same instant, warm afternoon light through a nearby window. " + STYLE),
+ ("49-peak-surfer-wave", "16:9", None,
+  "A surfer emerging from inside a breaking wave, board steady beneath her, spray catching the light — then, for one beat, going completely still: eyes closing, a breath released, before the next swell arrives. Awe held in the body. " + STYLE),
+ ("50-peak-friends-laughing", "16:9", None,
+  "Two old friends at a small table, mid-laugh at a shared joke, genuine and unguarded — the laughter settling into a comfortable silence, eyes meeting instead of closing this time, warm and easy. Joy resolving into intimacy. " + STYLE),
 ]
 
 def build_gallery():
