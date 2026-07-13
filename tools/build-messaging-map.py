@@ -85,6 +85,7 @@ core=[
  {"k":"The wedge","v":cons.get("wedge","")},
  {"k":"The promise","v":"Make the most of the movie of your life — the same footage, at the speed of being here."},
  {"k":"The offer","v":cons.get("offer","")},
+ {"k":"The ritual (new, 2026-07-12)","v":"Pulse is a verb. The ring sends a vibration; the Pulse is the ritual of presence that follows. The ritual can look like breath, focus, feeling fully, appreciation, intimacy, or creativity — surrender, honesty and courage are held back pending advisory-board review (persona research flagged them as Seeker-specific, at risk of overreach in mass copy). Rate this to weigh in."},
  {"k":"The feeling arc","v":"Numb → Seen → Hopeful → Convinced → Relieved → Grateful → Generous."},
  {"k":"The voice","v":"Present tense, second person, one breath per sentence. Invite, never instruct. No exclamation points."},
  {"k":"Canon lines","v":"When would now be a good time? · Be Here WOW"},

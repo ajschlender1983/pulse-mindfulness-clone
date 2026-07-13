@@ -4,10 +4,16 @@ Pulse — real motion videos via Veo 3.1 (image-to-video), one per motion "foot"
 Replaces the ffmpeg Ken-Burns fakes with actual generated video that obeys each rule:
   photograph  — handheld cell-phone motion, the subject alive
   illustration — Disney MULTIPLANE parallax: depth layers move at different speeds so the
-                 2D artwork reveals its 3D space; characters alive and dimensional
-  transition  — illustration resolving into live photograph, timed like a breath (the pulse)
+                 2D artwork reveals its 3D space; characters alive and dimensional; composed,
+                 dreamlike, never handheld — this is illustration once it has SETTLED
+  churn       — the illustration foot's cold/blue distracted variant ONLY: frantic, ADHD,
+                sweeping, seeking camera with a stop-motion stutter, never settling. Never use
+                on the sync/field-of-light — those stay on the composed illustration rule.
+  transition  — illustration resolving into live photograph on a push-in/pull-out along the
+                lens axis (never a lateral pan), timed like a breath (the pulse)
 
-15 clips (5 per foot) for the "prove the look" pass. Skip-if-exists; resumable.
+18 clips (5 per photograph/illustration/transition foot + 3 churn) for the "prove the look"
+pass. Skip-if-exists; resumable.
 USAGE: python3 tools/generate-motion-veo.py [--only <id>] [--model veo-3.1-fast-generate-preview]
 Output: library/motion-rules/<foot>/<id>.mp4
 """
@@ -38,9 +44,20 @@ P_MULTIPLANE=("Animate this hand-painted illustration as a classic Disney MULTIP
  "cel-animation look fully intact; warm, unhurried, dreamlike; no cuts. {scene}")
 P_TRANSITION=("Animate a transition from illustration to photograph: the image begins as a hand-painted "
  "illustration and resolves into a warm, living photograph of the same person and the same moment — the paint "
- "settling into real skin, light and texture. Time it like one slow breath, the pulse that slows the reel: "
- "cold and fast painterly on one side easing into warm, slow, handheld-real footage. Subtle parallax and the "
- "subject quietly coming alive as the medium changes. Warm, unhurried, no hard cuts. {scene}")
+ "settling into real skin, light and texture. The camera moves on a slow PUSH-IN or PULL-OUT along the lens "
+ "axis — zooming toward or away from the seam where illustration meets photograph — never a lateral pan or "
+ "sweep. Time it like one slow breath, the pulse that slows the reel: cold and fast painterly on one side "
+ "easing into warm, slow, handheld-real footage. Subtle parallax and the subject quietly coming alive as the "
+ "medium changes. Warm, unhurried, no hard cuts. {scene}")
+P_CHURN=("Animate this hand-painted illustration with a frantic, ADHD camera — the one place the illustration "
+ "foot is allowed to lose its composure. Instead of a smooth composed glide, the camera makes big sweeping "
+ "SEARCHING swings across the depth planes: a whip-push toward one figure, then a jerk toward another before "
+ "either resolves into focus, never settling into a held, composed frame. Give the movement a STOP-MOTION "
+ "stutter — small held beats between the swings rather than one continuous glide, like the camera itself can't "
+ "decide where to look. Still real multiplane depth (foreground/midground/background genuinely separate and "
+ "gliding at different speeds) and the same painterly gouache cel-animation look — this is NOT handheld "
+ "photography, it's illustration that can't sit still. Cold, steel-blue, desaturated, dreamlike but restless "
+ "and scattered, never landing. No cuts, no text, no logos. {scene}")
 
 # (foot, id, source_image, scene-detail)
 JOBS=[
@@ -62,8 +79,12 @@ JOBS=[
  ("transition","tr-veo-03","library/avatar-spectrum/avatar-09-spectrum.png","An older woman in a bright pottery studio."),
  ("transition","tr-veo-04","library/avatar-spectrum/avatar-14-spectrum.png","A barista behind a sunlit counter."),
  ("transition","tr-veo-05","library/avatar-spectrum/avatar-18-spectrum.png","A young graduate in a bright room."),
+ # churn foot — frantic ADHD camera, cold/blue distracted state only, from the film's churn stills
+ ("churn","ch-veo-01","journey-images/film-18-churn-montage.png","A painted multiplane world of scattered distraction: a train car of downturned faces, a father scrolling at a dinner table, a couple lit by phone-glow in bed, a crosswalk crowd with every head down."),
+ ("churn","ch-veo-02","journey-images/film-19-churn-waiting-room.png","A full waiting room at dusk, every face lit by a phone, not one looking up."),
+ ("churn","ch-veo-03","journey-images/film-20-churn-recital.png","A child dancing on a small stage to a wall of raised phones and tablets, filming instead of watching."),
 ]
-PROMPT={"photograph":P_HANDHELD,"illustration":P_MULTIPLANE,"transition":P_TRANSITION}
+PROMPT={"photograph":P_HANDHELD,"illustration":P_MULTIPLANE,"transition":P_TRANSITION,"churn":P_CHURN}
 
 def main():
     a=sys.argv[1:]

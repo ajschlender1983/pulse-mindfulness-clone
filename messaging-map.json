@@ -364,6 +364,10 @@
    "v": "Lead with restraint and an unconditional return, never arithmetic. Spine: \"Wear it a month. If it isn't for you, send it back \u2014 no reason needed, no questions.\" The guarantee grades nothing: asking a wearer to certify presence would reinstall the scorecard the ring refuses. Frame the $200 as paying for restraint, not utility \u2014 \"The one thing you'll ever own that keeps no score of you,\" with \"for the cost of one nice dinner\" as a quiet frame beneath it, never an argument. Keep ROI and reclaimable-hours math out of the hero; that number stays downstream and gentle, never a grade. Proof = real wearers' anonymous before/after words \u2014 the only number we'd trust, so the only one we sell."
   },
   {
+   "k": "The ritual (new, 2026-07-12)",
+   "v": "Pulse is a verb. The ring sends a vibration; the Pulse is the ritual of presence that follows. The ritual can look like breath, focus, feeling fully, appreciation, intimacy, or creativity \u2014 surrender, honesty and courage are held back pending advisory-board review (persona research flagged them as Seeker-specific, at risk of overreach in mass copy). Rate this to weigh in."
+  },
+  {
    "k": "The feeling arc",
    "v": "Numb \u2192 Seen \u2192 Hopeful \u2192 Convinced \u2192 Relieved \u2192 Grateful \u2192 Generous."
   },
@@ -480,7 +484,7 @@
  "counts": {
   "current": 40,
   "new": 36,
-  "core": 8,
+  "core": 9,
   "hierarchy": 5,
   "guardrails": 18
  }
