@@ -190,6 +190,11 @@ FRAMES = [
   "A macro product shot of a gold ring exploded into its layers, each piece suspended in space with precise gaps between them — the outer polished gold band, the inner mechanism, and at the exact center, a small glowing component pulsing warm orange-gold light. This is the literal source of the ring's ripple, visible for the first time. Extremely clean, near-black background, studio product photography, beautiful and precise. No text, no logos, no watermark."),
  ("52-ring-charging", "16:9", None,
   "A macro product shot of a gold ring resting in a minimal circular charging dock on a dark surface, a soft warm light glowing steadily at its base as it charges. Extremely clean, near-black background, studio product photography, calm and quiet. No text, no logos, no watermark."),
+ # the softening — a second payoff for the intention-setting arc, from the opposite direction:
+ # instead of presence inviting a yes, it catches someone a half-second before they'd have said
+ # something sharp. Demonstrates the "soften" ritual word and "the magical serendipity of timing."
+ ("53-the-softening", "16:9", None,
+  "Two people mid-disagreement in a warm kitchen, voices clearly rising, caught in a real moment of tension — his mouth is open, jaw set, about to say something sharp, when his hand instinctively goes toward his other wrist where a gold ring sits, a small warm pulse of light visible on it. His expression is already softening, the anger draining out of his face before the words come, replaced by something gentler. Cinematic, real, emotionally specific — not staged-looking. " + STYLE),
 ]
 
 def build_gallery():
