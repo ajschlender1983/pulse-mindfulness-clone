@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pulse — Councils Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --warm:#F9F6E5; --warm-2:#F4EFDD; --cream:#EBE7D4; --ink:#1A1C22; --brown:#423D32;
+    --muted:#6E6857; --faint:#8a8578; --lime:#E3F47D; --honey:#A67C00; --honey-deep:#7A5C00; --gold:#C9A227;
+    --green:#2e7d5b; --amber:#c08a2d; --red:#b0403a;
+    --line:rgba(26,28,34,.14); --font:"DM Sans",sans-serif; --mono:"DM Mono",monospace; --serif:"Fraunces",serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{ font-family:var(--font); background:var(--warm); color:var(--ink); -webkit-font-smoothing:antialiased; line-height:1.55; }
+  .wrap{ max-width:1000px; margin:0 auto; padding:56px 40px 90px; }
+  .eyebrow{ font-family:var(--mono); font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--honey); }
+  h1{ font-family:var(--serif); font-weight:400; font-size:54px; letter-spacing:-.02em; margin:.15em 0; }
+  h2{ font-family:var(--serif); font-weight:400; font-size:32px; letter-spacing:-.02em; margin:8px 0; }
+  h3{ font-family:var(--serif); font-weight:400; font-size:23px; margin:2px 0; }
+  .sub{ color:var(--muted); font-size:17px; max-width:70ch; }
+  .note{ background:rgba(227,244,125,.5); border:1px dashed var(--honey-deep); border-radius:12px; padding:16px 20px; font-size:14.5px; color:var(--honey-deep); margin:22px 0; font-family:var(--mono); line-height:1.6; }
+  .band{ display:flex; align-items:center; gap:20px; border-top:2px solid var(--ink); margin:52px 0 8px; padding-top:16px; }
+  .band .n{ font-family:var(--mono); font-size:12px; letter-spacing:.18em; color:var(--honey); text-transform:uppercase; }
+  .roster{ display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 8px; }
+  .pill{ font-family:var(--mono); font-size:11.5px; letter-spacing:.04em; padding:5px 11px; border-radius:100px; border:1px solid var(--line); background:var(--warm-2); color:var(--brown); }
+  .bright{ background:var(--warm-2); border:1px solid var(--line); border-left:3px solid var(--gold); border-radius:12px; padding:18px 22px; margin:18px 0; }
+  .bright ul{ margin:8px 0 0 18px; } .bright li{ margin:6px 0; }
+  .adv{ border:1px solid var(--line); border-radius:16px; padding:22px 24px; margin:16px 0; background:#fff; }
+  .adv .who{ display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
+  .adv .who b{ font-family:var(--serif); font-size:22px; font-weight:400; }
+  .adv .lens{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--honey); }
+  .adv .verdict{ margin-left:auto; font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.06em; padding:3px 11px; border-radius:100px; }
+  .v-sy{ background:#dcefe6; color:var(--green);} .v-nm{ background:#f2e4c8; color:var(--amber);} .v-sn{ background:#f3dcda; color:var(--red);}
+  .adv p{ margin:12px 0 0; font-size:15px; }
+  .adv .row{ margin-top:12px; font-size:14px; } .adv .row .k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); display:block; margin-bottom:2px; }
+  .cols{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .score{ display:flex; align-items:center; gap:22px; background:var(--ink); color:var(--warm); border-radius:16px; padding:22px 26px; margin:20px 0; }
+  .score .num{ font-family:var(--serif); font-size:60px; line-height:1; color:var(--gold); }
+  .score .num small{ font-size:20px; color:#cfc9b8; }
+  table{ width:100%; border-collapse:collapse; margin:14px 0; font-size:14px; }
+  th,td{ text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th{ font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+  .clash{ background:var(--warm-2); border:1px solid var(--line); border-radius:12px; padding:16px 20px; margin:14px 0; font-size:15px; }
+  .rec{ border-left:3px solid var(--gold); padding-left:16px; margin:14px 0; font-size:16px; }
+  .foot{ margin-top:50px; padding-top:16px; border-top:1px solid var(--line); font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--faint); text-transform:uppercase; }
+  b.hl{ color:var(--honey-deep); font-weight:600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Advisory Councils · Confidential</div>
+  <h1>The Pulse raise, pressure-tested.</h1>
+  <p class="sub">Both decks run through two advisory boards — the Fundraising Board (would this get funded, and on what terms) and the Brand Council (is the story remarkable). Reviewed 2026-07-14.</p>
+
+  <div class="note">⚠ PROVISIONAL. The fundraising deck's raise ask, valuation, use-of-proceeds split, investor targets, Pulse Plus price, and V2 customer-feedback specifics are still citron placeholders pending the call transcripts. The board reviewed the <b>narrative, strategy, market, traction, and platform thesis</b> — the fundability score and terms below firm up once the numbers land. Re-run after filling the deck.</div>
+
+  <!-- ================= FUNDRAISING BOARD ================= -->
+  <div class="band"><span class="n">Board 01 · The Fundraising Board</span></div>
+  <div class="roster">
+    <span class="pill">Marc Andreessen — market &amp; inevitability</span>
+    <span class="pill">Elon Musk — physics &amp; unit-cost</span>
+    <span class="pill">Naval Ravikant — founder &amp; leverage</span>
+    <span class="pill">Chamath — unit economics &amp; macro</span>
+    <span class="pill">★ Will Ahmed (Whoop) — wellness-hardware &amp; the subscription ladder</span>
+  </div>
+  <p class="sub" style="margin-top:10px;">5th seat: <b>Will Ahmed</b>, founder/CEO of Whoop — seated because he built the exact hardware→subscription→platform ladder Pulse is copying, and stresses its weakest dimensions: subscription attach, hardware execution, and whether the EEG is real.</p>
+
+  <div class="bright">
+    <b class="hl">Bright spots (protect these)</b>
+    <ul>
+      <li><b>A real installed base, not a pitch.</b> 4,000 paid + 12,000 reservations in a category where everyone else has downloads that churn by day 15. "Raising ahead" is a credible frame <i>because</i> there's a batch to sell through.</li>
+      <li><b>The wedge is genuinely ownable.</b> "A pulse, not a ping" in a physical object, in a category sold as software — top-decile positioning, and the retention white space is real.</li>
+      <li><b>The honesty slide is a weapon.</b> Naming "RFID is the wedge, not the moat" before an investor does is disarming and rare. Keep it.</li>
+      <li><b>The platform ambition has a real analog.</b> Whoop/Oura proved hardware→subscription; Oura's 800+ integrations prove the ingredient-brand layer. The ladder is legible.</li>
+    </ul>
+  </div>
+
+  <div class="adv">
+    <div class="who"><b>Andreessen</b> <span class="lens">market &amp; why-now</span> <span class="verdict v-nm">Needs More</span></div>
+    <p>The $6.8T wellness / lie-down TAM slide is your best one — go bigger on it, earlier. But you're pitching two companies: a lovely $200 ring and an "Intel Inside for wellness" biometrics platform. I fund the second. Right now the platform is one stretch section; if that's the real company, it should run the whole deck, with the ring as the wedge that gets you there.</p>
+    <div class="cols">
+      <div class="row"><span class="k">What I'd need to see</span>a credible path to a category-defining outcome: the platform as the thesis, with a believable route to 1M+ paying subscribers, not a nice hardware business.</div>
+      <div class="row"><span class="k">On what terms</span>a priced round I'd co-lead only if the platform is the story and the ask matches an 18-month milestone to prove the SDK pulls partners. <b class="hl">[fill the ask]</b></div>
+    </div>
+    <div class="row"><span class="k">Come back to me when</span>the deck leads with the biometrics platform and shows one partner already pulling.</div>
+  </div>
+
+  <div class="adv">
+    <div class="who"><b>Musk</b> <span class="lens">first-principles &amp; unit-cost</span> <span class="verdict v-sn">Soft No (operator gate)</span></div>
+    <p>Be honest about the physics. "Far-field EEG in a pillow" as most people will read it — brainwaves at a distance, through hair — is not real at microvolt scale; the deck's own guardrail note admits it. Good. But then the whole Pillow rests on textile EEG signal quality you have not shown me. I don't want a render of a pillow. I want a scope trace: your textile electrode vs. a Muse, at rest, same subject. Do the hard part first. And a passive NFC tap is not a moat — you already say so; so where is <i>your</i> hard thing? The ring is an ODM part with a chip in it.</p>
+    <div class="cols">
+      <div class="row"><span class="k">What I'd need to see</span>a working textile-EEG signal-quality demo vs. a Muse baseline; a ring BOM you can defend; the actual thing, built.</div>
+      <div class="row"><span class="k">On what terms</span>I don't write this check. Earn it by shipping a Pillow that captures a clean signal — then the platform claim is real, not a slide.</div>
+    </div>
+    <div class="row"><span class="k">Come back to me when</span>you can hand me a pillow and I see my own alpha waves on it.</div>
+  </div>
+
+  <div class="adv">
+    <div class="who"><b>Naval</b> <span class="lens">founder &amp; leverage</span> <span class="verdict v-nm">Needs More</span></div>
+    <p>The leverage story is the SDK — code and media, the good kind. A biometrics layer other people build on scales while you sleep; a pillow you ship one at a time does not. But the deck buries the SDK in the Pillow section. That's the whole non-permissioned-leverage play. Also: who is the founder, and why them? The team slide is a placeholder. I invest in lines, not dots — show me this team has shipped hardware + software + a community before, or I can't underwrite the ambition.</p>
+    <div class="cols">
+      <div class="row"><span class="k">What I'd need to see</span>the "why you/why this team" made concrete, and the SDK reframed as the leverage thesis, not a pillow feature.</div>
+      <div class="row"><span class="k">On what terms</span>a fast angel/seed check on founder conviction + the existing base — my stage, if the team answers "why you." <b class="hl">[fill founder]</b></div>
+    </div>
+    <div class="row"><span class="k">Come back to me when</span>the team slide is real and the SDK is the headline, not the footnote.</div>
+  </div>
+
+  <div class="adv">
+    <div class="who"><b>Chamath</b> <span class="lens">unit economics &amp; macro</span> <span class="verdict v-sn">Soft No (until numbers)</span></div>
+    <p>Let me be very clear: I can't underwrite a deck with citron boxes where the economics go. Give me the fully-loaded ring CAC, the gross margin after returns, the Pulse Plus price and <i>attach rate</i>, and the payback. The whole raise rests on "the subscription is the engine" — so show me one cohort where the attach and payback actually compound, or it's a hardware company priced like software. And there's a ghost in this deck: the "resolution program," 4,000 customers being <i>re-won</i> after delays, an attorney/lawsuit cohort. That's a real de-risking story if you tell it — and a landmine if an investor finds it in diligence instead of on your slide.</p>
+    <div class="cols">
+      <div class="row"><span class="k">What I'd need to see</span>real unit economics: CAC, gross margin ≥ hardware-healthy, Pulse Plus attach + payback &lt; ~12mo on one cohort; and the delays/lawsuit history addressed head-on.</div>
+      <div class="row"><span class="k">On what terms</span>metrics-gated; nothing until the economics are on the slide, then a larger, later check. <b class="hl">[fill economics]</b></div>
+    </div>
+    <div class="row"><span class="k">Come back to me when</span>Pulse Plus attach + payback are proven on real cohort data and the resolution story is on-slide.</div>
+  </div>
+
+  <div class="adv">
+    <div class="who"><b>Will Ahmed</b> <span class="lens">wellness-hardware · the ladder (5th seat)</span> <span class="verdict v-sy">Soft Yes</span></div>
+    <p>This is the closest thing to what we built at Whoop that I've seen framed correctly — hardware as the door, subscription as the business. You're right that the membership is the company. But three hard truths from living it: (1) hardware execution will nearly kill you — the delays you already had are the tell; batch two has to be flawless. (2) Subscription attach on a <i>calm, anti-data</i> product is harder than on a data product like ours — people subscribe to Whoop <i>for</i> the numbers; Pulse deliberately refuses them, so what exactly does Pulse Plus sell that a wearer re-pays for monthly? Answer that and you have a business. (3) The Pillow + SDK is the right platform instinct, but ingredient-brand pull is chicken-and-egg — no partner integrates until you have consumer demand. Use the ring's installed base as the demand that earns the first 2–3 venue LOIs.</p>
+    <div class="cols">
+      <div class="row"><span class="k">What I'd need to see</span>a crisp answer to "why do people re-pay for Pulse Plus on an anti-data product," plus 2–3 signed lie-down-venue LOIs and a clean batch-two execution plan.</div>
+      <div class="row"><span class="k">On what terms</span>the warm seat — I'd invest and open wellness-channel doors if the subscription-attach thesis and one Pillow signal demo hold up.</div>
+    </div>
+    <div class="row"><span class="k">Come back to me when</span>Pulse Plus has a re-pay reason that survives the "no data" doctrine, and one venue has signed.</div>
+  </div>
+
+  <div class="clash"><b class="hl">Where they agree:</b> the installed base + wedge are real; the <b>subscription is the actual company</b> (all five), and it is under-argued in the deck; and the two credibility risks (RFID-not-a-moat, EEG-fidelity) must be met head-on — which the deck already starts to do.</div>
+  <div class="clash"><b class="hl">Where they clash:</b> <b>Andreessen vs. Chamath/Ahmed on what to sell</b> — Marc wants the platform to run the whole deck and go huge; Chamath and Ahmed want the boring proof (attach, payback, batch-two execution) before any platform story. And <b>Musk vs. the room on the Pillow</b> — Musk says no EEG signal demo, no company; Ahmed says the Pillow is the right <i>instinct</i> even before the signal is perfect, because the ring de-risks it.</div>
+
+  <p style="margin-top:18px;"><b class="hl">Champion read:</b> <b>Will Ahmed is the one warm seat</b> — the only advisor whose actual experience fits the ladder and who values the platform instinct. Naval is a possible second on founder conviction once the team slide is real. Andreessen champions the <i>ambition</i>, not the deal as drawn. <b>No champion for the round until the economics and the "why re-pay for Pulse Plus" answer exist</b> — a credible "not yet."</p>
+
+  <p style="margin-top:14px;"><b class="hl">Pre-mortem (it's 2029, the raise failed):</b> the deck raised on the beautiful platform vision, batch two slipped again, Pulse Plus attach came in single digits because an anti-data product gave people little to re-pay for, the Pillow's textile EEG never beat a Muse in the wild, and the "every venue is a partner" TAM never converted a single signed venue. It became a lovely ring company that raised at a platform price it couldn't grow into.</p>
+
+  <div class="score">
+    <div class="num">~48<small>/100</small></div>
+    <div>
+      <div style="font-family:var(--serif); font-size:20px;">Fundable with conditions — <span style="color:var(--gold);">provisional</span></div>
+      <div style="color:#cfc9b8; font-size:13.5px; margin-top:4px; font-family:var(--mono);">Real traction + a real wedge + one warm seat, held back by missing economics, the EEG-fidelity risk, and no re-pay reason for the subscription. Firms up (up or down) once the citron numbers land.</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:24px;">🎯 Return-to-Raise — what flips the votes</h3>
+  <table>
+    <tr><th>Prove this (checkable)</th><th>Flips</th><th>To</th></tr>
+    <tr><td>Pulse Plus <b>price + attach + payback &lt;~12mo</b> on one real cohort</td><td>Chamath, Ahmed</td><td>the metrics-gated check; the subscription thesis becomes real</td></tr>
+    <tr><td>A one-line, believable answer to <b>"why re-pay for Pulse Plus on an anti-data product"</b></td><td>Ahmed → champion; Godin loves it too</td><td>the whole business case</td></tr>
+    <tr><td>A <b>textile-EEG signal demo vs. a Muse baseline</b> (not a render)</td><td>Musk (respect), de-risks all</td><td>the Pillow platform claim becomes credible</td></tr>
+    <tr><td><b>2–3 signed lie-down-venue LOIs</b> using the ring's installed base as demand</td><td>Ahmed, Andreessen</td><td>the ingredient-brand GTM stops being a slide</td></tr>
+    <tr><td>The <b>team slide</b> + the <b>delays/lawsuit story</b> told head-on</td><td>Naval, Chamath</td><td>underwritable founder + de-risked history</td></tr>
+    <tr><td>Fill the <b>raise ask, valuation, use-of-proceeds</b> tied to the above milestones</td><td>all</td><td>a deck a board can actually vote on</td></tr>
+  </table>
+
+  <div class="rec"><b class="hl">Board recommendation:</b> don't send this as a platform raise yet — it will get priced as a ring company by anyone who does diligence, because the economics and the re-pay reason aren't on the page. Lead with the platform (Andreessen), but earn it with the boring proof (Chamath/Ahmed): fill the numbers, add the "why re-pay" slide, get one Pillow signal demo and 2–3 venue LOIs, and tell the resolution story on your terms. Raise first from <b>wellness-channel strategic capital</b> (Ahmed-type operators who open venue doors), not generalist hyperscale VCs — the strategic-partner framing from the call is exactly right; make each investor also a distribution door for the Pillow.</div>
+
+  <!-- ================= BRAND COUNCIL ================= -->
+  <div class="band"><span class="n">Board 02 · The Brand Council — storytelling</span></div>
+  <div class="roster">
+    <span class="pill">Hormozi — offer &amp; value equation</span>
+    <span class="pill">Godin — remarkable &amp; the tribe</span>
+    <span class="pill">Watts — presence &amp; meaning</span>
+    <span class="pill">Jobs — simplicity &amp; the experience</span>
+    <span class="pill">Sutherland — perceived value</span>
+  </div>
+
+  <div class="adv">
+    <div class="who"><b>Hormozi</b> <span class="lens">offer &amp; value equation</span></div>
+    <p>The investor deck has no <i>offer</i> for the investor. Founders forget investors buy too. What's the guaranteed-ish outcome, the risk-reversal, the "here's exactly what your money buys and by when"? Your use-of-proceeds slide is a citron box — that <i>is</i> the offer. Make it concrete: "$X buys these four milestones in 18 months, and here's the one that unlocks the A." And on the product: your consumer offer (one-month unconditional return) is gorgeous — steal that energy for the raise.</p>
+  </div>
+  <div class="adv">
+    <div class="who"><b>Godin</b> <span class="lens">remarkable &amp; the tribe</span></div>
+    <p>The remarkable thing is "the ring that refuses to measure you" — and the fundraising deck almost talks itself out of it by leaning into stats and platform TAM. That's fine for investors, but don't lose the purple cow: the reason 4,000 people paid is the refusal, not the roadmap. Put the refusal back at the emotional center, then let the platform be how it scales. Also: "every brand where you lie down is a partner" is a genuinely remarkable line — that's your headline, not a slide-14 subhead.</p>
+  </div>
+  <div class="adv">
+    <div class="who"><b>Watts</b> <span class="lens">presence &amp; meaning</span></div>
+    <p>Careful. The moment Pulse becomes a "biometrics platform that reads your brainwaves," it risks handing the wearer back the very scoreboard the ring freed them from. The Pillow slide says "still asks nothing of you" — good, protect that with your life. The deep story is that Pulse measures so <i>you</i> don't have to — the data serves the calm, it isn't the point. Say that, or the soul quietly leaks out through the EEG.</p>
+  </div>
+  <div class="adv">
+    <div class="who"><b>Jobs</b> <span class="lens">simplicity &amp; the experience</span></div>
+    <p>Two decks, one sentence each. The product deck has it: "a pulse, not a ping." The raise deck doesn't — "raising ahead of the sell-through" is a mechanic, not a meaning. What is this company in one line? I'd argue it's <i>"the calm layer for the whole wellness world."</i> Lead with that, delete a third of the words on the busy slides, and let the traction and the platform be the proof beneath one idea, not four competing ones.</p>
+  </div>
+  <div class="adv">
+    <div class="who"><b>Sutherland</b> <span class="lens">perceived value</span></div>
+    <p>The "anti-data" stance is your pricing power — don't let the investor deck apologize for it with a wall of numbers. Reframe the EEG not as "more data" but as <i>the one measurement that finally buys you the right to stop measuring</i> — the Pillow reads you so you never have to check. That reframe justifies the platform to investors <i>and</i> keeps the brand intact. And "raising ahead" is a status signal — you're not desperate, you're early. Lean into that; it makes the round feel scarce.</p>
+  </div>
+
+  <div class="clash"><b class="hl">Council agreement:</b> the raise deck is strong on proof but has drifted from the <b>one idea</b> that makes Pulse remarkable — the refusal to measure. Put the soul back at the center and let the platform be <i>how the calm scales</i>, not a competing story.</div>
+
+  <div class="rec"><b class="hl">Brand Council recommendation — the storytelling fixes:</b>
+    <ol style="margin:8px 0 0 20px; font-size:15px;">
+      <li><b>Give the raise deck one sentence</b> (Jobs): "the calm layer for the whole wellness world," on the cover, above "raising ahead."</li>
+      <li><b>Reframe the EEG as permission, not data</b> (Sutherland/Watts): "the one measurement that buys you the right to stop measuring." Add it to the Pillow slide.</li>
+      <li><b>Promote the partnership line</b> (Godin): "every brand where you lie down becomes a partner" earns a bigger moment.</li>
+      <li><b>Make use-of-proceeds a real offer</b> (Hormozi): $X → four dated milestones → the one that unlocks the next round.</li>
+      <li><b>Protect the refusal</b> (all): keep "still asks nothing of you" as a load-bearing promise, not a reassurance.</li>
+    </ol>
+  </div>
+
+  <div class="note" style="background:var(--warm-2); border-style:solid; color:var(--brown);">
+    <b>Applied to the decks now (transcript-independent):</b> the honesty/moat slide, the EEG credibility guardrail, and the "asks nothing of you" promise are already in. <b>Deferred until you're back / transcripts land:</b> the one-sentence cover line, the EEG-as-permission reframe, promoting the partnership line, and the use-of-proceeds-as-offer slide — these are quick edits I'll apply once you confirm the sentence and the numbers.
+  </div>
+
+  <div class="foot">Pulse · Councils Review · synthesis / roleplay pressure-test, not investment advice · re-run after the deck numbers are filled</div>
+</div>
+</body>
+</html>

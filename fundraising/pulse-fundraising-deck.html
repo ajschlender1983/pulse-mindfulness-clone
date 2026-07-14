@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pulse — The Raise</title>
+<meta name="description" content="Pulse — raising ahead of the sell-through, for v2 and the platform beneath it." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#EBE7D4; --warm:#F9F6E5; --warm-2:#F4EFDD; --paper:#FBF9EF;
+    --ink:#1A1C22; --brown:#423D32; --muted:#6E6857; --faint:#8a8578;
+    --lime:#E3F47D; --honey:#A67C00; --honey-deep:#7A5C00; --gold:#C9A227;
+    --line:rgba(26,28,34,.14); --line-strong:rgba(26,28,34,.24);
+    --font:"DM Sans",sans-serif; --mono:"DM Mono",monospace; --serif:"Fraunces",serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-snap-type:y proximity; scroll-behavior:smooth;}
+  body{ font-family:var(--font); background:#0e0c1a; color:var(--ink);
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    display:flex; flex-direction:column; align-items:center; gap:26px; padding:34px 0 90px; }
+  .slide{ position:relative; width:1280px; height:720px; overflow:hidden;
+    border-radius:14px; box-shadow:0 40px 90px rgba(0,0,0,.5);
+    scroll-snap-align:center; flex:0 0 auto; letter-spacing:-0.018em; }
+  .warm{ background:var(--warm); color:var(--ink); }
+  .deep{ background:var(--ink); color:var(--warm); }
+  .bleed{ position:absolute; inset:0; background-size:cover; background-position:center; }
+  .scrim{ position:absolute; inset:0; }
+  .scrim.warm-left{ background:linear-gradient(90deg, rgba(249,246,229,.98) 0%, rgba(249,246,229,.82) 40%, rgba(249,246,229,.20) 100%); }
+  .scrim.warm-bottom{ background:linear-gradient(0deg, rgba(249,246,229,.98) 6%, rgba(249,246,229,.55) 48%, rgba(249,246,229,.08) 100%); }
+  .scrim.deep-bottom{ background:linear-gradient(0deg, rgba(26,28,34,.95) 6%, rgba(26,28,34,.55) 50%, rgba(26,28,34,.10) 100%); }
+  .scrim.deep-left{ background:linear-gradient(90deg, rgba(26,28,34,.96) 0%, rgba(26,28,34,.78) 44%, rgba(26,28,34,.20) 100%); }
+  .grain{ position:absolute; inset:0; opacity:.05; mix-blend-mode:overlay; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .pad{ position:absolute; inset:0; padding:66px 80px; display:flex; flex-direction:column; }
+  .eyebrow{ font-family:var(--mono); font-size:12.5px; letter-spacing:.22em; text-transform:uppercase; display:flex; align-items:center; gap:12px; color:var(--honey); }
+  .eyebrow .dot{ width:9px; height:9px; border-radius:50%; display:inline-block; background:var(--honey); }
+  .deep .eyebrow{ color:var(--gold);} .deep .eyebrow .dot{ background:var(--gold);}
+  h1,h2,h3,h4{ font-family:var(--serif); font-weight:400; letter-spacing:-0.025em; text-wrap:balance; }
+  .display{ font-size:104px; line-height:.92; }
+  .kicker{ font-size:60px; line-height:1.0; }
+  .head{ font-size:42px; line-height:1.05; }
+  .head-sm{ font-size:32px; line-height:1.08; }
+  .sub{ font-size:24px; line-height:1.14; }
+  .serif-it{ font-style:italic; }
+  .lede{ font-size:19px; line-height:1.5; color:var(--brown); max-width:60ch; }
+  .deep .lede{ color:#d9d3c0; }
+  .body{ font-size:16px; line-height:1.58; color:var(--brown); }
+  .deep .body{ color:#cfc9b8; }
+  .rule{ width:88px; height:2px; background:var(--line-strong); margin:22px 0; }
+  .deep .rule{ background:rgba(249,246,229,.3); }
+  .foot{ position:absolute; left:80px; right:80px; bottom:36px; display:flex; justify-content:space-between;
+    font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--faint); }
+  .deep .foot{ color:#8a8578; }
+  .mt-auto{ margin-top:auto; }
+  .cols{ display:grid; gap:18px; }
+  .card{ border-radius:16px; padding:22px 22px 24px; background:var(--warm-2); border:1px solid var(--line); }
+  .deep .card{ background:#22242c; border-color:rgba(249,246,229,.12); }
+  .card .k{ font-family:var(--mono); font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--honey); margin-bottom:10px; }
+  .card h4{ font-family:var(--font); font-weight:600; font-size:17px; letter-spacing:-0.02em; margin-bottom:7px; }
+  .card p{ font-size:14px; line-height:1.5; color:var(--brown); }
+  .deep .card p{ color:#cfc9b8; } .deep .card h4{ color:var(--warm);}
+  .chip{ width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-family:var(--serif); font-size:17px; margin-bottom:14px; background:var(--gold); color:var(--ink); }
+  .band{ background:var(--lime); color:var(--ink); border-radius:16px; padding:20px 28px;
+    font-family:var(--serif); font-size:25px; letter-spacing:-0.02em; line-height:1.22; }
+  .band b{ color:var(--honey-deep); font-weight:500; }
+  .compare{ display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+  .compare .colh{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); padding-bottom:12px; border-bottom:1px solid var(--line); margin-bottom:4px; }
+  .crow{ display:flex; align-items:center; gap:12px; padding:11px 0; border-bottom:1px solid var(--line); font-size:16px; }
+  .yes{ color:var(--honey); font-weight:600; } .no{ color:var(--muted); font-weight:600; }
+  .stats{ display:grid; gap:24px; align-items:start; }
+  .stat .n{ font-family:var(--serif); font-weight:300; font-size:58px; line-height:.9; letter-spacing:-0.03em; color:var(--honey-deep); }
+  .deep .stat .n{ color:var(--gold); }
+  .stat .l{ font-size:13px; line-height:1.4; color:var(--brown); margin-top:7px; }
+  .deep .stat .l{ color:#cfc9b8; }
+  .flow{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .flow .node{ font-family:var(--mono); font-size:13px; letter-spacing:.1em; text-transform:uppercase; padding:13px 18px; border:1px solid var(--line-strong); border-radius:100px; color:var(--ink); background:var(--warm-2); }
+  .deep .flow .node{ color:var(--warm); border-color:rgba(249,246,229,.25); background:#22242c; }
+  .flow .arrow{ color:var(--honey); font-size:18px; }
+  .framewrap{ position:relative; border-radius:16px; overflow:hidden; border:1px solid var(--line); box-shadow:0 26px 60px rgba(66,61,50,.20); }
+  .framewrap img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .framewrap .cap{ position:absolute; left:0; right:0; bottom:0; padding:14px 16px;
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#fff; background:linear-gradient(0deg, rgba(0,0,0,.5), transparent); }
+  .aperture{ position:relative; border-radius:50%; overflow:hidden; }
+  .aperture img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .aperture::after{ content:""; position:absolute; inset:0; border-radius:50%; box-shadow:inset 0 0 0 2px rgba(201,162,39,.7); }
+  .aphalo{ position:absolute; border-radius:50%; border:1px solid rgba(201,162,39,.3); pointer-events:none; }
+  .quote{ font-family:var(--serif); font-style:italic; font-size:21px; line-height:1.35; color:var(--ink); }
+  .deep .quote{ color:var(--warm); }
+  /* transcript placeholder — deliberately loud so nothing ships un-filled */
+  .tbd{ font-family:var(--mono); font-size:12px; letter-spacing:.06em; color:var(--honey-deep);
+    background:var(--lime); border:1px dashed var(--honey-deep); border-radius:7px; padding:2px 9px; display:inline-block; }
+  .tbd-block{ font-family:var(--mono); font-size:13px; line-height:1.6; color:var(--honey-deep);
+    background:rgba(227,244,125,.5); border:1px dashed var(--honey-deep); border-radius:12px; padding:16px 20px; }
+  .hint{ position:fixed; bottom:16px; left:50%; transform:translateX(-50%); z-index:99;
+    font-family:var(--mono); font-size:11px; letter-spacing:.14em; color:#8b86a6;
+    background:rgba(20,16,38,.7); border:1px solid rgba(255,255,255,.08); padding:7px 14px; border-radius:100px; backdrop-filter:blur(6px); }
+  @media print{
+    @page{ size:13.333in 7.5in; margin:0; }
+    html,body{ background:#fff; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ display:block; padding:0; gap:0; }
+    .slide{ display:block !important; border-radius:0; box-shadow:none; margin:0; page-break-after:always; break-after:page; }
+    .slide:last-of-type{ page-break-after:auto; }
+    .hint{ display:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 01 · COVER -->
+<section class="slide deep" id="s1">
+  <div class="bleed" style="background-image:url('../library/peak/peak-aurora.png'); opacity:.42;"></div>
+  <div class="scrim deep-bottom"></div>
+  <div class="pad">
+    <div class="eyebrow"><span class="dot"></span>Confidential · Fundraising</div>
+    <div class="mt-auto">
+      <h1 class="display" style="color:var(--warm);">pulse</h1>
+      <h2 class="head" style="color:var(--gold); margin-top:12px;">Raising ahead of the sell-through.</h2>
+      <p class="lede" style="margin-top:16px; max-width:50ch;">The ring proved the wedge. Now we raise for v2 — and the platform beneath it.</p>
+      <div class="rule"></div>
+      <div style="font-family:var(--mono); font-size:12px; color:#cfc9b8; letter-spacing:.14em;">
+        <span class="tbd">[ transcript: founder / entity / date ]</span>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>01</span></div>
+</section>
+
+<!-- 02 · THE THESIS (TL;DR) -->
+<section class="slide warm" id="s2">
+  <div class="pad">
+    <div class="eyebrow">The thesis</div>
+    <h2 class="head" style="margin-top:16px; max-width:24ch;">We were always going to sell through batch one. We have the traction. We're raising ahead.</h2>
+    <div class="lede" style="margin-top:18px; max-width:60ch;">
+      Pulse is a screen-free reset cue that already found its people. Batch-one revenue funds the
+      business we have. This raise funds the business we're building next: <b>Pulse v2</b> (an RFID
+      chip that turns the ring into a key), and the platform it unlocks — a subscription engine and a
+      biometrics layer the whole wellness world can plug into.
+    </div>
+    <div class="band mt-auto"><b>The ask:</b> <span class="tbd">[ transcript: $ raise · $ pre · instrument ]</span></div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>02</span></div>
+</section>
+
+<!-- 03 · WHY NOW (market inflection) -->
+<section class="slide deep" id="s3">
+  <div class="pad">
+    <div class="eyebrow"><span class="dot"></span>Why now</div>
+    <h2 class="head" style="color:var(--warm); margin-top:14px;">The overstimulated majority is looking for the exit.</h2>
+    <div class="cols" style="grid-template-columns:repeat(4,1fr); gap:16px; margin-top:30px;">
+      <div class="stat"><div class="n">71%</div><div class="l">of Americans experience overstimulation (85% of Gen&nbsp;Z)</div></div>
+      <div class="stat"><div class="n">+25%</div><div class="l">annual growth in "dumbphone" sales — people paying to disconnect</div></div>
+      <div class="stat"><div class="n">$699</div><div class="l">Light Phone III — 20K+ units, sold out into backlog at a premium price</div></div>
+      <div class="stat"><div class="n">$6.8T</div><div class="l">global wellness economy, → $9.8T by 2029</div></div>
+    </div>
+    <div class="lede" style="margin-top:auto; max-width:58ch; color:#d9d3c0;">
+      The market has already proven it will pay a premium to interrupt its own autopilot. Pulse is the
+      calm, ownable way in.
+    </div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise · sources in appendix</span><span>03</span></div>
+</section>
+
+<!-- 04 · THE WHITE SPACE -->
+<section class="slide warm" id="s4">
+  <div class="pad">
+    <div class="eyebrow">The white space</div>
+    <h2 class="head" style="margin-top:14px;">Everyone downloads the app. Almost no one keeps it.</h2>
+    <div class="cols" style="grid-template-columns:1.1fr 1fr; gap:44px; margin-top:26px; align-items:center;">
+      <div class="stats" style="grid-template-columns:1fr 1fr;">
+        <div class="stat"><div class="n">3.9%</div><div class="l">of meditation-app users still active by day 15</div></div>
+        <div class="stat"><div class="n">3.3%</div><div class="l">still active by day 30 — the retention cliff nobody has solved</div></div>
+      </div>
+      <div class="card" style="background:var(--lime); border:none;">
+        <div class="k" style="color:var(--honey-deep);">The precedent</div>
+        <p style="font-family:var(--serif); font-size:22px; line-height:1.25; color:var(--ink);">Beats built a $1B brand where culture beat product specs.</p>
+        <p style="margin-top:12px; font-size:14px; color:var(--brown);">A physical object you wear, in a category everyone else sells as software. That's the wedge Pulse owns.</p>
+      </div>
+    </div>
+    <div class="band mt-auto">A ring is worn, not opened. <b>Presence you don't have to remember to practice.</b></div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>04</span></div>
+</section>
+
+<!-- 05 · WHAT PULSE IS (essence) -->
+<section class="slide warm" id="s5">
+  <div class="pad" style="flex-direction:row; gap:0; padding:0;">
+    <div style="flex:1.05; padding:66px 0 66px 80px; display:flex; flex-direction:column;">
+      <div class="eyebrow">What it is</div>
+      <h2 class="head" style="margin-top:16px; max-width:16ch;">A pulse, not a ping.</h2>
+      <div class="lede" style="margin-top:16px; max-width:34ch;">
+        A smooth gold ring that taps your finger a few times an hour and hands the moment back. No
+        screen, no scores, nothing to check. Every other wearable reports on your life; Pulse gives
+        you the room you're already in.
+      </div>
+      <div class="rule"></div>
+      <div class="body" style="max-width:34ch;"><b>$200.</b> The cost of one nice dinner. 21-day battery, waterproof, unconditional one-month return.</div>
+    </div>
+    <div style="flex:1; position:relative;">
+      <div class="framewrap" style="position:absolute; inset:52px 80px 52px 20px;">
+        <img src="../assets/img/673388d00eee1494bf9d21c7_PULSE-hero-mian.avif" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>05</span></div>
+</section>
+
+<!-- 06 · TRACTION -->
+<section class="slide deep" id="s6">
+  <div class="pad">
+    <div class="eyebrow"><span class="dot"></span>Traction — the reason we can raise ahead</div>
+    <div class="cols" style="grid-template-columns:repeat(4,1fr); gap:16px; margin-top:26px;">
+      <div class="stat"><div class="n">4,000</div><div class="l">fully paid customers</div></div>
+      <div class="stat"><div class="n">12,000</div><div class="l">reservation holders in the pipeline</div></div>
+      <div class="stat"><div class="n">8+</div><div class="l">named wellness ambassadors driving proof</div></div>
+      <div class="stat"><div class="n"><span class="tbd">[ NPS ]</span></div><div class="l">30-day NPS by cohort — from the resolution program</div></div>
+    </div>
+    <div class="cols" style="grid-template-columns:1.3fr 1fr; gap:30px; margin-top:26px; align-items:start;">
+      <div class="body" style="color:#d9d3c0;">
+        <p>A real installed base, a large first-party testimonial corpus, and a white-glove customer
+        program already converting early buyers into advocates. Batch one is <b>sold and selling
+        through</b> — the raise doesn't depend on it.</p>
+      </div>
+      <div class="tbd-block">Confirm on-slide from transcript: exact paid / reservation counts, revenue to date, sell-through %, and which KPIs to show investors (avg sentiment, NPS, resolution rate).</div>
+    </div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>06</span></div>
+</section>
+
+<!-- 07 · THE RAISE THESIS -->
+<section class="slide warm" id="s7">
+  <div class="pad">
+    <div class="eyebrow">The move</div>
+    <h2 class="head" style="margin-top:14px; max-width:22ch;">Raise on the strength of batch one — to build what batch one can't fund alone.</h2>
+    <div class="cols" style="grid-template-columns:1fr 1fr; gap:24px; margin-top:26px;">
+      <div class="card"><div class="k">Batch one funds</div><h4>The business we have</h4><p>Fulfillment, the customer program, the ring's ongoing operation. Revenue we control.</p></div>
+      <div class="card"><div class="k">The raise funds</div><h4>The business we're building</h4><p>Pulse v2 (RFID), the Pulse Plus subscription engine, and the Pillow platform — the compounding layer.</p></div>
+    </div>
+    <div class="band mt-auto"><b>The ask:</b> <span class="tbd">[ transcript: $ raise · use-of-proceeds split · valuation ]</span></div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>07</span></div>
+</section>
+
+<!-- 08 · PULSE V2 (RFID) -->
+<section class="slide deep" id="s8">
+  <div class="pad">
+    <div class="eyebrow"><span class="dot"></span>Pulse v2</div>
+    <h2 class="head" style="color:var(--warm); margin-top:14px;">The same ring — now a key.</h2>
+    <div class="cols" style="grid-template-columns:repeat(3,1fr); gap:18px; margin-top:28px;">
+      <div class="card"><div class="chip">◈</div><h4>Tap to pair</h4><p>Tap the ring to the Pulse Pillow — or any partner device — and it's instantly yours. No accounts, no pairing friction.</p></div>
+      <div class="card"><div class="chip">◉</div><h4>Presence &amp; check-in</h4><p>The ring says "this is your Pulse" to any compatible reader — the basis for studio check-in, personalization, membership.</p></div>
+      <div class="card"><div class="chip">✦</div><h4>Customer feedback, applied</h4><p><span class="tbd">[ transcript: the first-batch feedback v2 fixes — fit, battery, finish, comfort ]</span></p></div>
+    </div>
+    <div class="quote mt-auto" style="color:var(--gold); max-width:52ch;">The chip is a passive tap — the low-friction wedge that makes the whole platform legible.</div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>08</span></div>
+</section>
+
+<!-- 09 · BUSINESS MODEL (the ladder) -->
+<section class="slide warm" id="s9">
+  <div class="pad">
+    <div class="eyebrow">The business model</div>
+    <h2 class="head-sm" style="margin-top:12px;">The ring is the top of the funnel. The subscription is the engine.</h2>
+    <div class="flow" style="margin-top:30px;">
+      <div class="node">Ring — $200</div><span class="arrow">→</span>
+      <div class="node">Pulse Plus — subscription</div><span class="arrow">→</span>
+      <div class="node">RFID widens the surface</div><span class="arrow">→</span>
+      <div class="node">Pillow + partners compound it</div>
+    </div>
+    <div class="cols" style="grid-template-columns:1fr 1fr; gap:30px; margin-top:30px; align-items:start;">
+      <div class="body">
+        <p>Whoop and Oura proved the pattern: hardware is the door, subscription is the business
+        (Whoop ~85% of revenue is subscription; Oura ~$1B on the same ladder). Pulse Plus is the
+        recurring engine — and every RFID-enabled partner device is a new reason to stay subscribed.</p>
+      </div>
+      <div class="card" style="background:var(--lime); border:none;">
+        <div class="k" style="color:var(--honey-deep);">Pulse Plus unlocks</div>
+        <p style="color:var(--ink); font-size:14.5px;">Pulse Journeys, double-tap, Social-Media-Addiction Mode, Family &amp; Couples Mode. <span class="tbd">[ transcript: Pulse Plus price + attach-rate assumption ]</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>09</span></div>
+</section>
+
+<!-- 10 · HONESTY SLIDE (moat) -->
+<section class="slide deep" id="s10">
+  <div class="pad">
+    <div class="eyebrow"><span class="dot"></span>Where the moat actually lives</div>
+    <h2 class="head" style="color:var(--warm); margin-top:14px;">RFID is the wedge, not the moat.</h2>
+    <div class="lede" style="margin-top:16px; max-width:60ch; color:#d9d3c0;">
+      NFC chips cost cents and sit in every phone. We say this before an investor does. Pulse's
+      defensibility lives in three places the chip only unlocks:
+    </div>
+    <div class="cols" style="grid-template-columns:repeat(3,1fr); gap:18px; margin-top:24px;">
+      <div class="card"><div class="k">01 · Ecosystem</div><h4>We own the reader side</h4><p>The Pillow and a proprietary tap-handshake partners adopt — the Disney MagicBand lesson: own the venue, not the chip.</p></div>
+      <div class="card"><div class="k">02 · Subscription</div><h4>Installed base + Pulse Plus</h4><p>The Whoop/Oura moat: recurring revenue and a base that compounds, not a component.</p></div>
+      <div class="card"><div class="k">03 · Partners</div><h4>Switching cost</h4><p>Each partner's product gets better <i>because</i> of Pulse — an Oura/Dexcom-style two-way lock-in.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>10</span></div>
+</section>
+
+<!-- 11 · USE OF PROCEEDS -->
+<section class="slide warm" id="s11">
+  <div class="pad">
+    <div class="eyebrow">Use of proceeds</div>
+    <h2 class="head-sm" style="margin-top:12px;">Weighted to v2 and the platform.</h2>
+    <div class="cols" style="grid-template-columns:1fr 1fr; gap:24px; margin-top:24px;">
+      <div class="tbd-block" style="min-height:300px;">
+        <b>[ transcript: the use-of-proceeds split ]</b><br><br>
+        Fill from the call. Expected buckets:<br>
+        • Pulse v2 tooling &amp; production (RFID)<br>
+        • Pulse Plus — software / content / infra<br>
+        • Pulse Pillow — R&amp;D + signal-quality prototype<br>
+        • GTM / partnerships / team<br><br>
+        Show as % of raise + the 18-month milestones each bucket buys.
+      </div>
+      <div class="card mt-auto" style="align-self:stretch;">
+        <div class="k">What the raise buys (18 months)</div>
+        <p style="font-size:15px;"><span class="tbd">[ transcript: milestones ]</span> — e.g. v2 shipped, Pulse Plus attach at X%, a working Pillow signal-quality demo, 2–3 signed lie-down-venue LOIs.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>11</span></div>
+</section>
+
+<!-- 12 · STRETCH DIVIDER -->
+<section class="slide deep" id="s12">
+  <div class="bleed" style="background-image:url('../library/ethereal/eth-submerged.png'); opacity:.4;"></div>
+  <div class="scrim deep-bottom"></div>
+  <div class="pad" style="justify-content:flex-end;">
+    <div class="eyebrow"><span class="dot"></span>The stretch — where this goes next</div>
+    <h1 class="kicker" style="color:var(--warm); margin-top:14px;">The Pulse Pillow.</h1>
+    <p class="lede" style="color:#d9d3c0; margin-top:12px; max-width:48ch;">The same mission, lying down — and the wedge that makes Pulse universal in wellness.</p>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>12</span></div>
+</section>
+
+<!-- 13 · THE PULSE PILLOW -->
+<section class="slide warm" id="s13">
+  <div class="pad">
+    <div class="eyebrow">The Pulse Pillow · a second SKU, on brand &amp; on mission</div>
+    <h2 class="head-sm" style="margin-top:12px; max-width:30ch;">A portable pillow that quietly reads your state — and hands it back.</h2>
+    <div class="cols" style="grid-template-columns:repeat(2,1fr) ; gap:16px; margin-top:22px;">
+      <div class="card"><div class="k">The object</div><h4>Slim, comfortable, portable</h4><p>Gel-free textile EEG where your head simply rests on the sensing surface — no gel, no electrodes to place, no headband. Comfort <i>is</i> the product.</p></div>
+      <div class="card"><div class="k">Ships with a ring</div><h4>Top-of-funnel for Pulse Plus</h4><p>Every Pillow comes with a Pulse ring — the RFID pairs them in a tap, and the pair feeds the subscription.</p></div>
+      <div class="card"><div class="k">The SDK</div><h4>Integrates with any app</h4><p>An open SDK turns Pulse into a brainwave-biometrics layer any wellness app or device can build on.</p></div>
+      <div class="card"><div class="k">On mission</div><h4>Still asks nothing of you</h4><p>You lie down; it notices; you receive. No score to chase — the calm stays intact.</p></div>
+    </div>
+    <div class="tbd-block mt-auto">Credibility guardrail (from research): position as textile/contact EEG with the head on the surface — <b>not</b> brainwave capture at standoff distance (not supported by current physics). The bundled ring's proven HRV hedges the EEG-fidelity risk. Stay on the FDA General-Wellness side (no diagnostic claims).</div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>13</span></div>
+</section>
+
+<!-- 14 · PARTNERSHIP / GTM -->
+<section class="slide deep" id="s14">
+  <div class="pad">
+    <div class="eyebrow"><span class="dot"></span>The go-to-market — universal in wellness</div>
+    <h2 class="head" style="color:var(--warm); margin-top:12px; max-width:24ch;">Every brand where you lie down becomes a partner.</h2>
+    <div class="cols" style="grid-template-columns:repeat(4,1fr); gap:16px; margin-top:24px;">
+      <div class="stat"><div class="n">$107B</div><div class="l">sleep economy, +12.5%/yr</div></div>
+      <div class="stat"><div class="n">$7.1B</div><div class="l">meditation &amp; mindfulness, +18.9%/yr</div></div>
+      <div class="stat"><div class="n">+14.6%</div><div class="l">spas, year-over-year</div></div>
+      <div class="stat"><div class="n">800+</div><div class="l">partner integrations Oura proved this model reaches</div></div>
+    </div>
+    <div class="cols" style="grid-template-columns:1.2fr 1fr; gap:28px; margin-top:24px; align-items:start;">
+      <div class="body" style="color:#d9d3c0;">
+        <p>Spa tables, sound-bath mats, recovery lounges, meditation studios — every one already has a
+        customer lying still with their head supported, the exact posture the Pillow reads. Pulse
+        becomes the <b>"Intel Inside" of the lie-down moment</b>: an ingredient brand every venue wants
+        on the badge. The EEG is the moat; the $6.8T wellness economy is the market.</p>
+      </div>
+      <div class="tbd-block">Confirm on-slide from transcript: the specific partner categories/names Pulse is targeting first, and the ingredient-brand deal shape.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>14</span></div>
+</section>
+
+<!-- 15 · WHO WE'RE RAISING FROM -->
+<section class="slide warm" id="s15">
+  <div class="pad">
+    <div class="eyebrow">Who we're raising from</div>
+    <h2 class="head-sm" style="margin-top:12px; max-width:30ch;">Strategic capital — partners, not just checks.</h2>
+    <div class="tbd-block mt-auto" style="font-size:14px;">
+      <b>[ transcript: the who + the how — from the Jonah call ]</b><br><br>
+      Fill in: the named investor targets / archetypes, why each is strategic (distribution,
+      wellness-channel, retail, manufacturing), and the "engage-as-strategic-partners" approach —
+      how each investor also opens a partnership door for the Pillow platform.
+    </div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>15</span></div>
+</section>
+
+<!-- 16 · TEAM -->
+<section class="slide deep" id="s16">
+  <div class="pad">
+    <div class="eyebrow"><span class="dot"></span>The team</div>
+    <h2 class="head-sm" style="color:var(--warm); margin-top:12px;">Who's building it.</h2>
+    <div class="tbd-block mt-auto" style="font-size:14px;">
+      <b>[ transcript: founder (Jonah) + team + advisors ]</b><br><br>
+      Fill in: founder bio and why-this-team, key operators, the ambassador/advisor bench, and any
+      manufacturing or wellness-industry partners already committed.
+    </div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise</span><span>16</span></div>
+</section>
+
+<!-- 17 · THE ASK / CLOSE -->
+<section class="slide warm" id="s17">
+  <div class="aperture" style="position:absolute; width:380px; height:380px; right:110px; top:170px;">
+    <img src="../library/ethereal/eth-ripples.png" alt="">
+  </div>
+  <div class="aphalo" style="width:500px; height:500px; right:50px; top:110px;"></div>
+  <div class="pad">
+    <div class="eyebrow">The ask</div>
+    <div class="mt-auto">
+      <h1 class="kicker">We're raising ahead.</h1>
+      <p class="lede" style="margin-top:14px; max-width:40ch;">Join the round that turns a ring people love into the biometrics layer of the whole wellness world.</p>
+      <div class="band" style="margin-top:20px; max-width:44ch;"><b>The ask:</b> <span class="tbd">[ transcript ]</span></div>
+      <div class="rule"></div>
+      <div style="font-family:var(--serif); font-style:italic; font-size:24px; color:var(--honey-deep);">When would now be a good time?</div>
+    </div>
+  </div>
+  <div class="foot"><span>Pulse · The Raise · Confidential</span><span>17</span></div>
+</section>
+
+<div class="hint">↓ scroll &nbsp;·&nbsp; citron = fill from transcript &nbsp;·&nbsp; print to PDF</div>
+</body>
+</html>
