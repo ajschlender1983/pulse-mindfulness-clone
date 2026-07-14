@@ -1501,15 +1501,15 @@
       "motion": 3,
       "gallery": "library/gallery/studio-films.html",
       "curated": [
-        "library/studio-stories/james.mp4",
-        "library/studio-stories/maya.mp4",
-        "library/studio-stories/priya.mp4"
+        "library/studio-stories/theo.mp4",
+        "library/studio-stories/nora.mp4",
+        "library/studio-stories/sana.mp4"
       ],
       "files_stills": [],
       "files_motion": [
-        "library/studio-stories/james.mp4",
-        "library/studio-stories/maya.mp4",
-        "library/studio-stories/priya.mp4"
+        "library/studio-stories/theo.mp4",
+        "library/studio-stories/nora.mp4",
+        "library/studio-stories/sana.mp4"
       ]
     }
   },
