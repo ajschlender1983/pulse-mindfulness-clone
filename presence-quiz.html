@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pulse — How present are you, really?</title>
-<meta name="description" content="A gentle two-minute look at where your presence is alive, and where it has gone quiet. This is life that can be reclaimed." />
+<title>Pulse — Sixty seconds with the people who matter</title>
+<meta name="description" content="A gentle sixty-second reflection on how present you are with the people you love. No score, nothing to pass. Just something true, and a way back." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
@@ -34,8 +34,12 @@
   h2{ font-weight:400; font-size:clamp(22px,4vw,29px); line-height:1.12; letter-spacing:-0.035em; color:var(--ink); }
   p{ font-size:17px; color:#575344; letter-spacing:-0.02em; }
   p.lede{ font-size:19px; color:#4a4638; margin-top:16px; }
+  .teach{ font-size:15px; color:var(--muted); margin-top:12px; font-style:italic; letter-spacing:-0.015em; }
   .fade{ animation:fade .6s ease both; }
   @keyframes fade{ from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)} }
+
+  .flag{ margin-top:22px; padding:14px 18px; border-left:2px solid #d8d2bd; }
+  .flag p{ font-size:14.5px; color:var(--muted); font-style:italic; }
 
   /* buttons */
   .btn{
@@ -46,7 +50,7 @@
   }
   .btn:hover{ filter:brightness(1.05); transform:translateY(-1px); }
   .btn--ghost{ background:transparent; color:var(--muted); padding:12px 8px; }
-  .btn-row{ margin-top:32px; display:flex; align-items:center; gap:14px; }
+  .btn-row{ margin-top:32px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
 
   /* options */
   .opts{ display:flex; flex-direction:column; gap:11px; margin-top:28px; }
@@ -56,69 +60,55 @@
     padding:17px 20px; border-radius:15px; transition:all .16s ease; line-height:1.25;
   }
   .opt:hover{ border-color:var(--lime); background:#efebd8; transform:translateX(3px); }
-  .opt.two{ display:inline-flex; }
 
-  /* progress */
-  .prog{ display:flex; gap:6px; margin-bottom:30px; }
-  .prog i{ height:4px; flex:1; background:#ddd7c3; border-radius:2px; overflow:hidden; }
-  .prog i.on{ background:var(--lime); }
+  /* movement markers (three soft phases, never a count) */
+  .marks{ display:flex; gap:10px; align-items:center; margin-bottom:28px; }
+  .marks i{ height:5px; width:34px; background:#ddd7c3; border-radius:3px; transition:background .4s ease; }
+  .marks i.on{ background:var(--lime); }
+  .marks .ml{ font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-left:4px; }
 
-  /* calc screen */
+  /* breath beat */
   .calc{ text-align:center; padding:30px 0; }
   .breath{ width:120px; height:120px; margin:10px auto 26px; border-radius:50%;
     background:radial-gradient(circle,var(--lime),#cfe06a); animation:breathe 4s ease-in-out infinite; }
   @keyframes breathe{ 0%,100%{transform:scale(.72); opacity:.55} 50%{transform:scale(1); opacity:1} }
 
-  /* number reveal */
-  .bignum{ font-size:clamp(56px,13vw,92px); font-weight:300; letter-spacing:-0.05em; color:var(--ink); line-height:1; }
-  .bignum small{ font-size:19px; color:var(--muted); font-weight:400; letter-spacing:-0.02em; }
+  /* homecoming reveal */
+  .lit{ border-radius:16px; padding:22px 24px; margin-top:24px; background:rgba(227,244,125,.26); }
+  .lit .k, .ready .k, .moment .k, .felt .k, .step .k{ font-family:var(--mono); font-size:10px; letter-spacing:.11em; text-transform:uppercase; color:var(--muted); margin-bottom:9px; }
+  .lit h3, .ready h3{ font-weight:500; font-size:20px; color:var(--ink); margin-bottom:7px; letter-spacing:-0.03em; }
+  .lit p, .ready p, .moment p{ font-size:16px; color:#4a4638; }
+  .ready{ border-radius:16px; padding:22px 24px; margin-top:16px; background:var(--cream); }
 
-  /* email gate */
+  .moment{ border-radius:18px; padding:26px; margin-top:24px; background:var(--ink); color:var(--warm); }
+  .moment .k{ color:#9a9c9f; }
+  .moment p{ color:var(--warm); font-size:18px; letter-spacing:-0.025em; line-height:1.32; }
+  .moment .share{ margin-top:16px; padding-top:16px; border-top:1px solid rgba(255,255,255,.14); font-size:15px; color:#dcd8c6; }
+
+  .felt{ margin-top:24px; }
+  .felt p{ font-size:16.5px; color:#4a4638; line-height:1.45; }
+
+  .step{ margin-top:24px; }
+  .step p{ font-size:17px; color:var(--ink); }
+
+  .hope{ margin-top:24px; font-size:18px; color:var(--ink); letter-spacing:-0.025em; line-height:1.4; }
+
+  /* email offer (soft, not a wall) */
   .gate input{ width:100%; padding:16px 20px; border-radius:100px; border:1.5px solid #cfc9b4;
     background:var(--cream); font-family:var(--font); font-size:16px; color:var(--ink); margin-top:22px; }
   .gate input:focus{ outline:2px solid var(--lime); outline-offset:1px; }
   .fineprint{ font-family:var(--mono); font-size:11px; color:var(--muted); margin-top:14px; letter-spacing:0; }
 
-  /* presence map */
-  .map{ margin-top:26px; display:flex; flex-direction:column; gap:14px; }
-  .row{ display:grid; grid-template-columns:130px 1fr; align-items:center; gap:14px; }
-  .row .lab{ font-size:14.5px; color:var(--ink); letter-spacing:-0.02em; }
-  .bar{ height:14px; background:#ddd7c3; border-radius:8px; overflow:hidden; }
-  .bar i{ display:block; height:100%; border-radius:8px; background:var(--blue);
-    transform-origin:left; animation:grow 1s cubic-bezier(.6,0,.2,1) both; }
-  .bar i.bright{ background:linear-gradient(90deg,#cfe06a,var(--lime)); }
-  .bar i.quiet{ background:#c9c3ae; }
-  @keyframes grow{ from{transform:scaleX(0)} }
-
-  .callout{ border-radius:16px; padding:20px 22px; margin-top:22px; }
-  .callout.bright{ background:rgba(227,244,125,.28); }
-  .callout.quiet{ background:var(--cream); }
-  .callout .k{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:7px; }
-  .callout h3{ font-weight:500; font-size:19px; color:var(--ink); margin-bottom:6px; letter-spacing:-0.03em; }
-  .callout p{ font-size:15.5px; }
-
-  /* cost block */
-  .cost{ background:var(--ink); color:var(--warm); border-radius:20px; padding:28px; margin-top:26px; }
-  .cost .k{ font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#9a9c9f; margin-bottom:14px; }
-  .cost .lines{ display:flex; flex-direction:column; gap:12px; }
-  .cost .line{ display:flex; gap:12px; align-items:baseline; }
-  .cost .line b{ font-weight:500; color:var(--lime); font-size:19px; white-space:nowrap; }
-  .cost .line span{ font-size:15.5px; color:#dcd8c6; letter-spacing:-0.02em; }
-  .cost .hope{ margin-top:18px; padding-top:18px; border-top:1px solid rgba(255,255,255,.14); font-size:16px; color:var(--warm); }
-
-  .reclaim{ margin-top:24px; }
-  .reclaim .k{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
-  .reclaim p{ font-size:17px; color:var(--ink); }
-
-  .cta{ text-align:center; margin-top:30px; }
+  /* CTA + guarantee */
+  .cta{ text-align:center; margin-top:32px; }
   .cta .btn{ font-size:16px; padding:17px 40px; }
-  .cta .sub{ font-family:var(--mono); font-size:11px; color:var(--muted); margin-top:12px; letter-spacing:0; }
+  .guarantee{ font-size:14.5px; color:var(--muted); margin-top:16px; max-width:420px; margin-left:auto; margin-right:auto; line-height:1.4; }
+  .cta .sub{ font-family:var(--mono); font-size:11px; color:var(--muted); margin-top:14px; letter-spacing:0; }
   .restart{ text-align:center; margin-top:18px; }
 
   @media(max-width:520px){
     .card{ padding:34px 24px; border-radius:22px; }
-    .row{ grid-template-columns:104px 1fr; gap:10px; }
-    .row .lab{ font-size:13px; }
+    .marks i{ width:26px; }
   }
 </style>
 </head>
@@ -132,281 +122,212 @@
 
   // ---- helpers (DOM-built, no innerHTML) ----
   function el(tag, cls, text){ var n=document.createElement(tag); if(cls)n.className=cls; if(text!=null)n.textContent=text; return n; }
-  function frag(html){ return document.createRange().createContextualFragment(html); }
   function clear(){ while(app.firstChild) app.removeChild(app.firstChild); }
   function logo(){ var l=el('div','logo'); l.append(document.createTextNode('pulse'), el('span',null,'·')); return l; }
 
-  // ---- data ----
-  var PILLARS = {
-    love:      { label:'You and your partner' },
-    family:    { label:'The people at home' },
-    community: { label:'Your community' },
-    career:    { label:'Your work' },
-    health:    { label:'Body and mind' },
-    faith:     { label:'Something greater' }
-  };
-  var PORDER = ['love','family','community','career','health','faith'];
+  var state = { who:null, conn:null, clar:null, cap:null, want:null, email:null, bright:null, quiet:null };
 
-  var MOTIVES = [
-    { t:'The people who are home to me', pillar:'family' },
-    { t:'The person beside me',          pillar:'love' },
-    { t:'My work, and the way I give',   pillar:'career' },
-    { t:'My community and where I belong', pillar:'community' },
-    { t:'My body and my mind',           pillar:'health' },
-    { t:'My connection to something greater', pillar:'faith' }
+  // three movements: label, human framing, question, options [text, fullness 1.5..10], teaching line
+  var MOVES = [
+    { c:'Connection', frame:'being with the people who matter',
+      q:'When you are with them lately, where are you, really?',
+      key:'conn',
+      o:[['All the way here',10],['In the room, but somewhere else in my head',6],['Present in body, gone in mind',3.5],['I keep meaning to find my way back',1.5]],
+      teach:'Presence is just this. Being where your body already is. Nothing to fix.' },
+    { c:'Clarity', frame:'seeing the day while you are in it',
+      q:'At the end of most days, do you know where your hours went?',
+      key:'clar',
+      o:[['Yes, I was here for them',10],['Some of it. Some of it is a blur',6],['Honestly, I could not tell you',3.5],['The days just run together',1.5]],
+      teach:'Clarity is not doing more. It is noticing your life as it happens.' },
+    { c:'Capacity', frame:'having room to feel your own life',
+      q:'When something matters, do you have the room to actually feel it?',
+      key:'cap',
+      o:[['Yes, it lands',10],['Only when I slow down',6],['I notice later, once it has passed',3.5],['I have been running on empty',1.5]],
+      teach:'Capacity is the space to be moved by your own life, instead of rushing past it.' }
   ];
 
-  // pillar questions: option text + fullness score (1.5..10)
-  var Q = [
-    { pillar:'love', q:'When you think about the person closest to you, how present do you feel with them lately?',
-      o:[['Fully here, we are close',10],['Loving them from the to-do list',6.5],['In the same room, miles apart',3.5],['I have been meaning to find my way back',1.5]] },
-    { pillar:'family', q:'The people who are home to you. How much are you really with them these days?',
-      o:[['All the way in',10],['Around, but half-there',6.5],['Going through the motions',3.5],['I miss them even when they are near',1.5]] },
-    { pillar:'community', q:'Your people and where you belong. How connected do you feel right now?',
-      o:[['Rooted and seen',10],['A few real ones',6.5],['More alone than I would like',3.5],['I have lost touch with my people',1.5]] },
-    { pillar:'career', q:'Your work right now. Alive and meaningful, or going through the motions?',
-      o:[['Lit up by it',10],['Good days and grey days',6.5],['Mostly on autopilot',3.5],['I have forgotten why I started',1.5]] },
-    { pillar:'health', q:'Your body and mind. How present are you to what they are asking for?',
-      o:[['I listen and respond',10],['I notice, then override it',6.5],['Only when they shout',3.5],['We have not spoken in a while',1.5]] },
-    { pillar:'faith', q:'Your connection to something bigger than the daily grind. How alive is it?',
-      o:[['I feel held',10],['It flickers',6.5],['It has been quiet a while',3.5],['I am not sure I have one right now',1.5]] }
-  ];
-
-  // Q9 sets the self-anchored reclaim factor (higher = more slips past)
-  var WEEK = { q:'At the end of a full week, which feels most true?',
-    o:[['Tired in a good way, I was here for it',0.55],['It happened to me more than I lived it',0.72],['I cannot account for where the hours went',0.86],['I keep waiting for the day I feel present',1.0]] };
-
-  var state = { motivePillar:null, childAge:null, scores:{}, factor:0.8, phoneFirst:false, email:null };
-
-  // ---- flow ----
-  var step = 0; // 0 intro, 1 motive, 2 optional age, 3..8 pillar Q, 9 phone, 10 week, 11 calc, 12 number, 13 gate, 14 result
-  function totalDots(){ return 8; } // motive + 6 pillars + week
-  function dotIndex(){
-    if(step===1) return 0;
-    if(step>=3 && step<=8) return step-2;
-    if(step===10) return 7;
-    return -1;
+  function screen(build, moveIdx){ clear(); var c=el('div','fade'); c.appendChild(logo());
+    if(moveIdx!=null){
+      var m=el('div','marks');
+      for(var i=0;i<3;i++){ var d=el('i'); if(i<=moveIdx) d.className='on'; m.appendChild(d); }
+      m.appendChild(el('span','ml', MOVES[moveIdx].c));
+      c.appendChild(m);
+    }
+    build(c); app.appendChild(c); window.scrollTo(0,0);
   }
-  function progress(){
-    if(dotIndex()<0) return null;
-    var p=el('div','prog');
-    for(var i=0;i<totalDots();i++){ var d=el('i'); if(i<=dotIndex()) d.className='on'; p.appendChild(d); }
-    return p;
-  }
-
-  function screen(build){ clear(); var c=el('div','fade'); c.appendChild(logo()); var pr=progress(); if(pr)c.appendChild(pr); build(c); app.appendChild(c); }
-
   function optionBtn(text, onClick){ var b=el('button','opt',text); b.type='button'; b.addEventListener('click',onClick); return b; }
 
-  // Intro
+  // ---- Intro ----
   function intro(){ screen(function(c){
-    c.appendChild(el('div','eyebrow','A two-minute look'));
-    c.appendChild(el('h1','','How much of your life are you actually in the room for?'));
-    var p=el('p','lede','Not a test. There are no wrong answers. At the end you will see where your presence is alive, where it has gone quiet, and how much of it is waiting to be reclaimed.');
-    c.appendChild(p);
+    c.appendChild(el('div','eyebrow','Sixty seconds'));
+    c.appendChild(el('h1','','How present are you with the people who matter most?'));
+    c.appendChild(el('p','lede','Not a test. There is no score and nothing to pass. Presence gives back three things: the people you love, a clear head, and the room to feel it all. In sixty seconds you will see where yours is alive, and one small thing waiting to come home.'));
+    var flag=el('div','flag'); flag.appendChild(el('p','','If you came for another streak, number, or dashboard about yourself, this is not that. Pulse does not measure you, and neither will this.'));
+    c.appendChild(flag);
     var row=el('div','btn-row');
-    var b=el('button','btn','Show me'); b.type='button'; b.addEventListener('click',function(){ step=1; motive(); });
-    row.appendChild(b);
-    c.appendChild(row);
-  }); }
-
-  // Q1 motivation
-  function motive(){ screen(function(c){
-    c.appendChild(el('h2','','Which part of your life do you most want to feel alive again?'));
-    var o=el('div','opts');
-    MOTIVES.forEach(function(m){ o.appendChild(optionBtn(m.t,function(){
-      state.motivePillar=m.pillar;
-      if(m.pillar==='family'){ step=2; askAge(); } else { step=3; pillarQ(0); }
-    })); });
-    c.appendChild(o);
-  }); }
-
-  // optional age (only when family)
-  function askAge(){ screen(function(c){
-    c.appendChild(el('div','eyebrow','One quick thing'));
-    c.appendChild(el('h2','','How old is the youngest you most want to be present for?'));
-    c.appendChild(el('p','','This stays on your device. It just makes your result yours.'));
-    var inp=el('input'); inp.type='number'; inp.min='0'; inp.max='25'; inp.placeholder='e.g. 7';
-    inp.style.cssText='width:140px;padding:14px 18px;border-radius:16px;border:1.5px solid #cfc9b4;background:var(--cream);font-family:var(--font);font-size:18px;margin-top:22px;';
-    c.appendChild(inp);
-    var row=el('div','btn-row');
-    var b=el('button','btn','Continue'); b.type='button'; b.addEventListener('click',function(){ var v=parseInt(inp.value,10); if(!isNaN(v)&&v>=0&&v<=25) state.childAge=v; step=3; pillarQ(0); });
-    var skip=el('button','btn btn--ghost','Skip'); skip.type='button'; skip.addEventListener('click',function(){ step=3; pillarQ(0); });
-    row.appendChild(b); row.appendChild(skip); c.appendChild(row);
-  }); }
-
-  // pillar questions
-  function pillarQ(i){ step=3+i; screen(function(c){
-    var item=Q[i];
-    c.appendChild(el('h2','',item.q));
-    var o=el('div','opts');
-    item.o.forEach(function(pair){ o.appendChild(optionBtn(pair[0],function(){
-      state.scores[item.pillar]=pair[1];
-      if(i+1<Q.length) pillarQ(i+1); else { step=9; phone(); }
-    })); });
-    c.appendChild(o);
-  }); }
-
-  // Q8 phone this-or-that
-  function phone(){ screen(function(c){
-    c.appendChild(el('h2','','First thing in the morning:'));
-    var o=el('div','opts');
-    o.appendChild(optionBtn('Feet on the floor, one breath',function(){ state.phoneFirst=false; step=10; week(); }));
-    o.appendChild(optionBtn('Phone already in my hand',function(){ state.phoneFirst=true; step=10; week(); }));
-    c.appendChild(o);
-  }); }
-
-  // Q9 week -> factor
-  function week(){ screen(function(c){
-    c.appendChild(el('h2','',WEEK.q));
-    var o=el('div','opts');
-    WEEK.o.forEach(function(pair){ o.appendChild(optionBtn(pair[0],function(){ state.factor=pair[1]; step=11; calc(); })); });
-    c.appendChild(o);
-  }); }
-
-  // compute
-  function compute(){
-    var vals=PORDER.map(function(k){ return state.scores[k]||6; });
-    var avg=vals.reduce(function(a,b){return a+b;},0)/vals.length;
-    var gap=10-avg;                      // 0..8.5
-    var f=state.factor + (state.phoneFirst?0.05:0);
-    var m=Math.round(gap*1.6*f);         // reclaimable moments/day
-    m=Math.max(3,Math.min(14,m));
-    state.moments=m;
-    // brightest & quietest (ties: relational first via PORDER)
-    var bright=PORDER[0], quiet=PORDER[0];
-    PORDER.forEach(function(k){ if((state.scores[k]||6) > (state.scores[bright]||6)) bright=k; });
-    PORDER.forEach(function(k){ if((state.scores[k]||6) < (state.scores[quiet]||6)) quiet=k; });
-    // keep the two distinct when answers tie: fall back to what they said they miss most
-    if(quiet===bright){ quiet = (state.motivePillar && state.motivePillar!==bright) ? state.motivePillar : PORDER[(PORDER.indexOf(bright)+1)%PORDER.length]; }
-    state.bright=bright; state.quiet=quiet;
-  }
-
-  // calculating beat (a breath)
-  function calc(){ compute(); clear(); var c=el('div','fade calc'); c.appendChild(el('div','breath'));
-    c.appendChild(el('h2','','Adding up your moments.'));
-    c.appendChild(el('p','','Take one breath with this while we do.'));
-    app.appendChild(c);
-    setTimeout(numberReveal, 2600);
-  }
-
-  // free number reveal
-  function numberReveal(){ clear(); var c=el('div','fade'); c.appendChild(logo());
-    c.appendChild(el('div','eyebrow','Your presence, right now'));
-    var n=el('div','bignum'); n.append(document.createTextNode('~'+state.moments), el('br'), el('small',null,'small moments a day are slipping past'));
-    c.appendChild(n);
-    var week=state.moments*7;
-    c.appendChild(el('p','lede','That is about '+week+' a week. Here is the hopeful part: they are not gone. They are yours to reclaim.'));
-    var row=el('div','btn-row');
-    var b=el('button','btn','See where, and what it is costing you'); b.type='button'; b.addEventListener('click',gate);
+    var b=el('button','btn','Begin'); b.type='button'; b.addEventListener('click',who);
     row.appendChild(b); c.appendChild(row);
-    app.appendChild(c);
+  }); }
+
+  // ---- Anchor: who ----
+  var WHO = [
+    ['The person beside me','partner'],
+    ['The people at home','home'],
+    ['A friend I have drifted from','friend'],
+    ['Myself','self']
+  ];
+  function who(){ screen(function(c){
+    c.appendChild(el('h2','','Who do you most want to feel close to again?'));
+    var o=el('div','opts');
+    WHO.forEach(function(w){ o.appendChild(optionBtn(w[0],function(){ state.who=w[1]; move(0); })); });
+    c.appendChild(o);
+  }); }
+
+  // ---- Three movements ----
+  function move(i){ var m=MOVES[i]; screen(function(c){
+    c.appendChild(el('div','eyebrow', m.c + ' · ' + m.frame));
+    c.appendChild(el('h2','', m.q));
+    c.appendChild(el('div','teach', m.teach));
+    var o=el('div','opts');
+    m.o.forEach(function(pair){ o.appendChild(optionBtn(pair[0],function(){
+      state[m.key]=pair[1];
+      if(i+1<MOVES.length) move(i+1); else want();
+    })); });
+    c.appendChild(o);
+  }, i); }
+
+  // ---- Want (tunes the first step) ----
+  var WANT = [
+    ['An evening fully with them','evening'],
+    ['A clear, quiet head','head'],
+    ['A steadier me','steady'],
+    ['A sense of something bigger','bigger']
+  ];
+  function want(){ screen(function(c){
+    c.appendChild(el('h2','','If you could have one of these back tomorrow, which would you choose?'));
+    var o=el('div','opts');
+    WANT.forEach(function(w){ o.appendChild(optionBtn(w[0],function(){ state.want=w[1]; breath(); })); });
+    c.appendChild(o);
+  }); }
+
+  // ---- compute bright / quiet C ----
+  function compute(){
+    var cs=[['Connection', state.conn], ['Clarity', state.clar], ['Capacity', state.cap]].map(function(x){ return [x[0], (x[1]==null?6:x[1])]; });
+    var bright=cs[0], quiet=cs[0];
+    cs.forEach(function(x){ if(x[1] > bright[1]) bright=x; });
+    cs.forEach(function(x){ if(x[1] < quiet[1]) quiet=x; });
+    if(quiet[0]===bright[0]){ bright=['Connection',0]; quiet=['Clarity',0]; } // all equal edge case
+    state.bright=bright[0]; state.quiet=quiet[0];
   }
 
-  // email gate
+  // ---- breath beat ----
+  function breath(){ compute(); clear(); var c=el('div','fade calc'); c.appendChild(el('div','breath'));
+    c.appendChild(el('h2','','Take one breath with this.'));
+    c.appendChild(el('p','','You are already doing the thing. Here is what came up.'));
+    app.appendChild(c); window.scrollTo(0,0);
+    setTimeout(teaser, 2600);
+  }
+
+  var LIT = {
+    Connection:'When you choose to be with the people you love, you can be. That is not a small thing. That is the whole thing, still in you.',
+    Clarity:'You can still see your days when you slow down enough to look. A lot of people have lost that. You have not.',
+    Capacity:'Your life can still move you. The feeling still gets through. Hold onto that.'
+  };
+  var READY = {
+    Connection:'This is where it has gone quietest, which means it is the one with the most life waiting in it.',
+    Clarity:'The days have started to blur. That is not a flaw in you. It is a sign of how much you have been carrying.',
+    Capacity:'You have been running on not-enough for a while. There is room here, waiting to open back up.'
+  };
+
+  // ---- teaser (homecoming headline, before the specific moment) ----
+  function teaser(){ clear(); var c=el('div','fade'); c.appendChild(logo());
+    c.appendChild(el('div','eyebrow','What this showed'));
+    c.appendChild(el('h2','','You are not far. You are one breath from the people you named.'));
+
+    var lit=el('div','lit'); lit.appendChild(el('div','k','Still lit in you'));
+    lit.appendChild(el('h3','', state.bright)); lit.appendChild(el('p','', LIT[state.bright]));
+    c.appendChild(lit);
+
+    var rd=el('div','ready'); rd.appendChild(el('div','k','Most ready to come home'));
+    rd.appendChild(el('h3','', state.quiet)); rd.appendChild(el('p','', READY[state.quiet]));
+    c.appendChild(rd);
+
+    c.appendChild(el('p','lede','There is one specific moment waiting for you, and one small way back. Want it, so it is yours to keep?'));
+    var row=el('div','btn-row');
+    var b=el('button','btn','Show me'); b.type='button'; b.addEventListener('click',gate);
+    row.appendChild(b); c.appendChild(row);
+    app.appendChild(c); window.scrollTo(0,0);
+  }
+
+  // ---- soft email offer ----
   function gate(){ clear(); var c=el('div','fade gate'); c.appendChild(logo());
-    c.appendChild(el('div','eyebrow','Your presence map is ready'));
-    c.appendChild(el('h2','','Where should we send it, so it is yours to keep?'));
-    c.appendChild(el('p','','Your map, the pillar most ready to come back, and your first small step. One email. No noise.'));
+    c.appendChild(el('div','eyebrow','One gentle note'));
+    c.appendChild(el('h2','','Want your reflection and your first small step sent to you?'));
+    c.appendChild(el('p','','Your moment to come home to, and a few soft notes on finding your way back. One email. No noise, no tracking, no scores.'));
     var inp=el('input'); inp.type='email'; inp.placeholder='you@email.com'; inp.setAttribute('autocomplete','email');
     c.appendChild(inp);
     var row=el('div','btn-row');
-    var b=el('button','btn','Send me my moments'); b.type='button';
-    b.addEventListener('click',function(){ var v=(inp.value||'').trim(); if(v && v.indexOf('@')>0){ state.email=v; result(); } else { inp.style.borderColor='#c98a8a'; inp.focus(); } });
-    var skip=el('button','btn btn--ghost','Just show me'); skip.type='button'; skip.addEventListener('click',result);
+    var b=el('button','btn','Send it to me'); b.type='button';
+    b.addEventListener('click',function(){ var v=(inp.value||'').trim(); if(v && v.indexOf('@')>0){ state.email=v; reveal(); } else { inp.style.borderColor='#c98a8a'; inp.focus(); } });
+    var skip=el('button','btn btn--ghost','Just show me'); skip.type='button'; skip.addEventListener('click',reveal);
     row.appendChild(b); row.appendChild(skip); c.appendChild(row);
-    c.appendChild(el('div','fineprint','We send your result and a few gentle notes on reclaiming your moments. Leave anytime.'));
-    app.appendChild(c);
+    c.appendChild(el('div','fineprint','Leave anytime, in one tap. We will never sell your email or show you a chart of yourself.'));
+    app.appendChild(c); window.scrollTo(0,0);
   }
 
-  // cost math + copy
-  function costLines(){
-    var m=state.moments;
-    var minutes=Math.round(m*2.5);
-    var daysYear=Math.max(3,Math.round(m*2.5*365/(60*16)));
-    var out=[ ['~'+minutes+' min/day','of life lived awake instead of on autopilot'],
-              ['~'+daysYear+' days/yr','of waking life currently passing from the driver’s seat'] ];
-    var p=state.motivePillar;
-    if(p==='family'){
-      if(state.childAge!=null){ var sat=Math.max(0,(18-state.childAge)*52); out.push(['~'+sat+' Saturdays','left in their childhood. This is about how many you are in for']); }
-      else out.push(['hundreds','of Saturdays left in a childhood, and how many you are fully in for']);
-    } else if(p==='love'){ out.push(['~250/yr','real conversations with the person you chose, quietly getting away']); }
-    else if(p==='career'){ out.push(['~6 hrs/wk','of deep, undistracted work, the hours your best ideas live in']); }
-    else if(p==='community'){ out.push(['dozens','of small hellos a week that are how belonging is built']); }
-    else if(p==='health'){ out.push(['~20 min/day','your body keeps quietly asking you for']); }
-    else if(p==='faith'){ out.push(['a handful','of still moments a week where the bigger questions live']); }
-    return out;
-  }
+  // ---- the specific moment, tied to who ----
+  var MOMENT = {
+    partner:'There is a conversation with the person beside you that you keep meaning to have. Fully. With the phone in another room and nowhere else to be.',
+    home:'There is a story that keeps ending while you are somewhere else. It is waiting for you to be there for the last page.',
+    friend:'There is a friend who would light up at a real hello from you. Not a like. Your actual voice, on an ordinary afternoon.',
+    self:'There is a quiet morning that is only yours, before the day takes you. It has been waiting a while for you to sit in it.'
+  };
+  var SHARE = {
+    partner:'And if they wear one too, a single tap reaches across any distance to say I am here, I am thinking of you, without a word.',
+    home:'And a single tap can reach them from anywhere, a small hello that lands in their pocket while you are apart.',
+    friend:'And a single tap can carry across any distance, a wordless I am thinking of you that closes the gap.',
+    self:'And it is only ever between you and you. Nothing to report, no one to answer to.'
+  };
+  var STEP = {
+    evening:'Tonight, one evening with them and no half-glances. Phone in the other room. Just this.',
+    head:'Tomorrow, protect one small stretch with nothing else open, and let your head go quiet on one thing.',
+    steady:'Tomorrow, one slow meal or one slow walk with no screen. Let your shoulders drop. Notice that you are here.',
+    bigger:'Tomorrow, one quiet minute outside with no phone, and sit with the bigger question you have been too busy to ask.'
+  };
 
-  function firstReclaim(){
-    switch(state.motivePillar){
-      case 'family': return 'Tomorrow, when they start telling you something, put the phone face down and take one breath first. Be there for the whole story.';
-      case 'love': return 'Tonight, one conversation with no half-glances. Phone in the other room. Just the two of you and this evening.';
-      case 'career': return 'Tomorrow, protect one 25-minute stretch with nothing else open. Let yourself go all the way in on one thing.';
-      case 'community': return 'This week, reach out to one person you have lost touch with. Not a like. A real hello.';
-      case 'health': return 'Tomorrow, one slow meal with no screen. Taste it. Notice when your shoulders drop.';
-      case 'faith': return 'Tomorrow, take one quiet minute outside with no phone, and sit with the bigger question you have been too busy to ask.';
-      default: return 'Tomorrow, catch one moment you would usually rush past, and stay in it for one full breath.';
-    }
-  }
+  // ---- full reveal ----
+  function reveal(){ clear(); var c=el('div','fade'); c.appendChild(logo());
+    c.appendChild(el('div','eyebrow','The one waiting for you'));
 
-  // result
-  function result(){ clear(); var c=el('div','fade'); c.appendChild(logo());
-    c.appendChild(el('div','eyebrow','Your presence map'));
-    c.appendChild(el('h2','','Where your presence is alive, and where it has gone quiet.'));
+    var mo=el('div','moment'); mo.appendChild(el('div','k','This is the one to come home to'));
+    mo.appendChild(el('p','', MOMENT[state.who] || MOMENT.self));
+    mo.appendChild(el('div','share', SHARE[state.who] || SHARE.self));
+    c.appendChild(mo);
 
-    var map=el('div','map');
-    PORDER.forEach(function(k){
-      var v=state.scores[k]||6;
-      var row=el('div','row');
-      row.appendChild(el('div','lab',PILLARS[k].label));
-      var bar=el('div','bar'); var fill=el('i'); fill.style.width=Math.round(v*10)+'%';
-      if(k===state.bright) fill.classList.add('bright'); if(k===state.quiet) fill.classList.add('quiet');
-      bar.appendChild(fill); row.appendChild(bar); map.appendChild(row);
-    });
-    c.appendChild(map);
+    var felt=el('div','felt'); felt.appendChild(el('div','k','What the gap really is'));
+    felt.appendChild(el('p','','This was never about hours on a spreadsheet. It is the drive home you do not remember. The yeah I gave while looking at a screen. The moment that was happening while you were already onto the next one. Small moments, and there is nothing small about them.'));
+    c.appendChild(felt);
 
-    var cb=el('div','callout bright');
-    cb.appendChild(el('div','k','Brightest'));
-    cb.appendChild(el('h3','',PILLARS[state.bright].label));
-    cb.appendChild(el('p','','Your presence is most alive here. That is a real gift. Protect it.'));
-    c.appendChild(cb);
+    var st=el('div','step'); st.appendChild(el('div','k','Your first way back'));
+    st.appendChild(el('p','', STEP[state.want] || STEP.evening));
+    c.appendChild(st);
 
-    var cq=el('div','callout quiet');
-    cq.appendChild(el('div','k','Most ready to come back'));
-    cq.appendChild(el('h3','',PILLARS[state.quiet].label));
-    cq.appendChild(el('p','','This is where it has gone quietest, which means this is the one with the most life waiting in it.'));
-    c.appendChild(cq);
+    c.appendChild(el('div','hope','Here is the part that matters most. None of it is gone. A few gentle taps a day, no app to open, nothing to measure, and you are back in the room. Not all at once. Starting with tomorrow.'));
 
-    // cost
-    var cost=el('div','cost');
-    cost.appendChild(el('div','k','What the gap is quietly costing'));
-    var lines=el('div','lines');
-    costLines().forEach(function(pair){ var ln=el('div','line'); ln.appendChild(el('b',null,pair[0])); ln.appendChild(el('span',null,pair[1])); lines.appendChild(ln); });
-    cost.appendChild(lines);
-    cost.appendChild(el('div','hope','Here is the hopeful part. This is exactly what Pulse gives back. A few gentle taps a day, and you are back for them. Not all at once. Starting with tomorrow’s.'));
-    c.appendChild(cost);
-
-    // first reclaim
-    var rc=el('div','reclaim');
-    rc.appendChild(el('div','k','Your first moment to reclaim'));
-    rc.appendChild(el('p','',firstReclaim()));
-    c.appendChild(rc);
-
-    // CTA
     var cta=el('div','cta');
     var b=el('button','btn','See how it feels'); b.type='button';
     b.addEventListener('click',function(){ window.location.href='index.html#shop'; });
     cta.appendChild(b);
-    cta.appendChild(el('div','sub','A quiet ring. No app to check, no scores. Just you, brought back.'));
+    cta.appendChild(el('div','guarantee','Wear Pulse for thirty days. If it does not bring you back to them, send it back for any reason, no questions asked.'));
+    cta.appendChild(el('div','sub','A quiet ring. Nothing to check, nothing to score. Just you, brought back to the people who matter.'));
     c.appendChild(cta);
 
     var rs=el('div','restart');
-    var r=el('button','btn btn--ghost','Take it again'); r.type='button'; r.addEventListener('click',function(){ state={motivePillar:null,childAge:null,scores:{},factor:0.8,phoneFirst:false,email:null}; step=0; intro(); });
+    var r=el('button','btn btn--ghost','Take a breath and start again'); r.type='button';
+    r.addEventListener('click',function(){ state={who:null,conn:null,clar:null,cap:null,want:null,email:null,bright:null,quiet:null}; intro(); });
     rs.appendChild(r); c.appendChild(rs);
 
-    app.appendChild(c);
-    window.scrollTo(0,0);
+    app.appendChild(c); window.scrollTo(0,0);
   }
 
   intro();
