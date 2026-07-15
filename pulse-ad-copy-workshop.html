@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>100 ad creatives · copy review · Pulse</title>
+<meta name="description" content="100 ad-copy lines across 10 message strategies, each with a thumbs up/down toggle. Step 1 of the ad-creative workflow — mark winners, then generate image creatives for the selected lines." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#EBE7D4; --warm:#F9F6E5; --ink:#1A1C22; --brown:#423D32;
+    --lime:#E3F47D; --honey:#A67C00; --muted:#6E6857; --faint:#8a8578;
+    --line:rgba(26,28,34,.13);
+    --up:#4E7C34; --up-bg:#E3F0D4; --down:#9B3D2E; --down-bg:#F0D9D2;
+    --font:"DM Sans",sans-serif; --mono:"DM Mono",monospace; --serif:"Fraunces",serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{ font-family:var(--font); background:var(--cream); color:var(--ink); line-height:1.5;
+    letter-spacing:-0.01em; -webkit-font-smoothing:antialiased; padding-bottom:80px; }
+  .shell{ max-width:1080px; margin:0 auto; padding:0 clamp(18px,4vw,44px); }
+
+  .top{ position:sticky; top:0; z-index:50; background:rgba(235,231,212,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .top .shell{ display:flex; align-items:center; gap:18px; height:56px; flex-wrap:wrap; }
+  .top .brand{ font-weight:600; font-size:15px; letter-spacing:-0.03em; }
+  .top .brand i{ color:var(--honey); font-style:normal; }
+  .top .spacer{ flex:1; }
+  .tally{ display:flex; align-items:center; gap:14px; font-family:var(--mono); font-size:12px; }
+  .tally b{ font-weight:600; }
+  .tally .t-up{ color:var(--up); }
+  .tally .t-down{ color:var(--down); }
+  .tally .t-rest{ color:var(--faint); }
+  .top button.copybtn{ font-family:var(--mono); font-size:11.5px; color:var(--ink); background:var(--lime);
+    border:none; border-radius:100px; padding:8px 14px; cursor:pointer; }
+  .top button.copybtn:hover{ filter:brightness(0.95); }
+  .top button.resetbtn{ font-family:var(--mono); font-size:11px; color:var(--faint); background:none; border:none; cursor:pointer; text-decoration:underline; }
+  .top button.resetbtn:hover{ color:var(--ink); }
+
+  header.hero{ padding:clamp(36px,6vw,60px) 0 clamp(6px,2vw,16px); }
+  .hero .kick{ font-family:var(--mono); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--honey); }
+  .hero h1{ font-family:var(--serif); font-weight:400; font-size:clamp(30px,5.4vw,52px); line-height:1.05; letter-spacing:-0.02em; margin-top:10px; }
+  .hero p{ font-size:clamp(14.5px,1.8vw,16.5px); color:var(--brown); max-width:66ch; margin-top:12px; line-height:1.6; }
+  .hero .lines{ font-style:italic; color:var(--muted); }
+
+  section.blk{ border-top:1px solid var(--line); padding:clamp(24px,4vw,40px) 0; }
+  .blk .bk{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--honey); }
+  .blk h2{ font-size:clamp(19px,2.6vw,24px); font-weight:600; letter-spacing:-0.03em; margin-top:6px; }
+  .blk .bsub{ font-size:13.5px; color:var(--brown); max-width:70ch; margin-top:6px; line-height:1.55; }
+
+  .cards{ margin-top:20px; display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+  @media (max-width:760px){ .cards{ grid-template-columns:1fr; } }
+
+  .card{ background:var(--warm); border:1px solid var(--line); border-radius:12px; padding:16px 16px 14px;
+    display:flex; flex-direction:column; gap:10px; transition:border-color .15s, box-shadow .15s; }
+  .card[data-vote="up"]{ border-color:var(--up); box-shadow:0 0 0 1px var(--up) inset; }
+  .card[data-vote="down"]{ border-color:var(--down); box-shadow:0 0 0 1px var(--down) inset; opacity:.72; }
+  .card .num{ font-family:var(--mono); font-size:10.5px; color:var(--faint); letter-spacing:.04em; }
+  .card .copy{ font-size:15px; color:var(--ink); line-height:1.45; flex:1; }
+  .card .row{ display:flex; gap:8px; }
+  .card button{ font-family:var(--mono); font-size:12px; border:1px solid var(--line); background:var(--cream);
+    border-radius:8px; padding:6px 12px; cursor:pointer; color:var(--muted); flex:1; }
+  .card button:hover{ border-color:var(--ink); color:var(--ink); }
+  .card button.up-btn.active{ background:var(--up-bg); border-color:var(--up); color:var(--up); font-weight:600; }
+  .card button.down-btn.active{ background:var(--down-bg); border-color:var(--down); color:var(--down); font-weight:600; }
+
+  footer{ margin-top:56px; border-top:1px solid var(--line); padding-top:20px; font-family:var(--mono); font-size:11px; color:var(--faint); }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="shell">
+    <div class="brand">Pulse <i>·</i> ad copy</div>
+    <div class="spacer"></div>
+    <div class="tally">
+      <span class="t-up">👍 <b id="cnt-up">0</b></span>
+      <span class="t-down">👎 <b id="cnt-down">0</b></span>
+      <span class="t-rest"><b id="cnt-rest">100</b> unrated</span>
+    </div>
+    <button class="copybtn" id="copy-btn">Copy 👍 lines</button>
+    <button class="resetbtn" id="reset-btn">Reset all</button>
+  </div>
+</div>
+
+<div class="shell">
+  <header class="hero">
+    <div class="kick">Step 1 of 2 · copy review</div>
+    <h1>100 ad creatives, in words first</h1>
+    <p>Built from your four seed lines — <span class="lines">"One Pulse can give you your life back," "One Pulse. Inspired action. When would NOW be a good time?," "Pulse. Presence. Pattern Interrupt," "Personalized to what's most important. Practices to support you in the moment," "___ is one Pulse away"</span> — plus everything else established for Pulse in this project: the real customer testimonials, the "you may notice" guardrail voice (no scores, no streaks, no red), the connection/we-centric pivot, the 30-day guarantee, and the "nudge companion to your other wearable" positioning from the Johan/CT call. Mark each thumbs up or down below — winners get turned into image creatives next.</p>
+  </header>
+
+  <section class="blk">
+    <div class="bk">01 · Seed-line variations</div>
+    <h2>Direct riffs on your four lines</h2>
+    <p class="bsub">Testing the exact phrases you gave, plus their nearest neighbors — same idea, different compression.</p>
+    <div class="cards" id="sec1"></div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">02 · Pattern interrupt</div>
+    <h2>Presence as a felt cue, not a task</h2>
+    <p class="bsub">Leaning on "pattern interrupt" as the mechanism — the ring as a return, not a reminder.</p>
+    <div class="cards" id="sec2"></div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">03 · The companion positioning</div>
+    <h2>"Your Aura tracks you. Pulse brings you back."</h2>
+    <p class="bsub">Straight from the Johan/CT call: position as the companion to Aura, Whoop, and Eight Sleep — not their competitor.</p>
+    <div class="cards" id="sec3"></div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">04 · Question hooks</div>
+    <h2>Self-recognition, not a sales pitch</h2>
+    <p class="bsub">Ad-scroll interrupts that ask the reader something true about their own week.</p>
+    <div class="cards" id="sec4"></div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">05 · Real testimonials</div>
+    <h2>Ben, Michal, and Jon Prince — no script</h2>
+    <p class="bsub">Built from the real, consented Loox reviews already woven into the brand film.</p>
+    <div class="cards" id="sec5"></div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">06 · "You may notice"</div>
+    <h2>The guardrail voice, as an ad</h2>
+    <p class="bsub">No streaks, no scores, no red — the same restraint that governs the product UI, applied to the copy that sells it.</p>
+    <div class="cards" id="sec6"></div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">07 · Connection</div>
+    <h2>The we-centric pivot</h2>
+    <p class="bsub">Couples mode, sync events, gifting — presence shared, not just tracked.</p>
+    <div class="cards" id="sec7"></div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">08 · Guarantee &amp; price</div>
+    <h2>Removing the risk from $229</h2>
+    <p class="bsub">The 30-day, no-reason-needed return policy, stated plainly.</p>
+    <div class="cards" id="sec8"></div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">09 · Scarcity</div>
+    <h2>The batch is real, so is the urgency</h2>
+    <p class="bsub">~1,500 units left of a deliberately small first batch — true scarcity, not a manufactured countdown.</p>
+    <div class="cards" id="sec9"></div>
+  </section>
+
+  <section class="blk">
+    <div class="bk">10 · "___ is one Pulse away"</div>
+    <h2>The fill-in-the-blank line, filled in</h2>
+    <p class="bsub">Your fifth seed line, run across ten different blanks.</p>
+    <div class="cards" id="sec10"></div>
+  </section>
+
+  <footer>Pulse · ad copy workshop · 100 lines · 10 strategies · step 1 of 2 (image creatives next)</footer>
+</div>
+
+<script>
+const SECTIONS = {
+  sec1: [
+    "One Pulse can give you your life back.",
+    "One Pulse. Your life, back.",
+    "Give yourself your life back — one Pulse at a time.",
+    "Inspired action starts with one Pulse.",
+    "When would NOW be a good time?",
+    "Now. Not someday. Now.",
+    "Presence. Pattern interrupt. One Pulse.",
+    "Pulse: presence, on cue.",
+    "Personalized to what's most important to you.",
+    "Practices to meet you in the moment — not after it."
+  ],
+  sec2: [
+    "Your best pattern interrupt fits on a finger.",
+    "A gentle pulse. A returned mind.",
+    "Not a reminder. A return.",
+    "It doesn't tell you what to do. It brings you back.",
+    "Presence isn't a mood. It's a muscle. Pulse trains it.",
+    "One pulse, and you're back in the room.",
+    "The moment you almost missed — Pulse caught it.",
+    "A quiet nudge back to now.",
+    "Interrupt the spiral before it starts.",
+    "Your attention has a home button. Wear it."
+  ],
+  sec3: [
+    "Your ring tracks you. Pulse brings you back.",
+    "Aura tells you how you slept. Pulse reminds you you're awake.",
+    "Whoop measures effort. Pulse measures nothing — it just calls you home.",
+    "You don't need another dashboard. You need a reason to look up.",
+    "All that data, and still not present? Meet its missing half.",
+    "Pairs perfectly with the tracker you already own — and the life it can't see.",
+    "Your other wearable watches you. This one's for you.",
+    "Two rings. One tells your story. One brings you back into it.",
+    "Everything else is measuring. Pulse is the moment itself.",
+    "The companion your smart ring forgot to include."
+  ],
+  sec4: [
+    "When's the last time you were actually here?",
+    "How many moments did you miss today without noticing?",
+    "What would change if you were here for it — really here?",
+    "Where does your mind go when you're not looking?",
+    "What's it costing you to always be somewhere else?",
+    "Would you notice if today just... happened to you?",
+    "What if the only app you needed was your own attention?",
+    "When would now be a good time to actually be in it?",
+    "How much of your life is happening while you're elsewhere?",
+    "What are you waiting for permission to feel?"
+  ],
+  sec5: [
+    "“Twice an hour, every hour, a little pulse on my finger… it keeps me grounded throughout the day.” — Ben",
+    "Ben doesn't meditate. He just wears a ring that remembers to.",
+    "“It keeps me grounded throughout the day.” That's the whole review.",
+    "Jon Prince didn't change his schedule. He just came back to it, pulse by pulse.",
+    "Real reviews. No script. Just people who came back to their lives.",
+    "Michal stopped losing afternoons to the desk. One pulse at a time.",
+    "Not an influencer. Not a script. Just Ben, and a ring that works.",
+    "“I appreciate it so much” isn't something people say about an app.",
+    "The reviews aren't about sleep scores. They're about showing up.",
+    "2% returns. The rest just kept coming back to themselves."
+  ],
+  sec6: [
+    "You may notice a little more room to breathe.",
+    "You may notice you've been away a while.",
+    "No streak to break. No score to chase. Just a small pulse, and a way back.",
+    "Nothing to check. Ever.",
+    "Not a badge. Not a percentage. Just presence, quietly kept.",
+    "It doesn't shame you back. It just calls you home.",
+    "No red alerts here. Just a warm, gold ring.",
+    "The kindest reminder you'll get all day.",
+    "You may notice you're actually enjoying this.",
+    "It won't guilt you. It'll just be there when you're ready."
+  ],
+  sec7: [
+    "Send a pulse. Not a text.",
+    "“Sent.” No read receipt. No waiting. Just presence, shared.",
+    "Two rings. One quiet way of saying I'm thinking of you.",
+    "You found each other. One pulse, and you knew.",
+    "Join us at 6pm — wherever you are.",
+    "A gift of presence, not another thing to charge.",
+    "The nudge that says “I'm here” without saying anything at all.",
+    "Presence you can share, not just track.",
+    "For the people you'd cross a room for — without leaving yours.",
+    "Some things are better said with a pulse than a paragraph."
+  ],
+  sec8: [
+    "Wear it a month. If it isn't for you, send it back — no reason needed.",
+    "$229 to come back to your life. No subscription required to start.",
+    "Try it for 30 days. Keep only what actually helps.",
+    "No fine print. No upsell. Just a ring and a promise.",
+    "If presence doesn't feel different in 30 days, it's on us.",
+    "One ring. One decision. Thirty days to know for sure.",
+    "We built the guarantee so you wouldn't have to think twice.",
+    "The risk is ours. The presence is yours.",
+    "A month to test it. A lifetime to use it.",
+    "No reason needed. Just send it back if it's not for you."
+  ],
+  sec9: [
+    "This batch won't last — and neither will the wait.",
+    "1,500 rings left. Then we go quiet until the next drop.",
+    "When it's gone, it's a waitlist again.",
+    "We made this batch small on purpose. It's almost gone.",
+    "Reserve yours before the next “sold out.”",
+    "The next drop has a deposit and a waitlist. This one doesn't.",
+    "Presence, while supplies last.",
+    "Some things shouldn't be mass-produced. This one almost isn't.",
+    "Get it before it becomes something you have to wait for again.",
+    "Not restocking soon. Not the same batch twice."
+  ],
+  sec10: [
+    "Calm is one Pulse away.",
+    "Your next deep breath is one Pulse away.",
+    "Being here — really here — is one Pulse away.",
+    "The version of you that shows up is one Pulse away.",
+    "Your kid's full attention is one Pulse away.",
+    "That moment you almost missed is one Pulse away.",
+    "A quieter mind is one Pulse away.",
+    "Coming back to yourself is one Pulse away.",
+    "The life you keep meaning to be present for is one Pulse away.",
+    "Right now is one Pulse away."
+  ]
+};
+
+let counter = 0;
+const allCards = [];
+
+function makeCard(text, globalIndex){
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.dataset.vote = '';
+  card.dataset.text = text;
+  card.dataset.idx = globalIndex;
+
+  const num = document.createElement('div');
+  num.className = 'num';
+  num.textContent = '#' + String(globalIndex).padStart(3, '0');
+
+  const copy = document.createElement('div');
+  copy.className = 'copy';
+  copy.textContent = text;
+
+  const row = document.createElement('div');
+  row.className = 'row';
+
+  const upBtn = document.createElement('button');
+  upBtn.className = 'up-btn';
+  upBtn.textContent = '\u{1F44D} Up';
+  upBtn.addEventListener('click', () => vote(globalIndex, 'up'));
+
+  const downBtn = document.createElement('button');
+  downBtn.className = 'down-btn';
+  downBtn.textContent = '\u{1F44E} Down';
+  downBtn.addEventListener('click', () => vote(globalIndex, 'down'));
+
+  row.appendChild(upBtn);
+  row.appendChild(downBtn);
+  card.appendChild(num);
+  card.appendChild(copy);
+  card.appendChild(row);
+  return card;
+}
+
+for (const [id, lines] of Object.entries(SECTIONS)){
+  const container = document.getElementById(id);
+  lines.forEach(text => {
+    counter++;
+    const card = makeCard(text, counter);
+    container.appendChild(card);
+    allCards.push(card);
+  });
+}
+
+function loadState(){
+  const saved = JSON.parse(localStorage.getItem('pulse-ad-copy-votes') || '{}');
+  allCards.forEach(card => {
+    const v = saved[card.dataset.idx];
+    if (v){ applyVote(card, v); }
+  });
+  updateTally();
+}
+
+function saveState(){
+  const state = {};
+  allCards.forEach(card => { if (card.dataset.vote) state[card.dataset.idx] = card.dataset.vote; });
+  localStorage.setItem('pulse-ad-copy-votes', JSON.stringify(state));
+}
+
+function applyVote(card, v){
+  card.dataset.vote = v;
+  card.querySelector('.up-btn').classList.toggle('active', v === 'up');
+  card.querySelector('.down-btn').classList.toggle('active', v === 'down');
+}
+
+function vote(idx, v){
+  const card = allCards[idx - 1];
+  const next = card.dataset.vote === v ? '' : v;
+  applyVote(card, next);
+  saveState();
+  updateTally();
+}
+
+function updateTally(){
+  const up = allCards.filter(c => c.dataset.vote === 'up').length;
+  const down = allCards.filter(c => c.dataset.vote === 'down').length;
+  document.getElementById('cnt-up').textContent = up;
+  document.getElementById('cnt-down').textContent = down;
+  document.getElementById('cnt-rest').textContent = allCards.length - up - down;
+}
+
+function copyWinners(){
+  const winners = allCards.filter(c => c.dataset.vote === 'up').map(c => c.dataset.text);
+  const text = winners.length ? winners.map((t,i) => (i+1) + '. ' + t).join('\n') : '(no lines marked up yet)';
+  navigator.clipboard.writeText(text).then(() => {
+    alert('Copied ' + winners.length + ' winning line(s) to clipboard.');
+  }).catch(() => {
+    prompt('Copy manually:', text);
+  });
+}
+
+function resetAll(){
+  if (!confirm('Clear all votes?')) return;
+  localStorage.removeItem('pulse-ad-copy-votes');
+  allCards.forEach(card => applyVote(card, ''));
+  updateTally();
+}
+
+document.getElementById('copy-btn').addEventListener('click', copyWinners);
+document.getElementById('reset-btn').addEventListener('click', resetAll);
+
+loadState();
+</script>
+
+</body>
+</html>
